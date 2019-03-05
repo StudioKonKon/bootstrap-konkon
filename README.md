@@ -1,1 +1,1 @@
-# Bootstrap-4-Studio-KonKon-Theme
+# Bootstrap 4: Studio KonKon Theme
