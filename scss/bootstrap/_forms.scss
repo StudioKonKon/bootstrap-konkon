@@ -1,0 +1,246 @@
+/*------------------------------------------------------------------
+	[Forms]
+*/
+
+@mixin inputfile-label($parent, $color)
+{
+	+label#{$parent}:focus,
+	:focus+label#{$parent}
+	{
+		-webkit-box-shadow: 0 0 0 .15rem rgba($color, .5);
+		box-shadow: 0 0 0 .15rem rgba($color, .5);
+		outline: 0;
+	}
+}
+
+.form-control
+{
+	border-width: 1px;
+	border-top-color: $input-top-border;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding: 10px 12px;
+	font-size: 1.1538rem; // $font-size-base + 2px
+	-webkit-transition: none;
+	transition: none;
+	height: 3.692rem;
+
+	//Select multiple
+	&[multiple]
+	{
+		padding: 0;
+		
+		@supports (-webkit-overflow-scrolling:touch)
+		{
+			padding:10px 12px;
+		}
+		
+		option
+		{
+			padding: 8px 12px;
+		} 
+	}
+}
+
+.col-form-label
+{
+	padding-bottom: 0;
+	line-height: 1;
+	
+	@include media_size("small-phone")
+	{
+		padding-bottom: 8px;
+	}
+}
+
+//Remove default iOs input style
+input.form-control,
+textarea.form-control
+{
+	-webkit-appearance: none;
+}
+
+select[multiple],
+select[size],
+textarea.form-control
+{
+	height: auto;
+}
+
+label
+{
+	font-weight: $font-weight-regular;
+	font-size: 1rem; // $font-size-base
+	margin-bottom: 8px;
+	color: $input-label-color;
+}
+
+.inputfile
+{
+	width: .1px;
+	height: .1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	
+	+ label
+	{
+		padding: 0 10px;
+		font-size: 1rem;
+		line-height: 28px;
+		border: 1px solid transparent;
+		border-color: #d5d8de;
+		border-radius: 2px;
+		display: inline-block;
+		cursor: pointer;
+		
+		i
+		{
+			margin-right: 10px;
+		}
+	}
+	
+	@include inputfile-label(".btn-secondary", darken($secondary-color-text, 32%));
+	@include inputfile-label(".btn-primary", $primary-color);
+}
+
+.form-control-xs
+{
+	height: 30px;
+	font-size: .9231rem;
+	padding: 6px 9px;
+}
+
+select.form-control-xs:not([size]):not([multiple])
+{
+	height: 3.1384rem;
+}
+
+.form-control-sm
+{
+	height: 37px;
+	font-size: 1rem;
+	padding: 4px 12px;
+}
+
+.form-control-lg
+{
+	height: 57px;
+	padding: 12px 14px;
+	font-size: 1.385rem;
+	font-weight: 300;
+	border-radius: 2px;
+}
+
+.form-group.row
+{
+	margin-bottom: 0;
+	padding: 12px 0;
+	
+	.form-horizontal & .col-form-label
+	{
+		text-align: right;
+	}
+	
+	label
+	{
+		white-space: nowrap;
+	}
+}
+
+.input-group-append,
+.input-group-prepend
+{
+	.custom-control-label
+	{
+		position: static;
+		
+		&:after,
+		&:before
+		{
+			left: 0;
+		}
+	}
+	
+	.custom-control
+	{
+		width: 1.77592rem;
+		height: 1.77592rem;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.input-group-text
+	{
+		padding: 10px 12px;
+	}
+}
+
+.custom-select
+{
+	line-height: 1.2;
+	padding: .7692rem 1.75rem .7692rem .75rem;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+.form-control-error,
+.form-control-success
+{
+	padding: 10px 45px 10px 12px;
+}
+
+.form-control-error,
+.form-control-success
+{
+	+ span
+	{
+		padding-right: 2.25rem;
+		background-repeat: no-repeat;
+		background-position: center right .923rem;
+		background-size: 1.846rem 1.846rem;
+		font-size: 19px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		display: block;
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		text-align: center;
+		pointer-events: none;
+	}
+	
+	&.is-valid + span
+	{
+		color: #34a853;
+	}
+	
+	&.is-invalid + span
+	{
+		color: #ea4335;
+	}
+}
+
+.form-title
+{
+	font-size: 1.385rem;
+	font-weight: 400;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: .2384rem;
+	padding-bottom: 1.031rem;
+	margin: 0 0 13px;
+	border-bottom-width: 0;
+	border-radius: 3px 3px 0 0;
+	background-color: transparent;
+	border-bottom: 1px solid #d9d9d9;
+	
+	.form-subtitle
+	{
+		font-size: 1rem;
+		color: #707070;
+	}
+}

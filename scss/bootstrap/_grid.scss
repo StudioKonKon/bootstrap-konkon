@@ -1,0 +1,13 @@
+/*------------------------------------------------------------------
+  [Bootstrap grid]
+*/
+
+.row
+{
+
+	@include media_size("small-phone")
+	{
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+}

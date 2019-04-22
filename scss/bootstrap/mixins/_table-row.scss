@@ -1,0 +1,40 @@
+// Tables
+
+@mixin table-row-variant($state, $background)
+{
+	.table-#{$state}
+	{
+		&,
+		> td,
+		>th
+		{
+			background-color: $background;
+			color: #fff;
+		}
+		
+		.table-hover &:hover
+		{
+			background-color: darken($background, 5%);
+			color: #fff;
+			
+			> td,
+			> th
+			{
+				background-color: darken($background, 5%);
+				color: #fff;
+			}
+		}
+	}
+}
+
+@mixin table-row-state-colored($state, $color)
+{
+	&.#{$state}
+	{
+		td:first-child
+		{
+			border-left: 3px solid $color;
+			padding-left: 17px;
+		}
+	}
+}

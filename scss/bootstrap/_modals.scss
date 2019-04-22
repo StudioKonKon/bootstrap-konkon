@@ -1,0 +1,438 @@
+/*------------------------------------------------------------------
+  [Modals]
+*/
+
+.modal-content
+{
+	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	background-color: $light-color;
+	color: $text-color;
+	border: none;
+}
+
+//Modal Header
+.modal-header
+{
+	border: 0;
+	padding: 19px;
+
+	h1, h2, h3, h4, h5, h6
+	{
+		display: block;
+		margin: 0;
+	}
+
+	.close
+	{
+		font-size: 1.538rem; // 20px
+		opacity: 0.4;
+		text-shadow: none;
+		margin-top: -17px;
+
+		&:hover
+		{
+			opacity: 0.8;
+		}
+		
+		&:focus,
+		&:not(:disabled):not(.disabled):focus
+		{
+			outline: 0;
+			opacity: .4;
+		}
+	}
+}
+
+//Modal Body
+.modal-body
+{
+	padding: 10px 20px 20px;
+
+	//Remove margin bottom from last row form group
+	.row:last-child
+	{
+		.form-group
+		{
+			margin-bottom: 0;
+		}
+	}
+}
+
+//Modal Main Icon
+.modal-main-icon
+{
+	display: inline-block;
+	height: 45px;
+	width: 45px;
+	line-height: normal;
+	font-size: 3.846rem; // 50px
+}
+
+//Modal Footer
+.modal-footer
+{
+	padding: 20px;
+	border: none;
+	
+	> :not(:first-child)
+	{
+		margin-left: 4px;
+	}
+	
+	> :not(:last-child)
+	{
+		margin-right: 4px;
+	}
+}
+
+.modal-open
+{
+	.modal
+	{
+		padding: 0 !important;
+	}
+}
+
+//Full Color Alerts
+.modal-full-color
+{
+	.modal-header
+	{
+		padding: 19px;
+	}
+
+	.modal-content
+	{
+		color: $light-color;
+		background-color: transparent;
+
+		.close
+		{
+			color: $light-color;
+			line-height: 40px;
+			opacity: 0.6;
+
+			&:hover
+			{
+				color: #fff;
+				opacity: 1;
+			}
+			
+			.close:not(:disabled):not(.disabled):focus,
+			&:focus
+			{
+				color: #fff;
+				opacity: .6 !important;
+			}
+		}
+		
+		.modal-footer
+		{
+			border: none;
+		}
+	}
+	
+	.btn-secondary
+	{
+		border-width: 2px;
+		border-color: transparent;
+	}
+
+	//Transparent style for color buttons
+	.btn-danger,
+	.btn-primary,
+	.btn-success,
+	.btn-warning
+	{
+		background-color: transparent;
+		border-color: rgba(255, 255, 255, 0.5);
+		border-width: 2px;
+		
+		&:focus
+		{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			background-color: transparent;
+			border-color: rgba(255, 255, 255, 0.4);
+		}
+
+		.hover,
+		&:hover
+		{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			background-color: rgba(255, 255, 255, 0.1);
+			border-color: rgba(255, 255, 255, 0.8);
+		}
+		
+		&.active,
+		&:active,
+		&:not([disabled]):not(.disabled).active,
+		&:not([disabled]):not(.disabled):active
+		{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			background-color: rgba(255, 255, 255, 0.1);
+			border-color: rgba(255, 255, 255, 0.8);
+		}
+	}
+	
+	.btn-secondary
+	{
+		background-color: #fff;
+		border-color: rgba(255, 255, 255, 0.5);
+		border-width: 2px;
+		
+		&:focus
+		{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			background-color: #fff;
+			border-color: rgba(255, 255, 255, 0.4);
+		}
+
+		.hover,
+		&:hover
+		{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			background-color: rgba(255, 255, 255, 0.8);
+			border-color: rgba(255, 255, 255, 0.8);
+		}
+		
+		&.active,
+		&:active,
+		&:not([disabled]):not(.disabled).active,
+		&:not([disabled]):not(.disabled):active
+		{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			background-color: rgba(255, 255, 255, 0.8);
+			border-color: rgba(255, 255, 255, 0.8);
+		}
+	}
+}
+
+//Modal Full Color set
+.modal-full-color-success
+{
+	@include modal-full-color($success-color-text);
+}
+
+.modal-full-color-primary
+{
+	@include modal-full-color($primary-color-text);
+}
+
+.modal-full-color-warning
+{
+	@include modal-full-color($warning-color-text);
+}
+
+.modal-full-color-danger
+{
+	@include modal-full-color($danger-color-text);
+}
+
+.modal-full-color-dark
+{
+	@include modal-full-color($dark-color);
+}
+
+.modal-full-color-konkon
+{
+	@include modal-full-color($konkon-color-text);
+}
+
+
+//Bootstrap Modals
+.full-width
+{
+	width: 90%;
+	max-width:none;
+
+	@include media_size("phone")
+	{
+		width: 100%;
+	}
+
+	&.modal-container
+	{
+		width: 100%;
+
+		@include media_size("phone")
+		{
+			width: 100%;
+		}
+		
+		.modal-content
+		{
+			width: 81%;
+
+			@include media_size("phone")
+			{
+				width: 100%;
+			}
+		}
+	}
+	
+	.modal-content
+	{
+		width: 100%;
+		max-width: none;
+	}
+}
+
+.custom-width
+{
+	.modal-content,
+	.modal-dialog
+	{
+		width: 700px;
+		max-width: none;
+	}
+	
+	.modal-content,
+	.modal-dialog,
+	.modal-header
+	{
+		@include media_size("phone")
+		{
+			width: 100% !important;
+		}
+	}
+}
+
+//Colored Header Modals
+.colored-header
+{
+	.modal-content
+	{
+		.modal-header
+		{
+			background-color: darken($light-color, 10%);
+			color: $light-color;
+			padding: 30px 20px;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			
+			.modal-title
+			{
+				font-size: 1.538rem; // 20px
+			}
+
+			.close
+			{
+				color: rgba(0, 0, 0, 0.7);
+				margin-top: -13px;
+			}
+		}
+		
+		.modal-body
+		{
+			padding: 35px 20px 20px;
+			background-color: $light-color;
+			color: $text-color;
+		}
+		
+		.modal-footer
+		{
+			background-color: $light-color;
+		}
+	}
+}
+
+
+//Colored header color set
+.colored-header-success
+{
+	@include colored-header($success-color-text);
+}
+
+.colored-header-primary
+{
+	@include colored-header($primary-color-text);
+}
+
+.colored-header-warning
+{
+	@include colored-header($warning-color-text);
+}
+
+.colored-header-danger
+{
+	@include colored-header($danger-color-text);
+}
+
+.colored-header-dark
+{
+	@include colored-header($dark-color);
+}
+
+.colored-header-konkon
+{
+	@include colored-header($konkon-color-text);
+}
+
+.modal-dialog-fullscreen
+{
+	position: absolute;
+	margin: 0;
+	width: 100%;
+	min-width: 100%;
+	border: 0;
+	border-radius: 0;
+
+	.modal-content
+	{
+		border: 0;
+		border-radius: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		width: 100%;
+		min-width: 100%;
+		min-height: 100vh;
+	}
+}
+
+.modal-hide-scroll-top.modal-open > .be-scroll-top
+{
+	display: none !important;
+}
+
+//Responsive Design
+@include media_size("phone")
+{
+	.modal-dialog-responsive
+	{
+		position: absolute;
+		margin: 0;
+		width: 100%;
+		min-width: 100%;
+		border: 0;
+		border-radius: 0;
+
+		.modal-content
+		{
+			border: 0;
+			border-radius: 0;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			width: 100%;
+			min-width: 100%;
+			min-height: 100vh;
+		}
+	}
+	
+	.modal-open > .be-scroll-top
+	{
+		display: none !important;
+	}
+}
+
+.be-modal-open
+{
+	overflow-x: visible;
+}

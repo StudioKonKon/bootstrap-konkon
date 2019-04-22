@@ -1,0 +1,27 @@
+
+/*Breadcrumbs*/
+.breadcrumb
+{
+	background-color: force-hex($breadcrumb-bg);
+	margin-bottom: 18px;
+	padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal 6px;
+	line-height: 16px;
+
+	.icon
+	{
+		font-size: 1.231rem; // 16px
+	}
+
+	> li
+	{
+		+ li:before
+		{
+			color:  force-hex($breadcrumb-active-color);
+		}
+	}
+
+	> .active
+	{
+		color: force-hex($breadcrumb-active-color);
+	}
+}

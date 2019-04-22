@@ -1,0 +1,42 @@
+//Colored Labels Mixin
+@mixin tabs-color($color)
+{
+	> li.nav-item
+	{
+		a.nav-link
+		{
+			&:focus,
+			&:hover
+			{
+				color: $color;
+			}
+
+			&.active
+			{
+				border-bottom: 2px solid $color;
+			}
+		}
+	}
+	
+	&.nav-tabs-classic
+	{
+		> li.nav-item
+		{
+			a.nav-link
+			{
+				&.active
+				{
+					border-bottom: 0;
+					background-color: $color;
+					color: #fff;
+				}
+			}
+		}
+		
+		+ .tab-content
+		{
+			background-color: $color;
+			color: #fff;
+		}
+	}
+}

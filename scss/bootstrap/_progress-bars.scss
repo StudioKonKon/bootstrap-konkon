@@ -1,0 +1,16 @@
+/*------------------------------------------------------------------
+  [Progress bars]
+*/
+.progress
+{
+	height: $progress-bar-height;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.progress-bar{
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	line-height: $progress-bar-height;
+	background-color: $primary-color;
+}

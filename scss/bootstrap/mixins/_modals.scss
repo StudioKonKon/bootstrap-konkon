@@ -1,0 +1,49 @@
+//Full colored modal
+@mixin modal-full-color($color)
+{
+	.modal-header
+	{
+		background-color: $color;
+	}
+
+	.modal-body, .modal-footer
+	{
+		background-color: $color;
+	}
+
+	.btn-secondary
+	{
+		color: $color;
+		
+		&:active
+		{
+			color: $color;
+		}
+		
+		&.hover,
+		&:hover
+		{
+			color: $color;
+		}
+		
+		&.active,
+		&:active,
+		&:not([disabled]):not(.disabled).active,
+		&:not([disabled]):not(.disabled):active
+		{
+			color: $color
+		}
+	}
+}
+
+//Colored header modal
+@mixin colored-header($color)
+{
+	.modal-content
+	{
+		.modal-header
+		{
+			background-color: $color;
+		}
+	}
+}

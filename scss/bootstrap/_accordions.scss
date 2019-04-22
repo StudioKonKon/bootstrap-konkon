@@ -1,0 +1,99 @@
+/*------------------------------------------------------------------
+  [Accordions]
+*/
+.accordion
+{
+	margin-bottom: 40px;
+	padding: 0;
+	
+	.card
+	{
+		margin: 0;
+		padding: 0;
+		border-radius: 3px;
+		
+		+ .card
+		{
+			margin-top: .384rem;
+		}
+		
+		&-header
+		{
+			padding: 0;
+			margin: 0;
+			border-radius: 3px;
+			
+			button
+			{
+				font-size: 1.385rem;
+				font-weight: 300;
+				padding: 1.385rem 1.692rem;
+				display: block;
+				width: 100%;
+				color: #404040;
+				background-color: transparent;
+				text-align: left;
+				
+				&.btn
+				{
+					-webkit-box-shadow: none;
+					box-shadow: none;
+					border: 0;
+				
+					&:focus
+					{
+						background-color: transparent;
+					}
+				}
+				
+				.icon
+				{
+					-webkit-transition: -webkit-transform .2s ease-in-out;
+					transition: -webkit-transform .2s ease-in-out;
+					transition: transform .2s ease-in-out;
+					transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+					font-size: 1.923rem;
+					vertical-align: middle;
+					position: relative;
+					top: -1px;
+					display: inline-block;
+					margin-right: 10px;
+				}
+				
+				&[aria-expanded=true]
+				{
+					color: #4285f4;
+					
+					.icon
+					{
+						-webkit-transform: rotate(90deg);
+						transform: rotate(90deg);
+					}
+				}
+			}
+		}
+		
+		&-body
+		{
+			padding: 0 1.538rem 1.538rem 1.538rem;
+			border-top: 0;
+			line-height: 22px;
+			border-radius: 0 0 3px 3px;
+		}
+	}
+}
+
+.accordion-color
+{
+	.card
+	{
+		.card-header
+		{
+			button,
+			button[aria-expanded=true]
+			{
+				color: #ffffff;
+			}
+		}
+	}
+}

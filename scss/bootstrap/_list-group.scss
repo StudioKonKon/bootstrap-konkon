@@ -1,0 +1,55 @@
+/*------------------------------------------------------------------
+  [List group]
+*/
+.list-group-item
+{
+	padding: 13px 15px;
+
+	&.active
+	{
+		.icon
+		{
+			color: $light-color !important;
+		}
+		
+		.badge
+		{
+			background: #fff;
+			color: #4285f4;
+		}
+		
+		+ .active
+		{
+			border-top: solid 1px #fff;
+		}
+	}
+
+	.icon
+	{
+		margin-right: 18px;
+		font-size: 1.231rem; // 16px
+	}
+	
+	.text
+	{
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+	}
+	
+	.badge
+	{
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+	}
+	
+	.active &
+	{
+		.badge
+		{
+			background: #fff;
+			color: #4285f4;
+		}
+	}
+}

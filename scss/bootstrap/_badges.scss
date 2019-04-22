@@ -1,0 +1,46 @@
+/*------------------------------------------------------------------
+  [Badges]
+*/
+.badge
+{
+	font-size: .8462rem; // $font-size-small - 1px
+	font-weight: $font-weight-bold;
+	line-height: 1.55;
+	border: 1px solid darken($light-color, 15%);
+}
+
+.badge-konkon
+{
+	@include badge-color($konkon-color);
+}
+
+.badge-primary
+{
+	@include badge-color($primary-color);
+}
+
+.badge-secondary
+{
+	background-color: $light-color;
+	color: $body-color;
+}
+
+.badge-success
+{
+	@include badge-color($success-color);
+}
+
+.badge-info
+{
+	@include badge-color($info-color);
+}
+
+.badge-warning
+{
+	@include badge-color($warning-color);
+}
+
+.badge-danger
+{
+	@include badge-color($danger-color);
+}

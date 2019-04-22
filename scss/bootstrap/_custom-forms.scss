@@ -1,0 +1,500 @@
+/*------------------------------------------------------------------
+	[Custom Controls]
+*/
+
+.form-check
+{
+	margin-bottom: 0.5rem;
+}
+
+.custom-control
+{
+	min-height: 1.7rem;
+	min-width: 1.7rem;
+	margin-top: .1875rem;
+	margin-bottom: 1.1105rem;
+}
+
+.custom-control-label
+{
+	position: static;
+	display: inline-block;
+	line-height: 1.7;
+	
+	&:after,
+	&:before
+	{
+		top: 0;
+		left: 0;
+	}
+}
+
+.custom-control-input
+{
+	&:focus
+	{
+		~ .custom-control-label
+		{
+			&::before
+			{
+				-webkit-box-shadow: $input-shadow-color;
+				box-shadow: $input-shadow-color;
+			}
+		}
+	}
+	
+	&:checked
+	{
+		~ .custom-control-label
+		{
+			&::before
+			{
+				border-color: $primary-color;
+			}
+			
+			&::after
+			{
+				color: $primary-color;
+			}
+		}
+		
+		~ .custom-control-color
+		{
+			&::after
+			{
+				background-color: $primary-color;
+				color: #fff;
+				border-radius: 3px;
+				
+				.custom-radio &
+				{
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+	
+	&:disabled:checked
+	{
+		~ .custom-control-label
+		{
+			&::before
+			{
+				border-color: #ccc;
+			}
+			
+			&::after
+			{
+				color: #ccc;
+			}
+		}
+		
+		~ .custom-control-color
+		{
+			&::after
+			{
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+
+// Checkboxes
+//
+// Tweak just a few things for checkboxes.
+	
+.custom-checkbox
+{
+	.custom-control-label
+	{
+		&:before
+		{
+			content: "";
+			width: 1.699rem;
+			height: 1.699rem;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			margin: 0 0;
+		}
+	}
+
+	.custom-control-input:checked ~ .custom-control-label
+	{
+		&::after
+		{
+			content: "\f26b";
+			font-size: 1.5452rem;
+			font-family: $icons-font;
+			margin: 0 0;
+			font-weight: 400;
+			text-align: center;
+			line-height: 1.1;
+		}
+	}
+}
+
+.custom-radio
+{
+	.custom-control-label:before
+	{
+		content: "";
+		border: 1px solid #d5d8de;
+		width: 1.77592rem;
+		height: 1.77592rem;
+		margin: 0 0;
+	}
+
+	.custom-control-input:checked ~ .custom-control-label
+	{
+		&::after
+		{
+			content:"\f26d";
+			width: 1.77592rem;
+			height: 1.77592rem;
+			margin: 0 0;
+			font-size: 1rem;
+			font-family: $icons-font;
+			text-align: center;
+			line-height: 1.8;
+		}
+	}
+	
+	&-icon
+	{
+		padding: 7px 0;
+		width: 52px;
+		height: 52px;
+		
+		.custom-control-label
+		{
+			cursor: pointer;
+			margin: 0;
+			width: 52px;
+			height: 52px;
+			line-height: 52px;
+			border: 1px solid #d5d8de;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 36px;
+			vertical-align: middle;
+			color: gray;
+			
+			&::after,
+			&::before
+			{
+				display: none;
+			}
+			
+			&:hover
+			{
+				border-color: #b8bdc8;
+			}
+		}
+		
+		input[type=radio]
+		{
+			&:checked
+			{
+				+ .custom-control-label
+				{
+					border-color: #4285f4;
+					color: #4285f4;
+					background-color: #fff;
+					
+					i
+					{
+						color: #4285f4;
+					}
+				}
+			}
+			
+			&:focus
+			{
+				+ .custom-control-label
+				{
+					-webkit-box-shadow: $input-shadow-color;
+					box-shadow: $input-shadow-color;
+				}
+			}
+		}
+	}
+}
+
+.col-form-label,
+.custom-control,
+.form-check-label,
+.form-control-feedback,
+{
+	&.is-valid,
+	.was-validated &:valid
+	{
+		color: #404040;
+	}
+}
+
+
+.custom-select,
+.form-control
+{
+	&.is-valid,
+	.was-validated &:valid
+	{
+		border-color: #34a853;
+		
+		&:focus
+		{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+}
+
+.custom-file-input
+{
+	&.is-valid,
+	.was-validated &:valid
+	{
+		~ .custom-file-control
+		{
+			border-color: #34a853;
+			
+			&::before
+			{
+				border-color: inherit;
+			}
+		}
+		
+		&:focus
+		{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+}
+
+.custom-control-input
+{
+	&.is-valid,
+	.was-validated &:valid
+	{
+		~ .custom-control-label
+		{
+			&::after
+			{
+				color: #34a853;
+			}
+			
+			&::before
+			{
+				background-color: #fff;
+				border-color: #34a853;
+				color: #34a853;
+			}
+		}
+		
+		&:checked
+		{
+			~ .custom-control-label
+			{
+				&::before
+				{
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.custom-control-input
+{
+	&:checked
+	{
+		&.is-valid,
+		.was-validated &:valid
+		{
+			~ .custom-control-color
+			{
+				&::after
+				{
+					background-color: #34a853;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.col-form-label,
+.custom-control,
+.form-check-label,
+.form-control-feedback
+{
+	&.is-invalid,
+	.was-validated &:invalid
+	{
+		color: #404040;
+	}
+}
+
+.custom-select,
+.form-control
+{
+	&.is-invalid,
+	.was-validated &:invalid
+	{
+		border-color: #ea4335;
+		
+		&:focus
+		{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+}
+
+.custom-file-input
+{
+	&.is-invalid,
+	.was-validated &:invalid
+	{
+		~ .custom-file-control
+		{
+			border-color: #ea4335;
+			
+			&::before
+			{
+				border-color: inherit;
+			}
+		}
+		
+		&:focus
+		{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+}
+
+.custom-control-input
+{
+	&.is-invalid,
+	.was-validated &:invalid
+	{
+		~ .custom-control-label
+		{
+			&::after
+			{
+				color: #ea4335;
+			}
+			
+			&::before
+			{
+				background-color: #fff;
+				border-color: #ea4335;
+				color: #ea4335;
+			}
+		}
+		
+		&:checked
+		{
+			~ .custom-control-label
+			{
+				&::before
+				{
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.custom-control-input:checked
+{
+	&.is-invalid,
+	.was-validated &:invalid
+	{
+		~ .custom-control-color
+		{
+			&::after
+			{
+				background-color: #ea4335;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.custom-control-sm
+{
+	min-width: 1.38462rem;
+	min-height: 1.38462rem;
+	
+	.custom-control-input
+	{
+		~ .custom-control-label
+		{
+			&::before
+			{
+				width: 1.38462rem;
+				height: 1.38462rem;
+			}
+		}
+		
+		&:checked
+		{
+			~ .custom-control-label
+			{
+				&::after
+				{
+					width: 1.38462rem;
+					height: 1.38462rem;
+					font-size: 15px;
+					right: 0;
+					line-height: 1.2;
+					vertical-align: top;
+				}
+			}
+		}
+	}
+}
+
+.be-addon .dropdown-toggle:after
+{
+	display: inline-block;
+}
+
+.custom-select
+{
+	border-radius: 0;
+
+	&:focus
+	{
+		-webkit-box-shadow: 0 0 0 transparent;
+		box-shadow: 0 0 0 transparent;
+	}
+}
+
+.input-group
+{
+	.custom-file-label
+	{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		
+		&:after
+		{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			height: 100%;
+		}
+	}
+}
