@@ -1,0 +1,30 @@
+@function px_to_rem($px, $base: $font-size-base)
+{
+	@return strip-unit($px / $base) + 0rem;
+}
+
+@function rem_to_px($rem, $base: $font-size-base)
+{
+	@return strip-unit($rem * $base) + 0px;
+}
+
+@function strip-unit($number)
+{
+    @if (type-of($number) == "number" and not unitless($number))
+    {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+//###
+@function font-resize-adjust($multiply: 1, $base: $font-size-base)
+{
+	@return round((($base / $font-size-base-global) * $multiply) * 10000) / 10000;
+}
+
+@mixin font-resize($value: 1)
+{
+	font-size: $font-size-base + font-resize-adjust($value);
+}

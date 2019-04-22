@@ -1,0 +1,95 @@
+//Responsive Variables
+
+@mixin appkon-device-media()
+{
+}
+
+@mixin media_size($device: "")
+{
+	@if $device == "desktop-min"
+	{
+		@media #{"(min-width: 1349px)"} { @content; }
+	}
+	@else if $device == "large-desktop-max"
+	{
+		@media #{"(max-width: 1348.98px)"} { @content; }
+	}
+	@else if $device == "large-desktop"
+	{
+		@media #{"(min-width: 1348.98px)"} { @content; }
+	}
+	@else if $device == "desktop"
+	{
+		@include media-breakpoint-up(xl) { @content; }
+	}
+	@else if $device == "desktop-down"
+	{
+		@include media-breakpoint-down(lg) { @content; } // max-width: 1199.98px
+	}
+	@else if $device == "laptop"
+	{
+		@include media-breakpoint-only(lg) { @content; } // (min-width: 992px) and (max-width: 1199.98px)
+	}
+	@else if $device == "tablet-only"
+	{
+		@include media-breakpoint-only(md) { @content; } // (min-width: 768px) and (max-width: 991.98px)
+	}
+	@else if $device == "tablet"
+	{
+		@include media-breakpoint-down(md) { @content; } // max-width: 991.98px
+	}
+	@else if $device == "phone"
+	{
+		@include media-breakpoint-down(sm) { @content; } // max-width: 767.98px
+	}
+	@else if $device == "phone-min"
+	{
+		@include media-breakpoint-up(sm) { @content; } // min-width: 575
+	}
+	@else if $device == "small-phone"
+	{
+		@include media-breakpoint-down(xs) { @content; } // max-width: 575.98px
+	}
+	@else if $device == "non-responsive"
+	{
+		@include media-breakpoint-up(md) { @content; } // min-width: 768px
+	}
+	@else if $device == "retina"
+	{
+		//Retina Display
+		@media #{"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"} { @content; }
+	}
+	@else if $device == "high-dpi"
+	{
+		@media #{"only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi)"} { @content; }
+	}
+	@else if $device == "webkit"
+	{
+		//Google Chrome Query
+		@media #{"screen and (-webkit-min-device-pixel-ratio:0)"} { @content; }
+	}
+	@else if $device == "ie8"
+	{
+		//IE8 Media Query
+		@media #{"\0screen"} { @content; }
+	}
+	@else if $device == "ie910"
+	{
+		//IE9 & IE10 Media Query
+		@media #{"screen and (min-width:0\\0)"} { @content; }
+	}
+	@else if $device == "ie10"
+	{
+		//IE 10+ Media Query
+		@media #{"all and (-ms-high-contrast: none), (-ms-high-contrast: active)"} { @content; }
+	}
+	@else if $device == "touch"
+	{
+		//IE 10+ Media Query
+		@media #{"(hover: none) and (pointer: coarse)"} { @content; }
+	}
+	@else
+	{
+		@content;
+	}
+}

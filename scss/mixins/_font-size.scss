@@ -1,0 +1,25 @@
+//Typography Mixins
+@mixin font-size-percentage($v, $size: "normal")
+{
+	$bs4-size: null;
+	
+	@if $size == "small" { $bs4-size: $font-size-small }
+	@else if $size == "large" { $bs4-size: $font-size-large }
+	@else { $bs4-size: $font-size-base; }
+	
+	$number: strip-unit($v);
+	$value: $font-size-base * ($number / 100);
+	font-size: px_to_rem(ceil($bs4-size + $value ));
+}
+
+//Font size using pixels
+@mixin font-size-pixel($v, $size: "normal")
+{
+	$bs4-size: null;
+	
+	@if $size == "small" { $bs4-size: $font-size-small }
+	@else if $size == "large" { $bs4-size: $font-size-large }
+	@else { $bs4-size: $font-size-base; }
+	
+	font-size: px_to_rem(ceil( $bs4-size + $v ));
+}

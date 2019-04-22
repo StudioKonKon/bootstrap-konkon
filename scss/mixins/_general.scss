@@ -1,0 +1,59 @@
+@function force-hex($color)
+{
+    @if type-of($color) == 'color'
+	{
+        $hex: str-slice(ie-hex-str($color), 4);
+        @return unquote("\##{$hex}");
+    }
+	
+    @return $color;
+}
+
+@mixin konkon-grid-columns($columns: $grid-columns, $breakpoints: $grid-breakpoints)
+{
+	%main-content
+	{
+		@content;
+	}
+	
+	.col
+	{
+		@extend %main-content;
+	}
+	
+	@each $breakpoint in map-keys($breakpoints)
+	{
+		$infix: breakpoint-infix($breakpoint, $breakpoints);
+		
+		.col#{$infix}
+		{
+			@extend %main-content;
+		}
+		
+		@for $i from 1 through $columns
+		{
+			.col#{$infix}-#{$i}
+			{
+				@extend %main-content;
+			}
+		}
+		
+		.col#{$infix}-auto
+		{
+			@extend %main-content;
+		}
+	}
+		
+	@for $i from 1 through $columns
+	{
+		.col-xxl-#{$i}
+		{
+			@extend %main-content;
+		}
+	}
+	
+	.col-xxl-auto
+	{
+		@extend %main-content;
+	}
+}

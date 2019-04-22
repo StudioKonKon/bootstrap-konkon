@@ -1,0 +1,49 @@
+@mixin triangle-base()
+{
+    width: 0;
+    height: 0;
+    content: '';
+	z-index :2;
+    -moz-transform: scale(.9999);
+}
+
+@mixin triangle($direction, $color, $width, $height: null)
+{	
+	@if (type-of($width) == "number" and not unitless($width)) and (type-of($height) == "number" and not unitless($height))
+	{
+		@include triangle-base();
+		
+		@if $direction == "up"
+		{
+			border-left: ($width / 2) solid transparent;
+		    border-right: ($width / 2) solid transparent;
+		    border-bottom: $height solid $color;
+		}
+		@else if $direction == "down"
+		{
+		    border-left: ($width / 2) solid transparent;
+		    border-right: ($width / 2) solid transparent;
+		    border-top: $height solid $color;
+		}
+		@else if $direction == "left"
+		{
+		    border-top: ($width / 2) solid transparent;
+		    border-bottom: ($width / 2) solid transparent;
+		    border-right: $height solid $color;
+		}
+		@else if $direction == "right"
+		{
+		    border-top: ($width / 2) solid transparent;
+		    border-bottom: ($width / 2) solid transparent;
+		    border-left: $height solid $color;
+		}
+		@else { }
+	}
+	@else
+	{
+		@if type-of($width) == "number" and not unitless($width)
+		{
+			@include triangle($direction, $color, $width * 2, $width);
+		}
+	}
+}
