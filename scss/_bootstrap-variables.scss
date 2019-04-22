@@ -1,0 +1,602 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+// Defaults
+// -------
+
+
+$font-size-base:	1rem;
+$font-weight-light:	300;
+$font-weight-bold:	700;
+$font-size-lg:		1.15rem;
+
+$line-height-base:	1.428571;
+$line-height-lg:	1.7;
+$line-height-sm:	1.6;
+
+
+// Bootstrap 4 Variables Migration fixes
+// -------
+
+$line-height-computed:	floor(($font-size-base * $line-height-base));
+
+
+// Color system
+// -------
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #a1a1a1; // lighten($white, 10%)
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+
+$brand-primary:				$primary-color;
+$brand-success:				$success-color;
+$brand-info:				$info-color;
+$brand-warning:				$warning-color;
+$brand-danger:				$danger-color;
+
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary-color,
+    "secondary":  $secondary-color,
+    "success":    $success-color,
+    "info":       $info-color,
+    "warning":    $warning-color,
+    "danger":     $danger-color,
+    "light":      $light-color,
+    "dark":       $dark-color,
+    "gray":       $grey-color
+  ),
+  $theme-colors
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:					$body-background;
+$body-color:				#404040;
+
+$text-muted:				lighten($gray-light, 6.1%); // #878787;
+
+$link-color:				$brand-primary;
+$link-hover-color:			darken($link-color, 15%);
+
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$grid-breakpoints: map-merge(
+  (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+	xxl: 1349px
+  ),
+  $grid-breakpoints
+);
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+//== Components
+//
+//##
+
+$border-radius:		2px;
+$border-radius-lg:	4px;
+$border-radius-sm:	2px;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-base:			$roboto;
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:			1.42857;
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:		inherit;
+$headings-font-weight:		300;
+$headings-line-height:		1.1;
+$headings-color:			inherit;
+
+$h1-font-size:				2.539rem;
+$h2-font-size:				2.077rem;
+$h3-font-size:				1.769rem;
+$h4-font-size:				1.308rem;
+$h5-font-size:				1rem;
+$h6-font-size:				.923rem;
+
+$display-line-height:		$headings-line-height;
+
+$small-font-size:				65%;
+$blockquote-small-font-size:	$small-font-size;
+$blockquote-small-color:		lighten($gray-light, 6.1%); // #878787
+
+$font-size-sm:					.85rem;
+
+
+// Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding:		12px 10px;
+$table-cell-padding-sm: 	7px;
+
+$table-accent-bg:			#f5f5f5;
+$table-hover-bg:			#f0f0f0;
+$table-active-bg:			#f0f0f0;
+
+$table-head-bg:				#dddddd;
+$table-head-color: 			#636c72;
+
+$table-caption-color:		lighten($gray-light, 6.1%); // #878787
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem;
+$spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * 0.38461),
+    2: ($spacer * 0.76923),
+    3: ($spacer * 1.154),
+    4: ($spacer * 1.539),
+    5: ($spacer * 1.923),
+	6: ($spacer * 2.308),
+	7: ($spacer * 3.077),
+	8: ($spacer * 3.851)
+  ),
+  $spacers
+);
+
+
+//== Thumbnails
+//
+//##
+
+//** Padding around the thumbnail image
+$thumbnail-padding:				.25rem;
+//** Thumbnail background color
+$thumbnail-bg:					$body-bg;
+//** Thumbnail border color
+$thumbnail-border:				#ddd;
+//** Thumbnail border radius
+$thumbnail-border-radius:		$border-radius;
+
+//** Custom text color for thumbnail captions
+$thumbnail-caption-color:		$text-color;
+//** Padding around the thumbnail caption
+$thumbnail-caption-padding:		9px;
+
+$figure-caption-font-size:		90%;
+$figure-caption-color:			lighten($gray-light, 6.1%); // #878787
+
+
+//== Custom Forms
+//
+//##
+
+$custom-control-gutter:				0.5rem;
+$custom-control-indicator-size:		1.7rem;
+$custom-control-spacer-x:			1.385rem;
+
+$custom-control-indicator-checked-color:			$primary-color;
+$custom-control-indicator-checked-border-color:		$light-color;
+$custom-control-indicator-checked-bg:				$light-color;
+
+$input-box-shadow:			0 0 0 2px rgba(135, 135, 135, 0.4);
+$input-focus-box-shadow:	0 0 0 0.15rem transparent;
+
+$custom-control-indicator-focus-box-shadow:		$input-box-shadow, $input-focus-box-shadow;
+$custom-control-indicator-focus-border-color:	$primary-color;
+$custom-control-indicator-active-color:			$light-color;
+$custom-control-indicator-active-bg:			#ebf2fe;
+$custom-control-indicator-active-border-color:	#ebf2fe;
+
+$custom-control-label-disabled-color:			$text-muted;
+$custom-control-indicator-disabled-bg:			#eeeeee;
+
+$custom-control-indicator-border-color:			#a1a1a1;
+
+$custom-checkbox-indicator-border-radius:				3px;
+$custom-checkbox-indicator-icon-checked:				none;
+$custom-checkbox-indicator-indeterminate-border-color:	$primary-color;
+$custom-checkbox-indicator-indeterminate-bg:			$primary-color;
+$custom-control-indicator-checked-disabled-bg:			#eeeeee;
+
+$custom-radio-indicator-icon-checked:					none;
+
+$custom-switch-width:							2.975rem;
+$custom-switch-indicator-border-radius:			.85rem;
+$custom-switch-indicator-size:					calc(1.7rem - 4px);
+
+$custom-select-padding-y:						.7692rem;
+$custom-select-padding-x:						.75rem;
+$custom-select-indicator-padding:				1rem;
+$custom-select-height:							3.692rem;
+$custom-select-line-height:						1.428571;
+$custom-select-color:							#404040;
+$custom-select-border-color:					#d5d8de;
+$custom-select-border-radius:					2px;
+
+$custom-select-focus-border-color:				$primary-color;
+$custom-select-focus-box-shadow:				0 0 0 0.15rem rgba($primary-color, 0.5);
+$custom-select-disabled-color:					$text-muted;
+$custom-select-disabled-bg:						#dddddd;
+
+$custom-select-height-sm:						2.3125rem;
+$custom-select-padding-x-sm:					8px;
+$custom-select-font-size-sm:					.85rem;
+$custom-select-height-lg:						2.846rem;
+$custom-select-padding-x-lg:					12px;
+$custom-select-font-size-lg:					1.15rem;
+
+
+$custom-file-height:							3.692rem;
+$custom-file-focus-border-color:				$primary-color;
+$custom-file-focus-box-shadow:					0 0 0 .15rem transparent;
+$custom-file-disabled-bg:						#eeeeee;
+$custom-file-padding-y:							.7692rem;
+$custom-file-padding-x:							.75rem;
+$custom-file-line-height:						1.428571;
+$custom-file-color:								#404040;
+$custom-file-border-color:						#d5d8de;
+$custom-file-border-radius:						2px;
+$custom-file-height-inner:						2.966971rem;
+$custom-file-button-color:						#404040;
+$custom-file-button-bg:							#f5f5f5;
+
+$custom-range-thumb-height:						1rem;
+$custom-range-thumb-focus-box-shadow-width:		0.15rem;
+$custom-range-thumb-focus-box-shadow:			0 0 0 1px #eee,0 0 0 .15rem transparent;
+$custom-range-thumb-bg:							$primary-color;
+$custom-range-thumb-active-bg:					#ebf2fe;
+$custom-range-thumb-disabled-bg:				#a1a1a1;
+
+
+//== Forms
+//
+//##
+
+$input-height:						3.692rem;
+$input-padding-y:					0.7692rem;
+$input-padding-x:					0.75rem;
+$input-line-height: 				1.428571;
+$input-color:						$body-color;
+$input-focus-color:					#404040;
+$input-focus-border-color:			$primary-color;
+$input-focus-box-shadow: 			0 0 0 .15rem transparent;
+$input-placeholder-color:			#878787;
+$input-disabled-bg:					#eeeeee;
+
+$input-bg:							#fff;
+$input-border:						#d5d8de;
+$input-border-color: 				$input-border;
+
+$input-font-size-lg:				1.15rem;
+$input-line-height-lg:				1.7;
+$input-font-size-sm:				0.85rem;
+$input-line-height-sm:				1.6;
+$input-plaintext-color:				#404040;
+
+$input-border-radius:				$border-radius;
+
+$input-height-sm:					2.3125rem;
+$input-padding-y-sm:				.25rem;
+$input-padding-x-sm:				8px;
+$input-font-size-sm:				.85rem;
+$input-line-height-sm:				1.6;
+$input-border-radius-sm:			2px;
+
+$input-height-lg:					2.846rem;
+$input-padding-y-lg:				.5rem;
+$input-padding-x-lg:				12px;
+$input-font-size-lg:				1.15rem;
+$input-line-height-lg:				1.7;
+$input-border-radius-lg:			4px;
+
+$input-group-addon-bg:				darken($light-color, 3.8%);
+$input-group-addon-border-color:	$input-border;
+
+$form-group-margin-bottom:			1.538rem;
+$form-check-inline-margin-x:		1.385rem;
+
+$form-feedback-valid-color:			#34a853;
+$form-feedback-invalid-color:		#ea4335;
+$form-feedback-font-size:			65%;
+
+$form-feedback-tooltip-font-size:		0.85rem;
+$form-feedback-tooltip-line-height:		1.428571;
+$form-feedback-tooltip-opacity:			0.9;
+$form-feedback-tooltip-border-radius:	2px;
+
+$input-height-inner:					2.966971rem;
+$input-focus-width:						0.15rem;
+
+$custom-select-feedback-icon-padding-right:		3.975229rem;
+$custom-select-feedback-icon-position:			center right 1.75rem;
+$custom-select-feedback-icon-size:				1.48349rem 1.48349rem;
+
+
+
+//== Buttons
+//
+//##
+
+$btn-padding-y:				.7692rem;
+$btn-padding-x:				.75rem;
+$btn-font-size:				1rem;
+$btn-line-height:			1.428571;
+$btn-border-radius:			2px;
+
+$btn-focus-box-shadow:		0 0 0 0.15rem rgba(135, 135, 135, 0.5);
+$btn-focus-width:			0.15rem;
+
+$btn-link-disabled-color:   lighten($gray-light, 6.1%);
+
+$btn-padding-y-lg:			.5rem;
+$btn-padding-x-lg:			12px;
+$btn-font-size-lg:			1.15rem;
+$btn-font-weight:           $font-weight-bold;
+$btn-line-height-lg:		1.7;
+$btn-border-radius-lg:		4px;
+
+$btn-padding-y-sm:			.25rem;
+$btn-padding-x-sm:			8px;
+$btn-font-size-sm:			.85rem;
+$btn-line-height-sm:		1.6;
+$btn-border-radius-sm:		2px;
+
+
+//== Buttons Groups
+//
+//##
+
+$btn-padding-x-sm:			8px;
+$btn-padding-x-lg:			12px;
+
+
+//== Input Groups
+//
+//##
+
+$input-line-height:			1.428571;
+$input-group-addon-color:	#404040;
+$input-group-addon-bg:		#f5f5f5;
+
+
+//== Dropdown Menus
+//
+//##
+
+$dropdown-bg:					#fff;
+$dropdown-border-color:			#e3e3e3;
+$dropdown-border-radius:		2px;
+$dropdown-inner-border-radius:	calc(2px - 1px);
+$dropdown-link-hover-bg:		#f5f5f5;
+$dropdown-link-active-bg:		$primary-color;
+$dropdown-link-disabled-color:	$text-muted;
+$dropdown-header-color:			$text-muted;
+$dropdown-divider-bg:           #e5e5e5;
+$dropdown-box-shadow:           0px 0px 6px 0px rgba(0, 0, 0, 0.12);
+
+
+//== Code
+//
+//##
+
+$code-font-size:				87.5%;
+$code-color:					$primary-color;
+$code-bg:						#fafafa;
+
+$kbd-color:						#fff;
+$kbd-bg:						#333;
+
+$pre-bg:						#fafafa;
+$pre-color:						#212529;
+$pre-border-color:				#ccc;
+$pre-scrollable-max-height:		340px;
+
+
+//== Nav Tabs
+//
+//##
+
+$nav-tabs-border-radius:				2px;
+$nav-tabs-link-hover-border-color:		#ddd #ddd #dee2e6;
+$nav-link-disabled-color:				$text-muted;
+$nav-tabs-link-active-color:			#636c72;
+$nav-tabs-link-active-border-color:		#dee2e6 #dee2e6 #eee;
+
+$nav-pills-border-radius:				2px;
+$nav-pills-link-active-bg:				$primary-color;
+
+
+//== Navbars
+//
+//##
+
+$navbar-brand-padding-y:				0.392857rem;
+$navbar-brand-font-size:				1.15rem;
+$navbar-toggler-font-size:				$navbar-brand-font-size;
+$navbar-toggler-border-radius:			2px;
+
+
+//== Cards
+//
+//##
+
+$card-spacer-x:							1.538rem;
+$card-spacer-y:							.7692rem;
+$card-bg:								#ffffff;
+$card-cap-bg:							$card-bg;
+$card-inner-border-radius:				calc(3px - 1px);
+$card-columns-margin:					.7692rem;
+$card-border-radius:					3px;
+
+
+//== Breadcrumb
+//
+//##
+
+$breadcrumb-padding-y:			7px;
+$breadcrumb-padding-x:			20px;
+$breadcrumb-color:				darken($light-color, 46%);
+$breadcrumb-bg:					darken($light-color, 4%);
+$breadcrumb-border-radius:		2px;
+$breadcrumb-item-padding:		0.6154rem;
+$breadcrumb-active-color:		darken($breadcrumb-color, 24%);
+$breadcrumb-divider-color:		$text-muted;
+
+
+//== Pagination
+//
+//##
+
+$pagination-color:         				$body-color;
+$pagination-hover-color:				#0d5bdd;
+$pagination-hover-bg:					#ececec;
+$pagination-hover-border-color:			#dee2e6;
+$pagination-focus-box-shadow:			0 0 0 .15rem transparent;
+$pagination-active-bg:					$primary-color;
+$pagination-active-border-color:		$primary-color;
+$pagination-disabled-color:				$text-muted;
+
+
+//== Badges
+//
+//##
+
+$badge-padding-y:						0.07692rem;
+$badge-padding-x:						0.6154rem;
+$badge-font-weight:						700;
+$badge-border-radius:					2px;
+$badge-pill-padding-x:					0.7em;
+
+
+//== Jumbotron
+//
+//##
+
+$jumbotron-bg:							#ddd;
+
+
+//== Alerts
+//
+//##
+
+$alert-padding-y:						1.385rem;
+$alert-padding-x:						1.385rem;
+$alert-border-radius:					2px;
+
+
+//== Progress Bars
+//
+//##
+
+$progress-height:						3.077rem;
+$progress-font-size:					.9231rem;
+$progress-bg:							#f5f5f5;
+$progress-border-radius:				2px;
+$progress-bar-bg:						$primary-color;
+$progress-bar-animation-timing:			2s linear infinite;
+
+
+//== List Groups
+//
+//##
+
+$list-group-action-color:				#636c72;
+$list-group-action-hover-color:			#636c72;
+$list-group-hover-bg:					#f5f5f5;
+$list-group-action-active-color:		#404040;
+$list-group-action-active-bg:			#dddddd;
+$list-group-border-radius:				2px;
+$list-group-disabled-color:				$text-muted;
+$list-group-disabled-bg:				#ececec;
+$list-group-active-bg:					$primary-color;
+$list-group-active-border-color:		$primary-color;
+
+
+//== Toast
+//
+//##
+
+$toast-header-color:					$text-muted;
+
+
+//== Modal
+//
+//##
+
+$modal-content-border-radius:			4px;
+$modal-header-border-color:				#ddd;
+$modal-footer-border-color:				#ddd;
+$modal-title-line-height:				1.428571;
+$modal-md:								600px;
+$modal-lg:								700px;
+
+
+//== Tooltips
+//
+//##
+
+$tooltip-font-size:						.85rem;
+$tooltip-border-radius:					2px;
+
+
+//== Popover
+//
+//##
+
+$popover-font-size:						.85rem;
+$popover-border-radius:					4px;
+$popover-arrow-color:					#f7f7f7;
+$popover-arrow-outer-color:				rgba(0, 0, 0, 0.25);
+$popover-header-padding-y:				0.6154rem;
+$popover-header-padding-x:				1.077rem;
+$popover-body-color:					#404040;
+$popover-body-padding-y:				0.6154rem;
+$popover-body-padding-x:				1.077rem;
+
+
+
+
+
+
+
+
+
+
