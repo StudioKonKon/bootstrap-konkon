@@ -1,3 +1,20 @@
-//Bootstrap elements
+// Bootstrap elements
 @import "bootstrap-importer";
 @import "theme-variables";
+
+//Mixins
+
+// General style
+@import "general";
+
+//Bootstrap elements
+@import "bootstrap-konkon";
+
+// Fonts (Optional, local files '/lib/{font-dir}')
+// @import "fonts/roboto";
+
+// Structure
+
+// Forms
+
+// Elements
