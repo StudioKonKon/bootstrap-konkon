@@ -12,9 +12,11 @@
 @import "bootstrap-konkon";
 
 // Fonts (Optional, local files '/lib/{font-dir}')
-// @import "fonts/roboto";
+@import "fonts/roboto";
 
 // Structure
+@import "structure/main-content";
+@import "structure/page-head";
 
 
 // Forms
