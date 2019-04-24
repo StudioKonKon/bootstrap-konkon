@@ -1,7 +1,8 @@
-//Paths
+// Paths (location from css file if in '/assets/css/')
+// change as needed
 $img-path: 				"../img";
-$fonts-path: 			"../lib";
-$lib-path: 				"../lib";
+$fonts-path: 			"../../lib";
+$lib-path: 				"../../lib";
 
 $roboto-font-path:			'#{$fonts-path}/roboto';
 $roboto:					'Roboto', Arial, sans-serif;
