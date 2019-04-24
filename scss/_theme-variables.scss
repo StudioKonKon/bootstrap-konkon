@@ -1,1 +1,295 @@
+//Typography
 
+$font-size-base-global:		13; // Number in px as html root font-size
+$font-size-large:        	1.15rem; //($font-size-base * 1.15);
+$font-size-small:        	.9231rem; // ($font-size-base * 0.85);
+
+$font-weight-thin:			100;
+$font-weight-light:			300;
+$font-weight-regular:		400;
+$font-weight-medium:		500;
+$font-weight-bold:			700;
+$font-weight-black:			900;
+
+$paragraph-font-size:		inherit;
+$paragraph-line-height:		21px;
+$paragraph-margin:			15px;
+
+$list-lineheight:			20px;
+
+$display-heading-size:				40px;
+$display-heading-margin:			20px 0 15px;
+$display-description-size:			18px;
+$display-description-line-height:	29px;
+$display-description-margin:		0 0 50px;
+
+//== Components
+//
+//## Define common padding and border radius sizes and more.
+//## Values based on 14px text and 1.428 line-height (~20px to start).
+
+$border-radius-base:        $border-radius;
+$border-radius-large:       $border-radius-lg;
+$border-radius-small:       $border-radius-sm;
+
+$padding-base-vertical:     0.7143rem;
+$padding-base-horizontal:   12px;
+
+$padding-large-vertical:    12px;
+$padding-large-horizontal:  16px;
+
+$padding-small-vertical:    5px;
+$padding-small-horizontal:  9px;
+
+$padding-xs-vertical:       1px;
+$padding-xs-horizontal:     5px;
+
+$line-height-large:         1.7;
+$line-height-small:         1.6;
+
+
+//Forms
+$input-check-component-size:			2.1;
+$input-check-component-border:			1px solid #ccc;
+$input-check-component-border-radius:	3px;
+
+$radio-icon-component-size:				52px;
+$radio-icon-component-color:			lighten(#404040, 25%); // lighten($input-color, 25%)
+$radio-icon-component-icon-size:		36px;
+$radio-icon-component-border:			#d5d8de;
+
+$input-bg-disabled:				$gray-lighter;
+$input-top-border:				#bdc0c7;
+$input-border-radius-large:		$border-radius-large;
+$input-border-radius-small:		$border-radius-small;
+$input-border-focus:			$primary-color;
+$input-color-placeholder:		#999;
+
+$input-shadow-color:			0 0 0 2px rgba($primary-color, 0.25), 0 0 0 0.15rem transparent;
+
+//** Default `.form-control` height
+$input-height-base:              3.692rem;
+$input-height-large:             57px;
+$input-height-small:             37px;
+$input-height-extra-small:       30px;
+
+$legend-color:						$gray-dark;
+$legend-border-color:				#e5e5e5;
+
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:               	 not-allowed;
+
+$input-label-color:			 lighten(#404040, 15%); // lighten($input-color, 15%)
+
+//Form validation states
+$form-validation-icon-size:		 19px;
+
+//Dropdowns
+$dropdown-text-color:				lighten($dark-color, 7.2%);
+$dropdown-border:					darken($light-color, 11%);
+$dropdown-fallback-border:			$dropdown-border;
+
+//Panels & Widget Panels
+$card-body-padding:         		8px 20px 20px;
+$card-default-heading-bg:			transparent !default;
+$card-heading-horizontal-padding:	1.538rem; // 20px
+$card-heading-top-padding:  		20px;
+$card-heading-bottom-padding:   	15px;
+$card-heading-padding:				$card-heading-top-padding $card-heading-horizontal-padding $card-heading-bottom-padding;
+$card-heading-font-size:			18px;
+$card-heading-font-weight:			$font-weight-light;
+$card-heading-icon-color:			darken($light-color, 27%);
+$card-heading-icon-hover:			darken($light-color, 35%);
+$card-heading-icon-size:			1.538rem; // 20px
+$card-heading-icon-separation:		2px;
+$card-heading-icon-line-height:		25px;
+$card-margin-bottom:				25px;
+$card-box-shadow:					0px 1px 2px rgba(0, 0, 0, 0.1);
+
+$widget-heading-font-size:			1.385rem; // 18px
+$widget-heading-font-weight:		300;
+$widget-horizontal-padding:			20px;
+$widget-horizontal-padding-small:	15px;
+$widget-margin-bottom:				$card-margin-bottom;
+$widget-box-shadow:					$card-box-shadow;
+
+
+//Buttons
+$btn-padding-vertical:			0;
+$btn-padding-horizontal:		10px;
+$btn-font-size-base:			1rem;
+$btn-line-height-base:			28px;
+$btn-border-radius-base:		2px;
+$btn-box-shadow-base:			0 1px 0 rgba(0, 0, 0, .05);
+
+//Sizes
+$btn-xs-font-size:				$btn-font-size-base - 0.1538rem;
+$btn-xs-padding-horizontal:		6px;
+$btn-xs-line-height:			18px;
+$btn-xs-border-radius:			1px;
+
+$btn-sm-font-size:				$btn-font-size-base;
+$btn-sm-padding-horizontal:		8px;
+$btn-sm-line-height:			22px;
+$btn-sm-border-radius:			2px;
+
+$btn-lg-font-size:				$btn-font-size-base + 0.1538rem;
+$btn-lg-padding-horizontal:		12px;
+$btn-lg-line-height:			38px;
+$btn-lg-border-radius:			3px;
+
+$btn-xl-font-size:			$btn-font-size-base + 0.1538rem;
+$btn-xl-padding-horizontal:		12px;
+$btn-xl-line-height:		43px;
+$btn-xl-border-radius:			3px;
+
+$btn-icon-margin-left:	4px;	
+$btn-icon-margin-right:	1px;
+
+$btn-default-color:            	$text-color;
+$btn-default-bg:               	#fff;
+$btn-default-border:            	#dbdbdb;
+
+$btn-primary-color:            	#fff;
+$btn-primary-bg:                	#4285f4;
+$btn-primary-border:            	darken($btn-primary-bg, 5%);
+
+$btn-success-color:             	#fff;
+$btn-success-bg:               	#34a853;
+$btn-success-border:            	darken($btn-success-bg, 5%);
+
+$btn-info-color:                	#fff;
+$btn-info-bg:                   	#6ba4ff;
+$btn-info-border:               	darken($btn-info-bg, 5%);
+
+$btn-warning-color:             	#fff;
+$btn-warning-bg:                	#fbbc05;
+$btn-warning-border:            	darken($btn-warning-bg, 5%);
+
+$btn-danger-color:              	#fff;
+$btn-danger-bg:                 	#ea4335;
+$btn-danger-border:             	darken($btn-danger-bg, 5%);
+
+$btn-light-color:              	#404040;
+$btn-light-bg:                 	#fff;
+$btn-light-border:             	darken($btn-light-bg, 5%);
+
+$btn-dark-color:              	#fff;
+$btn-dark-bg:                 	#3d3c3c;
+$btn-dark-border:             	darken($btn-dark-bg, 5%);
+
+
+//== Alerts
+$alert-icon-width:		60px;
+
+//
+//## Define alert colors, border radius, and padding.
+$alert-primary-bg:            $primary-color;
+$alert-primary-text:          $light-color;
+$alert-primary-border:        $primary-color;
+
+$alert-success-bg:            $success-color;
+$alert-success-border:        $success-color;
+
+$alert-info-bg:          	  $info-color;
+$alert-info-border:      	  $info-color;
+
+$alert-warning-bg:            $warning-color;
+$alert-warning-border:        $warning-color;
+
+$alert-danger-bg:             $danger-color;
+$alert-danger-border:         $danger-color;
+
+$alert-light-bg:             $light-color;
+$alert-light-text:           $dark-color;
+$alert-light-border:         $light-color;
+
+$alert-dark-bg:             #a1a1a1;
+$alert-dark-text:           $light-color;
+$alert-dark-border:         #a1a1a1;
+
+
+//== Tables
+$table-condensed-cell-padding:  7px;
+$table-bg-accent:               #f5f5f5;
+$table-bg-hover:                #f0f0f0;
+
+
+//Breadcrumbs
+$breadcrumb-padding-vertical:		7px;		
+$breadcrumb-padding-horizontal:		20px;
+
+
+//== Labels
+//
+//##
+
+//** Default label background color
+$label-default-bg:            $light-color;
+//** Primary label background color
+$label-primary-bg:            $primary-color-text;
+//** Success label background color
+$label-success-bg:            $success-color-text;
+//** Warning label background color
+$label-warning-bg:            $warning-color-text;
+//** Danger label background color
+$label-danger-bg:             $danger-color-text;
+
+//** Default label text color
+$label-color:               	$light-color;
+//** Default text color of a linked label
+$label-link-hover-color:      darken($primary-color, 10%);
+
+
+//== Badges
+$badge-color:                 $text-color;
+$badge-link-hover-color:      #fff;
+$badge-bg:                    $light-color;
+
+
+//Progress bars
+$progress-bar-height:		22px;
+
+
+//Dividers
+$divider-border:		1px solid darken($light-color, 5%);
+$divider-margin:		10px;
+$divider-lg-margin:		15px;
+$divider-xl-margin:		20px;
+
+
+//Social colors
+$facebook:		#5d82d1;
+$twitter:		#50bff5;
+$google-plus:	#eb5e4c;
+$dribbble:		#f7659c;
+$youtube:		#ef4e41;
+$flickr:		#0063dc;
+$linkedin:		#238cc8;
+$pinterest:		#e13138;
+$github:		#24292e;
+$tumblr:		#426d9b;
+$evernote:		#2DBE60;
+$dropbox:		#007EE5;
+$codepen:		#333333;
+
+$social-colors: ();
+$social-colors: map-merge(
+  (
+	"konkon":      $konkon-color,
+    "facebook":    $facebook,
+    "twitter":     $twitter,
+    "google-plus": $google-plus,
+    "dribbble":    $dribbble,
+    "youtube":     $youtube,
+    "flickr":      $flickr,
+    "linkedin":    $linkedin,
+    "pinterest":   $pinterest,
+    "github":      $github,
+    "tumblr":      $tumblr,
+    "evernote":    $evernote,
+    "dropbox":     $dropbox,
+    "codepen":     $codepen
+  ),
+  $social-colors
+);
