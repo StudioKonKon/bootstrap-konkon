@@ -1,1 +1,0 @@
-# Demo: Studio KonKon Theme
