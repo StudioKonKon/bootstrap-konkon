@@ -4,6 +4,10 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ /*!
+ * Studio KonKon BS4 Theme - Open Source Bootstrap Theme
+ * Copyright 2018-2019 Studio KonKon
+ */
 /* print */
 @media print {
   *,
@@ -13566,153 +13570,6 @@ select.form-control-xs:not([size]):not([multiple]) {
   padding: 4px 12px; }
 
 /*------------------------------------------------------------------
-[Fonts - Roboto]
-*/
-@font-face {
-  font-family: 'Roboto';
-  src: url("../../lib/roboto/Roboto-Thin.eot");
-  src: local("Roboto Thin"), local("Roboto-Thin"), url("../../lib/roboto/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-Thin.woff2") format("woff2"), url("../../lib/roboto/Roboto-Thin.woff") format("woff"), url("../../lib/roboto/Roboto-Thin.ttf") format("truetype"), url("../../lib/roboto/Roboto-Thin.svg#Roboto") format("svg");
-  font-weight: 100;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Roboto-Thin";
-  src: url("../../lib/roboto/Roboto-Thin.eot");
-  src: local("Roboto Thin"), local("Roboto-Thin"), url("../../lib/roboto/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-Thin.woff2") format("woff2"), url("../../lib/roboto/Roboto-Thin.woff") format("woff"), url("../../lib/roboto/Roboto-Thin.ttf") format("truetype"), url("../../lib/roboto/Roboto-Thin.svg#Roboto") format("svg"); }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("../../lib/roboto/Roboto-ThinItalic.eot");
-  src: local("Roboto ThinItalic"), local("Roboto-ThinItalic"), url("../../lib/roboto/Roboto-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-ThinItalic.woff2") format("woff2"), url("../../lib/roboto/Roboto-ThinItalic.woff") format("woff"), url("../../lib/roboto/Roboto-ThinItalic.ttf") format("truetype"), url("../../lib/roboto/Roboto-ThinItalic.svg#Roboto") format("svg");
-  font-weight: 100;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Roboto-ThinItalic";
-  src: url("../../lib/roboto/Roboto-ThinItalic.eot");
-  src: local("Roboto ThinItalic"), local("Roboto-ThinItalic"), url("../../lib/roboto/Roboto-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-ThinItalic.woff2") format("woff2"), url("../../lib/roboto/Roboto-ThinItalic.woff") format("woff"), url("../../lib/roboto/Roboto-ThinItalic.ttf") format("truetype"), url("../../lib/roboto/Roboto-ThinItalic.svg#Roboto") format("svg"); }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("../../lib/roboto/Roboto-Light.eot");
-  src: local("Roboto Light"), local("Roboto-Light"), url("../../lib/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-Light.woff2") format("woff2"), url("../../lib/roboto/Roboto-Light.woff") format("woff"), url("../../lib/roboto/Roboto-Light.ttf") format("truetype"), url("../../lib/roboto/Roboto-Light.svg#Roboto") format("svg");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Roboto-Light";
-  src: url("../../lib/roboto/Roboto-Light.eot");
-  src: local("Roboto Light"), local("Roboto-Light"), url("../../lib/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-Light.woff2") format("woff2"), url("../../lib/roboto/Roboto-Light.woff") format("woff"), url("../../lib/roboto/Roboto-Light.ttf") format("truetype"), url("../../lib/roboto/Roboto-Light.svg#Roboto") format("svg"); }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("../../lib/roboto/Roboto-LightItalic.eot");
-  src: local("Roboto LightItalic"), local("Roboto-LightItalic"), url("../../lib/roboto/Roboto-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-LightItalic.woff2") format("woff2"), url("../../lib/roboto/Roboto-LightItalic.woff") format("woff"), url("../../lib/roboto/Roboto-LightItalic.ttf") format("truetype"), url("../../lib/roboto/Roboto-LightItalic.svg#Roboto") format("svg");
-  font-weight: 300;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Roboto-LightItalic";
-  src: url("../../lib/roboto/Roboto-LightItalic.eot");
-  src: local("Roboto LightItalic"), local("Roboto-LightItalic"), url("../../lib/roboto/Roboto-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-LightItalic.woff2") format("woff2"), url("../../lib/roboto/Roboto-LightItalic.woff") format("woff"), url("../../lib/roboto/Roboto-LightItalic.ttf") format("truetype"), url("../../lib/roboto/Roboto-LightItalic.svg#Roboto") format("svg"); }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("../../lib/roboto/Roboto-Regular.eot");
-  src: local("Roboto Regular"), local("Roboto-Regular"), url("../../lib/roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-Regular.woff2") format("woff2"), url("../../lib/roboto/Roboto-Regular.woff") format("woff"), url("../../lib/roboto/Roboto-Regular.ttf") format("truetype"), url("../../lib/roboto/Roboto-Regular.svg#Roboto") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Roboto-Regular";
-  src: url("../../lib/roboto/Roboto-Regular.eot");
-  src: local("Roboto Regular"), local("Roboto-Regular"), url("../../lib/roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-Regular.woff2") format("woff2"), url("../../lib/roboto/Roboto-Regular.woff") format("woff"), url("../../lib/roboto/Roboto-Regular.ttf") format("truetype"), url("../../lib/roboto/Roboto-Regular.svg#Roboto") format("svg"); }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("../../lib/roboto/Roboto-RegularItalic.eot");
-  src: local("Roboto RegularItalic"), local("Roboto-RegularItalic"), url("../../lib/roboto/Roboto-RegularItalic.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-RegularItalic.woff2") format("woff2"), url("../../lib/roboto/Roboto-RegularItalic.woff") format("woff"), url("../../lib/roboto/Roboto-RegularItalic.ttf") format("truetype"), url("../../lib/roboto/Roboto-RegularItalic.svg#Roboto") format("svg");
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Roboto-RegularItalic";
-  src: url("../../lib/roboto/Roboto-RegularItalic.eot");
-  src: local("Roboto RegularItalic"), local("Roboto-RegularItalic"), url("../../lib/roboto/Roboto-RegularItalic.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-RegularItalic.woff2") format("woff2"), url("../../lib/roboto/Roboto-RegularItalic.woff") format("woff"), url("../../lib/roboto/Roboto-RegularItalic.ttf") format("truetype"), url("../../lib/roboto/Roboto-RegularItalic.svg#Roboto") format("svg"); }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("../../lib/roboto/Roboto-Medium.eot");
-  src: local("Roboto Medium"), local("Roboto-Medium"), url("../../lib/roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-Medium.woff2") format("woff2"), url("../../lib/roboto/Roboto-Medium.woff") format("woff"), url("../../lib/roboto/Roboto-Medium.ttf") format("truetype"), url("../../lib/roboto/Roboto-Medium.svg#Roboto") format("svg");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Roboto-Medium";
-  src: url("../../lib/roboto/Roboto-Medium.eot");
-  src: local("Roboto Medium"), local("Roboto-Medium"), url("../../lib/roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-Medium.woff2") format("woff2"), url("../../lib/roboto/Roboto-Medium.woff") format("woff"), url("../../lib/roboto/Roboto-Medium.ttf") format("truetype"), url("../../lib/roboto/Roboto-Medium.svg#Roboto") format("svg"); }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("../../lib/roboto/Roboto-MediumItalic.eot");
-  src: local("Roboto MediumItalic"), local("Roboto-MediumItalic"), url("../../lib/roboto/Roboto-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-MediumItalic.woff2") format("woff2"), url("../../lib/roboto/Roboto-MediumItalic.woff") format("woff"), url("../../lib/roboto/Roboto-MediumItalic.ttf") format("truetype"), url("../../lib/roboto/Roboto-MediumItalic.svg#Roboto") format("svg");
-  font-weight: 500;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Roboto-MediumItalic";
-  src: url("../../lib/roboto/Roboto-MediumItalic.eot");
-  src: local("Roboto MediumItalic"), local("Roboto-MediumItalic"), url("../../lib/roboto/Roboto-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-MediumItalic.woff2") format("woff2"), url("../../lib/roboto/Roboto-MediumItalic.woff") format("woff"), url("../../lib/roboto/Roboto-MediumItalic.ttf") format("truetype"), url("../../lib/roboto/Roboto-MediumItalic.svg#Roboto") format("svg"); }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("../../lib/roboto/Roboto-Bold.eot");
-  src: local("Roboto Bold"), local("Roboto-Bold"), url("../../lib/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-Bold.woff2") format("woff2"), url("../../lib/roboto/Roboto-Bold.woff") format("woff"), url("../../lib/roboto/Roboto-Bold.ttf") format("truetype"), url("../../lib/roboto/Roboto-Bold.svg#Roboto") format("svg");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Roboto-Bold";
-  src: url("../../lib/roboto/Roboto-Bold.eot");
-  src: local("Roboto Bold"), local("Roboto-Bold"), url("../../lib/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-Bold.woff2") format("woff2"), url("../../lib/roboto/Roboto-Bold.woff") format("woff"), url("../../lib/roboto/Roboto-Bold.ttf") format("truetype"), url("../../lib/roboto/Roboto-Bold.svg#Roboto") format("svg"); }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("../../lib/roboto/Roboto-BoldItalic.eot");
-  src: local("Roboto BoldItalic"), local("Roboto-BoldItalic"), url("../../lib/roboto/Roboto-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-BoldItalic.woff2") format("woff2"), url("../../lib/roboto/Roboto-BoldItalic.woff") format("woff"), url("../../lib/roboto/Roboto-BoldItalic.ttf") format("truetype"), url("../../lib/roboto/Roboto-BoldItalic.svg#Roboto") format("svg");
-  font-weight: 700;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Roboto-BoldItalic";
-  src: url("../../lib/roboto/Roboto-BoldItalic.eot");
-  src: local("Roboto BoldItalic"), local("Roboto-BoldItalic"), url("../../lib/roboto/Roboto-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-BoldItalic.woff2") format("woff2"), url("../../lib/roboto/Roboto-BoldItalic.woff") format("woff"), url("../../lib/roboto/Roboto-BoldItalic.ttf") format("truetype"), url("../../lib/roboto/Roboto-BoldItalic.svg#Roboto") format("svg"); }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("../../lib/roboto/Roboto-Black.eot");
-  src: local("Roboto Black"), local("Roboto-Black"), url("../../lib/roboto/Roboto-Black.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-Black.woff2") format("woff2"), url("../../lib/roboto/Roboto-Black.woff") format("woff"), url("../../lib/roboto/Roboto-Black.ttf") format("truetype"), url("../../lib/roboto/Roboto-Black.svg#Roboto") format("svg");
-  font-weight: 900;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Roboto-Black";
-  src: url("../../lib/roboto/Roboto-Black.eot");
-  src: local("Roboto Black"), local("Roboto-Black"), url("../../lib/roboto/Roboto-Black.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-Black.woff2") format("woff2"), url("../../lib/roboto/Roboto-Black.woff") format("woff"), url("../../lib/roboto/Roboto-Black.ttf") format("truetype"), url("../../lib/roboto/Roboto-Black.svg#Roboto") format("svg"); }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("../../lib/roboto/Roboto-BlackItalic.eot");
-  src: local("Roboto BlackItalic"), local("Roboto-BlackItalic"), url("../../lib/roboto/Roboto-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-BlackItalic.woff2") format("woff2"), url("../../lib/roboto/Roboto-BlackItalic.woff") format("woff"), url("../../lib/roboto/Roboto-BlackItalic.ttf") format("truetype"), url("../../lib/roboto/Roboto-BlackItalic.svg#Roboto") format("svg");
-  font-weight: 900;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Roboto-BlackItalic";
-  src: url("../../lib/roboto/Roboto-BlackItalic.eot");
-  src: local("Roboto BlackItalic"), local("Roboto-BlackItalic"), url("../../lib/roboto/Roboto-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../../lib/roboto/Roboto-BlackItalic.woff2") format("woff2"), url("../../lib/roboto/Roboto-BlackItalic.woff") format("woff"), url("../../lib/roboto/Roboto-BlackItalic.ttf") format("truetype"), url("../../lib/roboto/Roboto-BlackItalic.svg#Roboto") format("svg"); }
-
-/*------------------------------------------------------------------
   [Main content]
 */
 .be-content {
@@ -13796,3 +13653,257 @@ select.form-control-xs:not([size]):not([multiple]) {
       .page-head-title {
         font-size: 1.846rem;
         line-height: 28px; } }
+
+/*------------------------------------------------------------------
+  [Brand Cards]
+*/
+.brand-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin-bottom: 1.5rem;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 3px; }
+  .brand-card .card-img-overlay {
+    background-color: rgba(61, 60, 60, 0.4); }
+  .brand-card-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    border-radius: 3px 3px 0 0;
+    color: #ffffff;
+    font-size: 2.539rem;
+    color: #ffffff !important; }
+    .brand-card-header * {
+      margin: 0 auto; }
+    .brand-card-header > .icon {
+      font-size: 3rem;
+      color: #ffffff !important; }
+  .brand-card-body {
+    font-size: 1.15rem;
+    color: #404040;
+    display: flex;
+    flex-direction: row;
+    padding: 0.7692rem 0;
+    text-align: center; }
+    .brand-card-body > * {
+      flex: 1;
+      padding: 0.1923rem 0; }
+    .brand-card-body > *:not(:last-child) {
+      border-right: 1px solid #dee2e6; }
+
+.bg-konkon {
+  background-color: #fe669e; }
+  .bg-konkon .card-img-overlay {
+    background-color: rgba(254, 102, 158, 0.4); }
+
+a.bg-konkon,
+button.bg-konkon {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-konkon:hover, a.bg-konkon:focus,
+  button.bg-konkon:hover,
+  button.bg-konkon:focus {
+    color: #ffffff;
+    background-color: #fe337e; }
+
+.bg-facebook {
+  background-color: #5d82d1; }
+  .bg-facebook .card-img-overlay {
+    background-color: rgba(93, 130, 209, 0.4); }
+
+a.bg-facebook,
+button.bg-facebook {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-facebook:hover, a.bg-facebook:focus,
+  button.bg-facebook:hover,
+  button.bg-facebook:focus {
+    color: #ffffff;
+    background-color: #3864c3; }
+
+.bg-twitter {
+  background-color: #50bff5; }
+  .bg-twitter .card-img-overlay {
+    background-color: rgba(80, 191, 245, 0.4); }
+
+a.bg-twitter,
+button.bg-twitter {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-twitter:hover, a.bg-twitter:focus,
+  button.bg-twitter:hover,
+  button.bg-twitter:focus {
+    color: #ffffff;
+    background-color: #20adf2; }
+
+.bg-google-plus {
+  background-color: #eb5e4c; }
+  .bg-google-plus .card-img-overlay {
+    background-color: rgba(235, 94, 76, 0.4); }
+
+a.bg-google-plus,
+button.bg-google-plus {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-google-plus:hover, a.bg-google-plus:focus,
+  button.bg-google-plus:hover,
+  button.bg-google-plus:focus {
+    color: #ffffff;
+    background-color: #e6351e; }
+
+.bg-dribbble {
+  background-color: #f7659c; }
+  .bg-dribbble .card-img-overlay {
+    background-color: rgba(247, 101, 156, 0.4); }
+
+a.bg-dribbble,
+button.bg-dribbble {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-dribbble:hover, a.bg-dribbble:focus,
+  button.bg-dribbble:hover,
+  button.bg-dribbble:focus {
+    color: #ffffff;
+    background-color: #f4357d; }
+
+.bg-youtube {
+  background-color: #ef4e41; }
+  .bg-youtube .card-img-overlay {
+    background-color: rgba(239, 78, 65, 0.4); }
+
+a.bg-youtube,
+button.bg-youtube {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-youtube:hover, a.bg-youtube:focus,
+  button.bg-youtube:hover,
+  button.bg-youtube:focus {
+    color: #ffffff;
+    background-color: #e92414; }
+
+.bg-flickr {
+  background-color: #0063dc; }
+  .bg-flickr .card-img-overlay {
+    background-color: rgba(0, 99, 220, 0.4); }
+
+a.bg-flickr,
+button.bg-flickr {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-flickr:hover, a.bg-flickr:focus,
+  button.bg-flickr:hover,
+  button.bg-flickr:focus {
+    color: #ffffff;
+    background-color: #004ca9; }
+
+.bg-linkedin {
+  background-color: #238cc8; }
+  .bg-linkedin .card-img-overlay {
+    background-color: rgba(35, 140, 200, 0.4); }
+
+a.bg-linkedin,
+button.bg-linkedin {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-linkedin:hover, a.bg-linkedin:focus,
+  button.bg-linkedin:hover,
+  button.bg-linkedin:focus {
+    color: #ffffff;
+    background-color: #1b6e9d; }
+
+.bg-pinterest {
+  background-color: #e13138; }
+  .bg-pinterest .card-img-overlay {
+    background-color: rgba(225, 49, 56, 0.4); }
+
+a.bg-pinterest,
+button.bg-pinterest {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-pinterest:hover, a.bg-pinterest:focus,
+  button.bg-pinterest:hover,
+  button.bg-pinterest:focus {
+    color: #ffffff;
+    background-color: #c31c23; }
+
+.bg-github {
+  background-color: #24292e; }
+  .bg-github .card-img-overlay {
+    background-color: rgba(36, 41, 46, 0.4); }
+
+a.bg-github,
+button.bg-github {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-github:hover, a.bg-github:focus,
+  button.bg-github:hover,
+  button.bg-github:focus {
+    color: #ffffff;
+    background-color: #0e1011; }
+
+.bg-tumblr {
+  background-color: #426d9b; }
+  .bg-tumblr .card-img-overlay {
+    background-color: rgba(66, 109, 155, 0.4); }
+
+a.bg-tumblr,
+button.bg-tumblr {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-tumblr:hover, a.bg-tumblr:focus,
+  button.bg-tumblr:hover,
+  button.bg-tumblr:focus {
+    color: #ffffff;
+    background-color: #335477; }
+
+.bg-evernote {
+  background-color: #2DBE60; }
+  .bg-evernote .card-img-overlay {
+    background-color: rgba(45, 190, 96, 0.4); }
+
+a.bg-evernote,
+button.bg-evernote {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-evernote:hover, a.bg-evernote:focus,
+  button.bg-evernote:hover,
+  button.bg-evernote:focus {
+    color: #ffffff;
+    background-color: #23954b; }
+
+.bg-dropbox {
+  background-color: #007EE5; }
+  .bg-dropbox .card-img-overlay {
+    background-color: rgba(0, 126, 229, 0.4); }
+
+a.bg-dropbox,
+button.bg-dropbox {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-dropbox:hover, a.bg-dropbox:focus,
+  button.bg-dropbox:hover,
+  button.bg-dropbox:focus {
+    color: #ffffff;
+    background-color: #0062b2; }
+
+.bg-codepen {
+  background-color: #333333; }
+  .bg-codepen .card-img-overlay {
+    background-color: rgba(51, 51, 51, 0.4); }
+
+a.bg-codepen,
+button.bg-codepen {
+  cursor: pointer;
+  text-decoration: none; }
+  a.bg-codepen:hover, a.bg-codepen:focus,
+  button.bg-codepen:hover,
+  button.bg-codepen:focus {
+    color: #ffffff;
+    background-color: #1a1a1a; }
