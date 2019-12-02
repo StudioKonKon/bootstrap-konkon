@@ -1,27 +1,39 @@
 // Tables
 
-@mixin table-row-variant($state, $background)
+@mixin table-row-variant($state, $background, $bg-hover: darken($background, 5%))
 {
 	.table-#{$state}
 	{
 		&,
 		> td,
-		>th
+		> th
 		{
 			background-color: $background;
-			color: #fff;
+			color: color-yiq($background);
 		}
 		
 		.table-hover &:hover
 		{
-			background-color: darken($background, 5%);
-			color: #fff;
+			background-color: $bg-hover;
+			color: color-yiq($bg-hover);
 			
 			> td,
 			> th
 			{
-				background-color: darken($background, 5%);
-				color: #fff;
+				background-color: $bg-hover;
+				color: color-yiq($bg-hover);
+			}
+		}
+		
+		@if color-yiq($background, "#000000", "#ffffff") == "#ffffff"
+		{
+			td,
+			th
+			{
+				&.actions .icon
+				{
+					color: #fff !important;
+				}
 			}
 		}
 	}
@@ -34,7 +46,7 @@
 		td:first-child
 		{
 			border-left: 3px solid $color;
-			padding-left: 17px;
+			padding-left: 1.308rem;
 		}
 	}
 }

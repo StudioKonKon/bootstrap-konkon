@@ -3,44 +3,29 @@
 */
 .badge
 {
-	font-size: .8462rem; // $font-size-small - 1px
+	font-size: $font-size-sm;
 	font-weight: $font-weight-bold;
-	line-height: 1.55;
+	line-height: $line-height-sm;
 	border: 1px solid darken($light-color, 15%);
+	
+	&.badge-std
+	{
+		font-size: $font-size-sm !important;
+	}
 }
 
-.badge-konkon
+@each $theme-colors, $theme-color in $theme-colors
 {
-	@include badge-color($konkon-color);
-}
-
-.badge-primary
-{
-	@include badge-color($primary-color);
+	@if $theme-colors != "secondary"
+	{
+		@include badge-color($theme-colors, $theme-color);
+	}
+	
+	@include badge-outline-color($theme-colors, $theme-color);
 }
 
 .badge-secondary
 {
 	background-color: $light-color;
 	color: $body-color;
-}
-
-.badge-success
-{
-	@include badge-color($success-color);
-}
-
-.badge-info
-{
-	@include badge-color($info-color);
-}
-
-.badge-warning
-{
-	@include badge-color($warning-color);
-}
-
-.badge-danger
-{
-	@include badge-color($danger-color);
 }

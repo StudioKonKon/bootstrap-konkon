@@ -3,25 +3,25 @@
 */
 .accordion
 {
-	margin-bottom: 40px;
+	margin-bottom: map-get($spacers, 7);
 	padding: 0;
 	
 	.card
 	{
 		margin: 0;
 		padding: 0;
-		border-radius: 3px;
+		border-radius: $border-radius;
 		
 		+ .card
 		{
-			margin-top: .384rem;
+			margin-top: map-get($spacers, 1);
 		}
 		
 		&-header
 		{
 			padding: 0;
 			margin: 0;
-			border-radius: 3px;
+			border-radius: $border-radius;
 			
 			button
 			{
@@ -57,7 +57,7 @@
 					position: relative;
 					top: -1px;
 					display: inline-block;
-					margin-right: 10px;
+					margin-right: map-get($spacers, 2);
 				}
 				
 				&[aria-expanded=true]
@@ -75,10 +75,10 @@
 		
 		&-body
 		{
-			padding: 0 1.538rem 1.538rem 1.538rem;
+			padding: 0 map-get($spacers, 4) map-get($spacers, 4) map-get($spacers, 4);
 			border-top: 0;
-			line-height: 22px;
-			border-radius: 0 0 3px 3px;
+			line-height: $line-height-lg;
+			border-radius: 0 0 $border-radius $border-radius;
 		}
 	}
 }

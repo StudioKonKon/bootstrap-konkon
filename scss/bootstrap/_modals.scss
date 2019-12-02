@@ -4,8 +4,8 @@
 
 .modal-content
 {
-	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 .308rem .462rem rgba($black, 0.3);
+	box-shadow: 0 .308rem .462rem rgba($black, 0.3);
 	overflow: hidden;
 	background-color: $light-color;
 	color: $text-color;
@@ -15,8 +15,8 @@
 //Modal Header
 .modal-header
 {
-	border: 0;
-	padding: 19px;
+	border: none;
+	padding: 1.462rem;
 
 	h1, h2, h3, h4, h5, h6
 	{
@@ -26,10 +26,10 @@
 
 	.close
 	{
-		font-size: 1.538rem; // 20px
+		font-size: 1.538rem;
 		opacity: 0.4;
 		text-shadow: none;
-		margin-top: -17px;
+		margin-top: -2.308rem;
 
 		&:hover
 		{
@@ -48,7 +48,7 @@
 //Modal Body
 .modal-body
 {
-	padding: 10px 20px 20px;
+	padding: $modal-inner-padding;
 
 	//Remove margin bottom from last row form group
 	.row:last-child
@@ -67,23 +67,23 @@
 	height: 45px;
 	width: 45px;
 	line-height: normal;
-	font-size: 3.846rem; // 50px
+	font-size: 3.846rem;
 }
 
 //Modal Footer
 .modal-footer
 {
-	padding: 20px;
+	padding: map-get($spacers, 4);
 	border: none;
 	
 	> :not(:first-child)
 	{
-		margin-left: 4px;
+		margin-left: .308rem;
 	}
 	
 	> :not(:last-child)
 	{
-		margin-right: 4px;
+		margin-right: .308rem;
 	}
 }
 
@@ -98,20 +98,15 @@
 //Full Color Alerts
 .modal-full-color
 {
-	.modal-header
-	{
-		padding: 19px;
-	}
-
 	.modal-content
 	{
-		color: $light-color;
+		color: $white;
 		background-color: transparent;
 
 		.close
 		{
 			color: $light-color;
-			line-height: 40px;
+			line-height: 3.077rem;
 			opacity: 0.6;
 
 			&:hover
@@ -128,6 +123,12 @@
 			}
 		}
 		
+		.modal-header
+		{
+			padding: 1.462rem;
+			border: none;
+		}
+	
 		.modal-footer
 		{
 			border: none;
@@ -136,7 +137,7 @@
 	
 	.btn-secondary
 	{
-		border-width: 2px;
+		border-width: $border-radius-sm;
 		border-color: transparent;
 	}
 
@@ -147,15 +148,15 @@
 	.btn-warning
 	{
 		background-color: transparent;
-		border-color: rgba(255, 255, 255, 0.5);
-		border-width: 2px;
+		border-color: rgba($white, 0.5);
+		border-width: $border-radius-sm;
 		
 		&:focus
 		{
 			-webkit-box-shadow: none;
 			box-shadow: none;
 			background-color: transparent;
-			border-color: rgba(255, 255, 255, 0.4);
+			border-color: rgba($white, 0.4);
 		}
 
 		.hover,
@@ -163,8 +164,8 @@
 		{
 			-webkit-box-shadow: none;
 			box-shadow: none;
-			background-color: rgba(255, 255, 255, 0.1);
-			border-color: rgba(255, 255, 255, 0.8);
+			background-color: rgba($white, 0.1);
+			border-color: rgba($white, 0.8);
 		}
 		
 		&.active,
@@ -174,23 +175,23 @@
 		{
 			-webkit-box-shadow: none;
 			box-shadow: none;
-			background-color: rgba(255, 255, 255, 0.1);
-			border-color: rgba(255, 255, 255, 0.8);
+			background-color: rgba($white, 0.1);
+			border-color: rgba($white, 0.8);
 		}
 	}
 	
 	.btn-secondary
 	{
-		background-color: #fff;
-		border-color: rgba(255, 255, 255, 0.5);
-		border-width: 2px;
+		background-color: $white;
+		border-color: rgba($white, 0.5);
+		border-width: $border-radius-sm;
 		
 		&:focus
 		{
 			-webkit-box-shadow: none;
 			box-shadow: none;
-			background-color: #fff;
-			border-color: rgba(255, 255, 255, 0.4);
+			background-color: $white;
+			border-color: rgba($white, 0.4);
 		}
 
 		.hover,
@@ -198,8 +199,8 @@
 		{
 			-webkit-box-shadow: none;
 			box-shadow: none;
-			background-color: rgba(255, 255, 255, 0.8);
-			border-color: rgba(255, 255, 255, 0.8);
+			background-color: rgba($white, 0.8);
+			border-color: rgba($white, 0.8);
 		}
 		
 		&.active,
@@ -209,8 +210,8 @@
 		{
 			-webkit-box-shadow: none;
 			box-shadow: none;
-			background-color: rgba(255, 255, 255, 0.8);
-			border-color: rgba(255, 255, 255, 0.8);
+			background-color: rgba($white, 0.8);
+			border-color: rgba($white, 0.8);
 		}
 	}
 }
@@ -290,7 +291,7 @@
 	.modal-content,
 	.modal-dialog
 	{
-		width: 700px;
+		width: $modal-lg;
 		max-width: none;
 	}
 	
@@ -314,32 +315,32 @@
 		{
 			background-color: darken($light-color, 10%);
 			color: $light-color;
-			padding: 30px 20px;
+			padding: $modal-header-padding;
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
 			
 			.modal-title
 			{
-				font-size: 1.538rem; // 20px
+				font-size: 1.538rem;
 			}
 
 			.close
 			{
 				color: rgba(0, 0, 0, 0.7);
-				margin-top: -13px;
+				margin-top: -2rem;
 			}
 		}
 		
 		.modal-body
 		{
-			padding: 35px 20px 20px;
-			background-color: $light-color;
+			padding: $modal-full-inner-padding;
+			background-color: $white;
 			color: $text-color;
 		}
 		
 		.modal-footer
 		{
-			background-color: $light-color;
+			background-color: $white;
 		}
 	}
 }

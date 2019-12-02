@@ -3,7 +3,7 @@
 */
 .list-group-item
 {
-	padding: 13px 15px;
+	padding: $list-group-item-padding-y $list-group-item-padding-x;
 
 	&.active
 	{
@@ -14,20 +14,20 @@
 		
 		.badge
 		{
-			background: #fff;
-			color: #4285f4;
+			background: $white;
+			color: $primary-color;
 		}
 		
 		+ .active
 		{
-			border-top: solid 1px #fff;
+			border-top: solid 1px $white;
 		}
 	}
 
 	.icon
 	{
-		margin-right: 18px;
-		font-size: 1.231rem; // 16px
+		margin-right: 1.385rem;
+		font-size: 1.231rem;
 	}
 	
 	.text
@@ -48,8 +48,14 @@
 	{
 		.badge
 		{
-			background: #fff;
-			color: #4285f4;
+			background: $white;
+			color: $primary-color;
 		}
 	}
+}
+
+.list-group-header
+{
+	font-weight: 400;
+	font-size: $h4-font-size;
 }

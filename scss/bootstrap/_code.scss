@@ -1,17 +1,23 @@
 /*------------------------------------------------------------------
   [Code]
 */
+
 pre
 {
-	padding: 20px;
+	padding: map-get($spacers, 4);
 	border: 0;
 	border-radius: 0;
-	background-color: #fafafa;
+	background-color: $gray-100;
 	font-size: .9231rem;
-	margin: 0 0 9px;
+	margin: 0 0 .692rem;
 }
 
-pre code
+pre code.pre-wrap
 {
 	white-space: pre-wrap;
+}
+
+kbd
+{
+	background-color: $dark-color;
 }

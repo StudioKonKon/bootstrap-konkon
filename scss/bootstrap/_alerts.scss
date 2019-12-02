@@ -5,18 +5,18 @@
 {
 	padding: 0;
 	position: relative;
-	line-height: 25px;
+	line-height: 1.923rem;
 	border-width: 0;
-	margin-bottom: 18px;
+	margin-bottom: 1.385rem;
 	color: #fff;
 
 	> .icon
 	{
 		width: 55px;
-		font-size: 1.846rem; // 24px
+		font-size: 1.846rem;
 		vertical-align: middle;
 		text-align:center;
-		line-height: 22px;
+		line-height: 1.692rem;
 		display: table-cell;
 		cursor: default;
 		padding-top: 1px;
@@ -30,22 +30,27 @@
 	.close
 	{
 		position: absolute;
-		font-size: 1.538rem; // 20px
+		font-size: 1.538rem;
 		right: 1.385rem;
 		text-shadow: none;
 		padding: 1.5388rem 0;
 		opacity: .2;
 	}
+   
+	> .icon + .message
+	{
+		padding-left: .231rem;
+	}
 	
 	.message
 	{
 		display: table-cell;
-		padding: 1.385rem 2.1542rem 1.385rem .231rem;
+		padding: 1.385rem 2.1542rem;
 		border-left-width: 0;
 		
 		@include media_size("small-phone")
 		{
-			padding: 1.385rem 2.539rem 1.385rem .231rem;
+			padding-right: 2.539rem;
 		}
 
 		// Improve alignment and spacing of inner content
@@ -59,32 +64,48 @@
 		{
 			margin-top: 5px;
 		}
+		
+		> .alert-heading:first-child
+		{
+			margin-top: 0;
+		}
 	}
+}
+
+.alert-konkon
+{
+	background-color: darken($alert-konkon-bg, 1%);
+	.alert-link { color: darken($alert-konkon-bg, 25%); }
 }
 
 .alert-primary
 {
 	background-color: darken($alert-primary-bg, 1%);
+	.alert-link { color: darken($alert-primary-bg, 25%); }
 }
 
 .alert-success
 {
 	background-color: darken($alert-success-bg, 1%);
+	.alert-link { color: darken($alert-success-bg, 25%); }
 }
 
 .alert-info
 {
 	background-color: darken($alert-info-bg, 1%);
+	.alert-link { color: darken($alert-info-bg, 25%); }
 }
 
 .alert-warning
 {
 	background-color: darken($alert-warning-bg, 1%);
+	.alert-link { color: darken($alert-warning-bg, 25%); }
 }
 
 .alert-danger
 {
 	background-color: darken($alert-danger-bg, 1%);
+	.alert-link { color: darken($alert-danger-bg, 25%); }
 }
 
 .alert-light
@@ -111,6 +132,11 @@
 
 .alert-dismissible
 {
+	&.alert-konkon
+	{
+		@include dismissible-variation($alert-konkon-bg);
+	}
+	
 	&.alert-primary
 	{
 		@include dismissible-variation($alert-primary-bg);
@@ -160,11 +186,15 @@
 		vertical-align: middle;
 		background-color: rgba(255, 255, 255, .08);
 	}
+   
+	> .icon + .message
+	{
+		padding-left: 1.385rem;
+	}
 	
 	> .message
 	{
 		display: table-cell;
-		padding: 1.385rem 1.385rem;
 		border-left-width: 0;
 		
 		@include media_size("small-phone")
@@ -188,37 +218,26 @@
 
 	> .icon
 	{
-		position:relative;
+		position: relative;
 		display: table-cell;
 		width: $alert-icon-width;
 		text-align: center;
 		vertical-align: middle;
 		cursor: default;
-
-		&:after
-		{
-			position:absolute;
-			right: -10px;
-			top: 50%;
-			margin-top: -10px;
-			width: 0;
-			height: 0;
-			content: '';
-			z-index: 2;
-			border-left: 11px solid #fff;
-			-moz-transform: scale(.9999);
-			border-bottom: 11px solid transparent;
-			border-top: 11px solid transparent;
-		}
+	}
+   
+	> .icon + .message
+	{
+		padding-left: 1.385rem;
+		border-left-width: 0;
 	}
 
 	> .message
 	{
 		display: table-cell;
-		padding: 1.385rem 1.385rem;
 		color: $text-color;
 		border: 1px solid darken($light-color, 17%);
-		border-left-width: 0;
+		width: 100%;
 		
 		@include media_size("small-phone")
 		{
@@ -243,6 +262,11 @@
 	}
 
 	//Colors
+	&.alert-konkon
+	{
+		@include icon-alert-variation($alert-konkon-bg);
+	}
+	
 	&.alert-primary
 	{
 		@include icon-alert-variation($alert-primary-bg);
@@ -277,22 +301,6 @@
 		> .icon
 		{
 			border-right: 1px solid #d4d4d4;
-			
-			&:before
-			{
-				position: absolute;
-				right: -22px;
-				top: 50%;
-				margin-top: -10px;
-				width: 0;
-				height: 0;
-				content: '';
-				z-index: 2;
-				border: solid transparent;
-				border-width: 11px;
-				border-color: rgba(194,225,245,0);
-				border-left-color: #d4d4d4;
-			}
 		}
 		
 		> .message
@@ -307,8 +315,16 @@
 	}
 }
 
-.alert-icon-border
+.alert-bordered
 {
+	&.alert-konkon
+	{
+		.message
+		{
+			border-color: $alert-konkon-bg;
+		}
+	}
+	
 	&.alert-primary
 	{
 		.message
@@ -376,79 +392,32 @@
 		position: relative;
 		background-color: darken($light-color, 2.8%);
 		border-width: 0;
-
-		&:before
-		{
-			border: unset;
-		}
-		
-		&:after
-		{
-			border-left-color: #f8f8f8;
-			position: absolute;
-			right: -11px;
-			top: 50%;
-			margin-top: -11px;
-			width: 0;
-			height: 0;
-			content: '';
-			z-index: 2;
-			border-left: 11px solid #f8f8f8;
-			-moz-transform: scale(.9999);
-			border-bottom: 11px solid transparent;
-			border-top: 11px solid transparent;
-		}
 	}
 
-	> .message
+	.message
 	{
 		border-width: 0;
-	}
-
-	&.alert-primary
-	{
-		@include alert-icon-colored($alert-primary-bg);
-	}
-
-	&.alert-success
-	{
-		@include alert-icon-colored($alert-success-bg);
-	}
-
-	&.alert-info
-	{
-		@include alert-icon-colored($alert-info-bg);
-	}
-
-	&.alert-warning
-	{
-		@include alert-icon-colored($alert-warning-bg);
-	}
-
-	&.alert-danger
-	{
-		@include alert-icon-colored($alert-danger-bg);
-	}
-
-	&.alert-light
-	{
-		@include alert-icon-colored($alert-dark-bg);
-	}
-
-	&.alert-dark
-	{
-		@include alert-icon-colored(#737373);
 	}
 }
 
 .alert-simple
 {
+	
 	border: 1px solid darken($light-color, 17%);
 	background-color: $light-color;
 	color: $text-color;
 	-webkit-box-shadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.07);
 	box-shadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.07);
-	
+}
+
+.alert-icon-colored,
+.alert-simple
+{
+	&.alert-konkon
+	{
+		@include alert-icon-colored($alert-konkon-bg);
+	}
+
 	&.alert-primary
 	{
 		@include alert-icon-colored($alert-primary-bg);

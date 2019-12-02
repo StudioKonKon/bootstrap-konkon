@@ -326,13 +326,13 @@
 		color: $color;
 		border-color: transparent;
 		border-width: 2px;
-		-webkit-box-shadow: $btn-box-shadow-base;
-		box-shadow: $btn-box-shadow-base;
+		-webkit-box-shadow: $btn-box-shadow;
+		box-shadow: $btn-box-shadow;
 	}
 
 	&:focus
 	{
-		-webkit-box-shadow: $btn-box-shadow-base;
-		box-shadow: $btn-box-shadow-base;
+		-webkit-box-shadow: $btn-box-shadow;
+		box-shadow: $btn-box-shadow;
 	}
 }

@@ -3,13 +3,14 @@
 .breadcrumb
 {
 	background-color: force-hex($breadcrumb-bg);
-	margin-bottom: 18px;
-	padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal 6px;
-	line-height: 16px;
+	margin-bottom: 1 + map-get($spacers, 1);
+	padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+	line-height: 1.231rem;
 
 	.icon
 	{
-		font-size: 1.231rem; // 16px
+		font-size: 1.231rem;
+		padding-right: map-get($spacers, 1);
 	}
 
 	> li

@@ -3,14 +3,31 @@
 */
 .progress
 {
-	height: $progress-bar-height;
+	height: $progress-height;
 	-webkit-box-shadow: none;
 	box-shadow: none;
+	
+	&-lg
+	{
+		height: $progress-lg-height;
+		
+		.progress-bar
+		{
+			font-size: $progress-lg-font-size;
+			line-height: $progress-lg-height;
+		}
+	}
+	
+	&-sm
+	{
+		height: $progress-sm-height;
+	}
 }
 
-.progress-bar{
+.progress-bar
+{
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	line-height: $progress-bar-height;
+	line-height: $progress-height;
 	background-color: $primary-color;
 }

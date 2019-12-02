@@ -1,7 +1,50 @@
 //Colored Badges Mixin
-@mixin badge-color($color)
+@mixin badge-color($parent, $color, $border: transparent, $text-color: color-yiq($color))
 {
-	color: $light-color;
-	background-color: $color;
-	border: transparent;
+	.badge-#{$parent}
+	{
+		color: $text-color;
+		background-color: $color;
+		border-color: $border;
+	}
+}
+
+@mixin badge-outline-color($parent, $color, $bg-color: color-yiq($color))
+{
+	.badge-outline-#{$parent}
+	{
+		color: $color;
+		border-color: $color;
+	}
+		
+	a.badge-outline-#{$parent},
+	a.btn.badge-outline-#{$parent}
+	{
+		&:hover,
+		&:focus
+		{
+			color: $bg-color;
+			background-color: $color;
+		}
+	}
+	
+	.btn-outline-#{$parent}
+	{
+		.badge
+		{
+			color: $bg-color;
+			background-color: $color;
+			border-color: $color;
+		}
+			
+		&:hover,
+		&:focus
+		{
+			.badge
+			{
+				color: $color;
+				background-color: $bg-color;
+			}
+		}
+	}
 }

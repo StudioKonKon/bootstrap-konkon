@@ -2,11 +2,16 @@
 // Popovers
 // --------------------------------------------------
 
+.tooltip
+{
+	top: 0;
+}
+
 .popover
 {
-	font-size: 1rem;
-	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	font-size: $popover-font-size;
+	-webkit-box-shadow: $popover-box-shadow;
+	box-shadow: $popover-box-shadow;
 	
 	.popover-header
 	{

@@ -3,17 +3,17 @@
 */
 .nav-tabs
 {
-	background-color: $light-color;
-	border-bottom: 2px solid darken($light-color, 8%);
+	background-color: $white;
+	border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
 	> li.nav-item
 	{
-		margin-right: 2px;
-		margin-bottom: -2px;
+		margin-right: $nav-tabs-border-width;
+		margin-bottom: -$nav-tabs-border-width;
 
-		a.nav-link
+		.nav-link
 		{
-			padding: 11px 20px;
+			padding: $nav-link-padding-y $nav-link-padding-x;
 			margin-right: 0;  
 			min-width: 60px;
 			text-align: center;
@@ -23,10 +23,10 @@
 
 			.icon
 			{
-				font-size: 1.538rem; // 20px
+				font-size: $nav-link-padding-x;
 				vertical-align: middle;
-				margin: 0 6px;
-				line-height: 17px;
+				margin: 0 .462rem;
+				line-height: 1.308rem;
 			}
 
 			&:hover
@@ -43,23 +43,23 @@
 			&.active
 			{
 				background: 0 0;
-				border-bottom: 2px solid $primary-color;
+				border-bottom: $nav-tabs-border-width solid $primary-color;
 				
 				.icon
 				{
-					color: #555;
+					color: $gray-700;
 				}
 				
 				&:focus,
 				&:hover
 				{
-					color: #404040;
+					color: $body-color;
 				}
 			}
 			
 			&.disabled
 			{
-				color: #878787;
+				color: $secondary-color;
 			}
 		}
 	}
@@ -83,11 +83,11 @@
 			{
 				background-color: #fff;
 				border-bottom: 0;
-				border-radius: 3px 3px 0 0;
+				border-radius: $border-radius $border-radius 0 0;
 				
 				.tab-left &
 				{
-					border-radius: 3px 0 0 3px;
+					border-radius: $border-radius 0 0 $border-radius;
 				}
 			}
 		}
@@ -115,7 +115,7 @@
 			{
 				text-align: left;
 				min-width: 38px;
-				padding: 14px 12px;
+				padding: $nav-tabs-sides-padding-y $nav-tabs-sides-padding-x;
 			}
 		}
 	}
@@ -126,29 +126,29 @@
 	}
 }
 
+.tab-pane
+{
+	h1, h2, h3, h4, h5, h6
+	{
+
+		&:first-child
+		{
+			margin-top: map-get($spacers, 1);
+		}
+	}
+}
+
 .tab-content
 {
 	background: $light-color;
-	padding: 20px;
-	margin-bottom: 40px;
-	border-radius: 0 0 3px 3px;
-
-	.tab-pane
-	{
-		h1, h2, h3, h4, h5, h6
-		{
-
-			&:first-child
-			{
-				margin-top: 5px;
-			}
-		}
-	}
+	padding: map-get($spacers, 4);
+	margin-bottom: map-get($spacers, 7);
+	border-radius: 0 0 $border-radius $border-radius;
 	
 	.card
 	{
-		-webkit-box-shadow: unset;
-		box-shadow: unset;
+		-webkit-box-shadow: none;
+		box-shadow: none;
 		
 		.card-header
 		{
@@ -165,6 +165,11 @@
 }
 
 // Navs Color States
+.nav-tabs-konkon
+{
+	@include tabs-color($konkon-color);
+}
+
 .nav-tabs-primary
 {
 	@include tabs-color($primary-color);
@@ -183,11 +188,4 @@
 .nav-tabs-danger
 {
 	@include tabs-color($danger-color);
-}
-
-
-.tooltip
-{
-	font-size: .952rem;
-	line-height: 1.5;
 }

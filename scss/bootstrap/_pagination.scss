@@ -13,7 +13,7 @@
 {
 	@include media_size("small-phone")
 	{
-		margin-bottom: 5px;
+		margin-bottom: map-get($spacers, 1);
 	}
 	
 	&:first-child,
@@ -21,7 +21,7 @@
 	{
 		.page-link
 		{
-			border-radius: 2px;
+			border-radius: $border-radius-sm;
 		}
 	}
 }
@@ -43,27 +43,27 @@
 
 .page-link
 {
-	font-size: 1.077rem;
-	line-height: 14px;
+	font-size: $font-size-base + .077rem;
+	line-height: $font-size-base + .077rem;
 	font-weight: 400;
 	padding: .7692rem .9231rem;
 	color: #404040;
 	background-color: #fff;
 	border: 1px solid #ddd;
-	border-radius: 2px;
-	margin-left: 4px;
+	border-radius: $border-radius;
+	margin-left: 0.308rem;
 	
 	> span
 	{
-		line-height: 12px;
+		line-height: 0.923rem;
 	}
 	
 	.pagination-rounded &
 	{
 		border-radius: 50%;
-		width: 35px;
-		height: 35px;
+		width: 2.692rem;
+		height: 2.692rem;
 		text-align: center;
-		line-height: 14px;
+		line-height: $font-size-base + .077rem;
 	}
 }

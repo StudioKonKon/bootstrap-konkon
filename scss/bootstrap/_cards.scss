@@ -41,8 +41,8 @@
 	
 	.list-group-item
 	{
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: $card-list-padding-x;
+		padding-right: $card-list-padding-x;
 	}
 }
 
@@ -52,27 +52,51 @@
 	padding: $card-body-padding;
 	border-radius: 0 0 $card-border-radius $card-border-radius;
 	
+	.content-item-meta
+	{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		display: inline-block;
+		text-transform: uppercase;
+		color: $grey-color;
+		font-weight: 400;
+		margin-bottom: 0;
+		
+		> span
+		{
+			color: $primary-color;
+		}
+	}
+		
+	small
+	{
+		&.content-item-meta
+		{
+			font-size: $card-metadata-font-size;
+		}
+	}
+	
 	.card-title
 	{
-		margin-bottom: 20px;
-		margin-top: 7px;
+		margin-bottom: $card-title-margin-bottom;
+		margin-top: $card-title-margin-top;
+	}
+	
+	> .card-title:first-child
+	{
+		margin-top: 0;
 	}
 	
 	.card-text-no-title
 	{
-		margin-top: 15px;
-	}
-	
-	.blockquote p
-	{
-		margin-bottom: 25px;
-		margin-top: 30px;
+		margin-top: $card-notitle-margin-top;
 	}
 }
 
 .card-nav-tabs
 {
-	border-radius:2px 2px 0 0;
+	border-radius: $border-radius-sm $border-radius-sm 0 0;
 }
 
 //Card heading
@@ -82,8 +106,8 @@
 	font-weight: $card-heading-font-weight;
 	padding-left: 0;
 	padding-right: 0;
-	padding-top: $card-heading-horizontal-padding;
-	margin: 0 $card-heading-horizontal-padding;
+	padding-top: $card-heading-padding-x;
+	margin: 0 $card-heading-padding-x;
 	border-bottom-width: 0;
 	border-radius: $card-border-radius $card-border-radius 0 0;
 	background-color: transparent;
@@ -118,6 +142,11 @@
 			}
 		}
 	}
+	
+	+ .card-body
+	{
+		padding-top: 8px;
+	}
 }
 
 //Card title
@@ -133,7 +162,7 @@
 .card-subtitle
 {
 	display: block;
-	font-size: 1rem; // $font-size-base;
+	font-size: $font-size-base;
 	color: darken($light-color, 56%);
 	margin-top: 0;
 	margin-bottom: 0.4615rem;
@@ -143,7 +172,7 @@
 .card-header-divider
 {
 	border-bottom: 1px solid darken($light-color, 15%);
-	margin: 0 1.538rem 8px;
+	margin: 0 1.538rem .615rem;
 	padding-left: 0;
 	padding-right: 0;
 	padding-bottom: 1.2307rem;
@@ -181,28 +210,25 @@
 		
 		&.card-header-featured
 		{
-			padding-bottom: 17px;
+			padding-bottom: 1.308rem;
 		}
 	}
 
 	.card-body
 	{
 		padding: $card-body-padding;
-	
-		&:before
-		{
-			content: "";
-			display: block;
-			width: 100%;
-			height: 8px;
-		}
 	}
 	
 	.card-footer
 	{
 		margin: 0;
-		padding: 20px 20px 17px;
+		padding: $card-footer-padding;
 	}
+}
+
+.card .card-header-divider + .card-body
+{
+	padding-top: .615rem;
 }
 
 //card heading contrast
@@ -278,7 +304,7 @@
 	.card-header
 	{
 		color: $light-color;
-		padding: 27px $card-heading-horizontal-padding 15px;
+		padding: 2.077rem $card-heading-padding-x $card-heading-padding-bottom;
 		margin: 0;
 
 		.card-subtitle,
@@ -374,17 +400,17 @@
 	
 	.card-body
 	{
-		padding-top: 16px;
+		padding-top: 1.231rem;
 	}
 }
 
 .card-footer
 {
-	border: unset;
+	border: none;
 	
 	small
 	{
-		font-size:.8462rem;
+		font-size: .8462rem;
 	}
 }
 
@@ -393,7 +419,7 @@
 {
 	.card
 	{
-		margin-bottom: 25px;
+		margin-bottom: $card-margin-bottom;
 	}
 }
 
@@ -418,14 +444,14 @@
 
 .card-columns
 {
-	margin-bottom: 25px;
+	margin-bottom: $card-margin-bottom;
 	-webkit-column-count: 3;
 	-moz-column-count: 3;
 	column-count: 3;
 	
 	.card
 	{
-		margin-bottom: 1.538rem;
+		margin-bottom: map-get($spacers, 4);
 	}
 	
 	@include media_size("tablet")
@@ -472,13 +498,13 @@
 	
 	.card-title
 	{
-		font-size: 30px;
-		margin-bottom: 40px
+		font-size: 2.308rem;
+		margin-bottom: map-get($spacers, 7)
 	}
 	
 	p
 	{
-		font-size: 18px;
+		font-size: 1.385rem;
 	}
 	
 	.btn
@@ -493,14 +519,14 @@
 	{
 		.card-title
 		{
-			font-size: 19px;
+			font-size: 1.462rem;
 			font-weight: 500;
-			margin-bottom: 2px;
+			margin-bottom: .154rem;
 		}
 		
 		p
 		{
-			font-size: 13px;
+			font-size: $font-size-base;
 			line-height: 1.2;
 		}
 	}

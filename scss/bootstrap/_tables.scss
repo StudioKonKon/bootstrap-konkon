@@ -61,16 +61,32 @@
 	}
 }
 
-.table-condensed
+.table-condensed,
+.table-sm
 {
-	> thead
+	&,
+	.table-responsive > &
 	{
-		> tr
+		> thead
 		{
-			> th
+			> tr
 			{
-				padding-top: 10px;
-				padding-bottom: 8px;
+				> th
+				{
+					padding-top: .769rem;
+					padding-bottom: .615rem;
+				}
+			}
+		}
+		
+		> tbody
+		{
+			> tr
+			{
+				> td
+				{
+					padding: $table-cell-padding-sm;
+				}
 			}
 		}
 	}
@@ -110,20 +126,20 @@
 }
 
 // Generate the contextual variants
-@include table-row-variant(primary, $primary-color);
-
-@include table-row-variant(success, $success-color);
-
-@include table-row-variant(info, $info-color);
-
-@include table-row-variant(warning, $warning-color);
-
-@include table-row-variant(danger, $danger-color);
+@each $theme-colors, $theme-color in $theme-colors
+{
+   @include table-row-variant($theme-colors, $theme-color);
+}
 
 .table-responsive
 {
 	border: 0;
 	margin-bottom: 0;
+	
+	> .table-bordered
+	{
+		border: $table-border-width solid $table-border-color;
+	}
 
 	tbody
 	{
@@ -131,8 +147,8 @@
 		{
 			> td
 			{
-				padding-top: $table-condensed-cell-padding + 4px;
-				padding-bottom: $table-condensed-cell-padding + 4px;
+				padding-top: .846rem;
+				padding-bottom: .846rem;
 				
 				@include media_size("phone")
 				{
@@ -171,8 +187,7 @@
 				.icon
 				{
 					color: darken($light-color, 37%);
-					font-size: 1.3846rem; // $font-size-base + 5px
-					line-height: 18px;
+					font-size: $font-size-base + .385;
 
 					&:hover
 					{
@@ -193,10 +208,10 @@
 				{
 					img
 					{
-						height: 30px;
-						width: 30px;
+						height: 2.308rem;
+						width: 2.308rem;
 						border-radius: 50%;
-						margin-right: 10px;
+						margin-right: map-get($spacers, 2);
 
 						@include media_size("phone")
 						{
@@ -215,7 +230,7 @@
 					.cell-detail-description
 					{
 						display: block;
-						font-size: .8462rem; // $font-size-base - 2px
+						font-size: $font-size-sm;
 						color: darken($light-color, 40%);
 					}
 				}
@@ -229,7 +244,7 @@
 
 					span
 					{
-						padding-left: 40px;
+						padding-left: map-get($spacers, 7);
 
 						@include media_size("phone")
 						{
@@ -245,9 +260,9 @@
 					span
 					{
 						display: block;
-						font-size: .8462rem; // $font-size-base - 2px
+						font-size: $font-size-sm;
 						color: darken($light-color, 40%);
-						margin-bottom: 6px;
+						margin-bottom: .462rem;
 
 						&.completed
 						{
@@ -257,7 +272,7 @@
 
 					.progress
 					{
-						height: 6px;
+						height: .462rem;
 						background-color: darken($light-color, 10%);
 						margin-bottom: 0;
 
@@ -271,15 +286,13 @@
 			
 			@include table-row-state-colored(online, $success-color);
 			
-			@include table-row-state-colored(primary, $primary-color);
-			
-			@include table-row-state-colored(info, $info-color);
-			
-			@include table-row-state-colored(success, $success-color);
-			
-			@include table-row-state-colored(warning, $warning-color);
-			
-			@include table-row-state-colored(danger, $danger-color);
+			@each $theme-colors, $theme-color in $theme-colors
+			{
+				@if $theme-colors != "success"
+				{
+					@include table-row-state-colored($theme-colors, $theme-color);
+				}
+			}
 		}
 	}
 
@@ -329,12 +342,12 @@
 		{
 			&:first-child
 			{
-				padding-left: 20px;
+				padding-left: map-get($spacers, 4);
 			}
 
 			&:last-child
 			{
-				padding-right: 20px;
+				padding-right: map-get($spacers, 4);
 			}
 		}
 	}
@@ -345,8 +358,8 @@
 		{
 			th
 			{
-				padding-top: 15px;
-				padding-bottom: 10px;
+				padding-top: map-get($spacers, 3);
+				padding-bottom: map-get($spacers, 2);
 			}
 		}
 	}

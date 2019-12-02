@@ -15,17 +15,21 @@ h1, .h1,
 h2, .h2,
 h3, .h3
 {
-	margin-top: 20px;
-	margin-bottom: 10px;
+	margin-bottom: $headings-margin-bottom;
+	
+	.badge
+	{
+		font-size: 75%;
+	}
 }
 
 h4, .h4,
 h5, .h5,
 h6, .h6
 {
-	margin-top: 15px;
-	margin-bottom: 10px;
+	margin-bottom: $headings-margin-bottom;
 
+	.badge,
 	.small,
 	small
 	{
@@ -43,8 +47,8 @@ p
 
 .lead
 {
-	font-size: 1.616rem; // floor(($font-size-base * 1.65))
-	line-height: 26px;
+	font-size: $lead-font-size;
+	line-height: $lead-line-height;
 }
 
 // Emphasis & misc
@@ -54,14 +58,14 @@ p
 	.small,
 	small
 	{
-	  font-size: .8462rem; // 11px
+	  font-size: $font-size-sm;
 	}
 }
 
 .mark,
 mark
 {
-	background-color: #fff7e2;
+	background-color: $mark-bg;
 	padding: 0;
 }
 
@@ -82,12 +86,12 @@ mark
 ol,
 ul
 {
-	line-height: $list-lineheight;
+	line-height: $list-line-height;
 
 	ol,
 	ul
 	{
-		padding-left: 25px;
+		padding-left: map-get($spacers, 5);
 	}
 }
 
@@ -99,7 +103,7 @@ ul
 	ol,
 	ul
 	{
-		padding-left: 40px;
+		padding-left: map-get($spacers, 7);
 	}
 }
 
@@ -110,18 +114,23 @@ ul
 .blockquote,
 blockquote
 { 
-	margin-bottom: 1rem;
-	font-size: 1.25rem;
+	margin-bottom: $spacer;
+	font-size: $font-size-base * 1.25;
 	
 	p
 	{
-		margin-bottom: 18px;
+		margin-bottom: 1.385rem;
 	}
 
 	ol,
 	p,
 	ul
 	{
+		&:first-child
+		{
+			margin-top: 0;
+		}
+		
 		&:last-child
 		{
 			margin-bottom: 0;
@@ -132,7 +141,8 @@ blockquote
 	small,
 	.small
 	{
-		font-size:1rem; // 13px
+		color: $blockquote-small-color;
+		font-size: $blockquote-small-font-size;
 	}
 }
 
@@ -172,5 +182,12 @@ blockquote
 
 address
 {
-	line-height: 20px;
+	line-height: 1.538rem;
+}
+
+// Code Highlighter
+.highlighter-konkon
+{
+   color: darken($konkon-color, 5%);
+   background-color: lighten($konkon-color, 27%);
 }
