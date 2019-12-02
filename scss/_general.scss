@@ -2,23 +2,53 @@
 [General elements style]
 */
 
-html
+html, body
 {
 	height: 100%;
-	font-size: 13px;
+	// font-size: small;
+	margin: 0;
 }
 
 body
 {
 	padding: 0;
 	background-color: $body-background;
-	height: 100%;
 	min-height: 100%;
-	line-height: 1.42857143;
+	line-height: $line-height-base;
 	
 	&.be-alt-bg
 	{
-		background-color: #fff;
+		background-color: $white;
+	}
+	
+	&.konkon-logo-bg
+	{
+		&:before
+		{
+			content: '';
+			display: block;
+			position: fixed;
+			top: auto;
+			left: auto;
+			right: 40px;
+			bottom: 40px;
+			width: 20vw;
+			height: 20vw;
+			min-width: 128px;
+			min-height: 128px;
+			max-width: 210px;
+			max-height: 210px;
+			z-index: -9999;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			background-image: url("#{$img-path}/konkon-p-bg.svg");
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			opacity: .15;
+		}
 	}
 	
 	&.open-left-sidebar,

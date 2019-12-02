@@ -33,3 +33,21 @@ $danger-color-text: 			#eb6357;
 $grey-color-text: 				darken($grey-color, 6.1%);
 $dark-color-text: 				#3f4850;
 $light-color-text: 				$light-color;
+$secondary-color-text:          #d9d9d9;
+
+
+
+$theme-contrast-colors: map-merge(
+  (
+    "primary":    $primary-color-text,
+    "success":    $success-color-text,
+    "info":       $info-color-text,
+    "warning":    $warning-color-text,
+    "danger":     $danger-color-text,
+    "gray":       $grey-color-text,
+    "dark":       $dark-color-text,
+    "light":      $light-color-text,
+    "secondary":  $secondary-color-text
+  ),
+  $theme-contrast-colors
+);

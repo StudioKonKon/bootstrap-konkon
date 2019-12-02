@@ -11,9 +11,20 @@ $btn-konkon-color:          #fff;
 $btn-konkon-bg:             $konkon-color;
 $btn-konkon-border:         darken($btn-konkon-bg, 5%);
 
+$alert-konkon-bg:            $konkon-color;
+$alert-konkon-text:          #fff;
+$alert-konkon-border:        $konkon-color;
+
 $theme-colors: map-merge(
   (
     "konkon":    $konkon-color,
   ),
   $theme-colors
+);
+
+$theme-contrast-colors: map-merge(
+  (
+    "konkon":    $konkon-color-text,
+  ),
+  $theme-contrast-colors
 );

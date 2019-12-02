@@ -5,9 +5,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/functions";
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/variables";
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/mixins";
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/functions";
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/variables";
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/mixins";
 
 // Our Changes Begin
 
@@ -21,103 +21,71 @@
 
 // Our Changes Final
 
-//@import "../lib/bootstrap/bootstrap-4.4.1/scss/root";
+//@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/root";
 
 /* print */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/print";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/print";
 /* reboot */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/reboot";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/reboot";
 /* type */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/type";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/type";
 /* images */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/images";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/images";
 /* code */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/code";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/code";
 /* grid */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/grid";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/grid";
 /* tables */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/tables";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/tables";
 /* forms */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/forms";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/forms";
 /* buttons */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/buttons";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/buttons";
 /* transitions */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/transitions";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/transitions";
 /* dropdown */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/dropdown";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/dropdown";
 /* button-group */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/button-group";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/button-group";
 /* input-group */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/input-group";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/input-group";
 /* custom-forms */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/custom-forms";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/custom-forms";
 /* nav */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/nav";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/nav";
 /* navbar */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/navbar";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/navbar";
 /* card */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/card";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/card";
 /* breadcrumb */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/breadcrumb";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/breadcrumb";
 /* pagination */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/pagination";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/pagination";
 /* badge */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/badge";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/badge";
 /* jumbotron */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/jumbotron";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/jumbotron";
 /* alert */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/alert";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/alert";
 /* progress */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/progress";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/progress";
 /* media */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/media";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/media";
 /* list-group */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/list-group";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/list-group";
 /* close */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/close";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/close";
 /* toasts */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/toasts";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/toasts";
 /* spinners */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/spinners";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/spinners";
 /* modal */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/modal";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/modal";
 /* tooltip */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/tooltip";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/tooltip";
 /* popover */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/popover";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/popover";
 /* carousel */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/carousel";
-
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/carousel";
 /* utilities */
-@import "../lib/bootstrap/bootstrap-4.4.1/scss/utilities";
+@import "../../../../../../../../~Javascript-Libraries/bootstrap/bootstrap-4.4.1/scss/utilities";

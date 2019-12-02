@@ -1,0 +1,78 @@
+/*------------------------------------------------------------------
+  [Helper classes]
+*/
+//Space helpers
+
+
+
+// init functions
+@mixin make-space($prefix, $value)
+{
+	.#{$prefix}-p-#{$value}   { padding:        "#{$value}px" !important; }
+	.#{$prefix}-pt-#{$value}  { padding-top:    "#{$value}px" !important; }
+	.#{$prefix}-pl-#{$value}  { padding-left:   "#{$value}px" !important; }
+	.#{$prefix}-pr-#{$value}  { padding-right:  "#{$value}px" !important; }
+	.#{$prefix}-pb-#{$value}  { padding-bottom: "#{$value}px" !important; }
+	.#{$prefix}-m-#{$value}   { margin:         "#{$value}px" !important; }
+	.#{$prefix}-mt-#{$value}  { margin-top:     "#{$value}px" !important; }
+	.#{$prefix}-ml-#{$value}  { margin-left:    "#{$value}px" !important; }
+	.#{$prefix}-mr-#{$value}  { margin-right:   "#{$value}px" !important; }
+	.#{$prefix}-mb-#{$value}  { margin-bottom:  "#{$value}px" !important; }
+}
+
+
+// global
+@include make-space(xs, 50);
+@include make-space(xs, 40);
+@include make-space(xs, 30);
+@include make-space(xs, 25);
+@include make-space(xs, 20);
+@include make-space(xs, 15);
+@include make-space(xs, 10);
+@include make-space(xs, 5);
+@include make-space(xs, 0);
+
+// mobile
+@include media-breakpoint-up(md)
+{
+  @include make-space(sm, 50);
+  @include make-space(sm, 40);
+  @include make-space(sm, 30);
+  @include make-space(sm, 25);
+  @include make-space(sm, 20);
+  @include make-space(sm, 15);
+  @include make-space(sm, 10);
+  @include make-space(sm, 5);
+  @include make-space(sm, 0);
+}
+
+// tablet
+@include media-breakpoint-up(lg)
+{
+  @include make-space(md, 50);
+  @include make-space(md, 40);
+  @include make-space(md, 30);
+  @include make-space(md, 25);
+  @include make-space(md, 20);
+  @include make-space(md, 15);
+  @include make-space(md, 10);
+  @include make-space(md, 5);
+  @include make-space(md, 0);
+}
+
+// desktop
+@include media-breakpoint-up(xl)
+{
+  @include make-space(lg, 200);
+  @include make-space(lg, 150);
+  @include make-space(lg, 100);
+  @include make-space(lg, 50);
+  @include make-space(lg, 40);
+  @include make-space(lg, 30);
+  @include make-space(lg, 25);
+  @include make-space(lg, 20);
+  @include make-space(lg, 15);
+  @include make-space(lg, 10);
+  @include make-space(lg, 5);
+  @include make-space(lg, 0);
+}

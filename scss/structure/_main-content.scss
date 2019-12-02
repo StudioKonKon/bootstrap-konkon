@@ -1,12 +1,71 @@
 /*------------------------------------------------------------------
   [Main content]
 */
-
 .be-content
 {
 	position: relative;
 	left: 0;
+	margin-left: $left-sidebar-width;
 	min-height: 100%;
+
+	@include media_size("phone")
+	{
+		margin-left: 0;
+	}
+	
+	@media print
+	{
+		margin-left: 0;
+	}
+
+	.be-nosidebar-left &
+	{
+		margin-left: 0;
+	}
+	
+	.be-collapsible-sidebar-collapsed &
+	{
+		margin-left: $left-sidebar-width-collapsed;
+		
+		@include media_size("phone")
+		{
+			margin-left: 0;
+		}
+	}
+	
+	.be-offcanvas-menu &
+	{
+		margin-left: 0;
+	}
+	
+	@include media_size("non-responsive")
+	{
+		.be-offcanvas-menu-sm &
+		{
+			margin-left: $left-sidebar-width;
+		}
+	}
+	
+	.be-mega-menu &
+	{
+		margin-left: auto;
+	}
+	
+	@include media_size("non-responsive")
+	{
+		.be-boxed-layout &
+		{
+			margin-left: 0;
+			overflow: hidden;
+			width: 100%;
+		}
+			
+		.be-boxed-layout.be-fixed-sidebar &
+		{
+			margin-left: $left-sidebar-width;
+			min-height: 100vh;
+		}
+	}
 }
 
 .main-content
@@ -17,7 +76,7 @@
 	{
 		padding-left: $content-padding-tablet;
 		padding-right: $content-padding-tablet;
-		padding-top: $content-padding-tablet + 5px;
+		padding-top: $content-padding-tablet + map-get($spacers, 1);
 	}
 
 	@include media_size("phone")
@@ -26,7 +85,7 @@
 		overflow: auto;
 		padding-left: $content-padding-phone;
 		padding-right: $content-padding-phone;
-		padding-top: 20px;
+		padding-top: map-get($spacers, 3);
 	}
 
 	@include media_size("small-phone")
@@ -36,14 +95,14 @@
 		
 		.row
 		{
-			margin-left: -10px;
-			margin-right: -10px;
+			margin-left: 0 - map-get($spacers, 2);
+			margin-right: 0 - map-get($spacers, 2);
 		}
 		
 		@include konkon-grid-columns(12)
 		{
-			padding-left: 10px;
-			padding-right: 10px;
+			padding-left: map-get($spacers, 2);
+			padding-right: map-get($spacers, 2);
 		}
 	}
 

@@ -8,16 +8,6 @@
 // -------
 
 
-$font-size-base:	1rem;
-$font-weight-light:	300;
-$font-weight-bold:	700;
-$font-size-lg:		1.15rem;
-
-$line-height-base:	1.428571;
-$line-height-lg:	1.7;
-$line-height-sm:	1.6;
-
-
 // Bootstrap 4 Variables Migration fixes
 // -------
 
@@ -28,15 +18,15 @@ $line-height-computed:	floor(($font-size-base * $line-height-base));
 // -------
 
 $white:    #fff;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #ced4da;
-$gray-500: #a1a1a1; // lighten($white, 10%)
-$gray-600: #6c757d;
-$gray-700: #495057;
-$gray-800: #343a40;
-$gray-900: #212529;
+$gray-100: #f8f9fa; // #eee
+$gray-200: #e9ecef; // #ddd
+$gray-300: #dee2e6; // #ccc
+$gray-400: #ced4da; // #bbb
+$gray-500: #a1a1a1; // lighten($white, 10%) || #aaa
+$gray-600: #6c757d; // #777
+$gray-700: #495057; // #555
+$gray-800: #343a40; // #444
+$gray-900: #212529; // #222
 $black:    #000;
 
 
@@ -104,9 +94,10 @@ $grid-breakpoints: map-merge(
 //
 //##
 
-$border-radius:		2px;
-$border-radius-lg:	4px;
+$border-radius-xs:  1px;
 $border-radius-sm:	2px;
+$border-radius:		3px;
+$border-radius-lg:	4px;
 
 
 //== Typography
@@ -119,10 +110,6 @@ $font-family-base:			$roboto;
 $line-height-base:			1.42857;
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:		inherit;
-$headings-font-weight:		300;
-$headings-line-height:		1.1;
-$headings-color:			inherit;
 
 $h1-font-size:				2.539rem;
 $h2-font-size:				2.077rem;
@@ -131,21 +118,45 @@ $h4-font-size:				1.308rem;
 $h5-font-size:				1rem;
 $h6-font-size:				.923rem;
 
+$headings-margin-bottom:    map-get($spacers, 2);
+
+$headings-font-family:		inherit;
+$headings-font-weight:		300;
+$headings-line-height:		1.1;
+$headings-color:			inherit;
+
 $display-line-height:		$headings-line-height;
 
-$small-font-size:				65%;
+$small-font-size:				84.62%;
 $blockquote-small-font-size:	$small-font-size;
 $blockquote-small-color:		lighten($gray-light, 6.1%); // #878787
 
-$font-size-sm:					.85rem;
+$font-size-base:	1rem;
+$font-size-lg:		1.15rem;
+$font-size-sm:		.8462rem;
 
+
+$font-weight-lighter:   lighter;
+$font-weight-light:     300;
+$font-weight-normal:    400;
+$font-weight-bold:      700;
+$font-weight-bolder:    bolder;
+
+$lead-font-size:        $font-size-base * 1.385;
+$lead-font-weight:      300;
+$lead-line-height:      $font-size-base * 2;
+
+
+$line-height-base:	1.42857143;
+$line-height-lg:	1.7;
+$line-height-sm:	1.6153;
 
 // Tables
 //
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:		12px 10px;
-$table-cell-padding-sm: 	7px;
+$table-cell-padding:		.923rem .769rem;
+$table-cell-padding-sm: 	.538rem;
 
 $table-accent-bg:			#f5f5f5;
 $table-hover-bg:			#f0f0f0;
@@ -166,17 +177,18 @@ $table-caption-color:		lighten($gray-light, 6.1%); // #878787
 $spacer: 1rem;
 $spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
+// map-get($spacers, 3)
 $spacers: map-merge(
   (
-    0: 0,
-    1: ($spacer * 0.38461),
-    2: ($spacer * 0.76923),
-    3: ($spacer * 1.154),
-    4: ($spacer * 1.539),
-    5: ($spacer * 1.923),
-	6: ($spacer * 2.308),
-	7: ($spacer * 3.077),
-	8: ($spacer * 3.851)
+    0: 0,                   // 0
+    1: ($spacer * 0.38461), // 5
+    2: ($spacer * 0.76923), // 10
+    3: ($spacer * 1.154),   // 15
+    4: ($spacer * 1.538),   // 20
+    5: ($spacer * 1.923),   // 25
+	6: ($spacer * 2.308),   // 30
+	7: ($spacer * 3.077),   // 40
+	8: ($spacer * 3.851)    // 50.06
   ),
   $spacers
 );
@@ -204,6 +216,74 @@ $figure-caption-font-size:		90%;
 $figure-caption-color:			lighten($gray-light, 6.1%); // #878787
 
 
+
+//== Forms
+//
+//##
+
+$input-height:						2.8462rem;
+$input-padding-y:					0.3077rem;
+$input-padding-x:					0.9231rem;
+$input-line-height: 				1.428571;
+$input-color:						$body-color;
+$input-focus-color:					#404040;
+$input-focus-border-color:			$primary-color;
+$input-focus-box-shadow: 			0 0 0 .15rem transparent;
+$input-placeholder-color:			#878787;
+$input-disabled-bg:					#eeeeee;
+
+$input-bg:							#fff;
+$input-border:						#d5d8de;
+$input-border-color: 				$input-border;
+$input-plaintext-color:				#404040;
+
+$input-border-radius:				$border-radius;
+
+$input-height-sm:					2.3077rem;
+$input-padding-y-sm:				.4615rem;
+$input-padding-x-sm:				.6923rem;
+$input-font-size-sm:				.923rem;
+$input-line-height-sm:				1.6;
+$input-border-radius-sm:			$border-radius-sm;
+
+$input-height-lg:					3.692rem;
+$input-padding-y-lg:				.7692rem;
+$input-padding-x-lg:				.9231rem;
+$input-font-size-lg:				1.1538rem;
+$input-line-height-lg:				1.7;
+$input-border-radius-lg:			$border-radius-lg;
+
+$input-height-xl:					4.385rem;
+$input-padding-y-xl:				1.077rem;
+$input-padding-x-xl:				.923rem;
+$input-font-size-xl:				1.385rem;
+$input-line-height-xl:				1.7;
+$input-border-radius-xl:			$border-radius-lg;
+
+$input-group-addon-bg:				darken($light-color, 3.8%);
+$input-group-addon-border-color:	$input-border;
+
+$form-group-margin-bottom:			1.538rem;
+$form-check-inline-margin-x:		1.385rem;
+
+$form-feedback-valid-color:			#34a853;
+$form-feedback-invalid-color:		#ea4335;
+$form-feedback-font-size:			0.85rem;
+
+$form-feedback-tooltip-font-size:		0.85rem;
+$form-feedback-tooltip-line-height:		1.428571;
+$form-feedback-tooltip-opacity:			0.9;
+$form-feedback-tooltip-border-radius:	.154rem;
+
+$input-height-inner:					2.966971rem;
+$input-focus-width:						0.15rem;
+
+$custom-select-feedback-icon-padding-right:		3.975229rem;
+$custom-select-feedback-icon-position:			center right 1.75rem;
+$custom-select-feedback-icon-size:				1.48349rem 1.48349rem;
+
+
+
 //== Custom Forms
 //
 //##
@@ -216,8 +296,8 @@ $custom-control-indicator-checked-color:			$primary-color;
 $custom-control-indicator-checked-border-color:		$light-color;
 $custom-control-indicator-checked-bg:				$light-color;
 
-$input-box-shadow:			0 0 0 2px rgba(135, 135, 135, 0.4);
-$input-focus-box-shadow:	0 0 0 0.15rem transparent;
+$input-box-shadow:			0 0 0 .154rem rgba(135, 135, 135, 0.4);
+$input-focus-box-shadow:	0 0 0 .154rem transparent;
 
 $custom-control-indicator-focus-box-shadow:		$input-box-shadow, $input-focus-box-shadow;
 $custom-control-indicator-focus-border-color:	$primary-color;
@@ -242,10 +322,10 @@ $custom-switch-width:							2.975rem;
 $custom-switch-indicator-border-radius:			.85rem;
 $custom-switch-indicator-size:					calc(1.7rem - 4px);
 
-$custom-select-padding-y:						.7692rem;
-$custom-select-padding-x:						.75rem;
+$custom-select-height:							$input-height;
+$custom-select-padding-y:						$input-padding-y;
+$custom-select-padding-x:						$input-padding-x;
 $custom-select-indicator-padding:				1rem;
-$custom-select-height:							3.692rem;
 $custom-select-line-height:						1.428571;
 $custom-select-color:							#404040;
 $custom-select-border-color:					#d5d8de;
@@ -256,98 +336,27 @@ $custom-select-focus-box-shadow:				0 0 0 0.15rem rgba($primary-color, 0.5);
 $custom-select-disabled-color:					$text-muted;
 $custom-select-disabled-bg:						#dddddd;
 
-$custom-select-height-sm:						2.3125rem;
-$custom-select-padding-x-sm:					8px;
-$custom-select-font-size-sm:					.85rem;
-$custom-select-height-lg:						2.846rem;
-$custom-select-padding-x-lg:					12px;
-$custom-select-font-size-lg:					1.15rem;
+$custom-select-height-sm:						$input-height-sm;
+$custom-select-padding-x-sm:					$input-padding-x-sm;
+$custom-select-font-size-sm:					$input-font-size-sm;
+$custom-select-height-lg:						$input-height-lg;
+$custom-select-padding-x-lg:					$input-padding-x-lg;
+$custom-select-font-size-lg:					$input-font-size-lg;
 
 
-$custom-file-height:							3.692rem;
+$custom-file-height:							$input-height;
+$custom-file-padding-y:							$input-padding-y;
+$custom-file-padding-x:							$input-padding-x;
 $custom-file-focus-border-color:				$primary-color;
 $custom-file-focus-box-shadow:					0 0 0 .15rem transparent;
 $custom-file-disabled-bg:						#eeeeee;
-$custom-file-padding-y:							.7692rem;
-$custom-file-padding-x:							.75rem;
 $custom-file-line-height:						1.428571;
 $custom-file-color:								#404040;
 $custom-file-border-color:						#d5d8de;
-$custom-file-border-radius:						2px;
+$custom-file-border-radius:						.154rem;
 $custom-file-height-inner:						2.966971rem;
 $custom-file-button-color:						#404040;
 $custom-file-button-bg:							#f5f5f5;
-
-$custom-range-thumb-height:						1rem;
-$custom-range-thumb-focus-box-shadow-width:		0.15rem;
-$custom-range-thumb-focus-box-shadow:			0 0 0 1px #eee,0 0 0 .15rem transparent;
-$custom-range-thumb-bg:							$primary-color;
-$custom-range-thumb-active-bg:					#ebf2fe;
-$custom-range-thumb-disabled-bg:				#a1a1a1;
-
-
-//== Forms
-//
-//##
-
-$input-height:						3.692rem;
-$input-padding-y:					0.7692rem;
-$input-padding-x:					0.75rem;
-$input-line-height: 				1.428571;
-$input-color:						$body-color;
-$input-focus-color:					#404040;
-$input-focus-border-color:			$primary-color;
-$input-focus-box-shadow: 			0 0 0 .15rem transparent;
-$input-placeholder-color:			#878787;
-$input-disabled-bg:					#eeeeee;
-
-$input-bg:							#fff;
-$input-border:						#d5d8de;
-$input-border-color: 				$input-border;
-
-$input-font-size-lg:				1.15rem;
-$input-line-height-lg:				1.7;
-$input-font-size-sm:				0.85rem;
-$input-line-height-sm:				1.6;
-$input-plaintext-color:				#404040;
-
-$input-border-radius:				$border-radius;
-
-$input-height-sm:					2.3125rem;
-$input-padding-y-sm:				.25rem;
-$input-padding-x-sm:				8px;
-$input-font-size-sm:				.85rem;
-$input-line-height-sm:				1.6;
-$input-border-radius-sm:			2px;
-
-$input-height-lg:					2.846rem;
-$input-padding-y-lg:				.5rem;
-$input-padding-x-lg:				12px;
-$input-font-size-lg:				1.15rem;
-$input-line-height-lg:				1.7;
-$input-border-radius-lg:			4px;
-
-$input-group-addon-bg:				darken($light-color, 3.8%);
-$input-group-addon-border-color:	$input-border;
-
-$form-group-margin-bottom:			1.538rem;
-$form-check-inline-margin-x:		1.385rem;
-
-$form-feedback-valid-color:			#34a853;
-$form-feedback-invalid-color:		#ea4335;
-$form-feedback-font-size:			65%;
-
-$form-feedback-tooltip-font-size:		0.85rem;
-$form-feedback-tooltip-line-height:		1.428571;
-$form-feedback-tooltip-opacity:			0.9;
-$form-feedback-tooltip-border-radius:	2px;
-
-$input-height-inner:					2.966971rem;
-$input-focus-width:						0.15rem;
-
-$custom-select-feedback-icon-padding-right:		3.975229rem;
-$custom-select-feedback-icon-position:			center right 1.75rem;
-$custom-select-feedback-icon-size:				1.48349rem 1.48349rem;
 
 
 
@@ -355,37 +364,54 @@ $custom-select-feedback-icon-size:				1.48349rem 1.48349rem;
 //
 //##
 
-$btn-padding-y:				.7692rem;
-$btn-padding-x:				.75rem;
-$btn-font-size:				1rem;
-$btn-line-height:			1.428571;
-$btn-border-radius:			2px;
-
 $btn-focus-box-shadow:		0 0 0 0.15rem rgba(135, 135, 135, 0.5);
 $btn-focus-width:			0.15rem;
 
 $btn-link-disabled-color:   lighten($gray-light, 6.1%);
 
-$btn-padding-y-lg:			.5rem;
-$btn-padding-x-lg:			12px;
-$btn-font-size-lg:			1.15rem;
-$btn-font-weight:           $font-weight-bold;
-$btn-line-height-lg:		1.7;
-$btn-border-radius-lg:		4px;
 
-$btn-padding-y-sm:			.25rem;
-$btn-padding-x-sm:			8px;
-$btn-font-size-sm:			.85rem;
-$btn-line-height-sm:		1.6;
-$btn-border-radius-sm:		2px;
+$btn-padding-y:				0;
+$btn-padding-x:				.769rem;
+$btn-font-size:				$font-size-base;
+$btn-font-weight:           500;
+$btn-line-height:			2.154rem;
+$btn-border-radius:			$border-radius-sm;
+$btn-box-shadow:		    0 .077rem 0 rgba(0, 0, 0, .05);
 
+$btn-padding-y-xs:          0;
+$btn-padding-x-xs:          .462rem;
+$btn-font-size-xs:          $btn-font-size - .1538rem;
+$btn-font-weight-xs:        $font-weight-normal;
+$btn-line-height-xs:        1.385rem;
+$btn-border-radius-xs:      $border-radius-xs;
+
+$btn-padding-y-sm:			0;
+$btn-padding-x-sm:			.615rem;
+$btn-font-size-sm:			$btn-font-size;
+$btn-font-weight-sm:        $font-weight-normal;
+$btn-line-height-sm:		1.692rem;
+$btn-border-radius-sm:		$border-radius-sm;
+
+$btn-padding-y-lg:			0;
+$btn-padding-x-lg:			.923rem;
+$btn-font-size-lg:			$btn-font-size + 0.1538rem;
+$btn-font-weight-lg:        $font-weight-bold;
+$btn-line-height-lg:		2.923rem;
+$btn-border-radius-lg:		$border-radius;
+
+$btn-padding-y-xl:          0;
+$btn-padding-x-xl:          .923rem;
+$btn-font-size-xl:          $btn-font-size + 0.1538rem;
+$btn-font-weight-xl:        $font-weight-bold;
+$btn-line-height-xl:        3.308rem;
+$btn-border-radius-xl:      $border-radius;
 
 //== Buttons Groups
 //
 //##
 
-$btn-padding-x-sm:			8px;
-$btn-padding-x-lg:			12px;
+$btn-padding-x-sm:			.615rem;
+$btn-padding-x-lg:			.923rem;
 
 
 //== Input Groups
@@ -403,8 +429,8 @@ $input-group-addon-bg:		#f5f5f5;
 
 $dropdown-bg:					#fff;
 $dropdown-border-color:			#e3e3e3;
-$dropdown-border-radius:		2px;
-$dropdown-inner-border-radius:	calc(2px - 1px);
+$dropdown-border-radius:		.154rem;
+$dropdown-inner-border-radius:	calc(.154rem - 1px);
 $dropdown-link-hover-bg:		#f5f5f5;
 $dropdown-link-active-bg:		$primary-color;
 $dropdown-link-disabled-color:	$text-muted;
@@ -433,14 +459,20 @@ $pre-scrollable-max-height:		340px;
 //== Nav Tabs
 //
 //##
+$nav-link-padding-y:                    .846rem;
+$nav-link-padding-x:                    1.538rem;
 
-$nav-tabs-border-radius:				2px;
+$nav-tabs-border-color:                 darken($light-color, 8%);
+$nav-tabs-border-width:                 2px;
+
+
+$nav-tabs-border-radius:				.154rem;
 $nav-tabs-link-hover-border-color:		#ddd #ddd #dee2e6;
 $nav-link-disabled-color:				$text-muted;
 $nav-tabs-link-active-color:			#636c72;
 $nav-tabs-link-active-border-color:		#dee2e6 #dee2e6 #eee;
 
-$nav-pills-border-radius:				2px;
+$nav-pills-border-radius:				.154rem;
 $nav-pills-link-active-bg:				$primary-color;
 
 
@@ -448,10 +480,10 @@ $nav-pills-link-active-bg:				$primary-color;
 //
 //##
 
-$navbar-brand-padding-y:				0.392857rem;
+$navbar-brand-padding-y:				.3928rem;
 $navbar-brand-font-size:				1.15rem;
 $navbar-toggler-font-size:				$navbar-brand-font-size;
-$navbar-toggler-border-radius:			2px;
+$navbar-toggler-border-radius:			.154rem;
 
 
 //== Cards
@@ -462,20 +494,20 @@ $card-spacer-x:							1.538rem;
 $card-spacer-y:							.7692rem;
 $card-bg:								#ffffff;
 $card-cap-bg:							$card-bg;
-$card-inner-border-radius:				calc(3px - 1px);
 $card-columns-margin:					.7692rem;
-$card-border-radius:					3px;
+$card-border-radius:					.231rem;
+$card-inner-border-radius:				calc(.231rem - 1px);
 
 
 //== Breadcrumb
 //
 //##
 
-$breadcrumb-padding-y:			7px;
-$breadcrumb-padding-x:			20px;
+$breadcrumb-padding-y:			.538rem;
+$breadcrumb-padding-x:			map-get($spacers, 4);
 $breadcrumb-color:				darken($light-color, 46%);
 $breadcrumb-bg:					darken($light-color, 4%);
-$breadcrumb-border-radius:		2px;
+$breadcrumb-border-radius:		$border-radius-sm;
 $breadcrumb-item-padding:		0.6154rem;
 $breadcrumb-active-color:		darken($breadcrumb-color, 24%);
 $breadcrumb-divider-color:		$text-muted;
@@ -502,7 +534,7 @@ $pagination-disabled-color:				$text-muted;
 $badge-padding-y:						0.07692rem;
 $badge-padding-x:						0.6154rem;
 $badge-font-weight:						700;
-$badge-border-radius:					2px;
+$badge-border-radius:					.154rem;
 $badge-pill-padding-x:					0.7em;
 
 
@@ -519,17 +551,18 @@ $jumbotron-bg:							#ddd;
 
 $alert-padding-y:						1.385rem;
 $alert-padding-x:						1.385rem;
-$alert-border-radius:					2px;
+$alert-border-radius:					.154rem;
 
 
 //== Progress Bars
 //
 //##
 
-$progress-height:						3.077rem;
-$progress-font-size:					.9231rem;
+$progress-height:						1rem;
+$progress-font-size:					.615rem;
 $progress-bg:							#f5f5f5;
-$progress-border-radius:				2px;
+$progress-border-radius:				$border-radius-sm;
+$progress-box-shadow:                   none;
 $progress-bar-bg:						$primary-color;
 $progress-bar-animation-timing:			2s linear infinite;
 
@@ -538,33 +571,64 @@ $progress-bar-animation-timing:			2s linear infinite;
 //
 //##
 
-$list-group-action-color:				#636c72;
-$list-group-action-hover-color:			#636c72;
-$list-group-hover-bg:					#f5f5f5;
-$list-group-action-active-color:		#404040;
-$list-group-action-active-bg:			#dddddd;
-$list-group-border-radius:				2px;
-$list-group-disabled-color:				$text-muted;
-$list-group-disabled-bg:				#ececec;
-$list-group-active-bg:					$primary-color;
-$list-group-active-border-color:		$primary-color;
+$list-group-border-radius:              .154rem;
+
+$list-group-item-padding-y:              1rem;
+$list-group-item-padding-x:              1.154rem;
+
+$list-group-hover-bg:                    #f5f5f5;
+$list-group-active-bg:                   $primary-color;
+$list-group-active-border-color:         $primary-color;
+
+$list-group-disabled-color:              $text-muted;
+$list-group-disabled-bg:                 #ececec;
+
+$list-group-action-color:                #636c72;
+$list-group-action-hover-color:          #636c72;
+
+$list-group-action-active-color:         #404040;
+$list-group-action-active-bg:            #dddddd;
 
 
 //== Toast
 //
 //##
 
-$toast-header-color:					$text-muted;
+$toast-max-width:                        350px;
+$toast-padding-x:                        1.077rem;
+$toast-padding-y:                        .6154rem;
+$toast-font-size:                        .9231rem;
+$toast-color:                            null;
+$toast-background-color:                 rgba($white, .85);
+$toast-border-width:                     1px;
+$toast-border-color:                     rgba(0, 0, 0, .1);
+$toast-border-radius:                    .25rem;
+$toast-box-shadow:                       0 .25rem .75rem rgba($black, .1);
+
+$toast-header-color:         	         $gray-600;
+$toast-header-background-color:   	     rgba($white, .85);
+$toast-header-border-color:       	     rgba(0, 0, 0, .05);
 
 
 //== Modal
 //
 //##
 
-$modal-content-border-radius:			4px;
-$modal-header-border-color:				#ddd;
+$modal-inner-padding:                   map-get($spacers, 2) map-get($spacers, 4) map-get($spacers, 4);
+$modal-full-inner-padding:              2.692rem map-get($spacers, 4) map-get($spacers, 4);
+
+$modal-content-border-radius:           .308rem;
+
+
+$modal-header-border-color:				#ddd; 
 $modal-footer-border-color:				#ddd;
 $modal-title-line-height:				1.428571;
+
+
+$modal-header-padding-y:                map-get($spacers, 6);
+$modal-header-padding-x:                map-get($spacers, 4);
+$modal-header-padding:                  $modal-header-padding-y $modal-header-padding-x;
+
 $modal-md:								600px;
 $modal-lg:								700px;
 
@@ -573,23 +637,36 @@ $modal-lg:								700px;
 //
 //##
 
-$tooltip-font-size:						.85rem;
-$tooltip-border-radius:					2px;
+$tooltip-font-size:						.952rem;
+$tooltip-border-radius:					.154rem;
 
 
-//== Popover
+//== Popovers
 //
 //##
 
-$popover-font-size:						.85rem;
-$popover-border-radius:					4px;
+$popover-font-size:                     $font-size-base;
+$popover-border-radius:					.308rem;
 $popover-arrow-color:					#f7f7f7;
 $popover-arrow-outer-color:				rgba(0, 0, 0, 0.25);
-$popover-header-padding-y:				0.6154rem;
+$popover-header-padding-y:				.6154rem;
 $popover-header-padding-x:				1.077rem;
 $popover-body-color:					#404040;
-$popover-body-padding-y:				0.6154rem;
+$popover-body-padding-y:				.6154rem;
 $popover-body-padding-x:				1.077rem;
+$popover-box-shadow:				    0 .385rem .769rem rgba($black, .2);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -6,10 +6,10 @@
 @import "bootstrap/mixins/cards";
 @import "bootstrap/mixins/modals";
 @import "bootstrap/mixins/dropdown";
-@import "bootstrap/mixins/labels";
 @import "bootstrap/mixins/badges";
 @import "bootstrap/mixins/tabs";
 @import "bootstrap/mixins/text-emphasis";
+@import "bootstrap/mixins/toasts";
 
 @import "bootstrap/images";
 @import "bootstrap/code";
@@ -27,6 +27,8 @@
 @import "bootstrap/badges";
 @import "bootstrap/popovers";
 @import "bootstrap/list-group";
+@import "bootstrap/toasts";
+@import "bootstrap/tooltip";
 @import "bootstrap/type";
 @import "bootstrap/progress-bars";
 @import "bootstrap/pagination";

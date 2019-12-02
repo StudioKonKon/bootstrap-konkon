@@ -1,0 +1,99 @@
+/*------------------------------------------------------------------
+  [Brand Cards]
+*/
+
+@mixin bg-variant($parent, $color, $opacity: .6)
+{
+	#{$parent}
+	{
+		background-color: $color;
+	
+		.card-img-overlay
+		{
+			background-color: rgba($color, .4);
+		}
+	}
+
+	a#{$parent},
+	button#{$parent}
+	{
+		cursor: pointer;
+		text-decoration: none;
+
+		&:hover,
+		&:focus
+		{
+			color: $light-color;
+			background-color: darken($color, 10%);
+		}
+	}
+}
+
+.brand-card
+{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	margin-bottom: map-get($spacers, 4);
+	word-wrap: break-word;
+	background-color: $card-bg;
+	background-clip: border-box;
+	border: $card-border-width solid $card-border-color;
+	border-radius: $card-border-radius;
+	
+	.card-img-overlay
+	{
+		background-color: rgba($dark-color, .4);
+	}
+	
+	&-header
+	{
+		position: relative;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 6.923rem;
+		border-radius: $card-border-radius $card-border-radius 0 0;
+		color: $light-color;
+		font-size: $h1-font-size;
+		color: $light-color !important;
+		
+		* { margin: 0 auto; };
+		
+		> .icon
+		{
+			font-size: 3rem;
+			color: $light-color !important;
+		}
+	}
+	
+	&-body
+	{
+		font-size: $font-size-sm;
+		color: $body-color;
+		display: flex;
+		flex-direction: row;
+		padding: $card-spacer-y 0;
+		text-align: center;
+
+		> *
+		{
+			flex: 1;
+			padding: ($card-spacer-y * 0.25) 0;
+		}
+
+		> *:not(:last-child)
+		{
+			border-right: 1px solid $border-color;
+		}
+	}
+}
+
+// Brand Colors
+@each $social-colors, $social-color in $social-colors
+{
+	@include bg-variant(".bg-#{$social-colors}", $social-color);
+}
