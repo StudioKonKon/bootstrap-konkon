@@ -1,4 +1,4 @@
-# Bootstrap 4: Studio KonKon Theme (v0.3.2)
+# Bootstrap 4: Studio KonKon Theme (v0.4.0)
 
 
 Examples & Demos
