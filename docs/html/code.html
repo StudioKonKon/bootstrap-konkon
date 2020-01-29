@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Studio KonKon: Theme (Code)</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="Studio KonKon, Bootstrap Theme">
+		<meta name="author" content="Studio Konon">
+		<link rel="shortcut icon" href="../logo-fav.png">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto" />
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/StudioKonKon/bs4-studio-konkon@latest/dist/css/app.min.css" />
+		<style type="text/css">
+.pre-bordered
+{
+	border: solid 1px #cccccc;
+	background-color: #fafafa;
+	border-radius: 0.1538rem;
+}
+
+.language-html .pln { color: #777777; } /* plain text */
+.language-html .str { color: #808080; background-color: #f2f4ff; } /* string content */
+.language-html .kwd { color: #8000ff; background-color: #f2f4ff; } /* a keyword */
+.language-html .com { color: #008000; } /* a comment */
+.language-html .typ { color: #008080; } /* a type name */
+.language-html .lit { color: #0080ff; } /* a literal value */
+.language-html .pun { color: #949494; } /* punctuation */
+.language-html .opn { color: #949494; } /* lisp open bracket */
+.language-html .clo { color: #949494; } /* lisp close bracket */
+.language-html .nt { color: #4285f4; } /* tags */
+.language-html .na { color: hsl(5, 81%, 66%); } /* a markup attribute name */
+.language-html .s { color: #8000ff; } /* a markup attribute value */
+.language-html .dec { color: #dd1144; } /* a declaration */
+.language-html .var { color: #dd1144; } /* a variable name */
+.language-html .fun { color: #445588; font-weight: bold; } /* a function name */
+.language-html .ni { color: #a6b0b9; } /* entity */
+		</style>
+	</head>
+	<body class="">
+
+<div class="sticky-top d-flex flex-column flex-md-row align-items-center px-3 py-2 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+	<h4 class="my-0 mr-md-auto font-weight-normal">Studio KonKon BS4 Theme</h4>
+	<a class="btn btn-outline-dark"
+	   href="https://github.com/StudioKonKon/bs4-studio-konkon"
+	   target="_blank">
+		<i class="zmdi zmdi-github pr-1"></i>
+		<span>GitHub</span>
+	</a>
+</div>
+
+<div class="container">
+	<div class="page-head container pb-0">
+		<h2 class="page-head-title">Studio KonKon, BS4: Code</h2>
+		<nav aria-label="breadcrumb" role="navigation">
+			<ol class="breadcrumb page-head-nav">
+				<li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+				<li class="breadcrumb-item active">Code</li>
+			</ol>
+		</nav>
+	</div>
+	<div class="main-content container">
+		<div class="row">
+			<div class="col-lg-6 col-md-12">
+				<div class="card">
+					<div class="card-header card-header-divider">
+						<span>Inline code</span>
+						<span class="card-subtitle">Wrap inline snippets of code with <code class="highlighter-konkon">&lt;code&gt;</code>. Be sure to escape HTML angle brackets.</span>
+					</div>
+					<div class="card-body">
+						<p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+						<pre class="mb-0 pre-bordered"><code class="language-html pre-wrap" data-lang="html">For example, <span class="nt">&lt;code&gt;</span><span class="ni">&amp;lt;</span>section<span class="ni">&amp;gt;</span><span class="nt">&lt;/code&gt;</span> should be wrapped as inline.</code></pre>
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card-header card-header-divider">
+						<span>Code blocks</span>
+						<span class="card-subtitle">Use <code class="highlighter-konkon">&lt;pre&gt;</code>s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. You may optionally add the <code class="highlighter-konkon">.pre-scrollable</code> class, which will set a max-height of 340px and provide a y-axis scrollbar.</span>
+					</div>
+					<div class="card-body">
+						<pre class="bg-light pre-example"><code>&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;And another line of sample text here...&lt;/p&gt;
+</code></pre>
+						<pre class="mb-0 pre-bordered"><code class="language-html pre-wrap" data-lang="html"><span class="nt">&lt;pre&gt;&lt;code&gt;</span><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Sample text here...<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span>
+<span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>And another line of sample text here...<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;</span></code></pre>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-6 col-md-12">
+				<div class="card">
+					<div class="card-header card-header-divider">
+						<span>Variables</span>
+						<span class="card-subtitle">For indicating variables use the <code class="highlighter-konkon">&lt;var&gt;</code> tag.</span>
+					</div>
+					<div class="card-body">
+						<p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
+						<pre class="mb-0 pre-bordered"><code class="language-html pre-wrap" data-lang="html"><span class="nt">&lt;var&gt;</span>y<span class="nt">&lt;/var&gt;</span> = <span class="nt">&lt;var&gt;</span>m<span class="nt">&lt;/var&gt;&lt;var&gt;</span>x<span class="nt">&lt;/var&gt;</span> + <span class="nt">&lt;var&gt;</span>b<span class="nt">&lt;/var&gt;</span></code></pre>
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card-header card-header-divider">
+						<span>User input</span>
+						<span class="card-subtitle">Use the <code class="highlighter-konkon">&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.</span>
+					</div>
+					<div class="card-body">
+						<p>To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd></p>
+						<pre class="mb-0 pre-bordered"><code class="language-html pre-wrap" data-lang="html">To switch directories, type <span class="nt">&lt;kbd&gt;</span>cd<span class="nt">&lt;/kbd&gt;</span> followed by the name of the directory.<span class="nt">&lt;br /&gt;</span>
+To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span class="nt">&lt;/kbd&gt;</span> + <span class="nt">&lt;kbd&gt;</span>,<span class="nt">&lt;/kbd&gt;&lt;/kbd&gt;</span></code></pre>
+					</div>
+				</div>
+				
+				<div class="card mb-0">
+					<div class="card-header card-header-divider">
+						<span>Sample output</span>
+						<span class="card-subtitle">For indicating sample output from a program use the <code class="highlighter-konkon">&lt;samp&gt;</code> tag.</span>
+					</div>
+					<div class="card-body">
+						<p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+						<pre class="mb-0 pre-bordered"><code class="language-html pre-wrap" data-lang="html"><span class="nt">&lt;samp&gt;</span>This text is meant to be treated as sample output from a computer program.<span class="nt">&lt;/samp&gt;</span></code></pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.0/dist/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+	</body>
+</html>
