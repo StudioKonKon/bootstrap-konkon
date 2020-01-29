@@ -353,91 +353,12 @@ $loader-background:		rgba(255, 255, 255, 0.7);
 
 
 //Pricing Tables
-$pricing-tables-margin:			30px 0 20px;
-$pricing-table-border-radius:		$card-border-radius;
-$pricing-table-horizontal-space:		10px;
-$pricing-table-padding:			35px 20px;
-$pricing-table-margin:		0 0 20px;
-$pricing-table-value-size:		35px;
-$pricing-table-price-line-height:	40px;
-$pricing-table-frecuency-size:		1.538rem;
-$pricing-table-fatures-line-height: 33px;
-$pricing-table-button-height:		36px;
-$pricing-table-button-min-width:		120px;
+
+
 
 
 //==Pages
 
-//Splash screen (login, sign up, forgot passwrd)
-$splash-screen-bg:			#eee;
-
-
-//Login page
-$login-width:			401px;
-$login-margin-top:			50px;
-
-
-//Sign up page
-$sign-up-width:		433px;
-$sign-up-margin-top:		10px;
-
-
-//Email pages
-$email-page-favorite-color:	#ffc600;
-
-
-//Charts
-$chart-legend-color-size:		10px;
-$chart-legend-padding:		6px;
-$chart-pie-counter-size:		3.846rem;
-
-
-//Timeline
-$timeline-max-width:		840px;
-$timeline-left-padding:		210px;
-$timeline-vbar-position:		$timeline-left-padding - 40px;// From timeline-item element to left
-$timeline-margin-helper:		10px; //Helper to thumbnails whitout damage timeline content size
-$timeline-avatar-size:		35px;
-$timeline-content-min-height: 85px;
-$timeline-header-line-height: 21px;
-$timeline-header-padding-top: ($timeline-avatar-size - $timeline-header-line-height) / 2;
-$timeline-content-vpadding:	25px;
-$timeline-date-width:		$timeline-vbar-position - 25px;
-$timeline-date-position:		ceil($timeline-content-vpadding + $timeline-header-padding-top) + 2px;
-$timeline-tail-size:		10px;
-$timeline-tail-position:		ceil($timeline-content-min-height - $timeline-tail-size) / 2;
-$timeline-bubble-size:		16px;
-$timeline-bubble-position:		ceil($timeline-content-min-height - $timeline-bubble-size) / 2;
-$timeline-icon-size:			44px;
-$timeline-icon-border-width:	2px;
-$timeline-icon-position:		floor(($timeline-content-min-height - $timeline-icon-size) / 2);
-
-
-//Invoice
-$invoice-page-padding:		100px 100px 70px;
-$invoice-tablet-padding:			50px 50px 35px;
-$invoice-small-phone-padding:		35px 25px 15px;
-$invoice-logo-height:			$logo-height * 2;
-$invoice-logo-width:			$logo-width * 2;
-$invoice-logo-small-height:			$logo-height;
-$invoice-logo-small-width:			$logo-width;
-$invoice-header-margin:		100px;
-$invoice-id-font-size:		2.308rem; // 30px
-$invoice-id-lineheight:		$invoice-id-font-size;
-$invoice-data-margin:			110px;
-$invoice-person-font-size:			1.385rem; // 18px
-$invoice-person-lineheight:			2rem; // 26px
-$invoice-direction-height:			130px;
-$invoice-direction-bubble-size:			80px;
-$invoice-details-font-size:			1.231rem; // 16px
-$invoice-payment-font-size:			1.385rem; // 18px
-$invoice-payment-lineheight:		2rem; // 26px
-$invoice-payment-margin:			75px;
-$invoice-message-font-size:			1.231rem; // 16px
-$invoice-message-lineheight:		2rem; // 26px
-$invoice-message-margin:			62px;
-$invoice-company-info-margin:		70px;
-$invoice-footer-button-font-size:		1.077rem; // 14px
 
 
 
@@ -453,18 +374,10 @@ $user-progress-height:		10px;
 
 //==Plugins
 
-//Nifty Modals
-$modal-prefix:			modal;
-$modal-zindex:			$zindex-modal;
-
-
-//Gritter Notifications
-$notification-width:		360px;
-$notification-top-position:	82px;
-
-
 //Select2
 $select2-border-width:		.07692rem;
+$notification-width:		360px;
+$notification-top-position:	82px;
 
 
 //Parsley
@@ -478,6 +391,7 @@ $vector-map-zoom-line-height: 24px;
 
 
 //Social colors
+
 $facebook:		#5d82d1;
 $twitter:		#50bff5;
 $google-plus:	#eb5e4c;
@@ -493,6 +407,9 @@ $dropbox:		#007EE5;
 $codepen:		#333333;
 
 $social-colors: ();
+
+/*
+
 $social-colors: map-merge(
   (
     "youtube":     $youtube,
@@ -503,6 +420,8 @@ $social-colors: map-merge(
   ),
   $social-colors
 );
+
+*/
 
 
 

@@ -20,6 +20,18 @@
 	}
 }
 
+.btn-flex
+{
+	display: inline-flex !important;
+	align-items: center !important;
+}
+
+.btn-flex.d-block
+{
+	display: flex !important;
+	align-items: center !important;
+}
+
 .btn-light,
 .btn-secondary
 {
@@ -283,6 +295,13 @@
 		}
 	}
 	
+	.btn-group-xl > & .icon,
+	&.btn-xl .icon
+	{
+		font-size: 1.615rem;
+		line-height: 1.538rem;
+	}
+	
 	.btn-group-lg > & .icon,
 	&.btn-lg .icon
 	{
@@ -322,8 +341,8 @@
 		}
 	}
 
-	.mdi-chevron-down,
-	.mdi-chevron-up
+	.#{$icons-class}-chevron-down,
+	.#{$icons-class}-chevron-up
 	{
 		font-size: 1.385rem;
 	 	vertical-align: middle;
