@@ -83,3 +83,10 @@ canvas
 	-ms-user-select: none;
 	user-select: none;
 }
+
+.btn > .icon.#{$icons-class}
+{
+	position: relative;
+	top: -1px;
+}
+
