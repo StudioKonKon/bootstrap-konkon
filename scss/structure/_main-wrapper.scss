@@ -1,0 +1,38 @@
+/*------------------------------------------------------------------
+	[Main wrapper]
+*/
+.be-wrapper
+{
+	min-height: 100%;
+	padding-top: $top-header-height + 1px;
+
+	@include media_size("small-phone")
+	{
+		overflow-x: hidden;
+	}
+}
+
+@media print
+{
+	.be-wrapper
+	{
+		padding-top: 0;
+	}
+}
+
+@include media_size("non-responsive")
+{
+	.be-wrapper.be-boxed-layout
+	{
+		max-width: 1200px;
+		position: relative;
+		margin: 0 auto;
+		overflow: hidden;
+		background-color: #f1f1f1;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, .05);
+		box-shadow: 0 0 7px 2px rgba(0, 0, 0, .05);
+	}
+}

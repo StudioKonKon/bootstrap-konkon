@@ -4,6 +4,7 @@
 
 //Mixins
 @import "mixins/triangle";
+@import "mixins/font-size";
 
 // General style
 @import "general";
@@ -15,19 +16,25 @@
 // @import "fonts/roboto";
 
 // Structure
+@import "structure/main-wrapper";
 @import "structure/main-content";
 @import "structure/page-head";
 
 
 // Forms
+@import "forms/switch-button";
 
 
 // Elements
-@import "elements/brand-cards";
+@import "elements/colors";
+@import "elements/loader";
 @import "elements/code";
+@import "elements/divider";
+@import "elements/option-buttons";
 
 
 //Plugins
+@import "elements/brand-cards";
 
 
 //Widgets
