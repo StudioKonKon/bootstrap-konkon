@@ -1,0 +1,21 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="1">
+            <File firstVisibleLine="615" xOffset="0" scrollWidth="1136" startPos="8569" endPos="8569" selMode="0" lang="Normal Text" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\scss\structure\_top-header.scss" backupFilePath="" originalFileLastModifTimestamp="1596980385" />
+            <File firstVisibleLine="155" xOffset="0" scrollWidth="1136" startPos="78" endPos="78" selMode="0" lang="Normal Text" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\scss\structure\top-header\_user-dropdown.scss" backupFilePath="" originalFileLastModifTimestamp="1593710528" />
+            <File firstVisibleLine="254" xOffset="0" scrollWidth="1136" startPos="1666" endPos="1666" selMode="0" lang="Normal Text" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\scss\structure\top-header\_icons-nav.scss" backupFilePath="" originalFileLastModifTimestamp="1596980654">
+                <Mark line="235" />
+            </File>
+            <File firstVisibleLine="41" xOffset="0" scrollWidth="1136" startPos="1910" endPos="1910" selMode="0" lang="HTML" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\docs\local\extra\index.html" backupFilePath="" originalFileLastModifTimestamp="1596980574">
+                <Fold line="50" />
+                <Fold line="54" />
+                <Fold line="61" />
+                <Fold line="64" />
+                <Fold line="67" />
+                <Fold line="87" />
+                <Fold line="91" />
+            </File>
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

@@ -1,0 +1,283 @@
+/* Icons nav */
+.be-icons-nav
+{
+	.be-top-header &
+	{
+		margin-right: map-get($spacers, 3);
+	}
+	
+	@include media_size("tablet")
+	{
+		.be-top-header &
+		{
+			margin-right: 10px;
+		}
+	}
+
+	> li.dropdown
+	{
+		position: static;
+
+		> a
+		{
+			position: relative;
+			
+			.navbar-expand &
+			{
+				padding: 0 10px;
+			}
+			
+			.icon
+			{
+				font-size:  1.846rem;
+				vertical-align: middle;
+				color: $icon-default-color;
+
+				&.#{$icons-class}-comment-more
+				{
+					font-size: 1.538rem;
+					position: relative;
+					top: 1px;
+				}
+			}
+
+			.indicator
+			{
+				background-color: $primary-color;
+				border-radius: 50%;
+				display: block;
+				height: 6px;
+				width: 6px;
+				position: absolute;
+				top: 18px;
+				right: 6px;
+			}
+			
+			&:after
+			{
+				display: none;
+				font-size: 1.231rem;
+				margin-left: 6px;
+			}
+			
+			@include media_size("phone")
+			{
+				&:after
+				{
+					display: inline-block;
+				}
+			}
+		}
+		
+		.dropdown-toggle:after
+		{
+			content: "";
+			margin: 0;
+			border: 0;
+		}
+		
+		&.show
+		{
+			
+			> a:after,
+			> a:before
+			{
+				border-bottom: 8px solid $light-color;
+			    border-left: 8px solid transparent;
+			    border-right: 8px solid transparent;
+			    bottom: -1rem;
+			    content: "";
+			    display: inline-block;
+			    left: 50%;
+			    margin-left: -8px;
+			    position: absolute;
+			    z-index: $zindex-dropdown + 1;
+			}
+
+			> a:before
+			{
+				border-bottom-width: 9px;
+				border-left-width: 9px;
+				border-right-width: 9px;
+				border-bottom-color: $dropdown-border;
+				margin-left: -9px;
+				bottom: -.923rem;
+			}
+		}
+
+		.dropdown-menu
+		{
+			width: $icons-nav-dropdown-width;
+			border-radius: $border-radius;
+			padding: 0;
+			-webkit-box-shadow: 0 2px 6px rgba(0,0,0,.08);
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+			border: 1px solid hsl(0, 0%, 88%);
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box;
+
+			.title
+			{
+				font-size: 1rem; //13px
+				color: darken($light-color, 45.7%);
+				text-align: center;
+				padding: 10px 0 8px;
+				border-bottom: 1px solid darken($light-color, 7.7%);
+
+				.badge
+				{
+					font-size: 0.6962rem; // $font-size-small - 2px;
+					line-height: 10px;
+					vertical-align: middle;
+					margin-left: 4px;
+					background-color: darken($light-color, 10.5%);
+					color: darken($light-color, 45.7%);
+					min-width: 17px;
+					height: 17px;
+					text-align: center;
+					padding: 3px 6px;
+
+					&-new
+					{
+						background-color: $primary-color;
+						border-color: $primary-color;
+						color: $light-color;
+					}
+				}
+			}
+
+			.footer
+			{
+				a
+				{
+					background-color: darken($light-color, 2%);
+					font-size: 1rem; //13px
+					color: darken($light-color, 45.7%);
+					text-align: center;
+					padding: 10px 0;
+					border-top: 1px solid darken($light-color, 7.7%);
+					display: block;
+					outline: 0;
+
+					&:hover
+					{
+						background-color: force-hex(darken($light-color, 4%));
+					}
+				}	
+			}
+
+			.be-top-header &
+			{
+				&:after,
+				&:before
+				{
+					display: none;
+				}
+			}
+		}
+
+		&.show
+		{
+			> a
+			{
+				background-color: transparent;
+
+				.icon
+				{
+					color: $primary-color;
+				}
+			}
+		}
+		
+		@include media_size("desktop-min")
+		{
+			.be-mega-menu &
+			{
+				position: relative;
+			}
+		}
+	}
+
+	@include media_size("phone")
+	{
+		float: right;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+
+		.be-top-header &
+		{
+			margin: 0 5px 0 0;
+		}
+
+		> li.dropdown
+		{
+			display: inline-block;
+			margin-left: 3px;
+
+			> a
+			{
+				.navbar-expand &
+				{
+					padding: 0 7px;
+				}
+
+				.indicator
+				{
+					right: 2px;
+				}
+			}
+		}
+	}
+
+	
+
+	@include media_size("small-phone")
+	{
+		> li.dropdown
+		{
+			> .nav-link
+			{
+				display: none;
+			}
+			
+			.dropdown-menu
+			{
+				left: 0;
+				top: $top-header-height;
+				width: 100%;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				border-width: 0;
+
+				.be-top-header &
+				{
+					border-radius: 0;
+					margin-top: 1px;
+				}
+
+				.footer a
+				{
+					border-bottom: 1px solid darken($light-color, 7.7%);
+				}
+			}
+
+			&.show
+			{
+				> a
+				{
+					&:before,
+					&:after
+					{
+						bottom: -1px;
+					}
+				}
+			}
+		}
+	}
+	
+	@media print
+	{
+		display: none;
+	}
+}

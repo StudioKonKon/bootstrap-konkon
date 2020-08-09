@@ -1,12 +1,9 @@
 /*------------------------------------------------------------------
   [Main content]
 */
-.be-content
+.be-content-sidebar
 {
-	position: relative;
-	left: 0;
 	margin-left: $left-sidebar-width;
-	min-height: 100%;
 
 	@include media_size("phone")
 	{
@@ -46,6 +43,22 @@
 		}
 	}
 	
+	@include media_size("non-responsive")
+	{
+		.be-boxed-layout.be-fixed-sidebar &
+		{
+			margin-left: $left-sidebar-width;
+			min-height: 100vh;
+		}
+	}
+}
+
+.be-content
+{
+	position: relative;
+	left: 0;
+	min-height: 100%;
+	
 	.be-mega-menu &
 	{
 		margin-left: auto;
@@ -58,12 +71,6 @@
 			margin-left: 0;
 			overflow: hidden;
 			width: 100%;
-		}
-			
-		.be-boxed-layout.be-fixed-sidebar &
-		{
-			margin-left: $left-sidebar-width;
-			min-height: 100vh;
 		}
 	}
 }

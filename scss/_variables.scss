@@ -1,7 +1,8 @@
 //Paths
-$img-path: 				"../img";
-$fonts-path: 			"../../lib";
-$lib-path: 				"../../lib";
+$img-logo-path:          "" !default;
+$img-logo-contrast-path: "" !default;
+$fonts-path:             "../../lib";
+$lib-path:               "../../lib";
 
 $roboto-font-path:			'#{$fonts-path}/roboto';
 $roboto:					'Roboto', Arial, sans-serif;

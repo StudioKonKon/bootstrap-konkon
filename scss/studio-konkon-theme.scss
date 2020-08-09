@@ -17,8 +17,18 @@
 
 // Structure
 @import "structure/main-wrapper";
-@import "structure/main-content";
+
+@import "structure/top-header";
+@import "structure/top-header/icons-nav";
+@import "structure/top-header/user-dropdown";
+@import "structure/top-header/notifications-dropdown";
+@import "structure/top-header/connections-dropdown";
+
+@import "structure/left-sidebar";
+@import "structure/left-sidebar/progress-widget";
+
 @import "structure/page-head";
+@import "structure/main-content";
 
 
 // Forms

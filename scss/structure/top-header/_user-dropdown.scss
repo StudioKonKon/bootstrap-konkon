@@ -1,0 +1,184 @@
+/* user nav */
+
+.be-user-nav
+{
+	margin-right: 0;
+	
+	> li.dropdown
+	{
+		> a
+		{
+			font-size: 0;
+			
+			.navbar-expand &
+			{
+				padding-left: 5px;
+				padding-right: 5px;
+			
+				@include media_size("tablet")
+				{
+					padding-left: 10px;
+				}
+			}
+
+			img
+			{
+				max-width: 32px;
+				max-height: 32px;
+				border-radius: 50%;
+			}
+
+			.user-name
+			{
+				margin-left: 8px;
+				display: none;
+				font-size: 1.077rem;
+				line-height: 20px;
+				vertical-align: middle;
+			}
+
+			&:after
+			{
+				display: none;
+			    font-size: 1.231rem;
+			    margin-left: 6px;
+			}
+		}
+
+		.dropdown-menu
+		{
+			width: $user-dropdown-width;
+			padding: 0 0 7px;
+			left: -178px;
+			border: none;
+			
+			@include media_size("tablet")
+			{
+				left: -173px;
+			}
+			
+			a
+			{
+				.be-top-header &
+				{
+					
+					&:focus,
+					&:active
+					{
+						background-color: transparent; 
+						color: $dropdown-text-color;
+					}
+
+					&:hover
+					{
+						background-color: force-hex(darken($light-color, 4%));
+						color: $dropdown-text-color;
+					}
+				}
+
+				.icon
+				{
+					vertical-align: middle;
+					margin-right: 10px;
+				}
+			}
+
+			.user-info
+			{
+				background-color: $top-header-phone-bg;
+				color: $light-color;
+				overflow: hidden;
+				padding: 1.077rem 1.154rem 1rem;
+				border-radius: 2px 2px 0 0;
+				margin-bottom: .538rem;
+
+				.user-name
+				{
+					display: block;
+					font-size: 1.462rem;
+					line-height: 1.692rem;
+					text-overflow: ellipsis;
+  					white-space: nowrap;
+  					overflow: hidden;
+				}
+
+				.user-position
+				{
+					display: block;
+					text-overflow: ellipsis;
+	  				white-space: nowrap;
+	  				overflow: hidden;
+	  				padding-left: 1rem;
+	  				position: relative;
+	
+	  				&:after
+	  				{
+					  	content: "";
+					    position: absolute;
+					    height: .538rem;
+					    width: .538rem;
+					    left: 0;
+					    top: .385rem;
+					    border: 1px solid hsl(0, 0%, 94%);
+					    border-radius: 50%;
+					    background-color: transparent;
+					    display: block;
+	  				}
+	
+	  				&.online
+	  				{
+	  					&:after
+	  					{
+		  					background-color: lighten($success-color, 19%);
+		  					border-color: lighten($success-color, 19%);
+	  					}
+	  				}
+
+	  				&.away
+	  				{
+	  					&:after
+	  					{
+		  					background-color: lighten($warning-color, 15%);
+		  					border-color: lighten($warning-color, 15%);
+	  					}
+	  				}
+
+	  				&.busy
+	  				{
+	  					&:after
+	  					{
+		  					background-color: lighten($danger-color, 18%);
+		  					border-color: lighten($danger-color, 18%);
+	  					}
+	  				}
+				}
+
+				.switch-status
+				{
+					float: right;
+					margin-top: map-get($spacers, 1);
+				}
+			}
+
+			.be-top-header &
+			{
+				&:after
+				{
+					left: auto;
+					right: 1rem;
+					border-bottom-color: $top-header-phone-bg;
+				}
+
+				&:before
+				{
+					display: none;
+				}
+			}
+		}
+	}
+	
+	@media print
+	{
+		display: none;
+	}
+}
