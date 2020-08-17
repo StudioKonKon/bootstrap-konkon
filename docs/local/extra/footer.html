@@ -56,7 +56,7 @@
 							   data-toggle="dropdown" role="button" aria-expanded="false">
 								<span class="icon zmdi zmdi-videocam-switch"></span>
 							</a>
-							<div class="dropdown-menu be-notifications py-1 w-auto" role="menu">
+							<div class="dropdown-menu w-auto" role="menu">
 								<a class="dropdown-item" href="#">Upload</a>
 								<a class="dropdown-item" href="#">Go Live</a>
 							</div>
@@ -67,7 +67,7 @@
 							   data-toggle="dropdown" role="button" aria-expanded="false">
 								<span class="icon zmdi zmdi-apps"></span>
 							</a>
-							<div class="dropdown-menu be-notifications py-1 w-auto" role="menu">
+							<div class="dropdown-menu w-auto" role="menu">
 								<a class="dropdown-item" href="#">KonKon TV</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="#">KonKon Music</a>
@@ -79,26 +79,41 @@
 						</li>
 
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#"
+							<a class="nav-link dropdown-toggle"
+							   href="#"
 							   id="user_n_messages_bell"
-							   data-toggle="dropdown" role="button" aria-expanded="false">
+							   data-toggle="dropdown"
+							   role="button"
+							   aria-expanded="false">
 								<span class="icon zmdi zmdi-notifications-none"></span>
 							</a>
-							<ul class="dropdown-menu be-notifications">
-								<li>
-									<div class="title">Notifications<span class="badge badge-pill" id="user_n_messages_c">0</span></div>
-									<div class="list">
-										<div class="be-scroller-notifications">
-											<div class="content">
-												<ul id="user_n_messages_list">
-
-												</ul>
-											</div>
+							<div class="dropdown-menu be-notifications">
+								<div class="skk-nc">
+									<div class="skk-nh">
+										<div class="skk-nhi skk-nhi-close">
+											<a href="#">
+												<i class="zmdi zmdi-close"></i>
+											</a>
+										</div>
+										<h2 class="skk-nht">Notifications</h2>
+										<div class="skk-nhi">
+											<a href="#">
+												<i class="zmdi zmdi-settings"></i>
+											</a>
 										</div>
 									</div>
-									<div class="footer"><a href="#">View all notifications</a></div>
-								</li>
-							</ul>
+									<div class="skk-nb skk-nbe">
+										<!-- If there are no notifications available //-->
+										<div class="skk-nbe-icon">
+											<i class="zmdi zmdi-notifications"></i>
+										</div>
+										<div class="skk-nbe-msg">
+											<div class="skk-nbe-title">Your notifications live here</div>
+											<div class="skk-nbe-text">Follow accounts to get notified about their latest content.</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</li>
 
 					</ul>
@@ -110,11 +125,47 @@
 								<img id="user_image" src="../../../assets/img/avatar.png" alt="Avatar" />
 								<span class="user-name">Studio KonKon</span>
 							</a>
-							<div class="dropdown-menu" role="menu">     
-								<div class="user-info">
-									<div class="user-name">Studio KonKon</div>
-									<div class="user-position online">Available</div>
-								</div>
+							<div class="dropdown-menu" role="menu">
+ <div class="skk-nvh">
+	<div class="skk-nvh-img">
+	   <img src="../img/avatar-256.png"
+			alt="Avatar" />
+	</div>
+	<div class="skk-nvh-info">
+	   <div class="skk-nvh-name">Studio KonKon</div>
+	   <div class="skk-nvh-email">username@example.com</div>
+	   <a class="btn btn-rounded btn-secondary" href="#">Manage Your Account</a>
+	</div>
+ </div>
+ <div class="skk-nva">
+	<a href="#">
+		<div class="skk-nva-icon">
+		   <img src="../img/avatar-256.png"
+				alt="Avatar" />
+		</div>
+	   <div class="skk-nva-account">
+		  <div class="skk-nva-name">Studio KonKon</div>
+		  <div class="skk-nva-email">username@example.com</div>
+	   </div>
+	   <div class="skk-nva-check">
+		  <i class="zmdi zmdi-check"></i>
+	   </div>
+	</a>
+ </div>
+ <div class="skk-nv-item">
+	<a href="#">
+	   <span class="icon"><i class="zmdi zmdi-accounts-add"></i></span>
+	   <span>Add another account</span>
+	</a>
+ </div>
+ <div class="skk-nv-btn">
+	<a class="btn btn-secondary" href="#">Sign out of all accounts</a>
+ </div>
+ <div class="skk-nvf">
+	<a href="#">Privacy Policy</a>
+	<span class="seperator">•</span>
+	<a href="#">Terms of Service</a>
+ </div>
 							</div>
 						</li>
 					</ul>
@@ -174,11 +225,11 @@
 			<div class="main-content container py-8">
 				
 				<h2 class="blog-post-title">Sample blog post</h2>
-				<p class="blog-post-meta">January 1, 2014 by <a href="theme/pages/bs4-album.html#">Mark</a></p>
+				<p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
 
 				<p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
 				<hr>
-				<p>Cum sociis natoque penatibus et magnis <a href="theme/pages/bs4-album.html#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+				<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
 				<blockquote>
 					<p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 				</blockquote>

@@ -1,20 +1,29 @@
 <NotepadPlus>
     <Session activeView="0">
-        <mainView activeIndex="1">
-            <File firstVisibleLine="615" xOffset="0" scrollWidth="1136" startPos="8569" endPos="8569" selMode="0" lang="Normal Text" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\scss\structure\_top-header.scss" backupFilePath="" originalFileLastModifTimestamp="1596980385" />
-            <File firstVisibleLine="155" xOffset="0" scrollWidth="1136" startPos="78" endPos="78" selMode="0" lang="Normal Text" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\scss\structure\top-header\_user-dropdown.scss" backupFilePath="" originalFileLastModifTimestamp="1593710528" />
-            <File firstVisibleLine="254" xOffset="0" scrollWidth="1136" startPos="1666" endPos="1666" selMode="0" lang="Normal Text" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\scss\structure\top-header\_icons-nav.scss" backupFilePath="" originalFileLastModifTimestamp="1596980654">
-                <Mark line="235" />
+        <mainView activeIndex="2">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="10648" startPos="11945" endPos="11945" selMode="0" lang="Normal Text" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\scss\structure\_top-header.scss" backupFilePath="" originalFileLastModifTimestamp="1597586035">
+                <Mark line="270" />
             </File>
-            <File firstVisibleLine="41" xOffset="0" scrollWidth="1136" startPos="1910" endPos="1910" selMode="0" lang="HTML" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\docs\local\extra\index.html" backupFilePath="" originalFileLastModifTimestamp="1596980574">
-                <Fold line="50" />
-                <Fold line="54" />
-                <Fold line="61" />
-                <Fold line="64" />
-                <Fold line="67" />
-                <Fold line="87" />
-                <Fold line="91" />
+            <File firstVisibleLine="48" xOffset="0" scrollWidth="10648" startPos="2854" endPos="2854" selMode="0" lang="Normal Text" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\scss\structure\top-header\_icons-nav.scss" backupFilePath="" originalFileLastModifTimestamp="1597606737">
+                <Mark line="192" />
             </File>
+            <File firstVisibleLine="219" xOffset="0" scrollWidth="10648" startPos="8672" endPos="8672" selMode="0" lang="HTML" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\docs\local\extra\index.html" backupFilePath="" originalFileLastModifTimestamp="1597599852">
+                <Fold line="224" />
+                <Fold line="228" />
+                <Fold line="235" />
+                <Fold line="248" />
+                <Fold line="258" />
+                <Fold line="268" />
+                <Fold line="279" />
+                <Fold line="285" />
+                <Fold line="288" />
+            </File>
+            <File firstVisibleLine="105" xOffset="0" scrollWidth="10648" startPos="1816" endPos="1816" selMode="0" lang="Normal Text" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\scss\structure\top-header\_user-dropdown.scss" backupFilePath="" originalFileLastModifTimestamp="1597606550" />
+            <File firstVisibleLine="47" xOffset="0" scrollWidth="10648" startPos="1088" endPos="1088" selMode="0" lang="Normal Text" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\scss\structure\top-header\_notifications-dropdown.scss" backupFilePath="" originalFileLastModifTimestamp="1597608187">
+                <Mark line="61" />
+            </File>
+            <File firstVisibleLine="42" xOffset="0" scrollWidth="10648" startPos="1548" endPos="1530" selMode="0" lang="Normal Text" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\scss\_theme-variables.scss" backupFilePath="" originalFileLastModifTimestamp="1597529545" />
+            <File firstVisibleLine="171" xOffset="0" scrollWidth="10648" startPos="4544" endPos="4544" selMode="0" lang="Normal Text" encoding="-1" filename="C:\GitHub\bs4-studio-konkon\scss\_bootstrap-variables.scss" backupFilePath="" originalFileLastModifTimestamp="1566848574" />
         </mainView>
         <subView activeIndex="0" />
     </Session>

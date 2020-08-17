@@ -36,143 +36,330 @@
 				line-height: 20px;
 				vertical-align: middle;
 			}
-
-			&:after
-			{
-				display: none;
-			    font-size: 1.231rem;
-			    margin-left: 6px;
-			}
 		}
 
 		.dropdown-menu
 		{
+			max-height: calc(100vh - #{$top-header-height + 2px} - #{$content-padding});
+			position: fixed;
+			top: $top-header-height;
+			overflow-y: auto;
+			overscroll-behavior: contain;
+			padding: 0 !important;
 			width: $user-dropdown-width;
-			padding: 0 0 7px;
-			left: -178px;
+			min-width: $user-dropdown-width;
+			left: auto;
+			right: 0;
+			border: 1px solid hsl(0, 0%, 88%);
+		}
+	}
+	
+	// Header
+	.skk-nvh {
+		position: relative;
+		margin: 1.25rem 2.0625rem;
+		white-space: nowrap;
+	}
+	
+	.skk-nvh-img {
+		margin: 0 auto .625rem;
+		position: relative;
+		height: 5.375rem;
+		width: 5.375rem;
+		vertical-align: top;
+		text-align: center;
+
+		img {
 			border: none;
-			
-			@include media_size("tablet")
-			{
-				left: -173px;
+			margin: 0 .1875rem;
+			vertical-align: top;
+			height: 5rem;
+			width: 5rem;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+	}
+	
+	.skk-nvh-info {
+		display: block;
+		vertical-align: top;
+		text-align: center;
+		
+		> .btn {
+			max-width: 254px;
+			outline: 0;
+			letter-spacing: .0156rem;
+			margin: 1rem 0 0;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+	
+	.skk-nvh-name {
+		color: #202124;
+		letter-spacing: .29px;
+		margin: 0;
+		text-align: center;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		font-weight: 500;
+		font-size: 1rem;
+	}
+	
+	.skk-nvh-email {
+		letter-spacing: normal;
+		text-align: center;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		color: #5f6368;
+		font-weight: 400;
+		font-size: 0.875rem;
+	}
+	
+	.skk-nva {
+		line-height: normal;
+		border-top: 1px solid #e8eaed;
+		padding: map-get($spacers, 1) 0;
+
+		> a {
+			height: 3.5rem;
+			min-height: 3rem;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			white-space: initial;
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5rem;
+			position: relative;
+			padding: 0 2.0625rem;
+			box-sizing: content-box;
+
+			&:visited {
+				color: #444d57;
+			}
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.05);
 			}
 			
-			a
-			{
-				.be-top-header &
-				{
-					
-					&:focus,
-					&:active
-					{
-						background-color: transparent; 
-						color: $dropdown-text-color;
-					}
+			&:active:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.075);
+			}
+		}
+	}
+	
+	.skk-nva-icon {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 3.5rem;
 
-					&:hover
-					{
-						background-color: force-hex(darken($light-color, 4%));
-						color: $dropdown-text-color;
-					}
+		img {
+			display: block;
+			width: 2.5rem;
+			height: 2.5rem;
+			max-width: 100%;
+			max-height: none;
+			margin: 0;
+			border-radius: 50%;
+		}
+	}
+	
+	.skk-nva-account {
+		display: flex;
+		flex-direction: column;
+		min-height: 4.5rem;
+		overflow: hidden;
+		justify-content: center;
+		flex: 1;
+		flex-basis: 1e-09px;
+	}
+	
+	.skk-nva-name {
+		color: #3c4043;
+		font-weight: 500;
+	}
+	
+	.skk-nva-email {
+		color: #5f6368;
+		font-weight: 400;
+	}
+	
+	.skk-nva-name,
+	.skk-nva-email {
+		font-size: .8125rem;
+		line-height: 1.125rem;
+		letter-spacing: normal;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+      
+	.skk-nva-check {
+		color: $brand-primary;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		text-align: center;
+		vertical-align: middle;
+		width: 1.5rem;
+		height: 1.5rem;
+		line-height: 1.5rem;
+		font-size: 1.5rem;
+		font-weight: 400;
+	}
+	
+	.skk-nvl {
+		padding: map-get($spacers, 1) 0;
+		margin: 0;
+		list-style: none;
+		border-top: 1px solid #e8eaed;
+		
+		> .skk-nvl-item {
+			list-style: none;
+			display: block;
+			cursor: pointer;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.05);
+			}
+			
+			> a {
+				display: flex;
+				flex: 1;
+				flex-basis: 1e-9px;
+				flex-direction: row;
+				align-items: center;
+				text-decoration: none;
+				color: lighten($dark-color, 1%);
+				padding: 0 1rem;
+				white-space: nowrap;
+				line-height: 1.5rem;
+				height: 2.5rem;
+				min-height: 40px;
+				font-weight: 400;
+
+				&:focus,
+				&:active {
+					background-color: rgba(0, 0, 0, 0.075);
 				}
-
-				.icon
-				{
+			}
+				
+			.skk-nvli-icon,
+			.skk-nvli-ricon {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				color: darken($light-color, 42.5%);
+				
+				> i {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					position: relative;
 					vertical-align: middle;
-					margin-right: 10px;
+					font-size: 1.5rem;
+					line-height: 1.5rem;
+					width: 1.5rem;
+					height: 1.5rem;
 				}
 			}
-
-			.user-info
-			{
-				background-color: $top-header-phone-bg;
-				color: $light-color;
+			
+			.skk-nvli-icon:first-child {
+				margin-right: 1rem;
+				flex: none;
+			}
+			
+			.skk-nvli-icon:last-child {
+				margin-left: .5rem;
+			}
+			
+			.skk-nvli-label {
+				display: block;
+				color: lighten($dark-color, 1%);
+				text-overflow: ellipsis;
 				overflow: hidden;
-				padding: 1.077rem 1.154rem 1rem;
-				border-radius: 2px 2px 0 0;
-				margin-bottom: .538rem;
-
-				.user-name
-				{
-					display: block;
-					font-size: 1.462rem;
-					line-height: 1.692rem;
-					text-overflow: ellipsis;
-  					white-space: nowrap;
-  					overflow: hidden;
-				}
-
-				.user-position
-				{
-					display: block;
-					text-overflow: ellipsis;
-	  				white-space: nowrap;
-	  				overflow: hidden;
-	  				padding-left: 1rem;
-	  				position: relative;
+				white-space: nowrap;
+				font-size: .875rem;
+				line-height: 1.3125rem;
+			}
+			
+			.skk-nvli-subtitle {
+				display: flex;
+				flex: 1;
+				flex-basis: 1e-9px;
+			}
+		}
+	}
 	
-	  				&:after
-	  				{
-					  	content: "";
-					    position: absolute;
-					    height: .538rem;
-					    width: .538rem;
-					    left: 0;
-					    top: .385rem;
-					    border: 1px solid hsl(0, 0%, 94%);
-					    border-radius: 50%;
-					    background-color: transparent;
-					    display: block;
-	  				}
+	.skk-nv-btn {
+		border-top: 1px solid #e8eaed;
+		border-bottom: 1px solid #e8eaed;
+		padding: 1rem 2.0625rem;
+		text-align: center;
+	}
 	
-	  				&.online
-	  				{
-	  					&:after
-	  					{
-		  					background-color: lighten($success-color, 19%);
-		  					border-color: lighten($success-color, 19%);
-	  					}
-	  				}
+	.skk-nvf {
+		color: #5f6368;
+		margin: .875rem 2.0625rem;
+		text-align: center;
+		white-space: normal;
 
-	  				&.away
-	  				{
-	  					&:after
-	  					{
-		  					background-color: lighten($warning-color, 15%);
-		  					border-color: lighten($warning-color, 15%);
-	  					}
-	  				}
+		a {
+			border-radius: .25rem;
+			color: #5f6368;
+			display: inline-block;
+			font-weight: 400px;
+			font-size: .75rem;
+			outline: 0;
+			padding: .25rem .5rem;
+			text-decoration: none;
+			text-align: center;
+			white-space: normal;
 
-	  				&.busy
-	  				{
-	  					&:after
-	  					{
-		  					background-color: lighten($danger-color, 18%);
-		  					border-color: lighten($danger-color, 18%);
-	  					}
-	  				}
-				}
+			&:hover {
+				background-color: #f5f5f5;
+			}
+		}
 
-				.switch-status
-				{
-					float: right;
-					margin-top: map-get($spacers, 1);
+		.seperator {
+			color: #5f6368;
+			text-align: center;
+			white-space: normal;
+			font-size: .75rem;
+		}
+	}
+	
+	
+	@include media_size("small-phone")
+	{
+		> li.dropdown {
+			&.show > a {
+				&:before,
+				&:after {
+					display: none !important;
 				}
 			}
-
-			.be-top-header &
-			{
-				&:after
-				{
-					left: auto;
-					right: 1rem;
-					border-bottom-color: $top-header-phone-bg;
-				}
-
-				&:before
-				{
-					display: none;
-				}
+			
+			.dropdown-menu {
+				margin: 1px 0 0 0 !important;
+				max-height: initial !important;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				box-shadow: none;
+				border-width: 0;
+				border-radius: 0 !important;
+				width: 100%;
 			}
 		}
 	}
