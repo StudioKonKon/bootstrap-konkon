@@ -1,9 +1,3 @@
-# Bootstrap 4.5.2: Studio KonKon Theme (v0.4.2)
+# Bootstrap 5.0.0.beta2: Studio KonKon Theme (v1-beta1)
 
-
-Examples & Demos
----
-
-Learn More: https://codepen.io/collection/AQvoEb/
-
-GitHub Docs: https://studiokonkon.github.io/bootstrap-konkon/
+Theme ecperiments: https://codepen.io/collection/AQvoEb/
