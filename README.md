@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a1dd7898-1c03-4aeb-aa6f-7524bc687ca4/deploy-status)](https://app.netlify.com/sites/cocky-ptolemy-7639ae/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a1dd7898-1c03-4aeb-aa6f-7524bc687ca4/deploy-status)](https://play.studiokonkon.com/)
 
 # Bootstrap v5.0.0.beta2: Studio KonKon Theme (v1.0.0.beta1)
 
