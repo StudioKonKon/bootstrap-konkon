@@ -1,0 +1,19 @@
+@mixin toast-variation($background, $border, $color) {
+	border-color: rgba($border, .1);
+	background-color: rgba($background, .85);
+	color: $color;
+	
+	&.bg-fill {
+		background-color: lighten($background, 3%) !important;
+	}
+	
+	.toast-header {
+		border-color: rgba($border, .05);
+		background-color: rgba($border, .85);
+		color: $color;
+	}
+
+	.toast-body {
+		color: $color;
+	}
+}

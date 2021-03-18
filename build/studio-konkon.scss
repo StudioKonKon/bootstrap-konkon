@@ -1,0 +1,17 @@
+/*!
+ * Studio KonKon v1.0.0-beta1 (https://studiokonkon.com/)
+ * Copyright 2018-2020 Studio KonKon
+ */
+
+// Options
+$enable-font: 					false;
+
+$enable-card-border-colors:		true;
+$enable-card-full-colors:		false;
+$enable-dropdown-colors:		false;
+$enable-modal-header-colors:	true;
+$enable-modal-full-colors:		false;
+$enable-btn-social-colors:		false;
+
+// Bootstrap 5.0.0-beta2
+@import "../scss/studio-konkon-theme";

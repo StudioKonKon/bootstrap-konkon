@@ -1,0 +1,16 @@
+// Toast colours
+@if $enable-toast-colors {
+	@each $state, $value in $theme-colors {
+		$toast-background: shift-color($value, $toast-bg-scale);
+		$toast-border: shift-color($value, $toast-border-scale);
+		$toast-color: shift-color($value, $toast-color-scale);
+		
+		@if(contrast-ratio($toast-background, $toast-color) < $min-contrast-ratio) {
+			$toast-color: mix($value, color-contrast($toast-background), abs($toast-color-scale));
+		}
+  
+		.toast-#{$state} {
+			@include toast-variation($toast-background, $toast-border, $toast-color);
+		}
+	}
+}

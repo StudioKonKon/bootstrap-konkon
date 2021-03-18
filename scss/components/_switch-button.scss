@@ -1,0 +1,113 @@
+// Switch button
+.form-switch-onoff {
+	display: inline-block;
+	border-radius: $switch-border-radius;
+	width: $switch-width;
+	height: $switch-height;
+	line-height: $switch-line-height;
+	padding: $switch-padding;
+	position: relative;
+	vertical-align: middle;
+	text-align: left;
+  
+	.form-check-input {
+		width: 1px;
+		height: 1px;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+	}
+	
+	.form-check-label {
+		background-color: darken($white, 30%);
+	}
+  
+	.form-switch-label {
+		border-radius: $switch-label-border-radius;
+		background-color: $white;
+		margin: 0;
+		height: $switch-label-height;
+		width: $switch-label-height;
+		z-index: 1;
+		display: inline-block;
+		cursor: pointer;
+		background-clip: padding-box;
+	
+		&:before {
+			position: absolute;
+			font-size: .8462rem;
+			font-weight: 600;
+			z-index: 0;
+			content: "";
+			right: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			line-height: $switch-height;
+			top: 0;
+			text-align: right;
+			padding-right: .769rem;
+			color: $white;
+			border-radius: $switch-border-radius;
+			border: solid 1px transparent;
+		} 								    
+	}
+  
+	.form-check-input {
+		+ .form-check-label {
+			border-radius: $switch-border-radius;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: $switch-padding;
+		}
+		
+		&:checked + .form-check-label {
+			background-color: $switch-bg;
+			
+			.form-switch-label {
+				float: right; 
+				border-color: darken($switch-bg, 5%);
+				
+				&:before {
+					color: $white;
+					left: 0;
+					text-align: left;
+					padding-left: .769rem;
+				}
+			}
+		}
+		
+		&:focus + .form-check-label {
+			.form-switch-label:before
+			{
+				box-shadow: 0 0 0 .15rem rgba(135,135,135,.3)
+			}
+		}
+		
+		&:checked:focus + .form-check-label {
+			.form-switch-label:before {
+				box-shadow: 0 0 0 .15rem rgba(66,133,244,.5);
+			}
+		}
+	}
+ 
+	.form-switch-label:before {
+		content: "OFF";
+	}
+	
+	.form-check-input:checked + .form-check-label .form-switch-label:before {
+		content: "ON";
+	}
+}
+
+@each $state, $value in $theme-colors {
+	.form-switch-#{$state} {
+		@include switch-button-color($value);
+	}
+}

@@ -1,0 +1,15 @@
+{{ if ne hugo.Environment "production" -}}
+	{{- with .Site.Params.cdn.icon_font -}}
+<link href="{{ .css | safeURL }}" rel="stylesheet"{{ with .css_hash }}{{ printf " integrity=%q" . | safeHTMLAttr }} crossorigin="anonymous"{{ end }} />
+	{{- end -}}
+{{ else -}}
+<link href="/assets/lib/material-design-iconic-font/dist/css/material-design-iconic-font.css" rel="stylesheet" />
+{{- end }}
+{{ $sass_bs := resources.Get "sass/bootstrap-custom.scss" -}}
+{{- $options_bs := (dict "targetPath" "assets/css/studio-konkon.css" "enableSourceMap" true) -}}
+{{- $style_bs := $sass_bs | resources.ToCSS $options_bs -}}
+<link href="{{ $style_bs.RelPermalink }}" rel="stylesheet" />
+{{ $sass_dev := resources.Get "sass/dev-skk-ui.scss" -}}
+{{- $options_dev := (dict "targetPath" "assets/css/dev-skk-ui.css" "enableSourceMap" true) -}}
+{{- $style_dev := $sass_dev | resources.ToCSS $options_dev -}}
+<link href="{{ $style_dev.RelPermalink }}" rel="stylesheet" />

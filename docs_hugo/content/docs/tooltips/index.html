@@ -1,0 +1,91 @@
++++
+title = "Tooltips"
+author = "Studio KonKon"
+description = "Examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-bs-attributes for local title storage."
+body_class = "bg-light"
+
+[[extra_js]]
+	src = "tooltips.js"
+	
++++
+
+<div class="row g-4 mb-4">
+	<div class="col-lg-12 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Default Tooltips</h4>
+				<p class="mt-2 mb-2 text-center">
+					<button class="btn btn-secondary btn-space" type="button"
+							data-bs-toggle="tooltip" data-bs-placement="top"
+							title="Tooltip on top">Tooltip top</button>
+					<br class="d-block d-sm-none" />
+					<button class="btn btn-secondary btn-space" type="button"
+							data-bs-toggle="tooltip" data-bs-placement="left"
+							title="Tooltip on left">Tooltip left</button>
+					<br class="d-block d-sm-none" />
+					<br class="d-none d-sm-block d-md-none" />
+					<button class="btn btn-secondary btn-space" type="button"
+							data-bs-toggle="tooltip" data-bs-placement="bottom"
+							title="Tooltip on bottom">Tooltip bottom</button>
+					<br class="d-block d-sm-none" />
+					<button class="btn btn-secondary btn-space" type="button"
+							data-bs-toggle="tooltip" data-bs-placement="right" data-bs-container="body"
+							title="Tooltip on right">Tooltip right</button>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-12 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Default Popovers</h4>
+				<p class="mt-2 mb-2 text-center">
+					<button class="btn btn-secondary btn-space" type="button" title="Popover on top"
+							data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+							data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+							>Popover top</button>
+					<br class="d-block d-sm-none" />
+					<button class="btn btn-secondary btn-space" type="button" title="Popover on left"
+							data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+							data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+							>Popover left</button>
+					<br class="d-block d-sm-none" />
+					<br class="d-none d-sm-block d-md-none" />
+					<button class="btn btn-secondary btn-space" type="button" title="Popover on bottom"
+							data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom"
+							data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+							>Popover bottom</button>
+					<br class="d-block d-sm-none" />
+					<button class="btn btn-secondary btn-space" type="button" title="Popover on right"
+							data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right"
+							data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+							>Popover right</button>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body js-tooltips">
+				<h4 class="card-title mb-1">Example: Tooltips</h4>
+				<p class="card-text">Lorem ipsum dolor sit amet, ut qui commodo <a href="#" class="lbl-tooltip-example">sensibus</a>, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
+				<p class="card-text">Ei saepe  <a href="#" class="lbl-tooltip-example">abhorreant</a> temporibus cum, hinc praesent voluptatum ea has. Vis nihil tacimates senserit ut, quo posse labores <a href="#" class="lbl-tooltip-example">honestatis</a> te. Ex duo nullam posidonium deterruisset, altera aeterno duo eu.</p>
+				<p class="card-text">In eos nullam luptatum platonem, in ius nulla dissentias. Ea eam deleniti officiis. Ut persius <a href="#" class="lbl-tooltip-example">salutandi</a> pri. Has ne vero prima. Brute dicta efficiendi pri in, in duo nemore quodsi animal. Vis te sonet civibus convenire, id has eius dicant vidisse, sit regione percipit an. Et omittam <a href="#" class="lbl-tooltip-example">principes</a> patrioque usu.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Example: Popovers</h4>
+				<p class="card-text">Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam <a href="#" class="lbl-popover-example">dolorum interesset</a>, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
+				<p class="card-text">Ei saepe abhorreant temporibus cum, hinc praesent voluptatum ea has. Vis nihil <a href="#" class="lbl-popover-example">tacimates</a> senserit ut, quo posse labores honestatis te. Ex duo nullam posidonium deterruisset, altera <a href="#" class="lbl-popover-example">aeterno</a> duo eu.</p>
+				<p class="card-text">In eos nullam luptatum platonem, in ius nulla dissentias. Ea eam deleniti officiis. Ut persius salutandi pri. Has ne vero prima. Brute dicta <a href="#" class="lbl-popover-example">efficiendi</a> pri in, in duo nemore quodsi animal. Vis te sonet civibus convenire, id has eius dicant vidisse, sit regione percipit an. Et <a href="#" class="lbl-popover-example">omittam</a> principes patrioque usu.</p>
+			</div>
+		</div>
+	</div>
+
+</div>

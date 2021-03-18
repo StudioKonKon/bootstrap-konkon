@@ -1,0 +1,38 @@
+/*------------------------------------------------------------------
+  [Tables]
+*/
+.table {
+	> :not(:last-child) > :last-child > * {
+		border-bottom-width: $table-header-border-width;
+	}
+}
+
+//Helpers classes
+.table {
+	--#{$sk-variable-prefix}table-icon-color: #{$table-icon-color};
+	--#{$sk-variable-prefix}table-hover-icon-color: #{$table-hover-icon-color};
+	
+	tr {
+		th,
+		td {
+			//Actions column
+			&.actions {
+				text-align: center;
+
+				.icon {
+					color: var(--#{$sk-variable-prefix}table-icon-color);
+					font-size: $table-actions-font-size;
+
+					&:hover {
+						color: var(--#{$sk-variable-prefix}table-hover-icon-color);
+					}
+				}
+			}
+		}
+	}
+}
+
+// Generate the contextual variants
+@each $state, $value in $table-variants {
+	@include table-actions-variant($state, $value);
+}

@@ -1,0 +1,31 @@
+{
+	"name": "bootstrap-konkon",
+	"description": "A personal project I intend to use as a theme for my own website but available for others to use if they wish either for their own content or for educational purposes.",
+	"version": "1.0.0-beta2",
+	"config": {
+		"version_short": "1.0"
+	},
+	"keywords": [
+		"css",
+		"sass",
+		"mobile-first",
+		"responsive",
+		"front-end",
+		"framework",
+		"web",
+		"theme"
+	],
+	"homepage": "https://play.studiokonkon.com/",
+	"author": "Studio KonKon",
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {
+		"@popperjs/core": "^2.6.0",
+		"bootstrap": "^5.0.0-beta2",
+		"material-design-iconic-font": "^2.2.0"
+	},
+	"files": [
+		"dist/{css,js}/*.{css,js,map}",
+		"scss/**/*.scss"
+	]
+}

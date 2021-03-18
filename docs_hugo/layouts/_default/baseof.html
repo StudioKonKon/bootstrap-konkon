@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"{{ with .Page.Params.html_class }} class="{{ . }}"{{ end }}>
+	<head>
+{{ partial "head.html" . }}
+{{ partialCached "site-styles.html" . }}
+
+{{ range .Page.Params.extra_css }}
+  {{- $src := .src | default . -}}
+  {{- $type := .type | default "css" -}}
+  {{- $map := .map | default true -}}
+  {{- $stype := .stype | default "compressed" -}}
+  {{- $inline := .inline | default false -}}
+  {{- $style := "" -}}
+  {{- if eq $type "scss" -}}
+    {{- $sass := resources.Get (printf "sass/%s.scss" $src) -}}
+	{{- $options := (dict "targetPath" (printf "assets/css/%s.css" $src) "enableSourceMap" $map "outputStyle" $stype) -}}
+	{{- $style = $sass | resources.ToCSS $options -}}
+	{{- $src = $style.RelPermalink -}}
+  {{- end -}}
+  {{- if $inline -}}
+    {{- with $style }}<style>{{ .Content | safeCSS }}</style>{{ end -}}
+  {{- else -}}
+	<link href="{{ $src }}" rel="stylesheet" />
+  {{- end -}}
+{{- end }}
+
+	</head>
+	<body{{ with .Page.Params.body_class }} class="{{ . }}"{{ end }}>
+{{ partialCached "site-navbar.html" . }}
+		<div class="be-content">
+{{ block "main" . }}{{ end }}
+		</div>
+{{ partialCached "site-scripts.html" . }}
+{{ if ne .Page.Params.include_js false -}}
+	{{ range .Page.Params.extra_js -}}
+<script{{ with .async }} async{{ end }} src="{{ .src }}"{{ with .integrity }} {{ printf "integrity=%q" . | safeHTMLAttr }} crossorigin="anonymous"{{ end }}></script>
+	{{- end -}}
+{{- end }}
+	</body>
+</html>

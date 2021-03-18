@@ -1,0 +1,27 @@
+{{- $siteUrl := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
+{{- $scratch := newScratch -}}
+{{- $scratch.Add "sitePath" .Site.BaseURL -}}
+
+{{- $scratch.Add "siteBreadcrumbs" (slice (dict "url" .Site.BaseURL "name" "home" "position" 1 )) -}}
+{{- range $index, $element := split $siteUrl "/" -}}
+  {{- $scratch.Add "sitePath" $element -}}
+  {{- $scratch.Add "sitePath" "/" -}}
+  {{- if ne $element "" -}}
+    {{- $scratch.Add "siteBreadcrumbs" (slice (dict "url" ($scratch.Get "sitePath") "name" . "position" (add $index 2))) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $siteBreadcrumbs := $scratch.Get "siteBreadcrumbs" -}}
+{{- $siteBreadcrumbsLast := len $siteBreadcrumbs -}}
+
+<nav aria-label="breadcrumb" role="navigation">
+	<ol class="breadcrumb page-head-nav">
+    {{ range $siteBreadcrumbs -}}
+		{{ if ne .position $siteBreadcrumbsLast -}}
+			<li class="breadcrumb-item"><a href="{{ .url | absURL }}">{{ .name }}</a></li>
+		{{- else -}}
+			<li class="breadcrumb-item active">{{ .name }}</li>
+		{{- end }}
+	{{ end -}}
+	</ol>
+</nav>

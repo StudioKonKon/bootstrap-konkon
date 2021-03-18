@@ -1,0 +1,164 @@
+/* --- Pricing Cards --- */
+
+$pricing-card-bg:				$border-color !default;
+$pricing-card-color:			$white !default;
+$pricing-card-opacity:			null !default;
+$pricing-card-box-shadow:		$box-shadow-sm !default;
+$pricing-card-border-top:		.25rem !default;
+$pricing-card-transition:		all 0.2s !default;
+$pricing-card-icon-size:		4.5rem !default;
+$pricing-card-icon-font-size:	1.462rem !default;
+$pricing-card-ribbon-height:	2.25rem !default;
+$pricing-card-ribbon-width:		15rem;
+$pricing-card-ribbon-font-size:	$font-size-sm !default;
+$pricing-card-item-padding-y:	.25rem !default;
+$pricing-card-item-font-size:	$font-size-base !default;
+$pricing-card-item-line-height:	$line-height-lg !default;
+$pricing-card-header-padding-y:	$card-spacer-y !default;
+$pricing-card-body-padding-y:	$card-spacer-y !default;
+
+$pricing-card-hover-margin:		null !default;
+$pricing-card-hover-box-shadow: $box-shadow !default;
+
+.pricing-card {
+	position: relative;
+	border: 0;
+	border-top: $pricing-card-border-top solid $pricing-card-bg;
+	text-align: center;
+	opacity: $pricing-card-opacity;
+	transition: $pricing-card-transition;
+	box-shadow: $pricing-card-box-shadow;
+   
+	&:hover,
+	&.active {
+		box-shadow: $pricing-card-hover-box-shadow;
+		opacity: 1;
+	}
+   
+	&:hover {
+		margin: $pricing-card-hover-margin;
+	}
+
+	&-icon {
+		position: absolute;
+		font-size: $pricing-card-icon-font-size;
+		color: $pricing-card-color;
+		top: ($pricing-card-icon-size / 4) - ($pricing-card-border-top * 2);
+		right: ($pricing-card-icon-size / 4) - $pricing-card-border-top;
+	}
+
+	&-title {
+		font-size: $h4-font-size;
+		font-weight: $font-weight-light;
+	}
+
+	&-price {
+		padding: map-get($spacers, 1) 0  map-get($spacers, 3);
+		font-size: $h1-font-size;
+
+		.currency {
+			vertical-align: text-top;
+			font-size: $font-size-base;
+			padding-right: map-get($spacers, 1);
+		}
+
+		.frequency {
+			font-size: $h4-font-size;
+			font-weight: $font-weight-light;
+			vertical-align: text-bottom;
+		}
+	}
+
+	&-features {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			font-size: $pricing-card-item-font-size;
+			padding: $pricing-card-item-padding-y 0;
+			line-height: $pricing-card-item-line-height;
+		}
+	}
+	
+	.card-header {
+		padding-top: $pricing-card-header-padding-y;
+		padding-bottom: $pricing-card-header-padding-y;
+		margin-bottom: 0;
+	}
+	
+	.card-body {
+		padding-top: $pricing-card-body-padding-y;
+		padding-bottom: $pricing-card-body-padding-y;
+	}
+	
+	.card-footer {
+		padding-top: $pricing-card-body-padding-y;
+		padding-bottom: $pricing-card-body-padding-y;
+	}
+	
+	.btn {
+		min-width: 8rem;
+	}
+}
+		
+.pricing-card-features-nosupport {
+	opacity: .4;
+	text-decoration: line-through;
+}
+
+.pricing-card-ribbon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: $pricing-card-ribbon-width / 1.5;
+	width: $pricing-card-ribbon-width / 1.5;
+	overflow: hidden;
+	cursor: default;
+	user-select: none;
+
+	span {
+		height: $pricing-card-ribbon-height;
+		width: $pricing-card-ribbon-width;
+		line-height: $pricing-card-ribbon-height;
+		font-size: $pricing-card-ribbon-font-size;
+		text-align: center;
+		font-weight: bold;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+		color: $pricing-card-color;
+		background-color: $pricing-card-bg;
+		transform: rotate(45deg);
+		overflow: hidden;
+		white-space: nowrap;
+		
+		position: absolute;
+		top: -($pricing-card-ribbon-height / 1.75) + 3;
+		right: -($pricing-card-ribbon-width / 2) + 3;
+	}
+}
+   
+.pricing-card-promo:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 $pricing-card-icon-size $pricing-card-icon-size 0;
+	border-color: transparent;
+	border-right-color: $pricing-card-bg;
+}
+
+@mixin pricing-card-variant($background) {
+	&.pricing-card-promo:before {
+		border-right-color: $background;
+	}
+}
+
+@each $state, $value in $theme-colors {
+	.border-#{$state} {
+		@include pricing-card-variant($value);
+	}
+}

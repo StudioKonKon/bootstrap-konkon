@@ -1,0 +1,118 @@
+{
+	"BaseURL": "https://play.studiokonkon.com/",
+	"uglyurls": false,
+	"relativeURLs": false,
+	"canonifyURLs": false,
+	"disableKinds": [
+		"RSS",
+		"sitemap",
+		"robotsTXT"
+	],
+	"languageCode": "en",
+	"DefaultContentLanguage": "en",
+	
+	"publishDir": "docs",
+	"module": {
+		"mounts": [
+			{ "source": "docs_hugo/assets", "target": "assets" },
+			{ "source": "docs_hugo/content", "target": "content" },
+			{ "source": "docs_hugo/data", "target": "data" },
+			{ "source": "docs_hugo/layouts", "target": "layouts" },
+			{ "source": "docs_hugo/static", "target": "static" },
+			{ "source": "scss", "target": "assets" },
+			
+			{
+				"source": "node_modules/bootstrap/dist/js",
+				"target": "static/assets/lib/bootstrap/dist/js"
+			},
+			{
+				"source": "node_modules/material-design-iconic-font/dist",
+				"target": "static/assets/lib/material-design-iconic-font/dist"
+			}
+		]
+	},
+	
+	"summaryLength": 70,
+	"title": "Studio KonKon Theme",
+	"params": {
+		"theme_color": "#fe669e",
+		"author": "Studio KonKon",
+		"current_version": "0.5.0-beta",
+		"docs_version": "5.0",
+		"github_org": "https://github.com/StudioKonKon",
+		"repo": "https://github.com/StudioKonKon/bootstrap-konkon",
+		"desciption": "",
+		"copyright": "Copyright of Studio KonKon &copy; 2018-2020<span class='d-none d-sm-inline'> | </span><br class='d-block d-sm-none' />Powered by Hugo &amp; Bootstrap 5",
+		"footer_message": "",
+		"social_links": {
+			"twitter": {
+				"icon": "zmdi zmdi-twitter",
+				"title": "Twitter",
+				"href": "https://twitter.com/StudioKonKon"
+			},
+			"youtube": {
+				"icon": "zmdi zmdi-youtube",
+				"title": "YouTube",
+				"href": "https://www.youtube.com/channel/UCZsIwOUO6s6jbJxHdzF3m_Q"
+			},
+			"github": {
+				"icon": "zmdi zmdi-github",
+				"title": "GitHub",
+				"href": "https://github.com/StudioKonKon"
+			}
+		},
+		"twitter": {
+			"creator": "@StudioKonKon",
+			"image": "https://ik.imagekit.io/konkon/skk-banner.jpg"
+		},
+		"cdn": {
+			"bootstrap": {
+				"js": "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js",
+				"js_hash": "sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+			},
+			"icon_font": {
+				"css": "https://cdn.jsdelivr.net/npm/material-design-iconic-font@2.2.0/dist/css/material-design-iconic-font.min.css",
+				"css_hash": "sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY="
+			}
+		}
+	},
+	"hasCJKLanguage": true,
+	"markup": {
+		"goldmark": {
+			"renderer": {
+				"unsafe": true
+			}
+		}
+	},
+	"paginate": 3,
+	"enableInlineShortcodes": true,
+	"footnoteReturnLinkContents": "^",
+	"taxonomies": {},
+	"privacy": {
+		"vimeo": {
+			"disabled": false,
+			"simple": true
+		},
+		"twitter": {
+			"disabled": false,
+			"enableDNT": true,
+			"simple": true
+		},
+		"instagram": {
+			"disabled": false,
+			"simple": true
+		},
+		"youtube": {
+			"disabled": false,
+			"privacyEnhanced": true
+		}
+	},
+	"services": {
+		"instagram": {
+			"disableInlineCSS": true
+		},
+		"twitter": {
+			"disableInlineCSS": true
+		}
+	}
+}

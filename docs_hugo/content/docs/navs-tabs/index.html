@@ -1,0 +1,511 @@
++++
+title = "Navs and tabs"
+author = "Studio KonKon"
+description = "Examples for how to use Bootstrap’s included navigation components."
+body_class = "bg-light"
++++
+
+<h2 class="pt-1 mb-3">Custom Tabs</h2>
+<p>For our custom Nav Tabs, wrap your content in a <code>.tab-container</code> container.</p>
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+	<div class="col">
+		<div class="tab-container mb-5">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="customnav">
+					<a class="nav-link active" id="skk-home-tab" data-bs-toggle="tab" href="#skk-home" role="tab" aria-controls="skk-home" aria-selected="true">Home</a>
+				</li>
+				<li class="nav-item" role="customnav">
+					<a class="nav-link" id="skk-profile-tab" data-bs-toggle="tab" href="#skk-profile" role="tab" aria-controls="skk-profile" aria-selected="false">Profile</a>
+				</li>
+				<li class="nav-item" role="customnav">
+					<a class="nav-link" id="skk-contact-tab" data-bs-toggle="tab" href="#skk-contact" role="tab" aria-controls="skk-contact" aria-selected="false">Messages</a>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="skk-home" role="tabpanel" aria-labelledby="skk-home-tab">
+					<h4>General Classic Tab 1</h4>
+					<p>Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
+					<p>Ei saepe abhorreant temporibus cum, hinc praesent voluptatum ea has. Vis nihil tacimates senserit ut, quo posse labores honestatis te. Ex duo nullam posidonium deterruisset, altera aeterno duo eu.</p>
+				</div>
+				<div class="tab-pane fade" id="skk-profile" role="tabpanel" aria-labelledby="skk-profile-tab">
+					<h4>General Classic Tab 2</h4>
+					<p>Ei mel vocent latine intellegat. Nam ex sumo dolorum ceteros. Mei ne liber intellegam. Ferri quaeque mea in, mel munere rationibus at.</p>
+					<p>In has homero blandit vituperatoribus, eum latine interpretaris eu, sale commodo has eu.</p>
+				</div>
+				<div class="tab-pane fade" id="skk-contact" role="tabpanel" aria-labelledby="skk-contact-tab">
+					<h4>General Classic Tab 3</h4>
+					<p>Munere consetetur an usu, vis quot maiestatis concludaturque at. Ne etiam indoctum referrentur eum, vix legimus nominati eu. Epicurei quaestio sea ut, munere deserunt adipiscing qui te.</p>
+					<p>Disputando voluptatibus ei sit. Et veri deserunt theophrastus pri, at mutat choro eum.</p>
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="tab-container mb-5">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="customnav">
+					<a class="nav-link active" id="skk2-home-tab" data-bs-toggle="tab" href="#skk2-home" role="tab" aria-controls="skk2-home" aria-selected="true"><i class="icon zmdi zmdi-home me-1"></i> Home</a>
+				</li>
+				<li class="nav-item" role="customnav">
+					<a class="nav-link" id="skk2-profile-tab" data-bs-toggle="tab" href="#skk2-profile" role="tab" aria-controls="skk2-profile" aria-selected="false"><i class="icon zmdi zmdi-account-circle me-1"></i> Profile</a>
+				</li>
+				<li class="nav-item" role="customnav">
+					<a class="nav-link" id="skk2-contact-tab" data-bs-toggle="tab" href="#skk2-contact" role="tab" aria-controls="skk2-contact" aria-selected="false"><i class="icon zmdi zmdi-notifications me-1"></i> Messages</a>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="skk2-home" role="tabpanel" aria-labelledby="skk2-home-tab">
+					<h4>General Classic Tab 1</h4>
+					<p>Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
+					<p>Ei saepe abhorreant temporibus cum, hinc praesent voluptatum ea has. Vis nihil tacimates senserit ut, quo posse labores honestatis te. Ex duo nullam posidonium deterruisset, altera aeterno duo eu.</p>
+				</div>
+				<div class="tab-pane fade" id="skk2-profile" role="tabpanel" aria-labelledby="skk2-profile-tab">
+					<h4>General Classic Tab 2</h4>
+					<p>Ei mel vocent latine intellegat. Nam ex sumo dolorum ceteros. Mei ne liber intellegam. Ferri quaeque mea in, mel munere rationibus at.</p>
+					<p>In has homero blandit vituperatoribus, eum latine interpretaris eu, sale commodo has eu.</p>
+				</div>
+				<div class="tab-pane fade" id="skk2-contact" role="tabpanel" aria-labelledby="skk2-contact-tab">
+					<h4>General Classic Tab 3</h4>
+					<p>Munere consetetur an usu, vis quot maiestatis concludaturque at. Ne etiam indoctum referrentur eum, vix legimus nominati eu. Epicurei quaestio sea ut, munere deserunt adipiscing qui te.</p>
+					<p>Disputando voluptatibus ei sit. Et veri deserunt theophrastus pri, at mutat choro eum.</p>
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+	<div class="col">
+		<p>Vertical align left with <code>.tab-container-left</code></p>
+		<div class="tab-container tab-container-left mb-5">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="customnav_left">
+					<a class="nav-link active" id="cleft-home-tab" data-bs-toggle="tab" href="#cleft-home" role="tab" aria-controls="cleft-home" aria-selected="true">Home</a>
+				</li>
+				<li class="nav-item" role="customnav_left">
+					<a class="nav-link" id="cleft-profile-tab" data-bs-toggle="tab" href="#cleft-profile" role="tab" aria-controls="cleft-profile" aria-selected="false">Profile</a>
+				</li>
+				<li class="nav-item" role="customnav_left">
+					<a class="nav-link" id="cleft-contact-tab" data-bs-toggle="tab" href="#cleft-contact" role="tab" aria-controls="cleft-contact" aria-selected="false">Messages</a>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="cleft-home" role="tabpanel" aria-labelledby="cleft-home-tab">
+					<h4>General Classic Tab 1</h4>
+					<p>Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
+					<p>Ei saepe abhorreant temporibus cum, hinc praesent voluptatum ea has. Vis nihil tacimates senserit ut, quo posse labores honestatis te. Ex duo nullam posidonium deterruisset, altera aeterno duo eu.</p>
+				</div>
+				<div class="tab-pane fade" id="cleft-profile" role="tabpanel" aria-labelledby="cleft-profile-tab">
+					<h4>General Classic Tab 2</h4>
+					<p>Ei mel vocent latine intellegat. Nam ex sumo dolorum ceteros. Mei ne liber intellegam. Ferri quaeque mea in, mel munere rationibus at.</p>
+					<p>In has homero blandit vituperatoribus, eum latine interpretaris eu, sale commodo has eu.</p>
+				</div>
+				<div class="tab-pane fade" id="cleft-contact" role="tabpanel" aria-labelledby="cleft-contact-tab">
+					<h4>General Classic Tab 3</h4>
+					<p>Munere consetetur an usu, vis quot maiestatis concludaturque at. Ne etiam indoctum referrentur eum, vix legimus nominati eu. Epicurei quaestio sea ut, munere deserunt adipiscing qui te.</p>
+					<p>Disputando voluptatibus ei sit. Et veri deserunt theophrastus pri, at mutat choro eum.</p>
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<p>Vertical align right with <code>.tab-container-right</code></p>
+		<div class="tab-container tab-container-right mb-5">
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="cright-home" role="tabpanel" aria-labelledby="cright-home-tab">
+					<h4>General Classic Tab 1</h4>
+					<p>Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
+					<p>Ei saepe abhorreant temporibus cum, hinc praesent voluptatum ea has. Vis nihil tacimates senserit ut, quo posse labores honestatis te. Ex duo nullam posidonium deterruisset, altera aeterno duo eu.</p>
+				</div>
+				<div class="tab-pane fade" id="cright-profile" role="tabpanel" aria-labelledby="cright-profile-tab">
+					<h4>General Classic Tab 2</h4>
+					<p>Ei mel vocent latine intellegat. Nam ex sumo dolorum ceteros. Mei ne liber intellegam. Ferri quaeque mea in, mel munere rationibus at.</p>
+					<p>In has homero blandit vituperatoribus, eum latine interpretaris eu, sale commodo has eu.</p>
+				</div>
+				<div class="tab-pane fade" id="cright-contact" role="tabpanel" aria-labelledby="cright-contact-tab">
+					<h4>General Classic Tab 3</h4>
+					<p>Munere consetetur an usu, vis quot maiestatis concludaturque at. Ne etiam indoctum referrentur eum, vix legimus nominati eu. Epicurei quaestio sea ut, munere deserunt adipiscing qui te.</p>
+					<p>Disputando voluptatibus ei sit. Et veri deserunt theophrastus pri, at mutat choro eum.</p>
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="customnav_right">
+					<a class="nav-link active" id="cright-home-tab" data-bs-toggle="tab" href="#cright-home" role="tab" aria-controls="cright-home" aria-selected="true"><i class="icon zmdi zmdi-home"></i></a>
+				</li>
+				<li class="nav-item" role="customnav_right">
+					<a class="nav-link" id="cright-profile-tab" data-bs-toggle="tab" href="#cright-profile" role="tab" aria-controls="cright-profile" aria-selected="false"><i class="icon zmdi zmdi-account-circle"></i></a>
+				</li>
+				<li class="nav-item" role="customnav_right">
+					<a class="nav-link" id="cright-contact-tab" data-bs-toggle="tab" href="#cright-contact" role="tab" aria-controls="cright-contact" aria-selected="false"><i class="icon zmdi zmdi-notifications"></i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<h2>Base nav</h2>
+<p>The base <code>.nav</code> component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.</p>
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+	<div class="col">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<p class="card-subtitle">Navigation available in Bootstrap share general markup and styles, from the base .nav class to the active and disabled states. Swap modifier classes to switch between each style.</p>
+			</div>
+			<div class="card-body">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Active</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<p class="card-subtitle">Use <code>&lt;ul&gt;</code>s or <code>&lt;ol&gt;</code> to order your items or use your own with a <code>&lt;nav&gt;</code> element. Because the <code>.nav</code> uses <code>display: flex</code>, the nav links behave the same as nav items would but without the extra markup.</p>
+			</div>
+			<div class="card-body">
+				<nav class="nav">
+					<a class="nav-link active" aria-current="page" href="#">Active</a>
+					<a class="nav-link" href="#">Link</a>
+					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h2>Horizontal alignment</h2>
+<p>Change the horizontal alignment of your nav with flexbox utilities. By default, navs are left-aligned, but you can easily change them to center or right aligned.</p>
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+	<div class="col">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<p class="card-subtitle">Centered with <code>.justify-content-center</code></p>
+			</div>
+			<div class="card-body">
+				<ul class="nav justify-content-center">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Active</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<p class="card-subtitle">Centered with <code>.justify-content-end</code></p>
+			</div>
+			<div class="card-body">
+				<ul class="nav justify-content-end">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Active</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h2>Vertical alignment</h2>
+<p>Stack your navigation by changing the flex item direction with the <code>.flex-column</code> utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., <code>.flex-sm-column</code>).</p>
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+	<div class="col">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<p class="card-subtitle">Navigation available in Bootstrap share general markup and styles, from the base .nav class to the active and disabled states.</p>
+			</div>
+			<div class="card-body">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Active</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<p class="card-subtitle">Again, because the <code>.nav</code> uses <code>display: flex</code>, the nav links behave the same as nav items would but without the extra markup.</p>
+			</div>
+			<div class="card-body">
+				<nav class="nav flex-column">
+					<a class="nav-link active" aria-current="page" href="#">Active</a>
+					<a class="nav-link" href="#">Link</a>
+					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h2>Tabs</h2>
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+	<div class="col">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<p class="card-subtitle">Adds the <code>.nav-tabs</code> class to generate a tabbed interface.</p>
+			</div>
+			<div class="card-body">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Active</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<p class="card-subtitle">Take that same HTML but use <code>.nav-pills</code> instead:</p>
+			</div>
+			<div class="card-body">
+				<ul class="nav nav-pills">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Active</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+	<div class="col">
+		<h2>Fill and justify</h2>
+		<p>Force your <code>.nav</code>'s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your <code>.nav-item</code>'s, use <code>.nav-fill</code>. Notice that all horizontal space is occupied, but not every nav item has the same width.</p>
+		<div class="card mb-4">
+			<div class="card-body">
+				<ul class="nav nav-pills nav-fill">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Active</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Much longer nav link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<p>When using a <code>&lt;nav&gt;</code>-based navigation, you can safely omit <code>.nav-item</code> as only <code>.nav-link</code> is required for styling <code>&lt;a&gt;</code> elements.</p>
+		<div class="card mb-4">
+			<div class="card-body">
+				<nav class="nav nav-pills nav-fill">
+					<a class="nav-link active" aria-current="page" href="#">Active</a>
+					<a class="nav-link" href="#">Much longer nav link</a>
+					<a class="nav-link" href="#">Link</a>
+					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+				</nav>
+			</div>
+		</div>
+		<p>For equal-width elements, use <code>.nav-justified</code>. All horizontal space will be occupied by nav links, but unlike the <code>.nav-fill</code> above, every nav item will be the same width.</p>
+		<div class="card mb-4">
+			<div class="card-body">
+				<ul class="nav nav-pills nav-justified">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Active</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Much longer nav link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<p>Similar to the <code>.nav-fill</code> example using a <code>&lt;nav&gt;</code>-based navigation.</p>
+		<div class="card mb-4">
+			<div class="card-body">
+				<nav class="nav nav-pills nav-justified">
+					<a class="nav-link active" aria-current="page" href="#">Active</a>
+					<a class="nav-link" href="#">Much longer nav link</a>
+					<a class="nav-link" href="#">Link</a>
+					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<h2>Working with flex utilities</h2>
+		<p>If you need responsive nav variations, consider using a series of <b class="text-konkon">flexbox utilities</b>. While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.</p>
+		<div class="card mb-4">
+			<div class="card-body">
+				<nav class="nav nav-pills flex-column flex-sm-row">
+					<a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
+					<a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
+					<a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+					<a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+				</nav>
+			</div>
+		</div>
+		<p>Note that navigation bars, even if visually styled as tabs with the <code>.nav-tabs</code> class, should <strong>not</strong> be given <code>role="tablist"</code>, <code>role="tab"</code> or <code>role="tabpanel"</code> attributes. These are only appropriate for dynamic tabbed interfaces, as described in the <a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices</a>. The <code>aria-current</code> attribute is not necessary on dynamic tabbed interfaces since Bootstrap's JavaScript handles the selected state by adding <code>aria-selected="true"</code> on the active tab.</p>
+		<h2>Tabs with dropdowns</h2>
+		<div class="card mb-4">
+			<div class="card-body">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Active</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"
+						   href="#"
+						   data-bs-toggle="dropdown"
+						   role="button"
+						   aria-expanded="false">Dropdown <span class="ms-1 icon-dropdown zmdi zmdi-chevron-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Separated link</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<h2>Pills with dropdowns</h2>
+		<div class="card mb-4">
+			<div class="card-body">
+				<ul class="nav nav-pills">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Active</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"
+						   href="#"
+						   data-bs-toggle="dropdown"
+						   role="button"
+						   aria-expanded="false">Dropdown <span class="ms-1 icon-dropdown zmdi zmdi-chevron-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Separated link</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr />
+
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+	<div class="col pt-2 pb-4">
+		<h2>Tab Navigation (Tabs)</h2>
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+			</li>
+		</ul>
+		<div class="tab-content my-2" id="myTabContent">
+			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</div>
+			<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</div>
+			<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</div>
+		</div>
+	</div>
+	<div class="col pt-2 pb-4">
+		<h2>Tab Navigation (Pills)</h2>
+		<nav>
+			<div class="nav nav-pills" id="nav-tab" role="tablist">
+				<a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+				<a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+				<a class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+			</div>
+		</nav>
+		<div class="tab-content my-2" id="nav-tabContent">
+			<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</div>
+			<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</div>
+			<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</div>
+		</div>
+	</div>
+</div>
+
+<h2 class="pt-1 mb-3">Vertical Tabs</h2>
+<div class="d-flex align-items-start mb-4">
+	<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+		<a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+		<a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+		<a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+		<a class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+	</div>
+	<div class="tab-content ms-2" id="v-pills-tabContent">
+		<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint. Veniam sint duis incididunt do esse magna mollit excepteur laborum qui. Id id reprehenderit sit est eu aliqua occaecat quis et velit excepteur laborum mollit dolore eiusmod. Ipsum dolor in occaecat commodo et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum enim et cillum eu deserunt excepteur ea incididunt minim occaecat.</div>
+		<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Culpa dolor voluptate do laboris laboris irure reprehenderit id incididunt duis pariatur mollit aute magna pariatur consectetur. Eu veniam duis non ut dolor deserunt commodo et minim in quis laboris ipsum velit id veniam. Quis ut consectetur adipisicing officia excepteur non sit. Ut et elit aliquip labore Lorem enim eu. Ullamco mollit occaecat dolore ipsum id officia mollit qui esse anim eiusmod do sint minim consectetur qui.</div>
+		<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">Fugiat id quis dolor culpa eiusmod anim velit excepteur proident dolor aute qui magna. Ad proident laboris ullamco esse anim Lorem Lorem veniam quis Lorem irure occaecat velit nostrud magna nulla. Velit et et proident Lorem do ea tempor officia dolor. Reprehenderit Lorem aliquip labore est magna commodo est ea veniam consectetur.</div>
+		<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Eu dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis aliqua do. Aliqua amet qui mollit consectetur nulla mollit velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.</div>
+	</div>
+</div>

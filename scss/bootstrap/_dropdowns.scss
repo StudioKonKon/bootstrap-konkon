@@ -1,0 +1,75 @@
+/*------------------------------------------------------------------
+  [Dropdown menu]
+*/
+
+.dropdown-toggle:after {
+	display: none;
+}
+
+//Dropdown Menu Style
+.dropdown-menu {
+	box-shadow: $dropdown-box-shadow;
+
+	.btn-group .btn {
+		padding-left: $dropdown-btn-padding-x;
+		padding-right: $dropdown-btn-padding-x;
+	}
+}
+
+.dropdown-item {
+	display: flex;
+	align-items: center;
+	
+	.icon {
+		font-size: $dropdown-icon-size;
+		vertical-align: middle;
+		margin-right: map-get($spacers, 2);
+	}
+	
+	&.disabled {
+		color: $dropdown-link-disabled-color;
+	}
+	
+	.badge {
+		margin-left: auto;
+	}
+}
+
+.dropdown-divider {
+	+ .dropdown-header {
+		margin-top: map-get($spacers, 2);
+	}
+}
+
+.dropdown-header {
+	font-weight: $font-weight-normal;
+	color: $gray-600;
+	cursor: default;
+}
+
+.dropdown-tools {
+	text-align: center;
+}
+
+.dropdown-menu-dark {
+	.btn-group .btn {
+		background-color: transparent;
+		color: $dropdown-dark-color;
+		
+		&:hover {
+			border-color: $dropdown-dark-color;
+			background-color: rgba(255, 255, 255, 0.1);
+
+			& + .btn {
+				border-left-color: transparent; 
+			}
+		}
+		
+		&.active,
+		&:active {
+			background-color: $dropdown-dark-color;
+			color: $dropdown-dark-bg;
+			border-color: transparent;
+		}
+	}
+}

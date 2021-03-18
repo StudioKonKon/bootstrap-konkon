@@ -1,0 +1,8 @@
+// Dropdown Colours
+@if $enable-dropdown-colors {
+	@each $state, $value in $dropdown-colors {		
+		.dropdown-menu-#{$state} {
+			@include dropdown-color($value);
+		}
+	}
+}

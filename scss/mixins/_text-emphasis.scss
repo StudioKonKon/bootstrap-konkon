@@ -1,0 +1,14 @@
+// stylelint-disable declaration-no-important
+
+// Typography
+
+@mixin text-type-emphasis-variant($parent, $color) {
+	#{$parent} a {
+		color: $color !important;
+		
+		&:hover,
+		&:focus {
+			color: darken($color, $link-shade-percentage) !important;
+		}
+	}
+}

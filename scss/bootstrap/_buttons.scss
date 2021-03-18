@@ -1,0 +1,162 @@
+/*------------------------------------------------------------------
+  [Buttons]
+*/
+.btn
+{
+	&:active,
+	&.active {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	&:active:focus {
+		outline: 0;
+	}
+}
+
+.btn-flex {
+	display: inline-flex !important;
+	align-items: center !important;
+}
+
+.btn-flex.d-block {
+	display: flex !important;
+	align-items: center !important;
+}
+
+
+.btn-light,
+.btn-secondary {
+	@include button-variant(
+		$btn-light-bg,
+		$btn-light-border,
+		$btn-light-color,
+		$btn-light-bg,
+		darken($btn-light-border, 13%),
+		color-contrast($btn-light-bg),
+		darken($btn-light-bg, 11%),
+		darken($btn-light-border, 13%),
+		darken($btn-light-color, 10%)
+	);
+	
+	&.active,
+	&:active,
+	&:not([disabled]):not(.disabled).active,
+	&:not([disabled]):not(.disabled):active,
+	.show > &.dropdown-toggle {
+		-webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.06);
+		box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.06);
+
+		&.focus,
+		&:focus,
+		&:hover
+		{
+			-webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.06);
+			box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.06);
+		}
+	}
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&.active,
+		&.focus,
+		&:active,
+		&:focus,
+		&:hover
+		{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+
+	.badge {
+		color: $btn-light-bg;
+		background-color: $btn-light-color;
+	}
+}
+
+//Buton spacer helpers
+.btn-hspace {
+	margin-right: map-get($spacers, 1);
+}
+
+.btn-vspace {
+	margin-bottom: map-get($spacers, 1);
+}
+
+.btn-space {
+	margin-right: map-get($spacers, 1);
+	margin-bottom: map-get($spacers, 1);
+}
+
+
+//Button with rounded borders
+.btn-rounded {
+	@include border-radius($font-size-base * $btn-line-height);
+}
+
+//Icons inside buttons
+.btn {
+	.icon {
+		&.icon-left {
+			margin-right: $btn-icon-margin-left;
+		}
+
+		&.icon-right {
+			margin-left: $btn-icon-margin-right;
+		}
+	}
+}
+
+// Butons dropdown
+.btn.dropdown-toggle {
+	display: flex;
+	align-items: center;
+		
+	.#{$icons-class}-chevron-down,
+	.#{$icons-class}-chevron-up {
+		font-size: 1.385rem;
+	 	vertical-align: middle;
+	}
+
+	.icon-dropdown
+	{
+		font-size: 1.385rem;
+		margin-left: .462rem;
+
+		&-left
+		{
+			margin-left: 0;
+			margin-right: .462rem;
+		}
+	}
+}
+
+//Big buttons
+.btn-big
+{
+	padding: map-get($spacers, 2) $spacer;
+	text-align: center;
+	line-height: $font-size-base;
+	min-width: 4.769rem;
+
+	> .icon {
+		display: block;
+		font-size: $font-size-base * 2;
+		line-height: 1.538rem;
+		margin-bottom: .538rem;
+	}
+}
+
+// Social buttons
+.btn-social,
+.btn-social-outline {
+	min-width: $btn-min-width;
+
+	.icon {
+		font-size: $btn-icon-size;
+		vertical-align: middle;
+	}
+}

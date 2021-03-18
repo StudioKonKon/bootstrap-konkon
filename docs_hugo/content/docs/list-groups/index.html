@@ -1,0 +1,230 @@
++++
+title = "List Groups"
+author = "Studio KonKon"
+description = "List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within."
+body_class = "bg-light"
++++
+
+<div class="row g-4 mb-4">
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Basic List Group</h4>
+				<p class="card-text">The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.</p>
+				<ul class="list-group">
+					<li class="list-group-item">Cras justo odio</li>
+					<li class="list-group-item">Dapibus ac facilisis in</li>
+					<li class="list-group-item">Morbi leo risus</li>
+					<li class="list-group-item">Porta ac consectetur ac</li>
+					<li class="list-group-item">Vestibulum at eros</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Active Items</h4>
+				<p class="card-text">Add <code class="highlighter-konkon">.active</code> to a <code class="highlighter-konkon">.list-group-item</code> to indicate the current active selection.</p>
+				<ul class="list-group">
+					<li class="list-group-item active">Cras justo odio</li>
+					<li class="list-group-item">Dapibus ac facilisis in</li>
+					<li class="list-group-item">Morbi leo risus</li>
+					<li class="list-group-item">Porta ac consectetur ac</li>
+					<li class="list-group-item">Vestibulum at eros</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Disabled Items</h4>
+				<p class="card-text">Add <code class="highlighter-konkon">.disabled</code> to a <code class="highlighter-konkon">.list-group-item</code> to make it <em>appear</em> disabled. Note that some elements with <code class="highlighter-konkon">.disabled</code> will also require custom JavaScript to fully disable their click events (e.g., links).</p>
+				<ul class="list-group">
+					<li class="list-group-item disabled" aria-disabled="true">Cras justo odio</li>
+					<li class="list-group-item">Dapibus ac facilisis in</li>
+					<li class="list-group-item">Morbi leo risus</li>
+					<li class="list-group-item">Porta ac consectetur ac</li>
+					<li class="list-group-item">Vestibulum at eros</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Links and buttons</h4>
+				<p class="card-text">
+					Use <code class="highlighter-konkon">&lt;a&gt;</code>s or <code class="highlighter-konkon">&lt;button&gt;</code>s to create <em>actionable</em> list group items with hover, disabled, and active states by adding <code class="highlighter-konkon">.list-group-item-action</code>. We separate these pseudo-classes to ensure list groups made of non-interactive elements (like <code class="highlighter-konkon">&lt;li&gt;</code>s or <code class="highlighter-konkon">&lt;div&gt;</code>s) don’t provide a click or tap affordance.
+				</p>
+				<p class="card-text">
+					Be sure to <strong>not use the standard <code class="highlighter-konkon">.btn</code> classes here</strong>.
+				</p>
+				<div class="list-group">
+					<a href="#" class="list-group-item list-group-item-action active">Cras justo odio</a>
+					<a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+					<a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+					<a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+					<a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Flush</h4>
+				<p class="card-text">Add <code class="highlighter-konkon">.list-group-flush</code> to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).</p>
+				<p class="card-text">Use this after the <code class="highlighter-konkon">&lt;div class="card-body"&gt;&lt;/div&gt;</code> tag to extend to full card width.</p>
+			</div>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">Cras justo odio</li>
+				<li class="list-group-item">Dapibus ac facilisis in</li>
+				<li class="list-group-item">Morbi leo risus</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Horizontal</h4>
+				<p class="card-text">Add <code class="highlighter-konkon">.list-group-horizontal</code> to change the layout of list group items from vertical to horizontal across all breakpoints. Alternatively, choose a responsive variant <code class="highlighter-konkon">.list-group-horizontal-{sm|md|lg|xl}</code> to make a list group horizontal starting at that breakpoint’s <code class="highlighter-konkon">min-width</code>. Currently <strong>horizontal list groups cannot be combined with flush list groups.</strong></p>
+				<p class="card-text"><strong>ProTip:</strong> Want equal-width list group items when horizontal? Add <code class="highlighter-konkon">.flex-fill</code> to each list group item.</p>
+				<ul class="list-group list-group-horizontal-sm">
+					<li class="list-group-item flex-fill text-center">Cras justo odio</li>
+					<li class="list-group-item flex-fill text-center">Dapibus ac facilisis in</li>
+					<li class="list-group-item flex-fill text-center">Morbi leo risus</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Contextual Classes</h4>
+				<p class="card-text">Use contextual classes to style list items with a stateful background and color.</p>
+				<p class="card-text">Contextual classes also work with <code class="highlighter-konkon">.list-group-item-action</code>. Note the addition of the hover styles here not present in the previous example. Also supported is the <code class="highlighter-konkon">.active</code> state; apply it to indicate an active selection on a contextual list group item.</p>
+				<div class="list-group">
+					<a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list group item</a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-success">A simple success list group item</a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple danger list group item</a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-warning">A simple warning list group item</a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-info">A simple info list group item</a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-light">A simple light list group item</a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group item</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">With Badges and Icons</h4>
+				<p class="card-subtitle">Add badges to any list group item to show unread counts, activity, and more with the help of some utilities.</p>
+				<p class="card-subtitle">Use <code class="highlighter-konkon">.text</code> on text content when placing icons or flex will align items center and <code class="highlighter-konkon">.align-items-center</code> to avoid elements stretching.</p>
+				<ul class="list-group">
+					<li href="#" class="list-group-item d-flex align-items-center">
+						<span class="zmdi zmdi-disqus icon"></span>
+						<span class="text">Dapibus ac facilisis in</span>
+						<span class="badge rounded-pill">14</span>
+					</li>
+					<li href="#" class="list-group-item list-group-item-primary d-flex align-items-center">
+						<span class="text-primary zmdi zmdi-linkedin icon"></span>
+						<span class="text">A simple primary list group item</span>
+						<span class="badge badge-primary rounded-pill">21</span>
+					</li>
+					<li href="#" class="list-group-item list-group-item-secondary d-flex align-items-center">
+						<span class="text-secondary zmdi zmdi-github icon"></span>
+						<span class="text">A simple secondary list group item</span>
+						<span class="badge badge-secondary rounded-pill">28</span>
+					</li>
+					<li href="#" class="list-group-item list-group-item-success d-flex align-items-center">
+						<span class="text-success zmdi zmdi-whatsapp icon"></span>
+						<span class="text">A simple success list group item</span>
+						<span class="badge badge-success rounded-pill">11</span>
+					</li>
+					<li href="#" class="list-group-item list-group-item-danger d-flex align-items-center">
+						<span class="text-danger zmdi zmdi-youtube-play icon"></span>
+						<span class="text">A simple danger list group item</span>
+						<span class="badge badge-danger rounded-pill">24</span>
+					</li>
+					<li href="#" class="list-group-item list-group-item-warning d-flex align-items-center">
+						<span class="text-warning zmdi zmdi-soundcloud icon"></span>
+						<span class="text">A simple warning list group item</span>
+						<span class="badge badge-warning rounded-pill">36</span>
+					</li>
+					<li href="#" class="list-group-item list-group-item-info d-flex align-items-center">
+						<span class="text-info zmdi zmdi-skype icon"></span>
+						<span class="text">A simple info list group item</span>
+						<span class="badge badge-info rounded-pill">27</span>
+					</li>
+					<li href="#" class="list-group-item list-group-item-light d-flex align-items-center">
+						<span class="text-dark zmdi zmdi-reddit icon"></span>
+						<span class="text">A simple light list group item</span>
+						<span class="badge badge-dark rounded-pill">44</span>
+					</li>
+					<li href="#" class="list-group-item list-group-item-dark d-flex align-items-center">
+						<span class="text-light zmdi zmdi-rss icon"></span>
+						<span class="text">A simple dark list group item</span>
+						<span class="badge badge-light rounded-pill">52</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Custom content</h4>
+				<p class="card-text">Add nearly any HTML within, even for linked list groups like the one below, with the help of flexbox utilities.</p>
+				<div class="list-group">
+					<a href="#" class="list-group-item list-group-item-action active">
+						<div class="d-flex w-100 justify-content-between">
+							<h5 class="mb-1 mt-1 list-group-header">List group item heading</h5>
+							<small>3 days ago</small>
+						</div>
+						<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+						<small>Donec id elit non mi porta.</small>
+					</a>
+					<a href="#" class="list-group-item list-group-item-action">
+						<div class="d-flex w-100 justify-content-between">
+							<h5 class="mb-1 mt-1 list-group-header">List group item heading</h5>
+							<small class="text-muted">3 days ago</small>
+						</div>
+						<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+						<small class="text-muted">Donec id elit non mi porta.</small>
+					</a>
+					<a href="#" class="list-group-item list-group-item-action">
+						<div class="d-flex w-100 justify-content-between">
+							<h5 class="mb-1 mt-1 list-group-header">List group item heading</h5>
+							<small class="text-muted">3 days ago</small>
+						</div>
+						<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+						<small class="text-muted">Donec id elit non mi porta.</small>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

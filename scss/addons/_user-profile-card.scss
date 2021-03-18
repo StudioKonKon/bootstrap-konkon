@@ -1,0 +1,98 @@
+/* --- User Profile Card --- */
+
+$user-profile-avatar-size:			6.25rem !default;
+$user-profile-avatar-border-width:	.1875rem !default;
+
+$user-profile-header-height:		8.125rem !default;
+$user-profile-header-height-md:		18.75rem !default;
+
+$user-profile-fullname-font-size:	$font-size-base * 1.385 !default;
+$user-profile-username-color:		shift-color($gray-600, -20%) !default;
+$user-profile-username-font-size:	$font-size-base !default;
+
+$user-profile-counter-font-size:	$font-size-base * 1.385 !default;
+$user-profile-counter-title-color:	$user-profile-username-color !default;
+
+.user-card {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	border-radius: $card-border-radius;
+	background-color: $white;
+
+	&-header {
+		position: relative;
+		height: $user-profile-header-height;
+		background-color: darken($white, 5%);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		
+		@include media-breakpoint-up(md) {
+			height: $user-profile-header-height-md;
+		}
+	}
+
+	&-body {
+		position: relative;
+		padding: ($card-spacer-y / 2) $card-spacer-x;
+	}
+
+	&-avatar {
+		position: absolute;
+		bottom: -$user-profile-avatar-size / 2;
+		left: subtract(50%, ($user-profile-avatar-size / 2));
+		width: $user-profile-avatar-size;
+		height: $user-profile-avatar-size;
+		border-radius: 50%;
+		border: $user-profile-avatar-border-width solid $white;
+		background-color: $light;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		
+		@include media-breakpoint-up(md) {
+			left: $card-spacer-x;
+		}
+	}
+
+	&-info {
+		padding-top: ($user-profile-avatar-size / 2);
+		padding-bottom: $card-spacer-x;
+		text-align: center;
+		
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
+
+		.user-card-fullname {
+			display: block;
+			font-size: $user-profile-fullname-font-size;
+			font-weight: $font-weight-bold;
+		}
+
+		.user-card-username {
+			font-size: $user-profile-username-font-size;
+			color: $user-profile-username-color;
+		}
+	}
+	
+	&-description {
+		margin: 0;
+	}
+
+	&-details {
+		padding-top: $card-spacer-x;
+		text-align: center;
+		
+		.title {
+			text-transform: uppercase;
+			font-size: $font-size-sm;
+			color: $user-profile-counter-title-color;
+		}
+
+		.counter {
+			font-size: $user-profile-counter-font-size;
+		}
+	}
+}

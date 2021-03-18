@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------
+  [Progress]
+*/
+
+.progress {
+	line-height: $progress-height;
+		
+	&-lg {
+		height: $progress-height-lg;
+		
+		.progress-bar {
+			@include font-size($progress-font-size-lg);
+			line-height: $progress-height-lg;
+		}
+	}
+	
+	&-sm {
+		height: $progress-height-sm;
+		
+		.progress-bar {
+			@include font-size($progress-font-size-sm);
+			line-height: $progress-height-sm;
+		}
+	}
+}

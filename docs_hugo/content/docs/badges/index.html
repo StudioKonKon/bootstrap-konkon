@@ -1,0 +1,451 @@
++++
+title = "Badges"
+author = "Studio KonKon"
+description = "Examples for badges, Bootstrap's small count and labelling component."
+body_class = "bg-light"
++++
+
+{{< add-style >}}
+.bs-badges .badge {
+	margin: .15rem;
+}
+
+.bsd-badges .badge {
+	border: none;
+}
+{{< /add-style >}}
+
+<h3>Bootstrap Default Badges</h3>
+<div class="row g-4 pt-2 pb-4 mb-4">
+	<div class="col-md-6">
+	 <div class="card h-100">
+		<div class="card-body pb-0">
+			<p class="mb-0">When using Bootstrap’s default <code>.bg-light</code>, you’ll likely need a text color utility like <code>.text-dark</code> for proper styling. This is because background utilities do not set anything but <code>background-color</code>.</p>
+		</div>
+		<div class="card-footer py-4">
+			<div class="bs-badges bsd-badges d-flex justify-content-center flex-wrap">
+				<span class="badge bg-primary text-white">Primary</span>
+				<span class="badge bg-secondary text-white">Secondary</span>
+				<span class="badge bg-success text-white">Success</span>
+				<span class="badge bg-danger text-white">Danger</span>
+				<span class="badge bg-warning text-white">Warning</span>
+				<span class="badge bg-info text-white">Info</span>
+				<span class="badge bg-light text-dark">Light</span>
+				<span class="badge bg-dark text-white">Dark</span>
+			</div>
+		</div>
+	 </div>
+	</div>
+	<div class="col-md-6">
+	 <div class="card h-100">
+		<div class="card-body pb-0">
+			<p class="mb-0">Use the <code>.rounded-pill</code> utility class to make badges more rounded with a larger <code>border-radius</code>.</p>
+		</div>
+		<div class="card-footer py-4">
+			<div class="bs-badges bsd-badges d-flex justify-content-center flex-wrap">
+				<span class="badge bg-primary text-white rounded-pill">Primary</span>
+				<span class="badge bg-secondary text-white rounded-pill">Secondary</span>
+				<span class="badge bg-success text-white rounded-pill">Success</span>
+				<span class="badge bg-danger text-white rounded-pill">Danger</span>
+				<span class="badge bg-warning text-white rounded-pill">Warning</span>
+				<span class="badge bg-info text-white rounded-pill">Info</span>
+				<span class="badge bg-light text-dark rounded-pill">Light</span>
+				<span class="badge bg-dark text-white rounded-pill">Dark</span>
+			</div>
+		</div>
+	 </div>
+	</div>
+	<div class="col-md-6">
+	 <div class="card h-100">
+		<div class="card-body pb-0">
+			<p class="mb-0">Use <code>.border .border-*</code> with <code>.text-*</code> and <code>.bg-white</code> utility classes to give badges a outlined style.</p>
+		</div>
+		<div class="card-footer py-4">
+			<div class="bs-badges d-flex justify-content-center flex-wrap">
+				<span class="badge bg-white rounded-pill border border-primary text-primary">Primary</span>
+				<span class="badge bg-white rounded-pill border border-secondary text-secondary">Secondary</span>
+				<span class="badge bg-white rounded-pill border border-success text-success">Success</span>
+				<span class="badge bg-white rounded-pill border border-danger text-danger">Danger</span>
+				<span class="badge bg-white rounded-pill border border-warning text-warning">Warning</span>
+				<span class="badge bg-white rounded-pill border border-info text-info">Info</span>
+				<span class="badge bg-white rounded-pill border border-light text-dark">Light</span>
+				<span class="badge bg-white rounded-pill border border-dark text-dark">Dark</span>
+			</div>
+		</div>
+	 </div>
+	</div>
+	<div class="col-md-6">
+	 <div class="card h-100">
+		<div class="card-body pb-0">
+			<p class="mb-0">Use the <code>btn btn-*</code> utility class make badges act like anchors / buttons with focus and hover styles.</p>
+		</div>
+		<div class="card-footer py-4">
+			<div class="bs-badges d-flex justify-content-center flex-wrap">
+				<a href="#" class="btn btn-primary badge text-white rounded-pill">Primary</a>
+				<a href="#" class="btn btn-secondary badge rounded-pill">Secondary</a>
+				<a href="#" class="btn btn-success text-white badge rounded-pill">Success</a>
+				<a href="#" class="btn btn-danger text-white badge rounded-pill">Danger</a>
+				<a href="#" class="btn btn-warning text-white badge rounded-pill">Warning</a>
+				<a href="#" class="btn btn-info text-white badge rounded-pill">Info</a>
+				<a href="#" class="btn btn-light badge rounded-pill">Light</a>
+				<a href="#" class="btn btn-dark text-white badge rounded-pill">Dark</a>
+			</div>
+		</div>
+	 </div>
+	</div>
+</div>
+
+<h3>Themed Badges</h3>
+
+<div class="alert border-0 border-start border-5 border-warning bg-white my-4" role="alert">
+	<div class="message">
+		<p>Hover and focus styles for <code>a.badge</code> and <code>button.badge</code> were removed from Bootstrap starting <code>v5.0.0-alpha1</code>. Instead, here above, we are using <code>.btn .btn-*</code> as an alternative. Using <code>.btn-outline-*</code> with badges, however, is not supported.</p>
+		<p>Below, we have included our own custom styles for badges. You can use the <code>badge-*</code> class to properly style borders, anchors and buttons without the need of using too many utility classes or depending on <code>.btn</code> which would cause issues with some layouts.</p>
+		<p class="mb-0">Custom badges are not required and can be disabled by setting <code>$enable-custom-badges</code> to <code>false</code> in Sass, if you don't need these or are fine with Bootstraps own default styles.</p>
+	</div>
+</div>
+<div class="row g-4 mb-4">
+ <div class="col-sm-12">
+	 <div class="card">
+		<div class="card-header card-header-divider">
+			<span>Badges</span>
+		</div>
+		<div class="card-body overflow-auto">
+		  <table class="table">
+			<thead>
+			  <tr>
+				<th>Type</th>
+				<th class="text-center">Badge</th>
+				<th style="white-space:nowrap;" class="text-center">Badge Pill</th>
+				<th class="text-center">Outline</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>Default</td>
+				<td class="text-center"><span class="badge">126</span></td>
+				<td class="text-center"><span class="badge rounded-pill">26</span></td>
+				<td class="text-center"><span class="badge badge-outline">1</span></td>
+			  </tr>
+			  <tr>
+				<td>KonKon</td>
+				<td class="text-center"><span class="badge badge-konkon">214</span></td>
+				<td class="text-center"><span class="badge rounded-pill badge-konkon">14</span></td>
+				<td class="text-center"><span class="badge badge-outline-konkon">2</span></td>
+			  </tr>
+			  <tr>
+				<td>Primary</td>
+				<td class="text-center"><span class="badge badge-primary">38</span></td>
+				<td class="text-center"><span class="badge rounded-pill badge-primary">8</span></td>
+				<td class="text-center"><span class="badge badge-outline-primary">3</span></td>
+			  </tr>
+			  <tr>
+				<td>Info</td>
+				<td class="text-center"><span class="badge badge-info">38</span></td>
+				<td class="text-center"><span class="badge rounded-pill badge-info">8</span></td>
+				<td class="text-center"><span class="badge badge-outline-info">3</span></td>
+			  </tr>
+			  <tr>
+				<td>Success</td>
+				<td class="text-center"><span class="badge badge-success">42</span></td>
+				<td class="text-center"><span class="badge rounded-pill badge-success">2</span></td>
+				<td class="text-center"><span class="badge badge-outline-success">4</span></td>
+			  </tr>
+			  <tr>
+				<td>Warning</td>
+				<td class="text-center"><span class="badge badge-warning">57</span></td>
+				<td class="text-center"><span class="badge rounded-pill badge-warning">7</span></td>
+				<td class="text-center"><span class="badge badge-outline-warning">5</span></td>
+			  </tr>
+			  <tr>
+				<td>Danger</td>
+				<td class="text-center"><span class="badge badge-danger">35</span></td>
+				<td class="text-center"><span class="badge rounded-pill badge-danger">3</span></td>
+				<td class="text-center"><span class="badge badge-outline-danger">5</span></td>
+			  </tr>
+			  <tr>
+				<td>Secondary</td>
+				<td class="text-center"><span class="badge badge-secondary">35</span></td>
+				<td class="text-center"><span class="badge rounded-pill badge-secondary">3</span></td>
+				<td class="text-center"><span class="badge badge-outline-secondary">5</span></td>
+			  </tr>
+			  <tr class="bg-secondary">
+				<td class="text-white">Light</td>
+				<td class="text-center"><span class="badge badge-light">35</span></td>
+				<td class="text-center"><span class="badge rounded-pill badge-light">3</span></td>
+				<td class="text-center"><span class="badge badge-outline-light">5</span></td>
+			  </tr>
+			  <tr>
+				<td>Dark</td>
+				<td class="text-center"><span class="badge badge-dark">35</span></td>
+				<td class="text-center"><span class="badge rounded-pill badge-dark">3</span></td>
+				<td class="text-center"><span class="badge badge-outline-dark">5</span></td>
+			  </tr>
+			</tbody>
+		  </table>
+		</div>
+	  </div>
+ </div>
+ 
+ <div class="col-sm-12">
+	<div class="card">
+	   <div class="card-header card-header-divider">
+		  <span>Badges</span>
+		  <span class="card-subtitle">Bootstrap badges in headings</span>
+	   </div>
+	   <div class="card-body">
+		  <h1>Example heading
+			 <span class="badge ms-1">New</span>
+		  </h1>
+		  <h2>Example heading
+			 <span class="badge ms-1">New</span>
+		  </h2>
+		  <h3>Example heading
+			 <span class="badge ms-1">New</span>
+		  </h3>
+		  <h4>Example heading
+			 <span class="badge ms-1">New</span>
+		  </h4>
+		  <h5>Example heading
+			 <span class="badge ms-1">New</span>
+		  </h5>
+		  <h6>Example heading
+			 <span class="badge ms-1">New</span>
+		  </h6>
+	   </div>
+	</div>
+ </div>
+ 
+ <div class="col-md-4">
+	<div class="card">
+	   <div class="card-header card-header-divider">
+		  <span>Variations</span>
+		  <span class="card-subtitle">badges with links</span>
+	   </div>
+	   <div class="card-body text-center pt-3">
+		  <a href="#" class="badge btn-space">Default</a>
+		  <a href="#" class="badge badge-konkon btn-space">KonKon</a>
+		  <a href="#" class="badge badge-primary btn-space">Primary</a>
+		  <a href="#" class="badge badge-info btn-space">Info</a>
+		  <a href="#" class="badge badge-success btn-space">Success</a>
+		  <a href="#" class="badge badge-warning btn-space">Warning</a>
+		  <a href="#" class="badge badge-danger btn-space">Danger</a>
+		  <a href="#" class="badge badge-secondary btn-space">Secondary</a>
+		  <a href="#" class="badge badge-light btn-space">Light</a>
+		  <a href="#" class="badge badge-dark btn-space">Dark</a>
+	   </div>
+	</div>
+ </div>
+ 
+ <div class="col-md-4">
+	<div class="card">
+	   <div class="card-header card-header-divider">
+		  <span>Pills</span>
+		  <span class="card-subtitle">badges with links</span>
+	   </div>
+	   <div class="card-body text-center pt-3">
+		  <a href="#" class="badge rounded-pill btn-space">Default</a>
+		  <a href="#" class="badge rounded-pill badge-konkon btn-space">KonKon</a>
+		  <a href="#" class="badge rounded-pill badge-primary btn-space">Primary</a>
+		  <a href="#" class="badge rounded-pill badge-info btn-space">Info</a>
+		  <a href="#" class="badge rounded-pill badge-success btn-space">Success</a>
+		  <a href="#" class="badge rounded-pill badge-warning btn-space">Warning</a>
+		  <a href="#" class="badge rounded-pill badge-danger btn-space">Danger</a>
+		  <a href="#" class="badge rounded-pill badge-secondary btn-space">Secondary</a>
+		  <a href="#" class="badge rounded-pill badge-light btn-space">Light</a>
+		  <a href="#" class="badge rounded-pill badge-dark btn-space">Dark</a>
+	   </div>
+	</div>
+ </div>
+ 
+ <div class="col-md-4">
+	<div class="card">
+	   <div class="card-header card-header-divider">
+		  <span>Outline</span>
+		  <span class="card-subtitle">badges with links</span>
+	   </div>
+	   <div class="card-body text-center pt-3">
+		  <a href="#" class="badge badge-outline-default btn-space">Default</a>
+		  <a href="#" class="badge badge-outline-konkon btn-space">KonKon</a>
+		  <a href="#" class="badge badge-outline-primary btn-space">Primary</a>
+		  <a href="#" class="badge badge-outline-info btn-space">Info</a>
+		  <a href="#" class="badge badge-outline-success btn-space">Success</a>
+		  <a href="#" class="badge badge-outline-warning btn-space">Warning</a>
+		  <a href="#" class="badge badge-outline-danger btn-space">Danger</a>
+		  <a href="#" class="badge badge-outline-secondary btn-space">Secondary</a>
+		  <a href="#" class="badge badge-outline-light btn-space">Light</a>
+		  <a href="#" class="badge badge-outline-dark btn-space">Dark</a>
+	   </div>
+	</div>
+ </div>
+ 
+ <div class="col-md-6">
+	<div class="card">
+	   <div class="card-header card-header-divider">
+		  <span>Button Badges</span>
+	   </div>
+	   <div class="card-body pt-3">
+		  <p class="text-center">
+			 <button type="button" class="btn btn-space btn-konkon">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-primary">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-info">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-danger">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-warning">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-success">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-secondary">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-light">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-dark">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+		  </p>
+	   </div>
+	</div>
+ </div>
+ 
+ <div class="col-md-6">
+	<div class="card">
+	   <div class="card-header card-header-divider">
+		  <span>Button Outline Badges</span>
+	   </div>
+	   <div class="card-body pt-3">
+		  <p class="text-center">
+			 <button type="button" class="btn btn-space btn-outline-konkon">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-outline-primary">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-outline-info">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-outline-danger">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-outline-warning">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-outline-success">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-outline-secondary">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-outline-light">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+			 <button type="button" class="btn btn-space btn-outline-dark">Messages
+				<span class="badge ms-1">4</span>
+			 </button>
+		  </p>
+	   </div>
+	</div>
+ </div>
+ 
+ <div class="col-md-12">
+	<div class="card">
+		<div class="card-header card-header-divider">
+			<span>List Group Badges</span>
+			<span class="card-subtitle">Bootstrap badges in a list group</span>
+		</div>
+		<div class="card-body">
+		  <div class="mt-2 mb-4">
+			<div class="list-group d-flex">
+				<a class="list-group-item d-flex align-items-center list-group-item-action" href="#">
+					<span class="text-danger zmdi zmdi-fire icon"></span>
+					<span class="text">Lorem ipsum dolor</span>
+					<span class="badge rounded-pill badge-danger">217</span>
+				</a>
+				<a class="list-group-item d-flex align-items-center list-group-item-action active" href="#">
+					<span class="text-light zmdi zmdi-puzzle-piece icon"></span>
+					<span class="text">sit amet, consectetur adipiscing</span>
+					<span class="badge rounded-pill badge-light">21</span>
+				</a>
+				<a class="list-group-item d-flex align-items-center list-group-item-action" href="#">
+					<span class="text-secondary zmdi zmdi-settings icon"></span>
+					<span class="text">elit, sed do eiusmod tempor</span>
+					<span class="badge rounded-pill badge-outline-dark">7</span>
+				</a>
+				<a class="list-group-item d-flex align-items-center list-group-item-action" href="#">
+					<span class="text-success zmdi zmdi-palette icon"></span>
+					<span class="text">incididunt ut labore et dolore</span>
+					<span class="badge badge-success">128</span>
+				</a>
+				<a class="list-group-item d-flex align-items-center list-group-item-action disabled" href="#">
+					<span class="text-konkon zmdi zmdi-camera icon"></span>
+					<span class="text">magna aliqua</span>
+					<span class="badge rounded-pill badge-konkon">3</span>
+				</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+ </div>
+ 
+</div>
+ <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  <div class="col">
+	<div class="h-100 card">
+	  <div class="card-img-top img2 imgdev-bg bg-info" style="height:200px;"></div>
+	  <div class="card-body">
+		<small class="content-item-meta"><span class="text-konkon">Article</span> by Studio KonKon</small>
+		<h3 class="card-title">Card Decks — Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p class="mb-0">
+			<a href="#" class="badge badge-secondary btn-space">Language</a>
+			<a href="#" class="badge badge-secondary btn-space">Words</a>
+			<a href="#" class="badge badge-secondary btn-space">Learning</a>
+		</p>
+	  </div>
+	</div>
+  </div>
+  <div class="col">
+	<div class="h-100 card">
+	  <div class="card-img-top img1 imgdev-bg" style="height:200px;position:relative;background-color:#7952b3;">
+		<div style="position:absolute;left:0;top:auto;bottom:0;height:auto;width:100%;padding:10px;">
+			<a href="#" class="badge badge-info mr-1">Travel</a>
+			<a href="#" class="badge badge-info mr-1">Japan</a>
+			<a href="#" class="badge badge-info mr-1">Shrines</a>
+		</div>
+	  </div>
+	  <div class="card-body">
+		<small class="content-item-meta"><span class="text-konkon">Article</span> by Studio KonKon</small>
+		<h3 class="card-title">Card Decks — Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	  </div>
+	</div>
+  </div>
+  <div class="col">
+	<div class="h-100 card">
+	  <div class="card-img-top img3 imgdev-bg" style="height:200px;position:relative;">
+		<div style="position:absolute;left:0;top:auto;bottom:0;height:auto;width:100%;padding:10px;">
+			<a href="#" class="badge badge-danger mr-1">YouTube</a>
+			<a href="#" class="badge badge-danger mr-1">Videos</a>
+		</div>
+	  </div>
+	  <div class="card-body">
+		<small class="content-item-meta"><span class="text-konkon">Video</span> by Studio KonKon</small>
+		<h3 class="card-title">Card Decks — Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p class="mb-0">Composers: <a href="#" class="badge badge-secondary ms-1 btn-space">Mozart</a> <a href="#" class="badge badge-secondary btn-space">Haydn</a> <a href="#" class="badge rounded-pill badge-primary btn-space">7+</a></p>
+	  </div>
+	</div>
+  </div>
+ </div>
+ 
+ 

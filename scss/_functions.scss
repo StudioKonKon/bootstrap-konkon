@@ -1,0 +1,19 @@
+// Theme KonKon Functions
+//
+//
+
+@function force-hex($color)
+{
+    @if type-of($color) == 'color'
+	{
+        $hex: str-slice(ie-hex-str($color), 4);
+        @return unquote("\##{$hex}");
+    }
+	
+    @return $color;
+}
+
+@function font-urem($size)
+{
+    @return $size * 1rem;
+}

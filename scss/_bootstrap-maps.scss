@@ -1,0 +1,29 @@
+// Bootstrap maps
+
+$table-variants: map-merge(
+	(
+		"konkon": shift-color($konkon-color, $table-bg-scale)
+	),
+	$table-variants
+);
+
+$theme-colors: map-merge(
+  (
+    "konkon": $konkon-color,
+  ),
+  $theme-colors
+);
+
+$dropdown-colors: map-merge(
+  (
+    "konkon": $dropdown-konkon,
+  ),
+  $dropdown-colors
+);
+
+$modal-colors: map-merge(
+  (
+    "konkon": $modal-konkon,
+  ),
+  $modal-colors
+);

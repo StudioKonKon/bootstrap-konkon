@@ -1,0 +1,13 @@
+/*------------------------------------------------------------------
+  [Breadcrumbs]
+*/
+
+.breadcrumb {
+	margin-bottom: $spacer + map-get($spacers, 1);
+	line-height: $font-size-base * 1.231;
+
+	.icon {
+		font-size: $font-size-base * 1.231;
+		padding-right: map-get($spacers, 1);
+	}
+}

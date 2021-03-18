@@ -1,0 +1,7 @@
+{{ if ne hugo.Environment "production" -}}
+	{{- with .Site.Params.cdn.bootstrap -}}
+<script type="text/javascript" src="{{ .js | safeURL }}" {{ with .js_hash }}{{ printf " integrity=%q" . | safeHTMLAttr }} crossorigin="anonymous"{{ end }}></script>
+	{{- end -}}
+{{ else -}}
+<script type="text/javascript" src="/assets/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+{{- end }}

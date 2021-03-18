@@ -1,0 +1,16 @@
+// Tables
+
+@mixin table-actions-variant($state, $background) {
+	$color: shift-color($background, -70%);
+	$hover-color: shift-color($background, -80%);
+	
+	@if(contrast-ratio($background, $color) < $min-contrast-ratio) {
+		$color: shift-color($background, 70%);
+		$hover-color: shift-color($background, 80%);
+	}
+	
+	.table-#{$state} {
+		--#{$sk-variable-prefix}table-icon-color: #{$color};
+		--#{$sk-variable-prefix}table-hover-icon-color: #{$hover-color};
+	}
+}

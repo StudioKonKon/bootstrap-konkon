@@ -1,0 +1,383 @@
++++
+title = "Toasts"
+author = "Studio KonKon"
+description = "Push notifications to your visitors with a toast, a lightweight and easily customizable alert message."
+body_class = "bg-light"
+
+[[extra_js]]
+	src = "toasts.js"
+	
+[[extra_css]]
+	src = "studio-konkon-toasts"
+	type = "scss"
+	
++++
+
+<div class="row g-4 mb-4">
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<p class="lead">Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.</p>
+				<p class="card-text">Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They’re built with flexbox, so they’re easy to align and position.</p>
+				<h3>Overview</h3>
+				<ul>
+		<li>Toasts are opt-in for performance reasons, so <strong>you must initialize them yourself</strong>.</li>
+		<li><strong>Please note that you are responsible for positioning toasts.</strong></li>
+		<li>Toasts will automatically hide if you do not specify <code class="highlighter-konkon">autohide: false</code>.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+		
+<hr class="clearfix" />
+<h2 id="link-examples" class="page-head-title mb-6"><i class="icon zmdi zmdi-notifications pe-1"></i> Examples</h2>
+
+<div class="row g-4 mb-4">
+	
+	
+	<div class="col-lg-6 col-md-12">
+		<div class="card mb-4">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Basic</h4>
+				<p>To encourage extensible and predictable toasts, we recommend a header and body. Toast headers use <code class="highlighter-konkon">display: flex</code>, allowing easy alignment of content thanks to our margin and flexbox utilities.</p>
+				<p>Toasts are as flexible as you need and have very little required markup. At a minimum, we require a single element to contain your “toasted” content and strongly encourage a dismiss button.</p>
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<svg class="bd-placeholder-img rounded-circle me-2" width="15" height="15" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#4285f4"></rect></svg>
+		<strong class="me-auto">Bootstrap</strong>
+		<small>11 mins ago</small>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">Hello, world! This is a toast message.</div>
+</div>
+			</div>
+		</div>
+				
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Stacking</h4>
+				<p class="card-text">When you have multiple toasts, we default to vertically stacking them in a readable manner.</p>
+<div class="toast-container">
+	<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+		<div class="toast-header">
+			<svg class="bd-placeholder-img rounded-circle me-2" width="15" height="15" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#4285f4"></rect></svg>
+			<strong class="me-auto">Bootstrap</strong>
+			<small>just now</small>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body">See? Just like this.</div>
+	</div>
+	<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+		<div class="toast-header">
+			<svg class="bd-placeholder-img rounded-circle me-2" width="15" height="15" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#fbbc05"></rect></svg>
+			<strong class="me-auto">Bootstrap</strong>
+			<small>2 seconds ago</small>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body">Heads up, toasts will stack automatically</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+			
+	<div class="col-lg-6 col-md-12">
+		<div class="card mb-4 card-full-color card-full-dark">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Translucent</h4>
+				<p>Toasts are slightly translucent, too, so they blend over whatever they might appear over. For browsers that support the <code class="highlighter-konkon ps-1 pe-1">backdrop-filter</code> CSS property, we’ll also attempt to blur the elements under a toast.</p>
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<svg class="bd-placeholder-img rounded-circle me-2" width="15" height="15" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#4285f4"></rect></svg>
+		<strong class="me-auto">Bootstrap</strong>
+		<small>11 mins ago</small>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">Hello, world! This is a toast message.</div>
+</div>
+			</div>
+		</div>
+				
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Coloured Toasts</h4>
+				<p class="card-text">Use <code class="highlighter-konkon">.toast-{theme-colors}</code> to colour table rows or individual cells.</p>
+<div class="toast-container">
+	<div class="toast toast-success fade show" role="alert" aria-live="assertive" aria-atomic="true">
+		<div class="toast-header">
+			<div class="icon"><span class="zmdi zmdi-check"></span></div>
+			<strong class="me-auto">Success</strong>
+			<small>just now</small>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body">See? Just like this.</div>
+	</div>
+	<div class="toast toast-warning fade show" role="alert" aria-live="assertive" aria-atomic="true">
+		<div class="toast-header">
+			<div class="icon"><span class="zmdi zmdi-alert-triangle"></span></div>
+			<strong class="me-auto">Warning</strong>
+			<small>just now</small>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body">See? Just like this.</div>
+	</div>
+	<div class="toast toast-danger fade show" role="alert" aria-live="assertive" aria-atomic="true">
+		<div class="toast-header">
+			<div class="icon"><span class="zmdi zmdi-close-circle-o"></span></div>
+			<strong class="me-auto">Danger</strong>
+			<small>just now</small>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body">See? Just like this.</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+			
+</div>
+		
+<hr class="clearfix" />
+<h2 id="link-placement" class="page-head-title mb-6"><i class="icon zmdi zmdi-palette pe-1"></i> Theme Colours</h2>
+<div class="card mb-4">
+	<div class="card-body d-flex justify-content-around flex-wrap">
+<div class="toast toast-konkon fade show my-1" role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<div class="icon"><span class="zmdi zmdi-favorite"></span></div>
+		<strong class="me-auto">KonKon</strong>
+		<small>just now</small>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">See? Just like this.</div>
+</div>
+<div class="toast toast-primary fade show my-1" role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<div class="icon"><span class="zmdi zmdi-notifications"></span></div>
+		<strong class="me-auto">Primary</strong>
+		<small>just now</small>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">See? Just like this.</div>
+</div>
+<div class="toast toast-secondary fade show my-1" role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<div class="icon"><span class="zmdi zmdi-notifications"></span></div>
+		<strong class="me-auto">Secondary</strong>
+		<small>just now</small>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">See? Just like this.</div>
+</div>
+<div class="toast toast-success fade show my-1" role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<div class="icon"><span class="zmdi zmdi-check"></span></div>
+		<strong class="me-auto">Success</strong>
+		<small>just now</small>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">See? Just like this.</div>
+</div>
+<div class="toast toast-info fade show my-1" role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<div class="icon"><span class="zmdi zmdi-info-outline"></span></div>
+		<strong class="me-auto">Info</strong>
+		<small>just now</small>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">See? Just like this.</div>
+</div>
+<div class="toast toast-warning fade show my-1" role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<div class="icon"><span class="zmdi zmdi-alert-triangle"></span></div>
+		<strong class="me-auto">Warning</strong>
+		<small>just now</small>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">See? Just like this.</div>
+</div>
+<div class="toast toast-danger fade show my-1" role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<div class="icon"><span class="zmdi zmdi-close-circle-o"></span></div>
+		<strong class="me-auto">Danger</strong>
+		<small>just now</small>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">See? Just like this.</div>
+</div>
+<div class="toast toast-light fade show my-1" role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<div class="icon"><span class="zmdi zmdi-notifications"></span></div>
+		<strong class="me-auto">Light</strong>
+		<small>just now</small>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">See? Just like this.</div>
+</div>
+<div class="toast toast-dark fade show my-1" role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<div class="icon"><span class="zmdi zmdi-notifications"></span></div>
+		<strong class="me-auto">Dark</strong>
+		<small>just now</small>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">See? Just like this.</div>
+</div>
+	</div>
+</div>
+
+<hr class="clearfix" />
+<h2 id="link-placement" class="page-head-title mb-6"><i class="icon zmdi zmdi-arrows pe-1"></i> Placement</h2>
+
+<div class="row g-4 mb-4">
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<p class="m-0">Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you’re only ever going to show one toast at a time, put the positioning styles right on the <code class="highlighter-konkon">.toast</code>.</p>
+			</div>
+			<div class="card-body bg-example-dark">
+<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 7.692rem;">
+	<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 0; right: 0;">
+		<div class="toast-header">
+			<svg class="bd-placeholder-img rounded-circle me-2" width="15" height="15" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#4285f4"></rect></svg>
+			<strong class="me-auto">Bootstrap</strong>
+			<small>11 mins ago</small>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body">Hello, world! This is a toast message.</div>
+	</div>
+</div>
+			</div>
+			<div class="card-body">
+				<p class="m-0">For systems that generate more notifications, consider using a wrapping element so they can easily stack.</p>
+			</div>
+			<div class="card-body bg-example-dark">
+<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 15.385rem;">
+	<div class="toast-container">
+	
+		<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast-header">
+				<svg class="bd-placeholder-img rounded-circle me-2" width="15" height="15" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#4285f4"></rect></svg>
+				<strong class="me-auto">Bootstrap</strong>
+				<small>just now</small>
+				<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+			<div class="toast-body">See? Just like this.</div>
+		</div>
+		<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast-header">
+				<svg class="bd-placeholder-img rounded-circle me-2" width="15" height="15" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#fbbc05"></rect></svg>
+				<strong class="me-auto">Bootstrap</strong>
+				<small>2 seconds ago</small>
+				<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+			<div class="toast-body">Heads up, toasts will stack automatically</div>
+		</div>
+	
+	</div>
+</div>
+			</div>
+			<div class="card-body">
+				<p class="m-0">You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.</p>
+			</div>
+			<div class="card-body bg-example-dark">
+<div aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 15.385rem;">
+	<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+		<div class="toast-header">
+			<svg class="bd-placeholder-img rounded-circle me-2" width="15" height="15" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#4285f4"></rect></svg>
+			<strong class="me-auto">Bootstrap</strong>
+			<small>11 mins ago</small>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body">Hello, world! This is a toast message.</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+		
+<hr class="clearfix" />
+<h2 id="link-accessibility" class="page-head-title mb-6"><i class="icon zmdi zmdi-tablet pe-1"></i> Accessibility</h2>
+
+<div class="row g-4 mb-4">
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<p>Toasts are intended to be small interruptions to your visitors or users, so to help those with screen readers and similar assistive technologies, you should wrap your toasts in an <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">aria-live region</a>. Changes to live regions (such as injecting/updating a toast component) are automatically announced by screen readers without needing to move the user’s focus or otherwise interrupt the user. Additionally, include <code class="highlighter-konkon">aria-atomic="true"</code> to ensure that the entire toast is always announced as a single (atomic) unit, rather than announcing what was changed (which could lead to problems if you only update part of the toast’s content, or if displaying the same toast content at a later point in time). If the information needed is important for the process, e.g. for a list of errors in a form, then use the <a href="theme/alerts.html">alert component</a> instead of toast.</p>
+				<p>Note that the live region needs to be present in the markup <em>before</em> the toast is generated or updated. If you dynamically generate both at the same time and inject them into the page, they will generally not be announced by assistive technologies.</p>
+				<p>You also need to adapt the <code class="highlighter-konkon">role</code> and <code class="highlighter-konkon">aria-live</code> level depending on the content. If it’s an important message like an error, use <code class="highlighter-konkon">role="alert" aria-live="assertive"</code>, otherwise use <code class="highlighter-konkon">role="status" aria-live="polite"</code> attributes.</p>
+				<p class="mb-0">As the content you’re displaying changes, be sure to update the <code class="highlighter-konkon">delay</code> timeout to ensure people have enough time to read the toast.</p>
+			</div>
+			<figure class="bg-example-dark m-0"><pre class="m-0"><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"polite"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span> <span class="na">data-bs-delay=</span><span class="s">"10000"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+			<div class="card-body">
+				<p class="mb-0">When using <code class="highlighter-konkon">autohide: false</code>, you must add a close button to allow users to dismiss the toast.</p>
+			</div>
+			<div class="card-body bg-example-dark" style="border-bottom:none;">
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+	<div class="toast-header">
+		<svg class="bd-placeholder-img rounded-circle me-2" width="15" height="15" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#4285f4"></rect></svg>
+		<strong class="me-auto">Bootstrap</strong>
+		<small>11 mins ago</small>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">Hello, world! This is a toast message.</div>
+</div>
+			</div>
+			<figure class="bg-example-dark m-0 pb-1" style="border:none;"><pre class="m-0"><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"toast"</span> <span class="na">data-bs-autohide=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded me-2"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"me-auto"</span><span class="nt">&gt;</span>Bootstrap<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;small&gt;</span>11 mins ago<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-bs-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+    Hello, world! This is a toast message.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+		</div>
+	</div>
+</div>
+
+<hr class="clearfix" />
+<h2 id="link-playground" class="page-head-title mb-6">Example Test</h2>
+
+{{< add-style >}}
+.example-css .d-flex .btn {
+	width: 2.5rem;
+	height: 2.5rem;
+	margin: .25rem;
+}
+.toast-container {
+	padding: 20px;
+}
+{{< /add-style >}}
+
+<div class="card mb-4 example-css">
+	<div id="examplejs" class="card-body text-center">
+		<button class="btn btn-primary" data-action="add">Add Notification</button>
+		<hr />
+		<div class="d-flex align-items-center justify-content-center">
+			<button class="btn btn-secondary" data-action="tl"><i class="icon zmdi zmdi-arrow-right-top zmdi-hc-flip-horizontal"></i></button>
+			<button class="btn btn-secondary" data-action="tm"><i class="icon zmdi zmdi-long-arrow-up"></i></button>
+			<button class="btn btn-secondary" data-action="tr"><i class="icon zmdi zmdi-arrow-right-top"></i></button>
+		</div>
+		<div class="d-flex align-items-center justify-content-center">
+			<button class="btn btn-secondary" data-action="ml"><i class="icon zmdi zmdi-arrow-left"></i></button>
+			<button class="btn btn-secondary" data-action="mm"><i class="icon zmdi zmdi-arrows"></i></button>
+			<button class="btn btn-secondary" data-action="mr"><i class="icon zmdi zmdi-arrow-right"></i></button>
+		</div>
+		<div class="d-flex align-items-center justify-content-center">
+			<button class="btn btn-secondary" data-action="bl"><i class="icon zmdi zmdi-arrow-left-bottom"></i></button>
+			<button class="btn btn-secondary" data-action="bm"><i class="icon zmdi zmdi-long-arrow-down"></i></button>
+			<button class="btn btn-secondary" data-action="br"><i class="icon zmdi zmdi-arrow-left-bottom zmdi-hc-flip-horizontal"></i></button>
+		</div>
+	</div>
+</div>
+
+<div id="toast_wrapper" class="toast-container position-fixed top-0 end-0"></div>
+

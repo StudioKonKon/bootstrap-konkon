@@ -1,0 +1,75 @@
++++
+title = "Code"
+author = "Studio KonKon"
+description = "Use code blocks for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering."
+body_class = "bg-light"
++++
+
+<div class="row g-4 mb-4">
+		
+	<div class="col-lg-6 col-md-12">
+		<div class="card mb-4">
+			<div class="card-header card-header-divider">
+				<span>Inline code</span>
+				<span class="card-subtitle">Wrap inline snippets of code with <code class="highlighter-konkon">&lt;code&gt;</code>. Be sure to escape HTML angle brackets.</span>
+			</div>
+			<div class="card-body">
+				<p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+				<pre class="mb-0 pre-bordered"><code class="language-html pre-wrap" data-lang="html">For example, <span class="nt">&lt;code&gt;</span><span class="ni">&amp;lt;</span>section<span class="ni">&amp;gt;</span><span class="nt">&lt;/code&gt;</span> should be wrapped as inline.</code></pre>
+			</div>
+		</div>
+		
+		<div class="card mb-4">
+			<div class="card-header card-header-divider">
+				<span>Code blocks</span>
+				<span class="card-subtitle">Use <code class="highlighter-konkon">&lt;pre&gt;</code>s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. You may optionally add the <code class="highlighter-konkon">.pre-scrollable</code> class, which will set a max-height of 340px and provide a y-axis scrollbar.</span>
+			</div>
+			<div class="card-body">
+				<pre class="bg-light pre-example"><code>&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;And another line of sample text here...&lt;/p&gt;
+</code></pre>
+				<pre class="mb-0 pre-bordered"><code class="language-html pre-wrap" data-lang="html"><span class="nt">&lt;pre&gt;&lt;code&gt;</span><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Sample text here...<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span>
+<span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>And another line of sample text here...<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;</span></code></pre>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-6 col-md-12">
+		<div class="card mb-4">
+			<div class="card-header card-header-divider">
+				<span>Variables</span>
+				<span class="card-subtitle">For indicating variables use the <code class="highlighter-konkon">&lt;var&gt;</code> tag.</span>
+			</div>
+			<div class="card-body">
+				<p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
+				<pre class="mb-0 pre-bordered"><code class="language-html pre-wrap" data-lang="html"><span class="nt">&lt;var&gt;</span>y<span class="nt">&lt;/var&gt;</span> = <span class="nt">&lt;var&gt;</span>m<span class="nt">&lt;/var&gt;&lt;var&gt;</span>x<span class="nt">&lt;/var&gt;</span> + <span class="nt">&lt;var&gt;</span>b<span class="nt">&lt;/var&gt;</span></code></pre>
+			</div>
+		</div>
+		
+		<div class="card mb-4">
+			<div class="card-header card-header-divider">
+				<span>User input</span>
+				<span class="card-subtitle">Use the <code class="highlighter-konkon">&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.</span>
+			</div>
+			<div class="card-body">
+				<p>To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd></p>
+				<pre class="mb-0 pre-bordered"><code class="language-html pre-wrap" data-lang="html">To switch directories, type <span class="nt">&lt;kbd&gt;</span>cd<span class="nt">&lt;/kbd&gt;</span> followed by the name of the directory.<span class="nt">&lt;br /&gt;</span>
+To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span class="nt">&lt;/kbd&gt;</span> + <span class="nt">&lt;kbd&gt;</span>,<span class="nt">&lt;/kbd&gt;&lt;/kbd&gt;</span></code></pre>
+			</div>
+		</div>
+		
+		<div class="card mb-0">
+			<div class="card-header card-header-divider">
+				<span>Sample output</span>
+				<span class="card-subtitle">For indicating sample output from a program use the <code class="highlighter-konkon">&lt;samp&gt;</code> tag.</span>
+			</div>
+			<div class="card-body">
+				<p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+				<pre class="mb-0 pre-bordered"><code class="language-html pre-wrap" data-lang="html"><span class="nt">&lt;samp&gt;</span>This text is meant to be treated as sample output from a computer program.<span class="nt">&lt;/samp&gt;</span></code></pre>
+			</div>
+		</div>
+	</div>
+	
+</div>

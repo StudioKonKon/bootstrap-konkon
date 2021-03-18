@@ -1,0 +1,15 @@
+/*------------------------------------------------------------------
+  [Toasts]
+*/
+
+.toast-header {
+	> .icon {
+		margin-right: map-get($spacers, 2);
+	}
+	
+	.btn-close {
+		padding-right: 0;
+		margin-right: 0;
+		margin-left: $toast-icon-margin-x;
+	}
+}

@@ -1,0 +1,469 @@
+//Paths
+$img-logo-path:          "" !default;
+$img-logo-contrast-path: "" !default;
+$fonts-path:             "../fonts" !default;
+$lib-path:               "../../lib" !default;
+
+$roboto-font-path:		"#{$fonts-path}/roboto" !default;
+$roboto:				"Roboto", Arial, sans-serif !default;
+$icons-font-path:		"#{$fonts-path}/" !default;
+$icons-font:			"Material-Design-Iconic-Font" !default;
+$icons-class:			"zmdi" !default;
+
+$base-font-sans-serif: Roboto, Arial, sans-serif, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$base-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+// Color system
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$pink:		#fe669e;
+
+// General colors palette
+$dark:		$gray-800;
+$light:		$gray-100;
+
+$primary:	#4285f4;
+$secondary:	#878787;
+$danger:	#ea4335;
+$warning:	#fbbc05;
+$success:	#34a853;
+$info:		#6ba4ff;
+
+// The yiq lightness value that determines when the lightness of color
+// changes from "dark" to "light". Acceptable values are between 0 and 255.
+$color-contrast-light: $white;
+$color-contrast-dark: $black;
+$min-contrast-ratio: 1.7;
+
+
+// KonKon colors palette brand
+@import "konkon-colors";
+
+// Color variations
+//@import "contrast-colors";
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+	(
+		0: 0,
+		1: ($spacer * 0.385),
+		2: ($spacer * 0.768),
+		3: ($spacer * 1.154),
+		4: ($spacer * 1.538),
+		5: ($spacer * 1.923)
+	),
+	$spacers
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:		$white;
+$body-color:	$gray-800;
+
+$text-color:	$body-color;
+$text-muted:	$gray-500;
+
+$component-active-color:	$white;
+$component-active-bg:		shift-color($primary, -15%);
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:				$primary;
+$link-decoration:			none;
+$link-shade-percentage:		15%;
+$link-hover-decoration:		none;
+
+
+
+//== Components
+//
+//##
+
+$border-width:			1px;
+$border-widths: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px
+);
+
+$border-radius:			.25rem !default;
+$border-radius-sm:		.2rem !default;
+$border-radius-lg:		.3rem !default;
+$border-radius-pill:	50rem;
+
+$box-shadow:			0 .5rem 1rem rgba($black, .15);
+$box-shadow-sm:			0 .125rem .25rem rgba($black, .075);
+$box-shadow-lg:			0 1rem 3rem rgba($black, .175);
+$box-shadow-inset:		inset 0 1px 2px rgba($black, .075);
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: $base-font-sans-serif;
+$font-family-monospace: $base-font-monospace;
+
+$font-size-base:	1rem;
+$font-size-sm:		$font-size-base * .8462;
+$font-size-lg:		$font-size-base * 1.15;
+
+$font-weight-lighter:	100;
+$font-weight-light:		300;
+$font-weight-normal:	400;
+$font-weight-bold:		500;
+$font-weight-bolder:	700;
+
+$font-weight-base:		$font-weight-normal;
+
+$line-height-base:		1.6153;
+$line-height-lg:		1.7;
+$line-height-sm:		1.4285;
+
+$h1-font-size:			$font-size-base * 2.539;
+$h2-font-size:			$font-size-base * 2.077;
+$h3-font-size:			$font-size-base * 1.769;
+$h4-font-size:			$font-size-base * 1.308;
+$h5-font-size:			$font-size-base;
+$h6-font-size:			$font-size-base * .923;
+
+$headings-margin-bottom:	map-get($spacers, 2);
+$headings-font-family:		inherit;
+$headings-font-weight:		300;
+$headings-line-height:		1.1;
+$headings-color:			inherit;
+
+$display-line-height:		$headings-line-height;
+
+$lead-font-size:			$font-size-base * 1.385;
+$lead-font-weight:			$font-weight-light;
+
+$small-font-size:			.8462em;
+
+$blockquote-margin-y:			$spacer;
+$blockquote-font-size:			$font-size-base;
+$blockquote-footer-color:		$gray-600;
+$blockquote-footer-font-size:	$small-font-size;
+
+$mark-bg:		shift-color($konkon-color, -80%);
+$mark-padding:	0;
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom: map-get($spacers, 3);
+
+
+// Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding-y:			.5rem;
+$table-cell-padding-x:			.768rem;
+$table-cell-padding-y-sm:		.25rem;
+$table-cell-padding-x-sm:		.385rem;
+
+$table-cell-vertical-align:		middle;
+
+$table-striped-bg-factor:		.04;
+$table-active-bg-factor:		.1;
+$table-hover-bg-factor:			.06;
+
+$table-th-font-weight:        	$font-weight-bold;
+
+$table-caption-color:			$gray-600;
+$table-group-separator-color:	$gray-300;
+
+$table-bg-scale:				-10%;
+
+//== Buttons
+//
+//##
+
+$input-btn-focus-width:			0.15rem;
+
+$input-btn-padding-x:			.769rem;
+$input-btn-font-size:			$font-size-base;
+
+$input-btn-padding-x-sm:		.615rem;
+$input-btn-font-size-sm:		$font-size-sm;
+
+$input-btn-padding-x-lg:		.923rem;
+$input-btn-font-size-lg:		$font-size-lg;
+
+$input-btn-border-width:		$border-width;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-x:				$input-btn-padding-x;
+$btn-font-size:				$input-btn-font-size;
+
+$btn-padding-x-sm:			$input-btn-padding-x-sm;
+$btn-font-size-sm:			$input-btn-font-size-sm;
+
+$btn-padding-x-lg:			$input-btn-padding-x-lg;
+$btn-font-size-lg:			$input-btn-font-size-lg;
+
+$btn-border-width:			$input-btn-border-width;
+
+$btn-font-weight:			500;
+$btn-box-shadow:			0 .077rem 0 rgba(0, 0, 0, .05);
+$btn-focus-width:			$input-btn-focus-width;
+
+$btn-link-disabled-color:	$gray-600;
+
+//== Cards
+//
+//##
+
+$card-spacer-x:				map-get($spacers, 4);
+$card-spacer-y:				map-get($spacers, 4);
+$card-border-radius:		.231rem;
+$card-inner-border-radius:	calc(#{$card-border-radius} - #{$border-width});
+$card-cap-bg:				$white;
+$card-bg:					$white;
+
+$card-group-margin:			$card-spacer-y;
+
+$card-cap-padding-y:		map-get($spacers, 3);
+$card-cap-padding-x:		$card-spacer-x;
+
+$card-border-width:			$border-width;
+$card-border-color:			rgba($black, .05);
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-min-width:			14.231rem;
+$dropdown-padding-x:			0;
+$dropdown-padding-y:			map-get($spacers, 4) - $spacer;
+$dropdown-font-size:			$font-size-base;
+$dropdown-color:				$gray-900;
+$dropdown-bg:					$white;
+$dropdown-border-color:			$gray-300;
+$dropdown-border-radius:		$border-radius;
+$dropdown-inner-border-radius:	calc(#{$dropdown-border-radius} - #{$border-width});
+$dropdown-link-hover-bg:		$gray-100;
+$dropdown-link-disabled-color:	$text-muted;
+$dropdown-header-color:			$text-muted;
+$dropdown-divider-bg:			$gray-300;
+$dropdown-divider-margin-y:		map-get($spacers, 1);
+$dropdown-box-shadow:           0px 0px 6px 0px rgba(0, 0, 0, .12);
+
+$dropdown-item-padding-y:		$spacer - map-get($spacers, 1);
+$dropdown-item-padding-x:		map-get($spacers, 4);
+
+$dropdown-header-padding:		map-get($spacers, 1) map-get($spacers, 4);
+
+
+$dropdown-dark-color:				$white;
+$dropdown-dark-bg:					$gray-800;
+$dropdown-dark-border-color:		transparent;
+$dropdown-dark-divider-bg:			shift-color($dropdown-dark-bg, -40%);
+$dropdown-dark-box-shadow:          none;
+$dropdown-dark-link-color:          $white;
+$dropdown-dark-link-hover-color:    $white;
+$dropdown-dark-link-hover-bg:		darken($dropdown-dark-bg, 5%);
+$dropdown-dark-link-active-color:	$dropdown-dark-link-hover-color;
+$dropdown-dark-link-active-bg:		$dropdown-dark-link-hover-bg;
+$dropdown-dark-link-disabled-color:	shift-color($dropdown-dark-bg, -40%);
+$dropdown-dark-header-color:		shift-color($dropdown-dark-bg, -50%);
+
+
+// List group
+
+$list-group-border-radius:          $border-radius-sm;
+
+$list-group-item-padding-y:			$spacer;
+$list-group-item-padding-x:			map-get($spacers, 4);
+
+$list-group-hover-bg:               $gray-100;
+
+$list-group-disabled-color:			$text-muted;
+$list-group-disabled-bg:			#ececec;
+
+$list-group-action-color:			$gray-600;
+$list-group-action-hover-color:		$gray-600;
+
+$list-group-action-active-color:	$body-color;
+$list-group-action-active-bg:		$gray-300;
+
+
+// Breadcrumbs
+
+$breadcrumb-padding-y:			map-get($spacers, 1);
+$breadcrumb-padding-x:			map-get($spacers, 1);
+$breadcrumb-item-padding-x:		map-get($spacers, 2);
+$breadcrumb-divider-color:		$text-muted;
+$breadcrumb-active-color:		$gray-600;
+$breadcrumb-border-radius:		$border-radius-sm;
+
+
+// Badges
+
+$badge-font-size:		$small-font-size;
+$badge-font-weight:		$font-weight-bolder;
+$badge-color:			$text-color;
+$badge-padding-x:		$spacer - map-get($spacers, 1);
+$badge-padding-y:		$badge-padding-x / 2;
+$badge-border-radius:	$border-radius-sm;
+
+// Image thumbnails
+
+$thumbnail-padding:			map-get($spacers, 1);
+$thumbnail-bg:				$body-bg;
+$thumbnail-border-width:	$border-width;
+$thumbnail-border-color:	$gray-300;
+$thumbnail-border-radius:	$border-radius;
+$thumbnail-box-shadow:		$box-shadow-sm;
+
+
+// Figures
+
+$figure-caption-font-size:	$small-font-size;
+$figure-caption-color:		$gray-600;
+
+// Pagination
+
+$pagination-padding-y:		map-get($spacers, 2);
+$pagination-padding-x:		map-get($spacers, 5) - $spacer;
+$pagination-padding-y-sm:	map-get($spacers, 1);
+$pagination-padding-x-sm:	map-get($spacers, 2);
+$pagination-padding-y-lg:	map-get($spacers, 2);
+$pagination-padding-x-lg:	map-get($spacers, 4);
+
+$pagination-margin-start:	map-get($spacers, 1);
+
+
+// Progress bars
+
+$progress-height:                   1rem;
+$progress-font-size:                $font-size-base * .65;
+$progress-border-radius:            $border-radius-sm;
+$progress-box-shadow:               none;
+
+//== Code
+//
+//##
+
+$code-font-size:				$small-font-size;
+$code-color:					$konkon-color;
+
+$kbd-color:						$white;
+$kbd-bg:						$dark;
+
+$pre-color:						$gray-900;
+
+
+// Accordion
+$accordion-padding-y:					$spacer;
+$accordion-padding-x:					map-get($spacers, 1) + $spacer;
+$accordion-color:						$body-color;
+$accordion-bg:							$white;
+$accordion-border-width:				$border-width;
+$accordion-border-color:				rgba($black, .125);
+$accordion-border-radius:				$border-radius;
+
+$accordion-body-padding-y:				map-get($spacers, 4);
+$accordion-body-padding-x:				map-get($spacers, 4);
+
+$accordion-button-padding-y:			$accordion-padding-y;
+$accordion-button-padding-x:			$accordion-padding-x;
+$accordion-button-color:				$accordion-color;
+$accordion-button-bg:					$accordion-bg;
+$accordion-button-active-bg:			$accordion-button-bg;
+$accordion-button-active-color:			$primary;
+
+$accordion-button-focus-border-color:	$accordion-border-color;
+$accordion-button-focus-box-shadow:		none;
+
+$accordion-icon-width:					1.25rem;
+$accordion-icon-color:					$accordion-color;
+$accordion-icon-active-color:			$accordion-button-active-color;
+$accordion-icon-transition:				transform .2s ease-in-out;
+$accordion-icon-transform:				rotate(180deg);
+
+// Navs
+
+$nav-link-font-size:					$font-size-base;
+$nav-link-disabled-color:				$text-muted;
+$nav-tabs-border-width:                 2px;
+$nav-tabs-border-radius:				$border-radius-sm;
+
+$nav-pills-border-radius:				$border-radius-sm;
+
+
+// Toasts
+
+$toast-max-width:		360px;
+
+$toast-padding-x:		1.077rem;
+$toast-padding-y:		.5rem;
+$toast-font-size:		.923rem;
+$toast-color:			$text-color;
+$toast-border-radius:	$border-radius;
+$toast-box-shadow:		0 .25rem .75rem rgba($black, .1);
+
+// Popovers
+
+$popover-font-size:			$font-size-base;
+$popover-border-radius:		$border-radius-lg;
+$popover-box-shadow:		0 .385rem .769rem rgba($black, .2);
+
+$popover-header-padding-y:	.6154rem;
+$popover-header-padding-x:	1.077rem;
+
+$popover-body-padding-y:	.6154rem;
+$popover-body-padding-x:	1.077rem;
+
+
+// Modals
+
+$modal-inner-padding:				map-get($spacers, 4);
+
+$modal-content-bg:					$white;
+
+$modal-header-border-width:			0;
+$modal-footer-border-width:			$modal-header-border-width;
+
+$modal-md:                          600px;
+
+
+// Forms
+
+$form-check-input-width:	1.4em;
+$form-check-margin-bottom:	map-get($spacers, 2);
+
+$form-switch-width:			2.4em;

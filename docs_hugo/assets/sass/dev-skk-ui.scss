@@ -1,0 +1,212 @@
+/*!
+ * Studio KonKon v1.0.0-beta1 (https://studiokonkon.com/)
+ * Copyright 2018-2020 Studio KonKon
+ */
+
+@import "../../../scss/bootstrap-required";
+
+.tab-chat .content:before,
+.tab-todo .todo-content:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 40%;
+	opacity: .28;
+}
+
+.imgdev-bg {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.imgdev-bg-overlay:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+.img1 {
+	background-image: url("../../images/svg-backgrounds/transparent-cloudy.svg");
+	background-color: #4285f4;
+}
+
+.img2 {
+	background-image: url("../../images/svg-backgrounds/transparent-wave.svg");
+	background-color: #34a853;
+}
+
+.img3 {
+	background-image: url("../../images/svg-backgrounds/transparent-luminary.svg");
+	background-color: #343b42;
+}
+
+.img4 {
+	background-image: url("../../images/svg-backgrounds/transparent-sprinkle.svg");
+	background-color: #ea4335;
+}
+
+.img5 {
+	background-image: url("../../images/svg-backgrounds/transparent-snow.svg");
+	background-color: #fe669e;
+}
+
+.img6 {
+	background-image: url("../../images/svg-backgrounds/transparent-snow.svg");
+	background-color: #6ba4ff;
+}
+
+.img7 {
+	background-image: url("../../images/svg-backgrounds/transparent-icons.svg");
+	background-color: #4285f4;
+}
+
+.img8 {
+	background-image: url("../../images/svg-backgrounds/transparent-icons.svg");
+	background-color: #7952b3;
+}
+
+.img9 {
+	background-image: url("../../images/svg-backgrounds/transparent-icons.svg");
+	background-color: #fe669e;
+}
+
+.img10 {
+	background-image: url("../../images/svg-backgrounds/transparent-virus.svg");
+	background-color: #ea4335;
+}
+
+.img11 {
+	background-image: url("../../images/svg-backgrounds/transparent-line.svg");
+	background-color: #34a853;
+}
+
+.img12 {
+	background-image: url("../../images/svg-backgrounds/transparent-cloudy.svg");
+	background-color: #6ba4ff;
+}
+
+
+/* Docs Code */
+.pre-bordered {
+	border: solid 1px #cccccc;
+	background-color: #fafafa;
+	border-radius: 0.1538rem;
+}
+
+.pre-example {
+	padding: 0;
+	margin: 0 0 1.1538rem;
+}
+
+.bg-example-dark {
+	border-top: solid 1px #cccccc;
+	background-color: #fafafa;
+}
+
+.bg-example-dark:not(:last-child) {
+	border-bottom: solid 1px #cccccc;
+	border-radius: 0;
+}
+
+.language-html .pln { color: #777777; } /* plain text */
+.language-html .str { color: #808080; background-color: #f2f4ff; } /* string content */
+.language-html .kwd { color: #8000ff; background-color: #f2f4ff; } /* a keyword */
+.language-html .com { color: #008000; } /* a comment */
+.language-html .typ { color: #008080; } /* a type name */
+.language-html .lit { color: #0080ff; } /* a literal value */
+.language-html .pun { color: #949494; } /* punctuation */
+.language-html .opn { color: #949494; } /* lisp open bracket */
+.language-html .clo { color: #949494; } /* lisp close bracket */
+.language-html .nt { color: #4285f4; } /* tags */
+.language-html .na { color: hsl(5, 81%, 66%); } /* a markup attribute name */
+.language-html .s { color: #8000ff; } /* a markup attribute value */
+.language-html .dec { color: #dd1144; } /* a declaration */
+.language-html .var { color: #dd1144; } /* a variable name */
+.language-html .fun { color: #445588; font-weight: bold; } /* a function name */
+.language-html .ni { color: #a6b0b9; } /* entity */
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.bd-placeholder-img-lg {
+    font-size: 3.5rem;
+}
+
+.table-dev-example {
+	tbody {
+		tr {
+			td {
+				&.user-avatar {
+					img {
+						height: 2.308rem;
+						width: 2.308rem;
+						margin-right: map-get($spacers, 2);
+
+						@include media_size("phone") {
+							display: none;
+						}
+					}
+				}
+
+				&.cell-detail {
+					span {
+						display: block;
+					}
+
+					.cell-detail-description {
+						display: block;
+						font-size: $font-size-sm;
+						color: darken($white, 40%);
+					}
+				}
+
+				&.user-info {
+					img {
+						float: left;
+					}
+
+					span {
+						padding-left: map-get($spacers, 7);
+
+						@include media_size("phone") {
+							padding-left: 0;
+						}
+					}
+				}
+
+				&.milestone {
+					min-width: 100px;
+					
+					span {
+						display: block;
+						font-size: $font-size-sm;
+						color: darken($white, 40%);
+						margin-bottom: .462rem;
+
+						&.completed {
+							float: right;
+						}
+					}
+				}
+			}
+		}
+	}
+}

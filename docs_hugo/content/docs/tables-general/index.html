@@ -1,0 +1,820 @@
++++
+title = "Tables"
+author = "Studio KonKon"
+description = "Examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap."
+body_class = "bg-light"
+
+[[extra_js]]
+	src = "tables.js"
+	
++++
+
+<div class="row g-4 mb-4">
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Basic Tables</h4>
+				<p>Using the most basic table markup, here’s how <code class="highlighter-konkon">.table</code> look in Bootstrap. <strong>All table styles are inherited in Bootstrap</strong>, meaning any nested tables will be styled in the same manner as the parent.</p>
+				<div class="table-responsive">
+					<table class="table mb-0">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Track</th>
+								<th>Length</th>
+								<th class="actions">Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Japanese Suite (1915) Op.33</td>
+								<td>10:21</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Cotswolds Symphony (1900) Op.8</td>
+								<td>23:17</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Sonata B flat major, K 358</td>
+								<td>21:07</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Theme of Paganini, Op. 43</td>
+								<td>23:38</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Cello Sonata in G minor</td>
+								<td>34:27</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Dark Tables</h4>
+				<p>You can also invert the colors—with light text on dark backgrounds—with <code class="highlighter-konkon">.table-dark</code>.</p>
+				<div class="table-responsive">
+					<table class="table table-dark mb-0">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Track</th>
+								<th>Length</th>
+								<th class="actions">Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Japanese Suite (1915) Op.33</td>
+								<td>10:21</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Cotswolds Symphony (1900) Op.8</td>
+								<td>23:17</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Sonata B flat major, K 358</td>
+								<td>21:07</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Theme of Paganini, Op. 43</td>
+								<td>23:38</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Cello Sonata in G minor</td>
+								<td>34:27</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row g-4 mb-4">
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Table head options</h4>
+				<p class="card-text">Similar to tables and dark tables, use the modifier classes <code class="highlighter-konkon">.table-light</code> or <code class="highlighter-konkon">.table-dark</code> to make <code class="highlighter-konkon">&lt;thead&gt;</code>s appear light or dark.</p>
+				<div class="table-responsive">
+					<table class="table mb-0">
+						<thead class="table-light">
+							<tr>
+								<th>#</th>
+								<th>Track</th>
+								<th>Length</th>
+								<th class="actions">Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Japanese Suite (1915) Op.33</td>
+								<td>10:21</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Cotswolds Symphony (1900) Op.8</td>
+								<td>23:17</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Sonata B flat major, K 358</td>
+								<td>21:07</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Theme of Paganini, Op. 43</td>
+								<td>23:38</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Cello Sonata in G minor</td>
+								<td>34:27</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Striped Rows</h4>
+				<p class="card-text">Use <code class="highlighter-konkon">.table-striped</code> to add zebra-striping to any table row within the <code class="highlighter-konkon">&lt;tbody&gt;</code>.</p>
+				<div class="table-responsive">
+					<table class="table table-striped mb-0">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Track</th>
+								<th>Length</th>
+								<th class="actions">Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Japanese Suite (1915) Op.33</td>
+								<td>10:21</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Cotswolds Symphony (1900) Op.8</td>
+								<td>23:17</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Sonata B flat major, K 358</td>
+								<td>21:07</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Theme of Paganini, Op. 43</td>
+								<td>23:38</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Cello Sonata in G minor</td>
+								<td>34:27</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row g-4 mb-4">
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Bordered Table</h4>
+				<p class="card-text">Add <code class="highlighter-konkon">.table-bordered</code> for borders on all sides of the table and cells.</p>
+				<div class="table-responsive">
+					<table class="table table-bordered mb-0">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Track</th>
+								<th>Length</th>
+								<th class="actions">Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Japanese Suite (1915) Op.33</td>
+								<td>10:21</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Cotswolds Symphony (1900) Op.8</td>
+								<td>23:17</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Sonata B flat major, K 358</td>
+								<td>21:07</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Theme of Paganini, Op. 43</td>
+								<td>23:38</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Cello Sonata in G minor</td>
+								<td>34:27</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Borderless Table</h4>
+				<p class="card-text">Add <code class="highlighter-konkon">.table-borderless</code> for a table without borders.</p>
+				<div class="table-responsive">
+					<table class="table table-borderless mb-0">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Track</th>
+								<th>Length</th>
+								<th class="actions">Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Japanese Suite (1915) Op.33</td>
+								<td>10:21</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Cotswolds Symphony (1900) Op.8</td>
+								<td>23:17</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Sonata B flat major, K 358</td>
+								<td>21:07</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Theme of Paganini, Op. 43</td>
+								<td>23:38</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Cello Sonata in G minor</td>
+								<td>34:27</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<div class="row g-4 mb-4">
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Hover Effect</h4>
+				<p class="card-text">Add <code class="highlighter-konkon">.table-hover</code> to enable a hover state on table rows within a <code class="highlighter-konkon">&lt;tbody&gt;</code>.</p>
+				<div class="table-responsive">
+					<table class="table table-hover mb-0">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Track</th>
+								<th>Length</th>
+								<th class="actions">Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Japanese Suite (1915) Op.33</td>
+								<td>10:21</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Cotswolds Symphony (1900) Op.8</td>
+								<td>23:17</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Sonata B flat major, K 358</td>
+								<td>21:07</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr class="table-warning">
+								<td>4</td>
+								<td>Theme of Paganini, Op. 43</td>
+								<td>23:38</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Cello Sonata in G minor</td>
+								<td>34:27</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Contextual Classes</h4>
+				<p class="card-text">Use contextual classes to color table rows or individual cells.</p>
+				<div class="table-responsive">
+					<table class="table mb-0">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Track</th>
+								<th>Length</th>
+								<th class="actions">Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Japanese Suite (1915) Op.33</td>
+								<td>10:21</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr class="table-konkon">
+								<td>2</td>
+								<td>Cotswolds Symphony (1900) Op.8</td>
+								<td>23:17</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Sonata B flat major, K 358</td>
+								<td>21:07</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr class="table-primary">
+								<td>4</td>
+								<td>Theme of Paganini, Op. 43</td>
+								<td>23:38</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr class="table-dark">
+								<td>5</td>
+								<td>Cello Sonata in G minor</td>
+								<td>34:27</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="row g-4 mb-4">
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title mb-1">Condensed Tables</h4>
+				<p class="card-text">Add <code class="highlighter-konkon">.table-sm</code> to make tables more compact by cutting cell padding in half.</p>
+				<div class="table-responsive">
+					<table class="table table-sm table-bordered mb-0">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Track</th>
+								<th>Length</th>
+								<th class="actions">Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Japanese Suite (1915) Op.33</td>
+								<td>10:21</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Cotswolds Symphony (1900) Op.8</td>
+								<td>23:17</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Sonata B flat major, K 358</td>
+								<td>21:07</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Theme of Paganini, Op. 43</td>
+								<td>23:38</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Cello Sonata in G minor</td>
+								<td>34:27</td>
+								<td class="actions">
+									<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body pb-2">
+				<h4 class="card-title mb-1">Full Card Width</h4>
+				<p class="card-text">Place tables as a child of <code>.card</code> to make tables fill a cards full width.</p>
+			</div>
+			<div class="table-responsive">
+				<table class="table table-borderless mb-1">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Track</th>
+							<th>Length</th>
+							<th class="actions">Edit</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Japanese Suite (1915) Op.33</td>
+							<td>10:21</td>
+							<td class="actions">
+								<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Cotswolds Symphony (1900) Op.8</td>
+							<td>23:17</td>
+							<td class="actions">
+								<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Sonata B flat major, K 358</td>
+							<td>21:07</td>
+							<td class="actions">
+								<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Theme of Paganini, Op. 43</td>
+							<td>23:38</td>
+							<td class="actions">
+								<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Cello Sonata in G minor</td>
+							<td>34:27</td>
+							<td class="actions">
+								<a class="icon" href="#"><i class="zmdi zmdi-delete"></i></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<div class="row g-4 mb-4">
+	<div class="col-sm-12">
+	  <div class="card">
+		<div class="card-body pb-2">
+			<h4 class="card-title mb-1">Responsive Data Tables</h4>
+			<p class="card-text">Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a <code class="highlighter-konkon">.table</code> with <code class="highlighter-konkon">.table-responsive</code>. Or, pick a maximum breakpoint with which to have a responsive table up to by using <code class="highlighter-konkon">.table-responsive{-sm|-md|-lg|-xl}</code>.</p>
+			<p class="card-text">Use <code class="highlighter-konkon">.be-table-responsive</code> instead of <code class="highlighter-konkon">.table-responsive</code> as you may get problems with dropdowns.</p>
+		</div>
+			<div class="text-nowrap table-responsive table-dev-example">
+				<table class="table table-striped table-hover mb-0">
+					<thead>
+						<tr>
+							<th class="form-control-sm text-center" style="width:4%;">
+								<input class="form-check-input rounded-circle" type="checkbox" id="check1" />
+								<label class="form-check-label" for="check1"></label>
+							</th>
+							<th style="width:1%;"></th>
+							<th style="width:20%;">User</th>
+							<th style="width:17%;">Domain</th>
+							<th style="width:15%;">Storage</th>
+							<th style="width:10%;">Status</th>
+							<th style="width:10%;">Renewal</th>
+							<th style="width:10%;"></th>
+						</tr>
+					</thead>
+					<tbody>
+<tr>
+<td class="form-control-sm text-center">
+	<input class="form-check-input rounded-circle" type="checkbox" id="check2" />
+	<label class="form-check-label" for="check2"></label>
+</td>
+<td class="user-avatar">
+	<img class="rounded-circle" src="/images/avatar.png" alt="Avatar" />
+</td>
+<td class="cell-detail user-info">
+	<span>Herman Beck</span>
+	<span class="cell-detail-description">Personal Account</span>
+</td>
+<td class="cell-detail">
+	<span>example.com</span>
+	<span class="cell-detail-description">Owner</span>
+</td>			  
+<td class="milestone">
+	<span class="completed">42GB / 100GB</span>
+	<span class="label">Used</span>
+	<div class="progress progress-sm">
+		<div class="progress-bar bg-primary" style="width:42%;"></div>
+	</div>
+</td>
+<td class="cell-detail">
+	<span class="badge badge-success">Active</span>
+</td>
+<td class="cell-detail">
+	<span>May 15, 2019</span>
+	<span class="cell-detail-description">£54.99 (Incl. VAT)</span>
+</td>
+<td class="text-end">
+	<div class="btn-group">
+		<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+			<span>Manage</span>
+			<span class="icon-dropdown zmdi zmdi-chevron-down"></span>
+		</button>
+		<div class="dropdown-menu" role="menu">
+			<a class="dropdown-item" href="#">Edit Account</a>
+			<a class="dropdown-item" href="#">Renew Plan</a>
+		</div>
+	</div>
+</td>
+</tr>
+<tr>
+<td class="form-control-sm text-center">
+	<input class="form-check-input rounded-circle" type="checkbox" id="check3" />
+	<label class="form-check-label" for="check3"></label>
+</td>
+<td class="user-avatar">
+	<img class="rounded-circle" src="/images/avatar.png" alt="Avatar" />
+</td>
+<td class="cell-detail user-info">
+	<span>Ashton Cox</span>
+	<span class="cell-detail-description">Personal Account</span>
+</td>
+<td class="cell-detail">
+	<span>cdn.example.com</span>
+	<span class="cell-detail-description">User</span>
+</td>			  
+<td class="milestone">
+	<span class="completed">0GB / 100GB</span>
+	<span class="label">Used</span>
+	<div class="progress progress-sm">
+		<div class="progress-bar bg-primary" style="width:0%;"></div>
+	</div>
+</td>
+<td class="cell-detail">
+	<span class="badge badge-warning">Inactive</span>
+</td>
+<td class="cell-detail">
+	<span>-</span>
+	<span class="cell-detail-description">£0 (Incl. VAT)</span>
+</td>
+<td class="text-end">
+	<div class="btn-group">
+		<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+			<span>Manage</span>
+			<span class="icon-dropdown zmdi zmdi-chevron-down"></span>
+		</button>
+		<div class="dropdown-menu" role="menu">
+			<a class="dropdown-item" href="#">Edit Account</a>
+			<a class="dropdown-item disabled" href="#">Renew Plan</a>
+		</div>
+	</div>
+</td>
+</tr>
+<tr>
+<td class="form-control-sm text-center">
+	<input class="form-check-input rounded-circle" type="checkbox" id="check4" />
+	<label class="form-check-label" for="check4"></label>
+</td>
+<td class="user-avatar">
+	<img class="rounded-circle" src="/images/avatar.png" alt="Avatar" />
+</td>
+<td class="cell-detail user-info">
+	<span>Cara Stevens</span>
+	<span class="cell-detail-description">Personal Account</span>
+</td>
+<td class="cell-detail">
+	<span>wordpress.example.com</span>
+	<span class="cell-detail-description">User</span>
+</td>			  
+<td class="milestone">
+	<span class="completed">84GB / 100GB</span>
+	<span class="label">Used</span>
+	<div class="progress progress-sm">
+		<div class="progress-bar bg-danger" style="width:84%;"></div>
+	</div>
+</td>
+<td class="cell-detail">
+	<span class="badge badge-success">Active</span>
+</td>
+<td class="cell-detail">
+	<span>June 28, 2019</span>
+	<span class="cell-detail-description">£54.99 (Incl. VAT)</span>
+</td>
+<td class="text-end">
+	<div class="btn-group">
+		<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+			<span>Manage</span>
+			<span class="icon-dropdown zmdi zmdi-chevron-down"></span>
+		</button>
+		<div class="dropdown-menu" role="menu">
+			<a class="dropdown-item" href="#">Edit Account</a>
+			<a class="dropdown-item" href="#">Renew Plan</a>
+		</div>
+	</div>
+</td>
+</tr>
+					</tbody>
+				</table>
+			</div>
+	  </div>
+	</div>
+</div>

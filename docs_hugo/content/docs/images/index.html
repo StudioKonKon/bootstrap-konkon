@@ -1,0 +1,99 @@
++++
+title = "Images"
+author = "Studio KonKon"
+description = "examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes."
+body_class = "bg-light"
+	
+[[extra_css]]
+	src = "studio-konkon-alerts"
+	type = "scss"
+	
++++
+
+{{< add-style >}}
+.img-list > img
+{
+	max-width: 128px;
+	height: auto;
+}
+{{< /add-style >}}
+
+<div class="row g-4 mb-4">
+
+	<div class="col-lg-6 col-md-12">
+		<div class="card mb-4">
+			<div class="card-body">
+				<h4 class="card-title">Responsive Images</h4>
+				<p class="card-text">Images in Bootstrap are made responsive with <code class="highlighter-konkon">.img-fluid</code>.</p>
+				<p class="card-text"><code class="highlighter-konkon">max-width: 100%;</code> and <code class="highlighter-konkon">height: auto;</code> are applied to the image so that it scales with the parent element.</p>
+				<img src="/images/529x161.png" class="img-fluid" alt="Responsive image">
+			</div>
+		</div>
+		<div class="alert alert-icon-full bg-white alert-warning alert-dismissible" role="alert">
+			<div class="icon">
+				<span class="zmdi zmdi-alert-triangle"></span>
+			</div>
+			<div class="message">
+				<h4 class="mt-0 text-warning">SVG images and IE 10</h4>
+				<hr />
+				<p class="mb-0">In Internet Explorer 10, SVG images with <code class="highlighter-konkon">.img-fluid</code> are disproportionately sized. To fix this, add <code class="highlighter-konkon">width: 100% \9;</code> where necessary. This fix improperly sizes other image formats, so Bootstrap doesn’t apply it automatically.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-6 col-md-12">
+		<div class="card mb-4">
+			<div class="card-body">
+				<h4 class="card-title">Images Types</h4>
+				<p class="card-text">There are a few different images classes: <code class="highlighter-konkon">.rounded</code>, <code class="highlighter-konkon">.rounded-circle</code> and <code class="highlighter-konkon">.img-thumbnail</code></p>
+				<div class="text-center img-list">
+					<img class="rounded me-2 mb-2" src="/images/avatar-256.png" alt="Placeholder">
+					<img class="rounded-circle me-2 mb-2" src="/images/avatar-256.png" alt="Placeholder">
+					<img class="img-thumbnail" src="/images/avatar-256.png" alt="Placeholder">
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-body img-list">
+				<h4 class="card-title">Aligning Images</h4>
+				<p class="card-text">Align images with the <b>helper float classes</b> or <b>text alignment classes</b>. <code class="highlighter-konkon">block</code>-level images can be centered using <b>the <code class="highlighter-konkon">.mx-auto</code> margin utility class</b>.</p>
+				<img class="rounded-circle mx-auto d-block" src="/images/avatar-256.png" alt="Placeholder">
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-body img-list">
+				<h4 class="card-title">Aligning Images (Left and Right)</h4>
+				<img class="rounded-circle float-start" src="/images/avatar-256.png" alt="Placeholder">
+				<img class="rounded-circle float-end" src="/images/avatar-256.png" alt="Placeholder">
+				<div class="clearfix pb-3"></div>
+				<p class="card-text">You may also consider using <code class="highlighter-konkon">&lt;div class="clearfix"&gt;&lt;/div&gt;</code> to prevent parent elements collapsing leaving images hanging over.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body img-list">
+				<h4 class="card-title">Figures</h4>
+				<p class="card-text">Use the included <code class="highlighter-konkon">.figure</code> , <code class="highlighter-konkon">.figure-img</code> and <code class="highlighter-konkon">.figure-caption</code> classes to provide some baseline styles for the HTML5 <code class="highlighter-konkon">&lt;figure&gt;</code> and <code class="highlighter-konkon">&lt;figcaption&gt;</code> elements. Images in figures have no explicit size, so be sure to add the <code class="highlighter-konkon">.img-fluid</code> class to your <code class="highlighter-konkon">&lt;img&gt;</code> to make it responsive.</p>
+				<p class="card-text">Aligning the figure’s caption is easy with <code class="highlighter-konkon">.text-end</code> and <code class="highlighter-konkon">.text-start</code> or <code class="highlighter-konkon">.text-center</code></p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<figure class="figure mx-auto d-block mb-0" style="max-width:384px;">
+					<img src="/images/gallery/img2.jpg" class="figure-img img-fluid rounded" alt="Figures">
+					<figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+
+
+</div>

@@ -1,0 +1,271 @@
+
+// Theme Variable Prefix
+$sk-variable-prefix: sk- !default;
+
+// Options
+$enable-font: 					true !default;
+$enable-custom-badges: 			true !default;
+
+$enable-card-border-colors:		true !default;
+$enable-card-full-colors:		true !default;
+$enable-dropdown-colors:		false !default;
+$enable-modal-header-colors:	true !default;
+$enable-modal-full-colors:		true !default;
+$enable-btn-social-colors:		true !default;
+$enable-toast-colors:			true !default;
+
+// Maps
+$dropdown-colors: map-remove($theme-colors, "light", "secondary", "dark") !default;
+
+
+// Maps to remove from this code
+$skk-colors:		() !default;
+$modal-colors:		() !default;
+$social-colors:		() !default;
+
+$body-bg-light:		#eef0f2;
+
+// Theme Colours
+$skk-primary:		#5f99f5 !default;
+$skk-secondary:		#d9d9d9 !default;
+$skk-success:		#37b358 !default;
+$skk-info:			#6ba4ff !default;
+$skk-warning:		#f6c163 !default;
+$skk-danger:		#eb6357 !default;
+$skk-light:			$light !default;
+$skk-dark:			#3f4850 !default;
+
+$skk-colors: map-merge(
+	(
+		"primary":		$skk-primary,
+		"secondary":	$skk-secondary,
+		"success":		$skk-success,
+		"info":			$skk-info,
+		"warning":		$skk-warning,
+		"danger":		$skk-danger,
+		"light":		$skk-light,
+		"dark":			$skk-dark
+	),
+	$skk-colors
+);
+
+
+// Color Scale
+$alert-icon-scale:			-15%;
+$alert-icon-bg-scale:		-80%;
+
+$card-bg-scale:				-80%;
+$card-border-scale:			-70%;
+$card-color-scale:			40%;
+
+$toast-bg-scale:			-60%;
+$toast-border-scale:		-50%;
+$toast-color-scale:			40%;
+
+$dropdown-bg-scale:			-20%;
+$dropdown-bg-hover-scale:	-5%;
+
+
+//Table
+$table-icon-color:				darken($white, 37%);
+$table-hover-icon-color:		darken($white, 50%);
+
+$table-header-border-width:		map-get($border-widths, 2);
+$table-responsive-white-space:	nowrap;
+$table-actions-font-size: 		$font-size-base + .385;
+
+
+//Typography
+$lead-line-height:		$font-size-base * 2;
+
+$paragraph-font-size:	$font-size-base;
+$paragraph-line-height:	$paragraph-font-size * $line-height-sm;
+$paragraph-margin:		map-get($spacers, 3);
+
+$list-line-height:		map-get($spacers, 4);
+
+$display-heading-size:				3.077rem;
+$display-heading-margin:			map-get($spacers, 4) 0 map-get($spacers, 3);
+$display-description-size:			1.385rem;
+$display-description-line-height:	$display-description-size * $line-height-sm;
+$display-description-margin:		0 0 map-get($spacers, 8);
+
+
+// Buttons
+
+$btn-light-color:	$text-color;
+$btn-light-bg:		#fff;
+$btn-light-border:	#dbdbdb;
+
+$btn-min-width: 2.385rem;
+
+$btn-icon-size:			1.308em;
+$btn-icon-margin-left:	.308rem;
+$btn-icon-margin-right:	.077rem;
+
+$btn-group-padding-x: .538rem;
+
+// Panels & Widget Panels
+$card-body-padding:         		map-get($spacers, 4);
+$card-default-heading-bg:			transparent !default;
+
+$card-heading-font-size:			1.385rem;
+$card-heading-font-weight:			$font-weight-light;
+
+$card-heading-icon-color:			$gray-500;
+$card-heading-icon-hover:			$gray-600;
+$card-heading-icon-size:			1.538rem;
+$card-heading-icon-separation:		map-get($spacers, 1) / 2;
+$card-heading-icon-line-height:		map-get($spacers, 5);
+
+$card-footer-padding-x:	            map-get($spacers, 4);
+$card-footer-padding-top:  		    map-get($spacers, 4);
+$card-footer-padding-bottom:   	    $spacer * 1.308;
+$card-footer-padding:               $card-footer-padding-top $card-footer-padding-x $card-footer-padding-bottom;
+
+$card-title-margin-top:             map-get($spacers, 4);
+$card-title-margin-bottom:          map-get($spacers, 4) - $spacer;
+$card-notitle-margin-top:           map-get($spacers, 3);
+
+$card-metadata-font-size:           $font-size-sm;
+
+$card-margin-bottom:				map-get($spacers, 5);
+$card-box-shadow:					0px .077rem .154rem rgba(0, 0, 0, .1);
+
+$widget-heading-font-size:			$h4-font-size;
+$widget-heading-font-weight:		$font-weight-light;
+$widget-horizontal-padding:			map-get($spacers, 4);
+$widget-horizontal-padding-small:	map-get($spacers, 3);
+$widget-margin-bottom:				$card-margin-bottom;
+$widget-box-shadow:					$card-box-shadow;
+
+
+// Progress bars
+$progress-height-sm:		.308rem;
+$progress-font-size-sm:		0;
+$progress-height-lg:		1.692rem;
+$progress-font-size-lg:		$font-size-sm;
+
+
+// Accordion
+$accordion-margin-y:		map-get($spacers, 1);
+$accordion-icon-white:		url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$white}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+
+
+// Navs
+$nav-skk-link-py:			.846rem;
+$nav-skk-link-px:			1.538rem;
+$nav-skk-content-py:		map-get($spacers, 4);
+$nav-skk-content-px:		$nav-skk-content-py;
+$nav-link-disabled-opacity: .8;
+
+$nav-skk-link-vpy:			$nav-skk-link-py;
+$nav-skk-link-vpx:			$nav-skk-link-py;
+
+
+// Toast
+$toast-icon-margin-x:		map-get($spacers, 2);
+
+// Modal
+
+$modal-icon-size:	$font-size-base * 3.846;
+
+// Alert
+$alert-icon-size:		$font-size-base * 1.846;
+$alert-icon-min-width:	2em;
+
+$alert-bordered-color:	rgba(0, 0, 0, .1);
+$alert-bordered:		$border-width solid $alert-bordered-color;
+
+// Dropdowns
+$dropdown-icon-size:				$dropdown-font-size * 1.231;
+$dropdown-btn-padding-x:			1.538rem;
+$dropdown-theme-divider-opacity:	.15;
+$dropdown-theme-disabled-opacity:	.5;
+
+// modal colours
+$modal-primary:		$skk-primary !default;
+$modal-success:		$skk-success !default;
+$modal-info:		$skk-info !default;
+$modal-warning:		$skk-warning !default;
+$modal-danger:		$skk-danger !default;
+$modal-dark:		$skk-dark !default;
+
+$modal-colors: map-merge(
+	(
+		"primary":	$modal-primary,
+		"success":	$modal-success,
+		"info":		$modal-info,
+		"warning":	$modal-warning,
+		"danger":	$modal-danger,
+		"dark":		$modal-dark
+	),
+	$modal-colors
+);
+
+//Social colors
+$facebook:		#5d82d1 !default;
+$twitter:		#50bff5 !default;
+$google-plus:	#eb5e4c !default;
+$dribbble:		#f7659c !default;
+$youtube:		#ef4e41 !default;
+$flickr:		#0063dc !default;
+$linkedin:		#238cc8 !default;
+$pinterest:		#e13138 !default;
+$github:		#24292e !default;
+$tumblr:		#426d9b !default;
+$evernote:		#2DBE60 !default;
+$dropbox:		#007EE5 !default;
+$codepen:		#333333 !default;
+
+$social-colors: map-merge(
+  (
+    "facebook":    $facebook,
+    "twitter":     $twitter,
+    "google-plus": $google-plus,
+    "dribbble":    $dribbble,
+    "youtube":     $youtube,
+    "flickr":      $flickr,
+    "linkedin":    $linkedin,
+    "pinterest":   $pinterest,
+    "github":      $github,
+    "tumblr":      $tumblr,
+    "evernote":    $evernote,
+    "dropbox":     $dropbox,
+    "codepen":     $codepen
+  ),
+  $social-colors
+);
+
+
+//== Switches
+//
+//##
+
+$switch-bg:						$primary;
+$switch-width:					4.385rem;
+$switch-height:					1.846rem;
+$switch-padding:				.308rem;
+$switch-line-height:			$switch-height - $switch-padding;
+$switch-border-radius:			50px;
+
+$switch-label-width:			$switch-height - ($switch-padding * 2);
+$switch-label-height:			$switch-label-width;
+$switch-label-border-radius:	50%;
+
+//== Radio Icons
+//
+//##
+$radio-icon-font-size:			$font-size-base * 1.5;
+$radio-icon-width:				$radio-icon-font-size * 2;
+$radio-icon-height:				$radio-icon-width;
+$radio-icon-border:				$border-width solid $border-color;
+$radio-icon-color:				$gray-600;
+
+$radio-icon-active-color:		$primary;
+$radio-icon-active-bg:			$white;
+
+$radio-icon-focus-shadow-color:	0 0 0 .15rem rgba($radio-icon-active-color, .15);
+
+$radio-icon-hover-border-color: shift-color($border-color, 10%);
+

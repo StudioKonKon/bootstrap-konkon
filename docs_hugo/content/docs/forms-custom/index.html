@@ -1,0 +1,354 @@
++++
+title = "Custom Forms"
+author = "Studio KonKon"
+description = "Styles, layout options and custom components for creating a wide variety of forms."
+body_class = "bg-light"
+
+[[extra_js]]
+	src = "custom-forms.js"
+	
+[[extra_css]]
+	src = "studio-konkon-forms"
+	type = "scss"
+	
++++
+
+
+<div class="row g-4 mb-4">
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<span>Custom file inputs</span>
+				<span class="card-subtitle"></span>
+			</div>
+			<div class="card-body">
+<div class="row">
+	<div class="col-12 pb-2">
+		<input class="input-file" id="file_btn_up1"
+		       type="file" name="file_btn_up1"
+			   data-multiple-caption="{count} files selected" multiple="">
+		<label class="input-file-label btn btn-info" for="file_btn_up1">
+			<i class="icon zmdi zmdi-upload me-1"></i>
+			<span class="input-file-text">Choose file(s)...</span>
+		</label>
+	</div>
+	<div class="col-12">
+		<div class="input-group flex-nowrap">
+			<label class="input-file-label btn btn-secondary mb-0 w-100" for="file_btn_up2">
+				<i class="icon zmdi zmdi-upload me-1"></i>
+				<span class="input-file-text">Choose file(s)...</span>
+			</label>
+			<input class="form-control input-file" id="file_btn_up2"
+			       type="file" name="file_btn_up2"
+				   data-multiple-caption="{count} files selected" multiple="">
+			<button class="btn btn-info" type="button">Upload</button>
+		</div>
+	</div>
+</div>
+<hr />
+<p>Disabled: You will need to also add the <code>disabled</code> class and attribute to the <code>button</code> and <code>label</code> for this code to work properly.</p>
+<div class="row">
+	<div class="col-12 pb-2">
+		<input class="input-file" id="file_btn_up3"
+		       type="file" name="file_btn_up3"
+			   data-multiple-caption="{count} files selected"
+			   multiple="" disabled>
+		<label class="input-file-label btn btn-info disabled" for="file_btn_up3">
+			<i class="icon zmdi zmdi-upload me-1"></i>
+			<span class="input-file-text">Choose file(s)...</span>
+		</label>
+	</div>
+	<div class="col-12">
+		<div class="input-group flex-nowrap">
+			<label class="input-file-label btn btn-secondary mb-0 w-100 disabled" for="file_btn_up4">
+				<i class="icon zmdi zmdi-upload me-1"></i>
+				<span class="input-file-text">Choose file(s)...</span>
+			</label>
+			<input class="form-control input-file" id="file_btn_up4"
+			       type="file" name="file_btn_up4"
+				   data-multiple-caption="{count} files selected"
+				   multiple="" disabled>
+			<button class="btn btn-info" type="button" disabled>Upload</button>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+<!-- Custom Switches //-->
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<span>Extra Switches</span>
+				<span class="card-subtitle">Uses the <code class="highlighter-konkon">.form-switch</code> class to render a toggle switch. Change colour with <code class="highlighter-konkon">.form-switch-{theme-color}</code>.</span>
+			</div>
+			<div class="card-body">
+<div class="row row-cols-3 row-cols-md-5 pt-1">
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff">
+			<input class="form-check-input" type="checkbox" id="customSwitchA">
+			<label class="form-check-label" for="customSwitchA">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-konkon">
+			<input class="form-check-input" type="checkbox" id="customSwitch1" checked="">
+			<label class="form-check-label" for="customSwitch1">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-primary">
+			<input class="form-check-input" type="checkbox" id="customSwitch2" checked="">
+			<label class="form-check-label" for="customSwitch2">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-secondary">
+			<input class="form-check-input" type="checkbox" id="customSwitch3" checked="">
+			<label class="form-check-label" for="customSwitch3">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-success">
+			<input class="form-check-input" type="checkbox" id="customSwitch4" checked="">
+			<label class="form-check-label" for="customSwitch4">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-info">
+			<input class="form-check-input" type="checkbox" id="customSwitch5" checked="">
+			<label class="form-check-label" for="customSwitch5">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-warning">
+			<input class="form-check-input" type="checkbox" id="customSwitch6" checked="">
+			<label class="form-check-label" for="customSwitch6">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-danger">
+			<input class="form-check-input" type="checkbox" id="customSwitch7" checked="">
+			<label class="form-check-label" for="customSwitch7">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-light">
+			<input class="form-check-input" type="checkbox" id="customSwitch8" checked="">
+			<label class="form-check-label" for="customSwitch8">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-dark">
+			<input class="form-check-input" type="checkbox" id="customSwitch9" checked="">
+			<label class="form-check-label" for="customSwitch9">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+</div>
+<hr />
+<p>Disabled: Add the <code>disabled</code> attribute to the <code>input</code> tag.</p>
+<div class="row row-cols-3 row-cols-md-5 pt-1">
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff">
+			<input class="form-check-input" type="checkbox" id="customSwitchB" disabled>
+			<label class="form-check-label" for="customSwitchB">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-konkon">
+			<input class="form-check-input" type="checkbox" id="customSwitch11" checked="" disabled>
+			<label class="form-check-label" for="customSwitch11">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-primary">
+			<input class="form-check-input" type="checkbox" id="customSwitch12" checked="" disabled>
+			<label class="form-check-label" for="customSwitch12">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-secondary">
+			<input class="form-check-input" type="checkbox" id="customSwitch13" checked="" disabled>
+			<label class="form-check-label" for="customSwitch13">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-success">
+			<input class="form-check-input" type="checkbox" id="customSwitch14" checked="" disabled>
+			<label class="form-check-label" for="customSwitch14">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-info">
+			<input class="form-check-input" type="checkbox" id="customSwitch15" checked="" disabled>
+			<label class="form-check-label" for="customSwitch15">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-warning">
+			<input class="form-check-input" type="checkbox" id="customSwitch16" checked="" disabled>
+			<label class="form-check-label" for="customSwitch16">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-danger">
+			<input class="form-check-input" type="checkbox" id="customSwitch17" checked="" disabled>
+			<label class="form-check-label" for="customSwitch17">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-light">
+			<input class="form-check-input" type="checkbox" id="customSwitch18" checked="" disabled>
+			<label class="form-check-label" for="customSwitch18">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-switch form-switch-onoff form-switch-dark">
+			<input class="form-check-input" type="checkbox" id="customSwitch19" checked="" disabled>
+			<label class="form-check-label" for="customSwitch19">
+				<span class="form-switch-label"></span>
+			</label>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row g-4 mb-4">
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<span>Ratio (icons)</span>
+				<span class="card-subtitle">Uses the <code class="highlighter-konkon">.form-check-icon</code> class to render a icon style radio.</span>
+			</div>
+			<div class="card-body">
+<div class="row row-cols-2 row-cols-md-4 pt-1">
+	<div class="col py-1 text-center">
+		<div class="form-check form-check-icon">
+			<input class="form-check-input" type="radio"
+				   name="inlineRadioOptions1" id="iconRadio1"
+				   value="option1" />
+			<label class="form-check-label" for="iconRadio1">
+				<i class="icon zmdi zmdi-fast-rewind"></i>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-check-icon">
+			<input class="form-check-input" type="radio"
+				   name="inlineRadioOptions1" id="iconRadio2"
+				   value="option1" />
+			<label class="form-check-label" for="iconRadio2">
+				<i class="icon zmdi zmdi-pause"></i>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-check-icon">
+			<input class="form-check-input" type="radio"
+				   name="inlineRadioOptions1" id="iconRadio3"
+				   value="option1" checked />
+			<label class="form-check-label" for="iconRadio3">
+				<i class="icon zmdi zmdi-play"></i>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-check-icon">
+			<input class="form-check-input" type="radio"
+				   name="inlineRadioOptions1" id="iconRadio4"
+				   value="option1" />
+			<label class="form-check-label" for="iconRadio4">
+				<i class="icon zmdi zmdi-fast-forward"></i>
+			</label>
+		</div>
+	</div>
+</div>
+<hr />
+<div class="row row-cols-2 row-cols-md-4 pt-1">
+	<div class="col py-1 text-center">
+		<div class="form-check form-check-icon">
+			<input class="form-check-input" type="radio"
+				   name="inlineRadioOptions2" id="iconRadio5"
+				   value="option1" disabled />
+			<label class="form-check-label" for="iconRadio5">
+				<i class="icon zmdi zmdi-fast-rewind"></i>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-check-icon">
+			<input class="form-check-input" type="radio"
+				   name="inlineRadioOptions2" id="iconRadio6"
+				   value="option1" disabled />
+			<label class="form-check-label" for="iconRadio6">
+				<i class="icon zmdi zmdi-pause"></i>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-check-icon">
+			<input class="form-check-input" type="radio"
+				   name="inlineRadioOptions2" id="iconRadio7"
+				   value="option1" checked disabled />
+			<label class="form-check-label" for="iconRadio7">
+				<i class="icon zmdi zmdi-play"></i>
+			</label>
+		</div>
+	</div>
+	<div class="col py-1 text-center">
+		<div class="form-check form-check-icon">
+			<input class="form-check-input" type="radio"
+				   name="inlineRadioOptions2" id="iconRadio8"
+				   value="option1" disabled />
+			<label class="form-check-label" for="iconRadio8">
+				<i class="icon zmdi zmdi-fast-forward"></i>
+			</label>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+

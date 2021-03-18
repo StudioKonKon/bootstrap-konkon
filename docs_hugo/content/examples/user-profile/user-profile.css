@@ -1,0 +1,9 @@
+.pcontent {
+	margin: auto;
+	max-width: 720px;
+}
+
+.pcontent .nav-link {
+	padding-left: 0;
+	padding-right: 0;
+}

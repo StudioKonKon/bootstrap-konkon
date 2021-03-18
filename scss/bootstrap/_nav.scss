@@ -1,0 +1,135 @@
+/*------------------------------------------------------------------
+  [Nav]
+*/
+
+.tab-container {
+	.nav-tabs {
+		@include border-top-radius($nav-tabs-border-radius);
+		background-color: $white;
+		border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+	}
+
+	.nav-link {
+		padding: $nav-skk-link-py $nav-skk-link-px;
+		margin-right: 0;
+		text-align: center;
+		@include border-radius(0);
+		color: $text-color;
+		border-width: 0;
+
+		.icon {
+			font-size: $nav-skk-link-px;
+			vertical-align: middle;
+			line-height: 1.308rem;
+		}
+
+		&:hover {
+			background: 0 0;
+			color: $primary;
+		}
+
+		&:active {
+			background-color: transparent;
+		}
+
+		&.active {
+			background: 0 0;
+			border-bottom: $nav-tabs-border-width solid $primary;
+			
+			&:focus,
+			&:hover {
+				color: $body-color;
+			}
+		}
+		
+		&.disabled {
+			color: $nav-link-disabled-color;
+			opacity: $nav-link-disabled-opacity;
+		}
+	}
+}
+
+
+.tab-container .tab-content {
+	background: $white;
+	padding: $nav-skk-content-py $nav-skk-content-px;
+	@include border-bottom-radius($nav-tabs-border-radius);
+	
+	:last-child {
+		margin-bottom: 0;
+	}
+	
+	.card {
+		box-shadow: none;
+		
+		.card-header,
+		.card-body {
+			margin-right: 0;
+			margin-left: 0;
+		}
+	}
+}
+
+.tab-container-left,
+.tab-container-right {
+	display: flex;
+	align-items: flex-start;
+	
+	.nav {
+		flex-direction: column;
+	}
+	
+	.nav-tabs {
+		border-top: 0;
+		border-bottom: 0;
+	
+		> .nav-item {
+			margin-left: -$nav-tabs-border-width;
+			margin-right: -$nav-tabs-border-width;
+		}
+	}
+	
+	.nav-link {
+		border: $nav-tabs-border-width solid transparent;
+		padding: $nav-skk-link-vpy $nav-skk-link-vpx;
+		
+		&:hover,
+		&:focus,
+		&.active {
+			border-color: transparent;
+		}
+	}
+}
+
+.tab-container-left .nav-tabs {
+	border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
+	@include border-start-radius($nav-tabs-border-radius);
+	
+	> .nav-item {
+		
+		.nav-link.active {
+			border-right: $nav-tabs-border-width solid $primary;
+		}
+	}
+}
+
+.tab-container-right .nav-tabs {
+	border-left: $nav-tabs-border-width solid $nav-tabs-border-color;
+	@include border-end-radius($nav-tabs-border-radius);
+	
+	> .nav-item {
+		
+		.nav-link.active {
+			border-left: $nav-tabs-border-width solid $primary;
+		}
+	}
+}
+
+.card-header.tab-container {
+	padding: 0;
+	margin: 0;
+}
+	
+.tab-container .card-header-tabs {
+	margin: 0;
+}

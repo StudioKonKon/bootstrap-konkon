@@ -1,0 +1,73 @@
+/*------------------------------------------------------------------
+  [Alerts]
+*/
+
+.alert {
+	box-shadow: $box-shadow-sm;
+}
+
+.alert-icon,
+.alert-icon-full {
+	.icon:first-of-type {
+		@include border-start-radius($alert-border-radius);
+	}
+	
+	.alert-link {
+		text-decoration: underline;
+	}
+}
+
+.alert-link.link-light,
+.alert.text-white .alert-link {
+	color: $white;
+}
+
+.alert.bg-white,
+.alert.alert-icon.bg-white,
+.alert.alert-icon-full.bg-white {
+	background-color: $white;
+	border: $alert-bordered;
+	color: $body-color;
+}
+
+.alert-icon,
+.alert-icon-full {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	padding: 0;
+	
+	> .icon {
+		display: flex;
+		font-size: $alert-icon-size;
+		align-self: stretch;
+		align-items: center;
+		justify-content: center !important;
+		padding: 0 $spacer;
+		background-color: rgba(0, 0, 0, .025);
+		min-width: $alert-icon-min-width;
+		text-align: center;
+	}
+	
+	> .message {
+		flex-grow: 1;
+		padding: $alert-padding-y 0 $alert-padding-y $alert-padding-x;
+	}
+	
+	> .btn-close {
+		position: relative;
+		min-width: $btn-close-width;
+		align-self: flex-start;
+		
+		&:focus {
+			outline: 0;
+			box-shadow: none;
+		}
+	}
+	
+	> .message:last-child {
+		padding: $alert-padding-y $alert-padding-x;
+	}
+}

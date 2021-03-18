@@ -1,0 +1,16 @@
+/*------------------------------------------------------------------
+  [Modals]
+*/
+
+.modal-main-icon {
+	display: inline-block;
+	font-size: $modal-icon-size;
+}
+
+@if $enable-modal-header-colors {
+	@each $modal-colors, $modal-color in $modal-colors {
+		.modal-header-#{$modal-colors} {
+			@include colored-header($modal-color);
+		}
+	}
+}

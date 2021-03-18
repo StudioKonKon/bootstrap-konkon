@@ -1,0 +1,737 @@
++++
+title = "Modals"
+author = "Studio KonKon"
+description = "Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content."
+body_class = "bg-light"
+
+[[extra_js]]
+	src = "modals.js"
+	
+[[extra_css]]
+	src = "studio-konkon-modals"
+	type = "scss"
+	
++++
+
+{{< add-style >}}
+.modal-body > .text-center > .mt-5 > .btn,
+.modal-content > .modal-footer > .btn
+{
+width: 6.154rem;
+}
+
+.modal-body .mt-5 > .btn-space:last-child
+{
+margin-right: 0 !important;
+}
+
+.modal-body h3
+{
+margin-top: 1.538rem;
+margin-bottom: 1.154rem;
+}
+{{< /add-style >}}
+
+<div class="row g-4 mb-4">
+
+	<div class="col-lg-6">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<span class="card-title">Modal Alerts</span>
+				<span class="card-subtitle">Default bootstrap modal component</span>
+			</div>
+		<div class="card-body">
+			<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+			<div class="mt-5 mb-4 text-center">
+				<button class="btn btn-space btn-konkon" data-bs-toggle="modal" data-bs-target="#mod-konkon" type="button">KonKon</button>
+				<button class="btn btn-space btn-success" data-bs-toggle="modal" data-bs-target="#mod-success" type="button">Success</button>
+				<button class="btn btn-space btn-primary" data-bs-toggle="modal" data-bs-target="#mod-primary" type="button">Primary</button>
+				<button class="btn btn-space btn-warning" data-bs-toggle="modal" data-bs-target="#mod-warning" type="button">Warning</button>
+				<button class="btn btn-space btn-danger" data-bs-toggle="modal" data-bs-target="#mod-danger" type="button">Danger</button>
+				<button class="btn btn-space btn-dark" data-bs-toggle="modal" data-bs-target="#mod-dark" type="button">Dark</button>
+			</div>
+		</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-6">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<span class="card-title">Modal Footer</span>
+				<span class="card-subtitle">Default bootstrap modal with a footer content</span>
+			</div>
+			<div class="card-body">
+				<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+				<div class="mt-5 mb-4 text-center">
+					<button class="btn btn-space btn-konkon" data-bs-toggle="modal" data-bs-target="#md-footer-konkon" type="button">KonKon</button>
+					<button class="btn btn-space btn-success" data-bs-toggle="modal" data-bs-target="#md-footer-success" type="button">Success</button>
+					<button class="btn btn-space btn-primary" data-bs-toggle="modal" data-bs-target="#md-footer-primary" type="button">Primary</button>
+					<button class="btn btn-space btn-warning" data-bs-toggle="modal" data-bs-target="#md-footer-warning" type="button">Warning</button>
+					<button class="btn btn-space btn-danger" data-bs-toggle="modal" data-bs-target="#md-footer-danger" type="button">Danger</button>
+					<button class="btn btn-space btn-dark" data-bs-toggle="modal" data-bs-target="#md-footer-dark" type="button">Dark</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-6">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<span class="card-title">Modal Colored Header</span>
+				<span class="card-subtitle">Default bootstrap modal with header content</span>
+			</div>
+			<div class="card-body">
+				<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+				<div class="mt-5 mb-4 text-center">
+					<button class="btn btn-space btn-konkon" data-bs-toggle="modal" data-bs-target="#md-header-konkon" type="button">KonKon</button>
+					<button class="btn btn-space btn-success" data-bs-toggle="modal" data-bs-target="#md-header-success" type="button">Success</button>
+					<button class="btn btn-space btn-primary" data-bs-toggle="modal" data-bs-target="#md-header-primary" type="button">Primary</button>
+					<button class="btn btn-space btn-warning" data-bs-toggle="modal" data-bs-target="#md-header-warning" type="button">Warning</button>
+					<button class="btn btn-space btn-danger" data-bs-toggle="modal" data-bs-target="#md-header-danger" type="button">Danger</button>
+					<button class="btn btn-space btn-dark" data-bs-toggle="modal" data-bs-target="#md-header-dark" type="button">Dark</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-6">
+		<div class="card">
+			<div class="card-header card-header-divider">
+				<span class="card-title">Modal Full Colour</span>
+				<span class="card-subtitle">Default bootstrap modal fully coloured</span>
+			</div>
+			<div class="card-body">
+				<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+				<div class="mt-5 mb-4 text-center">
+					<button class="btn btn-space btn-konkon" data-bs-toggle="modal" data-bs-target="#md-fullColor-konkon" type="button">KonKon</button>
+					<button class="btn btn-space btn-success" data-bs-toggle="modal" data-bs-target="#md-fullColor-success" type="button">Success</button>
+					<button class="btn btn-space btn-primary" data-bs-toggle="modal" data-bs-target="#md-fullColor-primary" type="button">Primary</button>
+					<button class="btn btn-space btn-warning" data-bs-toggle="modal" data-bs-target="#md-fullColor-warning" type="button">Warning</button>
+					<button class="btn btn-space btn-danger" data-bs-toggle="modal" data-bs-target="#md-fullColor-danger" type="button">Danger</button>
+					<button class="btn btn-space btn-dark" data-bs-toggle="modal" data-bs-target="#md-fullColor-dark" type="button">Dark</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+	
+<div class="row justify-content-md-center g-4 mb-4">
+
+	<div class="col-lg-6">
+		<div class="card mb-0">
+			<div class="card-header card-header-divider">
+				<span class="card-title">Fullscreen Bootstrap Modals</span>
+				<span class="card-subtitle">Forced fullscreen bootstrap modals on large devices.</span>
+			</div>
+			<div class="card-body">
+				<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+				<div class="mt-5 mb-4 text-center">
+					<button class="btn btn-space btn-primary" data-bs-toggle="modal" data-bs-target="#md-full-default" type="button"> Default</button>
+					<button class="btn btn-space btn-primary" data-bs-toggle="modal" data-bs-target="#md-full-footer" type="button"> Footer</button>
+					<button class="btn btn-space btn-primary" data-bs-toggle="modal" data-bs-target="#md-full-header" type="button"> Colored Header</button>
+					<button class="btn btn-space btn-primary" data-bs-toggle="modal" data-bs-target="#md-full-fullColor" type="button"> Full Color</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<!-- Modals //-->
+<!-- Normal Modals //-->
+<div class="modal fade" id="mod-konkon" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<div class="text-konkon"><span class="modal-main-icon zmdi zmdi-favorite"></span></div>
+					<h3>Welcome!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5">
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-konkon" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="mod-success" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<div class="text-success"><span class="modal-main-icon zmdi zmdi-check"></span></div>
+					<h3>Success!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5">
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-success" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="mod-primary" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<div class="text-primary"><span class="modal-main-icon zmdi zmdi-info-outline"></span></div>
+					<h3>Information!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5"> 
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-primary" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="mod-warning" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<div class="text-warning"><span class="modal-main-icon zmdi zmdi-alert-triangle"></span></div>
+					<h3>Warning!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5">
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-warning" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="mod-danger" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<div class="text-danger"><span class="modal-main-icon zmdi zmdi-close-circle-o"></span></div>
+					<h3>Danger!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5">
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-danger" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="mod-dark" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<div class="text-dark"><span class="modal-main-icon zmdi zmdi-close-circle-o"></span></div>
+					<h3>Dark!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5">
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-dark" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<!-- Footer Models //-->
+<div class="modal fade" id="md-footer-konkon" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<div class="text-konkon"><span class="modal-main-icon zmdi zmdi-favorite"></span></div>
+					<h3>Welcome!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-konkon" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-footer-success" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<div class="text-success"><span class="modal-main-icon zmdi zmdi-check"></span></div>
+					<h3>Success!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-success" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-footer-primary" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<div class="text-primary"><span class="modal-main-icon zmdi zmdi-info-outline"></span></div>
+					<h3>Information!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-primary" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-footer-warning" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<div class="text-warning"><span class="modal-main-icon zmdi zmdi-alert-triangle"></span></div>
+					<h3>Warning!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-warning" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-footer-danger" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<div class="text-danger"><span class="modal-main-icon zmdi zmdi-close-circle-o"></span></div>
+					<h3>Danger!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-danger" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-footer-dark" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<div class="text-dark"><span class="modal-main-icon zmdi zmdi-close-circle-o"></span></div>
+					<h3>Dark!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-dark" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Header Models //-->
+<div class="modal fade" id="md-header-konkon" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header modal-header-konkon">
+				<h4 class="modal-title">Custom Colored Header</h4>
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<p>Lorem ipsum dolor sit amet, purto meliore molestiae ne per, no sint illud sea, eum quot facilisi cu. Tation alterum est ad. Ex eum exerci explicari mediocritatem, at dicat lobortis est, nullam laoreet nam et. Propriae consetetur efficiantur ne sea.</p>
+				<p>Ipsum diceret eos in, id aliquam phaedrum pro, mel ne legimus impedit incorrupte. Sed an fabellas voluptaria. Wisi quaerendum omittantur sed ad, ius lorem melius in.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-konkon" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-header-success" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header modal-header-success">
+				<h4 class="modal-title">Custom Colored Header</h4>
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<p>Lorem ipsum dolor sit amet, purto meliore molestiae ne per, no sint illud sea, eum quot facilisi cu. Tation alterum est ad. Ex eum exerci explicari mediocritatem, at dicat lobortis est, nullam laoreet nam et. Propriae consetetur efficiantur ne sea.</p>
+				<p>Ipsum diceret eos in, id aliquam phaedrum pro, mel ne legimus impedit incorrupte. Sed an fabellas voluptaria. Wisi quaerendum omittantur sed ad, ius lorem melius in.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-success" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-header-primary" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header modal-header-primary">
+				<h4 class="modal-title">Custom Colored Header</h4>
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<p>Lorem ipsum dolor sit amet, purto meliore molestiae ne per, no sint illud sea, eum quot facilisi cu. Tation alterum est ad. Ex eum exerci explicari mediocritatem, at dicat lobortis est, nullam laoreet nam et. Propriae consetetur efficiantur ne sea.</p>
+				<p>Ipsum diceret eos in, id aliquam phaedrum pro, mel ne legimus impedit incorrupte. Sed an fabellas voluptaria. Wisi quaerendum omittantur sed ad, ius lorem melius in.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-primary" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-header-warning" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header modal-header-warning">
+				<h4 class="modal-title">Custom Colored Header</h4>
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<p>Lorem ipsum dolor sit amet, purto meliore molestiae ne per, no sint illud sea, eum quot facilisi cu. Tation alterum est ad. Ex eum exerci explicari mediocritatem, at dicat lobortis est, nullam laoreet nam et. Propriae consetetur efficiantur ne sea.</p>
+				<p>Ipsum diceret eos in, id aliquam phaedrum pro, mel ne legimus impedit incorrupte. Sed an fabellas voluptaria. Wisi quaerendum omittantur sed ad, ius lorem melius in.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-warning" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-header-danger" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header modal-header-danger">
+				<h4 class="modal-title">Custom Colored Header</h4>
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<p>Lorem ipsum dolor sit amet, purto meliore molestiae ne per, no sint illud sea, eum quot facilisi cu. Tation alterum est ad. Ex eum exerci explicari mediocritatem, at dicat lobortis est, nullam laoreet nam et. Propriae consetetur efficiantur ne sea.</p>
+				<p>Ipsum diceret eos in, id aliquam phaedrum pro, mel ne legimus impedit incorrupte. Sed an fabellas voluptaria. Wisi quaerendum omittantur sed ad, ius lorem melius in.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-danger" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-header-dark" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header modal-header-dark">
+				<h4 class="modal-title">Custom Colored Header</h4>
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<p>Lorem ipsum dolor sit amet, purto meliore molestiae ne per, no sint illud sea, eum quot facilisi cu. Tation alterum est ad. Ex eum exerci explicari mediocritatem, at dicat lobortis est, nullam laoreet nam et. Propriae consetetur efficiantur ne sea.</p>
+				<p>Ipsum diceret eos in, id aliquam phaedrum pro, mel ne legimus impedit incorrupte. Sed an fabellas voluptaria. Wisi quaerendum omittantur sed ad, ius lorem melius in.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-dark" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Full Colour Models //-->
+<div class="modal modal-full-color modal-konkon fade" id="md-fullColor-konkon" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<span class="modal-main-icon zmdi zmdi-favorite"></span>
+					<h3>Welcome!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5">
+						<button class="btn btn-space btn-light" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-full-color modal-success fade" id="md-fullColor-success" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<span class="modal-main-icon zmdi zmdi-check"></span>
+					<h3>Success!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5">
+						<button class="btn btn-space btn-light" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-full-color modal-primary fade" id="md-fullColor-primary" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<span class="modal-main-icon zmdi zmdi-info-outline"></span>
+					<h3>Information!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5"> 
+						<button class="btn btn-space btn-light" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-full-color modal-warning fade" id="md-fullColor-warning" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<span class="modal-main-icon zmdi zmdi-alert-triangle"></span>
+					<h3>Warning!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5">
+						<button class="btn btn-space btn-light" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-full-color modal-danger fade" id="md-fullColor-danger" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<span class="modal-main-icon zmdi zmdi-close-circle-o"></span>
+					<h3>Danger!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5">
+						<button class="btn btn-space btn-light" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-full-color modal-dark fade" id="md-fullColor-dark" role="dialog">
+	<div class="modal-dialog modal-fullscreen-md-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<span class="modal-main-icon zmdi zmdi-close-circle-o"></span>
+					<h3>Dark!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5">
+						<button class="btn btn-space btn-light" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Full Screen Models //-->
+<div class="modal fade" id="md-full-default" role="dialog">
+	<div class="modal-dialog modal-fullscreen">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body d-flex justify-content-center align-items-center">
+				<div class="text-center" style="width:100%;">
+					<div class="text-primary"><span class="modal-main-icon zmdi zmdi-info-outline"></span></div>
+					<h3>Information!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5"> 
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-primary" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-full-footer" role="dialog">
+	<div class="modal-dialog modal-fullscreen">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body d-flex justify-content-center align-items-center">
+				<div class="text-center" style="width:100%;">
+					<div class="text-primary"><span class="modal-main-icon zmdi zmdi-info-outline"></span></div>
+					<h3>Information!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-primary" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-full-header" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-fullscreen">
+		<div class="modal-content">
+			<div class="modal-header modal-header-primary">
+				<h4 class="modal-title">Custom Colored Header</h4>
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae ne per, no sint illud sea, eum quot facilisi cu. Tation alterum est ad. Ex eum exerci explicari mediocritatem, at dicat lobortis est, nullam laoreet nam et. Propriae consetetur efficiantur ne sea.</p>
+					<p>Ipsum diceret eos in, id aliquam phaedrum pro, mel ne legimus impedit incorrupte. Sed an fabellas voluptaria. Wisi quaerendum omittantur sed ad, ius lorem melius in.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+				<button class="btn btn-primary" type="button" data-bs-dismiss="modal">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-full-color modal-primary fade" id="md-full-fullColor" role="dialog">
+	<div class="modal-dialog modal-fullscreen">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body d-flex justify-content-center align-items-center">
+				<div class="text-center" style="width:100%;">
+					<span class="modal-main-icon zmdi zmdi-info-outline"></span>
+					<h3>Information!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5"> 
+						<button class="btn btn-space btn-light" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+

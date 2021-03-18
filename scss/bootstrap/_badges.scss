@@ -1,0 +1,20 @@
+/*------------------------------------------------------------------
+  [Badges]
+*/
+
+@if $enable-custom-badges {
+	.badge {
+		border: $border-width solid $gray-300;
+	}
+
+	@each $state, $value in $theme-colors {
+		@include badge-variant($state, $value);
+		@include badge-outline-color($state, $value);
+	}
+
+	.badge-secondary {
+		color: $body-color;
+		background-color: $white;
+		border-color: $gray-300;
+	}
+}

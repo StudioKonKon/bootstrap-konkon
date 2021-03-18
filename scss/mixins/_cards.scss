@@ -1,0 +1,37 @@
+// Full colored card
+
+@mixin card-full-color($background, $border, $color) {
+	background-color: $background;
+	color: $color;
+	
+	.card-subtitle {
+		color: $color;
+	}
+
+	.card-header-contrast {
+		background-color: $border;
+	}
+	
+	.card-header-divider {
+		border-color: rgba($color, .4);
+	}
+
+	.card-footer {
+		background-color: $background;
+		color: $color;
+		
+		&-contrast {
+			background-color: lighten($background, 3%);
+		}
+	}
+
+	.tools {
+		.icon {
+			color: rgba($color, .6);
+			
+			&:hover {
+				color: rgba($color, 1);
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+/* --- Quote Cards --- */
+
+$quote-card-padding:		map-get($spacers, 5) !default;
+$quote-card-icon-size:		$font-size-base * 3.125 !default;
+$quote-card-icon-font-size:	$font-size-base * 1.25 !default;
+
+.quote-card {
+	position: relative;
+	padding: $quote-card-padding;
+	margin-top: $quote-card-icon-size / 2;
+
+	&-icon {
+		font-size: $quote-card-icon-font-size;
+		text-align: center;
+		width: $quote-card-icon-size;
+		height: $quote-card-icon-size;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: -($quote-card-icon-size / 2);
+		left: ($quote-card-icon-size / 2);
+	}
+}

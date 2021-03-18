@@ -1,0 +1,95 @@
+//Full colored modal
+@mixin dropdown-color(
+	$item-background,
+	$item-color: color-contrast($item-background),
+	$background: shift-color($item-background, $dropdown-bg-scale),
+	$color: color-contrast($background),
+	$dropdown-divider-bg: rgba($color, $dropdown-theme-divider-opacity),
+	$dropdown-disabled-color: rgba($color, $dropdown-theme-disabled-opacity)
+) {
+	border-color: transparent;
+	background-color: $background;
+
+	&.dropdown-menu {
+		.dropdown-item {
+			color: $color;
+
+			&:focus {
+				background-color: $item-background;
+				color: $item-color;
+			}
+			
+			&.active,
+			&:active {
+				background-color: $item-background;
+				color: $item-color;
+				
+				&:hover,
+				&:active,
+				&:focus {
+					background-color: $item-background;
+					color: $item-color;
+				}
+			}
+
+			&:hover {
+				background-color: shift-color($item-background, $dropdown-bg-hover-scale);
+			}
+		
+			&.disabled
+			{
+				color: $dropdown-disabled-color;
+			}
+		}
+
+		.dropdown-tools
+		{
+			.btn-group
+			{
+				.btn
+				{
+					background-color: transparent;
+					color: $color;
+					border-color: $dropdown-divider-bg;
+					border-width: map-get($border-widths, 2);
+					
+					&:hover
+					{
+						border-color: $color;
+						box-shadow: none;
+						background-color: rgba($color, .1);
+
+						& + .btn
+						{
+							border-left-color: transparent; 
+						}
+					}
+					
+					&.active,
+					&:active
+					{
+						background-color: rgba($color, .9);
+						color: $background;
+						border-color: transparent;
+						border-width: map-get($border-widths, 2);
+						box-shadow: $btn-box-shadow;
+					}
+					
+					&:focus
+					{
+						box-shadow: $btn-box-shadow;
+					}
+				}
+			}
+		}
+	}
+
+	//Divider Line
+	.dropdown-divider {
+		border-color: $dropdown-divider-bg;
+	}
+	
+	.dropdown-header {
+		color: $dropdown-disabled-color;
+	}
+}

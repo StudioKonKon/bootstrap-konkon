@@ -1,0 +1,68 @@
+/*------------------------------------------------------------------
+  [Accordions]
+*/
+
+.accordion-button {
+	&.collapsed {
+		border-bottom-width: $accordion-border-width;
+	}
+	
+	.icon {
+		font-size: $font-size-base * 1.5;
+	}
+	
+	&.accordion-button-white::after {
+		color: $white;
+		background-image: escape-svg($accordion-icon-white);
+	}
+}
+
+.accordion {
+	.accordion-item {
+		background-color: $accordion-bg;
+		
+		+ .accordion-item {
+			margin-top: $accordion-margin-y;
+		}
+	}
+}
+
+.accordion-item {
+	.accordion-button {
+		@include border-top-radius($accordion-border-radius);
+	}
+
+	.accordion-button {
+		&.collapsed {
+			@include border-bottom-radius($accordion-border-radius);
+		}
+	}
+
+	.accordion-collapse {
+		@include border-bottom-radius($accordion-border-radius);
+	}
+}
+
+.accordion-collapse {
+	border-width: 0 $accordion-border-width $accordion-border-width;
+}
+
+.accordion-flush {
+	.accordion-button {
+		border-top-width: 0;
+		
+		&.collapsed {
+			border-bottom-width: 0;
+		}
+	}
+	
+	.accordion-collapse {
+		border-width: 0;
+	}
+
+	.accordion-item {
+		.accordion-collapse {
+			border-bottom-width: 0;
+		}
+	}
+}

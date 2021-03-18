@@ -1,0 +1,80 @@
+/* --- Brand Cards --- */
+
+$brand-card-header-height:		6rem !default;
+$brand-card-title-font-size:	$h4-font-size !default;
+$brand-card-subtitle-font-size:	$font-size-base !default;
+$brand-card-icon-font-size:		$font-size-base * 2.5 !default;
+
+.brand-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: $card-bg;
+	border-radius: $card-border-radius;
+}
+
+.brand-card-header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: $brand-card-header-height;
+	border-radius: $card-border-radius $card-border-radius 0 0;
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+	
+	.brand-card-title {
+		font-size: $brand-card-title-font-size;
+		font-weight: $font-weight-bold;
+	}
+	
+	.brand-card-subtitle {
+		font-size: $brand-card-subtitle-font-size;
+	}
+	
+	.brand-card-title,
+	.brand-card-subtitle {
+		margin: 0;
+		padding: 0;
+	}
+
+	.icon {
+		font-size: $brand-card-icon-font-size;
+		color: $white;
+	}
+	
+	svg.icon {
+		height: 1em;
+		width: auto;
+	}
+}
+
+a.brand-card-header:hover {
+	opacity: .85;
+}
+
+.brand-card-body {
+	color: $black;
+	display: flex;
+	flex-direction: row;
+	padding: ($card-spacer-y / 2) 0;
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	border: $card-border-width solid $card-border-color;
+	border-top: 0;
+	border-radius: 0 0 $card-border-radius $card-border-radius;
+
+	> .brand-card-item {
+		flex: 1;
+		padding: ($card-spacer-y * 0.25) 0;
+		
+		&:not(:last-child) {
+			border-right: $border-width solid $border-color;
+		}
+	}
+}
