@@ -1,5 +1,5 @@
 {
-	"BaseURL": "http://play.studiokonkon.org/",
+	"BaseURL": "https://play.studiokonkon.com/",
 	"uglyurls": false,
 	"relativeURLs": false,
 	"canonifyURLs": false,
