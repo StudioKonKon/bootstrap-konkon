@@ -1,8 +1,10 @@
+# Bootstrap: Studio KonKon Theme
+
 [![License: MIT](https://img.shields.io/github/license/StudioKonKon/bootstrap-konkon?style=flat-square)](https://opensource.org/licenses/MIT)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/StudioKonKon/bootstrap-konkon?style=flat-square)
 ![David](https://img.shields.io/david/dev/StudioKonKon/bootstrap-konkon?style=flat-square)
-
-# Bootstrap v5.0.0.beta2: Studio KonKon Theme (v1.0.0.beta1)
+![GitHub file size in bytes](https://img.shields.io/github/size/StudioKonKon/bootstrap-konkon/dist/css/studio-konkon.css?label=CSS&style=flat-square)
+![GitHub file size in bytes](https://img.shields.io/github/size/StudioKonKon/bootstrap-konkon/dist/css/studio-konkon.min.css?label=CSS%20min%20size&style=flat-square)
 
 ### About
 
