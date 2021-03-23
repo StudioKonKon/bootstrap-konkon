@@ -36,6 +36,8 @@
 }
 
 .dropdown-divider {
+	opacity: $dropdown-hr-opacity;
+	
 	+ .dropdown-header {
 		margin-top: map-get($spacers, 2);
 	}

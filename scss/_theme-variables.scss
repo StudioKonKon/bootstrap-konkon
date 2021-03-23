@@ -62,7 +62,10 @@ $toast-border-scale:		-50%;
 $toast-color-scale:			40%;
 
 $dropdown-bg-scale:			-20%;
-$dropdown-bg-hover-scale:	-5%;
+$dropdown-hover-bg-scale:	-5%;
+
+$table-icon-color-scale: 		-70%;
+$table-icon-hover-color-scale:	-80%;
 
 
 //Table
@@ -179,6 +182,7 @@ $alert-bordered:		$border-width solid $alert-bordered-color;
 // Dropdowns
 $dropdown-icon-size:				$dropdown-font-size * 1.231;
 $dropdown-btn-padding-x:			1.538rem;
+$dropdown-hr-opacity:				1;
 $dropdown-theme-divider-opacity:	.15;
 $dropdown-theme-disabled-opacity:	.5;
 

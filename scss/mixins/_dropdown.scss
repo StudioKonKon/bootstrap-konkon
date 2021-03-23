@@ -33,7 +33,7 @@
 			}
 
 			&:hover {
-				background-color: shift-color($item-background, $dropdown-bg-hover-scale);
+				background-color: shift-color($item-background, $dropdown-hover-bg-scale);
 			}
 		
 			&.disabled

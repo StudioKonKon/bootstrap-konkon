@@ -1,12 +1,12 @@
 // Tables
 
 @mixin table-actions-variant($state, $background) {
-	$color: shift-color($background, -70%);
-	$hover-color: shift-color($background, -80%);
+	$color: shift-color($background, $table-icon-color-scale);
+	$hover-color: shift-color($background, $table-icon-hover-color-scale);
 	
 	@if(contrast-ratio($background, $color) < $min-contrast-ratio) {
-		$color: shift-color($background, 70%);
-		$hover-color: shift-color($background, 80%);
+		$color: shift-color($background, -$table-icon-color-scale);
+		$hover-color: shift-color($background, -$table-icon-hover-color-scale);
 	}
 	
 	.table-#{$state} {

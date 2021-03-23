@@ -9933,8 +9933,10 @@ pre code.pre-wrap {
   .dropdown-item .badge {
     margin-left: auto; }
 
-.dropdown-divider + .dropdown-header {
-  margin-top: 0.768rem; }
+.dropdown-divider {
+  opacity: 1; }
+  .dropdown-divider + .dropdown-header {
+    margin-top: 0.768rem; }
 
 .dropdown-header {
   font-weight: 400;
