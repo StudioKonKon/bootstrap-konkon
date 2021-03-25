@@ -1,22 +1,5 @@
 "use strict";
 (function() {
-
-	document.querySelectorAll(".be-content .main-content")
-		.forEach(function(tooltip) {
-			new bootstrap.Tooltip(tooltip, {
-				selector: "[data-bs-toggle='tooltip']",
-				animation: false
-			});
-		});
-		
-	document.querySelectorAll(".be-content .main-content")
-		.forEach(function(popover) {
-			new bootstrap.Popover(popover, {
-				selector: "[data-bs-toggle='popover']",
-				animation: false
-			});
-		});
-		
 	document.querySelectorAll(".be-content .main-content .lbl-tooltip-example")
 		.forEach(function(tooltip) {
 			tooltip.setAttribute("data-bs-toggle", "tooltip");
@@ -39,5 +22,4 @@
 				e.stopPropagation();
 			}, false);
 		});
-		
 })();

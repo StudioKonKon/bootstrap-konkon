@@ -1,11 +1,7 @@
 "use strict";
 (function() {
 
-	var toastElList = [].slice.call(document.querySelectorAll(".toast")),
-		toastList = toastElList.map(function (toastEl) {
-			return new bootstrap.Toast(toastEl);
-		}),
-		toast_wrapper = document.querySelector("#toast_wrapper"),
+	var toast_wrapper = document.querySelector("#toast_wrapper"),
 		toastPositions = {
 			"tl": { value: "top-0 start-0", title: "Top Left" },
 			"tm": { value: "top-0 start-50 translate-middle-x", title: "Top Middle" },
@@ -52,7 +48,7 @@
 			}
 			
 		}, false);
-	})
+	});
 		
 })();
 

@@ -2,9 +2,11 @@
   [Accordions]
 */
 
-.accordion-button {
-	&.collapsed {
-		border-bottom-width: $accordion-border-width;
+.accordion-button {	
+	
+	&,
+	&:not(.collapsed) {
+		box-shadow: none;
 	}
 	
 	.icon {
@@ -43,26 +45,9 @@
 	}
 }
 
-.accordion-collapse {
-	border-width: 0 $accordion-border-width $accordion-border-width;
-}
-
 .accordion-flush {
-	.accordion-button {
-		border-top-width: 0;
-		
-		&.collapsed {
-			border-bottom-width: 0;
-		}
-	}
-	
-	.accordion-collapse {
-		border-width: 0;
-	}
-
+	.accordion-button,
 	.accordion-item {
-		.accordion-collapse {
-			border-bottom-width: 0;
-		}
+		border-width: 0;
 	}
 }
