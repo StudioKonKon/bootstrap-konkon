@@ -21,7 +21,7 @@
 			});
 		});
 	
-	forms = document.querySelectorAll('.be-content .needs-validation')
+	forms = document.querySelectorAll(".be-content .needs-validation")
 
 	Array.prototype.slice.call(forms)
 		.forEach(function (form) {
@@ -34,5 +34,7 @@
 				form.classList.add("was-validated");
 			}, false)
 		});
+	
+	document.querySelector("#flexCheckIndeterminate").indeterminate = true;
 	
 })();

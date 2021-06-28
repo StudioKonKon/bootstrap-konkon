@@ -18,10 +18,9 @@
 	"homepage": "https://play.studiokonkon.com/",
 	"author": "Studio KonKon",
 	"license": "MIT",
-	"dependencies": {},
 	"devDependencies": {
-		"@popperjs/core": "^2.6.0",
-		"bootstrap": "^5.0.0-beta3",
+		"@popperjs/core": "^2.9.2",
+		"bootstrap": "^5.0.2",
 		"material-design-iconic-font": "^2.2.0"
 	},
 	"files": [

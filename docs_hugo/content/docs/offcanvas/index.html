@@ -1,0 +1,126 @@
++++
+title = "Offcanvas"
+author = "Studio KonKon"
+description = "Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin."
+body_class = "bg-light"
+	
+[[extra_css]]
+	src = "offcanvas.css"
+
++++
+
+<div class="container-md card card-body">
+
+<p>Use the buttons below to show and hide an offcanvas element via JavaScript that toggles the <code>.show</code> class on an element with the <code>.offcanvas</code> class. You can also use a link with the <code>href</code> attribute, or a button with the <code>data-bs-target</code> attribute. In both cases, the <code>data-bs-toggle="offcanvas"</code> is required.</p>
+
+<div class="d-flex justify-content-center mb-4">
+	<a href="#offcanvasExample"
+	   class="btn btn-secondary mx-1"
+	   data-bs-toggle="offcanvas"
+	   role="button"
+	   aria-controls="offcanvasExample">Link with href</a>
+	<button class="btn btn-secondary mx-1"
+	        type="button"
+			data-bs-toggle="offcanvas"
+			data-bs-target="#offcanvasExample"
+			aria-controls="offcanvasExample">Button with data-bs-target</button>
+</div>
+
+<hr />
+<h2 id="placement">Placement<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#placement" style="padding-left: 0.375em;"></a></h2>
+
+<p>There’s no default placement for offcanvas components, so you must add one of the modifier classes below;</p>
+
+<ul>
+<li><code>.offcanvas-start</code> places offcanvas on the left of the viewport (shown above)</li>
+<li><code>.offcanvas-end</code> places offcanvas on the right of the viewport</li>
+<li><code>.offcanvas-bottom</code> places offcanvas on the bottom of the viewport</li>
+</ul>
+
+<hr />
+<h2 id="backdrop">Backdrop<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#backdrop" style="padding-left: 0.375em;"></a></h2>
+
+<p>Scrolling the <code>&lt;body&gt;</code> element is disabled when an offcanvas and its backdrop are visible. Use the <code>data-bs-scroll</code> attribute to toggle <code>&lt;body&gt;</code> scrolling and <code>data-bs-backdrop</code> to toggle the backdrop.</p>
+
+<hr />
+<h2 id="accessibility">Accessibility<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#accessibility" style="padding-left: 0.375em;"></a></h2>
+
+<p>Since the offcanvas panel is conceptually a modal dialog, be sure to add <code>aria-labelledby="..."</code>—referencing the offcanvas title—to <code>.offcanvas</code>. Note that you don’t need to add <code>role="dialog"</code> since we already add it via JavaScript.</p>
+
+</div>
+
+<div class="offcanvas offcanvas-start border-0 shadow"
+	 tabindex="-1"
+	 id="offcanvasExample"
+	 aria-labelledby="offcanvasExampleLabel"
+	 data-bs-backdrop="false">
+	<div class="offcanvas-header border-bottom d-flex align-items-center">
+		<img class="skk-oc-logo me-2 rounded-circle" src="/images/avatar.png" />
+		<span class="fs-4 flex-grow-1">Studio KonKon</span>
+		<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	</div>
+	<div class="offcanvas-body">
+		<h3 class="text-primary">Offcanvas</h3>
+		<p>Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.</p>
+		<hr />
+		<ul class="nav nav-pills flex-column mb-auto">
+			<li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+			<li><a href="#" class="nav-link link-dark">Dashboard</a></li>
+			<li><a href="#" class="nav-link link-dark">Orders</a></li>
+			<li><a href="#" class="nav-link link-dark">Products</a></li>
+			<li><a href="#" class="nav-link link-dark">Customers</a></li>
+		</ul>
+		<hr />
+		<div class="list-group list-group-flush border-bottom scrollarea">
+			<a href="#" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
+				<div class="d-flex w-100 align-items-center justify-content-between">
+					<strong class="mb-1">List group item heading</strong>
+					<small>Wed</small>
+				</div>
+				<div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+			</a>
+			<a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+				<div class="d-flex w-100 align-items-center justify-content-between">
+					<strong class="mb-1">List group item heading</strong>
+					<small>Wed</small>
+				</div>
+				<div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+			</a>
+			<a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+				<div class="d-flex w-100 align-items-center justify-content-between">
+					<strong class="mb-1">List group item heading</strong>
+					<small>Wed</small>
+				</div>
+				<div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+			</a>
+			<a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+				<div class="d-flex w-100 align-items-center justify-content-between">
+					<strong class="mb-1">List group item heading</strong>
+					<small>Wed</small>
+				</div>
+				<div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+			</a>
+		</div>
+	</div>
+	<div class="border-top p-3">
+		<div class="dropdown">
+			<a href="#"
+			   class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+			   id="dropdownUser2"
+			   data-bs-toggle="dropdown"
+			   aria-expanded="false">
+				<img src="/images/avatar.png" alt="Studio KonKon" width="32" height="32" class="rounded-circle me-2">
+				<strong>Studio KonKon</strong>
+			</a>
+			<ul class="dropdown-menu text-small shadow"
+				aria-labelledby="dropdownUser2">
+				<li><a class="dropdown-item" href="#">New project...</a></li>
+				<li><a class="dropdown-item" href="#">Settings</a></li>
+				<li><a class="dropdown-item" href="#">Profile</a></li>
+				<li class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#">Sign out</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
