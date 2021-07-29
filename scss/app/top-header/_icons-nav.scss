@@ -1,0 +1,76 @@
+/* Icons nav */
+
+.be-icons-nav {
+	@media print {
+		display: none;
+	}
+	
+	.be-top-header & {
+		margin-right: map-get($spacers, 3);
+	}
+	
+	@include media_size("tablet") {
+		.be-top-header & {
+			margin-right: 10px;
+		}
+	}
+
+	> li.dropdown {
+		position: static;
+
+		> a {
+			position: relative;
+			
+			.navbar-expand & {
+				padding: 0 10px;
+			}
+			
+			.icon {
+				font-size: 1.846rem;
+				vertical-align: middle;
+			}
+
+			.indicator {
+				position: absolute;
+				top: 18px;
+				right: 6px;
+				background-color: $primary;
+				border-radius: 50%;
+				display: block;
+				height: 6px;
+				width: 6px;
+			}
+		}
+
+		.dropdown-menu {
+			position: fixed;
+			top: $top-header-height;
+			width: $icons-nav-dropdown-width;
+			border-radius: $border-radius;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+			border: 1px solid hsl(0, 0%, 88%);
+			box-sizing: content-box;
+		}
+	}
+	
+	@include media_size("small-phone") {
+		> li.dropdown {
+			.dropdown-menu {
+				left: 0;
+				width: 100%;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				border-width: 0;
+
+				.be-top-header & {
+					border-radius: 0;
+					margin-top: 1px;
+				}
+
+				.footer a {
+					border-bottom: 1px solid darken($white, 7.7%);
+				}
+			}
+		}
+	}
+}

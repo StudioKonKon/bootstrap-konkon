@@ -20,7 +20,7 @@
 	}
 	@else if $device == "desktop-down"
 	{
-		@include media-breakpoint-down(lg) { @content; } // max-width: 1199.98px
+		@include media-breakpoint-down(xl) { @content; } // max-width: 1199.98px
 	}
 	@else if $device == "laptop"
 	{
@@ -32,11 +32,11 @@
 	}
 	@else if $device == "tablet"
 	{
-		@include media-breakpoint-down(md) { @content; } // max-width: 991.98px
+		@include media-breakpoint-down(lg) { @content; } // max-width: 991.98px
 	}
 	@else if $device == "phone"
 	{
-		@include media-breakpoint-down(sm) { @content; } // max-width: 767.98px
+		@include media-breakpoint-down(md) { @content; } // max-width: 767.98px
 	}
 	@else if $device == "phone-min"
 	{
@@ -44,7 +44,7 @@
 	}
 	@else if $device == "small-phone"
 	{
-		@include media-breakpoint-down(xs) { @content; } // max-width: 575.98px
+		@include media-breakpoint-down(sm) { @content; } // max-width: 575.98px
 	}
 	@else if $device == "non-responsive"
 	{

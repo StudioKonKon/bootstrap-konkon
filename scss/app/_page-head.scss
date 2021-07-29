@@ -1,0 +1,78 @@
+/*------------------------------------------------------------------
+  [Page head]
+*/
+
+.page-head {
+	padding: map-get($spacers, 4) $content-padding map-get($spacers, 2);
+	position: relative;
+	
+	@media print {
+		display: none;
+	}
+
+	&-title {
+		display: block;
+		margin-bottom: .385rem;
+		margin-top: .462rem;
+		font-weight: $font-weight-light;
+		font-size: 2.154rem;
+		color: hsl(0, 0%, 42%);
+		line-height: 2.769rem;
+	}
+
+	&-description {
+		display: block;
+		color: hsl(0, 0%, 43%);
+		font-size: 1.077rem;
+		font-weight: $font-weight-light;
+		padding: 0 0 .462rem;
+	}
+
+	.breadcrumb {
+		background-color: transparent;
+		padding: .231rem 0;
+		margin-bottom: .538rem;
+		line-height: 1.231rem;
+
+		> li {
+			font-size: 1.077rem;
+			font-weight: $font-weight-light;
+
+			& + li:before {
+				padding: 0 map-get($spacers, 2);
+				color: hsl(0, 0%, 64%);
+			}
+
+			> a {
+				color: hsl(0,0%,37%);
+
+				&:hover {
+					color: hsl(0, 0%, 19%);
+				}
+			}
+		}
+
+		> .active {
+			color: hsl(0, 0%, 48%);
+		}
+		
+		&-item {
+			padding-left: 0;
+		}
+	}
+
+	@include media_size("phone") {
+		padding: 18px $content-padding-small-phone 0;
+
+		> nav,
+		.page-head-nav,
+		ol.breadcrumb {
+			display: none;
+		}
+		
+		&-title {
+			font-size: 1.846rem;
+			line-height: 2.154rem;
+		}
+	}
+}

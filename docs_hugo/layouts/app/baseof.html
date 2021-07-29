@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"{{ with .Page.Params.html_class }} class="{{ . }}"{{ end }}>
+	<head>
+{{ partial "app/head" . }}
+{{- partialCached "app/site-styles" . }}
+	</head>
+	<body{{ with .Page.Params.body_class }} class="{{ . }}"{{ end }}>
+<div class="be-wrapper be-offcanvas-menu be-fixed-sidebar">
+{{ partial "app/top-navbar" . }}
+{{ partial "app/left-sidebar" . }}
+	<div class="be-content">
+		<div class="container">
+			<div class="main-content">
+{{ block "main" . }}{{ end }}
+			</div>
+		</div>
+	</div>
+</div>
+{{ partialCached "app/site-scripts" . }}
+	</body>
+</html>

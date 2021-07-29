@@ -1,0 +1,73 @@
+// Studio KonKon App Variables
+
+// Brand Logo
+$top-header-logo-width:    10.923rem;
+$top-header-logo-height:   27px;
+$top-header-logo-padding:  map-get($spacers, 4);
+$top-header-logo-position: center;
+$top-header-logo-size:     contain;
+
+$top-header-menu-icon-size:    1.846rem;
+$top-header-menu-icon-color:   #5a5a5a;
+$top-header-menu-icon-padding: 0 map-get($spacers, 4);
+
+$top-header-title-size:    1.462rem;
+$top-header-title-padding: 0 map-get($spacers, 4);
+
+$top-header-icon-color: darken($white, 55%);
+$top-header-icon-active-color: $primary;
+
+
+//Content
+$content-padding:				map-get($spacers, 5);
+$content-padding-tablet:		map-get($spacers, 5);
+$content-padding-phone:			map-get($spacers, 3);
+$content-padding-small-phone:	map-get($spacers, 2);
+
+//Top Header
+$top-header-bg:					$white;
+$top-header-border:             0;
+$top-header-border-bottom:      1px solid darken($top-header-bg, 10%);
+$top-header-padding:            0;
+$top-header-margin-bottom:      0;
+$top-header-phone-bg:			lighten($black, 10%);
+$top-header-link-color:			darken($white, 55%);
+$top-header-height:				60px;
+$top-header-height-phone:		70px;
+$top-header-navbar-font-size:	$font-size-base + .077rem;
+$top-header-navbar-padding:		18px;
+$top-header-box-shadow:			0px 1px 2px rgba(0, 0, 0, 0.1);
+$icons-nav-dropdown-width:		350px;
+$user-dropdown-width:			350px;
+$zindex-navbar-fixed:			1032;
+
+//Left Sidebar
+$left-sidebar-separators:			true;
+$left-sidebar-bg:					#fff;
+$left-sidebar-hover-color:			lighten($primary, 14%);
+$left-sidebar-level-bg:				lighten($primary, 28%);
+$left-sidebar-level-hover:			lighten($primary, 24%);
+$left-sidebar-level-color:			$primary;
+$left-sidebar-border-color:			$left-sidebar-level-hover;
+
+$left-sidebar-width:				17.692rem;
+$left-sidebar-width-collapsed:		4.615rem;
+$left-sidebar-color:				lighten($body-color, 16%);
+$left-sidebar-logo-bg:				darken($dark, 1.5%);
+$left-sidebar-icon-size:			1.462rem;
+$left-sidebar-main-level-font-size:	1.077rem;
+$left-sidebar-main-level-padding:	map-get($spacers, 4);
+$left-sidebar-main-level-height:	$spacer * 2.923;
+$left-sidebar-sub-level-color:		$primary;
+$left-sidebar-sub-level-bg:			lighten($primary, 28%);
+$left-sidebar-sub-level-hover:		lighten($primary, 24%);
+$left-sidebar-sub-level-font-size:	1rem;
+$left-sidebar-sub-level-padding:	.615rem 1.154rem .615rem 3.769rem;
+
+//Right Sidebar
+$right-sidebar-width:				22.308rem;
+$right-sidebar-width-phone:			22.308rem;
+$right-sidebar-icons-color:			darken($white, 33.2%);
+$right-sidebar-low-contrast-color:	darken($white, 30%);
+$right-sidebar-background:			#fafafa;
+$right-sidebar-z-index:				$zindex-navbar-fixed - 1;

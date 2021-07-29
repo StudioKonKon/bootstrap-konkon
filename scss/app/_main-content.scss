@@ -1,0 +1,148 @@
+/*------------------------------------------------------------------
+  [Main content]
+*/
+@mixin konkon-grid-columns($columns: $grid-columns, $breakpoints: $grid-breakpoints)
+{
+	%main-content
+	{
+		@content;
+	}
+	
+	.col
+	{
+		@extend %main-content;
+	}
+	
+	@each $breakpoint in map-keys($breakpoints)
+	{
+		$infix: breakpoint-infix($breakpoint, $breakpoints);
+		
+		.col#{$infix}
+		{
+			@extend %main-content;
+		}
+		
+		@for $i from 1 through $columns
+		{
+			.col#{$infix}-#{$i}
+			{
+				@extend %main-content;
+			}
+		}
+		
+		.col#{$infix}-auto
+		{
+			@extend %main-content;
+		}
+	}
+		
+	@for $i from 1 through $columns
+	{
+		.col-xxl-#{$i}
+		{
+			@extend %main-content;
+		}
+	}
+	
+	.col-xxl-auto
+	{
+		@extend %main-content;
+	}
+}
+
+.be-content-sidebar {
+	margin-left: $left-sidebar-width;
+
+	@include media_size("phone") {
+		margin-left: 0;
+	}
+	
+	@media print {
+		margin-left: 0;
+	}
+
+	.be-nosidebar-left & {
+		margin-left: 0;
+	}
+	
+	.be-collapsible-sidebar-collapsed & {
+		margin-left: $left-sidebar-width-collapsed;
+		
+		@include media_size("phone") {
+			margin-left: 0;
+		}
+	}
+	
+	.be-offcanvas-menu & {
+		margin-left: 0;
+	}
+	
+	@include media_size("non-responsive") {
+		.be-offcanvas-menu-sm & {
+			margin-left: $left-sidebar-width;
+		}
+	}
+	
+	@include media_size("non-responsive") {
+		.be-boxed-layout.be-fixed-sidebar & {
+			margin-left: $left-sidebar-width;
+			min-height: 100vh;
+		}
+	}
+}
+
+.be-content {
+	position: relative;
+	left: 0;
+	min-height: 100%;
+	
+	.be-mega-menu & {
+		margin-left: auto;
+	}
+	
+	@include media_size("non-responsive") {
+		.be-boxed-layout &
+		{
+			margin-left: 0;
+			overflow: hidden;
+			width: 100%;
+		}
+	}
+}
+
+.main-content {
+	padding: $content-padding;
+
+	@include media_size("tablet") {
+		padding-left: $content-padding-tablet;
+		padding-right: $content-padding-tablet;
+		padding-top: $content-padding-tablet + map-get($spacers, 1);
+	}
+
+	@include media_size("phone") {
+		height: 100%;
+		overflow: auto;
+		padding-left: $content-padding-phone;
+		padding-right: $content-padding-phone;
+		padding-top: map-get($spacers, 3);
+	}
+
+	@include media_size("small-phone") {
+		padding-right: $content-padding-small-phone;
+		padding-left: $content-padding-small-phone;
+		
+		.row {
+			margin-left: 0 - map-get($spacers, 2);
+			margin-right: 0 - map-get($spacers, 2);
+		}
+		
+		@include konkon-grid-columns(12) {
+			padding-left: map-get($spacers, 2);
+			padding-right: map-get($spacers, 2);
+		}
+	}
+
+	.be-no-padding & {
+		padding: 0;
+	}
+}
