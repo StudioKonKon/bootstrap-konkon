@@ -4,14 +4,15 @@ $sk-variable-prefix: sk- !default;
 
 // Options
 $enable-custom-badges: 			true !default;
-
-$enable-card-border-colors:		true !default;
-$enable-card-full-colors:		true !default;
-$enable-dropdown-colors:		false !default;
 $enable-modal-header-colors:	true !default;
-$enable-modal-full-colors:		true !default;
-$enable-btn-social-colors:		true !default;
-$enable-toast-colors:			true !default;
+$enable-alert-colors:			true !default;
+$enable-card-border-colors:		true !default;
+
+$enable-card-full-colors:		false !default;
+$enable-dropdown-colors:		false !default;
+$enable-modal-full-colors:		false !default;
+$enable-toast-colors:			false !default;
+$enable-btn-social-colors:		false !default;
 
 // Maps
 $dropdown-colors: map-remove($theme-colors, "light", "secondary", "dark") !default;
