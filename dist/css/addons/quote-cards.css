@@ -1,0 +1,21 @@
+/* --- Quote Cards --- */
+.quote-card {
+  position: relative;
+  padding: 1.923rem;
+  margin-top: 1.5625rem;
+}
+.quote-card-icon {
+  font-size: 1.25rem;
+  text-align: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -1.5625rem;
+  left: 1.5625rem;
+}
+
+/*# sourceMappingURL=quote-cards.css.map */

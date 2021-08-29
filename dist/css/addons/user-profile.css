@@ -1,0 +1,79 @@
+/* --- User Profile Card --- */
+.user-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 0.231rem;
+  background-color: #fff;
+}
+.user-card-header {
+  position: relative;
+  height: 8.125rem;
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .user-card-header {
+    height: 18.75rem;
+  }
+}
+.user-card-body {
+  position: relative;
+  padding: 0.769rem 1.538rem;
+}
+.user-card-avatar {
+  position: absolute;
+  bottom: -3.125rem;
+  left: calc(50% - 3.125rem);
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  border: 0.1875rem solid #fff;
+  background-color: #f8f9fa;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .user-card-avatar {
+    left: 1.538rem;
+  }
+}
+.user-card-info {
+  padding-top: 3.125rem;
+  padding-bottom: 1.538rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .user-card-info {
+    text-align: left;
+  }
+}
+.user-card-info .user-card-fullname {
+  display: block;
+  font-size: 1.385rem;
+  font-weight: 500;
+}
+.user-card-info .user-card-username {
+  font-size: 1rem;
+  color: #899197;
+}
+.user-card-description {
+  margin: 0;
+}
+.user-card-details {
+  padding-top: 1.538rem;
+  text-align: center;
+}
+.user-card-details .title {
+  text-transform: uppercase;
+  font-size: 0.8462rem;
+  color: #899197;
+}
+.user-card-details .counter {
+  font-size: 1.385rem;
+}
+
+/*# sourceMappingURL=user-profile.css.map */

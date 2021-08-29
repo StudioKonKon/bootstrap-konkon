@@ -1,0 +1,69 @@
+/* --- Brand Cards --- */
+.brand-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  border-radius: 0.231rem;
+}
+
+.brand-card-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 6rem;
+  border-radius: 0.231rem 0.231rem 0 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.brand-card-header .brand-card-title {
+  font-size: 1.308rem;
+  font-weight: 500;
+}
+.brand-card-header .brand-card-subtitle {
+  font-size: 1rem;
+}
+.brand-card-header .brand-card-title,
+.brand-card-header .brand-card-subtitle {
+  margin: 0;
+  padding: 0;
+}
+.brand-card-header .icon {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.brand-card-header svg.icon {
+  height: 1em;
+  width: auto;
+}
+
+a.brand-card-header:hover {
+  opacity: 0.85;
+}
+
+.brand-card-body {
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  padding: 0.769rem 0;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 0;
+  border-radius: 0 0 0.231rem 0.231rem;
+}
+.brand-card-body > .brand-card-item {
+  flex: 1;
+  padding: 0.3845rem 0;
+}
+.brand-card-body > .brand-card-item:not(:last-child) {
+  border-right: 1px solid #dee2e6;
+}
+
+/*# sourceMappingURL=brand-cards.css.map */

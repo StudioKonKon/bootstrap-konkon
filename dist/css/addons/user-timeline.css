@@ -1,0 +1,68 @@
+/* --- User Timeline --- */
+.user-timeline {
+  position: relative;
+  display: block;
+  padding: 0;
+  list-style: none;
+}
+.user-timeline:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0.4375rem;
+  top: 1.25rem;
+  bottom: 0.25rem;
+  height: auto;
+  width: 0.125rem;
+  background-color: #4285f4;
+}
+.user-timeline:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0.25rem;
+  bottom: 0;
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: #4285f4;
+  border-radius: 50%;
+}
+.user-timeline > li {
+  display: block;
+  position: relative;
+  padding-left: 2.154rem;
+  padding-bottom: 1.538rem;
+}
+.user-timeline > li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 0.25rem;
+  height: 1rem;
+  width: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #4285f4;
+}
+.user-timeline > li.latest:before {
+  background-color: #4285f4;
+}
+.user-timeline > li p:last-child {
+  margin-bottom: 0;
+}
+.user-timeline-date {
+  display: block;
+  line-height: 1.5rem;
+  color: #adb5bd;
+  font-size: 0.8462rem;
+  margin-bottom: 0.385rem;
+}
+.user-timeline-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=user-timeline.css.map */
