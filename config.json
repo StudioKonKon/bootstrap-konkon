@@ -37,12 +37,12 @@
 	"params": {
 		"theme_color": "#fe669e",
 		"author": "Studio KonKon",
-		"current_version": "1.0.0-beta2",
-		"docs_version": "5.0",
+		"current_version": "1.1.2-beta",
+		"docs_version": "5.1.0",
 		"github_org": "https://github.com/StudioKonKon",
 		"repo": "https://github.com/StudioKonKon/bootstrap-konkon",
 		"desciption": "",
-		"copyright": "Copyright of Studio KonKon &copy; 2018-2020<span class='d-none d-sm-inline'> | </span><br class='d-block d-sm-none' />Powered by Hugo &amp; Bootstrap 5",
+		"copyright": "Copyright of Studio KonKon &copy; 2018-2021<span class='d-none d-sm-inline'> | </span><br class='d-block d-sm-none' />Powered by Hugo &amp; Bootstrap 5",
 		"footer_message": "",
 		"social_links": {
 			"twitter": {

@@ -1,6 +1,22 @@
+//
+// Theme Specific Overrides
+//
+
+// Paths
+$img-logo-path:          "" !default;
+$img-logo-contrast-path: "" !default;
+$fonts-path:             "../fonts" !default;
+$lib-path:               "../../lib" !default;
+
+$roboto-font-path:		"#{$fonts-path}/roboto" !default;
+$roboto:				"Roboto", Arial, sans-serif !default;
+$icons-font-path:		"#{$fonts-path}/" !default;
+$icons-font:			"Material-Design-Iconic-Font" !default;
+$icons-class:			"zmdi" !default;
 
 // Theme Variable Prefix
 $sk-variable-prefix: sk- !default;
+
 
 // Options
 $enable-custom-badges: 			true !default;
@@ -14,6 +30,18 @@ $enable-modal-full-colors:		false !default;
 $enable-toast-colors:			false !default;
 $enable-btn-social-colors:		false !default;
 
+
+// Maps
+$custom-theme-colors: () !default;
+$social-colors: () !default;
+
+
+// Other Colours
+$skk-konkon:		    lighten($konkon-color, 6.1%);
+$card-konkon: 		    $skk-konkon;
+$dropdown-konkon:	    $skk-konkon;
+$modal-konkon:		    $skk-konkon;
+
 // Maps
 $dropdown-colors: map-remove($theme-colors, "light", "secondary", "dark") !default;
 
@@ -21,7 +49,6 @@ $dropdown-colors: map-remove($theme-colors, "light", "secondary", "dark") !defau
 // Maps to remove from this code
 $skk-colors:		() !default;
 $modal-colors:		() !default;
-$social-colors:		() !default;
 
 $body-bg-light:		#eef0f2;
 

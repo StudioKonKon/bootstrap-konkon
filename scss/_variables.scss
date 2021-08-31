@@ -1,21 +1,22 @@
-//Paths
-$img-logo-path:          "" !default;
-$img-logo-contrast-path: "" !default;
-$fonts-path:             "../fonts" !default;
-$lib-path:               "../../lib" !default;
+// Theme colours
+$konkon-color: #fe669e;
 
-$roboto-font-path:		"#{$fonts-path}/roboto" !default;
-$roboto:				"Roboto", Arial, sans-serif !default;
-$icons-font-path:		"#{$fonts-path}/" !default;
-$icons-font:			"Material-Design-Iconic-Font" !default;
-$icons-class:			"zmdi" !default;
 
+// Theme Specific Bootstrap Variable Overrides
 $base-font-sans-serif: Roboto, Arial, sans-serif, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 $base-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-// Define Maps
-$custom-theme-colors: ();
+$font-family-sans-serif: $base-font-sans-serif;
+$font-family-monospace: $base-font-monospace;
+
+$mark-bg: shift-color($konkon-color, -80%);
+$code-color: $konkon-color;
+
+
+//
+// Main Bootstrap Overrides
+//
 
 // Color system
 $white:    #fff !default;
@@ -48,13 +49,6 @@ $info:		#6ba4ff;
 $color-contrast-light: $white;
 $color-contrast-dark: $black;
 $min-contrast-ratio: 1.7;
-
-
-// KonKon colors palette brand
-@import "konkon-colors";
-
-// Color variations
-//@import "contrast-colors";
 
 
 // Spacing
@@ -131,9 +125,6 @@ $box-shadow-inset:		inset 0 1px 2px rgba($black, .075);
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: $base-font-sans-serif;
-$font-family-monospace: $base-font-monospace;
-
 $font-size-base:	1rem;
 $font-size-sm:		$font-size-base * .8462;
 $font-size-lg:		$font-size-base * 1.15;
@@ -175,7 +166,6 @@ $blockquote-font-size:			$font-size-base;
 $blockquote-footer-color:		$gray-600;
 $blockquote-footer-font-size:	$small-font-size;
 
-$mark-bg:		shift-color($konkon-color, -80%);
 $mark-padding:	0;
 
 // Paragraphs
@@ -382,7 +372,6 @@ $progress-box-shadow:               none;
 //##
 
 $code-font-size:				$small-font-size;
-$code-color:					$konkon-color;
 
 $kbd-color:						$white;
 $kbd-bg:						$dark;
