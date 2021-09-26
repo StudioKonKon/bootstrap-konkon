@@ -24,7 +24,7 @@ Theme experiments: https://codepen.io/collection/AKjdRW
 
 No dark mode!?
 
-Bootstrap already supports "Dark Mode", however, any changes and custom components I create is not tested for use in "Dark Mode" and may not dupport it either.
+Bootstrap already supports "Dark Mode", however, any changes and custom components I create is not tested for use in "Dark Mode" and may not support it either.
 
 I'm sorry but I won't be planning any testing or support for dark mode. It's not that I hate it but simply that dark mode causes eye strain and it's difficult for me to work with. It only takes up to 3 seconds and I get an instant migraine, blurred vision and feeling sick.
 
