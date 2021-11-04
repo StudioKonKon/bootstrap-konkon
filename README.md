@@ -18,4 +18,16 @@ A personal project I intend to use as a theme for my own website(s) but availabl
 - To view documentation, use [GoHugo](https://gohugo.io/)
 
 ### Other Links
-Theme experiments: https://codepen.io/collection/AQvoEb/
+Theme experiments: https://codepen.io/collection/AKjdRW
+
+### Dark Mode Support
+
+No dark mode!?
+
+Bootstrap already supports "Dark Mode", however, any changes and custom components I create is not tested for use in "Dark Mode" and may not support it either.
+
+I'm sorry but I won't be planning any testing or support for dark mode. It's not that I hate it but simply that dark mode causes eye strain and it's difficult for me to work with. It only takes up to 3 seconds and I get an instant migraine, blurred vision and feeling sick.
+
+Light mode has never been an issue and even in the dark, light mode does not burn my eyes as others claim happens to them. I've already seen a doctor and optician and they say it's simply the shape of the eye, how light enters and how the brain processes that light; There's nothing I can do about it except wear darkened glasses that darkens white text on black. Kind of pointless, really.
+
+Unfortunately, dark mode is impossible for me to work with and neither do I need it. This is only a personal project but anyone is welcome to share their "Dark Mode" code.
