@@ -6,6 +6,7 @@
 [![GitHub file size in bytes](https://img.shields.io/github/size/StudioKonKon/bootstrap-konkon/dist/css/studio-konkon.css?label=CSS&style=flat-square)](https://github.com/StudioKonKon/bootstrap-konkon)
 [![GitHub file size in bytes](https://img.shields.io/github/size/StudioKonKon/bootstrap-konkon/dist/css/studio-konkon.min.css?label=CSS%20min%20size&style=flat-square)](https://github.com/StudioKonKon/bootstrap-konkon)
 [![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/StudioKonKon/bootstrap-konkon/dev/bootstrap?label=Bootstrap&logo=bootstrap&logoColor=%23fff&style=flat-square)](https://github.com/twbs/bootstrap)
+[![](https://data.jsdelivr.com/v1/package/gh/StudioKonKon/bootstrap-konkon/badge)](https://www.jsdelivr.com/package/gh/StudioKonKon/bootstrap-konkon)
 
 ### About
 
