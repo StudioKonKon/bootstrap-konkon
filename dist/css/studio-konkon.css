@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Studio KonKon v1.2.0-beta (https://studiokonkon.com/)
+ * Studio KonKon v1.2.1-beta (https://studiokonkon.com/)
  * Copyright 2018-2021 Studio KonKon
  */
 :root {
@@ -7836,9 +7836,19 @@ textarea.form-control-lg {
   color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-konkon {
+.text-black {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-konkon-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-white {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-body {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-muted {
@@ -7917,9 +7927,19 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-konkon {
+.bg-black {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-konkon-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-white {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-body {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-transparent {
