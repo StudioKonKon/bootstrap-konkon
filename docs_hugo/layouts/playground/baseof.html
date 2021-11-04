@@ -3,6 +3,11 @@
 	<head>
 {{ partial "app/head" . }}
 {{- partialCached "app/site-styles" . }}
+
+{{ range .Page.Params.extra_css }}
+   <link href="{{ .src }}" rel="stylesheet" />
+{{- end }}
+ 
 	</head>
 	<body{{ with .Page.Params.body_class }} class="{{ . }}"{{ end }}>
 <div class="be-wrapper{{ with .Page.Params.left_sidebar_class }} {{ . }}{{ end }}">

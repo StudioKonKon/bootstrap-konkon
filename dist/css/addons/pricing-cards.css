@@ -19,12 +19,12 @@
   right: 0.875rem;
 }
 .pricing-card-title {
-  font-size: 1.308rem;
+  font-size: 1.38rem;
   font-weight: 300;
 }
 .pricing-card-price {
   padding: 0.385rem 0 1.154rem;
-  font-size: 2.539rem;
+  font-size: 2.5rem;
 }
 .pricing-card-price .currency {
   vertical-align: text-top;
@@ -32,7 +32,7 @@
   padding-right: 0.385rem;
 }
 .pricing-card-price .frequency {
-  font-size: 1.308rem;
+  font-size: 1.38rem;
   font-weight: 300;
   vertical-align: text-bottom;
 }

@@ -47,8 +47,6 @@
 
 //Card heading
 .card-header {
-	font-size: $card-heading-font-size;
-	font-weight: $card-heading-font-weight;
 	border-bottom-width: 0;
 	@include border-top-radius($card-border-radius);
 	background-color: transparent;
@@ -97,13 +95,10 @@
 }
 
 .card-title {
-	font-size: $card-heading-font-size;
-	font-weight: $card-heading-font-weight;
 	display: block;
 }
 
 .card-subtitle {
-	font-size: $font-size-base;
 	color: darken($white, 56%);
 }
 

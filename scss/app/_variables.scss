@@ -44,9 +44,9 @@ $zindex-navbar-fixed:			1032;
 //Left Sidebar
 $left-sidebar-separators:			true;
 $left-sidebar-bg:					#fff;
-$left-sidebar-hover-color:			lighten($primary, 14%);
-$left-sidebar-level-bg:				lighten($primary, 28%);
-$left-sidebar-level-hover:			lighten($primary, 24%);
+$left-sidebar-hover-color:			lighten($primary, 15%);
+$left-sidebar-level-bg:				lighten($primary, 35%);
+$left-sidebar-level-hover:			lighten($primary, 30%);
 $left-sidebar-level-color:			$primary;
 $left-sidebar-border-color:			$left-sidebar-level-hover;
 
@@ -59,10 +59,10 @@ $left-sidebar-main-level-font-size:	1.077rem;
 $left-sidebar-main-level-padding:	map-get($spacers, 4);
 $left-sidebar-main-level-height:	$spacer * 2.923;
 $left-sidebar-sub-level-color:		$primary;
-$left-sidebar-sub-level-bg:			lighten($primary, 28%);
-$left-sidebar-sub-level-hover:		lighten($primary, 24%);
+$left-sidebar-sub-level-bg:			lighten($primary, 35%);
+$left-sidebar-sub-level-hover:		lighten($primary, 30%);
 $left-sidebar-sub-level-font-size:	1rem;
-$left-sidebar-sub-level-padding:	.615rem 1.154rem .615rem 3.769rem;
+$left-sidebar-sub-level-padding:	.615rem map-get($spacers, 4);
 
 //Right Sidebar
 $right-sidebar-width:				22.308rem;

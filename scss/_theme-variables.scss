@@ -145,7 +145,7 @@ $card-heading-font-weight:			$font-weight-light;
 $card-heading-icon-color:			$gray-500;
 $card-heading-icon-hover:			$gray-600;
 $card-heading-icon-size:			1.538rem;
-$card-heading-icon-separation:		map-get($spacers, 1) / 2;
+$card-heading-icon-separation:		map-get($spacers, 1) * .5;
 $card-heading-icon-line-height:		map-get($spacers, 5);
 
 $card-footer-padding-x:	            map-get($spacers, 4);

@@ -93,6 +93,11 @@
 	.sidebar-elements {
 		margin: 0;
 		padding: 0;
+      
+		.sub-menu .sub-menu {
+			padding: 0;
+			padding-left: map-get($spacers, 2);
+		}
 
 		.divider {
 			@if($left-sidebar-separators) {
@@ -218,7 +223,7 @@
 			ul {
 				display: none;
 				background-color: $left-sidebar-sub-level-bg;
-				padding: map-get($spacers, 2) 0;
+				padding: map-get($spacers, 1) 0;
 				list-style: none;
 				line-height: 1.538rem;
 				
@@ -279,18 +284,6 @@
 										border-color: transparent;
 										padding: 0;
 									}
-									
-									$BCSC5_la: "";
-									$BCSC5_lp: map-get($spacers, 3);
-									
-									@for $i from 0 to 5 {
-										$BCSC5_la: " > ul > li" + $BCSC5_la;
-										$BCSC5_lp: $BCSC5_lp + map-get($spacers, 2);
-										
-										& #{$BCSC5_la} > a {
-											padding-left: $BCSC5_lp;
-										}
-									}
 								}
 							}
 						}
@@ -346,19 +339,6 @@
 						
 						> li ul {
 							padding: map-get($spacers, 1) 0;
-						}
-					}
-					
-									
-					$BCSC5_la: "";
-					$BCSC5_lp: map-get($spacers, 4);
-					
-					@for $i from 0 to 4 {
-						$BCSC5_la: " > ul > li" + $BCSC5_la;
-						$BCSC5_lp: $BCSC5_lp + map-get($spacers, 2);
-						
-						& #{$BCSC5_la} > a {
-							padding-left: $BCSC5_lp;
 						}
 					}
 				}
@@ -535,47 +515,7 @@
 					text-align: left;
 					position: relative;
 				}
-
-				//Second level style
-				> ul {
-					position: relative;
-					height: auto;
-					width: 100%;
-					left: 0;
-
-					li {
-						> a {
-							&:hover {
-								background-color: transparent;
-							}
-
-							&:active {
-								background-color: darken($left-sidebar-sub-level-bg, 2.5%);
-							}
-						}
-					}
-
-					> li.title {
-						display: none;
-					}
-
-					> li.nav-items {
-						display: block;
-						height: auto;
-
-						> .be-scroller {
-							height: auto;
-							overflow: visible;
-
-							> .content {
-								padding-top: 0;
-								overflow: visible;
-								position: relative;
-							}
-						}
-					}
-				}
-
+				
 				&:hover {
 					background-color: inherit;
 
@@ -647,8 +587,7 @@
 		}
 		
 		@include media_size("phone") {
-			.left-sidebar-toggle
-			{
+			.left-sidebar-toggle {
 				display: none;
 			}
 		}
@@ -725,8 +664,16 @@
 		.be-wrapper {
 			overflow: hidden;
 		}
+	}
+}
+
+
+	
+.be-left-sidebar {
+	&.open {
+		left: 0;
 		
-		.be-left-sidebar {
+		@include media_size("phone") {
 			-webkit-transform: translate3d(0,0,0);
 			transform: translate3d(0,0,0);
 		}

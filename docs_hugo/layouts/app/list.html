@@ -1,4 +1,21 @@
 {{ define "main" }}
-	<div>App List</div>
-	{{ .Content }}
+	<div class="mb-4">
+      {{ .Content }}
+   </div>
+
+	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+{{ range .Pages }}
+		<div class="col">
+			<div class="card h-100 my-0">
+{{ partial "image-placeholder" ( dict "class" "card-img-top" "height" "140" "text" .Title "background" "#7952b3" ) }}
+				<div class="card-body">
+					<small class="content-item-meta"><span class="text-konkon">Section</span> {{ .Type }}</small>
+					<h4 class="card-title mb-1">{{ .Title }}</h4>
+					<p class="mb-0">{{ .Description }}</p>
+					<a href="{{ .Permalink }}" class="stretched-link"></a>
+				</div>
+			</div>
+		</div>
+{{ end }}
+	</div>
 {{ end -}}

@@ -29,15 +29,15 @@
 		"css-addons-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/addons/ --batch --batch-suffix \".min\" \"dist/css/addons/*.css\" \"!dist/css/addons/*.min.css\""
 	},
 	"devDependencies": {
-		"@popperjs/core": "^2.9.3",
-		"autoprefixer": "^10.3.3",
-		"bootstrap": "^5.1.0",
-		"clean-css-cli": "^5.3.3",
+		"@popperjs/core": "^2.10.2",
+		"autoprefixer": "^10.4.0",
+		"bootstrap": "^5.1.3",
+		"clean-css-cli": "^5.4.2",
 		"material-design-iconic-font": "^2.2.0",
 		"npm-run-all": "^4.1.5",
-		"postcss": "^8.3.6",
 		"postcss-cli": "^8.3.1",
-		"sass": "^1.38.2"
+		"postcss": "^8.3.11",
+		"sass": "^1.43.4"
 	},
 	"style": "dist/css/studio-konkon.css",
 	"sass": "scss/studio-konkon.scss",

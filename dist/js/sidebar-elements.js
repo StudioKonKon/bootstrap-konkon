@@ -246,10 +246,10 @@
 
 // ----- Testing our code #1
 /*
-   new Sidebar("#left-sidebar", {
+   var mySidebar = new Sidebar("#left-sidebar", {
       animate: true
    });
+   
+   mySidebar.createToggle("#left-sidebar-toggle");
 */
 
-var mySidebar = new Sidebar("#left-sidebar");
-mySidebar.createToggle("#left-sidebar-toggle");

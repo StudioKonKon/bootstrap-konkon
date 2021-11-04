@@ -7,7 +7,7 @@ $quote-card-icon-font-size:	$font-size-base * 1.25 !default;
 .quote-card {
 	position: relative;
 	padding: $quote-card-padding;
-	margin-top: $quote-card-icon-size / 2;
+	margin-top: $quote-card-icon-size * .5;
 
 	&-icon {
 		font-size: $quote-card-icon-font-size;
@@ -19,7 +19,7 @@ $quote-card-icon-font-size:	$font-size-base * 1.25 !default;
 		align-items: center;
 		justify-content: center;
 		position: absolute;
-		top: -($quote-card-icon-size / 2);
-		left: ($quote-card-icon-size / 2);
+		top: -($quote-card-icon-size * .5);
+		left: ($quote-card-icon-size * .5);
 	}
 }

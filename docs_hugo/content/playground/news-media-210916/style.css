@@ -1,0 +1,25 @@
+.card-post {
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-post:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.card-post .card-body {
+  position: relative;
+}
+.card-post-meta-img {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+.card-post.rounded-3, .card-post.rounded-3:before {
+  overflow: hidden;
+  border-radius: 0.5rem !important;
+}

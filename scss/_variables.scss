@@ -131,33 +131,42 @@ $font-size-lg:		$font-size-base * 1.15;
 
 $font-weight-lighter:	100;
 $font-weight-light:		300;
-$font-weight-normal:	400;
+$font-weight-normal:    400;
 $font-weight-bold:		500;
-$font-weight-bolder:	700;
+$font-weight-bolder:    700;
 
 $font-weight-base:		$font-weight-normal;
 
-$line-height-base:		1.6153;
+$line-height-base:	1.6153;
 $line-height-lg:		1.7;
 $line-height-sm:		1.4285;
 
-$h1-font-size:			$font-size-base * 2.539;
-$h2-font-size:			$font-size-base * 2.077;
-$h3-font-size:			$font-size-base * 1.769;
-$h4-font-size:			$font-size-base * 1.308;
-$h5-font-size:			$font-size-base;
-$h6-font-size:			$font-size-base * .923;
+$h1-font-size:			$font-size-base * 2.5;
+$h2-font-size:			$font-size-base * 2;
+$h3-font-size:			$font-size-base * 1.77;
+$h4-font-size:			$font-size-base * 1.38;
+$h5-font-size:			$font-size-base * 1.15;
+$h6-font-size:			$font-size-base * .94;
 
-$headings-margin-bottom:	map-get($spacers, 2);
-$headings-font-family:		inherit;
-$headings-font-weight:		300;
-$headings-line-height:		1.1;
-$headings-color:			inherit;
+$font-sizes: (
+   1: $h1-font-size,
+   2: $h2-font-size,
+   3: $h3-font-size,
+   4: $h4-font-size,
+   5: $h5-font-size,
+   6: $h6-font-size
+);
+
+$headings-margin-bottom:   map-get($spacers, 2);
+$headings-font-family:     inherit;
+$headings-font-weight:     500;
+$headings-line-height:     1.1;
+$headings-color:           inherit;
 
 $display-line-height:		$headings-line-height;
 
-$lead-font-size:			$font-size-base * 1.385;
-$lead-font-weight:			$font-weight-light;
+$lead-font-size:           $font-size-base * 1.15;
+$lead-font-weight:			400;
 
 $small-font-size:			.8462em;
 
@@ -330,7 +339,7 @@ $badge-font-size:		$small-font-size;
 $badge-font-weight:		$font-weight-bolder;
 $badge-color:			$text-color;
 $badge-padding-x:		$spacer - map-get($spacers, 1);
-$badge-padding-y:		$badge-padding-x / 2;
+$badge-padding-y:		$badge-padding-x * .5;
 $badge-border-radius:	$border-radius-sm;
 
 // Image thumbnails

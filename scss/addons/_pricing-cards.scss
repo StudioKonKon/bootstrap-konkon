@@ -43,8 +43,8 @@ $pricing-card-hover-box-shadow: $box-shadow !default;
 		position: absolute;
 		font-size: $pricing-card-icon-font-size;
 		color: $pricing-card-color;
-		top: ($pricing-card-icon-size / 4) - ($pricing-card-border-top * 2);
-		right: ($pricing-card-icon-size / 4) - $pricing-card-border-top;
+		top: ($pricing-card-icon-size * .25) - ($pricing-card-border-top * 2);
+		right: ($pricing-card-icon-size * .25) - $pricing-card-border-top;
 	}
 
 	&-title {
@@ -111,8 +111,8 @@ $pricing-card-hover-box-shadow: $box-shadow !default;
 	position: absolute;
 	top: 0;
 	right: 0;
-	height: $pricing-card-ribbon-width / 1.5;
-	width: $pricing-card-ribbon-width / 1.5;
+	height: $pricing-card-ribbon-width * .6666666666666666;
+	width: $pricing-card-ribbon-width * .6666666666666666;
 	overflow: hidden;
 	cursor: default;
 	user-select: none;
@@ -132,8 +132,8 @@ $pricing-card-hover-box-shadow: $box-shadow !default;
 		white-space: nowrap;
 		
 		position: absolute;
-		top: -($pricing-card-ribbon-height / 1.75) + 3;
-		right: -($pricing-card-ribbon-width / 2) + 3;
+		top: -($pricing-card-ribbon-height * .5714285714285714) + 3;
+		right: -($pricing-card-ribbon-width * .5) + 3;
 	}
 }
    

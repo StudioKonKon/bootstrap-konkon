@@ -35,13 +35,13 @@ $user-profile-counter-title-color:	$user-profile-username-color !default;
 
 	&-body {
 		position: relative;
-		padding: ($card-spacer-y / 2) $card-spacer-x;
+		padding: ($card-spacer-y * .5) $card-spacer-x;
 	}
 
 	&-avatar {
 		position: absolute;
-		bottom: -$user-profile-avatar-size / 2;
-		left: subtract(50%, ($user-profile-avatar-size / 2));
+		bottom: -$user-profile-avatar-size * .5;
+		left: subtract(50%, ($user-profile-avatar-size * .5));
 		width: $user-profile-avatar-size;
 		height: $user-profile-avatar-size;
 		border-radius: 50%;
@@ -57,7 +57,7 @@ $user-profile-counter-title-color:	$user-profile-username-color !default;
 	}
 
 	&-info {
-		padding-top: ($user-profile-avatar-size / 2);
+		padding-top: ($user-profile-avatar-size * .5);
 		padding-bottom: $card-spacer-x;
 		text-align: center;
 		
