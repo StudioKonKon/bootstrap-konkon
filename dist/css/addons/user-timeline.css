@@ -30,8 +30,8 @@
 .user-timeline > li {
   display: block;
   position: relative;
-  padding-left: 2.154rem;
-  padding-bottom: 1.538rem;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
 }
 .user-timeline > li:before {
   content: "";
@@ -57,7 +57,7 @@
   line-height: 1.5rem;
   color: #adb5bd;
   font-size: 0.8462rem;
-  margin-bottom: 0.385rem;
+  margin-bottom: 0.25rem;
 }
 .user-timeline-title {
   display: block;

@@ -20,16 +20,16 @@
 }
 .pricing-card-title {
   font-size: 1.38rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 .pricing-card-price {
-  padding: 0.385rem 0 1.154rem;
+  padding: 0.25rem 0 1rem;
   font-size: 2.5rem;
 }
 .pricing-card-price .currency {
   vertical-align: text-top;
   font-size: 1rem;
-  padding-right: 0.385rem;
+  padding-right: 0.25rem;
 }
 .pricing-card-price .frequency {
   font-size: 1.38rem;
@@ -47,17 +47,17 @@
   line-height: 1.7;
 }
 .pricing-card .card-header {
-  padding-top: 1.538rem;
-  padding-bottom: 1.538rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   margin-bottom: 0;
 }
 .pricing-card .card-body {
-  padding-top: 1.538rem;
-  padding-bottom: 1.538rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .pricing-card .card-footer {
-  padding-top: 1.538rem;
-  padding-bottom: 1.538rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .pricing-card .btn {
   min-width: 8rem;
