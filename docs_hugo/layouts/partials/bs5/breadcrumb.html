@@ -15,7 +15,7 @@
 {{- $siteBreadcrumbsLast := len $siteBreadcrumbs -}}
 
 <nav aria-label="breadcrumb" role="navigation">
-	<ol class="breadcrumb page-head-nav">
+	<ol class="breadcrumb page-head-nav px-0">
     {{ range $siteBreadcrumbs -}}
 		{{ if ne .position $siteBreadcrumbsLast -}}
 			<li class="breadcrumb-item"><a href="{{ .url | absURL }}">{{ .name }}</a></li>

@@ -124,6 +124,11 @@
    }
 
    function toggle(event) {
+      if(event) {
+         event.preventDefault();
+         event.stopPropagation();
+      }
+      
       this.isOpen = this.sidebar.classList.toggle(this.classes.open);
    }
    // END: sidebar events
@@ -240,16 +245,3 @@
    return _Sidebar;
 
 })));
-
-
-
-
-// ----- Testing our code #1
-/*
-   new Sidebar("#left-sidebar", {
-      animate: true
-   });
-*/
-
-var mySidebar = new Sidebar("#left-sidebar");
-mySidebar.createToggle("#left-sidebar-toggle");

@@ -1,7 +1,14 @@
-{{ if eq hugo.Environment "production" -}}
+{{- if eq hugo.Environment "production" -}}
 	{{- with .Site.Params.cdn.bootstrap -}}
 <script type="text/javascript" src="{{ .js | safeURL }}" {{ with .js_hash }}{{ printf " integrity=%q" . | safeHTMLAttr }} crossorigin="anonymous"{{ end }}></script>
 	{{- end -}}
 {{ else -}}
-<script type="text/javascript" src="{{ "/assets/lib/bootstrap/dist/js/bootstrap.bundle.js" | absURL }}"></script>
-{{- end }}
+<script type="text/javascript" src="{{ `/assets/lib/bootstrap/dist/js/bootstrap.bundle.js` | absURL }}"></script>
+{{- end -}}
+<script type="text/javascript" src="{{ `/assets/js/sidebar-elements.js` | absURL }}"></script>
+<script type="text/javascript">
+<!--
+var mySidebar = new Sidebar("#left-sidebar");
+mySidebar.createToggle("#left-sidebar-toggle");
+//-->
+</script>

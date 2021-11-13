@@ -1,9 +1,10 @@
 {{ define "main" -}}
-<div class="container page-head pb-0 mt-4">
-	<h1>{{ .Title }}</h1>
-	<div>{{ partial "bs5/breadcrumb" . }}</div>
+<div class="container py-3">
+	{{ with .Title }}<h2 class="page-head-title">{{ . }}</h2>{{ end }}
+	{{ with .Description }}<p class="lead mb-0">{{ . }}</p>{{ end }}
+	{{ partial "bs5/breadcrumb" . }}
 </div>
-<div class="main-content container mb-4">
+<div class="container mb-5">
 	{{- .Content -}}
 </div>
 {{ end -}}

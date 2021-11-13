@@ -1,0 +1,15 @@
+.e-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: #e9ecef;
+  border-radius: 50%;
+  font-size: 1.25rem;
+}
+
+.e-icon-check {
+  color: #34a853;
+  background-color: #d6eedd;
+}

@@ -561,7 +561,7 @@
 .be-user-nav.menu-end {
 	> .dropdown > .dropdown-menu {
 		left: auto;
-		right: map-get($spacers, 5);
+		right: map-get($spacers, 4);
 	
 		@include media_size("small-phone") {
 			left: 0;

@@ -3,6 +3,11 @@ title = "Badges"
 author = "Studio KonKon"
 description = "Examples for badges, Bootstrap's small count and labelling component."
 body_class = "bg-light"
+	
+[[extra_css]]
+	src = "dev-skk-ui"
+	type = "scss"
+   
 +++
 
 {{< add-style >}}
@@ -24,14 +29,14 @@ body_class = "bg-light"
 		</div>
 		<div class="card-footer py-4">
 			<div class="bs-badges bsd-badges d-flex justify-content-center flex-wrap">
-				<span class="badge bg-primary text-white">Primary</span>
-				<span class="badge bg-secondary text-white">Secondary</span>
-				<span class="badge bg-success text-white">Success</span>
-				<span class="badge bg-danger text-white">Danger</span>
-				<span class="badge bg-warning text-white">Warning</span>
-				<span class="badge bg-info text-white">Info</span>
+				<span class="badge bg-primary">Primary</span>
+				<span class="badge bg-secondary">Secondary</span>
+				<span class="badge bg-success">Success</span>
+				<span class="badge bg-danger">Danger</span>
+				<span class="badge bg-warning">Warning</span>
+				<span class="badge bg-info">Info</span>
 				<span class="badge bg-light text-dark">Light</span>
-				<span class="badge bg-dark text-white">Dark</span>
+				<span class="badge bg-dark">Dark</span>
 			</div>
 		</div>
 	 </div>
@@ -43,14 +48,14 @@ body_class = "bg-light"
 		</div>
 		<div class="card-footer py-4">
 			<div class="bs-badges bsd-badges d-flex justify-content-center flex-wrap">
-				<span class="badge bg-primary text-white rounded-pill">Primary</span>
-				<span class="badge bg-secondary text-white rounded-pill">Secondary</span>
-				<span class="badge bg-success text-white rounded-pill">Success</span>
-				<span class="badge bg-danger text-white rounded-pill">Danger</span>
-				<span class="badge bg-warning text-white rounded-pill">Warning</span>
-				<span class="badge bg-info text-white rounded-pill">Info</span>
+				<span class="badge bg-primary rounded-pill">Primary</span>
+				<span class="badge bg-secondary rounded-pill">Secondary</span>
+				<span class="badge bg-success rounded-pill">Success</span>
+				<span class="badge bg-danger rounded-pill">Danger</span>
+				<span class="badge bg-warning rounded-pill">Warning</span>
+				<span class="badge bg-info rounded-pill">Info</span>
 				<span class="badge bg-light text-dark rounded-pill">Light</span>
-				<span class="badge bg-dark text-white rounded-pill">Dark</span>
+				<span class="badge bg-dark rounded-pill">Dark</span>
 			</div>
 		</div>
 	 </div>
@@ -81,14 +86,14 @@ body_class = "bg-light"
 		</div>
 		<div class="card-footer py-4">
 			<div class="bs-badges d-flex justify-content-center flex-wrap">
-				<a href="#" class="btn btn-primary badge text-white rounded-pill">Primary</a>
+				<a href="#" class="btn btn-primary badge rounded-pill">Primary</a>
 				<a href="#" class="btn btn-secondary badge rounded-pill">Secondary</a>
-				<a href="#" class="btn btn-success text-white badge rounded-pill">Success</a>
-				<a href="#" class="btn btn-danger text-white badge rounded-pill">Danger</a>
-				<a href="#" class="btn btn-warning text-white badge rounded-pill">Warning</a>
-				<a href="#" class="btn btn-info text-white badge rounded-pill">Info</a>
+				<a href="#" class="btn btn-success badge rounded-pill">Success</a>
+				<a href="#" class="btn btn-danger badge rounded-pill">Danger</a>
+				<a href="#" class="btn btn-warning badge rounded-pill">Warning</a>
+				<a href="#" class="btn btn-info badge rounded-pill">Info</a>
 				<a href="#" class="btn btn-light badge rounded-pill">Light</a>
-				<a href="#" class="btn btn-dark text-white badge rounded-pill">Dark</a>
+				<a href="#" class="btn btn-dark badge rounded-pill">Dark</a>
 			</div>
 		</div>
 	 </div>
@@ -108,7 +113,7 @@ body_class = "bg-light"
  <div class="col-sm-12">
 	 <div class="card">
 		<div class="card-header card-header-divider">
-			<span>Badges</span>
+			<h4 class="card-title mb-0">Badges</h4>
 		</div>
 		<div class="card-body overflow-auto">
 		  <table class="table">
@@ -190,27 +195,27 @@ body_class = "bg-light"
  <div class="col-sm-12">
 	<div class="card">
 	   <div class="card-header card-header-divider">
-		  <span>Badges</span>
-		  <span class="card-subtitle">Bootstrap badges in headings</span>
+			<h4 class="card-title mb-0">Badges</h4>
+         <h6 class="card-subtitle fw-normal">Bootstrap badges in headings</h6>
 	   </div>
 	   <div class="card-body">
 		  <h1>Example heading
-			 <span class="badge ms-1">New</span>
+			 <span class="badge text-dark ms-1">New</span>
 		  </h1>
 		  <h2>Example heading
-			 <span class="badge ms-1">New</span>
+			 <span class="badge text-dark ms-1">New</span>
 		  </h2>
 		  <h3>Example heading
-			 <span class="badge ms-1">New</span>
+			 <span class="badge text-dark ms-1">New</span>
 		  </h3>
 		  <h4>Example heading
-			 <span class="badge ms-1">New</span>
+			 <span class="badge text-dark ms-1">New</span>
 		  </h4>
 		  <h5>Example heading
-			 <span class="badge ms-1">New</span>
+			 <span class="badge text-dark ms-1">New</span>
 		  </h5>
 		  <h6>Example heading
-			 <span class="badge ms-1">New</span>
+			 <span class="badge text-dark ms-1">New</span>
 		  </h6>
 	   </div>
 	</div>
@@ -219,11 +224,11 @@ body_class = "bg-light"
  <div class="col-md-4">
 	<div class="card">
 	   <div class="card-header card-header-divider">
-		  <span>Variations</span>
-		  <span class="card-subtitle">badges with links</span>
+			<h4 class="card-title mb-0">Variations</h4>
+         <h6 class="card-subtitle fw-normal">badges with links</h6>
 	   </div>
 	   <div class="card-body text-center pt-3">
-		  <a href="#" class="badge btn-space">Default</a>
+		  <a href="#" class="badge link-dark btn-space">Default</a>
 		  <a href="#" class="badge badge-konkon btn-space">KonKon</a>
 		  <a href="#" class="badge badge-primary btn-space">Primary</a>
 		  <a href="#" class="badge badge-info btn-space">Info</a>
@@ -240,11 +245,11 @@ body_class = "bg-light"
  <div class="col-md-4">
 	<div class="card">
 	   <div class="card-header card-header-divider">
-		  <span>Pills</span>
-		  <span class="card-subtitle">badges with links</span>
+			<h4 class="card-title mb-0">Pills</h4>
+         <h6 class="card-subtitle fw-normal">badges with links</h6>
 	   </div>
 	   <div class="card-body text-center pt-3">
-		  <a href="#" class="badge rounded-pill btn-space">Default</a>
+		  <a href="#" class="badge link-dark rounded-pill btn-space">Default</a>
 		  <a href="#" class="badge rounded-pill badge-konkon btn-space">KonKon</a>
 		  <a href="#" class="badge rounded-pill badge-primary btn-space">Primary</a>
 		  <a href="#" class="badge rounded-pill badge-info btn-space">Info</a>
@@ -261,11 +266,11 @@ body_class = "bg-light"
  <div class="col-md-4">
 	<div class="card">
 	   <div class="card-header card-header-divider">
-		  <span>Outline</span>
-		  <span class="card-subtitle">badges with links</span>
+			<h4 class="card-title mb-0">Outline</h4>
+         <h6 class="card-subtitle fw-normal">badges with links</h6>
 	   </div>
 	   <div class="card-body text-center pt-3">
-		  <a href="#" class="badge badge-outline-default btn-space">Default</a>
+		  <a href="#" class="badge link-dark badge-outline-default btn-space">Default</a>
 		  <a href="#" class="badge badge-outline-konkon btn-space">KonKon</a>
 		  <a href="#" class="badge badge-outline-primary btn-space">Primary</a>
 		  <a href="#" class="badge badge-outline-info btn-space">Info</a>
@@ -282,7 +287,7 @@ body_class = "bg-light"
  <div class="col-md-6">
 	<div class="card">
 	   <div class="card-header card-header-divider">
-		  <span>Button Badges</span>
+			<h4 class="card-title mb-0">Button Badges</h4>
 	   </div>
 	   <div class="card-body pt-3">
 		  <p class="text-center">
@@ -321,7 +326,7 @@ body_class = "bg-light"
  <div class="col-md-6">
 	<div class="card">
 	   <div class="card-header card-header-divider">
-		  <span>Button Outline Badges</span>
+			<h4 class="card-title mb-0">Button Outline Badges</h4>
 	   </div>
 	   <div class="card-body pt-3">
 		  <p class="text-center">
@@ -360,8 +365,8 @@ body_class = "bg-light"
  <div class="col-md-12">
 	<div class="card">
 		<div class="card-header card-header-divider">
-			<span>List Group Badges</span>
-			<span class="card-subtitle">Bootstrap badges in a list group</span>
+			<h4 class="card-title mb-0">List Group Badges</h4>
+         <h6 class="card-subtitle fw-normal">Bootstrap badges in a list group</h6>
 		</div>
 		<div class="card-body">
 		  <div class="mt-2 mb-4">

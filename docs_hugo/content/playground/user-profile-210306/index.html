@@ -1,0 +1,94 @@
++++
+title = "User Profile"
+author = "Studio KonKon"
+description = ""
+body_class = "bg-light"
+left_sidebar_class = "be-offcanvas-menu be-fixed-sidebar"
+content_class = ""
+main_content_class = "container py-4"
+	
+[[extra_css]]
+	src = "skk-addon-user-profile"
+	type = "scss"
+	
+[[extra_css]]
+	src = "user-profile.css"
+	
++++
+
+<div class="pcontent">
+	<div class="user-card">
+		<div class="user-card-header" style="background-image:url('/images/profile-banner.jpg');">
+			<div class="user-card-avatar" style="background-image:url('/images/avatar-256.png');"></div>
+		</div>
+		<div class="user-card-body">
+			<div class="user-card-info">
+				<div class="user-card-fullname">
+					<span>Studio KonKon</span>
+					<i class="zmdi zmdi-check-circle ps-1 text-info small" title="verified"></i>
+				</div>
+				<div class="user-card-username">
+					<span class="icon zmdi zmdi-account pe-1"></span>
+					<span>StudioKonKon</span>
+				</div>
+			</div>
+			<p class="user-card-description">I digitally re-score Public Domain music for editing and analysis and enjoy playing games. I may use スタジオコンコン or スタジオこんこん for it is shorter than StudioKonKon.</p>
+			<div class="row row-cols-3 user-card-details">
+				<div class="col">
+					<div class="title">Following</div>
+					<div class="counter">18</div>
+				</div>
+				<div class="col">
+					<div class="title">Followers</div>
+					<div class="counter">335</div>
+				</div>
+				<div class="col">
+					<div class="title">Posts</div>
+					<div class="counter">187</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tab-container">
+		<ul class="nav nav-tabs d-flex justify-content-between flex-nowrap mb-1"
+		    id="myTab"
+			role="tablist">
+			<li class="nav-item flex-fill" role="customnav">
+				<a class="nav-link active" id="skk-posts-tab" data-bs-toggle="tab" href="#skk-posts" role="tab" aria-controls="skk-posts" aria-selected="true">Posts</a>
+			</li>
+			<li class="nav-item flex-fill" role="customnav">
+				<a class="nav-link" id="skk-replies-tab" data-bs-toggle="tab" href="#skk-replies" role="tab" aria-controls="skk-replies" aria-selected="false">Replies</a>
+			</li>
+			<li class="nav-item flex-fill" role="customnav">
+				<a class="nav-link" id="skk-media-tab" data-bs-toggle="tab" href="#skk-media" role="tab" aria-controls="skk-media" aria-selected="false">Media</a>
+			</li>
+			<li class="nav-item flex-fill" role="customnav">
+				<a class="nav-link" id="skk-likes-tab" data-bs-toggle="tab" href="#skk-likes" role="tab" aria-controls="skk-likes" aria-selected="false">Likes</a>
+			</li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
+			<div class="tab-pane show active" id="skk-posts" role="tabpanel" aria-labelledby="skk-posts-tab">
+				<h4>General Classic Tab 1</h4>
+				<p>Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
+				<p>Ei saepe abhorreant temporibus cum, hinc praesent voluptatum ea has. Vis nihil tacimates senserit ut, quo posse labores honestatis te. Ex duo nullam posidonium deterruisset, altera aeterno duo eu.</p>
+			</div>
+			<div class="tab-pane" id="skk-replies" role="tabpanel" aria-labelledby="skk-replies-tab">
+				<h4>General Classic Tab 2</h4>
+				<p>Ei mel vocent latine intellegat. Nam ex sumo dolorum ceteros. Mei ne liber intellegam. Ferri quaeque mea in, mel munere rationibus at.</p>
+				<p>In has homero blandit vituperatoribus, eum latine interpretaris eu, sale commodo has eu.</p>
+			</div>
+			<div class="tab-pane" id="skk-media" role="tabpanel" aria-labelledby="skk-media-tab">
+				<h4>General Classic Tab 3</h4>
+				<p>Munere consetetur an usu, vis quot maiestatis concludaturque at. Ne etiam indoctum referrentur eum, vix legimus nominati eu. Epicurei quaestio sea ut, munere deserunt adipiscing qui te.</p>
+				<p>Disputando voluptatibus ei sit. Et veri deserunt theophrastus pri, at mutat choro eum.</p>
+				<a href="#">Learn More</a>
+			</div>
+			<div class="tab-pane" id="skk-likes" role="tabpanel" aria-labelledby="skk-likes-tab">
+				<h4>General Classic Tab 4</h4>
+				<p>Munere consetetur an usu, vis quot maiestatis concludaturque at. Ne etiam indoctum referrentur eum, vix legimus nominati eu. Epicurei quaestio sea ut, munere deserunt adipiscing qui te.</p>
+				<p>Disputando voluptatibus ei sit. Et veri deserunt theophrastus pri, at mutat choro eum.</p>
+				<a href="#">Learn More</a>
+			</div>
+		</div>
+	</div>
+</div>

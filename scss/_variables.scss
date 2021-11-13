@@ -61,12 +61,12 @@ $spacer: 1rem;
 $spacers: ();
 $spacers: map-merge(
 	(
-		0: 0,
-		1: ($spacer * 0.385),
-		2: ($spacer * 0.768),
-		3: ($spacer * 1.154),
-		4: ($spacer * 1.538),
-		5: ($spacer * 1.923)
+      0: 0,
+      1: $spacer * .25,
+      2: $spacer * .5,
+      3: $spacer,
+      4: $spacer * 1.5,
+      5: $spacer * 3
 	),
 	$spacers
 );
@@ -248,20 +248,20 @@ $btn-link-disabled-color:	$gray-600;
 //
 //##
 
-$card-spacer-x:				map-get($spacers, 4);
-$card-spacer-y:				map-get($spacers, 4);
-$card-border-radius:		.231rem;
-$card-inner-border-radius:	calc(#{$card-border-radius} - #{$border-width});
-$card-cap-bg:				$white;
-$card-bg:					$white;
+$card-spacer-y:            map-get($spacers, 4);
+$card-spacer-x:            map-get($spacers, 4);
+$card-border-radius:       .231rem;
+$card-inner-border-radius: calc(#{$card-border-radius} - #{$border-width});
+$card-cap-bg:              $white;
+$card-bg:                  $white;
 
 $card-group-margin:			$card-spacer-y;
 
-$card-cap-padding-y:		map-get($spacers, 3);
-$card-cap-padding-x:		$card-spacer-x;
+$card-cap-padding-y:       map-get($spacers, 3);
+$card-cap-padding-x:       $card-spacer-x;
 
-$card-border-width:			$border-width;
-$card-border-color:			rgba($black, .05);
+$card-border-width:        $border-width;
+$card-border-color:        rgba($black, .05);
 
 
 // Dropdowns
@@ -284,10 +284,10 @@ $dropdown-divider-bg:			$gray-300;
 $dropdown-divider-margin-y:		map-get($spacers, 1);
 $dropdown-box-shadow:           0px 0px 6px 0px rgba(0, 0, 0, .12);
 
-$dropdown-item-padding-y:		$spacer - map-get($spacers, 1);
+$dropdown-item-padding-y:		map-get($spacers, 2);
 $dropdown-item-padding-x:		map-get($spacers, 4);
 
-$dropdown-header-padding:		map-get($spacers, 1) map-get($spacers, 4);
+$dropdown-header-padding:   $dropdown-padding-y $dropdown-item-padding-x !default;
 
 
 $dropdown-dark-color:				$white;
@@ -308,8 +308,8 @@ $dropdown-dark-header-color:		shift-color($dropdown-dark-bg, -50%);
 
 $list-group-border-radius:          $border-radius-sm;
 
-$list-group-item-padding-y:			$spacer;
-$list-group-item-padding-x:			map-get($spacers, 4);
+$list-group-item-padding-y:			$spacer * .75;
+$list-group-item-padding-x:			$spacer;
 
 $list-group-hover-bg:               $gray-100;
 
@@ -337,7 +337,7 @@ $breadcrumb-border-radius:		$border-radius-sm;
 
 $badge-font-size:		$small-font-size;
 $badge-font-weight:		$font-weight-bolder;
-$badge-color:			$text-color;
+$badge-color:			$white;
 $badge-padding-x:		$spacer - map-get($spacers, 1);
 $badge-padding-y:		$badge-padding-x * .5;
 $badge-border-radius:	$border-radius-sm;

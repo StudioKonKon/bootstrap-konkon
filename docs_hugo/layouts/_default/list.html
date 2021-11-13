@@ -1,23 +1,25 @@
 {{ define "main" }}
-<div class="page-head container pb-0 mt-4">
-	<h2 class="page-head-title">{{ with .Title }}{{ . }}{{ end }}</h2>
-	<div>{{ partial "bs5/breadcrumb" . }}</div>
+<div class="container pb-0 mt-4">
+	{{ with .Title }}<h2 class="page-head-title">{{ . }}</h2>{{ end }}
+	{{ with .Description }}<p class="lead mb-0">{{ . }}</p>{{ end }}
+	{{ partial "bs5/breadcrumb" . }}
 </div>
 <div class="container mb-4">
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-{{ range where .Pages "Type" "ne" "404" }}
-	<div class="col">
-		<div class="card h-100">
-			<div class="card-body">
-				<small class="content-item-meta"><span class="text-konkon">Section</span> {{ .Type }}</small>
-				<h4 class="card-title">{{ .Title }}</h3>
-				<p class="mb-0">{{ .Description }}</p>
-				<a href="{{ .Permalink }}" class="stretched-link"></a>
-			</div>
-		</div>
-	</div>
-{{ end }}
-</div>
+   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+   {{ range .Pages }}
+      <div class="col">
+         <div class="card h-100 my-0">
+   {{ partial "image-placeholder" ( dict "class" "card-img-top" "height" "140" "text" .Title "background" "#7952b3" ) }}
+            <div class="card-body">
+               <small class="content-item-meta"><span class="text-konkon">Section</span> {{ .Type }}</small>
+               <h4 class="card-title">{{ .Title }}</h4>
+               <p class="mb-0">{{ with .Description }}{{ . }}{{ else }}No Description{{ end }}</p>
+               <a href="{{ .Permalink }}" class="stretched-link"></a>
+            </div>
+         </div>
+      </div>
+   {{ end }}
+   </div>
 </div>
 {{ .Content }}
 {{ end -}}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html {{ with .Page.Params.html_class }} class="{{ . }}"{{ end }}>
+  <head>
+{{ partial "head" . }}
+{{- partialCached "bs-examples-styles" . }}
+{{ range .Page.Params.extra_css }}
+  {{- $src := .src | default . -}}
+  {{- $type := .type | default "css" -}}
+  {{- $map := .map | default true -}}
+  {{- $stype := .stype | default "compressed" -}}
+  {{- $inline := .inline | default false -}}
+  {{- $style := "" -}}
+  {{- if eq $type "scss" -}}
+    {{- $sass := resources.Get (printf "sass/%s.scss" $src) -}}
+	{{- $options := (dict "targetPath" (printf "assets/css/%s.css" $src) "enableSourceMap" $map "outputStyle" $stype) -}}
+	{{- $style = $sass | resources.ToCSS $options -}}
+	{{- $src = $style.RelPermalink -}}
+  {{- end -}}
+  {{- if $inline -}}
+    {{- with $style }}<style>{{ .Content | safeCSS }}</style>{{ end -}}
+  {{- else -}}
+	<link href="{{ $src }}" rel="stylesheet" />
+  {{- end -}}
+{{- end }}
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body{{ with .Page.Params.body_class }} class="{{ . }}"{{ end }}>
+    {{- .Content -}}
+    {{ if ne .Page.Params.include_js false -}}
+      {{ partialCached "bs-examples-scripts.html" . }}
+      {{ range .Page.Params.extra_js }}
+        <script type="text/javascript" src="{{ .src }}"{{ with .integrity }} {{ printf "integrity=%q" . | safeHTMLAttr }} crossorigin="anonymous"{{ end }}{{ with .async }} async{{ end }}></script>
+      {{- end }}
+    {{- end }}
+  </body>
+</html>

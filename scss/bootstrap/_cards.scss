@@ -78,11 +78,6 @@
 			}
 		}
 	}
-	
-	.card-title,
-	.card-subtitle {
-		margin: 0 !important;
-	}
 }
 
 //Card title and subtitle
@@ -91,7 +86,6 @@
 .card-subtitle {
 	display: block;
 	line-height: inherit;
-	margin-bottom: $card-cap-padding-y;
 }
 
 .card-title {

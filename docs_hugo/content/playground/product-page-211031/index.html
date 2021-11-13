@@ -1,0 +1,206 @@
++++
+title = "Product Page (211031)"
+author = "Studio KonKon"
+description = ""
+body_class = "bg-light"
+left_sidebar_class = "be-offcanvas-menu be-fixed-sidebar"
+content_class = ""
+main_content_class = "container py-4"
+   
++++
+
+<!-- Product Card //-->
+<div class="card card-body mb-5">
+   <div class="row row-cols-1 row-cols-lg-2 g-3">
+      <!-- Section: Product Image #1 //-->
+      <div class="col d-none d-lg-block">
+         {{< placeholder class="w-100 rounded" height="500" width="500" text="Product Example" background="#eeeeee" color="#777777" >}}
+      </div>
+      <!-- Section: Product Body //-->
+      <div class="col">
+         <div class="h-100 d-flex flex-column">
+            <!-- Section: Product Infomation //-->
+            <div class="flex-grow-1">
+               <div class="h-100 d-flex flex-column">
+                  <div class="flex-grow-1">
+                     <div class="row row-cols-auto mb-3 g-1 text-uppercase">
+                        <div class="col">
+                           <span class="badge bg-primary text-white rounded-pill">Game</span>
+                        </div>
+                        <div class="col">
+                           <span class="badge bg-dark text-white rounded-pill">PS5</span>
+                        </div>
+                     </div>
+                     <h5 class="text-muted text-uppercase mb-1">Playstation</h5>
+                     <h3>Lorem ipsum dolor sit amet</h3>
+                     <div class="fs-4 fw-bold mb-2">$49.99</div>
+                  </div>
+                  <p class="small mb-0"><span class="fw-bold">Release date:</span> 31 October 2021</p>
+               </div>
+            </div>
+            <!-- Section: Product Image #2 //-->
+            <div class="mt-2 d-block d-lg-none">
+               {{< placeholder class="w-100 rounded" height="500" width="500" text="Product Example" background="#eeeeee" color="#777777" >}}
+            </div>
+            <!-- Section: Product Format //-->
+            <div class="mt-3">
+               <hr class="mt-0 mb-3" />
+               <h6 class="text-uppercase fw-bold mb-3">Format</h6>
+               <div class="">
+                  <input type="radio"
+                         class="btn-check"
+                         name="productformats"
+                         id="product_format_1"
+                         autocomplete="off"
+                         checked />
+                  <label class="btn btn-outline-primary me-1"
+                         for="product_format_1">Physical</label>
+                  <input type="radio"
+                         class="btn-check"
+                         name="productformats"
+                         id="product_format_2"
+                         autocomplete="off" />
+                  <label class="btn btn-outline-primary"
+                         for="product_format_2">Digital</label>
+               </div>
+            </div>
+            <!-- Section: Product Quantity //-->
+            <div class="mt-3">
+               <hr class="mt-0 mb-3" />
+               <h6 class="text-uppercase mb-1">Quantity</h6>
+               <div class="d-flex flex-row flex-wrap flex-md-nowrap align-items-center">
+                  <div class="flex-grow-1 mt-2">
+                     <div class="d-flex flex-row flex-nowrap">
+                        <button class="btn btn-secondary"
+                                type="button"><i class="zmdi zmdi-minus"></i></button>
+                        <input type="text"
+                               class="form-control border-0 bg-white text-center px-0 mx-1 w-25 fw-bold user-select-none pe-none"
+                               value="1"
+                               min="1"
+                               max="999"
+                               readonly />
+                        <button class="btn btn-secondary"
+                                type="button"><i class="zmdi zmdi-plus"></i></button>
+                     </div>
+                  </div>
+                  <div class="mt-2 d-flex flex-row flex-nowrap align-items-center">
+                     <button class="btn btn-primary text-uppercase text-nowrap me-2">Add to Cart</button>
+                     <button class="btn btn-secondary text-uppercase rounded-circle d-flex align-items-center justify-content-center"
+                             style="width:2.5rem;height:2.5rem;padding:0px;font-size:1.25rem;">
+                        <i class="zmdi zmdi-favorite-outline"></i>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Product Delivery //-->
+<div class="w-100 list-group list-group-horizontal-lg mb-5">
+   <div class="list-group-item p-3 col-lg-4 d-flex">
+      <div style="max-width:3rem;">
+         <svg class="w-100" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m511.98 222.49c-0.033-2.573-1.021-5.096-2.894-7.009l-96.095-98.118c-1.919-1.958-4.545-3.063-7.287-3.063h-395.51c-5.632 0-10.199 4.566-10.199 10.199v228.61c0 5.633 4.567 10.199 10.199 10.199h26.395c4.626 19.686 22.322 34.392 43.4 34.392s38.774-14.705 43.401-34.392h208.56c4.626 19.686 22.323 34.392 43.401 34.392s38.774-14.705 43.4-34.392h83.042c5.632 0 10.199-4.566 10.199-10.199v-130.49c-2e-3 -0.045-0.014-0.085-0.021-0.128zm-157.78-87.791h47.217l76.117 77.719h-123.33v-77.719zm-274.21 242.6c-13.34 0-24.193-10.853-24.193-24.193s10.853-24.193 24.193-24.193c13.341 0 24.194 10.853 24.194 24.193s-10.853 24.193-24.194 24.193zm218.41-34.392h-175c-4.626-19.687-22.323-34.392-43.401-34.392s-38.774 14.705-43.4 34.392h-16.196v-68.616h278v68.616zm0-89.015h-278v-119.19h278v119.19zm76.96 123.41c-13.341 0-24.193-10.853-24.193-24.193s10.853-24.193 24.193-24.193 24.193 10.853 24.193 24.193-10.853 24.193-24.193 24.193zm116.24-123.41h-56.562c-5.632 0-10.199 4.566-10.199 10.199s4.567 10.199 10.199 10.199h56.562v68.616h-72.841c-4.626-19.687-22.322-34.392-43.4-34.392s-38.774 14.705-43.401 34.392h-13.16v-208.21h15.004v87.919c0 5.633 4.567 10.199 10.199 10.199h147.6v21.075z"/><path d="m396.3 253.89h-11.985c-5.632 0-10.199 4.566-10.199 10.199s4.567 10.199 10.199 10.199h11.985c5.632 0 10.199-4.566 10.199-10.199 0-5.632-4.567-10.199-10.199-10.199z"/></svg>
+      </div>
+      <div class="flex-grow-1 ps-4">
+         <h4 class="fw-bold mb-1">Free delivery over $20</h4>
+         <p class="fs-6 mb-0">Free standard over £20 and free express over $200.</p>
+      </div>
+   </div>
+   <div class="list-group-item p-3 col-lg-4 d-flex">
+      <div style="max-width:3rem;">
+         <svg class="w-100" version="1.1" viewBox="0 0 490.08 490.08" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m489.14 311.5-45.03-97.583c-0.03-0.065-1.93-4.798-7.617-5.796l-189.76-31.188c-0.172-0.028-1.824-0.291-3.419 0.018l-189.65 31.17c-3.344 0.548-6.195 2.722-7.617 5.796l-45.029 97.583c-4.109 9.608 5.339 14.978 9.271 14.485h34.822v122.72c0 4.999 3.619 9.261 8.554 10.073l189.76 31.188c0.159 0.026 3.147 0.027 3.31 0l189.76-31.188c4.935-0.813 8.553-5.074 8.553-10.073v-122.72h34.822c3.479 0 6.724-1.775 8.598-4.706 1.873-2.93 2.127-6.619 0.672-9.779zm-462.9-5.931 36.073-78.177 103.72-17.05 63.728-10.474-36.96 105.7h-166.56zm208.63 162.3-169.34-27.834v-114.05h134.52c4.337 0 8.205-2.742 9.635-6.839l25.187-72.026v220.74zm189.76-27.834-169.34 27.834v-220.74l25.187 72.024c1.43 4.098 5.298 6.839 9.635 6.839h134.52v114.05zm-127.28-134.46-36.96-105.7 66.363 10.907 101.09 16.616 36.073 78.177h-166.56z"/><path d="m325.88 83.004h-46.83v-82.908h-67.938v82.908h-46.83l80.799 80.331 80.799-80.331zm-94.352 20.416v-82.908h27.105v82.908h17.75l-31.303 31.123-31.303-31.123h17.751z"/></svg>
+      </div>
+      <div class="flex-grow-1 ps-4">
+         <h4 class="fw-bold mb-1">Free Returns</h4>
+         <p class="fs-6 mb-0">Shop with confidence, we offer free returns with all orders!</p>
+      </div>
+   </div>
+   <div class="list-group-item p-3 col-lg-4 d-flex">
+      <div style="max-width:3rem;">
+         <svg class="w-100" version="1.1" viewBox="0 0 395.37 395.37" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m387.88 94.902h-114.17c11.513-6.518 20.934-14.953 28.182-25.278 12.214-17.399 5.531-36.432-7.382-46.241-12.891-9.793-32.99-11.124-46.457 5.285-11.166 13.606-18.507 28.396-23.291 41.08-5.936-7.878-15.366-12.982-25.968-12.982h-2.195c-10.602 0-20.032 5.104-25.968 12.982-4.783-12.684-12.125-27.474-23.291-41.08-13.468-16.409-33.563-15.079-46.457-5.285-12.913 9.809-19.596 28.843-7.382 46.241 7.248 10.325 16.669 18.76 28.182 25.278h-114.18c-4.143 0-7.5 3.358-7.5 7.5v78.016c0 4.142 3.357 7.5 7.5 7.5h10.443v183.81c0 4.142 3.357 7.5 7.5 7.5h344.49c4.143 0 7.5-3.358 7.5-7.5v-183.81h10.442c4.143 0 7.5-3.358 7.5-7.5v-78.016c2e-3 -4.142-3.355-7.5-7.498-7.5zm-282.1-33.896c-7.118-10.139-3.03-20.203 4.178-25.679 3.397-2.581 7.593-4.217 11.901-4.217 4.807 0 9.753 2.038 13.887 7.074 16.036 19.539 23.373 42.41 26.445 55.193-25.777-4.857-44.724-15.721-56.411-32.371zm58.319 303.22h-131.15v-176.31h131.15v176.31zm1e-3 -191.31h-138.56c-0.029 0-0.058-4e-3 -0.087-4e-3s-0.058 4e-3 -0.087 4e-3h-10.357v-63.016h149.09v63.016zm52.195 191.31h-37.195v-176.31h37.195v176.31zm0-191.31h-37.195v-63.016h37.195v63.016zm0-78.016h-37.195v-5.635c0-9.65 7.85-17.5 17.5-17.5h2.195c9.649 0 17.5 7.85 17.5 17.5v5.635zm43.355-56.717c4.134-5.038 9.08-7.074 13.887-7.074 4.308 0 8.504 1.637 11.901 4.217 7.208 5.476 11.296 15.54 4.178 25.679-11.688 16.65-30.635 27.514-56.411 32.371 3.072-12.784 10.408-35.654 26.445-55.193zm-28.355 326.05v-176.31h131.15v176.31h-131.15zm149.09-191.31h-10.356c-0.029 0-0.058-4e-3 -0.087-4e-3s-0.058 4e-3 -0.087 4e-3h-138.56v-63.016h149.09v63.016z"/></svg>
+      </div>
+      <div class="flex-grow-1 ps-4">
+         <h4 class="fw-bold mb-1">My Points</h4>
+         <p class="fs-6 mb-0">Redeem your Points for exclusive rewards!</p>
+      </div>
+   </div>
+</div>
+<!-- Product Detailed Information //-->
+<div class="card card-body mb-4">
+   <h4 class="fw-bold mb-0">Product details</h4>
+   <p class="mb-3 text-muted"><span class="fw-bold">Release date:</span> 31 October 2021</p>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor eleifend justo eu faucibus. Suspendisse eu est eget ex vehicula mattis. Phasellus bibendum maximus hendrerit. Morbi malesuada, nisi nec tempor ultricies, nibh nisi rutrum metus, nec auctor metus nunc a nisi. Donec mollis rhoncus eros id aliquet.</p>
+   <p>Nulla dignissim nisl sed augue malesuada, a tempor purus convallis. Vivamus porta mattis malesuada. Duis vel ante nec sapien scelerisque euismod. Sed nibh erat, maximus iaculis vulputate id, iaculis ut felis. Suspendisse vestibulum cursus eleifend.</p>
+   <p class="mb-5">Cras in felis porttitor, dictum magna ut, hendrerit ante. Quisque consectetur erat ac augue porttitor sagittis. Integer quis sodales turpis, ut scelerisque velit. Maecenas vel porta augue.</p>
+   <p class="mb-1"><span class="fw-bold">Category: </span> Single Player, Onilne Multiplayer</p>
+   <p class="mb-1"><span class="fw-bold">Player: </span> 1 - 4</p>
+   <p class="mb-1"><span class="fw-bold">Publisher: </span> Studio KonKon</p>
+   <p class="mb-0"><span class="fw-bold">Languages: </span> English, French, German, Spanish, Italian, Japanese, Korean, Dutch, Russian</p>
+</div>
+<!-- Product Nav //-->
+<div class="accordion mb-5" id="accordionProduct">
+
+   <div class="accordion-item">
+      <h2 class="accordion-header" id="productNavHead1">
+         <button class="accordion-button bg-light text-dark"
+                 type="button"
+                 data-bs-toggle="collapse"
+                 data-bs-target="#productNavBody1"
+                 aria-expanded="true"
+                 aria-controls="productNavBody1">Product Overview</button>
+      </h2>
+      <div id="productNavBody1"
+           class="accordion-collapse collapse"
+           aria-labelledby="productNavHead1"
+           data-bs-parent="#accordionProduct">
+         <div class="accordion-body">
+            <div class="row row-cols-1 row-cols-lg-2 g-4">
+               <div class="col">
+                  <div class="ratio ratio-16x9">
+                     <iframe width="560"
+                             height="315"
+                             src="https://www.youtube.com/embed/vYrvAQvG2EQ"
+                             title="YouTube video player"
+                             frameborder="0"
+                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                             allowfullscreen></iframe>
+                  </div>
+               </div>
+               <div class="col">
+                  <h4>Tchaikovsky: The Nutcracker (suite), Op. 71a - 4. Russian Dance (Trepak)</h4>
+                  <p>The Nutcracker is a two act ballet, originally choreographed by Marius Petipa and Lev Ivanov and with a score by Pyotr Ilych Tchaikovski (Op. 71).</p>
+                  <p>The libretto is adopted from E.T.A Hoffman's story The Nutcracker and the Mouse King. It was premiered in 1892 and, though it was not a success, the 20-minute suite Tchaikovsky extracted from it was.</p>
+                  <p class="mb-0">Despite this, the complete Nutcracker becoming one of Tchaikovsky's most famous compositions.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="accordion-item">
+      <h2 class="accordion-header" id="productNavHead2">
+         <button class="accordion-button bg-light text-dark"
+                 type="button"
+                 data-bs-toggle="collapse"
+                 data-bs-target="#productNavBody2"
+                 aria-expanded="false"
+                 aria-controls="productNavBody2">Delivery & Returns</button>
+      </h2>
+      <div id="productNavBody2"
+           class="accordion-collapse collapse show"
+           aria-labelledby="productNavHead2"
+           data-bs-parent="#accordionProduct">
+         <div class="accordion-body">
+            <h4>Cancellation and Returns</h4>
+            <p>Donec sed venenatis orci. Proin ultrices dignissim nibh a egestas. Sed congue cursus neque vel pellentesque. Aenean bibendum purus at molestie efficitur. Aenean fermentum lacus et magna auctor, non molestie est vulputate. </p>
+            <p>Mauris libero velit, vehicula et tincidunt nec, eleifend id erat. Donec dictum tincidunt erat et tincidunt. Quisque sed eleifend risus. Nullam molestie non massa eu lacinia. Fusce lacinia nisi velit.</p>
+            <p>Nulla a gravida purus. Sed quam ipsum, tempor ut enim semper, tempor elementum mauris. Nunc mollis enim sed mi tincidunt interdum. Duis aliquam finibus posuere. Ut eu augue massa. Quisque bibendum diam ut quam congue, rutrum feugiat turpis tincidunt. Pellentesque ac venenatis justo, sit amet condimentum ligula.</p>
+            <p>Please review our <a href="#">FAQ</a> for further information.</p>
+         </div>
+      </div>
+   </div>
+
+</div>
+
+

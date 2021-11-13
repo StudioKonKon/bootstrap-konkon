@@ -1,30 +1,15 @@
 /* --- Email Template --- */
 
 $email-template-max-width:				680px !default;
-$email-template-border-top-width:		.5rem !default;
-$email-template-header-padding:			map-get($spacers, 5) !default;
-$email-template-body-padding:			map-get($spacers, 2) map-get($spacers, 5) map-get($spacers, 5) !default;
+$email-template-border-top-width:	.5rem !default;
 
 .email-template
 {
    max-width: $email-template-max-width;
    border-radius: 0;
    
-   > .card
-   {
+   > .card {
       margin: 0 auto;
       border-top-width: $email-template-border-top-width;
-   }
-      
-   .card-header
-   {
-      margin: 0;
-      padding: $email-template-header-padding;
-   }
-   
-   .card-body
-   {
-      margin: 0;
-      padding: $email-template-body-padding;
    }
 }
