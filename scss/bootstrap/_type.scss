@@ -13,10 +13,6 @@ h3, .h3 {
 	}
 }
 
-.lead {
-	line-height: $lead-line-height;
-}
-
 .text-bold {
 	font-weight: $font-weight-bold !important;
 }
@@ -32,8 +28,6 @@ h3, .h3 {
 // Unordered and Ordered lists
 ol,
 ul {
-	line-height: $list-line-height;
-
 	ol,
 	ul {
 		padding-left: map-get($spacers, 5);

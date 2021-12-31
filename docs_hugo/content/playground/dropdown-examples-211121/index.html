@@ -1,0 +1,286 @@
++++
+title = "Dropdown Examples (211121)"
+author = "Studio KonKon"
+description = ""
+body_class = "bg-light"
+left_sidebar_class = "be-offcanvas-menu be-fixed-sidebar"
+content_class = ""
+main_content_class = "container py-4"
+	
+[[extra_css]]
+	src = "dropdown-examples.css"
+	
++++
+
+<div class="skk-examples row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2 g-lg-3">
+   <div class="col">
+      <div class="vstack gap-2 gap-lg-3">
+      
+         <!-- Default Layout //-->
+         <ul class="dropdown-menu">
+            <li><h6 class="dropdown-header">Dropdown header</h6></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><span class="dropdown-item-text">Dropdown item text</span></li>
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><a class="dropdown-item active" href="#">Active Link</a></li>
+            <li><a class="dropdown-item disabled" href="#">Disabled Link</a></li>
+            <li><a class="dropdown-item" href="#">Another Link</a></li>
+            <li><h6 class="dropdown-header">Dropdown header</h6></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Another Link</a></li>
+         </ul>
+
+         <!-- Text Layout //-->
+         <div class="dropdown-menu p-4">
+            <p>Some example text that's free-flowing within the dropdown menu.</p>
+            <p class="mb-0">And this is more example text.</p>
+         </div>
+
+         <!-- Form Layout //-->
+         <div class="dropdown-menu">
+            <form class="px-4 py-3">
+               <div class="mb-3">
+                  <label for="exampleDropdownFormEmail1"
+                         class="form-label">Email address</label>
+                  <input type="email"
+                         class="form-control"
+                         id="exampleDropdownFormEmail1"
+                         placeholder="email@example.com" />
+               </div>
+               <div class="mb-3">
+                  <label for="exampleDropdownFormPassword1"
+                         class="form-label">Password</label>
+                  <input type="password"
+                         class="form-control"
+                         id="exampleDropdownFormPassword1"
+                         placeholder="Password" />
+               </div>
+               <div class="mb-3">
+                  <div class="form-check">
+                     <input type="checkbox"
+                            class="form-check-input"
+                            id="dropdownCheck" />
+                     <label class="form-check-label"
+                            for="dropdownCheck">
+                        Remember me
+                     </label>
+                  </div>
+               </div>
+               <button type="submit"
+                       class="btn btn-primary">Sign in</button>
+            </form>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">New around here? Sign up</a>
+            <a class="dropdown-item" href="#">Forgot password?</a>
+         </div>
+
+      </div>
+   </div>
+   <div class="col">
+      <div class="vstack gap-2 gap-lg-3">
+
+         <div class="dropdown-menu">
+            <div class="list-group">
+               <a href="#"
+                  class="list-group-item list-group-item-action border-0">
+                  <h6>About this content</h6>
+                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat sed leo sed finibus. <span class="link-primary">Learn more</span></p>
+               </a>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item d-flex flex-nowrap align-items-center" href="#">
+               <i class="zmdi zmdi-link me-3 fs-4"></i>
+               <span class="flex-fill">Go to WebSite</span>
+            </a>
+            <a class="dropdown-item d-flex flex-nowrap align-items-center" href="#">
+               <i class="zmdi zmdi-block me-3 fs-4"></i>
+               <span class="flex-fill">Hide all from WebSite</span>
+            </a>
+            <a class="dropdown-item d-flex flex-nowrap align-items-center" href="#">
+               <i class="zmdi zmdi-comment-alert me-3 fs-4"></i>
+               <span class="flex-fill">Report an issue</span>
+            </a>
+         </div>
+
+         <div class="dropdown-menu">
+            <div class="px-4 py-2 d-flex flex-row flex-nowrap align-items-center justify-content-between">
+               {{< placeholder class="rounded-circle me-3" height="256" width="256" text="SK" background="#fe669e" style="width:3rem;height:3rem;" >}}
+               <div class="flex-fill lh-1">
+                  <div class="fw-bold mb-1">Studio KonKon</div>
+                  <a href="#" class="small">Manage your accounts</a>
+               </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item d-flex flex-nowrap align-items-center" href="#">
+               <i class="zmdi zmdi-account me-3 fs-4"></i>
+               <span class="flex-fill">Your Account</span>
+            </a>
+            <a class="dropdown-item d-flex flex-nowrap align-items-center" href="#">
+               <i class="zmdi zmdi-accounts-list me-3 fs-4"></i>
+               <span class="flex-fill">Switch Accounts</span>
+               <i class="zmdi zmdi-chevron-right ms-3 fs-4"></i>
+            </a>
+            <a class="dropdown-item d-flex flex-nowrap align-items-center" href="#">
+               <i class="zmdi zmdi-sign-in me-3 fs-4"></i>
+               <span class="flex-fill">Sign Out</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item d-flex flex-nowrap align-items-center" href="#">
+               <i class="zmdi zmdi-comment-outline me-3 fs-5"></i>
+               <span class="flex-fill">Send Feedback</span>
+            </a>
+         </div>
+
+         <div class="dropdown-menu bg-dark border-dark border-2">
+            <div class="px-4 pt-1 pb-2 d-flex flex-row flex-nowrap align-items-center justify-content-between text-white">
+               <a class="text-reset fs-5" href="#"><i class="zmdi zmdi-account"></i></a>
+               <div class="px-2 fw-bold">Studio KonKon</div>
+               <a class="text-reset fs-5" href="#"><i class="zmdi zmdi-menu"></i></a>
+            </div>
+            <div class="p-4 pb-3 bg-white">
+               {{< placeholder class="d-block rounded-circle mx-auto mb-2" height="256" width="256" text="SK" background="#fe669e" style="width:4rem;height:4rem;" >}}
+               <div class="text-center mb-4">
+                  <a href="#" class="text-reset fw-bold">@StudioKonKon</a>
+               </div>
+               <div class="hstack gap-2 small justify-content-between mb-4">
+                  <div class="text-center">
+                     <div class="fw-bold">5</div>
+                     <div>Following</div>
+                  </div>
+                  <div class="vr"></div>
+                  <div class="text-center">
+                     <div class="fw-bold">4005</div>
+                     <div>Followers</div>
+                  </div>
+                  <div class="vr"></div>
+                  <div class="text-center">
+                     <div class="fw-bold">223.9K</div>
+                     <div>Likes</div>
+                  </div>
+               </div>
+               <div class="hstack gap-2 justify-content-center mb-3">
+                  <button class="btn btn-secondary">Channel</button>
+                  <button class="btn btn-secondary"><i class="zmdi zmdi-youtube-play"></i></button>
+                  <button class="btn btn-secondary"><i class="zmdi zmdi-bookmark-outline"></i></button>
+               </div>
+               <p class="mb-0 text-center px-2 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat sed leo sed finibus.</p>
+            </div>
+         </div>
+
+      </div>
+   </div>
+   <div class="col">
+      <div class="vstack gap-2 gap-lg-3">
+
+         <div class="dropdown-menu">
+            <div class="dropdown-header fw-bold text-center text-uppercase">Project Lists</div>
+            <div class="dropdown-divider"></div>
+            <div class="list-group list-group-flush">
+               <div class="list-group-item list-group-item-action py-3">
+                  <div class="overflow-hidden">
+                     <div class="fw-bold mb-0 text-truncate">Piano Composition</div>
+                     <div class="d-flex flex-nowrap mb-1 small text-muted">
+                        <div class="flex-grow-1">Last updated: 1d ago</div>
+                        <div>74%</div>
+                     </div>
+                     <div class="progress progress-sm">
+                        <div style="width: 74%;" class="progress-bar bg-konkon"></div>
+                     </div>
+                  </div>
+                  <a href="#" class="stretched-link"></a>
+               </div>
+               <div class="list-group-item list-group-item-action py-3">
+                  <div class="overflow-hidden">
+                     <div class="fw-bold mb-0 text-truncate">Bootstrap v5 Intergration</div>
+                     <div class="d-flex flex-nowrap mb-1 small text-muted">
+                        <div class="flex-grow-1">Last updated: 3d ago</div>
+                        <div>40%</div>
+                     </div>
+                     <div class="progress progress-sm">
+                        <div style="width:40%;background-color:#7952b3;" class="progress-bar"></div>
+                     </div>
+                  </div>
+                  <a href="#" class="stretched-link"></a>
+               </div>
+               <div class="list-group-item list-group-item-action py-3">
+                  <div class="overflow-hidden">
+                     <div class="fw-bold mb-0 text-truncate">Language Course</div>
+                     <div class="d-flex flex-nowrap mb-1 small text-muted">
+                        <div class="flex-grow-1">Last updated: 476d ago</div>
+                        <div>26%</div>
+                     </div>
+                     <div class="progress progress-sm">
+                        <div style="width:26%;" class="progress-bar bg-info"></div>
+                     </div>
+                  </div>
+                  <a href="#" class="stretched-link"></a>
+               </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item d-flex flex-nowrap align-items-center" href="#">
+               <i class="zmdi zmdi-apps me-3 fs-4"></i>
+               <span class="flex-fill">View More</span>
+               <span class="badge border-primary bg-white text-primary">99+</span>
+            </a>
+            <a class="dropdown-item d-flex flex-nowrap align-items-center" href="#">
+               <i class="zmdi zmdi-settings me-3 fs-4"></i>
+               <span class="flex-fill">Settings</span>
+            </a>
+         </div>
+
+         <div class="dropdown-menu">
+            <div class="dropdown-header fw-bold d-flex flex-nowrap align-items-center pt-1 pb-2">
+               {{< placeholder class="rounded-circle me-3" height="256" width="256" text="SK" background="#fe669e" style="width:1.5rem;height:1.5rem;" >}}
+               <span class="flex-fill fs-6">Studio KonKon</span>
+            </div>
+            <div class="dropdown-divider mb-0"></div>
+            <div class="bg-light px-4 pt-3 pb-2 position-relative">
+               <div class="small d-flex justify-content-between align-items-center w-100 mb-3 gap-2">
+                  <div class="lh-1 overflow-hidden">
+                     <div class="fw-bold mb-1">Current Project:</div>
+                     <div class="text-truncate">Piano Composition</div>
+                  </div>
+                  <div class="badge bg-dark">74%</div>
+               </div>
+               <div class="mb-3 skk-examples-form-check">
+                  <div class="form-check">
+                     <input type="checkbox"
+                            class="form-check-input"
+                            id="proA1"
+                            checked />
+                     <label class="form-check-label"
+                            for="proA1">Analysis</label>
+                  </div>
+                  <div class="form-check">
+                     <input type="checkbox"
+                            class="form-check-input"
+                            id="proA2" />
+                     <label class="form-check-label"
+                            for="proA2">Section Practice</label>
+                  </div>
+                  <div class="form-check">
+                     <input type="checkbox"
+                            class="form-check-input"
+                            id="proA3" />
+                     <label class="form-check-label"
+                            for="proA3">Scoring</label>
+                  </div>
+               </div>
+               <div class="small alert alert-warning border-warning mb-2 shadow-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat sed leo sed finibus.</div>
+               <div class="progress progress-sm position-absolute top-0 start-50 translate-middle w-100">
+                  <div style="width: 74%;" class="progress-bar bg-primary"></div>
+               </div>
+            </div>
+            <div class="dropdown-divider mt-0"></div>
+            <div class="dropdown-item-text pt-1 pb-0 d-flex flex-nowrap align-items-center">
+               <a class="flex-fill small" href="#">Track another project?</a>
+               <div class="hstack gap-3 fs-5 opacity-75">
+                  <a class="link-dark" href="#"><i class="zmdi zmdi-chart"></i></a>
+                  <a class="link-dark" href="#"><i class="zmdi zmdi-settings"></i></a>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>

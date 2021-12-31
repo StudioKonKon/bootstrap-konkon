@@ -14,6 +14,7 @@
 {{- $grays := $.Site.Data.grays -}}
 {{- $title := .Get "title" | default "Placeholder" -}}
 {{- $class := .Get "class" -}}
+{{- $style := .Get "style" -}}
 {{- $color := .Get "color" | default (index $grays 2).hex -}}
 {{- $background := .Get "background" | default (index $grays 5).hex -}}
 {{- $width := .Get "width" | default "100%" -}}
@@ -23,7 +24,7 @@
 {{- $show_title := not (eq $title "false") -}}
 {{- $show_text := not (eq $text "false") -}}
 
-<svg class="bd-placeholder-img{{ with $class }} {{ . }}{{ end }}" width="{{ $width }}" height="{{ $height }}" xmlns="http://www.w3.org/2000/svg"{{ if (or $show_title $show_text) }} role="img" aria-label="{{ if $show_title }}{{ $title }}{{ if $show_text }}: {{ end }}{{ end }}{{ if ($show_text) }}{{ $text }}{{ end }}"{{ else }} aria-hidden="true"{{ end }} preserveAspectRatio="xMidYMid slice" focusable="false">
+<svg class="bd-placeholder-img{{ with $class }} {{ . }}{{ end }}"{{ with $style }} style="{{ . | safeCSS }}"{{ end }} width="{{ $width }}" height="{{ $height }}" xmlns="http://www.w3.org/2000/svg"{{ if (or $show_title $show_text) }} role="img" aria-label="{{ if $show_title }}{{ $title }}{{ if $show_text }}: {{ end }}{{ end }}{{ if ($show_text) }}{{ $text }}{{ end }}"{{ else }} aria-hidden="true"{{ end }} preserveAspectRatio="xMidYMid slice" focusable="false">
   {{- if $show_title -}}<title>{{ $title }}</title>{{- end -}}
   <rect width="100%" height="100%" fill="{{ $background }}"/>
   {{- if $show_text -}}<text x="50%" y="50%" fill="{{ $color }}" dy=".3em" dominant-baseline="middle" text-anchor="middle">{{ $text }}</text>{{- end -}}

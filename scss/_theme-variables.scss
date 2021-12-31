@@ -106,14 +106,6 @@ $table-actions-font-size: 		$font-size-base + .385;
 
 
 //Typography
-$lead-line-height:		$font-size-base * 2;
-
-$paragraph-font-size:	$font-size-base;
-$paragraph-line-height:	$paragraph-font-size * $line-height-sm;
-$paragraph-margin:		map-get($spacers, 3);
-
-$list-line-height:		map-get($spacers, 4);
-
 $display-heading-size:				3.077rem;
 $display-heading-margin:			map-get($spacers, 4) 0 map-get($spacers, 3);
 $display-description-size:			1.385rem;

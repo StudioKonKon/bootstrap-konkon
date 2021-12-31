@@ -1,0 +1,14 @@
+.skk-examples .dropdown-menu {
+  position: static !important;
+  display: block !important;
+}
+
+.skk-examples .dropdown-menu > a > i.zmdi {
+  display: inline-block;
+  width: 1rem;
+}
+
+.skk-examples .skk-examples-form-check .form-check-input:checked + label {
+  opacity: 0.25;
+  text-decoration: line-through;
+}
