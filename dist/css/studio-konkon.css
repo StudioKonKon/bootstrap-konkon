@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
  * Studio KonKon v1.3.0-beta (https://studiokonkon.com/)
- * Copyright 2018-2021 Studio KonKon
+ * Copyright 2018-2022 Studio KonKon
  */
 :root {
   --bs-blue: #0d6efd;
@@ -54,7 +54,7 @@
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
-  --bs-body-line-height: 1.6153;
+  --bs-body-line-height: 1.618;
   --bs-body-color: #343a40;
   --bs-body-bg: #fff;
 }
@@ -2176,7 +2176,7 @@ progress {
   padding-bottom: calc(0.375rem + 1px);
   margin-bottom: 0;
   font-size: inherit;
-  line-height: 1.6153;
+  line-height: 1.618;
 }
 
 .col-form-label-lg {
@@ -2203,7 +2203,7 @@ progress {
   padding: 0.375rem 0.769rem;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.6153;
+  line-height: 1.618;
   color: #343a40;
   background-color: #fff;
   background-clip: padding-box;
@@ -2233,7 +2233,7 @@ progress {
   box-shadow: 0 0 0 0.15rem rgba(94, 151, 246, 0.25);
 }
 .form-control::-webkit-date-and-time-value {
-  height: 1.6153em;
+  height: 1.618em;
 }
 .form-control::-webkit-input-placeholder {
   color: #6c757d;
@@ -2328,7 +2328,7 @@ progress {
   width: 100%;
   padding: 0.375rem 0;
   margin-bottom: 0;
-  line-height: 1.6153;
+  line-height: 1.618;
   color: #343a40;
   background-color: transparent;
   border: solid transparent;
@@ -2340,7 +2340,7 @@ progress {
 }
 
 .form-control-sm {
-  min-height: calc(1.6153em + 0.5rem + 2px);
+  min-height: calc(1.618em + 0.5rem + 2px);
   padding: 0.25rem 0.615rem;
   font-size: 0.8462rem;
   border-radius: 0.2rem;
@@ -2365,7 +2365,7 @@ progress {
 }
 
 .form-control-lg {
-  min-height: calc(1.6153em + 1rem + 2px);
+  min-height: calc(1.618em + 1rem + 2px);
   padding: 0.5rem 0.923rem;
   font-size: 1.15rem;
   border-radius: 0.3rem;
@@ -2390,13 +2390,13 @@ progress {
 }
 
 textarea.form-control {
-  min-height: calc(1.6153em + 0.75rem + 2px);
+  min-height: calc(1.618em + 0.75rem + 2px);
 }
 textarea.form-control-sm {
-  min-height: calc(1.6153em + 0.5rem + 2px);
+  min-height: calc(1.618em + 0.5rem + 2px);
 }
 textarea.form-control-lg {
-  min-height: calc(1.6153em + 1rem + 2px);
+  min-height: calc(1.618em + 1rem + 2px);
 }
 
 .form-control-color {
@@ -2408,11 +2408,11 @@ textarea.form-control-lg {
   cursor: pointer;
 }
 .form-control-color::-moz-color-swatch {
-  height: 1.6153em;
+  height: 1.618em;
   border-radius: 0.25rem;
 }
 .form-control-color::-webkit-color-swatch {
-  height: 1.6153em;
+  height: 1.618em;
   border-radius: 0.25rem;
 }
 
@@ -2423,7 +2423,7 @@ textarea.form-control-lg {
   -moz-padding-start: calc(0.769rem - 3px);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.6153;
+  line-height: 1.618;
   color: #343a40;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
@@ -2477,7 +2477,7 @@ textarea.form-control-lg {
 
 .form-check {
   display: block;
-  min-height: 1.6153rem;
+  min-height: 1.618rem;
   padding-left: 1.9em;
   margin-bottom: 0.5rem;
 }
@@ -2489,7 +2489,7 @@ textarea.form-control-lg {
 .form-check-input {
   width: 1.4em;
   height: 1.4em;
-  margin-top: 0.10765em;
+  margin-top: 0.109em;
   vertical-align: top;
   background-color: #fff;
   background-repeat: no-repeat;
@@ -2769,7 +2769,7 @@ textarea.form-control-lg {
   padding: 0.375rem 0.769rem;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.6153;
+  line-height: 1.618;
   color: #343a40;
   text-align: center;
   white-space: nowrap;
@@ -2848,11 +2848,11 @@ textarea.form-control-lg {
 
 .was-validated .form-control:valid, .form-control.is-valid {
   border-color: #34a853;
-  padding-right: calc(1.6153em + 0.75rem);
+  padding-right: calc(1.618em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2334a853' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.403825em + 0.1875rem) center;
-  background-size: calc(0.80765em + 0.375rem) calc(0.80765em + 0.375rem);
+  background-position: right calc(0.4045em + 0.1875rem) center;
+  background-size: calc(0.809em + 0.375rem) calc(0.809em + 0.375rem);
 }
 .was-validated .form-control:valid:focus, .form-control.is-valid:focus {
   border-color: #34a853;
@@ -2860,8 +2860,8 @@ textarea.form-control-lg {
 }
 
 .was-validated textarea.form-control:valid, textarea.form-control.is-valid {
-  padding-right: calc(1.6153em + 0.75rem);
-  background-position: top calc(0.403825em + 0.1875rem) right calc(0.403825em + 0.1875rem);
+  padding-right: calc(1.618em + 0.75rem);
+  background-position: top calc(0.4045em + 0.1875rem) right calc(0.4045em + 0.1875rem);
 }
 
 .was-validated .form-select:valid, .form-select.is-valid {
@@ -2871,7 +2871,7 @@ textarea.form-control-lg {
   padding-right: 4.2295rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2334a853' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-position: right 0.769rem center, center right 2.307rem;
-  background-size: 16px 12px, calc(0.80765em + 0.375rem) calc(0.80765em + 0.375rem);
+  background-size: 16px 12px, calc(0.809em + 0.375rem) calc(0.809em + 0.375rem);
 }
 .was-validated .form-select:valid:focus, .form-select.is-valid:focus {
   border-color: #34a853;
@@ -2937,11 +2937,11 @@ textarea.form-control-lg {
 
 .was-validated .form-control:invalid, .form-control.is-invalid {
   border-color: #ea4335;
-  padding-right: calc(1.6153em + 0.75rem);
+  padding-right: calc(1.618em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ea4335'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ea4335' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.403825em + 0.1875rem) center;
-  background-size: calc(0.80765em + 0.375rem) calc(0.80765em + 0.375rem);
+  background-position: right calc(0.4045em + 0.1875rem) center;
+  background-size: calc(0.809em + 0.375rem) calc(0.809em + 0.375rem);
 }
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
   border-color: #ea4335;
@@ -2949,8 +2949,8 @@ textarea.form-control-lg {
 }
 
 .was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
-  padding-right: calc(1.6153em + 0.75rem);
-  background-position: top calc(0.403825em + 0.1875rem) right calc(0.403825em + 0.1875rem);
+  padding-right: calc(1.618em + 0.75rem);
+  background-position: top calc(0.4045em + 0.1875rem) right calc(0.4045em + 0.1875rem);
 }
 
 .was-validated .form-select:invalid, .form-select.is-invalid {
@@ -2960,7 +2960,7 @@ textarea.form-control-lg {
   padding-right: 4.2295rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ea4335'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ea4335' stroke='none'/%3e%3c/svg%3e");
   background-position: right 0.769rem center, center right 2.307rem;
-  background-size: 16px 12px, calc(0.80765em + 0.375rem) calc(0.80765em + 0.375rem);
+  background-size: 16px 12px, calc(0.809em + 0.375rem) calc(0.809em + 0.375rem);
 }
 .was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
   border-color: #ea4335;
@@ -2998,7 +2998,7 @@ textarea.form-control-lg {
 .btn {
   display: inline-block;
   font-weight: 500;
-  line-height: 1.6153;
+  line-height: 1.618;
   color: #343a40;
   text-align: center;
   vertical-align: middle;
@@ -4109,8 +4109,8 @@ textarea.form-control-lg {
   justify-content: space-between;
 }
 .navbar-brand {
-  padding-top: 0.3788525rem;
-  padding-bottom: 0.3788525rem;
+  padding-top: 0.37865rem;
+  padding-bottom: 0.37865rem;
   margin-right: 1rem;
   font-size: 1.15rem;
   white-space: nowrap;
@@ -5638,7 +5638,7 @@ textarea.form-control-lg {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.6153;
+  line-height: 1.618;
 }
 
 .modal-body {
@@ -5830,7 +5830,7 @@ textarea.form-control-lg {
   font-family: var(--bs-font-sans-serif);
   font-style: normal;
   font-weight: 400;
-  line-height: 1.6153;
+  line-height: 1.618;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -5932,7 +5932,7 @@ textarea.form-control-lg {
   font-family: var(--bs-font-sans-serif);
   font-style: normal;
   font-weight: 400;
-  line-height: 1.6153;
+  line-height: 1.618;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -6382,7 +6382,7 @@ textarea.form-control-lg {
 
 .offcanvas-title {
   margin-bottom: 0;
-  line-height: 1.6153;
+  line-height: 1.618;
 }
 
 .offcanvas-body {
@@ -7734,15 +7734,15 @@ textarea.form-control-lg {
 }
 
 .lh-sm {
-  line-height: 1.4285 !important;
+  line-height: 1.309 !important;
 }
 
 .lh-base {
-  line-height: 1.6153 !important;
+  line-height: 1.618 !important;
 }
 
 .lh-lg {
-  line-height: 1.7 !important;
+  line-height: 1.927 !important;
 }
 
 .text-start {
@@ -11528,7 +11528,7 @@ fieldset[disabled] .btn-secondary:hover {
 }
 
 .btn-rounded {
-  border-radius: 1.6153rem;
+  border-radius: 1.618rem;
 }
 
 .btn .icon.icon-left {
@@ -12568,7 +12568,7 @@ a.badge-outline-konkon:hover, a.badge-outline-konkon:focus {
   [List group]
 */
 .list-group {
-  line-height: 1.4285;
+  line-height: 1.309;
 }
 
 .list-group-item.active .icon {
@@ -12622,10 +12622,6 @@ h3 .badge, .h3 .badge {
   font-size: 0.75em;
 }
 
-.lead {
-  line-height: 2rem;
-}
-
 .text-bold {
   font-weight: 500 !important;
 }
@@ -12651,10 +12647,6 @@ h3 .badge, .h3 .badge {
   color: #bf2114 !important;
 }
 
-ol,
-ul {
-  line-height: 1.5rem;
-}
 ol ol,
 ol ul,
 ul ol,
@@ -12694,7 +12686,7 @@ ul ul {
 .display-description {
   font-size: 1.385rem;
   font-weight: 100;
-  line-height: 1.9784725rem;
+  line-height: 1.812965rem;
   margin: 0 0;
 }
 @media (max-width: 767.98px) {
@@ -12756,10 +12748,10 @@ address {
   border: 1px solid #ddd;
 }
 .pagination-sm .page-link {
-  line-height: 1.4285;
+  line-height: 1.309;
 }
 .pagination-lg .page-link {
-  line-height: 1.7;
+  line-height: 1.927;
 }
 
 .pagination-rounded .page-item .page-link {

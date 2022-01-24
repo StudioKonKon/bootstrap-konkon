@@ -325,7 +325,7 @@
 					}
 					
 					&.active > a {
-						color: $primary;
+						color: $left-sidebar-theme;
 					}
 					
 					ul {
@@ -349,10 +349,10 @@
 				> a {
 					padding-left: $left-sidebar-main-level-padding;
 					font-weight: 500;
-					color: $primary;
+					color: $left-sidebar-theme;
 
 					> span {
-						color: $primary;
+						color: $left-sidebar-theme;
 					}
 				}
 			}
@@ -411,7 +411,7 @@
 					}
 				
 					&:hover:after {
-						color: darken($primary, 27%);
+						color: darken($left-sidebar-theme, 27%);
 					}
 				}
 				
@@ -426,7 +426,7 @@
 				&.open {
 					> a:after {
 						content: '\f2f8';
-						color: darken($primary, 27%);
+						color: darken($left-sidebar-theme, 27%);
 					}
 				}
 			}

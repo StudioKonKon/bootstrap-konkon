@@ -243,7 +243,7 @@
 						&.show {			
 							.#{$icons-class}-caret-down
 							{
-								color: darken($primary, 27%);
+								color: darken($skk-app-theme, 27%);
 							}
 						}
 
@@ -285,7 +285,7 @@
 							}
 					
 							&.active > a {
-								color: $primary;
+								color: $skk-app-theme;
 							}
 						}
 					}

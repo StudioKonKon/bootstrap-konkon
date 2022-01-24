@@ -1,0 +1,36 @@
+// Bootstrap Package
+@import "../../../../scss/bootstrap-required";
+
+$page-header-h: 35vh;
+$page-header-mh: 250px;
+$page-header-pb: $page-header-mh * .15;
+$page-header-list-top: $page-header-pb * -1;
+
+.page-header {
+   height: $page-header-h;
+   min-height: $page-header-mh;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+
+   &-content {
+      backdrop-filter: brightness(80%);
+      height: inherit;
+      min-height: inherit;
+      padding-bottom: $page-header-pb;
+   }
+
+   &-list {
+      transform: translate(0, $page-header-list-top);
+   }
+}
+
+
+
+
+// ----
+
+.swiper {
+   width: 100%;
+}
+
