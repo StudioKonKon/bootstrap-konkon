@@ -240,22 +240,24 @@ $tumblr:		#426d9b !default;
 $evernote:		#2DBE60 !default;
 $dropbox:		#007EE5 !default;
 $codepen:		#333333 !default;
+$stackoverflow: #f48225 !default;
 
 $social-colors: map-merge(
   (
-    "facebook":    $facebook,
-    "twitter":     $twitter,
-    "google-plus": $google-plus,
-    "dribbble":    $dribbble,
-    "youtube":     $youtube,
-    "flickr":      $flickr,
-    "linkedin":    $linkedin,
-    "pinterest":   $pinterest,
-    "github":      $github,
-    "tumblr":      $tumblr,
-    "evernote":    $evernote,
-    "dropbox":     $dropbox,
-    "codepen":     $codepen
+    "facebook":      $facebook,
+    "twitter":       $twitter,
+    "google-plus":   $google-plus,
+    "dribbble":      $dribbble,
+    "youtube":       $youtube,
+    "flickr":        $flickr,
+    "linkedin":      $linkedin,
+    "pinterest":     $pinterest,
+    "github":        $github,
+    "tumblr":        $tumblr,
+    "evernote":      $evernote,
+    "dropbox":       $dropbox,
+    "codepen":       $codepen,
+    "stackoverflow": $stackoverflow
   ),
   $social-colors
 );
