@@ -5,6 +5,7 @@
 //   [/] - Menu toggle events
 //   [/] - Fix parent menu falsely closing (look again at jQuery code then re-translate)
 //   [ ] - Add auto open on submenus for the first found active item.
+//   [ ] - Add custom event listeners
 
 
 
@@ -125,6 +126,10 @@
 
    function toggle(event) {
       this.isOpen = this.sidebar.classList.toggle(this.classes.open);
+      
+      // Prevent toggle from scrolling page to top
+      event.stopPropagation();
+      event.preventDefault();
    }
    // END: sidebar events
 
