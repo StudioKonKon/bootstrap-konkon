@@ -1,22 +1,25 @@
 // Functions
 @import "../node_modules/bootstrap/scss/functions";		// Required (Bootstrap)
-@import "functions";									// Theme Required
+@import "functions";											      // Theme Required
 
 // Variable Overrides
-@import "variables";									// Theme Required
+@import "variables";											      // Theme Required
 
 // Bootstrap Variables
 @import "../node_modules/bootstrap/scss/variables";		// Required (Bootstrap)
 
 // Theme Variables
-@import "theme-variables";								// Theme Required
+@import "theme-variables";										   // Theme Required
+
+// Theme Maps
+@import "bootstrap-maps";										   // Theme Required
 
 // Maps
-@import "bootstrap-maps";								// Theme Required
+@import "../node_modules/bootstrap/scss/maps";				// Required (Bootstrap)
 
 // Mixins
-@import "../node_modules/bootstrap/scss/mixins";		// Required (Bootstrap)
-@import "mixins";										// Theme Required
+@import "../node_modules/bootstrap/scss/mixins";		   // Required (Bootstrap)
+@import "mixins";										            // Theme Required
 
 // Utilities
 @import "../node_modules/bootstrap/scss/utilities";		// Required (Bootstrap)

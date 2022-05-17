@@ -1,6 +1,6 @@
 "use strict";
 (function() {
-	document.querySelectorAll(".be-content .main-content .lbl-tooltip-example")
+	document.querySelectorAll(".lbl-tooltip-example")
 		.forEach(function(tooltip) {
 			tooltip.setAttribute("data-bs-toggle", "tooltip");
 			tooltip.setAttribute("title", "Tooltip Example");
@@ -13,7 +13,7 @@
 			//new bootstrap.Tooltip(tooltip);
 		});
 		
-	document.querySelectorAll(".be-content .main-content .lbl-popover-example")
+	document.querySelectorAll(".lbl-popover-example")
 		.forEach(function(popover) {
 			popover.setAttribute("data-bs-toggle", "popover");
 			popover.setAttribute("data-bs-content", "Vis te sonet civibus convenire, id has eius dicant vidisse.");
