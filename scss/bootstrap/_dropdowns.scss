@@ -60,7 +60,7 @@
 		
 		&:hover {
 			border-color: $dropdown-dark-color;
-			background-color: rgba(255, 255, 255, 0.1);
+			background-color: rgba($white, .1);
 
 			& + .btn {
 				border-left-color: transparent; 
