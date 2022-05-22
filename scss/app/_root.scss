@@ -1,0 +1,4 @@
+:root {
+   --#{$sk-variable-prefix}sidebar-color-rgb: #{to-rgb($skk-app-theme)};
+   --#{$sk-variable-prefix}sidebar-bg-rgb: #{to-rgb($skk-app-theme)};
+}

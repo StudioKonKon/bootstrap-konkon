@@ -34,7 +34,7 @@
 				position: absolute;
 				top: 18px;
 				right: 6px;
-				background-color: $skk-app-theme;
+				background-color: rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), 1);
 				border-radius: 50%;
 				display: block;
 				height: 6px;

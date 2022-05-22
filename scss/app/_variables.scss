@@ -16,7 +16,7 @@ $top-header-title-size:    1.462rem;
 $top-header-title-padding: 0 map-get($spacers, 4);
 
 $top-header-icon-color: darken($white, 55%);
-$top-header-icon-active-color: $skk-app-theme;
+$top-header-icon-active-color: rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), 1);
 
 
 //Content
@@ -43,14 +43,12 @@ $user-dropdown-width:         350px;
 $zindex-navbar-fixed:         1032;
 
 //Left Sidebar
-$left-sidebar-theme:          $skk-app-theme; // primary
+$left-sidebar-theme:          rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), 1);
 $left-sidebar-separators:     true;
 $left-sidebar-bg:             $white;
-$left-sidebar-hover-color:    lighten($left-sidebar-theme, 15%);
-$left-sidebar-level-bg:       lighten($left-sidebar-theme, 35%);
-$left-sidebar-level-hover:    lighten($left-sidebar-theme, 30%);
-$left-sidebar-level-color:    $left-sidebar-theme;
-$left-sidebar-border-color:   lighten($left-sidebar-theme, 30%);
+$left-sidebar-hover-color:    rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), 1);
+$left-sidebar-level-bg:       rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), .1);
+$left-sidebar-border-color:   rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), .1);
 
 $left-sidebar-width:                17.692rem;
 $left-sidebar-width-collapsed:      4.615rem;
@@ -60,9 +58,9 @@ $left-sidebar-icon-size:            1.462rem;
 $left-sidebar-main-level-font-size: 1.077rem;
 $left-sidebar-main-level-padding:   map-get($spacers, 4);
 $left-sidebar-main-level-height:    $spacer * 2.923;
-$left-sidebar-sub-level-color:      $left-sidebar-theme;
-$left-sidebar-sub-level-bg:         lighten($left-sidebar-theme, 35%);
-$left-sidebar-sub-level-hover:      lighten($left-sidebar-theme, 30%);
+$left-sidebar-sub-level-color:      rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), 1);
+$left-sidebar-sub-level-bg:         rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), .1);
+$left-sidebar-sub-level-hover:      rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), .1);
 $left-sidebar-sub-level-font-size:  1rem;
 $left-sidebar-sub-level-padding:    .615rem map-get($spacers, 4);
 

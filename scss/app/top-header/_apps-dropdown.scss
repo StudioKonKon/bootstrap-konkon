@@ -73,16 +73,12 @@
 				width: 76px;
 			}
 
-			&:visited {
-				color: #202124;
-			}
-
 			&:hover {
-				background-color: #e8f0fe;
+				background-color: rgba(0, 0, 0, 0.05);
 			}
 
 			&:active {
-				background-color: #e3edfe;
+				background-color: rgba(0, 0, 0, 0.1);
 			}
 		}
 	}

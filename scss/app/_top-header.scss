@@ -219,12 +219,12 @@
 						&:hover,
 						&:active,
 						&:focus {
-							background-color: darken($left-sidebar-level-bg, 2%);
+							background-color: $left-sidebar-level-bg;
 							
 							&,
 							> .icon,
 							> span {
-								color: darken($left-sidebar-hover-color, 15%);
+								color: $left-sidebar-hover-color;
 							}
 						}
 					}

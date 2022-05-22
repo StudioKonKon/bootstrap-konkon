@@ -94,10 +94,6 @@
 		margin: 0;
 		padding: 0;
       
-      a {
-         position: relative;
-      }
-      
 		.sub-menu .sub-menu {
 			padding: 0;
 			padding-left: map-get($spacers, 2);
@@ -107,7 +103,7 @@
 			@if($left-sidebar-separators) {
 				&:first-child {
 					padding: map-get($spacers, 2) $left-sidebar-main-level-padding 0;
-					color: lighten($left-sidebar-color, 7%);
+					color: force-hex(lighten($left-sidebar-color, 7%));
 					line-height: 2.308rem;
 					font-weight: 600;
 					text-transform: uppercase;
@@ -133,7 +129,7 @@
 				}
 			} @else {
 				padding: map-get($spacers, 2) $left-sidebar-main-level-padding 0;
-				color: lighten($left-sidebar-color, 18%);
+				color: force-hex(lighten($left-sidebar-color, 18%));
 				line-height: 2.308rem;
 				font-weight: 600;
 				text-transform: uppercase;
@@ -161,7 +157,7 @@
 			> a {
 				display: block;
 				padding: 0 $left-sidebar-main-level-padding;
-				color: $left-sidebar-color;
+				color: force-hex($left-sidebar-color);
 				font-size: $left-sidebar-main-level-font-size;
 				line-height: $left-sidebar-main-level-height;
 				text-overflow: ellipsis;
@@ -206,7 +202,6 @@
 			}
 			
 			> ul {
-				background-color: $left-sidebar-sub-level-bg;
 				border-top: 1px solid $left-sidebar-border-color;
 				border-bottom: 1px solid $left-sidebar-border-color;
 			}
@@ -227,6 +222,7 @@
 			
 			ul {
 				display: none;
+				background-color: $left-sidebar-sub-level-bg;
 				padding: map-get($spacers, 1) 0;
 				list-style: none;
 				line-height: 1.538rem;
@@ -262,7 +258,7 @@
 								display: block;
 								padding: map-get($spacers, 4) map-get($spacers, 5);
 								font-size: 1.385rem;
-								color: lighten($left-sidebar-color, 18%);
+								color: force-hex(lighten($left-sidebar-color, 18%));
 								border-bottom: solid 1px #e6e6e6;
 							}
 							
@@ -294,7 +290,7 @@
 				
 						li {
 							> a {
-								color: $left-sidebar-color;
+								color: force-hex($left-sidebar-color);
 						
 								&:hover {
 									color: $left-sidebar-sub-level-color;
@@ -352,22 +348,12 @@
 			&.active {
 				> a {
 					padding-left: $left-sidebar-main-level-padding;
+					font-weight: 500;
 					color: $left-sidebar-theme;
 
 					> span {
 						color: $left-sidebar-theme;
 					}
-               
-               &:before {
-                  content: "";
-                  display: block;
-                  position: absolute;
-                  left: 0;
-                  top: 0;
-                  height: 100%;
-                  width: 4px;
-                  background-color: $left-sidebar-theme;
-               }
 				}
 			}
 
@@ -395,13 +381,6 @@
 		}
 		
 		li {
-         
-         &.active {
-				> a {
-					font-weight: 500;
-				}
-			}
-         
 			> a {
 				display: flex !important;
 				align-items: center !important;
@@ -432,13 +411,22 @@
 					}
 				
 					&:hover:after {
-						color: $left-sidebar-theme;
+						color: darken($left-sidebar-theme, 27%);
 					}
 				}
 				
 				@include media_size("non-responsive") {
 					.be-collapsible-sidebar-collapsed & > a:after {
 						display: none;
+					}
+				}
+			}
+			
+			&.parent {
+				&.open {
+					> a:after {
+						content: '\f2f8';
+						color: darken($left-sidebar-theme, 27%);
 					}
 				}
 			}
