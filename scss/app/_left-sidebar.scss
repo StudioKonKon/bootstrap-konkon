@@ -104,41 +104,24 @@
 		}
 
 		.divider {
-			@if($left-sidebar-separators) {
-				&:first-child {
-					padding: map-get($spacers, 2) $left-sidebar-main-level-padding 0;
-					color: lighten($left-sidebar-color, 7%);
-					line-height: 2.308rem;
-					font-weight: 600;
-					text-transform: uppercase;
-					font-size: 0.8462rem;
-				}
-				
-				&:not(:first-child) {
-					font-size: 0;
-					line-height: 0;
-					padding: 0;
-					margin: 0;
-					border: 0;
-					
-					&:after {
-						content: "";
-						display: block;
-						padding: 0;
-						margin: .615rem auto;
-						border-bottom: 1px solid #e2e2e2;
-						width: $left-sidebar-width - ($left-sidebar-main-level-padding * 2);
-						height: auto;
-					}
-				}
-			} @else {
-				padding: map-get($spacers, 2) $left-sidebar-main-level-padding 0;
-				color: lighten($left-sidebar-color, 18%);
-				line-height: 2.308rem;
-				font-weight: 600;
-				text-transform: uppercase;
-				font-size: 0.8462rem;
-			}
+         color: $left-sidebar-divider-color;
+         font-weight: $font-weight-bold;
+         padding: map-get($spacers, 2) $left-sidebar-main-level-padding;
+         line-height: $line-height-base;
+         text-transform: uppercase;
+         font-size: $font-size-sm;
+         
+         &:not(:first-child) {
+            &:before {
+               content: "";
+               display: block;
+               padding: 0;
+               margin: map-get($spacers, 1) auto;
+               border-bottom: 1px solid $left-sidebar-divider-bg;
+               width: $left-sidebar-width - ($left-sidebar-main-level-padding * 2);
+               height: auto;
+            }
+         }
 				
 			@include media_size("non-responsive") {
 				.be-collapsible-sidebar-collapsed & {
@@ -189,10 +172,6 @@
 					.be-collapsible-sidebar-collapsed & span {
 						display: none;
 					}
-				}
-
-				> .badge {
-					margin-top: $spacer * .692;
 				}
 				
 				&:hover {
@@ -313,15 +292,6 @@
 						text-overflow: ellipsis;
 						overflow: hidden;
 						white-space: nowrap;
-						
-						.badge {
-							border-radius: $border-radius-sm;
-							font-weight: 500;
-							line-height: .692rem;
-							font-size: .85rem;
-							padding: .308rem .538rem;
-							margin-left: .308rem;
-						}
 						
 						&:hover {
 							background-color: $left-sidebar-sub-level-hover;

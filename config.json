@@ -37,8 +37,8 @@
 	"params": {
 		"theme_color": "#fe669e",
 		"author": "Studio KonKon",
-		"current_version": "1.5.2-beta",
-		"docs_version": "5.2.2",
+		"current_version": "1.5.3-beta",
+		"docs_version": "5.2.3",
 		"github_org": "https://github.com/StudioKonKon",
 		"repo": "https://github.com/StudioKonKon/bootstrap-konkon",
       "jsdelivr": "https://www.jsdelivr.com/package/gh/StudioKonKon/bootstrap-konkon",

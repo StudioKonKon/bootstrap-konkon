@@ -20,7 +20,7 @@ $top-header-icon-active-color: rgba(var(--#{$sk-variable-prefix}sidebar-color-rg
 
 
 //Content
-$content-padding:				map-get($spacers, 5);
+$content-padding:				   map-get($spacers, 5);
 $content-padding-tablet:		map-get($spacers, 5);
 $content-padding-phone:			map-get($spacers, 3);
 $content-padding-small-phone:	map-get($spacers, 2);
@@ -44,20 +44,24 @@ $zindex-navbar-fixed:         1032;
 
 //Left Sidebar
 $left-sidebar-theme:          rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), 1);
-$left-sidebar-separators:     true;
 $left-sidebar-bg:             $white;
 $left-sidebar-hover-color:    rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), 1);
 $left-sidebar-level-bg:       rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), .1);
 $left-sidebar-border-color:   rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), .1);
+
+$left-sidebar-divider-bg:        var(--#{$sk-variable-prefix}sidebar-divider-bg);
+$left-sidebar-divider-color:     var(--#{$sk-variable-prefix}sidebar-divider-color);
 
 $left-sidebar-width:                17.692rem;
 $left-sidebar-width-collapsed:      4.615rem;
 $left-sidebar-color:                lighten($body-color, 16%);
 $left-sidebar-logo-bg:              darken($dark, 1.5%);
 $left-sidebar-icon-size:            1.462rem;
+
 $left-sidebar-main-level-font-size: 1.077rem;
 $left-sidebar-main-level-padding:   map-get($spacers, 4);
 $left-sidebar-main-level-height:    $spacer * 2.923;
+
 $left-sidebar-sub-level-color:      rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), 1);
 $left-sidebar-sub-level-bg:         rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), .1);
 $left-sidebar-sub-level-hover:      rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), .1);
