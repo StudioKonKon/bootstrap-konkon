@@ -1,10 +1,12 @@
 /*!
- * Studio KonKon Theme App v1.5.2 (https://studiokonkon.com/)
+ * Studio KonKon Theme App v1.5.4 (https://studiokonkon.com/)
  * Copyright 2018-2022 Studio KonKon
  */
 :root {
   --sk-sidebar-color-rgb: 66, 133, 244;
   --sk-sidebar-bg-rgb: 66, 133, 244;
+  --sk-sidebar-divider-color: #6c757d;
+  --sk-sidebar-divider-bg: #dee2e6;
 }
 
 /* - Top header - */
@@ -1193,27 +1195,20 @@
   padding: 0;
   padding-left: 0.5rem;
 }
-.be-left-sidebar .sidebar-elements .divider:first-child {
-  padding: 0.5rem 1.5rem 0;
-  color: #697581;
-  line-height: 2.308rem;
-  font-weight: 600;
+.be-left-sidebar .sidebar-elements .divider {
+  color: var(--sk-sidebar-divider-color);
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  line-height: 1.618;
   text-transform: uppercase;
   font-size: 0.8462rem;
 }
-.be-left-sidebar .sidebar-elements .divider:not(:first-child) {
-  font-size: 0;
-  line-height: 0;
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-.be-left-sidebar .sidebar-elements .divider:not(:first-child):after {
+.be-left-sidebar .sidebar-elements .divider:not(:first-child):before {
   content: "";
   display: block;
   padding: 0;
-  margin: 0.615rem auto;
-  border-bottom: 1px solid #e2e2e2;
+  margin: 0.25rem auto;
+  border-bottom: 1px solid var(--sk-sidebar-divider-bg);
   width: 14.692rem;
   height: auto;
 }
@@ -1259,9 +1254,6 @@
   .be-collapsible-sidebar-collapsed .be-left-sidebar .sidebar-elements > li > a span {
     display: none;
   }
-}
-.be-left-sidebar .sidebar-elements > li > a > .badge {
-  margin-top: 0.692rem;
 }
 .be-left-sidebar .sidebar-elements > li > a:hover {
   background-color: rgba(var(--sk-sidebar-bg-rgb), 0.1);
@@ -1354,14 +1346,6 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-}
-.be-left-sidebar .sidebar-elements > li ul li > a .badge {
-  border-radius: 0.2rem;
-  font-weight: 500;
-  line-height: 0.692rem;
-  font-size: 0.85rem;
-  padding: 0.308rem 0.538rem;
-  margin-left: 0.308rem;
 }
 .be-left-sidebar .sidebar-elements > li ul li > a:hover {
   background-color: rgba(var(--sk-sidebar-bg-rgb), 0.1);
