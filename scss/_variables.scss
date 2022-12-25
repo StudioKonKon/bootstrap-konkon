@@ -10,7 +10,7 @@ $base-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono"
 $font-family-sans-serif: $base-font-sans-serif;
 $font-family-monospace: $base-font-monospace;
 
-$mark-bg: shift-color($konkon-color, -80%);
+$mark-bg: shift-color($konkon-color, -85%);
 $code-color: $konkon-color;
 
 
@@ -174,8 +174,6 @@ $blockquote-margin-y:			$spacer;
 $blockquote-font-size:			$font-size-base;
 $blockquote-footer-color:		$gray-600;
 $blockquote-footer-font-size:	$small-font-size;
-
-$mark-padding:	0;
 
 // Paragraphs
 //
