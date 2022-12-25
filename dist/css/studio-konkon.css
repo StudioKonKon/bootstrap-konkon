@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Studio KonKon v1.5.4-beta (https://studiokonkon.com/)
+ * Studio KonKon v1.5.5-beta (https://studiokonkon.com/)
  * Copyright 2018-2022 Studio KonKon
  */
 :root {
@@ -71,7 +71,7 @@
   --bs-link-color: #4285f4;
   --bs-link-hover-color: #3871cf;
   --bs-code-color: #fe669e;
-  --bs-highlight-bg: #ffe0ec;
+  --bs-highlight-bg: #ffe8f0;
 }
 
 *,
@@ -221,7 +221,7 @@ small, .small {
 }
 
 mark, .mark {
-  padding: 0;
+  padding: 0.1875em;
   background-color: var(--bs-highlight-bg);
 }
 
