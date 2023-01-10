@@ -4,18 +4,20 @@
 
 // Variable Overrides
 @import "variables";											      // Theme Required
-
-// Bootstrap Variables
 @import "../node_modules/bootstrap/scss/variables";		// Required (Bootstrap)
+
+// Variable Overrides (dark)
+@import "variables-dark";											// Theme Required
+@import "../node_modules/bootstrap/scss/variables-dark"; // Required (Bootstrap)
 
 // Theme Variables
 @import "theme-variables";										   // Theme Required
 
-// Theme Maps
-@import "bootstrap-maps";										   // Theme Required
-
 // Maps
 @import "../node_modules/bootstrap/scss/maps";				// Required (Bootstrap)
+
+// Theme Maps
+@import "bootstrap-maps";										   // Theme Required
 
 // Mixins
 @import "../node_modules/bootstrap/scss/mixins";		   // Required (Bootstrap)

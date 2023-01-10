@@ -35,8 +35,6 @@ $enable-btn-social-colors:		false !default;
 $custom-theme-colors: () !default;
 $social-colors: () !default;
 
-
-// Other Colours
 $skk-konkon:		    lighten($konkon-color, 6.1%);
 $card-konkon: 		    $skk-konkon;
 $dropdown-konkon:	    $skk-konkon;
@@ -54,7 +52,7 @@ $body-bg-light:		#eef0f2;
 
 // Theme Colours
 $skk-primary:		#5f99f5 !default;
-$skk-secondary:		#d9d9d9 !default;
+$skk-secondary:	#d9d9d9 !default;
 $skk-success:		#37b358 !default;
 $skk-info:			#6ba4ff !default;
 $skk-warning:		#f6c163 !default;

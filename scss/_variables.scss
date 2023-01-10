@@ -1,5 +1,8 @@
 // Theme colours
-$konkon-color: #fe669e;
+$konkon-color:         #fe669e;
+$konkon-text:          #983d5f;
+$konkon-bg-subtle:     #ffe0ec;
+$konkon-border-subtle: #ffd1e2;
 
 
 // Theme Specific Bootstrap Variable Overrides
@@ -39,10 +42,40 @@ $light:		$gray-100;
 
 $primary:	#4285f4;
 $secondary:	#878787;
-$danger:	#ea4335;
-$warning:	#ff9f00; // #fbbc05
+$danger:	   #ea4335;
+$warning:	#ff9f00;
 $success:	#34a853;
 $info:		#6ba4ff;
+$light:     $gray-100;
+$dark:      $gray-900;
+
+$primary-text:            #285092;
+$secondary-text:          #1f2326;
+$success-text:            #1f6532;
+$info-text:               #406299;
+$warning-text:            #995f00;
+$danger-text:             #8c2820;
+$light-text:              $gray-600 !default;
+$dark-text:               $gray-700 !default;
+
+$primary-bg-subtle:       #d9e7fd;
+$secondary-bg-subtle:     #d6d8d9;
+$success-bg-subtle:       #d6eedd;
+$info-bg-subtle:          #e1edff;
+$warning-bg-subtle:       #ffeccc;
+$danger-bg-subtle:        #fbd9d7;
+$light-bg-subtle:         mix($gray-100, $white) !default;
+$dark-bg-subtle:          $gray-400 !default;
+
+$primary-border-subtle:   #c6dafc;
+$secondary-border-subtle: #c2c4c6;
+$success-border-subtle:   #c2e5cb;
+$info-border-subtle:      #d3e4ff;
+$warning-border-subtle:   #ffe2b3;
+$danger-border-subtle:    #f9c7c2;
+$light-border-subtle:     $gray-200 !default;
+$dark-border-subtle:      $gray-500 !default;
+
 
 // The yiq lightness value that determines when the lightness of color
 // changes from "dark" to "light". Acceptable values are between 0 and 255.
