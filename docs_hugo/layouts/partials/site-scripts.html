@@ -12,3 +12,15 @@ var mySidebar = new Sidebar("#left-sidebar");
 mySidebar.createToggle("#left-sidebar-toggle");
 //-->
 </script>
+<!-- Asset Scripts //-->
+{{- $main_opts := ( dict
+   "targetPath" "assets/js/app.min.js"
+   "bundle" true
+   "platform" "browser"
+   "globalName" "app"
+   "format" "iife"
+   "target" "es2015"
+   "minify" true
+) -}}
+{{- $main_built := resources.Get "js/main-app.js" | js.Build $main_opts -}}
+<script type="text/javascript" src="{{ $main_built.Permalink }}"></script>

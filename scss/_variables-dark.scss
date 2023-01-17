@@ -2,9 +2,9 @@
 //
 // Custom variables for the `[data-bs-theme="dark"]` theme. Use this as a starting point for your own custom color modes by creating a new theme-specific file like `_variables-dark.scss` and adding the variables you need.
 
-$konkon-text-dark:           $blue-300 !default;
-$konkon-bg-subtle-dark:      $blue-900 !default;
-$konkon-border-subtle-dark: $blue-700 !default;
+$konkon-text-dark:           tint-color($konkon-text, 40%);
+$konkon-bg-subtle-dark:      shade-color($konkon-text, 80%);
+$konkon-border-subtle-dark:  shade-color($konkon-text, 40%);
 
 
 //
@@ -12,30 +12,30 @@ $konkon-border-subtle-dark: $blue-700 !default;
 //
 
 // scss-docs-start sass-dark-mode-vars
-$primary-text-dark:                 $blue-300 !default;
-$secondary-text-dark:               $gray-300 !default;
-$success-text-dark:                 $green-300 !default;
-$info-text-dark:                    $cyan-300 !default;
-$warning-text-dark:                 $yellow-300 !default;
-$danger-text-dark:                  $red-300 !default;
+$primary-text-dark:                 tint-color($primary-text, 40%);
+$secondary-text-dark:               tint-color($secondary-text, 40%);
+$success-text-dark:                 tint-color($success-text, 40%);
+$info-text-dark:                    tint-color($info-text, 40%);
+$warning-text-dark:                 tint-color($warning-text, 40%);
+$danger-text-dark:                  tint-color($danger-text, 40%);
 $light-text-dark:                   $gray-100 !default;
 $dark-text-dark:                    $gray-300 !default;
 
-$primary-bg-subtle-dark:            $blue-900 !default;
-$secondary-bg-subtle-dark:          $gray-900 !default;
-$success-bg-subtle-dark:            $green-900 !default;
-$info-bg-subtle-dark:               $cyan-900 !default;
-$warning-bg-subtle-dark:            $yellow-900 !default;
-$danger-bg-subtle-dark:             $red-900 !default;
+$primary-bg-subtle-dark:            shade-color($primary-text, 80%);
+$secondary-bg-subtle-dark:          shade-color($secondary-text, 80%);
+$success-bg-subtle-dark:            shade-color($success-text, 80%);
+$info-bg-subtle-dark:               shade-color($info-text, 80%);
+$warning-bg-subtle-dark:            shade-color($warning-text, 80%);
+$danger-bg-subtle-dark:             shade-color($danger-text, 80%);
 $light-bg-subtle-dark:              $gray-800 !default;
 $dark-bg-subtle-dark:               mix($gray-800, $black) !default;
 
-$primary-border-subtle-dark:        $blue-700 !default;
-$secondary-border-subtle-dark:      $gray-700 !default;
-$success-border-subtle-dark:        $green-700 !default;
-$info-border-subtle-dark:           $cyan-800 !default;
-$warning-border-subtle-dark:        $yellow-800 !default;
-$danger-border-subtle-dark:         $red-700 !default;
+$primary-border-subtle-dark:        shade-color($primary-text, 40%);
+$secondary-border-subtle-dark:      shade-color($secondary-text, 40%);
+$success-border-subtle-dark:        shade-color($success-text, 40%);
+$info-border-subtle-dark:           shade-color($info-text, 40%);
+$warning-border-subtle-dark:        shade-color($warning-text, 40%);
+$danger-border-subtle-dark:         shade-color($danger-text, 40%);
 $light-border-subtle-dark:          $gray-700 !default;
 $dark-border-subtle-dark:           $gray-800 !default;
 

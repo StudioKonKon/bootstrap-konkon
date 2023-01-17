@@ -1,7 +1,7 @@
 +++
 title = "App"
 aliases = "/app/"
-body_class = "bg-light"
+body_class = "bg-body-secondary"
 left_sidebar_class = "be-offcanvas-menu be-fixed-sidebar"
    
 +++

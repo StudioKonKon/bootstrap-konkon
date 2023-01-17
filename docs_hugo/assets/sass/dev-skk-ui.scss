@@ -95,8 +95,9 @@
 
 /* Docs Code */
 .pre-bordered {
-	border: solid 1px #cccccc;
-	background-color: #fafafa;
+	border: solid 1px  var(--#{$prefix}secondary-bg);
+	color: var(--#{$prefix}body-color);
+	background-color: var(--#{$prefix}tertiary-bg);
 	border-radius: 0.1538rem;
 }
 
@@ -115,7 +116,7 @@
 	border-radius: 0;
 }
 
-.language-html .pln { color: #777777; } /* plain text */
+.language-html .pln { color: var(--#{$prefix}secondary-color); } /* plain text */
 .language-html .str { color: #808080; background-color: #f2f4ff; } /* string content */
 .language-html .kwd { color: #8000ff; background-color: #f2f4ff; } /* a keyword */
 .language-html .com { color: #008000; } /* a comment */

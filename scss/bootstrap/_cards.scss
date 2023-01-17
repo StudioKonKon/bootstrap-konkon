@@ -2,17 +2,6 @@
   [Cards]
 */
 
-.card {
-	--bs-bg-opacity: 1;
-   background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity));
-	box-shadow: $card-box-shadow;
-	@include border-radius($card-border-radius);
-   
-   [data-bs-theme="dark"] & {
-      --bs-bg-opacity: .05;
-   }
-}
-
 .card-group .card {
 	box-shadow: none;
 }

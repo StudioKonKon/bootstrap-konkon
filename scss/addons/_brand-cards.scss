@@ -1,9 +1,9 @@
 /* --- Brand Cards --- */
 
-$brand-card-header-height:		6rem !default;
-$brand-card-title-font-size:	$h4-font-size !default;
+$brand-card-header-height:		   6rem !default;
+$brand-card-title-font-size:	   $h4-font-size !default;
 $brand-card-subtitle-font-size:	$font-size-base !default;
-$brand-card-icon-font-size:		$font-size-base * 2.5 !default;
+$brand-card-icon-font-size:		$font-size-base * 2.5 !default; // var(--#{$prefix}body-bg)
 
 .brand-card {
 	position: relative;
@@ -24,8 +24,8 @@ $brand-card-icon-font-size:		$font-size-base * 2.5 !default;
 	height: $brand-card-header-height;
 	border-radius: $card-border-radius $card-border-radius 0 0;
 	background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+   background-position: center center;
+   background-size: cover;
 	
 	.brand-card-title {
 		font-size: $brand-card-title-font-size;
@@ -58,7 +58,6 @@ a.brand-card-header:hover {
 }
 
 .brand-card-body {
-	color: $black;
 	display: flex;
 	flex-direction: row;
 	padding: ($card-spacer-y * .5) 0;

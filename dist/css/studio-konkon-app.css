@@ -423,7 +423,7 @@
   border-bottom-width: 9px;
   border-left-width: 9px;
   border-right-width: 9px;
-  border-bottom-color: 1px;
+  border-bottom-color: var(--bs-border-width);
   margin-left: -9px;
   bottom: -0.923rem;
 }
@@ -716,7 +716,7 @@
   flex-direction: row;
   align-items: center;
   text-decoration: none;
-  color: #363d43;
+  color: #23282c;
   padding: 0 1rem;
   white-space: nowrap;
   line-height: 1.5rem;
@@ -755,7 +755,7 @@
 }
 .be-user-nav .skk-nvl > .skk-nvl-item .skk-nvli-label {
   display: block;
-  color: #363d43;
+  color: #23282c;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -933,7 +933,7 @@
   background-color: whitesmoke;
 }
 .be-notifications .skk-nli > a {
-  color: #363d43;
+  color: #23282c;
   display: flex;
   flex: 1;
   flex-basis: 0.000000001px;
@@ -980,7 +980,7 @@
   max-height: 8rem;
 }
 .be-notifications .skk-nli-metadata {
-  color: #8f9aa4;
+  color: #778592;
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.125rem;
@@ -1855,12 +1855,10 @@
   margin-top: 0.462rem;
   font-weight: 300;
   font-size: 2.154rem;
-  color: hsl(0deg, 0%, 42%);
   line-height: 2.769rem;
 }
 .page-head-description {
   display: block;
-  color: hsl(0deg, 0%, 43%);
   font-size: 1.077rem;
   font-weight: 300;
   padding: 0 0 0.462rem;
@@ -1877,16 +1875,6 @@
 }
 .page-head .breadcrumb > li + li:before {
   padding: 0 0.5rem;
-  color: hsl(0deg, 0%, 64%);
-}
-.page-head .breadcrumb > li > a {
-  color: hsl(0deg, 0%, 37%);
-}
-.page-head .breadcrumb > li > a:hover {
-  color: hsl(0deg, 0%, 19%);
-}
-.page-head .breadcrumb > .active {
-  color: hsl(0deg, 0%, 48%);
 }
 .page-head .breadcrumb-item {
   padding-left: 0;

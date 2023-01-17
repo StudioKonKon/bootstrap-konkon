@@ -1,14 +1,15 @@
 /* --- User Timeline --- */
 
-$user-timeline-bg-color:			$primary !default;
-$user-timeline-icon-size:			1rem !default;
-$user-timeline-icon-border-width:	$border-width !default;
-$user-timeline-border-width:		.125rem !default;
-$user-timeline-padding-left:		map-get($spacers, 3) !default;
-$user-timeline-padding-bottom:		map-get($spacers, 4) !default;
-$user-timeline-line-height:			1.5 !default;
-$user-timeline-date-color:			$gray-500 !default;
-$user-timeline-date-font-size:		$font-size-sm !default;
+$user-timeline-bg-color:          $primary !default;
+$user-timeline-icon-size:         1rem !default;
+$user-timeline-icon-border-width: $border-width !default;
+$user-timeline-border-width:      .125rem !default;
+$user-timeline-padding-left:      map-get($spacers, 3) !default;
+$user-timeline-padding-bottom:    map-get($spacers, 4) !default;
+$user-timeline-line-height:       1.5 !default;
+$user-timeline-date-color:        $gray-500 !default;
+$user-timeline-date-font-size:    $font-size-sm !default;
+$user-timeline-dot-color:         var(--#{$prefix}body-bg);
 
 .user-timeline {
 	position: relative;
@@ -55,7 +56,7 @@ $user-timeline-date-font-size:		$font-size-sm !default;
 			margin-top: ($user-timeline-line-height * .5rem) - ($user-timeline-icon-size * .5);
 			height: $user-timeline-icon-size;
 			width: $user-timeline-icon-size;
-			background-color: $white;
+			background-color: $user-timeline-dot-color;
 			border-radius: 50%;
 			border: $user-timeline-icon-border-width solid $user-timeline-bg-color;
 		}

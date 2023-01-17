@@ -26,8 +26,7 @@
 
 	</head>
 	<body{{ with .Page.Params.body_class }} class="{{ . }}"{{ end }}
-         style="--sk-sidebar-bg-rgb:254, 102, 158;--sk-sidebar-color-rgb:254, 102, 158;"
-         data-bs-theme="light">
+         style="--sk-sidebar-bg-rgb:254, 102, 158;--sk-sidebar-color-rgb:254, 102, 158;">
 <div class="be-wrapper {{ with .Page.Params.left_sidebar_class }} {{ . }}{{ else }} be-offcanvas-menu be-fixed-sidebar{{ end }}">
 {{ partial "app/top-navbar" . }}
 {{ partial "app/left-sidebar" . }}

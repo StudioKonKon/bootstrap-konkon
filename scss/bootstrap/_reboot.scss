@@ -2,15 +2,20 @@
   [Reboot]
 */
 
-body.bg-light {
+bodys.bg-light {
 	background-color: $body-bg-light !important;
+   
+   &[data-bs-theme="dark"] {
+      background-color: $body-bg-dark !important;
+   }
 }
 
 pre {
 	padding: map-get($spacers, 4);
 	border: 0;
 	@include border-radius(0);
-	background-color: $gray-100;
+	background-color: var(--#{$prefix}tertiary-bg);
+	color: var(--#{$prefix}body-color);
 	font-size: .9231rem;
 	margin: 0 0 .692rem;
 }

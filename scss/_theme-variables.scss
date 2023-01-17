@@ -48,7 +48,7 @@ $dropdown-colors: map-remove($theme-colors, "light", "secondary", "dark") !defau
 $skk-colors:		() !default;
 $modal-colors:		() !default;
 
-$body-bg-light:		#eef0f2;
+$body-bg-light:	#eef0f2;
 
 // Theme Colours
 $skk-primary:		#5f99f5 !default;
@@ -149,8 +149,7 @@ $card-notitle-margin-top:           map-get($spacers, 3);
 
 $card-metadata-font-size:           $font-size-sm;
 
-$card-margin-bottom:				map-get($spacers, 5);
-$card-box-shadow:					0px .077rem .154rem rgba(0, 0, 0, .1);
+$card-margin-bottom:				   map-get($spacers, 5);
 
 $widget-heading-font-size:			$h4-font-size;
 $widget-heading-font-weight:		$font-weight-light;
