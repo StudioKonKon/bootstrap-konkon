@@ -301,7 +301,7 @@ $card-spacer-x:            map-get($spacers, 4);
 $card-border-radius:       .231rem;
 $card-box-shadow:          0px .077rem .154rem rgba(0, 0, 0, .1);
 $card-inner-border-radius: calc(#{$card-border-radius} - #{$border-width});
-$card-cap-bg:              rgba(var(--#{$prefix}body-color-rgb), .03) !default;
+$card-cap-bg:              rgba(var(--#{$prefix}body-color-rgb), .05);
 $card-bg:                  var(--#{$prefix}body-bg) !default;
 
 $card-group-margin:			$card-spacer-y;
@@ -440,10 +440,11 @@ $pre-color:						$gray-900;
 // Accordion
 $accordion-padding-y:					$spacer;
 $accordion-padding-x:					map-get($spacers, 1) + $spacer;
-$accordion-color:						$body-color;
-$accordion-bg:							$white;
+$accordion-color:						   var(--#{$prefix}body-color);
+$accordion-bg:							   var(--#{$prefix}body-bg);
 $accordion-border-width:				$border-width;
-$accordion-border-color:				rgba($black, .125);
+$accordion-border-color:            var(--#{$prefix}border-color) !default;
+$accordion-border-radius:           var(--#{$prefix}border-radius) !default;
 $accordion-border-radius:				$border-radius;
 
 $accordion-body-padding-y:				map-get($spacers, 4);

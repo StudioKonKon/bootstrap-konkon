@@ -1,21 +1,24 @@
+$bs-prefix: bs- !default;
+
 // Studio KonKon App Variables
 $skk-app-theme: $primary;
 
 // Brand Logo
 $top-header-logo-width:    10.923rem;
 $top-header-logo-height:   27px;
-$top-header-logo-padding:  map-get($spacers, 4);
-$top-header-logo-position: center;
+$top-header-logo-margin:  map-get($spacers, 2) 0;
+$top-header-logo-position: left center;
 $top-header-logo-size:     contain;
 
 $top-header-menu-icon-size:    1.846rem;
+$top-header-menu-icon-lh:      1.946rem;
 $top-header-menu-icon-color:   #5a5a5a;
-$top-header-menu-icon-padding: 0 map-get($spacers, 4);
+$top-header-menu-icon-padding: 1.25rem;
 
 $top-header-title-size:    1.462rem;
 $top-header-title-padding: 0 map-get($spacers, 4);
 
-$top-header-icon-color: darken($white, 55%);
+$top-header-icon-color: rgba(var(--#{$prefix}body-color-rgb), .5);
 $top-header-icon-active-color: rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), 1);
 
 
@@ -29,7 +32,7 @@ $content-padding-small-phone:	map-get($spacers, 2);
 $top-header-bg:               $white;
 $top-header-border:           0;
 $top-header-border-bottom:    1px solid darken($top-header-bg, 10%);
-$top-header-padding:          0;
+$top-header-padding-x:        map-get($spacers, 4);
 $top-header-margin-bottom:    0;
 $top-header-phone-bg:         lighten($black, 10%);
 $top-header-link-color:       darken($white, 55%);

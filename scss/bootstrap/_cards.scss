@@ -43,7 +43,6 @@
 .card-header {
 	border-bottom-width: 0;
 	@include border-top-radius($card-border-radius);
-	background-color: transparent;
 
 	.tools {
 		float: right;
@@ -116,7 +115,12 @@
 }
 
 //Card contrast
+.card:not(.card-contrast) {
+   --#{$prefix}card-cap-bg: $card-bg;
+}
+   
 .card-contrast {
+   
 	.card-header {
 		margin: 0;
 	}
@@ -125,13 +129,6 @@
 		margin: 0;
 		padding: $card-footer-padding;
 	}
-}
-
-
-// Card heading contrast
-.card-footer-contrast,
-.card-header-contrast {
-	background-color: darken($white, 4%);
 }
 
 // Card body contrast

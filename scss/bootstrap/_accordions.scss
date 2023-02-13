@@ -21,7 +21,6 @@
 
 .accordion {
 	.accordion-item {
-		background-color: $accordion-bg;
 		
 		+ .accordion-item {
 			margin-top: $accordion-margin-y;

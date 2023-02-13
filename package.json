@@ -44,5 +44,8 @@
 	"files": [
 		"dist/{css,js}/*.{css,js,map}",
 		"scss/**/*.scss"
-	]
+	],
+	"dependencies": {
+		"bootstrap-icons": "^1.10.3"
+	}
 }
