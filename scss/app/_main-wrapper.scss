@@ -3,7 +3,7 @@
 */
 .be-wrapper {
 	min-height: 100%;
-	padding-top: $top-header-height + 1px;
+	padding-top: $top-header-height + $top-header-offset;
 
 	@include media_size("small-phone") {
 		overflow-x: hidden;

@@ -124,23 +124,23 @@
 	}
 	
 	// Top Menu Content
-	.be-top-menu > & {
-		.top-menu-content {
-			flex-wrap: nowrap;
-			white-space: nowrap;
-		}
-		
-		.page-title {
-			display: none !important;
-		}
-	}
+	//.be-top-menu > & {
+	//	.top-menu-content {
+	//		flex-wrap: nowrap;
+	//		white-space: nowrap;
+	//	}
+	//	
+	//	.page-title {
+	//		display: none !important;
+	//	}
+	//}
 	
-	.be-wrapper:not(.be-top-menu) > & {
-		.be-toggle-top-header-menu,
-		.top-menu-content {
-			display: none !important;
-		}
-	}
+	//.be-wrapper:not(.be-top-menu) > & {
+	//	.be-toggle-top-header-menu,
+	//	.top-menu-content {
+	//		display: none !important;
+	//	}
+	//}
 	
 	// Top general navigation
 	.navbar-nav {

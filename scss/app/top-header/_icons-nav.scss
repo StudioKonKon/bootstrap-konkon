@@ -20,20 +20,11 @@
 
 		> a {
 			position: relative;
-			
-			.navbar-expand & {
-				padding: .45rem;
-			}
-			
-			.icon {
-				font-size: 1.846rem;
-				vertical-align: middle;
-			}
-
+         
 			.indicator {
 				position: absolute;
-				top: 18px;
-				right: 6px;
+				top: $top-header-nav-icon-padding;
+				right: $top-header-nav-icon-padding;
 				background-color: rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), 1);
 				border-radius: 50%;
 				display: block;

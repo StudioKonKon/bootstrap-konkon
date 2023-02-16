@@ -1,4 +1,6 @@
 :root {
+   --#{$sk-variable-prefix}header-bg-rgb: var(--#{$prefix}body-bg-rgb);
+   --#{$sk-variable-prefix}header-border-rgb: #{$gray-600};
    --#{$sk-variable-prefix}sidebar-color-rgb: #{to-rgb($skk-app-theme)};
    --#{$sk-variable-prefix}sidebar-bg-rgb: #{to-rgb($skk-app-theme)};
    --#{$sk-variable-prefix}sidebar-divider-color: #{$gray-600};

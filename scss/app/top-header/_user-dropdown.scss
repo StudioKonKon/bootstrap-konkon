@@ -1,24 +1,16 @@
 /* user nav */
 
-.be-user-nav {
+.navbar-nav.be-user-nav {
 	margin-right: 0;
 	
-	> li.dropdown {
-		> a {
+	> .nav-item {
+		> .nav-link {
 			font-size: 0;
-			
-			.navbar-expand & {
-				padding-left: 5px;
-				padding-right: 5px;
-			
-				@include media_size("tablet") {
-					padding-left: 10px;
-				}
-			}
+         padding: 0;
 
 			img {
-				max-width: 32px;
-				max-height: 32px;
+				width: $user-icon-size;
+				height: $user-icon-size;
 				border-radius: 50%;
 			}
 
@@ -32,16 +24,9 @@
 		}
 
 		.dropdown-menu {
-			max-height: calc(100vh - #{$top-header-height + 2px} - #{$content-padding});
-			position: fixed;
-			top: $top-header-height;
-			overflow-y: auto;
-			overscroll-behavior: contain;
 			padding: 0 !important;
 			width: $user-dropdown-width;
 			min-width: $user-dropdown-width;
-			left: auto;
-			right: 0;
 			border: 1px solid hsl(0, 0%, 88%);
 		}
 	}

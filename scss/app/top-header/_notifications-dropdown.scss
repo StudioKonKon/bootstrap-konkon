@@ -3,6 +3,7 @@
 .be-notifications {
 	padding: 0 !important;
 	min-width: $icons-nav-dropdown-width;
+   overflow: hidden !important;
 	
 	// Notification Container
 	.skk-nc {
@@ -58,7 +59,7 @@
 	
 	// Notification Body
 	.skk-nb {
-		max-height: calc(100vh - #{$top-header-height + 5px} - #{2.5rem + $content-padding});
+		max-height: calc(100vh - #{$top-header-height} - #{2.5rem + $content-padding});
 		height: 400px;
 		display: flex;
 		flex-direction: column;

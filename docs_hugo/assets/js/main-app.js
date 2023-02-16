@@ -1,7 +1,7 @@
 
 function toggleLightMode(e) {
-   const light = (document.body.getAttribute("data-bs-theme") == "light")
-   document.body.setAttribute("data-bs-theme", (!light ? "light" : "dark"))
+   const light = (document.documentElement.getAttribute("data-bs-theme") == "light")
+   document.documentElement.setAttribute("data-bs-theme", (!light ? "light" : "dark"))
    e.stopPropagation()
    e.preventDefault()
 }
@@ -10,7 +10,7 @@ function toggleLightMode(e) {
    const node = document.querySelector("#lightmode")
    
    if(node) {
-      document.body.setAttribute("data-bs-theme", "light")
+      document.documentElement.setAttribute("data-bs-theme", "light")
       node.addEventListener("click", toggleLightMode)
    }
 })();

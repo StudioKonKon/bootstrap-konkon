@@ -13,7 +13,35 @@
 		</div>
 	
 		<!-- Page Title //-->
-		<div class="page-title"><span>{{ .Page.Title | markdownify }}</span></div>
+      {{ with $.Page.Params }}
+         {{ with .navbar_type }}
+            {{ if eq . "top-menu" }}
+<div class="navbar-collapse collapse" id="be-navbar-collapse">
+   <div class="navbar-nav">
+      <div class="nav-item"><a class="nav-link" href="#">Home</a></div>
+      <div class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+            <span>Settings</span>
+            <span class="zmdi zmdi-caret-down"></span>
+         </a>
+         <div class="dropdown-menu" role="menu">
+            <a class="dropdown-item" href="#">Apps</a>
+            <a class="dropdown-item" href="#">Notifications</a>
+            <a class="dropdown-item" href="#">User</a>
+         </div>
+      </div>
+      <div class="nav-item"><a class="nav-link" href="#">Profile</a></div>
+   </div>
+</div>
+            {{ else }}
+<div class="page-title"><span class="page-title-content">{{ $.Page.Title | markdownify }}</span></div>
+            {{ end }}
+            {{ else }}
+<div class="page-title"><span class="page-title-content">{{ $.Page.Title | markdownify }}</span></div>
+            {{ end }}
+      {{ else }}
+         <div class="page-title"><span class="page-title-content">{{ $.Page.Title | markdownify }}</span></div>
+      {{ end }}
 	
 		<!-- Navbars //-->
 		<div class="be-right-navbar">

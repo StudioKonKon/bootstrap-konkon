@@ -7,7 +7,7 @@
 	// Apps Nav Content
 	.skk-anc {
 		height: 440px;
-		max-height: calc(100vh - #{$top-header-height + 5px} - #{$content-padding});
+		max-height: calc(100vh - #{$top-header-height} - #{$content-padding});
 		overflow-y: auto !important;
 		overflow-x: hidden;
 		overscroll-behavior: contain;
