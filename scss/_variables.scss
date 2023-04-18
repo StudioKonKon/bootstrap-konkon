@@ -159,6 +159,9 @@ $border-widths: (
   4: 4px,
   5: 5px
 );
+$border-style:                solid !default;
+$border-color:                $gray-300 !default;
+$border-color-translucent:    rgba($black, .075) !default;
 
 $border-radius:			.25rem !default;
 $border-radius-sm:		.2rem !default;
@@ -317,40 +320,12 @@ $card-border-color:        rgba($black, .05);
 //
 // Dropdown menu container and contents.
 
-$dropdown-min-width:			14.231rem;
-$dropdown-padding-x:			0;
-$dropdown-padding-y:			map-get($spacers, 4) - $spacer;
-$dropdown-font-size:			$font-size-base;
-$dropdown-color:				$gray-900;
-$dropdown-bg:					$white;
-$dropdown-border-color:			$gray-300;
-$dropdown-border-radius:		$border-radius;
-$dropdown-inner-border-radius:	calc(#{$dropdown-border-radius} - #{$border-width});
-$dropdown-link-hover-bg:		$gray-100;
-$dropdown-link-disabled-color:	$text-muted;
-$dropdown-header-color:			$text-muted;
-$dropdown-divider-bg:			$gray-300;
-$dropdown-divider-margin-y:		map-get($spacers, 1);
-$dropdown-box-shadow:           0px 0px 6px 0px rgba(0, 0, 0, .12);
-
+$dropdown-padding-y:			   map-get($spacers, 4) - $spacer;
+$dropdown-divider-margin-y:   map-get($spacers, 1);
+$dropdown-box-shadow:         0px 0px 6px 0px rgba(0, 0, 0, .12);
 $dropdown-item-padding-y:		map-get($spacers, 2);
 $dropdown-item-padding-x:		map-get($spacers, 4);
-
-$dropdown-header-padding:   $dropdown-padding-y $dropdown-item-padding-x !default;
-
-
-$dropdown-dark-color:				$white;
-$dropdown-dark-bg:					$gray-800;
-$dropdown-dark-border-color:		transparent;
-$dropdown-dark-divider-bg:			shift-color($dropdown-dark-bg, -40%);
-$dropdown-dark-box-shadow:          none;
-$dropdown-dark-link-color:          $white;
-$dropdown-dark-link-hover-color:    $white;
-$dropdown-dark-link-hover-bg:		darken($dropdown-dark-bg, 5%);
-$dropdown-dark-link-active-color:	$dropdown-dark-link-hover-color;
-$dropdown-dark-link-active-bg:		$dropdown-dark-link-hover-bg;
-$dropdown-dark-link-disabled-color:	shift-color($dropdown-dark-bg, -40%);
-$dropdown-dark-header-color:		shift-color($dropdown-dark-bg, -50%);
+$dropdown-header-padding:     $dropdown-padding-y $dropdown-item-padding-x;
 
 
 // List group
