@@ -172,14 +172,21 @@ $accordion-icon-white:		url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 
 
 // Navs
-$nav-skk-link-py:			.846rem;
-$nav-skk-link-px:			1.538rem;
-$nav-skk-content-py:		map-get($spacers, 4);
-$nav-skk-content-px:		$nav-skk-content-py;
+$nav-skk-bg:                var(--#{$prefix}body-bg);
+
+$nav-skk-link-py:			    .846rem;
+$nav-skk-link-px:			    1.538rem;
+$nav-skk-link-color:        var(--#{$prefix}body-color);
 $nav-link-disabled-opacity: .8;
 
-$nav-skk-link-vpy:			$nav-skk-link-py;
-$nav-skk-link-vpx:			$nav-skk-link-py;
+$nav-skk-active-color:      $nav-skk-link-color;
+$nav-skk-hover-color:       var(--#{$prefix}link-color);
+
+$nav-skk-content-py:		    map-get($spacers, 4);
+$nav-skk-content-px:		    $nav-skk-content-py;
+
+$nav-skk-border-color:      $nav-skk-hover-color;
+$nav-skk-border:            $nav-tabs-border-width solid $nav-skk-border-color;
 
 
 // Toast

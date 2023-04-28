@@ -33,7 +33,7 @@ $content-padding-small-phone:	map-get($spacers, 2);
 // Top Header
 $top-header-bg:               rgba(var(--#{$sk-variable-prefix}header-bg-rgb), 1);
 $top-header-border:           0;
-$top-header-border-bottom:    var(--#{$sk-variable-prefix}header-border-rgb);
+$top-header-border-bottom:    4px solid var(--#{$sk-variable-prefix}header-border-rgb) !important;
 $top-header-padding-x:        map-get($spacers, 4);
 $top-header-margin-bottom:    0;
 $top-header-phone-bg:         lighten($black, 10%);

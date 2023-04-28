@@ -5,7 +5,7 @@
 .tab-container {
 	.nav-tabs {
 		@include border-top-radius($nav-tabs-border-radius);
-		background-color: $card-bg;
+		background-color: $nav-skk-bg;
 		border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 	}
 
@@ -14,7 +14,7 @@
 		margin-right: 0;
 		text-align: center;
 		@include border-radius(0);
-		color: $body-color;
+		color: $nav-skk-link-color;
 		border-width: 0;
 
 		.icon {
@@ -25,7 +25,7 @@
 
 		&:hover {
 			background: 0 0;
-			color: $primary;
+			color: $nav-skk-hover-color;
 		}
 
 		&:active {
@@ -34,11 +34,12 @@
 
 		&.active {
 			background: 0 0;
-			border-bottom: $nav-tabs-border-width solid $primary;
+			border-bottom: $nav-skk-border;
+         color: $nav-skk-active-color;
 			
 			&:focus,
 			&:hover {
-				color: $body-color;
+				color: $nav-skk-active-color;
 			}
 		}
 		
@@ -91,7 +92,7 @@
 	
 	.nav-link {
 		border: $nav-tabs-border-width solid transparent;
-		padding: $nav-skk-link-vpy $nav-skk-link-vpx;
+		padding: $nav-skk-link-py $nav-skk-link-px;
 		
 		&:hover,
 		&:focus,
@@ -108,7 +109,7 @@
 	> .nav-item {
 		
 		.nav-link.active {
-			border-right: $nav-tabs-border-width solid $primary;
+			border-right: $nav-skk-border;
 		}
 	}
 }
@@ -120,7 +121,7 @@
 	> .nav-item {
 		
 		.nav-link.active {
-			border-left: $nav-tabs-border-width solid $primary;
+			border-left: $nav-skk-border;
 		}
 	}
 }

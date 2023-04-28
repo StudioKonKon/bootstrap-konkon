@@ -330,28 +330,22 @@ $dropdown-header-padding:     $dropdown-padding-y $dropdown-item-padding-x;
 
 // List group
 
-$list-group-border-radius:          $border-radius-sm;
+$list-group-border-radius:           var(--#{$prefix}border-radius-sm);
 
 $list-group-item-padding-y:			$spacer * .75;
 $list-group-item-padding-x:			$spacer;
 
-$list-group-hover-bg:               $gray-100;
+$list-group-hover-bg:               var(--#{$prefix}tertiary-bg);
 
-$list-group-disabled-color:			$text-muted;
-$list-group-disabled-bg:			#ececec;
-
-$list-group-action-color:			$gray-600;
-$list-group-action-hover-color:		$gray-600;
-
-$list-group-action-active-color:	$body-color;
-$list-group-action-active-bg:		$gray-300;
+$list-group-disabled-color:			var(--#{$prefix}secondary-color);
+$list-group-disabled-bg:				var(--#{$prefix}tertiary-bg);
 
 
 // Breadcrumbs
 
 $breadcrumb-padding-y:			map-get($spacers, 1);
 $breadcrumb-padding-x:			map-get($spacers, 1);
-$breadcrumb-item-padding-x:		map-get($spacers, 2);
+$breadcrumb-item-padding-x:	map-get($spacers, 2);
 $breadcrumb-divider-color:		$text-muted;
 $breadcrumb-active-color:		$gray-600;
 $breadcrumb-border-radius:		$border-radius-sm;
@@ -361,7 +355,6 @@ $breadcrumb-border-radius:		$border-radius-sm;
 
 $badge-font-size:		$small-font-size;
 $badge-font-weight:		$font-weight-bolder;
-$badge-color:			$white;
 $badge-padding-x:		$spacer - map-get($spacers, 1);
 $badge-padding-y:		$badge-padding-x * .5;
 $badge-border-radius:	$border-radius-sm;
@@ -430,7 +423,7 @@ $accordion-button-padding-x:			$accordion-padding-x;
 $accordion-button-color:				$accordion-color;
 $accordion-button-bg:					$accordion-bg;
 $accordion-button-active-bg:			$accordion-button-bg;
-$accordion-button-active-color:			$primary;
+$accordion-button-active-color:		$primary;
 
 $accordion-button-focus-border-color:	$accordion-border-color;
 $accordion-button-focus-box-shadow:		none;
@@ -438,17 +431,16 @@ $accordion-button-focus-box-shadow:		none;
 $accordion-icon-width:					1.25rem;
 $accordion-icon-color:					$accordion-color;
 $accordion-icon-active-color:			$accordion-button-active-color;
-$accordion-icon-transition:				transform .2s ease-in-out;
+$accordion-icon-transition:			transform .2s ease-in-out;
 $accordion-icon-transform:				rotate(180deg);
 
 // Navs
 
-$nav-link-font-size:					$font-size-base;
-$nav-link-disabled-color:				$text-muted;
-$nav-tabs-border-width:                 2px;
-$nav-tabs-border-radius:				$border-radius-sm;
-
-$nav-pills-border-radius:				$border-radius-sm;
+$nav-link-font-size:					   var(--#{$prefix}body-font-size);
+$nav-link-disabled-color:				var(--#{$prefix}secondary-bg);
+$nav-tabs-border-width:             2px;
+$nav-tabs-border-radius:				var(--#{$prefix}border-radius-sm);
+$nav-pills-border-radius:				var(--#{$prefix}border-radius-sm);
 
 
 // Toasts
