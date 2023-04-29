@@ -1,8 +1,8 @@
 :root {
    --#{$sk-variable-prefix}header-bg-rgb: var(--#{$prefix}body-bg-rgb);
-   --#{$sk-variable-prefix}header-border-rgb: var(--#{$prefix}primary-rgb);//#{$gray-600};
-   --#{$sk-variable-prefix}sidebar-color-rgb: #{to-rgb($skk-app-theme)};
-   --#{$sk-variable-prefix}sidebar-bg-rgb: #{to-rgb($skk-app-theme)};
-   --#{$sk-variable-prefix}sidebar-divider-color: #{$gray-600};
-   --#{$sk-variable-prefix}sidebar-divider-bg: #{$gray-300};
+   --#{$sk-variable-prefix}header-border-rgb: transparent; // #{$gray-600};
+   --#{$sk-variable-prefix}sidebar-color-rgb: var(--#{$prefix}body-color-rgb);
+   --#{$sk-variable-prefix}sidebar-bg-rgb: var(--#{$prefix}body-bg-rgb);
+   --#{$sk-variable-prefix}sidebar-divider-color: var(--bs-dropdown-header-color);
+   --#{$sk-variable-prefix}sidebar-divider-bg: var(--bs-border-color-translucent);
 }
