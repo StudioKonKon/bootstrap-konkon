@@ -1,14 +1,15 @@
 /*!
  * Studio KonKon Theme App v1.5.5 (https://studiokonkon.com/)
- * Copyright 2018-2022 Studio KonKon
+ * Copyright 2018-2023 Studio KonKon
  */
 :root {
   --sk-header-bg-rgb: var(--bs-body-bg-rgb);
-  --sk-header-border-rgb: transparent;
+  --sk-header-border-rgb: var(--bs-border-color-translucent);
   --sk-sidebar-color-rgb: var(--bs-body-color-rgb);
   --sk-sidebar-bg-rgb: var(--bs-body-bg-rgb);
   --sk-sidebar-divider-color: var(--bs-dropdown-header-color);
   --sk-sidebar-divider-bg: var(--bs-border-color-translucent);
+  --sk-sidebar-border: var(--bs-border-color-translucent);
 }
 
 /* - Top header - */
@@ -24,7 +25,7 @@
   background-color: rgba(var(--sk-header-bg-rgb), 1);
   border: 0;
   margin-bottom: 0;
-  border-bottom: 4px solid var(--sk-header-border-rgb) !important;
+  border-bottom: 1px solid var(--sk-header-border-rgb) !important;
   padding: 0;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -825,7 +826,7 @@
   width: 17.692rem;
   left: 0;
   position: absolute;
-  border-right: 1px solid rgba(var(--sk-sidebar-theme-rgb), 0.25);
+  border-right: 1px solid var(--sk-sidebar-border);
 }
 @media print {
   .be-left-sidebar {
@@ -981,8 +982,8 @@
 }
 .be-left-sidebar .sidebar-elements > li > ul {
   background-color: rgba(var(--sk-sidebar-theme-rgb), 0.1);
-  border-top: 1px solid rgba(var(--sk-sidebar-theme-rgb), 0.25);
-  border-bottom: 1px solid rgba(var(--sk-sidebar-theme-rgb), 0.25);
+  border-top: 1px solid var(--sk-sidebar-border);
+  border-bottom: 1px solid var(--sk-sidebar-border);
 }
 .be-collapsible-sidebar .be-left-sidebar .sidebar-elements > li > ul .nav-items .content > ul {
   display: block;
@@ -1172,7 +1173,7 @@
   left: 0;
   bottom: 0;
   background-color: inherit;
-  border-right: 1px solid rgba(var(--sk-sidebar-theme-rgb), 0.25);
+  border-right: 1px solid var(--sk-sidebar-border);
 }
 @media (max-width: 767.98px) {
   .be-left-sidebar:after {
@@ -1183,7 +1184,7 @@
   .be-left-sidebar {
     width: 100%;
     background-color: #99ccff;
-    border-bottom: 1px solid rgba(var(--sk-sidebar-theme-rgb), 0.25);
+    border-bottom: 1px solid var(--sk-sidebar-border);
     border-right-width: 0;
     position: relative;
   }

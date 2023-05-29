@@ -33,7 +33,7 @@ $content-padding-small-phone:	map-get($spacers, 2);
 // Top Header
 $top-header-bg:               rgba(var(--#{$sk-variable-prefix}header-bg-rgb), 1);
 $top-header-border:           0;
-$top-header-border-bottom:    4px solid var(--#{$sk-variable-prefix}header-border-rgb) !important;
+$top-header-border-bottom:    1px solid var(--#{$sk-variable-prefix}header-border-rgb) !important;
 $top-header-padding-x:        map-get($spacers, 4);
 $top-header-margin-bottom:    0;
 $top-header-phone-bg:         lighten($black, 10%);
@@ -56,7 +56,7 @@ $left-sidebar-theme:                rgba(var(--#{$sk-variable-prefix}sidebar-the
 $left-sidebar-bg:                   rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), 1);
 $left-sidebar-hover-color:          rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), 1);
 $left-sidebar-level-bg:             rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), .1);
-$left-sidebar-border-color:         rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), .25);
+$left-sidebar-border-color:         var(--#{$sk-variable-prefix}sidebar-border);
 
 $left-sidebar-divider-bg:           var(--#{$sk-variable-prefix}sidebar-divider-bg);
 $left-sidebar-divider-color:        var(--#{$sk-variable-prefix}sidebar-divider-color);
