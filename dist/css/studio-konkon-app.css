@@ -1,5 +1,5 @@
 /*!
- * Studio KonKon Theme App v1.5.5 (https://studiokonkon.com/)
+ * Studio KonKon Theme App v1.6.2 (https://studiokonkon.com/)
  * Copyright 2018-2023 Studio KonKon
  */
 :root {
@@ -10,6 +10,11 @@
   --sk-sidebar-divider-color: var(--bs-dropdown-header-color);
   --sk-sidebar-divider-bg: var(--bs-border-color-translucent);
   --sk-sidebar-border: var(--bs-border-color-translucent);
+  --sk-icon-indicator-color: var(--bs-primary);
+  --sk-msg-unread-color: var(--bs-body-color);
+  --sk-msg-unread-bg: var(--bs-tertiary-bg);
+  --sk-msg-hover-color: var(--bs-body-color);
+  --sk-msg-hover-bg: var(--bs-secondary-bg);
 }
 
 /* - Top header - */
@@ -103,15 +108,18 @@
   padding: 0.45rem;
   font-size: 1.846rem;
   border-radius: 50%;
+  color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity));
 }
 .be-toggle-left-sidebar:hover,
 .be-icons-nav > .nav-item > .nav-link:hover {
-  background-color: #eee;
+  color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity));
+  background-color: rgba(var(--bs-body-color-rgb), 0.1);
 }
 .be-toggle-left-sidebar:hover:active,
 .be-icons-nav > .nav-item > .nav-link:hover:active {
-  background-color: #ddd;
-  outline: 1px solid #aaa;
+  color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity));
+  background-color: rgba(var(--bs-body-color-rgb), 0.175);
+  outline: 1px solid rgba(var(--bs-body-color-rgb), 0.35);
 }
 .be-toggle-left-sidebar svg, .be-toggle-left-sidebar .icon,
 .be-icons-nav > .nav-item > .nav-link svg,
@@ -211,7 +219,7 @@
   position: absolute;
   top: 0.45rem;
   right: 0.45rem;
-  background-color: rgba(var(--sk-sidebar-color-rgb), 1);
+  background-color: var(--sk-icon-indicator-color);
   border-radius: 50%;
   display: block;
   height: 6px;
@@ -552,7 +560,7 @@
   flex-direction: column;
 }
 .be-notifications .skk-nh {
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid var(--bs-border-color);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -572,7 +580,7 @@
   margin-right: 0.5rem;
 }
 .be-notifications .skk-nhi > a {
-  color: #878787;
+  color: var(--bs-body-color);
   display: inline-block;
   padding: 0.5rem;
   line-height: 1.5rem;
@@ -609,7 +617,7 @@
   height: 7.5rem;
   min-width: 7.5rem;
   font-size: 7rem;
-  color: #cccccc;
+  color: var(--bs-body-color);
 }
 .be-notifications .skk-nbe-msg {
   width: 100%;
@@ -625,7 +633,7 @@
   max-height: 2.5rem;
 }
 .be-notifications .skk-nbe-text {
-  color: #878787;
+  color: var(--bs-body-color);
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.3125rem;
@@ -645,23 +653,24 @@
   padding-left: 0;
   display: flex;
   flex-direction: row;
-  background-color: #fafafa;
 }
 .be-notifications .skk-nli:hover {
-  background-color: whitesmoke;
+  color: var(--sk-msg-hover-color);
+  background-color: var(--sk-msg-hover-bg);
 }
 .be-notifications .skk-nli > a {
-  color: #23282c;
+  color: inherit;
   display: flex;
   flex: 1;
   flex-basis: 0.000000001px;
   flex-direction: row;
 }
 .be-notifications .skk-nli-unread {
-  background-color: #fff;
+  color: var(--sk-msg-unread-color);
+  background-color: var(--sk-msg-unread-bg);
 }
 .be-notifications .skk-nli-unread .skk-nli-new {
-  background-color: #4285f4;
+  background-color: var(--sk-icon-indicator-color);
 }
 .be-notifications .skk-nli-new {
   width: 0.25rem;
@@ -698,7 +707,7 @@
   max-height: 8rem;
 }
 .be-notifications .skk-nli-metadata {
-  color: #778592;
+  color: var(--bs-tertiary-color);
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.125rem;
@@ -747,7 +756,7 @@
 }
 .be-apps .skk-ani > a {
   margin: 0;
-  color: #202124;
+  color: var(--bs-body-color);
   font-size: 0.875rem;
   line-height: 1.125rem;
   display: inline-flex;
@@ -783,14 +792,15 @@
   width: 76px;
 }
 .be-apps .skk-ani > a:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--bs-tertiary-bg);
+  border: solid 1px var(--bs-border-color-translucent);
 }
 .be-apps .skk-ani > a:active {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--bs-secondary-bg);
 }
 .be-apps .skk-ans {
   margin: 0 0.796rem;
-  border-bottom: 1px solid #e8eaed;
+  border-bottom: 1px solid var(--bs-border-color);
 }
 .be-apps .skk-anb {
   margin: 1rem 0 1.25rem;

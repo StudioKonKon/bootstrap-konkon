@@ -107,14 +107,17 @@
    padding: $top-header-nav-icon-padding;
    font-size: $top-header-nav-icon-size;
    border-radius: 50%;
-         
+   color: $top-header-icon-color;
+   
    &:hover {
-      background-color: #eee;
+      color: $top-header-icon-hover-color;
+      background-color: $top-header-icon-hover-bg;
    }
    
    &:hover:active {
-      background-color: #ddd;
-      outline: 1px solid #aaa;
+      color: $top-header-icon-active-color;
+      background-color: $top-header-icon-active-bg;
+      outline: 1px solid $top-header-icon-outline;
    }
    
    svg, .icon {

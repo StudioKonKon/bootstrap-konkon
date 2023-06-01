@@ -33,7 +33,7 @@
 
 		> a {
 			margin: 0;
-			color: #202124;
+			color: var(--#{$prefix}body-color);
 			font-size: 0.875rem;
 			line-height: 1.125rem;
 
@@ -74,11 +74,12 @@
 			}
 
 			&:hover {
-				background-color: rgba(0, 0, 0, 0.05);
+				background-color: var(--#{$prefix}tertiary-bg);
+            border: solid 1px var(--#{$prefix}border-color-translucent);
 			}
 
 			&:active {
-				background-color: rgba(0, 0, 0, 0.1);
+				background-color: var(--#{$prefix}secondary-bg);
 			}
 		}
 	}
@@ -86,7 +87,7 @@
 	// Apps Nav Seperator
 	.skk-ans {
 		margin: 0 .796rem;
-		border-bottom: 1px solid #e8eaed;
+		border-bottom: 1px solid var(--#{$prefix}border-color);
 	}
 
 	// Apps Nav Button
