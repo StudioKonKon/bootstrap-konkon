@@ -36,9 +36,9 @@
 		}
 		
 		.progress {
+         --#{$prefix}progress-bar-bg: #{$left-sidebar-progress-bg};
 			margin: map-get($spacers, 2) 0 0;
 			height: .615rem;
-			background-color: darken($left-sidebar-bg, 4%);
 			border-radius: $border-radius-sm;
 			
 			.be-collapsible-sidebar-collapsed & {
@@ -48,7 +48,7 @@
 		}
 
 		&:hover {
-			background-color: darken($left-sidebar-bg, 2%);
+			background-color: $left-sidebar-progress-hover-bg;
 		}
 
 		@include media_size("phone") {

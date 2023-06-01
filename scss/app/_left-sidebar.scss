@@ -6,7 +6,7 @@
 	width: $left-sidebar-width;
 	left: 0;
 	position: absolute;
-	border-right: 1px solid darken($left-sidebar-bg, 7%);
+	border-right: 1px solid $left-sidebar-border-color;
 	
 	@media print {
 		display: none;
@@ -66,7 +66,7 @@
 		display: none;
 		background-color: $white;
 		padding: 1.231rem .769rem;
-		color: $text-color;
+		color: $body-color;
 		font-weight: $font-weight-light;
 		font-size: 1.077rem;
 
@@ -76,7 +76,7 @@
 			font-family: $icons-font;
 			font-size: 2.077rem;
 			line-height: 1.692rem;
-			color: darken($left-sidebar-bg, 19%);
+			color: #99ccff; //darken($left-sidebar-bg, 19%);
 		}
 
 		&.open {
@@ -222,7 +222,7 @@
 				
 				.be-collapsible-sidebar-collapsed & {
 					@include media_size("non-responsive") {
-						background-color: $left-sidebar-bg;
+						background-color: #99ccff; // $left-sidebar-bg;
 					
 						&.visible {
 							display: table;
@@ -241,7 +241,7 @@
 								display: block;
 								padding: map-get($spacers, 4) map-get($spacers, 5);
 								font-size: 1.385rem;
-								color: lighten($left-sidebar-color, 18%);
+								color: $left-sidebar-color;
 								border-bottom: solid 1px #e6e6e6;
 							}
 							
@@ -270,7 +270,7 @@
 								}
 							}
 						}
-				
+                  
 						li {
 							> a {
 								color: $left-sidebar-color;
@@ -456,7 +456,7 @@
 		left: 0;
 		bottom: 0;
 		background-color: inherit;
-		border-right: 1px solid darken($left-sidebar-bg, 7%);
+		border-right: 1px solid $left-sidebar-border-color;
 
 		@include media_size("phone") {
 			display: none;
@@ -465,8 +465,8 @@
 
 	@include media_size("phone") {
 		width: 100%;
-		background-color: lighten($left-sidebar-bg, 2%);
-		border-bottom: 1px solid darken($left-sidebar-bg, 7%);
+		background-color: #99ccff; //lighten($left-sidebar-bg, 2%);
+		border-bottom: 1px solid $left-sidebar-border-color;
 		border-right-width: 0;
 		position: relative;
 

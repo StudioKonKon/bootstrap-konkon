@@ -1,8 +1,14 @@
 :root {
-   --#{$sk-variable-prefix}header-bg-rgb: var(--#{$prefix}body-bg-rgb);
-   --#{$sk-variable-prefix}header-border-rgb: #{$gray-600};
-   --#{$sk-variable-prefix}sidebar-color-rgb: #{to-rgb($skk-app-theme)};
-   --#{$sk-variable-prefix}sidebar-bg-rgb: #{to-rgb($skk-app-theme)};
-   --#{$sk-variable-prefix}sidebar-divider-color: #{$gray-600};
-   --#{$sk-variable-prefix}sidebar-divider-bg: #{$gray-300};
+   --#{$sk-variable-prefix}header-bg-rgb:         var(--#{$prefix}body-bg-rgb);
+   --#{$sk-variable-prefix}header-border-rgb:     var(--#{$prefix}border-color-translucent);
+   --#{$sk-variable-prefix}sidebar-color-rgb:     var(--#{$prefix}body-color-rgb);
+   --#{$sk-variable-prefix}sidebar-bg-rgb:        var(--#{$prefix}body-bg-rgb);
+   --#{$sk-variable-prefix}sidebar-divider-color: var(--#{$prefix}dropdown-header-color);
+   --#{$sk-variable-prefix}sidebar-divider-bg:    var(--#{$prefix}border-color-translucent);
+   --#{$sk-variable-prefix}sidebar-border:        var(--#{$prefix}border-color-translucent);
+   --#{$sk-variable-prefix}icon-indicator-color:  var(--#{$prefix}primary);
+   --#{$sk-variable-prefix}msg-unread-color:      var(--#{$prefix}body-color);
+   --#{$sk-variable-prefix}msg-unread-bg:         var(--#{$prefix}tertiary-bg);
+   --#{$sk-variable-prefix}msg-hover-color:       var(--#{$prefix}body-color);
+   --#{$sk-variable-prefix}msg-hover-bg:          var(--#{$prefix}secondary-bg);
 }

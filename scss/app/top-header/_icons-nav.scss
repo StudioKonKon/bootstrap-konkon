@@ -25,7 +25,7 @@
 				position: absolute;
 				top: $top-header-nav-icon-padding;
 				right: $top-header-nav-icon-padding;
-				background-color: rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), 1);
+				background-color: var(--#{$sk-variable-prefix}icon-indicator-color);
 				border-radius: 50%;
 				display: block;
 				height: 6px;

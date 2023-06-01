@@ -1,27 +1,31 @@
 <NotepadPlus>
     <Session activeView="0">
-        <mainView activeIndex="11">
-            <File firstVisibleLine="149" xOffset="0" scrollWidth="632" startPos="3833" endPos="3833" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\_top-header.scss" backupFilePath="" originalFileLastModifTimestamp="1676553248" />
-            <File firstVisibleLine="141" xOffset="0" scrollWidth="2696" startPos="3439" endPos="3381" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\_top-header.scss.bkp" backupFilePath="" originalFileLastModifTimestamp="1676414135">
+        <mainView activeIndex="0">
+            <File firstVisibleLine="150" xOffset="0" scrollWidth="9960" startPos="3871" endPos="3871" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\_top-header.scss" backupFilePath="" originalFileLastModifTimestamp="1685628452" />
+            <File firstVisibleLine="555" xOffset="0" scrollWidth="9960" startPos="10157" endPos="10157" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\_top-header.scss.bkp" backupFilePath="" originalFileLastModifTimestamp="1676414135">
                 <Mark line="70" />
             </File>
-            <File firstVisibleLine="21" xOffset="0" scrollWidth="2696" startPos="1442" endPos="1424" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\_variables.scss" backupFilePath="" originalFileLastModifTimestamp="1676550209" />
-            <File firstVisibleLine="25" xOffset="0" scrollWidth="2696" startPos="1557" endPos="1557" selMode="0" lang="HTML" encoding="-1" filename="D:\GitHub\bootstrap-konkon\docs_hugo\layouts\partials\app\top-navbar.html" backupFilePath="" originalFileLastModifTimestamp="1676414685" />
-            <File firstVisibleLine="12" xOffset="0" scrollWidth="9960" startPos="2236" endPos="2236" selMode="0" lang="HTML" encoding="-1" filename="D:\GitHub\bootstrap-konkon\docs_hugo\layouts\partials\app\icons-nav.html" backupFilePath="" originalFileLastModifTimestamp="1676553204" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="2696" startPos="30" endPos="18" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\top-header\_icons-nav.scss" backupFilePath="" originalFileLastModifTimestamp="1676333119" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1320" startPos="413" endPos="413" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\_root.scss" backupFilePath="" originalFileLastModifTimestamp="1676415743" />
-            <File firstVisibleLine="18" xOffset="0" scrollWidth="2696" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="D:\GitHub\bootstrap-konkon\docs_hugo\layouts\_default\baseof.html" backupFilePath="" originalFileLastModifTimestamp="1673519369" />
-            <File firstVisibleLine="15" xOffset="0" scrollWidth="2696" startPos="389" endPos="389" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\top-header\_user-dropdown.scss" backupFilePath="" originalFileLastModifTimestamp="1676551232" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="2696" startPos="388" endPos="388" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\top-header\_apps-dropdown.scss" backupFilePath="" originalFileLastModifTimestamp="1676548442" />
-            <File firstVisibleLine="186" xOffset="0" scrollWidth="2544" startPos="3274" endPos="3233" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\top-header\_notifications-dropdown.scss" backupFilePath="" originalFileLastModifTimestamp="1676550639" />
-            <File firstVisibleLine="309" xOffset="0" scrollWidth="3152" startPos="8657" endPos="8657" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\_variables.scss" backupFilePath="" originalFileLastModifTimestamp="1681860745">
-                <Mark line="163" />
-                <Mark line="322" />
+            <File firstVisibleLine="34" xOffset="0" scrollWidth="9960" startPos="1680" endPos="1680" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\_variables.scss" backupFilePath="" originalFileLastModifTimestamp="1685629670" />
+            <File firstVisibleLine="261" xOffset="0" scrollWidth="9960" startPos="5737" endPos="5737" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\_left-sidebar.scss" backupFilePath="" originalFileLastModifTimestamp="1685380902" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="9960" startPos="624" endPos="612" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\_root.scss" backupFilePath="" originalFileLastModifTimestamp="1685631240" />
+            <File firstVisibleLine="25" xOffset="0" scrollWidth="9960" startPos="1557" endPos="1557" selMode="0" lang="HTML" encoding="-1" filename="D:\GitHub\bootstrap-konkon\docs_hugo\layouts\partials\app\top-navbar.html" backupFilePath="" originalFileLastModifTimestamp="1676414685" />
+            <File firstVisibleLine="154" xOffset="0" scrollWidth="9960" startPos="8925" endPos="8925" selMode="0" lang="HTML" encoding="-1" filename="D:\GitHub\bootstrap-konkon\docs_hugo\layouts\partials\app\icons-nav.html" backupFilePath="" originalFileLastModifTimestamp="1685629226" />
+            <File firstVisibleLine="10" xOffset="0" scrollWidth="9960" startPos="440" endPos="489" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\top-header\_icons-nav.scss" backupFilePath="" originalFileLastModifTimestamp="1685630287" />
+            <File firstVisibleLine="18" xOffset="0" scrollWidth="3152" startPos="1129" endPos="1129" selMode="0" lang="HTML" encoding="-1" filename="D:\GitHub\bootstrap-konkon\docs_hugo\layouts\_default\baseof.html" backupFilePath="" originalFileLastModifTimestamp="1682784795" />
+            <File firstVisibleLine="15" xOffset="0" scrollWidth="3152" startPos="389" endPos="389" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\top-header\_user-dropdown.scss" backupFilePath="" originalFileLastModifTimestamp="1676551232" />
+            <File firstVisibleLine="60" xOffset="0" scrollWidth="9960" startPos="1432" endPos="1432" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\top-header\_apps-dropdown.scss" backupFilePath="" originalFileLastModifTimestamp="1685632055" />
+            <File firstVisibleLine="176" xOffset="0" scrollWidth="9960" startPos="3360" endPos="3329" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\top-header\_notifications-dropdown.scss" backupFilePath="" originalFileLastModifTimestamp="1685631742" />
+            <File firstVisibleLine="203" xOffset="0" scrollWidth="9960" startPos="1182" endPos="1182" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\_variables.scss" backupFilePath="" originalFileLastModifTimestamp="1682782353">
+                <Mark line="160" />
+                <Mark line="319" />
+                <Mark line="436" />
             </File>
-            <File firstVisibleLine="1223" xOffset="0" scrollWidth="3152" startPos="50748" endPos="50748" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\node_modules\bootstrap\scss\_variables.scss" backupFilePath="" originalFileLastModifTimestamp="499162500">
+            <File firstVisibleLine="604" xOffset="0" scrollWidth="9960" startPos="19393" endPos="19380" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\node_modules\bootstrap\scss\_variables.scss" backupFilePath="" originalFileLastModifTimestamp="1685622152">
                 <Mark line="1237" />
             </File>
-            <File firstVisibleLine="87" xOffset="0" scrollWidth="3152" startPos="3329" endPos="3354" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\node_modules\bootstrap\scss\_root.scss" backupFilePath="" originalFileLastModifTimestamp="499162500" />
+            <File firstVisibleLine="93" xOffset="0" scrollWidth="3152" startPos="3255" endPos="3243" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\node_modules\bootstrap\scss\_root.scss" backupFilePath="" originalFileLastModifTimestamp="1685622152" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="3152" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="D:\GitHub\bootstrap-konkon\docs_hugo\content\docs\navs-tabs\index.html" backupFilePath="" originalFileLastModifTimestamp="1673542184" />
+            <File firstVisibleLine="30" xOffset="0" scrollWidth="3152" startPos="943" endPos="943" selMode="0" lang="Normal Text" encoding="-1" filename="D:\GitHub\bootstrap-konkon\scss\app\left-sidebar\_progress-widget.scss" backupFilePath="" originalFileLastModifTimestamp="1682787979" />
         </mainView>
         <subView activeIndex="0" />
     </Session>

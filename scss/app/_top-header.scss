@@ -107,14 +107,17 @@
    padding: $top-header-nav-icon-padding;
    font-size: $top-header-nav-icon-size;
    border-radius: 50%;
-         
+   color: $top-header-icon-color;
+   
    &:hover {
-      background-color: #eee;
+      color: $top-header-icon-hover-color;
+      background-color: $top-header-icon-hover-bg;
    }
    
    &:hover:active {
-      background-color: #ddd;
-      outline: 1px solid #aaa;
+      color: $top-header-icon-active-color;
+      background-color: $top-header-icon-active-bg;
+      outline: 1px solid $top-header-icon-outline;
    }
    
    svg, .icon {
@@ -138,9 +141,9 @@
    .be-top-header {
       .navbar-nav > .nav-item.dropdown .dropdown-menu {
          margin: 0;
-         border-top: 1px solid darken($left-sidebar-bg, 6%);
+         border-top: 1px solid darken($body-color, 6%);
          border-right:0;
-         border-bottom: 1px solid darken($left-sidebar-bg, 6%);
+         border-bottom: 1px solid darken($body-color, 6%);
          border-left: 0;
          border-radius: 0;
       }

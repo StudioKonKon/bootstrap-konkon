@@ -29,7 +29,7 @@ Bootstrap already supports "Dark Mode", however, any changes and custom componen
 
 I'm sorry but I won't be planning any testing or support for dark mode. It's not that I hate it but simply that dark mode causes eye strain and it's difficult for me to work with. It only takes up to 3 seconds and I get an instant migraine, blurred vision and feeling sick.
 
-Light mode has never been an issue and even in the dark, light mode does not burn my eyes as others claim happens to them. I've already seen a doctor and optician and they say it's simply the shape of the eye, how light enters and how the brain processes that light; There's nothing I can do about it except wear darkened glasses that darkens white text on black. Kind of pointless, really.
+Light mode has never been an issue and even in the dark, light mode does not burn my eyes as others claim happens to them (maybe they have their brightness set at 100% or at least above 40%). I've already seen a doctor and optician and they say it's simply the shape of the eye, how light enters and how the brain processes that light; There's nothing I can do about it except wear darkened glasses that darkens white text on black. Kind of pointless, really.
 
 Unfortunately, dark mode is impossible for me to work with and neither do I need it. This is only a personal project but anyone is welcome to share their "Dark Mode" code.
 

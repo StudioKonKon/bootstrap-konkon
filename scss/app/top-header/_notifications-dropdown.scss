@@ -15,7 +15,7 @@
 	
 	// Notification Header
 	.skk-nh {
-		border-bottom: 1px solid darken($white, 7.7%);
+		border-bottom: 1px solid var(--#{$prefix}border-color);
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -39,7 +39,7 @@
 		margin-right: .5rem;
 
 		> a {
-			color: darken($white, 47%);
+			color: var(--#{$prefix}body-color);
 			display: inline-block;
 			padding: .5rem;
 			line-height: 1.5rem;
@@ -83,7 +83,7 @@
 		height: 7.5rem;
 		min-width: 7.5rem;
 		font-size: 7rem;
-		color: darken($white, 20%);
+		color: var(--#{$prefix}body-color);
 	}
 
 	.skk-nbe-msg {
@@ -102,7 +102,7 @@
 	}
 
 	.skk-nbe-text {
-		color: darken($white, 47%);
+		color: var(--#{$prefix}body-color);
 		font-size: .875rem;
 		font-weight: 400;
 		line-height: 1.3125rem;
@@ -126,14 +126,14 @@
 		padding-left: 0;
 		display: flex;
 		flex-direction: row;
-		background-color: darken($white, 2%);
 
 		&:hover {
-			background-color: darken($white, 4%);
+			color: var(--#{$sk-variable-prefix}msg-hover-color);
+			background-color: var(--#{$sk-variable-prefix}msg-hover-bg);
 		}
 
 		> a {
-			color: lighten($dark, 1%);
+			color: inherit;
 			display: flex;
 			flex: 1;
 			flex-basis: 1e-9px; // IE
@@ -141,10 +141,11 @@
 		}
 
 		&-unread {
-			background-color: $white;
+			color: var(--#{$sk-variable-prefix}msg-unread-color);
+			background-color: var(--#{$sk-variable-prefix}msg-unread-bg);
 			
 			.skk-nli-new {
-				background-color: $skk-app-theme;
+				background-color: var(--#{$sk-variable-prefix}icon-indicator-color);
 			}
 		}
 	}
@@ -189,7 +190,7 @@
 	}
 
 	.skk-nli-metadata {
-		color: lighten($dark, 37.5%);
+		color: var(--#{$prefix}tertiary-color);
 		font-size: .8125rem;
 		font-weight: 400;
 		line-height: 1.125rem;
