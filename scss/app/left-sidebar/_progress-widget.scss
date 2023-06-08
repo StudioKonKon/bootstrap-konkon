@@ -3,15 +3,7 @@
 	.progress-widget {
 		padding: map-get($spacers, 4);
 		cursor: pointer;
-		
-		.be-collapsible-sidebar-collapsed & {
-			padding: 1rem 1.077rem;
-			margin-top: map-get($spacers, 5);
-		}
-		
-		.be-fixed-sidebar & {
-			margin-top: 0;
-		}
+      margin-top: 0;
 		
 		.progress-data {
 			color: $left-sidebar-color;
@@ -29,7 +21,6 @@
 		}
 		
 		.name {
-			
 			.be-collapsible-sidebar-collapsed & {
 				display: none;
 			}

@@ -3,10 +3,16 @@
 */
 .be-left-sidebar {
 	background-color: $left-sidebar-bg;
+   height: 100%;
 	width: $left-sidebar-width;
+	position: fixed;
+   top: 0;
+   bottom: 0;
 	left: 0;
-	position: absolute;
 	border-right: 1px solid $left-sidebar-border-color;
+   margin-top: $top-header-height + $top-header-offset;
+   padding-bottom: $top-header-height + $top-header-offset;
+   z-index: $zindex-navbar-fixed - 3;
 	
 	@media print {
 		display: none;
@@ -31,7 +37,7 @@
 	}
 
 	.left-sidebar-content {
-		position: relative;
+		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
@@ -249,20 +255,6 @@
 			}
 		}
 	}
-
-	.be-fixed-sidebar & {
-		height: 100%;
-		margin-top: $top-header-height + $top-header-offset;
-		padding-bottom: $top-header-height + $top-header-offset;
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		z-index: $zindex-navbar-fixed - 3;
-
-		.left-sidebar-content {
-			position: absolute;
-		}
-	}
 	
 	.be-offcanvas-menu & {
 		max-width: 290px;
@@ -275,9 +267,6 @@
 		-webkit-box-shadow: 0 .462rem 1.385rem 0 rgba(0,0,0,.18);
 		box-shadow: 0 .462rem 1.385rem 0 rgba(0,0,0,.18);
 		border-right-width: 0;
-	}
-	
-	.be-fixed-sidebar.be-offcanvas-menu & {
 		margin-top: $top-header-height + $top-header-offset;
 		padding-bottom: $top-header-height + $top-header-offset;
 	}

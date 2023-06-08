@@ -21,7 +21,7 @@
    "use strict";
 
    var defaultClasses = {
-      "version": "1.6.3",
+      "version": "1.6.4",
       "bootstrap-version": "5.3.0",
       "sidebar": "be-left-sidebar",
       "animate": "be-animate",

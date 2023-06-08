@@ -1,6 +1,14 @@
 /* user nav */
+   
+.be-user-nav .dropdown-menu {
+   --#{$prefix}dropdown-link-color:        var(--#{$prefix}body-color);
+   --#{$prefix}dropdown-link-hover-color:  var(--#{$prefix}body-color);
+   --#{$prefix}dropdown-link-hover-bg:     rgba(var(--#{$prefix}secondary-bg-rgb), .5);
+   --#{$prefix}dropdown-link-active-color: var(--#{$prefix}body-color);
+   --#{$prefix}dropdown-link-active-bg:    rgba(var(--#{$prefix}secondary-bg-rgb), 1);
+}
 
-.navbar-nav.be-user-nav {
+.be-user-nav {
 	margin-right: 0;
 	
 	> .nav-item {
@@ -27,7 +35,6 @@
 			padding: 0 !important;
 			width: $user-dropdown-width;
 			min-width: $user-dropdown-width;
-			border: 1px solid hsl(0, 0%, 88%);
 		}
 	}
 	
@@ -73,7 +80,6 @@
 	}
 	
 	.skk-nvh-name {
-		color: #202124;
 		letter-spacing: .29px;
 		margin: 0;
 		text-align: center;
@@ -88,48 +94,29 @@
 		text-align: center;
 		text-overflow: ellipsis;
 		overflow: hidden;
-		color: #5f6368;
+		color: var(--#{$prefix}secondary-color);
 		font-weight: 400;
 		font-size: 0.875rem;
 	}
 	
 	.skk-nva {
 		line-height: normal;
-		border-top: 1px solid #e8eaed;
+		border-top: 1px solid var(--#{$prefix}border-color-translucent);
 		padding: map-get($spacers, 1) 0;
 
 		> a {
-			height: 3.5rem;
-			min-height: 3rem;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
+         justify-content: space-between;
+			height: 3.5rem;
+			min-height: 3rem;
 			white-space: initial;
 			font-size: 1rem;
 			font-weight: 400;
 			line-height: 1.5rem;
 			position: relative;
 			padding: 0 2.0625rem;
-			box-sizing: content-box;
-
-			&:visited {
-				color: #444d57;
-			}
-
-			&:hover {
-				background-color: rgba(0, 0, 0, 0.05);
-			}
-			
-			&:active:before {
-				content: "";
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0, 0, 0, 0.075);
-			}
 		}
 	}
 	
@@ -156,17 +143,15 @@
 		min-height: 4.5rem;
 		overflow: hidden;
 		justify-content: center;
-		flex: 1;
-		flex-basis: 1e-09px;
+		flex-grow: 1;
 	}
 	
 	.skk-nva-name {
-		color: #3c4043;
 		font-weight: 500;
 	}
 	
 	.skk-nva-email {
-		color: #5f6368;
+		color: var(--#{$prefix}secondary-color);
 		font-weight: 400;
 	}
 	
@@ -181,7 +166,7 @@
 	}
       
 	.skk-nva-check {
-		color: $info;
+		color: var(--#{$prefix}info);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -199,16 +184,12 @@
 		padding: map-get($spacers, 1) 0;
 		margin: 0;
 		list-style: none;
-		border-top: 1px solid #e8eaed;
+		border-top: 1px solid var(--#{$prefix}border-color-translucent);
 		
 		> .skk-nvl-item {
 			list-style: none;
 			display: block;
 			cursor: pointer;
-
-			&:hover {
-				background-color: rgba(0, 0, 0, 0.05);
-			}
 			
 			> a {
 				display: flex;
@@ -217,18 +198,12 @@
 				flex-direction: row;
 				align-items: center;
 				text-decoration: none;
-				color: lighten($dark, 1%);
 				padding: 0 1rem;
 				white-space: nowrap;
 				line-height: 1.5rem;
 				height: 2.5rem;
 				min-height: 40px;
 				font-weight: 400;
-
-				&:focus,
-				&:active {
-					background-color: rgba(0, 0, 0, 0.075);
-				}
 			}
 				
 			.skk-nvli-icon,
@@ -236,7 +211,6 @@
 				display: flex;
 				flex-direction: row;
 				align-items: center;
-				color: darken($white, 42.5%);
 				
 				> i {
 					display: flex;
@@ -262,7 +236,6 @@
 			
 			.skk-nvli-label {
 				display: block;
-				color: lighten($dark, 1%);
 				text-overflow: ellipsis;
 				overflow: hidden;
 				white-space: nowrap;
@@ -279,21 +252,21 @@
 	}
 	
 	.skk-nv-btn {
-		border-top: 1px solid #e8eaed;
-		border-bottom: 1px solid #e8eaed;
+		border-top: 1px solid var(--#{$prefix}border-color-translucent);
+		border-bottom: 1px solid var(--#{$prefix}border-color-translucent);
 		padding: 1rem 2.0625rem;
 		text-align: center;
 	}
 	
 	.skk-nvf {
-		color: #5f6368;
+		color: var(--#{$prefix}secondary-color);
 		margin: .875rem 2.0625rem;
 		text-align: center;
 		white-space: normal;
 
 		a {
 			border-radius: .25rem;
-			color: #5f6368;
+			color: var(--#{$prefix}secondary-color);
 			display: inline-block;
 			font-weight: 400px;
 			font-size: .75rem;
@@ -304,19 +277,20 @@
 			white-space: normal;
 
 			&:hover {
-				background-color: #f5f5f5;
+				background-color: rgba(var(--#{$prefix}secondary-bg-rgb), .5);
 			}
 		}
 
 		.seperator {
-			color: #5f6368;
+			color: var(--#{$prefix}border-color-translucent);
 			text-align: center;
 			white-space: normal;
 			font-size: .75rem;
 		}
 	}
+}
 	
-	
+.be-user-nav {
 	@include media_size("small-phone") {
 		> li.dropdown {
 			&.show > a {
