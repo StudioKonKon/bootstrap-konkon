@@ -83,7 +83,7 @@
 		height: 7.5rem;
 		min-width: 7.5rem;
 		font-size: 7rem;
-		color: var(--#{$prefix}body-color);
+		color: rgba(var(--#{$prefix}tertiary-color-rgb), .25);
 	}
 
 	.skk-nbe-msg {

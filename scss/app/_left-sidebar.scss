@@ -12,34 +12,15 @@
 		display: none;
 	}
 	
-	@include media_size("phone") {
-		.be-left-sidebar-disabled & {
-			display: none;
-		}
-	}
-	
-	.be-collapsible-sidebar-collapsed & {
-		width: $left-sidebar-width-collapsed;
-		
-		@include media_size("phone") {
-			width: 100%;
-		}
-	}
-	
 	.left-sidebar-wrapper {
-		display: table;
-		table-layout: fixed;
-		width: 100%;
-		height: 100%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
 	}
 
 	.left-sidebar-spacer {
 		height: 100%;
-		display: table-row;
-
-		@include media_size("non-responsive") {
-			display: table-row;
-		}
 	}
 
 	.left-sidebar-scroll {
@@ -56,38 +37,6 @@
 		left: 0;
 		right: 0;
 		padding-top: .615rem;
-		
-		.be-collapsible-sidebar-collapsed & {
-			padding-top: map-get($spacers, 4);
-		}
-	}
-
-	.left-sidebar-toggle {
-		display: none;
-		background-color: $white;
-		padding: 1.231rem .769rem;
-		color: $body-color;
-		font-weight: $font-weight-light;
-		font-size: 1.077rem;
-
-		&:after {
-			content: '\f2f2';
-			float: right;
-			font-family: $icons-font;
-			font-size: 2.077rem;
-			line-height: 1.692rem;
-			color: #99ccff; //darken($left-sidebar-bg, 19%);
-		}
-
-		&.open {
-			&:after {
-				content: '\f2f8';
-			}
-		}
-
-		@include media_size("phone") {
-			display: block;
-		}
 	}
 
 	.sidebar-elements {
@@ -122,19 +71,6 @@
                height: auto;
             }
          }
-				
-			@include media_size("non-responsive") {
-				.be-collapsible-sidebar-collapsed & {
-					padding: map-get($spacers, 5) 0 0 !important;
-					height: 0;
-					overflow: hidden;
-					text-indent: -9999px;
-					
-					&:first-child {
-						display: none;
-					}
-				}
-			}
 		}
 
 		//First Level
@@ -148,12 +84,8 @@
 				font-size: $left-sidebar-main-level-font-size;
 				line-height: $left-sidebar-main-level-height;
 				text-overflow: ellipsis;
-			    overflow: hidden;
-			    white-space: nowrap;
-				
-				.be-collapsible-sidebar-collapsed & {
-					text-overflow: clip;
-				}
+			   overflow: hidden;
+			   white-space: nowrap;
 
 				.icon {
 					line-height: $left-sidebar-main-level-height;
@@ -168,17 +100,11 @@
 					vertical-align: middle;
 				}
 				
-				@include media_size("non-responsive") {
-					.be-collapsible-sidebar-collapsed & span {
-						display: none;
-					}
-				}
-				
 				&:hover {
 					background-color: $left-sidebar-level-bg;
 
 					> .icon,
-					> span {
+               > span {
 						color: $left-sidebar-hover-color;
 					}
 				}
@@ -189,20 +115,6 @@
 				border-top: 1px solid $left-sidebar-border-color;
 				border-bottom: 1px solid $left-sidebar-border-color;
 			}
-			
-			.be-collapsible-sidebar & > ul {
-				.nav-items .content > ul {
-					display: block;
-				}
-			}
-			
-			.be-collapsible-sidebar-collapsed & > ul {				
-				@include media_size("non-responsive") {
-					border-top-width: 0;
-					border-bottom-width: 0;
-				}
-			}
-			
 			
 			ul {
 				display: none;
@@ -217,69 +129,6 @@
 				.be-collapsible-sidebar & {
 					.content > ul {
 						padding-left: 0;
-					}
-				}
-				
-				.be-collapsible-sidebar-collapsed & {
-					@include media_size("non-responsive") {
-						background-color: #99ccff; // $left-sidebar-bg;
-					
-						&.visible {
-							display: table;
-							table-layout:fixed;
-							position: fixed;
-							left: $left-sidebar-width-collapsed;
-							top: $top-header-height + $top-header-offset;
-							height: 100%;
-							z-index: 1031;
-							padding: 0 0 ($top-header-height + $top-header-offset);
-							list-style: none;
-							width: $left-sidebar-width;
-							border-right: 1px solid #e6e6e6;
-							
-							.title {
-								display: block;
-								padding: map-get($spacers, 4) map-get($spacers, 5);
-								font-size: 1.385rem;
-								color: $left-sidebar-color;
-								border-bottom: solid 1px #e6e6e6;
-							}
-							
-							.nav-items {
-								display: table-row;
-								height: 100%;
-								
-								.be-scroller {
-									position: relative;
-									height: 100%;
-									
-									> .content {
-										position: absolute;
-										top: 0;
-										bottom: 0;
-										width: 100%;
-										height: 100%;
-									}
-								}
-								
-								.content {
-									> ul {
-										border-color: transparent;
-										padding: 0;
-									}
-								}
-							}
-						}
-                  
-						li {
-							> a {
-								color: $left-sidebar-color;
-						
-								&:hover {
-									color: $left-sidebar-sub-level-color;
-								}
-							}
-						}
 					}
 				}
 				
@@ -348,20 +197,6 @@
 					display: block;
 				}
 			}
-			
-			@include media_size("non-responsive") {
-				.be-collapsible-sidebar-collapsed & {
-					&.open {
-						> ul {
-							display: none;
-							
-							&.visible {
-								display: table;
-							}
-						}
-					}
-				}
-			}
 		}
 		
 		li {
@@ -405,109 +240,9 @@
 						color: $left-sidebar-theme;
 					}
 				}
-				
-				@include media_size("non-responsive") {
-					.be-collapsible-sidebar-collapsed & > a:after {
-						display: none;
-					}
-				}
 			}
 			
 			&.open {
-				> ul {
-					display: block;
-				}
-			}
-		}
-		
-		
-		@include media_size("non-responsive") {
-			.be-collapsible-sidebar-collapsed & {
-				.sub-menu.visible li.parent > a:after {
-					display: block;
-				}
-			}
-		}
-	}
-	
-	@include media_size("non-responsive") {
-		.be-boxed-layout & {
-			-webkit-box-flex: 0;
-			-ms-flex: 0 0 230px;
-			flex: 0 0 230px;
-			position: relative;
-			
-			&:after {
-				position: absolute;
-			}
-		}
-		
-		.be-boxed-layout.be-fixed-sidebar & {
-			left: auto;
-		}
-	}
-	
-	&:after {
-		content: "";
-		position: fixed;
-		z-index: -1;
-		width: inherit;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		background-color: inherit;
-		border-right: 1px solid $left-sidebar-border-color;
-
-		@include media_size("phone") {
-			display: none;
-		}
-	}
-
-	@include media_size("phone") {
-		width: 100%;
-		background-color: #99ccff; //lighten($left-sidebar-bg, 2%);
-		border-bottom: 1px solid $left-sidebar-border-color;
-		border-right-width: 0;
-		position: relative;
-
-		.left-sidebar-wrapper, 
-		.left-sidebar-spacer, 
-		.left-sidebar-scroll,
-		.left-sidebar-content {
-			display: block;
-			position: relative;
-		}
-
-		.left-sidebar-spacer {
-			display: none;
-			border-top: 2px solid $left-sidebar-bg;
-
-			&.open {
-				display: block;
-			}
-		}
-
-		.left-sidebar-content {
-			padding-bottom: map-get($spacers, 4);
-		}
-
-		.sidebar-elements {
-			> li {
-				> a {
-					text-align: left;
-					position: relative;
-				}
-				
-				&:hover {
-					background-color: inherit;
-
-					> ul {
-						display: none;
-					}
-				}
-			}
-
-			li.open {
 				> ul {
 					display: block;
 				}
@@ -526,22 +261,6 @@
 
 		.left-sidebar-content {
 			position: absolute;
-
-			@include media_size("phone") {
-				position: relative;
-			}
-		}
-	
-		@include media_size("phone") {
-			margin-top: 0;
-			position: static;
-			height: auto;
-			margin-top: 0;
-			padding-bottom: 0;
-		}
-
-		&:after {
-			top: $top-header-height;
 		}
 	}
 	
@@ -556,23 +275,6 @@
 		-webkit-box-shadow: 0 .462rem 1.385rem 0 rgba(0,0,0,.18);
 		box-shadow: 0 .462rem 1.385rem 0 rgba(0,0,0,.18);
 		border-right-width: 0;
-		
-		@include media_size("phone") {
-			left: 0;
-			-webkit-transform: translate3d(-105%,0,0);
-			transform: translate3d(-105%,0,0);
-		}
-		
-		&:after {
-			left: -($left-sidebar-width);
-			border-right-width: 0;
-		}
-		
-		@include media_size("phone") {
-			.left-sidebar-toggle {
-				display: none;
-			}
-		}
 	}
 	
 	.be-fixed-sidebar.be-offcanvas-menu & {
@@ -584,80 +286,12 @@
 		-webkit-transition: all .35s ease;
 		transition: all .35s ease;
 	}
-	
-	@include media_size("phone") {
-		.be-offcanvas-menu & {
-			.left-sidebar-wrapper {
-				display: table;
-			}
-			
-			.left-sidebar-spacer {
-				display: table-row;
-				border-top-width: 0;
-			}
-		}
-		
-		.be-fixed-sidebar.be-offcanvas-menu & {
-			.left-sidebar-content {
-				position: absolute;
-			}
-		}
-	}
-	
-	@include media_size("phone") {
-		.be-offcanvas-menu & {
-			.progress-widget {
-				display: block;
-			}
-			
-			.be-navbar-header {
-				display: block;
-			}
-		}
-	}
-	
-	.be-offcanvas-menu & {
-		.be-navbar-header .navbar-brand {
-			padding-left: 0;
-			background-position: 0 center;
-		}
-	}
-	
-	.left-sidebar-top {
-		border-bottom: 1px solid #ededed;
-		
-		&::after {
-			display: block;
-			clear: both;
-			content: "";
-		}
-	}
-	
-	@include media_size("non-responsive") {
-		body.open-left-sidebar & {
-			left: 0;
-		}
-	}
 }
 
-	
-@include media_size("phone") {
-	body.open-left-sidebar {
-		.be-wrapper {
-			overflow: hidden;
-		}
-	}
-}
-
-
-	
 .be-left-sidebar {
 	&.open {
 		left: 0;
-		
-		@include media_size("phone") {
-			-webkit-transform: translate3d(0,0,0);
-			transform: translate3d(0,0,0);
-		}
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
 	}
 }

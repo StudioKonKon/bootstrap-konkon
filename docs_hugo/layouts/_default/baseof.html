@@ -3,7 +3,6 @@
 	<head>
 {{ partial "head" . }}
 {{- partialCached "site-styles" . }}
-
 {{ range .Page.Params.extra_css }}
   {{- $src := .src | default . -}}
   {{- $type := .type | default "css" -}}
@@ -23,10 +22,10 @@
 	<link href="{{ $src }}" rel="stylesheet" />
   {{- end -}}
 {{- end }}
-
+<style>:root{--sk-sidebar-theme-rgb:254,102,158;}</style>
 	</head>
 	<body{{ with .Page.Params.body_class }} class="{{ . }}"{{ end }}
-         style="--sk-sidebar-theme-rgb:254, 102, 158;">
+         style="">
 <div class="be-wrapper {{ with .Page.Params.left_sidebar_class }} {{ . }}{{ else }} be-offcanvas-menu be-fixed-sidebar{{ end }}">
 {{ partial "app/top-navbar" . }}
 {{ partial "app/left-sidebar" . }}

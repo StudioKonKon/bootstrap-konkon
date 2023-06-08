@@ -50,9 +50,5 @@
 		&:hover {
 			background-color: $left-sidebar-progress-hover-bg;
 		}
-
-		@include media_size("phone") {
-			display: none;
-		}
 	}
 }

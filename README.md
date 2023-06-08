@@ -20,6 +20,7 @@ A personal project I intend to use as a theme for my own website(s) but availabl
 ### Other Links
 - Theme experiments: https://codepen.io/collection/AKjdRW
 - jsDelivr: https://www.jsdelivr.com/package/gh/StudioKonKon/bootstrap-konkon
+- [Bootstrap Migrating to v5.3.0](https://getbootstrap.com/docs/5.3/migration/)
 
 ### Dark Mode Support
 
