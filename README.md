@@ -50,4 +50,4 @@ Thanks to [Bootstrap](https://getbootstrap.com/) for providing the framework tha
 Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
 
 ## Copyright and license
-Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE).
+Code released under the [MIT License](https://github.com/StudioKonKon/bootstrap-konkon/blob/master/LICENSE).
