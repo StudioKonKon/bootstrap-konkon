@@ -8,7 +8,6 @@
 [![](https://data.jsdelivr.com/v1/package/gh/StudioKonKon/bootstrap-konkon/badge)](https://www.jsdelivr.com/package/gh/StudioKonKon/bootstrap-konkon)
 
 ### About
-
 A personal project I intend to use as a theme for my own website(s) but available for others to use if they wish either for their own content or for educational purposes. Site address: https://play.studiokonkon.com/
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a1dd7898-1c03-4aeb-aa6f-7524bc687ca4/deploy-status)](https://play.studiokonkon.com/)
@@ -22,7 +21,9 @@ A personal project I intend to use as a theme for my own website(s) but availabl
 - jsDelivr: https://www.jsdelivr.com/package/gh/StudioKonKon/bootstrap-konkon
 - [Bootstrap Migrating to v5.3.0](https://getbootstrap.com/docs/5.3/migration/)
 
-### Dark Mode Support
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K1FA259)
+
+## Dark Mode Support
 
 No dark mode!?
 
@@ -34,4 +35,19 @@ Light mode has never been an issue and even in the dark, light mode does not bur
 
 Unfortunately, dark mode is impossible for me to work with and neither do I need it. This is only a personal project but anyone is welcome to share their "Dark Mode" code.
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K1FA259)
+## Thanks
+
+<a href="https://getbootstrap.com/">
+  <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" width="48" height="40">
+</a>
+
+Thanks to [Bootstrap](https://getbootstrap.com/) for providing the framework that allows us to create our website themes and layouts
+
+<a href="https://www.netlify.com/">
+  <img src="https://www.netlify.com/v3/img/components/full-logo-light.svg" alt="Netlify" width="147" height="40">
+</a>
+
+Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
+
+## Copyright and license
+Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE).
