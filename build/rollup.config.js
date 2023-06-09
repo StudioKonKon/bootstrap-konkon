@@ -9,7 +9,7 @@ const banner = require("./banner.js")
 const BUNDLE = process.env.BUNDLE === "true"
 const ESM = process.env.ESM === "true"
 
-let fileDest = `studiokonkon${ESM ? ".esm" : ""}`
+let fileDest = `studio-konkon${ESM ? ".esm" : ""}`
 const external = []
 const plugins = [
    babel({

@@ -1413,4 +1413,4 @@
   return index_umd;
 
 }));
-//# sourceMappingURL=studiokonkon.bundle.js.map
+//# sourceMappingURL=studio-konkon.bundle.js.map

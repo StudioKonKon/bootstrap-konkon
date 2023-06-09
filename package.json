@@ -33,9 +33,9 @@
 		"js-compile-standalone-esm": "rollup --environment ESM:true,BUNDLE:false --config build/rollup.config.js --sourcemap",
 		"js-compile-bundle": "rollup --environment BUNDLE:true --config build/rollup.config.js --sourcemap",
 		"js-minify": "npm-run-all --aggregate-output --parallel js-minify-*",
-		"js-minify-standalone": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/studiokonkon.js.map,includeSources,url=studiokonkon.min.js.map\" --output dist/js/studiokonkon.min.js dist/js/studiokonkon.js",
-		"js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/studiokonkon.esm.js.map,includeSources,url=studiokonkon.esm.min.js.map\" --output dist/js/studiokonkon.esm.min.js dist/js/studiokonkon.esm.js",
-		"js-minify-bundle": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/studiokonkon.bundle.js.map,includeSources,url=studiokonkon.bundle.min.js.map\" --output dist/js/studiokonkon.bundle.min.js dist/js/studiokonkon.bundle.js"
+		"js-minify-standalone": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/studio-konkon.js.map,includeSources,url=studio-konkon.min.js.map\" --output dist/js/studio-konkon.min.js dist/js/studio-konkon.js",
+		"js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/studio-konkon.esm.js.map,includeSources,url=studio-konkon.esm.min.js.map\" --output dist/js/studio-konkon.esm.min.js dist/js/studio-konkon.esm.js",
+		"js-minify-bundle": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/studio-konkon.bundle.js.map,includeSources,url=studio-konkon.bundle.min.js.map\" --output dist/js/studio-konkon.bundle.min.js dist/js/studio-konkon.bundle.js"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.22.5",

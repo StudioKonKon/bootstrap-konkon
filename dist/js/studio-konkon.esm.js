@@ -1395,4 +1395,4 @@ enableDismissTrigger(Sidebar);
 defineJQueryPlugin(Sidebar);
 
 export { Sidebar };
-//# sourceMappingURL=studiokonkon.esm.js.map
+//# sourceMappingURL=studio-konkon.esm.js.map
