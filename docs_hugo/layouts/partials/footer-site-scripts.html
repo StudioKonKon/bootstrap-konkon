@@ -1,0 +1,12 @@
+<script type="text/javascript">const SKK_HOSTNAME="{{ .Site.BaseURL | absURL | safeURL }}";</script>
+{{- with $.Site.Params.site_scripts_footer -}}
+   {{- range sort . "order" -}}
+{{- with .build }}
+{{- $main_built := resources.Get .resource | js.Build .options -}}
+<script type="text/javascript" src="{{ $main_built.Permalink }}"></script>
+{{ else }}
+{{- $cors := .cors | default "anonymous" -}}
+<script type="text/javascript" src="{{ .src | absURL }}{{ with .query }}?{{ ( querify . ) | safeURL }}{{ end }}"{{ with .hash }}{{ printf " integrity=%q" . | safeHTMLAttr }} crossorigin="{{ $cors }}"{{ end }}></script>
+{{ end -}}
+   {{- end -}}
+{{- end -}}

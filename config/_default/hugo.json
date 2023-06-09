@@ -1,0 +1,36 @@
+{
+	"BaseURL": "/",
+	"uglyurls": false,
+	"relativeURLs": false,
+	"canonifyURLs": false,
+	"disableKinds": [
+		"RSS",
+		"sitemap",
+		"robotsTXT"
+	],
+	"languageCode": "en",
+	"DefaultContentLanguage": "en",
+	"publishDir": "docs",
+	"summaryLength": 70,
+	"title": "Studio KonKon Theme",
+	"hasCJKLanguage": true,
+	"markup": {
+		"goldmark": {
+			"renderer": {
+				"unsafe": true
+			}
+		}
+	},
+	"paginate": 3,
+	"enableInlineShortcodes": true,
+	"footnoteReturnLinkContents": "^",
+	"taxonomies": {},
+	"services": {
+		"instagram": {
+			"disableInlineCSS": true
+		},
+		"twitter": {
+			"disableInlineCSS": true
+		}
+	}
+}

@@ -22,7 +22,7 @@
 		position: relative;
 		margin: 0 auto;
 		overflow: hidden;
-		background-color: #f1f1f1;
+		background-color: var(--#{$prefix}secondary-bg);
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -53,9 +53,9 @@
 .skk-footer {
    width: 100%;
    padding: 0;
-   color: #667684;
-   background-color: #f9f9f9;
-   border-top: 0.05rem solid #e5e5e5;
+   color: rgba(var(--#{$prefix}secondary-rgb), .75);
+   background-color: var(--#{$prefix}tertiary-bg);
+   border-top: 0.05rem solid var(--#{$prefix}border-color-translucent);
 }
 
 .skk-footer {
@@ -81,11 +81,11 @@
 
    a {
       font-weight: 600;
-      color: #667684;
+      color: rgba(var(--#{$prefix}body-color-rgb), .75);
    }
 
    p {
-      font-size: 0.875rem;
+      font-size: .875rem;
       margin-bottom: 0;
    }
 }

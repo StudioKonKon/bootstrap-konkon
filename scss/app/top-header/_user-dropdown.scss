@@ -166,7 +166,7 @@
 	}
       
 	.skk-nva-check {
-		color: var(--#{$prefix}info);
+		color: var(--#{$sk-variable-prefix}user-check-color);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -259,16 +259,16 @@
 	}
 	
 	.skk-nvf {
-		color: var(--#{$prefix}secondary-color);
+		color: var(--#{$prefix}body-color);
 		margin: .875rem 2.0625rem;
 		text-align: center;
 		white-space: normal;
 
 		a {
 			border-radius: .25rem;
-			color: var(--#{$prefix}secondary-color);
+			color: var(--#{$prefix}body-color);
 			display: inline-block;
-			font-weight: 400px;
+			font-weight: 400;
 			font-size: .75rem;
 			outline: 0;
 			padding: .25rem .5rem;
@@ -277,12 +277,16 @@
 			white-space: normal;
 
 			&:hover {
-				background-color: rgba(var(--#{$prefix}secondary-bg-rgb), .5);
+				background-color: var(--#{$prefix}dropdown-link-hover-bg);
+            text-decoration: underline;
+			}
+         
+			&:hover:active {
+				background-color: var(--#{$prefix}dropdown-link-active-bg);
 			}
 		}
 
 		.seperator {
-			color: var(--#{$prefix}border-color-translucent);
 			text-align: center;
 			white-space: normal;
 			font-size: .75rem;

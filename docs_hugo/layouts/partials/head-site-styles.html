@@ -1,0 +1,16 @@
+{{- with .Site.Params.google_fonts -}}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+{{- end -}}
+{{- with $.Site.Params.site_styles_header -}}
+   {{- range sort . "order" -}}
+{{- with .build }}
+{{- $style_built := resources.Get .resource | resources.ToCSS .options -}}
+<link href="{{ $style_built.Permalink }}" rel="stylesheet" />
+{{ else }}
+{{- $cors := .cors | default "anonymous" }}
+<link href="{{ .src | absURL }}{{ with .query }}?{{ ( querify . ) | safeURL }}{{ end }}" rel="stylesheet"{{ with .hash }}{{ printf " integrity=%q" . | safeHTMLAttr }} crossorigin="{{ $cors }}"{{ end }} />
+{{ end -}}
+   {{- end -}}
+{{- end }}
+<style type="text/css">.be-top-header .be-navbar-header .navbar-brand{background-image:url("{{ "/images/logo.png" | absURL }}");}.be-color-header .be-top-header .be-navbar-header .navbar-brand{background-image:url("{{ "/images/logo-white.png" | absURL }}");}</style>
+ 

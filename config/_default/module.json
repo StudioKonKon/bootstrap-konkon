@@ -1,0 +1,20 @@
+{
+   "mounts": [
+      { "source": "docs_hugo/assets", "target": "assets" },
+      { "source": "docs_hugo/content", "target": "content" },
+      { "source": "docs_hugo/data", "target": "data" },
+      { "source": "docs_hugo/layouts", "target": "layouts" },
+      { "source": "docs_hugo/static", "target": "static" },
+      { "source": "scss", "target": "assets" },
+      { "source": "js", "target": "assets/konkon/js" },
+      { "source": "dist", "target": "static/assets" },
+      {
+         "source": "node_modules/bootstrap/dist/js",
+         "target": "static/assets/lib/bootstrap/dist/js"
+      },
+      {
+         "source": "node_modules/material-design-iconic-font/dist",
+         "target": "static/assets/lib/material-design-iconic-font/dist"
+      }
+   ]
+}

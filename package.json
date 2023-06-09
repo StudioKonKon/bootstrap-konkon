@@ -1,9 +1,9 @@
 {
 	"name": "bootstrap-konkon",
 	"description": "A personal project I intend to use as a theme for my own website but available for others to use if they wish either for their own content or for educational purposes.",
-	"version": "1.6.4-beta",
+	"version": "1.7.0-beta",
 	"config": {
-		"version_short": "1.6"
+		"version_short": "1.7"
 	},
 	"keywords": [
 		"css",
@@ -26,10 +26,26 @@
 		"css-addons": "npm-run-all css-addons-compile css-addons-prefix css-addons-minify",
 		"css-addons-compile": "sass --style expanded --source-map --embed-sources --no-error-css build/scss:dist/css/addons/",
 		"css-addons-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/addons/*.css\" \"!dist/css/addons/*.min.css\"",
-		"css-addons-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/addons/ --batch --batch-suffix \".min\" \"dist/css/addons/*.css\" \"!dist/css/addons/*.min.css\""
+		"css-addons-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/addons/ --batch --batch-suffix \".min\" \"dist/css/addons/*.css\" \"!dist/css/addons/*.min.css\"",
+		"js": "npm-run-all js-compile js-minify",
+		"js-compile": "npm-run-all --aggregate-output --parallel js-compile-*",
+		"js-compile-standalone": "rollup --environment BUNDLE:false --config build/rollup.config.js --sourcemap",
+		"js-compile-standalone-esm": "rollup --environment ESM:true,BUNDLE:false --config build/rollup.config.js --sourcemap",
+		"js-compile-bundle": "rollup --environment BUNDLE:true --config build/rollup.config.js --sourcemap",
+		"js-minify": "npm-run-all --aggregate-output --parallel js-minify-*",
+		"js-minify-standalone": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/studiokonkon.js.map,includeSources,url=studiokonkon.min.js.map\" --output dist/js/studiokonkon.min.js dist/js/studiokonkon.js",
+		"js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/studiokonkon.esm.js.map,includeSources,url=studiokonkon.esm.min.js.map\" --output dist/js/studiokonkon.esm.min.js dist/js/studiokonkon.esm.js",
+		"js-minify-bundle": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/studiokonkon.bundle.js.map,includeSources,url=studiokonkon.bundle.min.js.map\" --output dist/js/studiokonkon.bundle.min.js dist/js/studiokonkon.bundle.js"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.22.5",
+		"@babel/core": "^7.22.5",
+		"@babel/preset-env": "^7.22.5",
 		"@popperjs/core": "^2.10.2",
+		"@rollup/plugin-babel": "^6.0.3",
+		"@rollup/plugin-commonjs": "^25.0.0",
+		"@rollup/plugin-node-resolve": "^15.1.0",
+		"@rollup/plugin-replace": "^5.0.2",
 		"autoprefixer": "^10.4.0",
 		"bootstrap": "^5.3.0",
 		"clean-css-cli": "^5.4.2",
@@ -37,7 +53,9 @@
 		"npm-run-all": "^4.1.5",
 		"postcss": "^8.3.11",
 		"postcss-cli": "^10.0.0",
-		"sass": "^1.43.4"
+		"rollup": "^3.24.0",
+		"sass": "^1.43.4",
+		"terser": "^5.17.7"
 	},
 	"style": "dist/css/studio-konkon.css",
 	"sass": "scss/studio-konkon.scss",

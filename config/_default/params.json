@@ -1,0 +1,99 @@
+{
+   "theme_color": "#fe669e",
+   "author": "Studio KonKon",
+   "current_version": "1.7.0-beta",
+   "docs_version": "5.3.0",
+   "github_org": "https://github.com/StudioKonKon",
+   "repo": "https://github.com/StudioKonKon/bootstrap-konkon",
+   "jsdelivr": "https://www.jsdelivr.com/package/gh/StudioKonKon/bootstrap-konkon",
+   "desciption": "",
+   "copyright": "Copyright of Studio KonKon &copy; 2018-2022<span class='d-none d-sm-inline'> | </span><br class='d-block d-sm-none' />Powered by Hugo &amp; Bootstrap v5",
+   "footer_message": "",
+   "social_links": {
+      "twitter": {
+         "icon": "zmdi zmdi-twitter",
+         "title": "Twitter",
+         "href": "https://twitter.com/StudioKonKon"
+      },
+      "youtube": {
+         "icon": "zmdi zmdi-youtube",
+         "title": "YouTube",
+         "href": "https://www.youtube.com/channel/UCZsIwOUO6s6jbJxHdzF3m_Q"
+      },
+      "github": {
+         "icon": "zmdi zmdi-github",
+         "title": "GitHub",
+         "href": "https://github.com/StudioKonKon"
+      }
+   },
+   "twitter": {
+      "creator": "@StudioKonKon",
+      "image": "https://ik.imagekit.io/konkon/skk-banner.jpg"
+   },
+   "google_fonts": {
+      "roboto": "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+   },
+   "preconnect": [
+      { "href": "https://cdn.jsdelivr.net", "cors": "anonymous" }
+   ],
+   "site_styles_header": [
+      {
+         "order": 1001,
+         "name": "css-bootstrap-konkon",
+         "build": {
+            "resource": "sass/bootstrap-custom.scss",
+            "integrity": false,
+            "options": {
+               "targetPath": "assets/css/studio-konkon.css",
+               "enableSourceMap": true
+            }
+         }
+      },
+      {
+         "order": 1002,
+         "name": "css-bootstrap-konkon-app",
+         "build": {
+            "resource": "sass/app-dashboard.scss",
+            "integrity": false,
+            "options": {
+               "targetPath": "assets/css/studio-konkon-app.css",
+               "enableSourceMap": true
+            }
+         }
+      }
+   ],
+   "site_styles_footer": [
+      {
+         "order": 1001,
+         "name": "css-material-design-iconic-font",
+         "src": "https://cdn.jsdelivr.net/npm/material-design-iconic-font@2.2.0/dist/css/material-design-iconic-font.min.css",
+         "hash": "sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY="
+      }
+   ],
+   "site_scripts_header": [],
+   "site_scripts_footer": [
+      {
+         "order": 1001,
+         "name": "js-bootstrap",
+         "src": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js",
+         "hash": "sha256-qlPVgvl+tZTCpcxYJFdHB/m6mDe84wRr+l81VoYPTgQ="
+      },
+      {
+         "order": 1003,
+         "name": "js-main-app",
+         "build": {
+            "resource": "js/main-app.js",
+            "integrity": false,
+            "options": {
+               "targetPath": "assets/js/app.min.js",
+               "bundle": true,
+               "platform": "browser",
+               "globalName": "app",
+               "format": "iife",
+               "target": "es2015",
+               "minify": false
+            }
+         }
+      }
+   ]
+}

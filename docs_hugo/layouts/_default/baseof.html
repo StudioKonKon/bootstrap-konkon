@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"{{ with .Page.Params.html_class }} class="{{ . }}"{{ end }}>
-	<head>
-{{ partial "head" . }}
-{{- partialCached "site-styles" . }}
-{{ range .Page.Params.extra_css }}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="h-100{{ with .Page.Params.html_class }} {{ . }}{{ end }}" data-bs-theme="light">
+	<head itemscope>
+{{ partial "head" . -}}
+
+{{- with $.Site.Params.preconnect -}}
+{{ range . }}
+   {{- $cors := "" -}}
+   {{- if isset . "cors" -}}{{- $cors = .cors | default "anonymous" -}}{{- end -}}
+   <link rel="preconnect" href="{{ .href | safeURL }}"{{ with $cors }} crossorigin="{{ . }}"{{ end }}>
+{{ end }}
+{{- end -}}
+
+{{- partialCached "head-site-styles" . }}
+
+{{- range .Page.Params.extra_css -}}
   {{- $src := .src | default . -}}
   {{- $type := .type | default "css" -}}
   {{- $map := .map | default true -}}
@@ -11,38 +21,31 @@
   {{- $inline := .inline | default false -}}
   {{- $style := "" -}}
   {{- if eq $type "scss" -}}
-    {{- $sass := resources.Get (printf "sass/%s.scss" $src) -}}
+   {{- $sass := resources.Get (printf "sass/%s.scss" $src) -}}
 	{{- $options := (dict "targetPath" (printf "assets/css/%s.css" $src) "enableSourceMap" $map "outputStyle" $stype) -}}
 	{{- $style = $sass | resources.ToCSS $options -}}
 	{{- $src = $style.RelPermalink -}}
   {{- end -}}
   {{- if $inline -}}
-    {{- with $style }}<style>{{ .Content | safeCSS }}</style>{{ end -}}
-  {{- else -}}
-	<link href="{{ $src }}" rel="stylesheet" />
-  {{- end -}}
+    {{- with $style }}<style>{{- .Content | safeCSS -}}</style>{{ end -}}
+  {{- else }}<link href="{{ $src }}" rel="stylesheet" />{{ end -}}
 {{- end }}
-<style>:root{--sk-sidebar-theme-rgb:254,102,158;}</style>
+<style>:root{--sk-theme-bg-rgb:254,102,158;}</style>
 	</head>
-	<body{{ with .Page.Params.body_class }} class="{{ . }}"{{ end }}
-         style="">
-<div class="be-wrapper {{ with .Page.Params.left_sidebar_class }} {{ . }}{{ else }} be-offcanvas-menu be-fixed-sidebar{{ end }}">
+	<body class="h-100{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
+<div class="be-wrapper d-flex flex-column {{ with .Page.Params.left_sidebar_class }} {{ . }}{{ else }} be-offcanvas-menu be-fixed-sidebar{{ end }}">
 {{ partial "app/top-navbar" . }}
 {{ partial "app/left-sidebar" . }}
-	<div class="be-content">
-		<div class="{{ with .Page.Params.content_class }}{{ . }}{{ end }}">
-			<div class="{{ with .Page.Params.main_content_class }}{{ . }}{{ end }}">
+	<div class="be-content flex-fill pb-4">
 {{ block "main" . }}{{ end }}
-			</div>
-		</div>
 	</div>
+{{ block "footer" . }}{{ partialCached "footer" . }}{{ end }}
 </div>
-{{ partialCached "site-scripts.html" . }}
-{{ if ne .Page.Params.include_js false -}}
-	{{ range .Page.Params.extra_js -}}
-<script{{ with .async }} async{{ end }} src="{{ .src }}"{{ with .integrity }} {{ printf "integrity=%q" . | safeHTMLAttr }} crossorigin="anonymous"{{ end }}></script>
-	{{- end -}}
+{{- partialCached "footer-site-styles" . -}}
+{{- partialCached "footer-site-scripts" . -}}
+{{- if ne .Page.Params.include_js false -}}
+   {{ range .Page.Params.extra_js }}<script{{ with .async }} async{{ end }} src="{{ .src | safeURL }}"{{ with .integrity }} {{ printf "integrity=%q" . | safeHTMLAttr }} crossorigin="anonymous"{{ end }}></script>
+   {{ end }}
 {{- end }}
-
-	</body>
+   </body>
 </html>

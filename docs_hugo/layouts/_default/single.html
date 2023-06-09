@@ -1,10 +1,17 @@
 {{ define "main" -}}
+{{- $show_list := .Page.Params.show_list | default true -}}
+{{- $show_header := .Page.Params.show_header | default true -}}
+{{- $container_class := .Page.Params.container_class | default "container py-4" -}}
+{{- if $show_header -}}
 <div class="container py-3">
 	{{ with .Title }}<h2 class="page-head-title">{{ . }}</h2>{{ end }}
 	{{ with .Description }}<p class="lead mb-0">{{ . }}</p>{{ end }}
-	{{ partial "bs5/breadcrumb" . }}
+	{{ partial "bootstrap/breadcrumb" . }}
 </div>
-<div class="container mb-5">
-	{{- .Content -}}
+{{ end }}
+{{ with .Content }}
+<div class="{{ $container_class }}">
+{{ . }}
 </div>
+{{ end }}
 {{ end -}}

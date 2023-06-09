@@ -1,0 +1,9 @@
+{{- with $.Site.Params.site_styles_footer -}}
+   {{- range sort . "order" -}}
+{{- $cors := .cors | default "anonymous" }}
+<link href="{{ .src | absURL }}{{ with .query }}?{{ ( querify . ) | safeURL }}{{ end }}" rel="stylesheet"{{ with .hash }}{{ printf " integrity=%q" . | safeHTMLAttr }} crossorigin="{{ $cors }}"{{ end }} />
+   {{- end -}}
+{{- end }}
+{{ with .Site.Params.google_fonts -}}
+<link href="{{ .roboto | safeURL }}" rel="stylesheet" defer />
+{{- end }}
