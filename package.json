@@ -71,6 +71,10 @@
    "bugs": {
       "url": "https://github.com/StudioKonKon/bootstrap-konkon/issues"
    },
+   "funding": {
+      "type": "ko_fi",
+      "url": "https://ko-fi.com/studiokonkon"
+   },
 	"files": [
 		"dist/{css,js}/*.{css,js,map}",
       "js/{src,dist}/**/*.{js,map}",
