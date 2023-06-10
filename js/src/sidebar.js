@@ -25,7 +25,7 @@ import ScrollBarHelper from "./util/scrollbar.js"
  * Constants
  */
 
-const VERSION = "1.7.0-beta"
+const VERSION = "1.7.1-beta"
 
 const NAME = "sidebar"
 const DATA_KEY = "skk.sidebar"
@@ -38,11 +38,11 @@ const CLASS_NAME_ANIMATE = "be-animate"
 const CLASS_NAME_OPEN = "open"
 const CLASS_NAME_MENU_OPEN = "open"
 const CLASS_NAME_MENU_ACTIVE = "active"
-const MENU_ITEM_SELECTOR = ".sidebar-elements a"
+const MENU_ITEM_SELECTOR = ".left-sidebar-elements a"
 const MENU_SUB_SELECTOR = ".sub-menu"
 const MENU_OPEN_SELECTOR = ".open"
 const MENU_ACTIVE_SELECTOR = ".active"
-const MENU_ACTIVE_PARENT_SELECTOR = ".sidebar-elements .parent"
+const MENU_ACTIVE_PARENT_SELECTOR = ".left-sidebar-elements .parent"
 
 const CLASS_NAME_SHOW = "show"
 const CLASS_NAME_SHOWING = "showing"

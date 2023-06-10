@@ -103,6 +103,7 @@
 .be-icons-nav > .nav-item > .nav-link {
    display: flex;
    align-items: center;
+   justify-content: center;
    text-align: center;
    padding: $top-header-nav-icon-padding;
    font-size: $top-header-nav-icon-size;
@@ -122,11 +123,17 @@
    
    svg, .icon {
       display: block;
-      line-height: $top-header-nav-icon-lh;
-      font-size: $top-header-nav-icon-size;
-      width: $top-header-nav-icon-size;
-      height: $top-header-nav-icon-size;
+      font-size: 1em;
+      line-height: 0;
+      width: 1em;
+      height: 1em;
       text-align: center;
+   }
+   
+   .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
    }
 }
 
@@ -180,22 +187,4 @@
 			}
 		}
 	}
-}
-
-/* ## DEV ## */
-$devbg-col1: #eeffcc;
-$devot-col1: #ff99cc;
-$devbg-col2: #ffcc99;
-
-.be-top-headers {
-   .navbar-brand,
-   .be-toggle-left-sidebar,
-	.navbar-nav > .nav-item > .nav-link {
-      background-color: $devbg-col1;
-      outline: solid 1px $devot-col1;
-      
-      svg, .icon {
-         background-color: $devbg-col2;
-      }
-   }
 }

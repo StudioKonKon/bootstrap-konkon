@@ -1,5 +1,5 @@
 /*!
-  * Studio KonKon v1.7.0-beta (https://play.studiokonkon.com/)
+  * Studio KonKon v1.7.1-beta (https://play.studiokonkon.com/)
   * Copyright 2011-2023 Studio KonKon
   * Licensed under MIT (https://github.com/StudioKonKon/bootstrap-konkon/blob/master/LICENSE)
   */
@@ -1101,7 +1101,7 @@ class ScrollBarHelper {
  * Constants
  */
 
-const VERSION = "1.7.0-beta";
+const VERSION = "1.7.1-beta";
 const NAME = "sidebar";
 const DATA_KEY = "skk.sidebar";
 const EVENT_KEY = `.${DATA_KEY}`;
@@ -1112,11 +1112,11 @@ const CLASS_NAME_ANIMATE = "be-animate";
 const CLASS_NAME_OPEN = "open";
 const CLASS_NAME_MENU_OPEN = "open";
 const CLASS_NAME_MENU_ACTIVE = "active";
-const MENU_ITEM_SELECTOR = ".sidebar-elements a";
+const MENU_ITEM_SELECTOR = ".left-sidebar-elements a";
 const MENU_SUB_SELECTOR = ".sub-menu";
 const MENU_OPEN_SELECTOR = ".open";
 const MENU_ACTIVE_SELECTOR = ".active";
-const MENU_ACTIVE_PARENT_SELECTOR = ".sidebar-elements .parent";
+const MENU_ACTIVE_PARENT_SELECTOR = ".left-sidebar-elements .parent";
 const CLASS_NAME_SHOW = "show";
 const CLASS_NAME_SHOWING = "showing";
 const CLASS_NAME_HIDING = "hiding";

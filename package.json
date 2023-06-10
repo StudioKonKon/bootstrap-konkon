@@ -1,7 +1,7 @@
 {
 	"name": "bootstrap-konkon",
 	"description": "A personal project I intend to use as a theme for my own website but available for others to use if they wish either for their own content or for educational purposes.",
-	"version": "1.7.0-beta",
+	"version": "1.7.1-beta",
 	"config": {
 		"version_short": "1.7"
 	},

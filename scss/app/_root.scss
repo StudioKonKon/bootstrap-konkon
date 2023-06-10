@@ -10,8 +10,10 @@
    --#{$sk-variable-prefix}sidebar-divider-bg:    var(--#{$prefix}border-color-translucent);
    --#{$sk-variable-prefix}sidebar-border:        var(--#{$prefix}border-color-translucent);
    --#{$sk-variable-prefix}icon-indicator-color:  rgba(var(--#{$sk-variable-prefix}theme-bg-rgb), 1);
+   --#{$sk-variable-prefix}msg-read-color:        var(--#{$prefix}body-color);
+   --#{$sk-variable-prefix}msg-read-bg:           var(--#{$prefix}tertiary-bg);
    --#{$sk-variable-prefix}msg-unread-color:      var(--#{$prefix}body-color);
-   --#{$sk-variable-prefix}msg-unread-bg:         var(--#{$prefix}tertiary-bg);
+   --#{$sk-variable-prefix}msg-unread-bg:         var(--#{$prefix}body-bg);
    --#{$sk-variable-prefix}msg-hover-color:       var(--#{$prefix}body-color);
    --#{$sk-variable-prefix}msg-hover-bg:          var(--#{$prefix}secondary-bg);
    --#{$sk-variable-prefix}user-check-color:      rgba(var(--#{$sk-variable-prefix}theme-bg-rgb), 1);

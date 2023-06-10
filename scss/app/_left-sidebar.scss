@@ -21,244 +21,244 @@
    &.open {
 		left: 0 !important;
 	}
+}
 	
-	.left-sidebar-wrapper {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-	}
+.left-sidebar-wrapper {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+}
 
-	.left-sidebar-spacer {
-		height: 100%;
-	}
+.left-sidebar-spacer {
+   height: 100%;
+}
 
-	.left-sidebar-scroll {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		overflow-x: hidden;
-	}
+.left-sidebar-scroll {
+   position: relative;
+   height: 100%;
+   width: 100%;
+   overflow-x: hidden;
+}
 
-	.left-sidebar-content {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		padding-top: .615rem;
-	}
+.left-sidebar-content {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   padding-top: .615rem;
+}
 
-	.sidebar-elements {
-		margin: 0;
-		padding: 0;
+.left-sidebar-elements {
+   margin: 0;
+   padding: 0;
+   
+   a {
+      position: relative;
+   }
+   
+   .sub-menu .sub-menu {
+      padding: 0;
+      padding-left: map-get($spacers, 2);
+   }
+
+   .divider {
+      color: $left-sidebar-divider-color;
+      font-weight: $font-weight-bold;
+      padding: map-get($spacers, 2) $left-sidebar-main-level-padding;
+      line-height: $line-height-base;
+      text-transform: uppercase;
+      font-size: $font-size-sm;
       
-      a {
-         position: relative;
+      &:not(:first-child) {
+         &:before {
+            content: "";
+            display: block;
+            padding: 0;
+            margin: map-get($spacers, 1) auto;
+            border-bottom: 1px solid $left-sidebar-divider-bg;
+            width: $left-sidebar-width - ($left-sidebar-main-level-padding * 2);
+            height: auto;
+         }
+      }
+   }
+
+   //First Level
+   > li {
+      list-style: none;
+
+      > a {
+         display: block;
+         padding: 0 $left-sidebar-main-level-padding;
+         color: $left-sidebar-color;
+         font-size: $left-sidebar-main-level-font-size;
+         line-height: $left-sidebar-main-level-height;
+         text-overflow: ellipsis;
+         overflow: hidden;
+         white-space: nowrap;
+
+         .icon {
+            line-height: $left-sidebar-main-level-height;
+            font-size: $left-sidebar-icon-size;
+            min-width: $left-sidebar-icon-size;
+            margin-right: $spacer * .692;
+            text-align: center;
+            vertical-align: middle;
+         }
+         
+         > span {
+            vertical-align: middle;
+         }
+         
+         &:hover {
+            background-color: $left-sidebar-level-bg;
+
+            > .icon,
+            > span {
+               color: $left-sidebar-hover-color;
+            }
+         }
       }
       
-		.sub-menu .sub-menu {
-			padding: 0;
-			padding-left: map-get($spacers, 2);
-		}
-
-		.divider {
-         color: $left-sidebar-divider-color;
-         font-weight: $font-weight-bold;
-         padding: map-get($spacers, 2) $left-sidebar-main-level-padding;
-         line-height: $line-height-base;
-         text-transform: uppercase;
-         font-size: $font-size-sm;
+      > ul {
+         background-color: $left-sidebar-sub-level-bg;
+         border-top: 1px solid $left-sidebar-border-color;
+         border-bottom: 1px solid $left-sidebar-border-color;
+      }
+      
+      ul {
+         display: none;
+         padding: map-get($spacers, 1) 0;
+         list-style: none;
+         line-height: 1.538rem;
          
-         &:not(:first-child) {
+         .title {
+            display: none;
+         }
+         
+         .be-collapsible-sidebar & {
+            .content > ul {
+               padding-left: 0;
+            }
+         }
+         
+         li {
+            > a {
+               padding: $left-sidebar-sub-level-padding;
+               color: $left-sidebar-sub-level-color;
+               font-size: $left-sidebar-sub-level-font-size;
+               display: block;
+               text-overflow: ellipsis;
+               overflow: hidden;
+               white-space: nowrap;
+               
+               &:hover {
+                  background-color: $left-sidebar-sub-level-hover;
+               }
+            }
+            
+            &.active > a {
+               color: $left-sidebar-theme;
+            }
+            
+            ul {
+               padding-top: 0;
+               padding-bottom: 0;
+               padding-left: 0;
+            }
+            
+            > ul {
+               padding: map-get($spacers, 1) 0;
+               
+               > li ul {
+                  padding: map-get($spacers, 1) 0;
+               }
+            }
+         }
+      }
+      
+      //First level active
+      &.active {
+         > a {
+            padding-left: $left-sidebar-main-level-padding;
+            color: $left-sidebar-theme;
+
+            > span {
+               color: $left-sidebar-theme;
+            }
+            
             &:before {
                content: "";
                display: block;
-               padding: 0;
-               margin: map-get($spacers, 1) auto;
-               border-bottom: 1px solid $left-sidebar-divider-bg;
-               width: $left-sidebar-width - ($left-sidebar-main-level-padding * 2);
-               height: auto;
+               position: absolute;
+               left: 0;
+               top: 0;
+               height: 100%;
+               width: 4px;
+               background-color: $left-sidebar-theme;
             }
          }
-		}
+      }
 
-		//First Level
-		> li {
-			list-style: none;
-
-			> a {
-				display: block;
-				padding: 0 $left-sidebar-main-level-padding;
-				color: $left-sidebar-color;
-				font-size: $left-sidebar-main-level-font-size;
-				line-height: $left-sidebar-main-level-height;
-				text-overflow: ellipsis;
-			   overflow: hidden;
-			   white-space: nowrap;
-
-				.icon {
-					line-height: $left-sidebar-main-level-height;
-					font-size: $left-sidebar-icon-size;
-					min-width: $left-sidebar-icon-size;
-					margin-right: $spacer * .692;
-					text-align: center;
-					vertical-align: middle;
-				}
-				
-				> span {
-					vertical-align: middle;
-				}
-				
-				&:hover {
-					background-color: $left-sidebar-level-bg;
-
-					> .icon,
-               > span {
-						color: $left-sidebar-hover-color;
-					}
-				}
-			}
-			
-			> ul {
-				background-color: $left-sidebar-sub-level-bg;
-				border-top: 1px solid $left-sidebar-border-color;
-				border-bottom: 1px solid $left-sidebar-border-color;
-			}
-			
-			ul {
-				display: none;
-				padding: map-get($spacers, 1) 0;
-				list-style: none;
-				line-height: 1.538rem;
-				
-				.title {
-					display: none;
-				}
-				
-				.be-collapsible-sidebar & {
-					.content > ul {
-						padding-left: 0;
-					}
-				}
-				
-				li {
-					> a {
-						padding: $left-sidebar-sub-level-padding;
-						color: $left-sidebar-sub-level-color;
-						font-size: $left-sidebar-sub-level-font-size;
-						display: block;
-						text-overflow: ellipsis;
-						overflow: hidden;
-						white-space: nowrap;
-						
-						&:hover {
-							background-color: $left-sidebar-sub-level-hover;
-						}
-					}
-					
-					&.active > a {
-						color: $left-sidebar-theme;
-					}
-					
-					ul {
-						padding-top: 0;
-						padding-bottom: 0;
-						padding-left: 0;
-					}
-					
-					> ul {
-						padding: map-get($spacers, 1) 0;
-						
-						> li ul {
-							padding: map-get($spacers, 1) 0;
-						}
-					}
-				}
-			}
-			
-			//First level active
-			&.active {
-				> a {
-					padding-left: $left-sidebar-main-level-padding;
-					color: $left-sidebar-theme;
-
-					> span {
-						color: $left-sidebar-theme;
-					}
-               
-               &:before {
-                  content: "";
-                  display: block;
-                  position: absolute;
-                  left: 0;
-                  top: 0;
-                  height: 100%;
-                  width: 4px;
-                  background-color: $left-sidebar-theme;
-               }
-				}
-			}
-
-			&.open,
-			&.open > ul .nav-items .content {
-				
-				> ul {
-					display: block;
-				}
-			}
-		}
-		
-		li {
+      &.open,
+      &.open > ul .nav-items .content {
          
-         &.active {
-				> a {
-					font-weight: 500;
-				}
-			}
+         > ul {
+            display: block;
+         }
+      }
+   }
+   
+   li {
+      
+      &.active {
+         > a {
+            font-weight: 500;
+         }
+      }
+      
+      > a {
+         display: flex !important;
+         align-items: center !important;
          
-			> a {
-				display: flex !important;
-				align-items: center !important;
-				
-				> span.text {
-					flex: 1 1 auto;
-					text-overflow: ellipsis;
-					overflow: hidden;
-					white-space: nowrap;
-					min-width: 0;
-				}
-				
-				&:after,
-				> .badge,
-				> .icon {
-					flex: 0 0 auto;
-				}
-			}
-			
-			&.parent {
-				> a {
-					&:after {
-						content: '\f2f2';
-						float: right;
-						font-family: $icons-font;
-						font-size: 1.615rem;
-						margin-left: $spacer * .692;
-					}
-				
-					&:hover:after {
-						color: $left-sidebar-theme;
-					}
-				}
-			}
-			
-			&.open {
-				> ul {
-					display: block;
-				}
-			}
-		}
-	}
+         > span.text {
+            flex: 1 1 auto;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            min-width: 0;
+         }
+         
+         &:after,
+         > .badge,
+         > .icon {
+            flex: 0 0 auto;
+         }
+      }
+      
+      &.parent {
+         > a {
+            &:after {
+               content: '\f2f2';
+               float: right;
+               font-family: $icons-font;
+               font-size: 1.615rem;
+               margin-left: $spacer * .692;
+            }
+         
+            &:hover:after {
+               color: $left-sidebar-theme;
+            }
+         }
+      }
+      
+      &.open {
+         > ul {
+            display: block;
+         }
+      }
+   }
 }
 	
 .be-offcanvas-menu .be-left-sidebar {
