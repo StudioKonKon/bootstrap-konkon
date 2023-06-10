@@ -17,6 +17,9 @@
 	],
 	"homepage": "https://play.studiokonkon.com/",
 	"author": "Studio KonKon",
+   "contributors": [
+      "Studio KonKon (スタジオこんこん)"
+   ],
 	"license": "MIT",
 	"scripts": {
 		"css": "npm-run-all css-compile css-prefix css-minify",
@@ -59,8 +62,18 @@
 	},
 	"style": "dist/css/studio-konkon.css",
 	"sass": "scss/studio-konkon.scss",
+   "main": "dist/js/studio-konkon.js",
+   "module": "dist/js/studio-konkon.esm.js",
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/StudioKonKon/bootstrap-konkon.git"
+   },
+   "bugs": {
+      "url": "https://github.com/StudioKonKon/bootstrap-konkon/issues"
+   },
 	"files": [
 		"dist/{css,js}/*.{css,js,map}",
+      "js/{src,dist}/**/*.{js,map}",
 		"scss/**/*.scss"
 	],
 	"dependencies": {
