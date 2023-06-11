@@ -1,6 +1,6 @@
 /* - Top header - */
 
-.be-top-header {
+.sk-top-header {
 	background-color: $top-header-bg;
 	border: $top-header-border;
 	margin-bottom: $top-header-margin-bottom;
@@ -16,7 +16,7 @@
 		padding: 0;
 	
 		@include media_size("phone") {
-			.be-nosidebar-left & {
+			.sk-nosidebar-left & {
 				display: block;
 				
 				.navbar-collapse {
@@ -35,13 +35,13 @@
 	}
    
    .navbar-brand,
-   .be-toggle-left-sidebar {
+   .sk-toggle-left-sidebar {
       display: flex;
       align-items: center;
    }
       
 	/*logo and toggle button*/
-	.be-navbar-header {
+	.sk-navbar-header {
 		width: 100%;
 		max-width: $left-sidebar-width;
 		padding-right: $top-header-logo-padding;
@@ -51,7 +51,7 @@
 		flex: 0 1 auto;
       align-items: stretch;
 		
-		.be-collapsible-sidebar & {
+		.sk-collapsible-sidebar & {
 			justify-content: space-between;
 			
 			.navbar-brand
@@ -62,7 +62,7 @@
 		}
 		
 		@include media_size("tablet") {
-			.be-nosidebar-left & {
+			.sk-nosidebar-left & {
 				width: auto;
 			}
 		}
@@ -82,12 +82,12 @@
 			display: block;
 
 			// Without left sidebar style
-			.be-nosidebar-left & {
+			.sk-nosidebar-left & {
 				width: $top-header-logo-width + ($top-header-logo-padding * 2);
 			}
 		}
 		
-		.be-toggle-left-sidebar {
+		.sk-toggle-left-sidebar {
 			text-align: center;
 			padding: $top-header-menu-icon-padding;
 			
@@ -114,7 +114,7 @@
 			text-overflow: ellipsis;
 		}
 
-		.be-nosidebar-left & {
+		.sk-nosidebar-left & {
 			padding-left: map-get($spacers, 2);
 		}
 
@@ -124,7 +124,7 @@
 	}
 	
 	// Top Menu Content
-	//.be-top-menu > & {
+	//.sk-top-menu > & {
 	//	.top-menu-content {
 	//		flex-wrap: nowrap;
 	//		white-space: nowrap;
@@ -135,8 +135,8 @@
 	//	}
 	//}
 	
-	//.be-wrapper:not(.be-top-menu) > & {
-	//	.be-toggle-top-header-menu,
+	//.sk-wrapper:not(.sk-top-menu) > & {
+	//	.sk-toggle-top-header-menu,
 	//	.top-menu-content {
 	//		display: none !important;
 	//	}
@@ -188,8 +188,8 @@
 				margin: 0;
 				padding: map-get($spacers, 3) 0;
 				
-				.be-nosidebar-left &,
-				.be-top-menu & {
+				.sk-nosidebar-left &,
+				.sk-top-menu & {
 					width: 100%;
 					-webkit-box-orient: vertical;
 					-webkit-box-direction: normal;
@@ -249,7 +249,7 @@
 						&.show {			
 							.#{$icons-class}-caret-down
 							{
-								color: darken($skk-app-theme, 27%);
+								color: darken($sk-app-theme, 27%);
 							}
 						}
 
@@ -263,8 +263,8 @@
 							border-left: 0;
 							border-radius: 0;
 							
-							.be-nosidebar-left &,
-							.be-top-menu &, {
+							.sk-nosidebar-left &,
+							.sk-top-menu &, {
 								position: static;
 								float: none;
 								width: auto;
@@ -291,7 +291,7 @@
 							}
 					
 							&.active > a {
-								color: $skk-app-theme;
+								color: $sk-app-theme;
 							}
 						}
 					}
@@ -350,7 +350,7 @@
 	}
 	
 	//Right navbar
-	.be-right-navbar {
+	.sk-right-navbar {
 		padding-right: map-get($spacers, 4);
 		display: flex;
 		-webkit-box-flex: 0;
@@ -362,7 +362,7 @@
 			background-color: transparent;
 		}
 		
-		.be-nosidebar-left & {
+		.sk-nosidebar-left & {
 			width: auto;
 			-webkit-box-ordinal-group: 3;
 			-ms-flex-order: 2;
@@ -375,7 +375,7 @@
 	}
 
 	//Toggle button for right sidebar
-	.be-toggle-right-sidebar {
+	.sk-toggle-right-sidebar {
 		@include media_size("phone") {
 			margin-right: 0;
 			padding-left: map-get($spacers, 1);
@@ -384,7 +384,7 @@
 	}
 
 	//Toggle button for general navbar
-	.be-toggle-top-header-menu {	
+	.sk-toggle-top-header-menu {	
 		display: none;
 		background-color: $white;
 		padding: 16px 10px;
@@ -417,11 +417,11 @@
 	}
 	
 	//Offcanvas Navbar
-	.be-offcanvas-menu & {		
-		.be-navbar-header {
+	.sk-offcanvas-menu & {		
+		.sk-navbar-header {
 			width: $left-sidebar-width;
 			
-			.be-toggle-left-sidebar {
+			.sk-toggle-left-sidebar {
 				padding-left: map-get($spacers, 4);
 				
 				.icon
@@ -444,7 +444,7 @@
 			}
 		}
 		
-		.be-toggle-left-sidebar {
+		.sk-toggle-left-sidebar {
 			text-align: center;
 			
 			.icon {
@@ -457,12 +457,12 @@
 	}
 
 	//Color version
-	.be-color-header & {
+	.sk-color-header & {
 		background-color: $top-header-phone-bg;
 		border-bottom-color: $top-header-phone-bg;
 
-		.be-navbar-header {
-			> .be-toggle-left-sidebar {
+		.sk-navbar-header {
+			> .sk-toggle-left-sidebar {
 				color: $white;
 					
 				> .icon {
@@ -481,7 +481,7 @@
 			color: $white;
 		}
 
-		.be-right-navbar {
+		.sk-right-navbar {
 			.navbar-nav {
 				> li {
 					> a {
@@ -490,7 +490,7 @@
 				}
 			}
 
-			.be-icons-nav {
+			.sk-icons-nav {
 				> li.dropdown {
 					> a {
 						.icon {
@@ -511,8 +511,8 @@
 	}
 }
 
-.be-icons-nav,
-.be-user-nav {
+.sk-icons-nav,
+.sk-user-nav {
 	> li.dropdown {
 		> a {
 			&:after {
@@ -560,8 +560,8 @@
 	}
 }
 
-.be-icons-nav.menu-end,
-.be-user-nav.menu-end {
+.sk-icons-nav.menu-end,
+.sk-user-nav.menu-end {
 	> .dropdown > .dropdown-menu {
 		left: auto;
 		right: map-get($spacers, 4);
@@ -573,7 +573,7 @@
 		
 		@include media_size("desktop-min")
 		{
-			.be-mega-menu & {
+			.sk-mega-menu & {
 				left: 50%;
 				transform: translateX(-50%);
 			}

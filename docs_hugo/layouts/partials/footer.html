@@ -1,8 +1,13 @@
-<footer class="skk-footer py-2 d-print-none" style="--bs-text-opacity:.75;">
+{{- define "footer" -}}
+{{- $show_footer := .Page.Params.show_footer | default true -}}
+{{- if $show_footer -}}
+<footer class="sk-footer py-2 d-print-none" style="--bs-text-opacity:.75;">
    <div class="container p-3 p-md-4">{{- with .Site.Params.social_links }}
-      <ul class="skk-footer-links">{{ range . }}
+      <ul class="sk-footer-links">{{ range . }}
          <li><a href="{{ .href }}"{{ with .notarget }}{{ else }} target="_blank" rel="{{ with .rel }}{{ . }}{{ else }}noopener{{ end }}"{{ end }}>{{ .title }}</a></li>{{ end }}
       </ul>{{ end }}
       {{- partialCached "footer-copyright" . }}
    </div>
 </footer>
+{{- end -}}
+{{- end -}}

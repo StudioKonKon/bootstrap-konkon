@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand fixed-top be-top-header">
+<nav class="navbar navbar-expand fixed-top sk-top-header">
 	<div class="container-fluid">
 	
 		<!-- Menu and Logo Area //-->
-		<div class="be-navbar-header">
-			<a class="nav-link be-toggle-left-sidebar"
+		<div class="sk-navbar-header">
+			<a class="nav-link sidebar-toggle"
 			   href="#"
-			   id="left-sidebar-toggle"
+			   id="sidebar-toggle"
             data-bs-toggle="sidebar"
             data-bs-target="#left-sidebar">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M5.5 36.8v-3.95h37v3.95Zm0-10.8v-4h37v4Zm0-10.85V11.2h37v3.95Z" fill="currentColor" /></svg>
@@ -17,7 +17,7 @@
       {{ with $.Page.Params }}
          {{ with .navbar_type }}
             {{ if eq . "top-menu" }}
-<div class="navbar-collapse collapse" id="be-navbar-collapse">
+<div class="navbar-collapse collapse" id="sk-navbar-collapse">
    <div class="navbar-nav">
       <div class="nav-item"><a class="nav-link" href="#">Home</a></div>
       <div class="nav-item dropdown">
@@ -45,7 +45,7 @@
       {{ end }}
 	
 		<!-- Navbars //-->
-		<div class="be-right-navbar">
+		<div class="sk-right-navbar">
 {{ partial "app/icons-nav" . -}}
 {{ partial "app/user-nav" . -}}
 		</div>

@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /*!
- * Studio KonKon v1.7.1-beta (https://studiokonkon.com/)
- * Copyright 2018-2023 Studio KonKon
+ * Studio KonKon v1.10.122-beta (https://studiokonkon.com/)
+ * Copyright 2011-2023 Studio KonKon
+ * Licensed under MIT (https://github.com/StudioKonKon/bootstrap-konkon/blob/master/LICENSE)
  */
 :root,
 [data-bs-theme=light] {
@@ -4800,9 +4801,9 @@ textarea.form-control-lg {
   --bs-breadcrumb-margin-bottom: 1rem;
   --bs-breadcrumb-bg: ;
   --bs-breadcrumb-border-radius: 0.2rem;
-  --bs-breadcrumb-divider-color: rgba(52, 58, 64, 0.75);
+  --bs-breadcrumb-divider-color: var(--bs-tertiary-color);
   --bs-breadcrumb-item-padding-x: 0.5rem;
-  --bs-breadcrumb-item-active-color: #6c757d;
+  --bs-breadcrumb-item-active-color: var(--bs-secondary-color);
   display: flex;
   flex-wrap: wrap;
   padding: var(--bs-breadcrumb-padding-y) var(--bs-breadcrumb-padding-x);

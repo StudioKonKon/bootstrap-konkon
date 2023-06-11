@@ -1,16 +1,16 @@
 /* Icons nav */
 
-.be-icons-nav {
+.sk-icons-nav {
 	@media print {
 		display: none;
 	}
 	
-	.be-top-header & {
+	.sk-top-header & {
 		margin-right: map-get($spacers, 3);
 	}
 	
 	@include media_size("tablet") {
-		.be-top-header & {
+		.sk-top-header & {
 			margin-right: 10px;
 		}
 	}
@@ -52,7 +52,7 @@
 				box-shadow: none;
 				border-width: 0;
 
-				.be-top-header & {
+				.sk-top-header & {
 					border-radius: 0;
 					margin-top: 1px;
 				}

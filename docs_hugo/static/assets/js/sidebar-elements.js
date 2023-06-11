@@ -74,7 +74,7 @@
       // to prevent sidebar from closing but also prevent
       // toggles from responing twice (i.e: immediate open/close)
       if(this.classes.component == "") {
-         this.classes.component = "skk-sidebar-" + uid();
+         this.classes.component = "sk-sidebar-" + uid();
       }
 
       this.sidebar.classList.add(this.classes.component);

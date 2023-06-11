@@ -1,18 +1,18 @@
 /* progress-widget */
-.be-left-sidebar {
+.sidebar {
 	.progress-widget {
 		padding: map-get($spacers, 4);
 		cursor: pointer;
       margin-top: 0;
 		
 		.progress-data {
-			color: $left-sidebar-color;
+			color: $sidebar-color;
 		}
 
 		.progress-value {
 			float: right;
 			
-			.be-collapsible-sidebar-collapsed & {
+			.sidebar-collapsible-collapsed & {
 				float: none;
 				display: block;
 				text-align: center;
@@ -21,25 +21,25 @@
 		}
 		
 		.name {
-			.be-collapsible-sidebar-collapsed & {
+			.sidebar-collapsible-collapsed & {
 				display: none;
 			}
 		}
 		
 		.progress {
-         --#{$prefix}progress-bar-bg: #{$left-sidebar-progress-bg};
+         --#{$prefix}progress-bar-bg: #{$sidebar-progress-bg};
 			margin: map-get($spacers, 2) 0 0;
 			height: .615rem;
 			border-radius: $border-radius-sm;
 			
-			.be-collapsible-sidebar-collapsed & {
+			.sidebar-collapsible-collapsed & {
 				height: .385rem;
 				margin-top: .538rem;
 			}
 		}
 
 		&:hover {
-			background-color: $left-sidebar-progress-hover-bg;
+			background-color: $sidebar-progress-hover-bg;
 		}
 	}
 }

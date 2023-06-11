@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------
 	[Main wrapper]
 */
-.be-wrapper {
+.sk-wrapper {
 	min-height: 100%;
 	padding-top: $top-header-height + $top-header-offset;
 
@@ -11,13 +11,13 @@
 }
 
 @media print {
-	.be-wrapper {
+	.sk-wrapper {
 		padding-top: 0;
 	}
 }
 
 @include media_size("non-responsive") {
-	.be-wrapper.be-boxed-layout {
+	.sk-wrapper.sk-boxed-layout {
 		max-width: 1200px;
 		position: relative;
 		margin: 0 auto;
@@ -32,25 +32,25 @@
 }
 
 // Experimental
-.be-wrapper.be-footer-flex {
+.sk-wrapper.sk-footer-flex {
    min-height: 100%;
    display: flex;
    flex-direction: column !important;
 
-   > .be-content {
+   > .sk-content {
       width: 100%;
       margin-bottom: auto !important;
       align-self: flex-start !important;
    }
    
-   > .skk-footer {
+   > .sk-footer {
       width: 100%;
       align-self: flex-start !important;
    }
 }
 
-.be-wrapper > footer,
-.skk-footer {
+.sk-wrapper > footer,
+.sk-footer {
    width: 100%;
    padding: 0;
    color: rgba(var(--#{$prefix}secondary-rgb), .75);
@@ -58,7 +58,7 @@
    border-top: 0.05rem solid var(--#{$prefix}border-color-translucent);
 }
 
-.skk-footer {
+.sk-footer {
    font-size: 0.875rem;
    text-align: center;
    

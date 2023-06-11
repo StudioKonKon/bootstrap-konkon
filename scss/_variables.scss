@@ -343,8 +343,8 @@ $list-group-disabled-bg:				var(--#{$prefix}tertiary-bg);
 $breadcrumb-padding-y:			map-get($spacers, 1);
 $breadcrumb-padding-x:			map-get($spacers, 1);
 $breadcrumb-item-padding-x:	map-get($spacers, 2);
-$breadcrumb-divider-color:		$body-secondary-color;
-$breadcrumb-active-color:		$gray-600;
+$breadcrumb-divider-color:		var(--#{$prefix}tertiary-color);
+$breadcrumb-active-color:		var(--#{$prefix}secondary-color);
 $breadcrumb-border-radius:		$border-radius-sm;
 
 

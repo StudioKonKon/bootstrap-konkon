@@ -50,8 +50,8 @@
 	}
 }
 
-.be-content-sidebar {
-	margin-left: $left-sidebar-width;
+.sk-offcanvas-menu sk-offcanvas-menu sk-fixed-sidebar-fixed-sidebar-content-sidebar {
+	margin-left: $sidebar-width;
 
 	@include media_size("phone") {
 		margin-left: 0;
@@ -61,47 +61,46 @@
 		margin-left: 0;
 	}
 
-	.be-nosidebar-left & {
+	.sk-offcanvas-menu sk-offcanvas-menu sk-fixed-sidebar-fixed-sidebar-nosidebar-left & {
 		margin-left: 0;
 	}
 	
-	.be-collapsible-sidebar-collapsed & {
-		margin-left: $left-sidebar-width-collapsed;
+	.sk-collapsible-sidebar-collapsed & {
+		margin-left: $sidebar-width-collapsed;
 		
 		@include media_size("phone") {
 			margin-left: 0;
 		}
 	}
 	
-	.be-offcanvas-menu & {
+	.sk-offcanvas-menu & {
 		margin-left: 0;
 	}
 	
 	@include media_size("non-responsive") {
-		.be-offcanvas-menu-sm & {
-			margin-left: $left-sidebar-width;
+		.sk-offcanvas-menu-sm & {
+			margin-left: $sidebar-width;
 		}
 	}
 	
 	@include media_size("non-responsive") {
-		.be-boxed-layout.be-fixed-sidebar & {
-			margin-left: $left-sidebar-width;
+		.sk-boxed-layout.sk-fixed-sidebar & {
+			margin-left: $sidebar-width;
 			min-height: 100vh;
 		}
 	}
 }
 
-.be-content {
+.sk-content {
 	position: relative;
 	left: 0;
-	min-height: 100%;
 	
-	.be-mega-menu & {
+	.sk-mega-menu & {
 		margin-left: auto;
 	}
 	
 	@include media_size("non-responsive") {
-		.be-boxed-layout &
+		.sk-boxed-layout &
 		{
 			margin-left: 0;
 			overflow: hidden;
@@ -142,7 +141,7 @@
 		}
 	}
 
-	.be-no-padding & {
+	.sk-no-padding & {
 		padding: 0;
 	}
 }

@@ -7,9 +7,9 @@ $user-timeline-border-width:      .125rem !default;
 $user-timeline-padding-left:      map-get($spacers, 3) !default;
 $user-timeline-padding-bottom:    map-get($spacers, 4) !default;
 $user-timeline-line-height:       1.5 !default;
-$user-timeline-date-color:        $gray-500 !default;
+$user-timeline-date-color:        var(--#{$prefix}tertiary-color) !default;
 $user-timeline-date-font-size:    $font-size-sm !default;
-$user-timeline-dot-color:         var(--#{$prefix}body-bg);
+$user-timeline-dot-color:         var(--#{$prefix}body-bg) !default;
 
 .user-timeline {
 	position: relative;

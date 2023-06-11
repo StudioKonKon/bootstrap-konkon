@@ -1,7 +1,5 @@
-/*!
- * Studio KonKon v1.7.1-beta (https://studiokonkon.com/)
- * Copyright 2018-2023 Studio KonKon
- */
+@import "mixins/banner";
+@include bsBanner("");
 
 // Required Imports
 @import "bootstrap-required";

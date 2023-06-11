@@ -1,7 +1,7 @@
 $bs-prefix: bs- !default;
 
 // Studio KonKon App Variables
-$skk-app-theme: $primary;
+$sk-app-theme: $primary;
 
 // Brand Logo
 $top-header-logo-width:    10.923rem;
@@ -59,33 +59,33 @@ $user-dropdown-width:         350px;
 $user-icon-size:              $top-header-nav-icon-size + $top-header-nav-icon-padding;
 
 // Left Sidebar
-$left-sidebar-theme:                rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), 1);
-$left-sidebar-bg:                   rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), 1);
-$left-sidebar-hover-color:          rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), 1);
-$left-sidebar-level-bg:             rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), .1);
-$left-sidebar-border-color:         var(--#{$sk-variable-prefix}sidebar-border);
+$sidebar-theme:                rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), 1);
+$sidebar-bg:                   rgba(var(--#{$sk-variable-prefix}sidebar-bg-rgb), 1);
+$sidebar-hover-color:          rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), 1);
+$sidebar-level-bg:             rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), .1);
+$sidebar-border-color:         var(--#{$sk-variable-prefix}sidebar-border);
 
-$left-sidebar-divider-bg:           var(--#{$sk-variable-prefix}sidebar-divider-bg);
-$left-sidebar-divider-color:        var(--#{$sk-variable-prefix}sidebar-divider-color);
+$sidebar-divider-bg:           var(--#{$sk-variable-prefix}sidebar-divider-bg);
+$sidebar-divider-color:        var(--#{$sk-variable-prefix}sidebar-divider-color);
 
-$left-sidebar-width:                17.692rem;
-$left-sidebar-width-collapsed:      4.615rem;
-$left-sidebar-color:                rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), .9);
-$left-sidebar-logo-bg:              darken($dark, 1.5%);
-$left-sidebar-icon-size:            1.462rem;
+$sidebar-width:                17.692rem;
+$sidebar-width-collapsed:      4.615rem;
+$sidebar-color:                rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), .9);
+$sidebar-logo-bg:              darken($dark, 1.5%);
+$sidebar-icon-size:            1.462rem;
 
-$left-sidebar-main-level-font-size: 1.077rem;
-$left-sidebar-main-level-padding:   map-get($spacers, 4);
-$left-sidebar-main-level-height:    $spacer * 2.923;
+$sidebar-main-level-font-size: 1.077rem;
+$sidebar-main-level-padding:   map-get($spacers, 4);
+$sidebar-main-level-height:    $spacer * 2.923;
 
-$left-sidebar-sub-level-color:      rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), 1);
-$left-sidebar-sub-level-bg:         rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), .1);
-$left-sidebar-sub-level-hover:      rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), .1);
-$left-sidebar-sub-level-font-size:  1rem;
-$left-sidebar-sub-level-padding:    .615rem map-get($spacers, 4);
+$sidebar-sub-level-color:      rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), 1);
+$sidebar-sub-level-bg:         rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), .1);
+$sidebar-sub-level-hover:      rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), .1);
+$sidebar-sub-level-font-size:  1rem;
+$sidebar-sub-level-padding:    .615rem map-get($spacers, 4);
 
-$left-sidebar-progress-bg:          rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), 1);
-$left-sidebar-progress-hover-bg:    var(--#{$prefix}tertiary-bg);
+$sidebar-progress-bg:          rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), 1);
+$sidebar-progress-hover-bg:    var(--#{$prefix}tertiary-bg);
 
 // Right Sidebar
 $right-sidebar-width:               22.308rem;

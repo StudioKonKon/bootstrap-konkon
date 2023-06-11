@@ -35,43 +35,43 @@ $enable-btn-social-colors:		false !default;
 $custom-theme-colors: () !default;
 $social-colors: () !default;
 
-$skk-konkon:		    lighten($konkon-color, 6.1%);
-$card-konkon: 		    $skk-konkon;
-$dropdown-konkon:	    $skk-konkon;
-$modal-konkon:		    $skk-konkon;
+$sk-konkon:		    lighten($konkon-color, 6.1%);
+$card-konkon: 		    $sk-konkon;
+$dropdown-konkon:	    $sk-konkon;
+$modal-konkon:		    $sk-konkon;
 
 // Maps
 $dropdown-colors: map-remove($theme-colors, "light", "secondary", "dark") !default;
 
 
 // Maps to remove from this code
-$skk-colors:		() !default;
+$sk-colors:		() !default;
 $modal-colors:		() !default;
 
 $body-bg-light:	#eef0f2;
 
 // Theme Colours
-$skk-primary:		#5f99f5 !default;
-$skk-secondary:	#d9d9d9 !default;
-$skk-success:		#37b358 !default;
-$skk-info:			#6ba4ff !default;
-$skk-warning:		#f6c163 !default;
-$skk-danger:		#eb6357 !default;
-$skk-light:			$light !default;
-$skk-dark:			#3f4850 !default;
+$sk-primary:		#5f99f5 !default;
+$sk-secondary:	#d9d9d9 !default;
+$sk-success:		#37b358 !default;
+$sk-info:			#6ba4ff !default;
+$sk-warning:		#f6c163 !default;
+$sk-danger:		#eb6357 !default;
+$sk-light:			$light !default;
+$sk-dark:			#3f4850 !default;
 
-$skk-colors: map-merge(
+$sk-colors: map-merge(
 	(
-		"primary":		$skk-primary,
-		"secondary":	$skk-secondary,
-		"success":		$skk-success,
-		"info":			$skk-info,
-		"warning":		$skk-warning,
-		"danger":		$skk-danger,
-		"light":		$skk-light,
-		"dark":			$skk-dark
+		"primary":		$sk-primary,
+		"secondary":	$sk-secondary,
+		"success":		$sk-success,
+		"info":			$sk-info,
+		"warning":		$sk-warning,
+		"danger":		$sk-danger,
+		"light":		$sk-light,
+		"dark":			$sk-dark
 	),
-	$skk-colors
+	$sk-colors
 );
 
 
@@ -172,21 +172,21 @@ $accordion-icon-white:		url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 
 
 // Navs
-$nav-skk-bg:                var(--#{$prefix}body-bg);
+$nav-sk-bg:                var(--#{$prefix}body-bg);
 
-$nav-skk-link-py:			    .846rem;
-$nav-skk-link-px:			    1.538rem;
-$nav-skk-link-color:        var(--#{$prefix}body-color);
+$nav-sk-link-py:			    .846rem;
+$nav-sk-link-px:			    1.538rem;
+$nav-sk-link-color:        var(--#{$prefix}body-color);
 $nav-link-disabled-opacity: .8;
 
-$nav-skk-active-color:      $nav-skk-link-color;
-$nav-skk-hover-color:       var(--#{$prefix}link-color);
+$nav-sk-active-color:      $nav-sk-link-color;
+$nav-sk-hover-color:       var(--#{$prefix}link-color);
 
-$nav-skk-content-py:		    map-get($spacers, 4);
-$nav-skk-content-px:		    $nav-skk-content-py;
+$nav-sk-content-py:		    map-get($spacers, 4);
+$nav-sk-content-px:		    $nav-sk-content-py;
 
-$nav-skk-border-color:      $nav-skk-hover-color;
-$nav-skk-border:            $nav-tabs-border-width solid $nav-skk-border-color;
+$nav-sk-border-color:      $nav-sk-hover-color;
+$nav-sk-border:            $nav-tabs-border-width solid $nav-sk-border-color;
 
 
 // Toast
@@ -211,12 +211,12 @@ $dropdown-theme-divider-opacity:	.15;
 $dropdown-theme-disabled-opacity:	.5;
 
 // modal colours
-$modal-primary:		$skk-primary !default;
-$modal-success:		$skk-success !default;
-$modal-info:		$skk-info !default;
-$modal-warning:		$skk-warning !default;
-$modal-danger:		$skk-danger !default;
-$modal-dark:		$skk-dark !default;
+$modal-primary:		$sk-primary !default;
+$modal-success:		$sk-success !default;
+$modal-info:		$sk-info !default;
+$modal-warning:		$sk-warning !default;
+$modal-danger:		$sk-danger !default;
+$modal-dark:		$sk-dark !default;
 
 $modal-colors: map-merge(
 	(

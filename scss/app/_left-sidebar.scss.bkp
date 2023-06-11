@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------
 	[Left sidebar]
 */
-.be-left-sidebar {
+.sk-left-sidebar {
 	background-color: $left-sidebar-bg;
 	width: $left-sidebar-width;
 	left: 0;
@@ -13,12 +13,12 @@
 	}
 	
 	@include media_size("phone") {
-		.be-left-sidebar-disabled & {
+		.sk-left-sidebar-disabled & {
 			display: none;
 		}
 	}
 	
-	.be-collapsible-sidebar-collapsed & {
+	.sk-collapsible-sidebar-collapsed & {
 		width: $left-sidebar-width-collapsed;
 		
 		@include media_size("phone") {
@@ -57,7 +57,7 @@
 		right: 0;
 		padding-top: .615rem;
 		
-		.be-collapsible-sidebar-collapsed & {
+		.sk-collapsible-sidebar-collapsed & {
 			padding-top: map-get($spacers, 4);
 		}
 	}
@@ -137,7 +137,7 @@
 			}
 				
 			@include media_size("non-responsive") {
-				.be-collapsible-sidebar-collapsed & {
+				.sk-collapsible-sidebar-collapsed & {
 					padding: map-get($spacers, 5) 0 0 !important;
 					height: 0;
 					overflow: hidden;
@@ -164,7 +164,7 @@
 			    overflow: hidden;
 			    white-space: nowrap;
 				
-				.be-collapsible-sidebar-collapsed & {
+				.sk-collapsible-sidebar-collapsed & {
 					text-overflow: clip;
 				}
 
@@ -182,7 +182,7 @@
 				}
 				
 				@include media_size("non-responsive") {
-					.be-collapsible-sidebar-collapsed & span {
+					.sk-collapsible-sidebar-collapsed & span {
 						display: none;
 					}
 				}
@@ -206,13 +206,13 @@
 				border-bottom: 1px solid $left-sidebar-border-color;
 			}
 			
-			.be-collapsible-sidebar & > ul {
+			.sk-collapsible-sidebar & > ul {
 				.nav-items .content > ul {
 					display: block;
 				}
 			}
 			
-			.be-collapsible-sidebar-collapsed & > ul {				
+			.sk-collapsible-sidebar-collapsed & > ul {				
 				@include media_size("non-responsive") {
 					border-top-width: 0;
 					border-bottom-width: 0;
@@ -231,13 +231,13 @@
 					display: none;
 				}
 				
-				.be-collapsible-sidebar & {
+				.sk-collapsible-sidebar & {
 					.content > ul {
 						padding-left: 0;
 					}
 				}
 				
-				.be-collapsible-sidebar-collapsed & {
+				.sk-collapsible-sidebar-collapsed & {
 					@include media_size("non-responsive") {
 						background-color: $left-sidebar-bg;
 					
@@ -266,7 +266,7 @@
 								display: table-row;
 								height: 100%;
 								
-								.be-scroller {
+								.sk-scroller {
 									position: relative;
 									height: 100%;
 									
@@ -366,7 +366,7 @@
 			}
 			
 			@include media_size("non-responsive") {
-				.be-collapsible-sidebar-collapsed & {
+				.sk-collapsible-sidebar-collapsed & {
 					&.open {
 						> ul {
 							display: none;
@@ -416,7 +416,7 @@
 				}
 				
 				@include media_size("non-responsive") {
-					.be-collapsible-sidebar-collapsed & > a:after {
+					.sk-collapsible-sidebar-collapsed & > a:after {
 						display: none;
 					}
 				}
@@ -440,7 +440,7 @@
 		
 		
 		@include media_size("non-responsive") {
-			.be-collapsible-sidebar-collapsed & {
+			.sk-collapsible-sidebar-collapsed & {
 				.sub-menu.visible li.parent > a:after {
 					display: block;
 				}
@@ -449,7 +449,7 @@
 	}
 	
 	@include media_size("non-responsive") {
-		.be-boxed-layout & {
+		.sk-boxed-layout & {
 			-webkit-box-flex: 0;
 			-ms-flex: 0 0 230px;
 			flex: 0 0 230px;
@@ -460,7 +460,7 @@
 			}
 		}
 		
-		.be-boxed-layout.be-fixed-sidebar & {
+		.sk-boxed-layout.sk-fixed-sidebar & {
 			left: auto;
 		}
 	}
@@ -533,7 +533,7 @@
 		}
 	}
 
-	.be-fixed-sidebar & {
+	.sk-fixed-sidebar & {
 		height: 100%;
 		margin-top: $top-header-height + 1px;
 		padding-bottom: $top-header-height + 1px;
@@ -563,7 +563,7 @@
 		}
 	}
 	
-	.be-offcanvas-menu & {
+	.sk-offcanvas-menu & {
 		max-width: 290px;
 		position: fixed;
 		height: 100%;
@@ -593,18 +593,18 @@
 		}
 	}
 	
-	.be-fixed-sidebar.be-offcanvas-menu & {
+	.sk-fixed-sidebar.sk-offcanvas-menu & {
 		margin-top: $top-header-height + 1px;
 		padding-bottom: $top-header-height + 1px;
 	}
 	
-	.be-animate & {
+	.sk-animate & {
 		-webkit-transition: all .35s ease;
 		transition: all .35s ease;
 	}
 	
 	@include media_size("phone") {
-		.be-offcanvas-menu & {
+		.sk-offcanvas-menu & {
 			.left-sidebar-wrapper {
 				display: table;
 			}
@@ -615,7 +615,7 @@
 			}
 		}
 		
-		.be-fixed-sidebar.be-offcanvas-menu & {
+		.sk-fixed-sidebar.sk-offcanvas-menu & {
 			.left-sidebar-content {
 				position: absolute;
 			}
@@ -623,19 +623,19 @@
 	}
 	
 	@include media_size("phone") {
-		.be-offcanvas-menu & {
+		.sk-offcanvas-menu & {
 			.progress-widget {
 				display: block;
 			}
 			
-			.be-navbar-header {
+			.sk-navbar-header {
 				display: block;
 			}
 		}
 	}
 	
-	.be-offcanvas-menu & {
-		.be-navbar-header .navbar-brand {
+	.sk-offcanvas-menu & {
+		.sk-navbar-header .navbar-brand {
 			padding-left: 0;
 			background-position: 0 center;
 		}
@@ -661,7 +661,7 @@
 	
 @include media_size("phone") {
 	body.open-left-sidebar {
-		.be-wrapper {
+		.sk-wrapper {
 			overflow: hidden;
 		}
 	}
@@ -669,7 +669,7 @@
 
 
 	
-.be-left-sidebar {
+.sk-left-sidebar {
 	&.open {
 		left: 0;
 		

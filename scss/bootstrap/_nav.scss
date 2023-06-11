@@ -5,27 +5,27 @@
 .tab-container {
 	.nav-tabs {
 		@include border-top-radius($nav-tabs-border-radius);
-		background-color: $nav-skk-bg;
+		background-color: $nav-sk-bg;
 		border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 	}
 
 	.nav-link {
-		padding: $nav-skk-link-py $nav-skk-link-px;
+		padding: $nav-sk-link-py $nav-sk-link-px;
 		margin-right: 0;
 		text-align: center;
 		@include border-radius(0);
-		color: $nav-skk-link-color;
+		color: $nav-sk-link-color;
 		border-width: 0;
 
 		.icon {
-			font-size: $nav-skk-link-px;
+			font-size: $nav-sk-link-px;
 			vertical-align: middle;
 			line-height: 1.308rem;
 		}
 
 		&:hover {
 			background: 0 0;
-			color: $nav-skk-hover-color;
+			color: $nav-sk-hover-color;
 		}
 
 		&:active {
@@ -34,12 +34,12 @@
 
 		&.active {
 			background: 0 0;
-			border-bottom: $nav-skk-border;
-         color: $nav-skk-active-color;
+			border-bottom: $nav-sk-border;
+         color: $nav-sk-active-color;
 			
 			&:focus,
 			&:hover {
-				color: $nav-skk-active-color;
+				color: $nav-sk-active-color;
 			}
 		}
 		
@@ -53,7 +53,7 @@
 
 .tab-container .tab-content {
 	background: $card-bg;
-	padding: $nav-skk-content-py $nav-skk-content-px;
+	padding: $nav-sk-content-py $nav-sk-content-px;
 	@include border-bottom-radius($nav-tabs-border-radius);
 	
 	:last-child {
@@ -92,7 +92,7 @@
 	
 	.nav-link {
 		border: $nav-tabs-border-width solid transparent;
-		padding: $nav-skk-link-py $nav-skk-link-px;
+		padding: $nav-sk-link-py $nav-sk-link-px;
 		
 		&:hover,
 		&:focus,
@@ -109,7 +109,7 @@
 	> .nav-item {
 		
 		.nav-link.active {
-			border-right: $nav-skk-border;
+			border-right: $nav-sk-border;
 		}
 	}
 }
@@ -121,7 +121,7 @@
 	> .nav-item {
 		
 		.nav-link.active {
-			border-left: $nav-skk-border;
+			border-left: $nav-sk-border;
 		}
 	}
 }

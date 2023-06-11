@@ -1,11 +1,11 @@
 /* apps */
 
-.be-apps {
+.sk-apps {
 	padding: 0 !important;
 	min-width: 350px;
 
 	// Apps Nav Content
-	.skk-anc {
+	.sk-anc {
 		height: 440px;
 		max-height: calc(100vh - #{$top-header-height} - #{$content-padding});
 		overflow-y: auto !important;
@@ -14,7 +14,7 @@
 	}
 
 	// Apps Nav Grid
-	.skk-ang {
+	.sk-ang {
 		display: grid;
 		grid-gap: 0.769rem;
 		grid-template-columns: 6rem 6rem 6rem;
@@ -26,7 +26,7 @@
 	}
 
 	// Apps Nav Grid Item
-	.skk-ani {
+	.sk-ani {
 		padding: 0;
 		margin: 0;
 		text-align: center;
@@ -85,13 +85,13 @@
 	}
 
 	// Apps Nav Seperator
-	.skk-ans {
+	.sk-ans {
 		margin: 0 .796rem;
 		border-bottom: 1px solid var(--#{$prefix}border-color);
 	}
 
 	// Apps Nav Button
-	.skk-anb {
+	.sk-anb {
 		margin: 1rem 0 1.25rem;
 		text-align: center;
 
@@ -107,14 +107,14 @@
 		bottom: 0;
 		right: 0;
 
-		.skk-anc {
+		.sk-anc {
 			height: 100%;
 			max-height: initial !important;
 		}
 	}
 
 	@media (max-width: 350.98px) {
-		.skk-ang {
+		.sk-ang {
 			grid-template-columns: 6rem 6rem;
 		}
 	}

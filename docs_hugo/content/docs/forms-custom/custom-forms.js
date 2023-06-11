@@ -5,7 +5,7 @@
 		inputFile = [];
 	
 	document
-		.querySelectorAll(".be-content .main-content form")
+		.querySelectorAll(".sk-content .main-content form")
 		.forEach(function(forms) {
 			forms.setAttribute("action", location.href + "#");
 			forms.addEventListener("submit", function(e) {
@@ -15,14 +15,14 @@
 		});
 	
 	document
-		.querySelectorAll(".be-content .main-content a.dropdown-item")
+		.querySelectorAll(".sk-content .main-content a.dropdown-item")
 		.forEach(function(links) {
 			links.addEventListener("click", function (event) {
 				event.preventDefault();
 			});
 		});
 	
-	forms = document.querySelectorAll(".be-content .needs-validation");
+	forms = document.querySelectorAll(".sk-content .needs-validation");
 
 	Array.prototype.slice.call(forms)
 		.forEach(function (form) {
