@@ -1131,6 +1131,7 @@ const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
 const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY}`;
 const EVENT_CLICK_MENU = `click.menu${EVENT_KEY}`;
 const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="sidebar"]';
+const DATA_TYPE = 'data-sk-type';
 const Default = {
   type: "offcanvas",
   animate: true,
@@ -1157,9 +1158,15 @@ class Sidebar extends BaseComponent {
     if (this._config.animate) {
       document.body.classList.add(CLASS_NAME_ANIMATE);
     }
+
+    // Get Sidebar type
+    const attr_type = this._element.getAttribute(DATA_TYPE);
+    if (attr_type && attr_type != "") {
+      this.type = attr_type;
+    }
   }
 
-  // Getters
+  // Static Getters and Setters
   static get Default() {
     return Default;
   }
@@ -1173,7 +1180,17 @@ class Sidebar extends BaseComponent {
     return VERSION;
   }
 
-  // Public
+  // Public Getters and Setters
+  get type() {
+    return this._config.type;
+  }
+  set type(value) {
+    value = typeof value === "string" && value.length > 0 ? value : Default.type;
+    this._config.type = value;
+    this._element.setAttribute(DATA_TYPE, value);
+  }
+
+  // Public   
   toggle(relatedTarget) {
     return this._isShown ? this.hide() : this.show(relatedTarget);
   }

@@ -261,7 +261,7 @@
    }
 }
 
-.sidebar-type-fixed .sidebar,
+.sidebar[data-#{$sk-variable-prefix}type="fixed"],
 .sk-offcanvas-menu .sidebar {
    max-width: 290px;
    position: fixed;
@@ -288,7 +288,7 @@
  */
 
 @include media-breakpoint-up(md) {
-   .sidebar-type-fixed .sidebar {
+   .sidebar[data-#{$sk-variable-prefix}type="fixed"] {
       position: sticky;
       top: var(--#{$sk-variable-prefix}sidebar-offset);
       height: 100vh;

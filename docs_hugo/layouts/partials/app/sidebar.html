@@ -1,4 +1,5 @@
-<div class="sidebar" id="left-sidebar">
+{{- $sidebar_type := .Page.Params.sidebar_type | default "" -}}
+<div class="sidebar" id="left-sidebar"{{ with $sidebar_type }} data-sk-type="{{ . }}"{{ end }}>
 	<div class="sidebar-wrapper">
 		<div class="sidebar-spacer">
 			<div class="sidebar-scroll">

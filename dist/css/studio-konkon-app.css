@@ -1026,7 +1026,7 @@
   display: block;
 }
 
-.sidebar-type-fixed .sidebar,
+.sidebar[data-sk-type=fixed],
 .sk-offcanvas-menu .sidebar {
   max-width: 290px;
   position: fixed;
@@ -1049,7 +1049,7 @@
  * #type: fixed
  */
 @media (min-width: 768px) {
-  .sidebar-type-fixed .sidebar {
+  .sidebar[data-sk-type=fixed] {
     position: -webkit-sticky;
     position: sticky;
     top: var(--sk-sidebar-offset);
