@@ -1,12 +1,12 @@
 {{- $sidebar_type := .Page.Params.sidebar_type | default "" -}}
-<div class="sidebar" id="left-sidebar"{{ with $sidebar_type }} data-sk-type="{{ . }}"{{ end }}>
+<div class="sidebar" id="left-sidebar"{{ with $sidebar_type }} data-sk-type="{{ . }}"{{ end }} aria-labelledby="sidebarAriaLabel">
 	<div class="sidebar-wrapper">
 		<div class="sidebar-spacer">
 			<div class="sidebar-scroll">
 				<div class="sidebar-content">
 					
 					<ul class="sidebar-elements">
-						<li class="divider pt-1">Studio KonKon: Theme 2020</li>
+						<li class="divider pt-1" id="sidebarAriaLabel">Studio KonKon: Theme 2020</li>
 						<li>
 							<a href="#">
                         <i class="icon zmdi zmdi-home"></i>

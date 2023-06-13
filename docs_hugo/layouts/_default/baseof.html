@@ -33,7 +33,7 @@
 <style>:root{--sk-theme-bg-rgb:254,102,158;}</style>
 	</head>
 	<body class="h-100{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
-<div class="sk-wrapper d-flex flex-column{{ with .Page.Params.left_sidebar_class }} {{ . }}{{ else }} sk-offcanvas-menu{{ end }}">
+<div class="sk-wrapper d-flex flex-column">
    {{ partial "app/top-navbar" . }}
    <div class="d-flex flex-fill align-items-stretch">
       {{ partial "app/sidebar" . }}

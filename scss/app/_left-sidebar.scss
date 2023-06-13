@@ -3,15 +3,18 @@
 */
 .sidebar {
 	background-color: $sidebar-bg;
-   height: 100%;
+   height: 100vh;
 	width: $sidebar-width;
+   max-width: 290px;
 	position: fixed;
    top: 0;
    bottom: 0;
-	left: 0;
-	border-right: 1px solid $sidebar-border-color;
-   margin-top: var(--#{$sk-variable-prefix}header-height);
-   padding-bottom: var(--#{$sk-variable-prefix}header-height);
+   left: -($sidebar-width + 10);
+	border-right: 0 solid $sidebar-border-color;
+   margin-top: var(--#{$sk-variable-prefix}sidebar-offset);
+   padding-bottom: var(--#{$sk-variable-prefix}sidebar-offset);
+   -webkit-box-shadow: 0 .462rem 1.385rem 0 rgba(0,0,0,.18);
+   box-shadow: 0 .462rem 1.385rem 0 rgba(0,0,0,.18);
    z-index: $zindex-navbar-fixed - 3;
 	
 	@media print {
@@ -259,22 +262,6 @@
          }
       }
    }
-}
-
-.sidebar[data-#{$sk-variable-prefix}type="fixed"],
-.sk-offcanvas-menu .sidebar {
-   max-width: 290px;
-   position: fixed;
-   height: 100vh;
-   top: 0;
-   left: -($sidebar-width + 10);
-   z-index: $zindex-navbar-fixed - 1;
-   background-color: $sidebar-bg;
-   -webkit-box-shadow: 0 .462rem 1.385rem 0 rgba(0,0,0,.18);
-   box-shadow: 0 .462rem 1.385rem 0 rgba(0,0,0,.18);
-   border-right-width: 0;
-   margin-top: var(--#{$sk-variable-prefix}sidebar-offset);
-   padding-bottom: var(--#{$sk-variable-prefix}sidebar-offset);
 }
 
 .sk-animate .sidebar {
