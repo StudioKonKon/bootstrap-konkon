@@ -6,6 +6,7 @@ $enable-dark-mode:  true !default;
 $enable-shadows:    true !default;
 
 // Theme colours
+$konkon:               #fe669e;
 $konkon-color:         #fe669e;
 $konkon-text:          #983d5f;
 $konkon-bg-subtle:     #ffe0ec;
@@ -160,9 +161,9 @@ $border-style:                solid !default;
 $border-color:                $gray-300 !default;
 $border-color-translucent:    rgba($black, .075) !default;
 
-$border-radius:			.25rem !default;
-$border-radius-sm:		.2rem !default;
-$border-radius-lg:		.3rem !default;
+$border-radius:			.375rem !default;
+$border-radius-sm:		.25rem !default;
+$border-radius-lg:		.5rem !default;
 $border-radius-pill:	50rem;
 
 $box-shadow:			0 .5rem 1rem rgba($black, .15);
@@ -407,10 +408,9 @@ $accordion-padding-y:					$spacer;
 $accordion-padding-x:					map-get($spacers, 1) + $spacer;
 $accordion-color:						   var(--#{$prefix}body-color);
 $accordion-bg:							   var(--#{$prefix}body-bg);
-$accordion-border-width:				$border-width;
+$accordion-border-width:            var(--#{$prefix}border-width) !default;
 $accordion-border-color:            var(--#{$prefix}border-color) !default;
 $accordion-border-radius:           var(--#{$prefix}border-radius) !default;
-$accordion-border-radius:				$border-radius;
 
 $accordion-body-padding-y:				map-get($spacers, 4);
 $accordion-body-padding-x:				map-get($spacers, 4);

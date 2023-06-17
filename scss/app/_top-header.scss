@@ -52,12 +52,16 @@
       align-items: center;
       
       > .nav-item {
-         margin: auto .15rem;
+         margin: 0 calc(var(--#{$sk-variable-prefix}icon-navbar-gx) * .5);
 
          &.dropdown {
             .dropdown-menu {
-               margin-top: .923rem;
+               margin-top: var(--#{$sk-variable-prefix}navbar-dropdown-top);
             }
+         }
+         
+         @include media-breakpoint-down(md) {
+            margin: 0 calc(var(--#{$sk-variable-prefix}icon-navbar-gx-sm) * .5);
          }
       }
    }

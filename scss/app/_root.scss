@@ -19,4 +19,7 @@
    --#{$sk-variable-prefix}msg-hover-color:       var(--#{$prefix}body-color);
    --#{$sk-variable-prefix}msg-hover-bg:          var(--#{$prefix}secondary-bg);
    --#{$sk-variable-prefix}user-check-color:      rgba(var(--#{$sk-variable-prefix}theme-bg-rgb), 1);
+   --#{$sk-variable-prefix}icon-navbar-gx:        .5rem;
+   --#{$sk-variable-prefix}icon-navbar-gx-sm:     .15rem;
+   --#{$sk-variable-prefix}navbar-dropdown-top:   .923rem;
 }

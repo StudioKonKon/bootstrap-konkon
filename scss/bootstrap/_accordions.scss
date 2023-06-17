@@ -19,13 +19,8 @@
 	}
 }
 
-.accordion {
-	.accordion-item {
-		
-		+ .accordion-item {
-			margin-top: $accordion-margin-y;
-		}
-	}
+.accordion-item + .accordion-item {
+   margin-top: $accordion-margin-y;
 }
 
 .accordion-item {

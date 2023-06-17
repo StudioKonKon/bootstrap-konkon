@@ -87,6 +87,7 @@ $sidebar-sub-level-padding:    .615rem map-get($spacers, 4);
 $sidebar-progress-bg:          rgba(var(--#{$sk-variable-prefix}sidebar-theme-rgb), 1);
 $sidebar-progress-hover-bg:    var(--#{$prefix}tertiary-bg);
 
+
 // Right Sidebar
 $right-sidebar-width:               22.308rem;
 $right-sidebar-width-phone:         22.308rem;
@@ -94,3 +95,11 @@ $right-sidebar-icons-color:         darken($white, 33.2%);
 $right-sidebar-low-contrast-color:  darken($white, 30%);
 $right-sidebar-background:          #fafafa;
 $right-sidebar-z-index:             $zindex-navbar-fixed - 1;
+
+
+// Apps Menu
+$apps-menu-theme:                   var(--#{$sk-variable-prefix}theme-bg-rgb);
+$apps-menu-hover-bg:                rgba($apps-menu-theme, .1);
+$apps-menu-hover-border-color:      rgba($apps-menu-theme, .025);
+$apps-menu-focus-bg:                rgba($apps-menu-theme, .15);
+$apps-menu-focus-border-color:      rgba($apps-menu-theme, .05);
