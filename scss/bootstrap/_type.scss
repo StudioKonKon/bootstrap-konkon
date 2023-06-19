@@ -97,6 +97,6 @@ address {
 // Code Highlighter
 .highlighter-konkon
 {
-   color: shift-color($konkon-color, 5%); // #fe4d8e
-   background-color: shift-color($konkon-color, -88%); // #ffeff5
+   color: var(--#{$prefix}konkon-text-emphasis);
+   background-color: var(--#{$prefix}konkon-bg-subtle);
 }

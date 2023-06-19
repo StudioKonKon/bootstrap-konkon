@@ -1,0 +1,76 @@
+// Bootstrap maps
+
+$custom-theme-colors: map-merge(( "konkon": $konkon ), $custom-theme-colors);
+$table-variants: map-merge(( "konkon": shift-color($konkon, $table-bg-scale)), $table-variants );
+$dropdown-colors: map-merge(( "konkon": $dropdown-konkon ), $dropdown-colors);
+$modal-colors: map-merge(( "konkon": $modal-konkon ), $modal-colors);
+
+// Required
+$theme-colors: map-merge(( "konkon": $konkon ), $theme-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$theme-colors-text: map-merge(( "konkon": $konkon-text ), $theme-colors-text);
+$theme-colors-bg-subtle: map-merge(( "konkon": $konkon-bg-subtle ), $theme-colors-bg-subtle);
+$theme-colors-border-subtle: map-merge(( "konkon": $konkon-border-subtle ), $theme-colors-border-subtle);
+
+// Required (mode)
+@if $enable-dark-mode {
+   $theme-colors-text-dark: map-merge(( "konkon": $konkon-text-emphasis-dark ), $theme-colors-text-dark);
+   $theme-colors-bg-subtle-dark: map-merge(( "konkon": $konkon-bg-subtle-dark ), $theme-colors-bg-subtle-dark);
+   $theme-colors-border-subtle-dark: map-merge(( "konkon": $konkon-border-subtle-dark ), $theme-colors-border-subtle-dark);
+}
+
+
+// Utilities maps
+//
+// Extends the default `$theme-colors` maps to help create our utilities.
+
+
+// Come v6, we'll de-dupe these variables. Until then, for backward compatibility, we keep them to reassign.
+// scss-docs-start utilities-colors
+$utilities-colors: $theme-colors-rgb;
+// scss-docs-end utilities-colors
+
+
+// scss-docs-start utilities-text-colors
+$utilities-text: map-merge(
+   $utilities-colors,
+   (
+      "black": to-rgb($black),
+      "white": to-rgb($white),
+      "body": to-rgb($body-color)
+   )
+);
+$utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text");
+$utilities-text-emphasis-colors: map-merge(( "konkon-emphasis": var(--#{$prefix}konkon-text-emphasis) ), $utilities-text-emphasis-colors);
+// scss-docs-end utilities-text-colors
+
+
+// scss-docs-start utilities-bg-colors
+$utilities-bg: map-merge(
+   $utilities-colors,
+   (
+      "black": to-rgb($black),
+      "white": to-rgb($white),
+      "body": to-rgb($body-bg)
+   )
+);
+$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
+$utilities-bg-subtle: map-merge(( "konkon-subtle": var(--#{$prefix}konkon-bg-subtle) ), $utilities-bg-subtle);
+// scss-docs-end utilities-bg-colors
+
+
+// scss-docs-start utilities-border-colors
+$utilities-border: map-merge(
+   $utilities-colors,
+   (
+      "black": to-rgb($black),
+      "white": to-rgb($white)
+   )
+);
+$utilities-border-colors: map-loop($utilities-border, rgba-css-var, "$key", "border");
+$utilities-border-subtle: map-merge(( "konkon-subtle": var(--#{$prefix}konkon-border-subtle) ), $utilities-border-subtle);
+// scss-docs-end utilities-border-colors
+
+
+$utilities-links-underline: map-loop($utilities-colors, rgba-css-var, "$key", "link-underline");
+

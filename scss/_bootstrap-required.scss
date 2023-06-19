@@ -15,9 +15,7 @@
 
 // Maps
 @import "../node_modules/bootstrap/scss/maps";				// Required (Bootstrap)
-
-// Theme Maps
-@import "bootstrap-maps";										   // Theme Required
+@import "maps";										            // Theme Required
 
 // Mixins
 @import "../node_modules/bootstrap/scss/mixins";		   // Required (Bootstrap)

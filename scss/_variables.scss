@@ -7,7 +7,7 @@ $enable-shadows:    true !default;
 
 // Theme colours
 $konkon:               #fe669e;
-$konkon-color:         #fe669e;
+$konkon-color:         $konkon;
 $konkon-text:          #983d5f;
 $konkon-bg-subtle:     #ffe0ec;
 $konkon-border-subtle: #ffd1e2;
