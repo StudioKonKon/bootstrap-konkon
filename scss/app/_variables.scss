@@ -98,8 +98,5 @@ $right-sidebar-z-index:             $zindex-navbar-fixed - 1;
 
 
 // Apps Menu
-$apps-menu-theme:                   var(--#{$sk-variable-prefix}apps-menu-theme);
-$apps-menu-hover-bg:                rgba($apps-menu-theme, .1);
-$apps-menu-hover-border-color:      rgba($apps-menu-theme, .025);
-$apps-menu-focus-bg:                rgba($apps-menu-theme, .15);
-$apps-menu-focus-border-color:      rgba($apps-menu-theme, .05);
+$apps-menu-hover-bg:                var(--#{$sk-variable-prefix}apps-icon-hover-bg);
+$apps-menu-focus-bg:                var(--#{$sk-variable-prefix}apps-icon-focus-bg);

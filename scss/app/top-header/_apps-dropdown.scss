@@ -75,12 +75,10 @@
 
 			&:hover {
 				background-color: $apps-menu-hover-bg;
-            border: solid 1px $apps-menu-hover-border-color;
 			}
 
 			&:active {
 				background-color: $apps-menu-focus-bg;
-            border: solid 1px $apps-menu-focus-border-color;
 			}
 		}
 	}

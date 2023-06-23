@@ -22,5 +22,6 @@
    --#{$sk-variable-prefix}icon-navbar-gx:        .5rem;
    --#{$sk-variable-prefix}icon-navbar-gx-sm:     .15rem;
    --#{$sk-variable-prefix}navbar-dropdown-top:   .923rem;
-   --#{$sk-variable-prefix}apps-menu-theme:       var(--#{$prefix}body-color-rgb);
+   --#{$sk-variable-prefix}apps-icon-hover-bg:    rgba(var(--#{$prefix}secondary-bg-rgb), .5);
+   --#{$sk-variable-prefix}apps-icon-focus-bg:    rgba(var(--#{$prefix}secondary-bg-rgb), 1);
 }
