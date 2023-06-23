@@ -98,7 +98,7 @@ $right-sidebar-z-index:             $zindex-navbar-fixed - 1;
 
 
 // Apps Menu
-$apps-menu-theme:                   var(--#{$sk-variable-prefix}theme-bg-rgb);
+$apps-menu-theme:                   var(--#{$sk-variable-prefix}apps-menu-theme);
 $apps-menu-hover-bg:                rgba($apps-menu-theme, .1);
 $apps-menu-hover-border-color:      rgba($apps-menu-theme, .025);
 $apps-menu-focus-bg:                rgba($apps-menu-theme, .15);
