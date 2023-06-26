@@ -17,19 +17,6 @@
 	}
 }
 
-.alert-link.link-light,
-.alert.text-white .alert-link {
-	color: $white;
-}
-
-.alert.bg-white,
-.alert.alert-icon.bg-white,
-.alert.alert-icon-full.bg-white {
-	background-color: $white;
-	border: $alert-bordered;
-	color: $body-color;
-}
-
 .alert-icon,
 .alert-icon-full {
 	display: flex;
@@ -46,7 +33,8 @@
 		align-items: center;
 		justify-content: center !important;
 		padding: 0 $spacer;
-		background-color: rgba(0, 0, 0, .025);
+		color: var(--#{$prefix}alert-color);
+		background-color: var(--#{$prefix}alert-border-color);
 		min-width: $alert-icon-min-width;
 		text-align: center;
 	}
@@ -70,4 +58,8 @@
 	> .message:last-child {
 		padding: $alert-padding-y $alert-padding-x;
 	}
+}
+
+.alert-icon-full > .icon {
+   background-color: rgba($white, .15);
 }
