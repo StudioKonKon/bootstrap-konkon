@@ -2,19 +2,38 @@
   [Badges]
 */
 
-@if $enable-custom-badges {
-	.badge {
-		border: $border-width solid $gray-300;
-	}
+.badge-link {
+   color: var(--#{$prefix}btn-color);
+   background-color: var(--#{$prefix}btn-bg);
+   border: var(--#{$prefix}border-width) solid var(--#{$prefix}btn-border-color);
+   
+   &:hover {
+      color: var(--#{$prefix}btn-hover-color);
+      background-color: var(--#{$prefix}btn-hover-bg);
+      border-color: var(--#{$prefix}btn-hover-border-color);
+   }
+   
+   &:active {
+      color: var(--#{$prefix}btn-active-color);
+      background-color: var(--#{$prefix}btn-active-bg);
+      border-color: var(--#{$prefix}btn-active-border-color);
+   }
+}
 
-	@each $state, $value in $theme-colors {
-		@include badge-variant($state, $value);
-		@include badge-outline-color($state, $value);
-	}
+.badge.btn {
+   border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
+   color: var(--#{$prefix}btn-color);
+   background-color: var(--#{$prefix}btn-bg);
+   box-shadow: var(--#{$prefix}btn-box-shadow);
+}
 
-	.badge-secondary {
-		color: $body-color;
-		background-color: $white;
-		border-color: $gray-300;
-	}
+.btn .badge-btn,
+.btn:hover .badge-btn-outline {
+   color: var(--#{$prefix}btn-hover-bg);
+   background-color: var(--#{$prefix}btn-hover-color);
+}
+
+.btn .badge-btn-outline {
+   color: var(--#{$prefix}btn-hover-color);
+   background-color: var(--#{$prefix}btn-hover-bg);
 }
