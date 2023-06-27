@@ -84,6 +84,7 @@
 }
 
 // Butons dropdown
+/*
 .btn.dropdown-toggle {
 	display: flex;
 	align-items: center;
@@ -106,6 +107,7 @@
 		}
 	}
 }
+*/
 
 //Big buttons
 .btn-big
@@ -129,7 +131,6 @@
 	min-width: $btn-min-width;
 
 	.icon {
-		font-size: $btn-icon-size;
 		vertical-align: middle;
 	}
 }

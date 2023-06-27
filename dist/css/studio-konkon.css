@@ -12317,13 +12317,6 @@ pre code.pre-wrap {
 /*------------------------------------------------------------------
   [Buttons]
 */
-.btn:active, .btn.active {
-  box-shadow: none;
-}
-.btn:active:focus {
-  outline: 0;
-}
-
 .btn-flex {
   display: inline-flex !important;
   align-items: center !important;
@@ -12334,93 +12327,90 @@ pre code.pre-wrap {
   align-items: center !important;
 }
 
-.btn-light,
-.btn-secondary {
-  --bs-btn-color: #343a40;
+.btn-secondary,
+[data-bs-theme=light] .btn-secondary {
+  --bs-btn-color: #000;
   --bs-btn-bg: #fff;
-  --bs-btn-border-color: #dbdbdb;
+  --bs-btn-border-color: #dee2e6;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #fff;
-  --bs-btn-hover-border-color: #bababa;
-  --bs-btn-focus-shadow-rgb: 194, 195, 196;
+  --bs-btn-hover-border-color: #b8c1c9;
+  --bs-btn-focus-shadow-rgb: 189, 192, 196;
   --bs-btn-active-color: #1d2124;
   --bs-btn-active-bg: #e3e3e3;
-  --bs-btn-active-border-color: #bababa;
+  --bs-btn-active-border-color: #b8c1c9;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
   --bs-btn-disabled-bg: #fff;
-  --bs-btn-disabled-border-color: #dbdbdb;
+  --bs-btn-disabled-border-color: #dee2e6;
 }
-.btn-light.active, .btn-light:active, .btn-light:not([disabled]):not(.disabled).active, .btn-light:not([disabled]):not(.disabled):active, .show > .btn-light.dropdown-toggle,
-.btn-secondary.active,
-.btn-secondary:active,
-.btn-secondary:not([disabled]):not(.disabled).active,
-.btn-secondary:not([disabled]):not(.disabled):active,
-.show > .btn-secondary.dropdown-toggle {
+.btn-secondary.active, .btn-secondary:active, .btn-secondary:not([disabled]):not(.disabled).active, .btn-secondary:not([disabled]):not(.disabled):active, .show > .btn-secondary.dropdown-toggle,
+[data-bs-theme=light] .btn-secondary.active,
+[data-bs-theme=light] .btn-secondary:active,
+[data-bs-theme=light] .btn-secondary:not([disabled]):not(.disabled).active,
+[data-bs-theme=light] .btn-secondary:not([disabled]):not(.disabled):active,
+.show > [data-bs-theme=light] .btn-secondary.dropdown-toggle {
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.06);
 }
-.btn-light.active.focus, .btn-light.active:focus, .btn-light.active:hover, .btn-light:active.focus, .btn-light:active:focus, .btn-light:active:hover, .btn-light:not([disabled]):not(.disabled).active.focus, .btn-light:not([disabled]):not(.disabled).active:focus, .btn-light:not([disabled]):not(.disabled).active:hover, .btn-light:not([disabled]):not(.disabled):active.focus, .btn-light:not([disabled]):not(.disabled):active:focus, .btn-light:not([disabled]):not(.disabled):active:hover, .show > .btn-light.dropdown-toggle.focus, .show > .btn-light.dropdown-toggle:focus, .show > .btn-light.dropdown-toggle:hover,
-.btn-secondary.active.focus,
-.btn-secondary.active:focus,
-.btn-secondary.active:hover,
-.btn-secondary:active.focus,
-.btn-secondary:active:focus,
-.btn-secondary:active:hover,
-.btn-secondary:not([disabled]):not(.disabled).active.focus,
-.btn-secondary:not([disabled]):not(.disabled).active:focus,
-.btn-secondary:not([disabled]):not(.disabled).active:hover,
-.btn-secondary:not([disabled]):not(.disabled):active.focus,
-.btn-secondary:not([disabled]):not(.disabled):active:focus,
-.btn-secondary:not([disabled]):not(.disabled):active:hover,
-.show > .btn-secondary.dropdown-toggle.focus,
-.show > .btn-secondary.dropdown-toggle:focus,
-.show > .btn-secondary.dropdown-toggle:hover {
+.btn-secondary.active.focus, .btn-secondary.active:focus, .btn-secondary.active:hover, .btn-secondary:active.focus, .btn-secondary:active:focus, .btn-secondary:active:hover, .btn-secondary:not([disabled]):not(.disabled).active.focus, .btn-secondary:not([disabled]):not(.disabled).active:focus, .btn-secondary:not([disabled]):not(.disabled).active:hover, .btn-secondary:not([disabled]):not(.disabled):active.focus, .btn-secondary:not([disabled]):not(.disabled):active:focus, .btn-secondary:not([disabled]):not(.disabled):active:hover, .show > .btn-secondary.dropdown-toggle.focus, .show > .btn-secondary.dropdown-toggle:focus, .show > .btn-secondary.dropdown-toggle:hover,
+[data-bs-theme=light] .btn-secondary.active.focus,
+[data-bs-theme=light] .btn-secondary.active:focus,
+[data-bs-theme=light] .btn-secondary.active:hover,
+[data-bs-theme=light] .btn-secondary:active.focus,
+[data-bs-theme=light] .btn-secondary:active:focus,
+[data-bs-theme=light] .btn-secondary:active:hover,
+[data-bs-theme=light] .btn-secondary:not([disabled]):not(.disabled).active.focus,
+[data-bs-theme=light] .btn-secondary:not([disabled]):not(.disabled).active:focus,
+[data-bs-theme=light] .btn-secondary:not([disabled]):not(.disabled).active:hover,
+[data-bs-theme=light] .btn-secondary:not([disabled]):not(.disabled):active.focus,
+[data-bs-theme=light] .btn-secondary:not([disabled]):not(.disabled):active:focus,
+[data-bs-theme=light] .btn-secondary:not([disabled]):not(.disabled):active:hover,
+.show > [data-bs-theme=light] .btn-secondary.dropdown-toggle.focus,
+.show > [data-bs-theme=light] .btn-secondary.dropdown-toggle:focus,
+.show > [data-bs-theme=light] .btn-secondary.dropdown-toggle:hover {
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.06);
 }
-.btn-light.disabled, .btn-light.disabled.active, .btn-light.disabled.focus, .btn-light.disabled:active, .btn-light.disabled:focus, .btn-light.disabled:hover, .btn-light[disabled], .btn-light[disabled].active, .btn-light[disabled].focus, .btn-light[disabled]:active, .btn-light[disabled]:focus, .btn-light[disabled]:hover, fieldset[disabled] .btn-light, fieldset[disabled] .btn-light.active, fieldset[disabled] .btn-light.focus, fieldset[disabled] .btn-light:active, fieldset[disabled] .btn-light:focus, fieldset[disabled] .btn-light:hover,
-.btn-secondary.disabled,
-.btn-secondary.disabled.active,
-.btn-secondary.disabled.focus,
-.btn-secondary.disabled:active,
-.btn-secondary.disabled:focus,
-.btn-secondary.disabled:hover,
-.btn-secondary[disabled],
-.btn-secondary[disabled].active,
-.btn-secondary[disabled].focus,
-.btn-secondary[disabled]:active,
-.btn-secondary[disabled]:focus,
-.btn-secondary[disabled]:hover,
-fieldset[disabled] .btn-secondary,
-fieldset[disabled] .btn-secondary.active,
-fieldset[disabled] .btn-secondary.focus,
-fieldset[disabled] .btn-secondary:active,
-fieldset[disabled] .btn-secondary:focus,
-fieldset[disabled] .btn-secondary:hover {
+.btn-secondary.disabled, .btn-secondary.disabled.active, .btn-secondary.disabled.focus, .btn-secondary.disabled:active, .btn-secondary.disabled:focus, .btn-secondary.disabled:hover, .btn-secondary[disabled], .btn-secondary[disabled].active, .btn-secondary[disabled].focus, .btn-secondary[disabled]:active, .btn-secondary[disabled]:focus, .btn-secondary[disabled]:hover, fieldset[disabled] .btn-secondary, fieldset[disabled] .btn-secondary.active, fieldset[disabled] .btn-secondary.focus, fieldset[disabled] .btn-secondary:active, fieldset[disabled] .btn-secondary:focus, fieldset[disabled] .btn-secondary:hover,
+[data-bs-theme=light] .btn-secondary.disabled,
+[data-bs-theme=light] .btn-secondary.disabled.active,
+[data-bs-theme=light] .btn-secondary.disabled.focus,
+[data-bs-theme=light] .btn-secondary.disabled:active,
+[data-bs-theme=light] .btn-secondary.disabled:focus,
+[data-bs-theme=light] .btn-secondary.disabled:hover,
+[data-bs-theme=light] .btn-secondary[disabled],
+[data-bs-theme=light] .btn-secondary[disabled].active,
+[data-bs-theme=light] .btn-secondary[disabled].focus,
+[data-bs-theme=light] .btn-secondary[disabled]:active,
+[data-bs-theme=light] .btn-secondary[disabled]:focus,
+[data-bs-theme=light] .btn-secondary[disabled]:hover,
+fieldset[disabled] [data-bs-theme=light] .btn-secondary,
+fieldset[disabled] [data-bs-theme=light] .btn-secondary.active,
+fieldset[disabled] [data-bs-theme=light] .btn-secondary.focus,
+fieldset[disabled] [data-bs-theme=light] .btn-secondary:active,
+fieldset[disabled] [data-bs-theme=light] .btn-secondary:focus,
+fieldset[disabled] [data-bs-theme=light] .btn-secondary:hover {
   box-shadow: none;
 }
 
-.btn-hspace {
-  margin-right: 0.25rem;
-}
-
-.btn-vspace {
-  margin-bottom: 0.25rem;
-}
-
-.btn-space {
-  margin-right: 0.25rem;
-  margin-bottom: 0.25rem;
+[data-bs-theme=dark] .btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #212529;
+  --bs-btn-border-color: #495057;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #212529;
+  --bs-btn-hover-border-color: #67717b;
+  --bs-btn-focus-shadow-rgb: 100, 106, 112;
+  --bs-btn-active-color: #c9cfd4;
+  --bs-btn-active-bg: #3a4148;
+  --bs-btn-active-border-color: #67717b;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #212529;
+  --bs-btn-disabled-border-color: #495057;
 }
 
 .btn-rounded {
   border-radius: 1.618rem;
-}
-
-.btn .icon.icon-left {
-  margin-right: 0.308rem;
-}
-.btn .icon.icon-right {
-  margin-left: 0.077rem;
 }
 
 .btn.dropdown-toggle {
@@ -12450,7 +12440,7 @@ fieldset[disabled] .btn-secondary:hover {
 .btn-big > .icon {
   display: block;
   font-size: 2rem;
-  line-height: 1.538rem;
+  line-height: 1;
   margin-bottom: 0.538rem;
 }
 

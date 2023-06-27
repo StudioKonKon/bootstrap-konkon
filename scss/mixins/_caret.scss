@@ -1,0 +1,64 @@
+// scss-docs-start caret-mixins
+$caret-up-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 -960 960 960'><path d='m283-345-43-43 240-240 240 239-43 43-197-197-197 198Z' fill='currentColor'/></svg>") !default;
+$caret-down-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 -960 960 960'><path d='M480-345 240-585l43-43 197 198 197-197 43 43-240 239Z'/></svg>") !default;
+$caret-left-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 -960 960 960'><path d='M561-240 320-481l241-241 43 43-198 198 198 198-43 43Z'/></svg>") !default;
+$caret-right-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 -960 960 960'><path d='m375-240-43-43 198-198-198-198 43-43 241 241-241 241Z'/></svg>") !default;
+
+@mixin caret-down($width: $caret-width) {
+   
+}
+
+@mixin caret-up($width: $caret-width) {
+   
+}
+
+@mixin caret-start($width: $caret-width) {
+   
+}
+
+@mixin caret-end($width: $caret-width) {
+   
+}
+
+@mixin caret(
+   $direction: down,
+   $width: $caret-width,
+   $spacing: $caret-spacing,
+   $vertical-align: $caret-vertical-align
+) {
+   @if $enable-caret {
+      &::after {
+         display: inline-block;
+         margin-left: $spacing;
+         vertical-align: $vertical-align;
+         content: "";
+
+         @if $direction == down {
+            @include caret-down($width);
+         } @else if $direction == up {
+            @include caret-up($width);
+         } @else if $direction == end {
+            @include caret-end($width);
+         }
+      }
+
+      @if $direction == start {
+         &::after {
+            display: none;
+         }
+
+         &::before {
+            display: inline-block;
+            margin-right: $spacing;
+            vertical-align: $vertical-align;
+            content: "";
+            @include caret-start($width);
+         }
+      }
+
+      &:empty::after {
+         margin-left: 0;
+      }
+   }
+}
+// scss-docs-end caret-mixins
