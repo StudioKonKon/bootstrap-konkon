@@ -20,40 +20,40 @@ body_class = "bg-body-secondary"
 	 <div class="card mb-4">
 		<div class="card-header card-header-divider h5">General Buttons</div>
 		<div class="card-body text-center">
-		   <div class="mt-2 mb-2">
-			  <button class="btn btn-space btn-konkon">KonKon</button>
-			  <button class="btn btn-space btn-primary">Primary</button>
-			  <button class="btn btn-space btn-secondary">Secondary</button>
-			  <button class="btn btn-space btn-success">Success</button>
-			  <button class="btn btn-space btn-info">Info</button>
-			  <button class="btn btn-space btn-warning">Warning</button>
-			  <button class="btn btn-space btn-danger">Danger</button>
-			  <button class="btn btn-space btn-light">light</button>
-			  <button class="btn btn-space btn-dark">Dark</button>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn btn-konkon">KonKon</button>
+			  <button class="btn btn-primary">Primary</button>
+			  <button class="btn btn-secondary">Secondary</button>
+			  <button class="btn btn-success">Success</button>
+			  <button class="btn btn-info">Info</button>
+			  <button class="btn btn-warning">Warning</button>
+			  <button class="btn btn-danger">Danger</button>
+			  <button class="btn btn-light">light</button>
+			  <button class="btn btn-dark">Dark</button>
 		   </div>
 		   <hr />
-		   <div class="mt-2 mb-2">
-			  <button class="btn btn-space btn-konkon disabled">KonKon</button>
-			  <button class="btn btn-space btn-primary disabled">Primary</button>
-			  <button class="btn btn-space btn-secondary disabled">Secondary</button>
-			  <button class="btn btn-space btn-success disabled">Success</button>
-			  <button class="btn btn-space btn-info disabled">Info</button>
-			  <button class="btn btn-space btn-warning disabled">Warning</button>
-			  <button class="btn btn-space btn-danger disabled">Danger</button>
-			  <button class="btn btn-space btn-light disabled">light</button>
-			  <button class="btn btn-space btn-dark disabled">Dark</button>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn btn-konkon disabled">KonKon</button>
+			  <button class="btn btn-primary disabled">Primary</button>
+			  <button class="btn btn-secondary disabled">Secondary</button>
+			  <button class="btn btn-success disabled">Success</button>
+			  <button class="btn btn-info disabled">Info</button>
+			  <button class="btn btn-warning disabled">Warning</button>
+			  <button class="btn btn-danger disabled">Danger</button>
+			  <button class="btn btn-light disabled">light</button>
+			  <button class="btn btn-dark disabled">Dark</button>
 		   </div>
 		   <hr />
-		   <div class="mt-2">
-			  <button class="btn btn-space btn-outline-konkon">KonKon</button>
-			  <button class="btn btn-space btn-outline-primary">Primary</button>
-			  <button class="btn btn-space btn-outline-secondary">Secondary</button>
-			  <button class="btn btn-space btn-outline-success">Success</button>
-			  <button class="btn btn-space btn-outline-info">Info</button>
-			  <button class="btn btn-space btn-outline-warning">Warning</button>
-			  <button class="btn btn-space btn-outline-danger">Danger</button>
-			  <button class="btn btn-space btn-outline-light text-body">light</button>
-			  <button class="btn btn-space btn-outline-dark text-body">Dark</button>
+		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn btn-outline-konkon">KonKon</button>
+			  <button class="btn btn-outline-primary">Primary</button>
+			  <button class="btn btn-outline-secondary">Secondary</button>
+			  <button class="btn btn-outline-success">Success</button>
+			  <button class="btn btn-outline-info">Info</button>
+			  <button class="btn btn-outline-warning">Warning</button>
+			  <button class="btn btn-outline-danger">Danger</button>
+			  <button class="btn btn-outline-light text-body">light</button>
+			  <button class="btn btn-outline-dark text-body">Dark</button>
 		   </div>
 		</div>
 	 </div>
@@ -61,41 +61,41 @@ body_class = "bg-body-secondary"
 	 <div class="card mb-4">
 		<div class="card-header card-header-divider h5">Dropdown Buttons</div>
 		<div class="card-body text-center">
-		   <div class="mt-2 mb-2">
-			  <div class="btn-group btn-space">
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <div class="btn-group">
 				 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Secondary <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
 				 {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
+			  <div class="btn-group">
 				 <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">Primary <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
 				 {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
+			  <div class="btn-group">
 				 <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Danger <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
 				 {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
+			  <div class="btn-group">
 				 <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown">Warning <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
 				 {{< template_dropdown >}}
 			  </div>
 		   </div>
-		   <div class="mt-2">
-			  <div class="btn-group btn-space">
+		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap">
+			  <div class="btn-group">
 				  <button class="btn btn-secondary" type="button">Secondary</button>
 				  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
+			  <div class="btn-group">
 				  <button class="btn btn-secondary" type="button">Primary</button>
 				  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
+			  <div class="btn-group">
 				  <button class="btn btn-warning" type="button">Warning</button>
 				  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
+			  <div class="btn-group">
 				  <button class="btn btn-success" type="button">Success</button>
 				  <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
@@ -107,26 +107,26 @@ body_class = "bg-body-secondary"
 	 <div class="card mb-4">
 		<div class="card-header card-header-divider h5">General Buttons (Rounded)</div>
 		<div class="card-body text-center">
-		   <div class="mt-2 mb-2">
-			  <button class="btn btn-rounded btn-space btn-secondary">Secondary</button>
-			  <button class="btn btn-rounded btn-space btn-primary">Primary</button>
-			  <button class="btn btn-rounded btn-space btn-danger">Danger</button>
-			  <button class="btn btn-rounded btn-space btn-warning">Warning</button>
-			  <button class="btn btn-rounded btn-space btn-success">Success</button>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn rounded-pill btn-secondary">Secondary</button>
+			  <button class="btn rounded-pill btn-primary">Primary</button>
+			  <button class="btn rounded-pill btn-danger">Danger</button>
+			  <button class="btn rounded-pill btn-warning">Warning</button>
+			  <button class="btn rounded-pill btn-success">Success</button>
 		   </div>
-		   <div class="mt-2 mb-2">
-			  <button class="btn btn-rounded btn-space btn-secondary disabled">Secondary</button>
-			  <button class="btn btn-rounded btn-space btn-primary disabled">Primary</button>
-			  <button class="btn btn-rounded btn-space btn-danger disabled">Danger</button>
-			  <button class="btn btn-rounded btn-space btn-warning disabled">Warning</button>
-			  <button class="btn btn-rounded btn-space btn-success disabled">Success</button>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn rounded-pill btn-secondary disabled">Secondary</button>
+			  <button class="btn rounded-pill btn-primary disabled">Primary</button>
+			  <button class="btn rounded-pill btn-danger disabled">Danger</button>
+			  <button class="btn rounded-pill btn-warning disabled">Warning</button>
+			  <button class="btn rounded-pill btn-success disabled">Success</button>
 		   </div>
-		   <div class="mt-2">
-			  <button class="btn btn-rounded btn-space btn-outline-secondary">Secondary</button>
-			  <button class="btn btn-rounded btn-space btn-outline-primary">Primary</button>
-			  <button class="btn btn-rounded btn-space btn-outline-danger">Danger</button>
-			  <button class="btn btn-rounded btn-space btn-outline-warning">Warning</button>
-			  <button class="btn btn-rounded btn-space btn-outline-success">Success</button>
+		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn rounded-pill btn-outline-secondary">Secondary</button>
+			  <button class="btn rounded-pill btn-outline-primary">Primary</button>
+			  <button class="btn rounded-pill btn-outline-danger">Danger</button>
+			  <button class="btn rounded-pill btn-outline-warning">Warning</button>
+			  <button class="btn rounded-pill btn-outline-success">Success</button>
 		   </div>
 		</div>
 	 </div>
@@ -134,65 +134,65 @@ body_class = "bg-body-secondary"
 	 <div class="card mb-4">
 		<div class="card-header card-header-divider h5">Dropdown Buttons (Rounded)</div>
 		<div class="card-body text-center">
-		   <div class="mt-2 mb-2">
-			  <div class="btn-group btn-space">
-				 <button class="btn btn-rounded btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Secondary <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <div class="btn-group">
+				 <button class="btn rounded-pill btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Secondary <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
 				 {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
-				 <button class="btn btn-rounded btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">Primary <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
+			  <div class="btn-group">
+				 <button class="btn rounded-pill btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">Primary <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
 				 {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
-				 <button class="btn btn-rounded btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Danger <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
+			  <div class="btn-group">
+				 <button class="btn rounded-pill btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Danger <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
 				 {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
-				 <button class="btn btn-rounded btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown">Warning <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
+			  <div class="btn-group">
+				 <button class="btn rounded-pill btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown">Warning <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
 				 {{< template_dropdown >}}
 			  </div>
 		   </div>
-		   <div class="mt-2 mb-2">
-			  <div class="btn-group btn-space">
-				  <button class="btn btn-rounded btn-secondary" type="button">Secondary</button>
-				  <button class="btn btn-rounded btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <div class="btn-group">
+				  <button class="btn rounded-start-pill btn-secondary" type="button">Secondary</button>
+				  <button class="btn rounded-end-pill btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
-				  <button class="btn btn-rounded btn-secondary" type="button">Primary</button>
-				  <button class="btn btn-rounded btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+			  <div class="btn-group">
+				  <button class="btn rounded-start-pill btn-secondary" type="button">Primary</button>
+				  <button class="btn rounded-end-pill btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
-				  <button class="btn btn-rounded btn-warning" type="button">Warning</button>
-				  <button class="btn btn-rounded btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+			  <div class="btn-group">
+				  <button class="btn rounded-start-pill btn-warning" type="button">Warning</button>
+				  <button class="btn rounded-end-pill btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
-				  <button class="btn btn-rounded btn-success" type="button">Success</button>
-				  <button class="btn btn-rounded btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+			  <div class="btn-group">
+				  <button class="btn rounded-start-pill btn-success" type="button">Success</button>
+				  <button class="btn rounded-end-pill btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 		   </div>
-		   <div class="mt-2">
-			  <div class="btn-group btn-space">
-				  <button class="btn btn-rounded btn-outline-primary" type="button">Primary</button>
-				  <button class="btn btn-rounded btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap">
+			  <div class="btn-group">
+				  <button class="btn rounded-start-pill btn-outline-primary" type="button">Primary</button>
+				  <button class="btn rounded-end-pill btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
-				  <button class="btn btn-rounded btn-outline-danger" type="button">Primary</button>
-				  <button class="btn btn-rounded btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+			  <div class="btn-group">
+				  <button class="btn rounded-start-pill btn-outline-danger" type="button">Primary</button>
+				  <button class="btn rounded-end-pill btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
-				  <button class="btn btn-rounded btn-outline-warning" type="button">Warning</button>
-				  <button class="btn btn-rounded btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+			  <div class="btn-group">
+				  <button class="btn rounded-start-pill btn-outline-warning" type="button">Warning</button>
+				  <button class="btn rounded-end-pill btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group btn-space">
-				  <button class="btn btn-rounded btn-outline-success" type="button">Success</button>
-				  <button class="btn btn-rounded btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+			  <div class="btn-group">
+				  <button class="btn rounded-start-pill btn-outline-success" type="button">Success</button>
+				  <button class="btn rounded-end-pill btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 		   </div>
@@ -256,36 +256,36 @@ body_class = "bg-body-secondary"
 	 <div class="card mb-4">
 		<div class="card-header card-header-divider h5">Social Buttons</div>
 		<div class="card-body text-center">
-		   <div class="mt-2 mb-2">
-			  <button class="btn btn-space btn-social-outline btn-google-plus" type="button"><i class="icon zmdi zmdi-google-plus"></i></button>
-			  <button class="btn btn-space btn-social-outline btn-twitter" type="button"><i class="icon zmdi zmdi-twitter"></i></button>
-			  <button class="btn btn-space btn-social-outline btn-facebook" type="button"><i class="icon zmdi zmdi-facebook"></i></button>
-			  <button class="btn btn-space btn-social-outline btn-dropbox" type="button"><i class="icon zmdi zmdi-dropbox"></i></button>
-			  <button class="btn btn-space btn-social-outline btn-youtube" type="button"><i class="icon zmdi zmdi-youtube-play"></i></button>
-			  <button class="btn btn-space btn-social-outline btn-pinterest" type="button"><i class="icon zmdi zmdi-pinterest"></i></button>
-			  <button class="btn btn-space btn-social-outline btn-github" type="button"><i class="icon zmdi zmdi-github-alt"></i></button>
-			  <button class="btn btn-space btn-social-outline btn-codepen" type="button"><i class="icon zmdi zmdi-codepen"></i></button>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn btn-social-outline btn-google-plus" type="button"><i class="icon zmdi zmdi-google-plus"></i></button>
+			  <button class="btn btn-social-outline btn-twitter" type="button"><i class="icon zmdi zmdi-twitter"></i></button>
+			  <button class="btn btn-social-outline btn-facebook" type="button"><i class="icon zmdi zmdi-facebook"></i></button>
+			  <button class="btn btn-social-outline btn-dropbox" type="button"><i class="icon zmdi zmdi-dropbox"></i></button>
+			  <button class="btn btn-social-outline btn-youtube" type="button"><i class="icon zmdi zmdi-youtube-play"></i></button>
+			  <button class="btn btn-social-outline btn-pinterest" type="button"><i class="icon zmdi zmdi-pinterest"></i></button>
+			  <button class="btn btn-social-outline btn-github" type="button"><i class="icon zmdi zmdi-github-alt"></i></button>
+			  <button class="btn btn-social-outline btn-codepen" type="button"><i class="icon zmdi zmdi-codepen"></i></button>
 		   </div>
-		   <div class="mt-2 mb-2">
-			  <button class="btn btn-space btn-social btn-google-plus" type="button"><i class="icon zmdi zmdi-google-plus"></i></button>
-			  <button class="btn btn-space btn-social btn-twitter" type="button"><i class="icon zmdi zmdi-twitter"></i></button>
-			  <button class="btn btn-space btn-social btn-facebook" type="button"><i class="icon zmdi zmdi-facebook"></i></button>
-			  <button class="btn btn-space btn-social btn-dropbox" type="button"><i class="icon zmdi zmdi-dropbox"></i></button>
-			  <button class="btn btn-space btn-social btn-youtube" type="button"><i class="icon zmdi zmdi-youtube-play"></i></button>
-			  <button class="btn btn-space btn-social btn-pinterest" type="button"><i class="icon zmdi zmdi-pinterest"></i></button>
-			  <button class="btn btn-space btn-social btn-github" type="button"><i class="icon zmdi zmdi-github-alt"></i></button>
-			  <button class="btn btn-space btn-social btn-codepen" type="button"><i class="icon zmdi zmdi-codepen"></i></button>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn btn-social btn-google-plus" type="button"><i class="icon zmdi zmdi-google-plus"></i></button>
+			  <button class="btn btn-social btn-twitter" type="button"><i class="icon zmdi zmdi-twitter"></i></button>
+			  <button class="btn btn-social btn-facebook" type="button"><i class="icon zmdi zmdi-facebook"></i></button>
+			  <button class="btn btn-social btn-dropbox" type="button"><i class="icon zmdi zmdi-dropbox"></i></button>
+			  <button class="btn btn-social btn-youtube" type="button"><i class="icon zmdi zmdi-youtube-play"></i></button>
+			  <button class="btn btn-social btn-pinterest" type="button"><i class="icon zmdi zmdi-pinterest"></i></button>
+			  <button class="btn btn-social btn-github" type="button"><i class="icon zmdi zmdi-github-alt"></i></button>
+			  <button class="btn btn-social btn-codepen" type="button"><i class="icon zmdi zmdi-codepen"></i></button>
 		   </div>
-		   <div class="mt-2">
-			  <div class="btn-group btn-space">
+		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap">
+			  <div class="btn-group">
 				 <button class="btn btn-color btn-social btn-facebook" type="button"><i class="icon zmdi zmdi-facebook"></i></button>
 				 <button class="btn btn-secondary" type="button">Like</button>
 			  </div>
-			  <div class="btn-group btn-space">
+			  <div class="btn-group">
 				 <button class="btn btn-color btn-social btn-twitter" type="button"><i class="icon zmdi zmdi-twitter"></i></button>
 				 <button class="btn btn-secondary" type="button">Follow Me</button>
 			  </div>
-			  <div class="btn-group btn-space">
+			  <div class="btn-group">
 				 <button class="btn btn-color btn-social btn-google-plus" type="button"><i class="icon zmdi zmdi-google-plus"></i></button>
 				 <button class="btn btn-secondary" type="button">Plus One</button>
 			  </div>
@@ -295,38 +295,38 @@ body_class = "bg-body-secondary"
 	 <div class="card mb-4">
 		<div class="card-header card-header-divider h5">Social Buttons (Rounded)</div>
 		<div class="card-body text-center">
-		   <div class="mt-2 mb-2">
-			  <button class="btn btn-rounded btn-space btn-social-outline btn-google-plus" type="button"><i class="icon zmdi zmdi-google-plus"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social-outline btn-twitter" type="button"><i class="icon zmdi zmdi-twitter"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social-outline btn-facebook" type="button"><i class="icon zmdi zmdi-facebook"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social-outline btn-dropbox" type="button"><i class="icon zmdi zmdi-dropbox"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social-outline btn-youtube" type="button"><i class="icon zmdi zmdi-youtube-play"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social-outline btn-pinterest" type="button"><i class="icon zmdi zmdi-pinterest"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social-outline btn-github" type="button"><i class="icon zmdi zmdi-github-alt"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social-outline btn-codepen" type="button"><i class="icon zmdi zmdi-codepen"></i></button>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn rounded-pill btn-social-outline btn-google-plus" type="button"><i class="icon zmdi zmdi-google-plus"></i></button>
+			  <button class="btn rounded-pill btn-social-outline btn-twitter" type="button"><i class="icon zmdi zmdi-twitter"></i></button>
+			  <button class="btn rounded-pill btn-social-outline btn-facebook" type="button"><i class="icon zmdi zmdi-facebook"></i></button>
+			  <button class="btn rounded-pill btn-social-outline btn-dropbox" type="button"><i class="icon zmdi zmdi-dropbox"></i></button>
+			  <button class="btn rounded-pill btn-social-outline btn-youtube" type="button"><i class="icon zmdi zmdi-youtube-play"></i></button>
+			  <button class="btn rounded-pill btn-social-outline btn-pinterest" type="button"><i class="icon zmdi zmdi-pinterest"></i></button>
+			  <button class="btn rounded-pill btn-social-outline btn-github" type="button"><i class="icon zmdi zmdi-github-alt"></i></button>
+			  <button class="btn rounded-pill btn-social-outline btn-codepen" type="button"><i class="icon zmdi zmdi-codepen"></i></button>
 		   </div>
-		   <div class="mt-2 mb-2">
-			  <button class="btn btn-rounded btn-space btn-social btn-google-plus" type="button"><i class="icon zmdi zmdi-google-plus"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social btn-twitter" type="button"><i class="icon zmdi zmdi-twitter"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social btn-facebook" type="button"><i class="icon zmdi zmdi-facebook"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social btn-dropbox" type="button"><i class="icon zmdi zmdi-dropbox"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social btn-youtube" type="button"><i class="icon zmdi zmdi-youtube-play"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social btn-pinterest" type="button"><i class="icon zmdi zmdi-pinterest"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social btn-github" type="button"><i class="icon zmdi zmdi-github-alt"></i></button>
-			  <button class="btn btn-rounded btn-space btn-social btn-codepen" type="button"><i class="icon zmdi zmdi-codepen"></i></button>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn rounded-pill btn-social btn-google-plus" type="button"><i class="icon zmdi zmdi-google-plus"></i></button>
+			  <button class="btn rounded-pill btn-social btn-twitter" type="button"><i class="icon zmdi zmdi-twitter"></i></button>
+			  <button class="btn rounded-pill btn-social btn-facebook" type="button"><i class="icon zmdi zmdi-facebook"></i></button>
+			  <button class="btn rounded-pill btn-social btn-dropbox" type="button"><i class="icon zmdi zmdi-dropbox"></i></button>
+			  <button class="btn rounded-pill btn-social btn-youtube" type="button"><i class="icon zmdi zmdi-youtube-play"></i></button>
+			  <button class="btn rounded-pill btn-social btn-pinterest" type="button"><i class="icon zmdi zmdi-pinterest"></i></button>
+			  <button class="btn rounded-pill btn-social btn-github" type="button"><i class="icon zmdi zmdi-github-alt"></i></button>
+			  <button class="btn rounded-pill btn-social btn-codepen" type="button"><i class="icon zmdi zmdi-codepen"></i></button>
 		   </div>
-		   <div class="mt-2">
-			  <div class="btn-group btn-space">
-				 <button class="btn btn-rounded btn-social btn-facebook" type="button"><i class="icon zmdi zmdi-facebook"></i></button>
-				 <button class="btn btn-rounded btn-secondary" type="button">Like</button>
+		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap">
+			  <div class="btn-group">
+				 <button class="btn rounded-start-pill btn-social btn-facebook" type="button"><i class="icon zmdi zmdi-facebook"></i></button>
+				 <button class="btn rounded-end-pill btn-secondary" type="button">Like</button>
 			  </div>
-			  <div class="btn-group btn-space">
-				 <button class="btn btn-rounded btn-social btn-twitter" type="button"><i class="icon zmdi zmdi-twitter"></i></button>
-				 <button class="btn btn-rounded btn-secondary" type="button">Follow Me</button>
+			  <div class="btn-group">
+				 <button class="btn rounded-start-pill btn-social btn-twitter" type="button"><i class="icon zmdi zmdi-twitter"></i></button>
+				 <button class="btn rounded-end-pill btn-secondary" type="button">Follow Me</button>
 			  </div>
-			  <div class="btn-group btn-space">
-				 <button class="btn btn-rounded btn-social btn-google-plus" type="button"><i class="icon zmdi zmdi-google-plus"></i></button>
-				 <button class="btn btn-rounded btn-secondary" type="button">Plus One</button>
+			  <div class="btn-group">
+				 <button class="btn rounded-start-pill btn-social btn-google-plus" type="button"><i class="icon zmdi zmdi-google-plus"></i></button>
+				 <button class="btn rounded-end-pill btn-secondary" type="button">Plus One</button>
 			  </div>
 		   </div>
 		</div>
@@ -334,15 +334,15 @@ body_class = "bg-body-secondary"
 	 <div class="card mb-4">
 		<div class="card-header card-header-divider h5">Buttons Sizes</div>
 		<div class="card-body d-flex justify-content-around">
-		   <div class="mt-2 text-center">
-			  <button class="btn btn-space btn-primary btn-lg">Large</button>
-			  <button class="btn btn-space btn-danger">Default</button>
-			  <button class="btn btn-space btn-warning btn-sm">Small</button>
+		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap text-center">
+			  <button class="btn btn-primary btn-lg">Large</button>
+			  <button class="btn btn-danger">Default</button>
+			  <button class="btn btn-warning btn-sm">Small</button>
 		   </div>
-		   <div class="mt-2 text-center">
-			  <button class="btn btn-rounded btn-space btn-primary btn-lg">Large</button>
-			  <button class="btn btn-rounded btn-space btn-danger">Default</button>
-			  <button class="btn btn-rounded btn-space btn-warning btn-sm">Small</button>
+		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap text-center">
+			  <button class="btn rounded-pill btn-primary btn-lg">Large</button>
+			  <button class="btn rounded-pill btn-danger">Default</button>
+			  <button class="btn rounded-pill btn-warning btn-sm">Small</button>
 		   </div>
 		</div>
 	 </div>
@@ -350,8 +350,8 @@ body_class = "bg-body-secondary"
 	 <div class="card mb-4">
 		<div class="card-header card-header-divider h5">Grouped Buttons</div>
 		<div class="card-body text-center">
-		   <div class="mt-2 mb-2">
-			  <div class="btn-group btn-space me-2">
+		   <div class="mt-0 mb-3 hstack gap-2 justify-content-center flex-wrap">
+			  <div class="btn-group me-2">
 				 <button class="btn btn-secondary" type="button">123</button>
 				 <button class="btn btn-secondary" type="button">ABC</button>
 				 <div class="btn-group">
@@ -363,12 +363,12 @@ body_class = "bg-body-secondary"
 					{{< template_dropdown >}}
 				 </div>
 			  </div>
-			  <div class="btn-group btn-space me-2">
+			  <div class="btn-group me-2">
 				 <button class="btn btn-secondary" type="button"><i class="icon zmdi zmdi-google"></i></button>
 				 <button class="btn btn-secondary" type="button"><i class="icon zmdi zmdi-facebook"></i></button>
 				 <button class="btn btn-secondary" type="button"><i class="icon zmdi zmdi-twitter"></i></button>
 			  </div>
-			  <div class="btn-group btn-space">
+			  <div class="btn-group">
 				 <button class="btn btn-secondary" type="button"><i class="icon zmdi zmdi-face"></i></button>
 				 <button class="btn btn-secondary" type="button"><i class="icon zmdi zmdi-settings"></i></button>
 			  </div>
@@ -385,20 +385,20 @@ body_class = "bg-body-secondary"
 	 <div class="card mb-4">
 		<div class="card-header card-header-divider h5">Big Buttons</div>
 		<div class="card-body text-center">
-		   <div class="mt-2">
-			  <button class="btn btn-space btn-secondary btn-big">
+		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn btn-secondary btn-big">
 				 <i class="icon zmdi zmdi-home"></i>
 				 <span>Home</span>
 			  </button>
-			  <button class="btn btn-space btn-outline-primary btn-big">
+			  <button class="btn btn-outline-primary btn-big">
 				 <i class="icon zmdi zmdi-inbox"></i>
 				 <span>Inbox</span>
 			  </button>
-			  <button class="btn btn-space btn-primary btn-big">
+			  <button class="btn btn-primary btn-big">
 				 <i class="icon zmdi zmdi-face"></i>
 				 <span>Profile</span>
 			  </button>
-			  <div class="btn-group btn-space">
+			  <div class="btn-group">
 				 <button class="btn btn-outline-primary btn-big">
 					<i class="icon zmdi zmdi-settings"></i>
 					<span>Settings</span>
@@ -410,7 +410,7 @@ body_class = "bg-body-secondary"
 				 {{< template_dropdown >}}
 			  </div>
 			  
-			  <button class="btn btn-rounded btn-space btn-social btn-color btn-twitter btn-big">
+			  <button class="btn rounded-4 btn-social btn-color btn-twitter btn-big">
 				 <i class="icon zmdi zmdi-twitter"></i>
 				 <span>Twitter</span>
 			  </button>
@@ -421,33 +421,33 @@ body_class = "bg-body-secondary"
 	 <div class="card mb-4">
 		<div class="card-header card-header-divider h5">Buttons With Icons</div>
 		<div class="card-body text-center">
-		   <div class="mt-2 mb-2">
-			  <button class="btn btn-sm btn-space btn-secondary" type="button">
-				<i class="icon zmdi zmdi-settings me-1"></i>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn btn-sm btn-secondary hstack gap-2 align-items-center" type="button">
+				<i class="icon zmdi zmdi-settings"></i>
 				<span>Small</span>
 			  </button>
-			  <button class="btn btn-sm btn-space btn-primary" type="button">
-				<i class="icon zmdi zmdi-save me-1"></i>
+			  <button class="btn btn-sm btn-primary hstack gap-2 align-items-center" type="button">
+				<i class="icon zmdi zmdi-save"></i>
 				<span>Small</span>
 			  </button>
 		   </div>
-		   <div class="mt-2 mb-2">
-			  <button class="btn btn-space btn-danger" type="button">
-				<i class="icon zmdi zmdi-email me-1"></i>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn btn-danger hstack gap-2 align-items-center" type="button">
+				<i class="icon zmdi zmdi-email"></i>
 				<span>Normal</span>
 			  </button>
-			  <button class="btn btn-space btn-warning" type="button">
-				<i class="icon zmdi zmdi-lock me-1"></i>
+			  <button class="btn btn-warning hstack gap-2 align-items-center" type="button">
+				<i class="icon zmdi zmdi-lock"></i>
 				<span>Normal</span>
 			  </button>
 		   </div>
-		   <div class="mt-2 mb-2">
-			  <button class="btn btn-lg btn-space btn-danger" type="button">
-				<i class="icon zmdi zmdi-email me-1"></i>
+		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
+			  <button class="btn btn-lg btn-danger hstack gap-2 align-items-center" type="button">
+				<i class="icon zmdi zmdi-email"></i>
 				<span>Large</span>
 			  </button>
-			  <button class="btn btn-lg btn-space btn-warning" type="button">
-				<i class="icon zmdi zmdi-lock me-1"></i>
+			  <button class="btn btn-lg btn-warning hstack gap-2 align-items-center" type="button">
+				<i class="icon zmdi zmdi-lock"></i>
 				<span>Large</span>
 			  </button>
 		   </div>
