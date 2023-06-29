@@ -82,22 +82,22 @@ body_class = "bg-body-secondary"
 		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap">
 			  <div class="btn-group">
 				  <button class="btn btn-secondary" type="button">Secondary</button>
-				  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
 				  <button class="btn btn-secondary" type="button">Primary</button>
-				  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn btn-primary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
 				  <button class="btn btn-warning" type="button">Warning</button>
-				  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
 				  <button class="btn btn-success" type="button">Success</button>
-				  <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn btn-success dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 		   </div>
@@ -140,7 +140,10 @@ body_class = "bg-body-secondary"
 				 {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
-				 <button class="btn rounded-pill btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">Primary <span class="icon-dropdown zmdi zmdi-chevron-down"></span></button>
+				 <button class="btn rounded-pill btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+               <span>Primary</span>
+               <span class="ms-1 zmdi zmdi-chevron-down"></span>
+             </button>
 				 {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
@@ -155,44 +158,44 @@ body_class = "bg-body-secondary"
 		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
 			  <div class="btn-group">
 				  <button class="btn rounded-start-pill btn-secondary" type="button">Secondary</button>
-				  <button class="btn rounded-end-pill btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn rounded-end-pill btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
 				  <button class="btn rounded-start-pill btn-secondary" type="button">Primary</button>
-				  <button class="btn rounded-end-pill btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn rounded-end-pill btn-primary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
 				  <button class="btn rounded-start-pill btn-warning" type="button">Warning</button>
-				  <button class="btn rounded-end-pill btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn rounded-end-pill btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
 				  <button class="btn rounded-start-pill btn-success" type="button">Success</button>
-				  <button class="btn rounded-end-pill btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn rounded-end-pill btn-success dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 		   </div>
 		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap">
 			  <div class="btn-group">
 				  <button class="btn rounded-start-pill btn-outline-primary" type="button">Primary</button>
-				  <button class="btn rounded-end-pill btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn rounded-end-pill btn-primary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
 				  <button class="btn rounded-start-pill btn-outline-danger" type="button">Primary</button>
-				  <button class="btn rounded-end-pill btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn rounded-end-pill btn-danger dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
 				  <button class="btn rounded-start-pill btn-outline-warning" type="button">Warning</button>
-				  <button class="btn rounded-end-pill btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn rounded-end-pill btn-warning dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
 				  <button class="btn rounded-start-pill btn-outline-success" type="button">Success</button>
-				  <button class="btn rounded-end-pill btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn rounded-end-pill btn-success dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 		   </div>
@@ -208,7 +211,7 @@ body_class = "bg-body-secondary"
 				<div class="btn-group">
 					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
 						<span>Settings</span>
-						<span class="icon-dropdown zmdi zmdi-chevron-down"></span>
+						<span class="visually-hidden">Toggle Dropdown</span>
 					</button>
 					{{< template_dropdown >}}
 				</div>
@@ -219,7 +222,7 @@ body_class = "bg-body-secondary"
 				<div class="btn-group">
 					<button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown">
 						<span>Settings</span>
-						<span class="icon-dropdown zmdi zmdi-chevron-down"></span>
+						<span class="visually-hidden">Toggle Dropdown</span>
 					</button>
 					{{< template_dropdown >}}
 				</div>
@@ -229,9 +232,8 @@ body_class = "bg-body-secondary"
 				<button class="btn btn-outline-warning" type="button"><i class="icon zmdi zmdi-email me-1"></i> ABC</button>
 				<div class="btn-group">
 					<button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown">
-						<i class="icon zmdi zmdi-settings me-1"></i>
 						<span>Settings</span>
-						<span class="icon-dropdown zmdi zmdi-chevron-down"></span>
+						<span class="visually-hidden">Toggle Dropdown</span>
 					</button>
 					{{< template_dropdown >}}
 				</div>
@@ -241,8 +243,7 @@ body_class = "bg-body-secondary"
 				<button class="btn btn-outline-success" type="button">ABC</button>
 				<div class="btn-group">
 					<button class="btn btn-outline-success" type="button">Settings</button>
-					<button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown">
-						<span class="zmdi zmdi-chevron-down"></span>
+					<button class="btn btn-success dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown">
 						<span class="visually-hidden">Toggle Dropdown</span>
 					</button>
 					{{< template_dropdown >}}
@@ -356,8 +357,7 @@ body_class = "bg-body-secondary"
 				 <button class="btn btn-secondary" type="button">ABC</button>
 				 <div class="btn-group">
 					<button class="btn btn-secondary">Settings</button>
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-					   <span class="zmdi zmdi-chevron-down"></span>
+					<button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown">
 					   <span class="visually-hidden">Toggle Dropdown</span>
 					</button>
 					{{< template_dropdown >}}
@@ -403,8 +403,7 @@ body_class = "bg-body-secondary"
 					<i class="icon zmdi zmdi-settings"></i>
 					<span>Settings</span>
 				 </button>
-				 <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-					<span class="zmdi zmdi-chevron-down"></span>
+				 <button class="btn btn-primary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown">
 					<span class="visually-hidden">Toggle Dropdown</span>
 				 </button>
 				 {{< template_dropdown >}}

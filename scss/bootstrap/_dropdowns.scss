@@ -2,6 +2,13 @@
   [Dropdown menu]
 */
 
+.sk-dropdown-toggle {
+  white-space: nowrap;
+
+  // Generate the caret automatically
+  // @include caret();
+}
+
 //Dropdown Menu Style
 .dropdown-menu {
 	box-shadow: $dropdown-box-shadow;

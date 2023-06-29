@@ -83,31 +83,6 @@
 	@include border-radius($font-size-base * $btn-line-height);
 }
 
-// Butons dropdown
-/*
-.btn.dropdown-toggle {
-	display: flex;
-	align-items: center;
-		
-	.#{$icons-class}-chevron-down,
-	.#{$icons-class}-chevron-up {
-		font-size: 1.385rem;
-	 	vertical-align: middle;
-	}
-
-	.icon-dropdown
-	{
-		font-size: 1.385rem;
-		margin-left: .462rem;
-
-		&-left
-		{
-			margin-left: 0;
-			margin-right: .462rem;
-		}
-	}
-}
-*/
 
 //Big buttons
 .btn-big
