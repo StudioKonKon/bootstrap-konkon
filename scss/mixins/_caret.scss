@@ -1,57 +1,84 @@
-// scss-docs-start caret-mixins
+// scss-docs-start sk-caret-mixins
 $sk-caret-up-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 -960 960 960'><path d='m283-345-43-43 240-240 240 239-43 43-197-197-197 198Z' fill='currentColor'/></svg>") !default;
 $sk-caret-down-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 -960 960 960'><path d='M480-345 240-585l43-43 197 198 197-197 43 43-240 239Z' fill='currentColor'/></svg>") !default;
 $sk-caret-left-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 -960 960 960'><path d='M561-240 320-481l241-241 43 43-198 198 198 198-43 43Z' fill='currentColor'/></svg>") !default;
 $sk-caret-right-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 -960 960 960'><path d='m375-240-43-43 198-198-198-198 43-43 241 241-241 241Z' fill='currentColor'/></svg>") !default;
 // scss-docs-end caret-mixins
 
+
+$sk-caret-width: .125em;
+
+
 // scss-docs-start caret-mixins
-@mixin sk-caret-down($width: $caret-width) {
+@mixin sk-caret-down(
+   $width: $sk-caret-width,
+   $spacing: $caret-spacing,
+   $vertical-align: $caret-vertical-align
+) {
    border-top: $width solid;
-   border-right: $width solid transparent;
-   border-bottom: 0;
-   border-left: $width solid transparent;
-}
-
-@mixin sk-caret-up($width: $caret-width) {
-   border-top: 0;
-   border-right: $width solid transparent;
-   border-bottom: $width solid;
-   border-left: $width solid transparent;
-}
-
-@mixin sk-caret-end($width: $caret-width) {
-   border-top: $width solid transparent;
-   border-right: 0;
-   border-bottom: $width solid transparent;
-   border-left: $width solid;
-}
-
-@mixin sk-caret-start($width: $caret-width) {
-   border-top: $width solid transparent;
    border-right: $width solid;
-   border-bottom: $width solid transparent;
+   transform: rotate(135deg);
+   vertical-align: $vertical-align;
 }
+
+
+@mixin sk-caret-up(
+   $width: $sk-caret-width,
+   $spacing: $caret-spacing,
+   $vertical-align: 0
+) {
+   border-top: $width solid;
+   border-right: $width solid;
+   transform: rotate(-45deg);
+   vertical-align: $vertical-align;
+}
+
+
+@mixin sk-caret-end(
+   $width: $sk-caret-width,
+   $spacing: $caret-spacing,
+   $vertical-align: $caret-vertical-align
+) {
+   border-top: $width solid;
+   border-right: $width solid;
+   transform: rotate(45deg);
+   vertical-align: $vertical-align / 2;
+}
+
+
+@mixin sk-caret-start(
+   $width: $sk-caret-width,
+   $spacing: $caret-spacing,
+   $vertical-align: $caret-vertical-align
+) {
+   border-top: $width solid;
+   border-right: $width solid;
+   transform: rotate(-135deg);
+   vertical-align: $vertical-align / 2;
+}
+
 
 @mixin sk-caret(
    $direction: down,
-   $width: $caret-width,
+   $width: $sk-caret-width,
    $spacing: $caret-spacing,
    $vertical-align: $caret-vertical-align
 ) {
    @if $enable-caret {
       &::after {
-         display: inline-block;
-         margin-left: $spacing;
-         vertical-align: $vertical-align;
          content: "";
+         display: inline-block;
+         width: .5em;
+         height: .5em;
+         margin-left: .5em;
+         line-height: .5em +  + $sk-caret-width;
          
          @if $direction == down {
-            @include caret-down($width);
+            @include sk-caret-down($width);
          } @else if $direction == up {
-            @include caret-up($width);
+            @include sk-caret-up($width);
          } @else if $direction == end {
-            @include caret-end($width);
+            @include sk-caret-end($width);
          }
       }
 
@@ -61,11 +88,13 @@ $sk-caret-right-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/s
          }
 
          &::before {
-            display: inline-block;
-            margin-right: $spacing;
-            vertical-align: $vertical-align;
             content: "";
-            @include caret-start($width);
+            display: inline-block;
+            width: .5em;
+            height: .5em;
+            margin-right: .5em;
+            
+            @include sk-caret-start($width);
          }
       }
 
@@ -74,5 +103,5 @@ $sk-caret-right-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/s
       }
    }
 }
-// scss-docs-end caret-mixins
+// scss-docs-end sk-caret-mixins
 

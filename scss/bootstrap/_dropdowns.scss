@@ -7,6 +7,10 @@
 
   // Generate the caret automatically
   @include sk-caret();
+  
+  .dropup & { @include sk-caret(up); }
+  .dropend & { @include sk-caret(end); }
+  .dropstart & { @include sk-caret(start); }
 }
 
 //Dropdown Menu Style
