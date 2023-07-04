@@ -63,7 +63,10 @@ body_class = "bg-body-secondary"
 		<div class="card-body text-center">
 		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
 			  <div>
-            <button class="btn btn-secondary sk-dropdown-toggle" type="button" data-bs-toggle="dropdown">Secondary</button>
+            <button class="btn btn-secondary sk-dropdown-toggle" type="button" data-bs-toggle="dropdown">
+               <span>Secondary</span>
+               {{< icon icon="expand_more" >}}
+            </button>
 				 {{< template_dropdown >}}
 			  </div>
 			  <div class="dropup">
@@ -82,7 +85,10 @@ body_class = "bg-body-secondary"
 		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap">
 			  <div class="btn-group">
 				  <button class="btn btn-secondary" type="button">Secondary</button>
-				  <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn btn-secondary dropdown-toggle-split" type="button" data-bs-toggle="dropdown">
+               <span class="visually-hidden">Toggle Dropdown</span>
+               {{< icon icon="expand_more" >}}
+              </button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">

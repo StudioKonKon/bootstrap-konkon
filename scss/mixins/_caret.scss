@@ -1,100 +1,55 @@
-// scss-docs-start sk-caret-mixins
-$sk-caret-up-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 -960 960 960'><path d='m283-345-43-43 240-240 240 239-43 43-197-197-197 198Z' fill='currentColor'/></svg>") !default;
-$sk-caret-down-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 -960 960 960'><path d='M480-345 240-585l43-43 197 198 197-197 43 43-240 239Z' fill='currentColor'/></svg>") !default;
-$sk-caret-left-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 -960 960 960'><path d='M561-240 320-481l241-241 43 43-198 198 198 198-43 43Z' fill='currentColor'/></svg>") !default;
-$sk-caret-right-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 -960 960 960'><path d='m375-240-43-43 198-198-198-198 43-43 241 241-241 241Z' fill='currentColor'/></svg>") !default;
-// scss-docs-end caret-mixins
-
-
+$sk-enable-caret: true;
 $sk-caret-width: .125em;
-
-
-// scss-docs-start caret-mixins
-@mixin sk-caret-down(
-   $width: $sk-caret-width,
-   $spacing: $caret-spacing,
-   $vertical-align: $caret-vertical-align
-) {
-   border-top: $width solid;
-   border-right: $width solid;
-   transform: rotate(135deg);
-   vertical-align: $vertical-align;
-}
-
-
-@mixin sk-caret-up(
-   $width: $sk-caret-width,
-   $spacing: $caret-spacing,
-   $vertical-align: 0
-) {
-   border-top: $width solid;
-   border-right: $width solid;
-   transform: rotate(-45deg);
-   vertical-align: $vertical-align;
-}
-
-
-@mixin sk-caret-end(
-   $width: $sk-caret-width,
-   $spacing: $caret-spacing,
-   $vertical-align: $caret-vertical-align
-) {
-   border-top: $width solid;
-   border-right: $width solid;
-   transform: rotate(45deg);
-   vertical-align: $vertical-align / 2;
-}
-
-
-@mixin sk-caret-start(
-   $width: $sk-caret-width,
-   $spacing: $caret-spacing,
-   $vertical-align: $caret-vertical-align
-) {
-   border-top: $width solid;
-   border-right: $width solid;
-   transform: rotate(-135deg);
-   vertical-align: $vertical-align / 2;
-}
-
+$sk-caret-size: $sk-caret-width * 4;
+$sk-caret-vertical-align: $sk-caret-size * .375;
+$sk-caret-spacing: $sk-caret-size * 1.375;
 
 @mixin sk-caret(
    $direction: down,
    $width: $sk-caret-width,
-   $spacing: $caret-spacing,
-   $vertical-align: $caret-vertical-align
+   $size: $sk-caret-size,
+   $spacing: $sk-caret-spacing,
+   $vertical-align: $sk-caret-vertical-align
 ) {
-   @if $enable-caret {
+   @if $sk-enable-caret {
       &::after {
          content: "";
          display: inline-block;
-         width: .5em;
-         height: .5em;
-         margin-left: .5em;
-         line-height: .5em +  + $sk-caret-width;
+         width: $size;
+         height: $size;
+         margin-left: $spacing;
+         border-top: $width solid;
+         border-right: $width solid;
+         box-sizing: content-box;
          
          @if $direction == down {
-            @include sk-caret-down($width);
+            transform: rotate(135deg);
+            vertical-align: $sk-caret-vertical-align;
          } @else if $direction == up {
-            @include sk-caret-up($width);
+            transform: rotate(-45deg);
+            vertical-align: -$sk-caret-vertical-align;
          } @else if $direction == end {
-            @include sk-caret-end($width);
+            transform: rotate(45deg);
+            vertical-align: 0;
          }
       }
 
       @if $direction == start {
          &::after {
-         display: none;
+            display: none;
          }
 
          &::before {
             content: "";
             display: inline-block;
-            width: .5em;
-            height: .5em;
-            margin-right: .5em;
-            
-            @include sk-caret-start($width);
+            width: $size;
+            height: $size;
+            margin-right: $spacing;
+            border-top: $width solid;
+            border-right: $width solid;
+            transform: rotate(-135deg);
+            box-sizing: content-box;
+            vertical-align: 0;
          }
       }
 

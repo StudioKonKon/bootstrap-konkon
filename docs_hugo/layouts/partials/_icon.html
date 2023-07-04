@@ -1,0 +1,58 @@
+{{/* https://github.com/RoneoOrg/hugo-shortcode-roneo-collection  */}}
+
+{{ $svg_dir := "svg/material-symbols" }}
+{{ $icon_ns := "material-symbols" }}
+{{ $icon_cl := "svg-icon" }}
+
+{{ $item := "" }}
+{{ $theme := "" }}
+{{ $class := "" }}
+{{ $href := "" }}
+{{ $title := "" }}
+
+{{ if reflect.IsMap . }}
+   {{ $item = .icon }}
+   {{ $theme = .theme }}
+   {{ $class = .class }}
+   {{ $title = .title }}
+{{ else }}
+   {{ $item = . }}
+{{ end }}
+
+{{ $theme := $theme | default "outlined" }}
+{{ $classes := "" }}
+{{ $file := "" }}
+
+{{/* ?? Check data type ? See https://www.brijumaquio.com/get-data-type-in-hugo-framework  */}}
+{{ if eq (printf "%T" $item) "*resources.resourceAdapter" }}
+   {{ $file = $item }}
+{{ else if eq (printf "%T" $item) "string" }}
+   {{ $folder := $theme }}
+   {{ $classes = ( slice $icon_cl ( print $icon_ns "-" $theme ) ( print $icon_ns "-" $item ) ) }}
+   {{ $path := printf "%s/%s/%s.svg" $svg_dir $folder $item }}
+   {{ $file = resources.Get $path }}
+{{ else }}
+   {{/* Get the filename, remove extension, add custom classes  */}}
+   {{ $classes = ( slice $icon_cl ( replace ( path.Base $item ) ".svg" "" | anchorize ) $icon_ns ) }}
+   {{ $file = resources.Get $item }}
+{{ end }}
+
+{{ with $class }}{{ $classes = $classes | append . }}{{ end }}
+{{ $classes := delimit $classes " " }}
+
+{{ if eq $file nil }}
+   {{ warnf "Error detected in icon shortcode: Icon not found: %s" $file }}
+   {{ return }}
+{{ end }}
+
+{{ $content := replaceRE "<!--[\\s\\S]*-->" "" $file.Content }}
+{{ $pattern := `[\s\S]*?<svg([\s\S]*)?>([\s\S]*)(<title>[\s\S]*</title>)?([\s\S]*)</svg>([\s\S]*)?` }}
+{{ $replaceWith := "" }}
+
+{{ with $title }}
+   {{ $replaceWith = printf `<svg aria-hidden="true" class="%s" ${1}>${2}<title>%s</title>${4}</svg>` $classes . }}
+{{ else }}
+   {{ $replaceWith = printf `<svg aria-hidden="true" class="%s" ${1}>${2}${3}${4}</svg>` $classes }}
+{{ end }}
+
+{{ return ( $content | replaceRE $pattern $replaceWith | safeHTML ) }}

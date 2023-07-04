@@ -1,0 +1,26 @@
+{{- $icon := "" -}}
+{{- $theme := "" -}}
+{{- $class := "" -}}
+{{- $href := "" -}}
+
+{{- if .IsNamedParams }}
+   {{- $icon = .Get "icon" -}}
+   {{- $theme = ( .Get "theme" |  default "outlined" ) -}}
+   {{- $class = .Get "class" -}}
+   {{- $href = .Get "href" -}}
+{{- else }}
+   {{- $icon = .Get 0 -}}
+   {{- $theme = ( .Get 1 |  default "outlined" ) -}}
+   {{- $class = .Get 2 -}}
+   {{- $href = .Get 3 -}}
+{{- end -}}
+
+{{- if not $icon -}}
+   {{- errorf `Missing required "icon". Shortcode: "icon".` -}}
+{{- end -}}
+
+{{- with .Page.Resources.GetMatch $icon -}}
+   {{- $icon = . -}}
+{{- end -}}
+
+{{- partial "icon" ( dict "icon" $icon "theme" $theme "class" $class "href" $href ) -}}
