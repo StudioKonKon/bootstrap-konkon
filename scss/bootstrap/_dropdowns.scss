@@ -2,25 +2,6 @@
   [Dropdown menu]
 */
 
-.sk-dropdown-toggle {
-   white-space: nowrap;
-
-  // Generate the caret automatically
-   @include sk-caret();
-  
-   .dropup & { @include sk-caret(up); }
-   .dropend & { @include sk-caret(end); }
-   .dropstart & { @include sk-caret(start); }
-}
-
-.sk-dropdown-toggle,
-.dropdown-toggle-split {
-   .svg-icon {
-      display: inline-block;
-      width: 1.5em;
-      height: 1.5em;
-   }
-}
 
 //Dropdown Menu Style
 .dropdown-menu {

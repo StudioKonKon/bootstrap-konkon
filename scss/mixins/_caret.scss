@@ -1,36 +1,48 @@
-$sk-enable-caret: true;
-$sk-caret-width: .125em;
-$sk-caret-size: $sk-caret-width * 4;
-$sk-caret-vertical-align: $sk-caret-size * .375;
-$sk-caret-spacing: $sk-caret-size * 1.375;
-
-@mixin sk-caret(
+// scss-docs-start sk-caret-mixins
+@mixin caret(
    $direction: down,
    $width: $sk-caret-width,
    $size: $sk-caret-size,
    $spacing: $sk-caret-spacing,
    $vertical-align: $sk-caret-vertical-align
 ) {
-   @if $sk-enable-caret {
+   @if enable-caret {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+   
       &::after {
          content: "";
          display: inline-block;
          width: $size;
          height: $size;
-         margin-left: $spacing;
+         margin: 0;
          border-top: $width solid;
+         border-left: none;
+         border-bottom: none;
          border-right: $width solid;
-         box-sizing: content-box;
+         box-sizing: border-box;
+         vertical-align: 0;
          
          @if $direction == down {
             transform: rotate(135deg);
-            vertical-align: $sk-caret-vertical-align;
+            margin-top: -($size * .5);
+            vertical-align: $size * .5;
+            margin-left: $spacing + ($size * .25);
          } @else if $direction == up {
             transform: rotate(-45deg);
-            vertical-align: -$sk-caret-vertical-align;
+            margin-top: $size * .5;
+            margin-left: $spacing + ($size * .25);
          } @else if $direction == end {
             transform: rotate(45deg);
-            vertical-align: 0;
+            margin-left: $spacing;
+         }
+      }
+      
+      @if $direction == end {
+         &.dropdown-toggle-split::after {
+            margin-left: -($size * .25);
+            margin-right: ($size * .25);
          }
       }
 
@@ -44,12 +56,19 @@ $sk-caret-spacing: $sk-caret-size * 1.375;
             display: inline-block;
             width: $size;
             height: $size;
+            margin: 0;
             margin-right: $spacing;
             border-top: $width solid;
+            border-left: none;
+            border-bottom: none;
             border-right: $width solid;
+            box-sizing: border-box;
             transform: rotate(-135deg);
-            box-sizing: content-box;
-            vertical-align: 0;
+         }
+            
+         &.dropdown-toggle-split::before {
+            margin-left: ($size * .25);
+            margin-right: -($size * .25);
          }
       }
 

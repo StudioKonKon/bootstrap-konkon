@@ -63,45 +63,43 @@ body_class = "bg-body-secondary"
 		<div class="card-body text-center">
 		   <div class="mt-2 mb-2 hstack gap-2 justify-content-center flex-wrap">
 			  <div>
-            <button class="btn btn-secondary sk-dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
                <span>Secondary</span>
-               {{< icon icon="expand_more" >}}
             </button>
 				 {{< template_dropdown >}}
 			  </div>
 			  <div class="dropup">
-            <button class="btn btn-primary sk-dropdown-toggle" type="button" data-bs-toggle="dropdown">Primary</button>
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">Primary</button>
 				 {{< template_dropdown >}}
 			  </div>
 			  <div class="dropstart">
-				 <button class="btn btn-danger sk-dropdown-toggle" type="button" data-bs-toggle="dropdown">Danger</button>
+				 <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Danger</button>
 				 {{< template_dropdown >}}
 			  </div>
 			  <div class="dropend">
-				 <button class="btn btn-warning sk-dropdown-toggle" type="button" data-bs-toggle="dropdown">Warning</button>
+				 <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown">Warning</button>
 				 {{< template_dropdown >}}
 			  </div>
 		   </div>
 		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap">
 			  <div class="btn-group">
 				  <button class="btn btn-secondary" type="button">Secondary</button>
-				  <button class="btn btn-secondary dropdown-toggle-split" type="button" data-bs-toggle="dropdown">
+				  <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown">
                <span class="visually-hidden">Toggle Dropdown</span>
-               {{< icon icon="expand_more" >}}
               </button>
 				  {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group">
+			  <div class="btn-group dropup">
 				  <button class="btn btn-secondary" type="button">Primary</button>
 				  <button class="btn btn-primary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group">
+			  <div class="btn-group dropstart">
 				  <button class="btn btn-warning" type="button">Warning</button>
 				  <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
-			  <div class="btn-group">
+			  <div class="btn-group dropend">
 				  <button class="btn btn-success" type="button">Success</button>
 				  <button class="btn btn-success dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
@@ -184,23 +182,23 @@ body_class = "bg-body-secondary"
 		   </div>
 		   <div class="mt-2 hstack gap-2 justify-content-center flex-wrap">
 			  <div class="btn-group">
-				  <button class="btn rounded-start-pill btn-outline-primary" type="button">Primary</button>
-				  <button class="btn rounded-end-pill btn-primary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn rounded-start-4 btn-outline-primary" type="button">Primary</button>
+				  <button class="btn rounded-end-4 btn-primary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
-				  <button class="btn rounded-start-pill btn-outline-danger" type="button">Primary</button>
-				  <button class="btn rounded-end-pill btn-danger dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn rounded-start-4 btn-outline-danger" type="button">Primary</button>
+				  <button class="btn rounded-end-4 btn-danger dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
-				  <button class="btn rounded-start-pill btn-outline-warning" type="button">Warning</button>
-				  <button class="btn rounded-end-pill btn-warning dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn rounded-start-4 btn-outline-warning" type="button">Warning</button>
+				  <button class="btn rounded-end-4 btn-warning dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 			  <div class="btn-group">
-				  <button class="btn rounded-start-pill btn-outline-success" type="button">Success</button>
-				  <button class="btn rounded-end-pill btn-success dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
+				  <button class="btn rounded-start-4 btn-outline-success" type="button">Success</button>
+				  <button class="btn rounded-end-4 btn-success dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"><span class="visually-hidden">Toggle Dropdown</span></button>
 				  {{< template_dropdown >}}
 			  </div>
 		   </div>
@@ -378,11 +376,11 @@ body_class = "bg-body-secondary"
 				 <button class="btn btn-secondary" type="button"><i class="icon zmdi zmdi-settings"></i></button>
 			  </div>
 		   </div>
-		   <div class="btn-group btn-group-justified mt-2" role="group">
-			  <a class="btn btn-secondary" href="#">Home</a>
-			  <a class="btn btn-secondary" href="#">News Feed</a>
-			  <a class="btn btn-secondary" href="#">About</a>
-			  <a class="btn btn-secondary" href="#">Contact</a>
+		   <div class="btn-group btn-group-justifieds w-100 justify-content-between mt-2" role="group">
+			  <a class="btn btn-secondary w-100" href="#">Home</a>
+			  <a class="btn btn-secondary w-100" href="#">News Feed</a>
+			  <a class="btn btn-secondary w-100" href="#">About</a>
+			  <a class="btn btn-secondary w-100" href="#">Contact</a>
 		   </div>
 		</div>
 	 </div>

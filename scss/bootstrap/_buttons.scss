@@ -77,13 +77,6 @@
    }
 }
 
-
-//Button with rounded borders
-.btn-rounded {
-	@include border-radius($font-size-base * $btn-line-height);
-}
-
-
 //Big buttons
 .btn-big
 {
@@ -106,6 +99,6 @@
 	min-width: $btn-min-width;
 
 	.icon {
-		vertical-align: middle;
+		vertical-align: 0;
 	}
 }

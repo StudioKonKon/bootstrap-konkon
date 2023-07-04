@@ -50,6 +50,14 @@ $modal-colors:		() !default;
 
 $body-bg-light:	#eef0f2;
 
+
+// Theme Caret
+$sk-caret-width: .125em;
+$sk-caret-size: .5em;
+$sk-caret-vertical-align: $sk-caret-size * .375;
+$sk-caret-spacing: $sk-caret-size * .85;
+
+
 // Theme Colours
 $sk-primary:		#5f99f5 !default;
 $sk-secondary:	#d9d9d9 !default;
