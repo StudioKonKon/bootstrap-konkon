@@ -318,6 +318,7 @@ $card-border-color:        rgba($black, .05);
 //
 // Dropdown menu container and contents.
 
+$dropdown-min-width:			   14.231rem;
 $dropdown-padding-y:			   map-get($spacers, 4) - $spacer;
 $dropdown-divider-margin-y:   map-get($spacers, 1);
 $dropdown-box-shadow:         0px 0px 6px 0px rgba(0, 0, 0, .12);

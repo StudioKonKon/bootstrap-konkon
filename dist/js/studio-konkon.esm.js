@@ -1209,7 +1209,7 @@ class Sidebar extends BaseComponent {
     if (!this._config.scroll) {
       new ScrollBarHelper().hide();
     }
-    this._element.setAttribute("aria-sidebar", true);
+    this._element.setAttribute("aria-modal", true);
     this._element.setAttribute("role", "dialog");
     this._element.classList.add(CLASS_NAME_SHOWING, CLASS_NAME_OPEN);
     const completeCallBack = () => {

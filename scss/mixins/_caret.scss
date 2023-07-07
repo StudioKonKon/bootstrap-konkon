@@ -4,7 +4,7 @@
    $width: $sk-caret-width,
    $size: $sk-caret-size,
    $spacing: $sk-caret-spacing,
-   $vertical-align: $sk-caret-vertical-align
+   $vertical-align: 0
 ) {
    @if enable-caret {
       display: inline-flex;

@@ -87,18 +87,29 @@
 
 	> .icon {
 		display: block;
-		font-size: $font-size-base * 2;
+		font-size: 2em;
 		line-height: 1;
-		margin-bottom: .538rem;
+		margin-bottom: map-get($spacers, 2);
 	}
 }
 
 // Social buttons
-.btn-social,
-.btn-social-outline {
-	min-width: $btn-min-width;
+.btn-icon-1x1 {
+   display: inline-flex;
+   align-items: center;
+	aspect-ratio: 1 / 1;
 
 	.icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1em;
+      height: 1em;
+      line-height: 1;
 		vertical-align: 0;
+      
+      &::before {
+         font-size: 1.25em;
+      }
 	}
 }

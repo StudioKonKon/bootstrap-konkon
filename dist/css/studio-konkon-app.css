@@ -118,6 +118,9 @@
   flex: 0 0 auto;
   padding-right: 1.5rem;
 }
+.sk-right-navbar .dropdown-toggle::after {
+  display: none;
+}
 
 .sidebar-toggle,
 .sk-icons-nav > .nav-item > .nav-link {

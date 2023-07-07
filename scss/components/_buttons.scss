@@ -1,13 +1,13 @@
 //Social buttons colors
 @if $enable-btn-social-colors {
 	@each $social-colors, $social-color in $social-colors {
-		.btn-social.btn-#{$social-colors} {
+		.btn-#{$social-colors} {
 			@include button-variant($social-color, $social-color);
 		}
 	}
 
 	@each $social-colors, $social-color in $social-colors {
-		.btn-social-outline.btn-#{$social-colors} {
+		.btn-outline-#{$social-colors} {
 			@include button-outline-variant($social-color);
 		}
 	}
