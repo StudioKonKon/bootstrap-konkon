@@ -11,38 +11,9 @@
 	vertical-align: middle;
 }
 
-//Card body
-.card-body {
-	.content-item-meta {
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		display: inline-block;
-		text-transform: uppercase;
-		color: $gray-500;
-		font-weight: $font-weight-normal;
-		margin-bottom: 0;
-		
-		> span {
-			color: $primary;
-		}
-	}
-		
-	small {
-		&.content-item-meta {
-			font-size: $card-metadata-font-size;
-		}
-	}
-	
-	.card-text-no-title {
-		margin-top: $card-notitle-margin-top;
-	}
-}
-
 //Card heading
 .card-header {
 	border-bottom-width: 0;
-	@include border-top-radius($card-border-radius);
 
 	.tools {
 		float: right;
@@ -166,12 +137,6 @@
 	
 	small {
 		font-size: $font-size-sm;
-	}
-}
-
-.card-group {
-	.card {
-		margin-bottom: $card-margin-bottom;
 	}
 }
 

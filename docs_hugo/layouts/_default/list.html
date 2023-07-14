@@ -11,7 +11,7 @@
          <div class="card h-100 my-0">
    {{ partial "image-placeholder" ( dict "class" "card-img-top" "height" "140" "text" .Title "background" "#7952b3" ) }}
             <div class="card-body">
-               <small class="content-item-meta"><span class="text-konkon">Section</span> {{ .Type }}</small>
+               <small class="d-inline-block text-truncate text-uppercase text-body-tertiary fw-bold"><span class="text-konkon">Section</span> {{ .Type }}</small>
                <h4 class="card-title">{{ .Title }}</h4>
                <p class="mb-0">{{ with .Description }}{{ . }}{{ else }}No Description{{ end }}</p>
                <a href="{{ .Permalink }}" class="stretched-link"></a>
