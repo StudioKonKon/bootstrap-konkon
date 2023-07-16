@@ -60,10 +60,14 @@ body_class = "bg-body-secondary"
 	</div>
 	<div class="col-lg-4">
 	  <div class="card card-default">
-		<div class="card-header card-header-divider">
-			<div class="tools"><span class="icon zmdi zmdi-close"></span></div>
-			<h5 class="card-title mb-0">Dismissable card</h5>
-			<h6 class="card-subtitle fw-normal">Card subtitle description</h6>
+		<div class="card-header card-header-divider hstack gap-2">
+			<div class="flex-fill">
+            <h5 class="card-title mb-0">Dismissable card</h5>
+            <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
+         </div>
+         <div class="hstack gap-1">
+            <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="icon zmdi zmdi-close"></span></a>
+         </div>
 		</div>
 		<div class="card-body">
 		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -73,21 +77,25 @@ body_class = "bg-body-secondary"
 	</div>
 	<div class="col-lg-4">
 	  <div class="card card-border">
-		<div class="card-header card-header-divider">
-		  <div class="tools dropdown">
-			<span class="icon zmdi zmdi-edit"></span>
-			<span class="icon zmdi zmdi-refresh-sync"></span>
-			<a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><span class="icon zmdi zmdi-more-vert"></span></a>
-			<div class="dropdown-menu" role="menu">
-				<a class="dropdown-item" href="#">Action</a>
-				<a class="dropdown-item" href="#">Another action</a>
-				<a class="dropdown-item" href="#">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="#">Separated link</a>
-			</div>
-		  </div>
-			<h5 class="card-title mb-0">Card with tools</h5>
-			<h6 class="card-subtitle fw-normal">Card subtitle description</h6>
+		<div class="card-header card-header-divider hstack gap-2">
+         <div class="flex-fill">
+            <h5 class="card-title mb-0">Card with tools</h5>
+            <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
+         </div>
+         <div class="hstack gap-1">
+            <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="icon zmdi zmdi-edit"></span></a>
+            <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="icon zmdi zmdi-refresh-sync"></span></a>
+            <div class="dropdown">
+               <a class="link-secondary fs-4 px-2"" href="#" role="button" data-bs-toggle="dropdown"><span class="icon zmdi zmdi-more-vert"></span></a>
+               <div class="dropdown-menu" role="menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Separated link</a>
+               </div>
+            </div>
+         </div>
 		</div>
 		<div class="card-body">
 		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -108,27 +116,36 @@ body_class = "bg-body-secondary"
 		</div>
 	  </div>
 	</div>
+   
 	<div class="col-lg-4">
-	  <div class="card card-default card-contrast">
-		<div class="card-header">
-			<div class="tools">
-				<span class="icon zmdi zmdi-close"></span>
-			</div>
-			<h5 class="card-title mb-0">Body contrast</h5>
-			<h6 class="card-subtitle fw-normal">Card subtitle description</h6>
+	  <div class="card card-default bg-body text-body">
+		<div class="card-header hstack gap-2">
+			<div class="flex-fill">
+            <h5 class="card-title mb-0">Body contrast</h5>
+            <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
+         </div>
+         <div class="hstack gap-1">
+            <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="icon zmdi zmdi-close"></span></a>
+         </div>
 		</div>
-		<div class="card-body card-body-contrast">
+		<div class="card-body bg-body-tertiary text-body">
 		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		</div>
 	  </div>
 	</div>
+   
 	<div class="col-lg-4">
 	  <div class="card card-border card-contrast">
-		<div class="card-header card-header-contrast">
-         <div class="tools"><span class="icon zmdi zmdi-refresh-sync"></span><span class="icon zmdi zmdi-close"></span></div>
-         <h5 class="card-title mb-0">Card with body contrast</h5>
-         <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
+		<div class="card-header hstack gap-2">
+			<div class="flex-fill">
+            <h5 class="card-title mb-0">Card with body contrast</h5>
+            <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
+         </div>
+         <div class="hstack gap-1">
+            <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+            <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+         </div>
 		</div>
 		<div class="card-body">
 		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -145,17 +162,23 @@ body_class = "bg-body-secondary"
 <div class="row g-4 mb-4">
 
 <!-- konkon //-->
+{{< time.inline >}}
+{{ $list := slice "konkon" "primary" "secondary" "success" "info" "warning" "danger" "light" "dark" }}
+{{ range $list }}
+{{ $key :=  . | safeHTMLAttr }}
 <div class="col-lg-4">
-  <div class="card card-border-color card-border-color-konkon">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Border KonKon</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
+  <div class="card card-border-color card-border-color-{{ $key }}">
+   <div class="card-header card-header-divider hstack gap-2">
+      <div class="flex-fill">
+         <h5 class="card-title mb-0">Border {{ $key }}</h5>
+         <h6 class="card-subtitle text-body-secondary fw-normal">Card subtitle description</h6>
+      </div>
+      <div class="hstack">
+         <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+      </div>
+   </div>
 	<div class="card-body">
 	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -164,16 +187,18 @@ body_class = "bg-body-secondary"
 </div>
   
 <div class="col-lg-4">
-  <div class="card card-full-konkon">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">KonKon Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
+  <div class="card bg-{{ $key }}-subtle text-{{ $key }}-emphasis">
+   <div class="card-header card-header-divider border-{{ $key }} hstack gap-2">
+      <div class="flex-fill">
+         <h5 class="card-title mb-0">Card {{ $key }}</h5>
+         <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
+      </div>
+      <div class="hstack">
+         <a class="link-{{ $key }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-{{ $key }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-{{ $key }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+      </div>
+   </div>
 	<div class="card-body">
 	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -182,515 +207,24 @@ body_class = "bg-body-secondary"
 </div>
   
 <div class="col-lg-4">
-  <div class="card card-full-color card-full-konkon">
-	<div class="card-header card-header-contrast card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">KonKon Contrast Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
+  <div class="card bg-{{ $key }}-subtle text-{{ $key }}-emphasis">
+   <div class="card-header card-header-contrast card-header-divider mx-0 px-4 border-{{ $key }} bg-{{ $key }} hstack gap-2" style="--bs-bg-opacity:.1;">
+      <div class="flex-fill">
+         <h5 class="card-title mb-0">{{ $key }} Contrast Card</h5>
+         <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
+      </div>
+      <div class="hstack">
+         <a class="link-{{ $key }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-{{ $key }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-{{ $key }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+      </div>
+   </div>
 	<div class="card-body">
 	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 	</div>
   </div>
 </div>
-
-<!-- primary //-->
-<div class="col-lg-4">
-  <div class="card card-border-color card-border-color-primary">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Primary KonKon</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-primary">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Primary Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-color card-full-primary">
-	<div class="card-header card-header-contrast card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Primary Contrast Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-
-<!-- secondary //-->
-<div class="col-lg-4">
-  <div class="card card-border-color card-border-color-secondary">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Border Secondary</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-secondary">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Secondary Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-color card-full-secondary">
-	<div class="card-header card-header-contrast card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Secondary Contrast Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-
-<!-- success //-->
-<div class="col-lg-4">
-  <div class="card card-border-color card-border-color-success">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Border Success</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-success">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Success Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-color card-full-success">
-	<div class="card-header card-header-contrast card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Success Contrast Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-
-<!-- info //-->
-<div class="col-lg-4">
-  <div class="card card-border-color card-border-color-info">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Border Info</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-info">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Info Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-color card-full-info">
-	<div class="card-header card-header-contrast card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Info Contrast Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-
-<!-- warning //-->
-<div class="col-lg-4">
-  <div class="card card-border-color card-border-color-warning">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Border Warning</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-warning">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Warning Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-color card-full-warning">
-	<div class="card-header card-header-contrast card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Warning Contrast Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-
-<!-- danger //-->
-<div class="col-lg-4">
-  <div class="card card-border-color card-border-color-danger">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Border Danger</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-danger">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Danger Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-color card-full-danger">
-	<div class="card-header card-header-contrast card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Danger Contrast Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-
-<!-- light //-->
-<div class="col-lg-4">
-  <div class="card card-border-color card-border-color-light">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Border Light</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-light">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Light Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-color card-full-light">
-	<div class="card-header card-header-contrast card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Light Contrast Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-
-<!-- dark //-->
-<div class="col-lg-4">
-  <div class="card card-border-color card-border-color-dark">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Border Dark</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-dark">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Dark Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-color card-full-dark">
-	<div class="card-header card-header-contrast card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Dark Contrast Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-
-<!-- default //-->
-<div class="col-lg-4">
-  <div class="card card-border-color card-border-color">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Border Default</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full">
-	<div class="card-header card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Default Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
-  
-<div class="col-lg-4">
-  <div class="card card-full-color card-full">
-	<div class="card-header card-header-contrast card-header-divider">
-	  <div class="tools">
-		<span class="icon zmdi zmdi-edit"></span>
-		<span class="icon zmdi zmdi-refresh-sync"></span>
-		<span class="icon zmdi zmdi-close"></span>
-	  </div>
-      <h5 class="card-title mb-0">Default Contrast Card</h5>
-      <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-	</div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div>
+{{ end }}
+{{< /time.inline >}}
 

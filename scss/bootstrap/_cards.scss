@@ -14,34 +14,6 @@
 //Card heading
 .card-header {
 	border-bottom-width: 0;
-
-	.tools {
-		float: right;
-		font-size: 0;
-
-		> a {
-			display: inline-block;
-		}
-
-		.icon {
-			display: inline-block;
-			font-size: $card-heading-icon-size;
-			line-height: $card-heading-icon-line-height;
-			vertical-align: middle;
-			cursor: pointer;
-			color: $card-heading-icon-color;
-			min-width: $card-heading-icon-size;
-			text-align: center;
-
-			& + .icon {
-				margin-left: $card-heading-icon-separation;
-			}
-
-			&:hover {
-				color: $card-heading-icon-hover;
-			}
-		}
-	}
 }
 
 //Card title and subtitle
@@ -56,13 +28,9 @@
 	display: block;
 }
 
-.card-subtitle {
-	color: darken($white, 56%);
-}
-
 //Card heading divider
 .card-header-divider {
-	border-bottom: 1px solid darken($white, 15%);
+	border-bottom: 1px solid var(--#{$prefix}border-color);
 	margin: 0 1.538rem;
 	padding-left: 0;
 	padding-right: 0;
