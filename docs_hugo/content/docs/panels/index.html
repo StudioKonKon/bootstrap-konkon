@@ -163,11 +163,15 @@ body_class = "bg-body-secondary"
 
 <!-- konkon //-->
 {{< time.inline >}}
-{{ $list := slice "konkon" "primary" "secondary" "success" "info" "warning" "danger" "light" "dark" }}
-{{ range $list }}
-{{ $key :=  . | safeHTMLAttr }}
+{{- $list := slice "konkon" "primary" "secondary" "success" "info" "warning" "danger" "light" "dark" "default" -}}
+{{- range $list }}
+{{- $key :=  . | safeHTMLAttr -}}
+{{- $key_link :=  $key -}}
+{{- if eq $key "light" }}{{ $key_link =  "body-emphasis" }}{{ end -}}
+{{- if eq $key "dark" }}{{ $key_link =  "body-emphasis" }}{{ end -}}
+{{- if eq $key "default" }}{{ $key_link =  "body-emphasis" }}{{ end -}}
 <div class="col-lg-4">
-  <div class="card card-border-color card-border-color-{{ $key }}">
+  <div class="card card-border card-border-{{ $key }}">
    <div class="card-header card-header-divider hstack gap-2">
       <div class="flex-fill">
          <h5 class="card-title mb-0">Border {{ $key }}</h5>
@@ -194,9 +198,9 @@ body_class = "bg-body-secondary"
          <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
       </div>
       <div class="hstack">
-         <a class="link-{{ $key }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-         <a class="link-{{ $key }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-         <a class="link-{{ $key }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+         <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-{{ $key_link }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-{{ $key_link }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
       </div>
    </div>
 	<div class="card-body">
@@ -214,9 +218,9 @@ body_class = "bg-body-secondary"
          <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
       </div>
       <div class="hstack">
-         <a class="link-{{ $key }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-         <a class="link-{{ $key }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-         <a class="link-{{ $key }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+         <a class="link-{{ $key_link }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-{{ $key_link }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-{{ $key_link }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
       </div>
    </div>
 	<div class="card-body">
@@ -225,6 +229,6 @@ body_class = "bg-body-secondary"
 	</div>
   </div>
 </div>
-{{ end }}
+{{ end -}}
 {{< /time.inline >}}
 

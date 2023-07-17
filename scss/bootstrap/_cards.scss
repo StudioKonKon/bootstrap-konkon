@@ -24,10 +24,6 @@
 	line-height: inherit;
 }
 
-.card-title {
-	display: block;
-}
-
 //Card heading divider
 .card-header-divider {
 	border-bottom: 1px solid var(--#{$prefix}border-color);
@@ -47,19 +43,12 @@
 	box-shadow: none;
 }
 
-//Card border
-.card-border {
-	box-shadow: none;
-	border: 1px solid $gray-400;
-}
-
 //Card contrast
 .card:not(.card-contrast) {
    --#{$prefix}card-cap-bg: $card-bg;
 }
    
 .card-contrast {
-   
 	.card-header {
 		margin: 0;
 	}
@@ -70,22 +59,10 @@
 	}
 }
 
-// Card body contrast
-.card-body-contrast {
-	background-color: darken($white, 4%);
-}
-
-// Card border color
-.card-border-color {
-	border-top: 3px solid darken($white, 21%);
-}
-
-@if $enable-card-border-colors {
-	@each $theme-colors, $theme-color in $theme-colors {
-		.card-border-color-#{$theme-colors} {
-			border-top-color: $theme-color;
-		}
-	}
+.card-border {
+	box-shadow: none;
+	border: $card-border-width solid $card-border-color;
+	border-top: 3px solid var(--#{$prefix}secondary);
 }
 
 .card-fullwidth {

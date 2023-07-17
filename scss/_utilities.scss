@@ -1,0 +1,15 @@
+// Utilities
+
+$utilities: map-merge(
+   (
+      "card-border-color": (
+         property: border-top-color,
+         class: card-border,
+         local-vars: (
+            "border-opacity": 1
+         ),
+         values: $utilities-border-colors
+      )
+   ),
+   $utilities
+);
