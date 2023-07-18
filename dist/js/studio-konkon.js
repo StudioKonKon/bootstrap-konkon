@@ -1,5 +1,5 @@
 /*!
-  * Studio KonKon v1.10.122-beta (https://play.studiokonkon.com/)
+  * Studio KonKon v1.12.0-beta (https://play.studiokonkon.com/)
   * Copyright 2011-2023 Studio KonKon
   * Licensed under MIT (https://github.com/StudioKonKon/bootstrap-konkon/blob/master/LICENSE)
   */

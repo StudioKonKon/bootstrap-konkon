@@ -1,13 +1,13 @@
 {
    "theme_color": "#fe669e",
    "author": "Studio KonKon",
-   "current_version": "1.10.122-beta",
+   "current_version": "1.12.0-beta",
    "docs_version": "5.3.0",
    "github_org": "https://github.com/StudioKonKon",
    "repo": "https://github.com/StudioKonKon/bootstrap-konkon",
    "jsdelivr": "https://www.jsdelivr.com/package/gh/StudioKonKon/bootstrap-konkon",
    "desciption": "",
-   "copyright": "Copyright of Studio KonKon &copy; 2018-2022<span class='d-none d-sm-inline'> | </span><br class='d-block d-sm-none' />Powered by Hugo &amp; Bootstrap v5",
+   "copyright": "Copyright of Studio KonKon &copy; 2018-2023<span class='d-none d-sm-inline'> | </span><br class='d-block d-sm-none' />Powered by Hugo &amp; Bootstrap v5",
    "footer_message": "",
    "social_links": {
       "twitter": {
