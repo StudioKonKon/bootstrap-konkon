@@ -5,10 +5,6 @@ description = "More examples of cards that provide a flexible and extensible con
 body_class = "bg-body-secondary"
 	
 [[extra_css]]
-	src = "studio-konkon-cards"
-	type = "scss"
-	
-[[extra_css]]
 	src = "dev-sk-ui"
 	type = "scss"
    
@@ -171,23 +167,25 @@ body_class = "bg-body-secondary"
 {{- if eq $key "dark" }}{{ $key_link =  "body-emphasis" }}{{ end -}}
 {{- if eq $key "default" }}{{ $key_link =  "body-emphasis" }}{{ end -}}
 <div class="col-lg-4">
-  <div class="card card-border card-border-{{ $key }}">
-   <div class="card-header card-header-divider hstack gap-2">
-      <div class="flex-fill">
-         <h5 class="card-title mb-0">Border {{ $key }}</h5>
-         <h6 class="card-subtitle text-body-secondary fw-normal">Card subtitle description</h6>
-      </div>
-      <div class="hstack">
-         <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-         <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-         <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+   <div class="card">
+      <div class="border-top border-3 border-{{ $key }}" style="border-radius:var(--bs-card-border-radius);">
+         <div class="card-header card-header-divider border-{{ $key }}-subtle hstack gap-2">
+            <div class="flex-fill">
+               <h5 class="card-title mb-0">Border {{ $key }}</h5>
+               <h6 class="card-subtitle text-body-secondary fw-normal">Card subtitle description</h6>
+            </div>
+            <div class="hstack">
+               <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+               <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+               <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+            </div>
+         </div>
+         <div class="card-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+         </div>
       </div>
    </div>
-	<div class="card-body">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
 </div>
   
 <div class="col-lg-4">
