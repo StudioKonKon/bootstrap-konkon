@@ -1,16 +1,64 @@
 // Switch button
 .form-switch-onoff {
-	display: inline-block;
-	border-radius: $switch-border-radius;
-	width: $switch-width;
-	height: $switch-height;
-	line-height: $switch-line-height;
-	padding: $switch-padding;
-	position: relative;
-	vertical-align: middle;
-	text-align: left;
+   --#{$sk-variable-prefix}form-switch-on: "ON";
+   --#{$sk-variable-prefix}form-switch-off: "OFF";
+   --#{$sk-variable-prefix}form-switch-bg: #{$switch-bg};
+   --#{$sk-variable-prefix}form-switch-color: #{$switch-color};
+   --#{$sk-variable-prefix}form-switch-shadow-color: #{$switch-shadow-color};
+   --#{$sk-variable-prefix}form-switch-checked-bg: #{$switch-checked-bg};
+   --#{$sk-variable-prefix}form-switch-checked-color: #{$switch-checked-color};
+   --#{$sk-variable-prefix}form-switch-checked-shadow-color: #{$switch-checked-shadow-color};
+   
+   display: inline-block;
+   border-radius: $switch-border-radius;
+   min-height: 0;
+   padding: 0;
+   position: relative;
+   
+   .form-switch-label {
+      display: none;
+   }
+	
+	.form-check-label {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: map-get($spacers, 1);
+      min-width: $switch-width;
+		background-color: var(--#{$sk-variable-prefix}form-switch-bg);
+      outline: $switch-border;
+      border-radius: $switch-border-radius;
+      padding: $switch-padding;
+      line-height: $switch-line-height;
+      cursor: pointer;
+      
+      &::before {
+         order: 1;
+			content: "";
+         border-radius: 50%;
+         background-color: var(--#{$sk-variable-prefix}form-switch-color);
+         margin: 0;
+         height: $switch-label-width;
+         width: $switch-label-width;
+         flex: 0 0 $switch-label-width;
+         z-index: 1;
+         cursor: pointer;
+         background-clip: padding-box;
+      }
+      
+		&::after {
+         order: 2;
+         content: var(--#{$sk-variable-prefix}form-switch-off);
+			font-size: .8462rem;
+			font-weight: 600;
+			z-index: 0;
+			color: var(--#{$sk-variable-prefix}form-switch-color);
+         margin-right: map-get($spacers, 2);
+		}
+	}
   
-	.form-check-input {
+	.form-check-input {	
 		width: 1px;
 		height: 1px;
 		margin: 0;
@@ -18,96 +66,46 @@
 		position: absolute;
 		z-index: -1;
 		opacity: 0;
-	}
-	
-	.form-check-label {
-		background-color: darken($white, 30%);
-	}
-  
-	.form-switch-label {
-		border-radius: $switch-label-border-radius;
-		background-color: $white;
-		margin: 0;
-		height: $switch-label-height;
-		width: $switch-label-height;
-		z-index: 1;
-		display: inline-block;
-		cursor: pointer;
-		background-clip: padding-box;
-	
-		&:before {
-			position: absolute;
-			font-size: .8462rem;
-			font-weight: 600;
-			z-index: 0;
-			content: "";
-			right: 0;
-			display: block;
-			width: 100%;
-			height: 100%;
-			line-height: $switch-height;
-			top: 0;
-			text-align: right;
-			padding-right: .769rem;
-			color: $white;
-			border-radius: $switch-border-radius;
-			border: solid 1px transparent;
-		} 								    
-	}
-  
-	.form-check-input {
-		+ .form-check-label {
-			border-radius: $switch-border-radius;
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			padding: $switch-padding;
-		}
-		
+      
 		&:checked + .form-check-label {
-			background-color: $switch-bg;
+			background-color: var(--#{$sk-variable-prefix}form-switch-checked-bg);
 			
-			.form-switch-label {
-				float: right; 
-				border-color: darken($switch-bg, 5%);
-				
-				&:before {
-					color: $white;
-					left: 0;
-					text-align: left;
-					padding-left: .769rem;
-				}
+			&::before {
+            order: 2;
+            background-color: var(--#{$sk-variable-prefix}form-switch-checked-color);
 			}
+				
+         &::after {
+            order: 1;
+            color: var(--#{$sk-variable-prefix}form-switch-checked-color);
+            margin-left: map-get($spacers, 2);
+         }
 		}
 		
 		&:focus + .form-check-label {
-			.form-switch-label:before
-			{
-				box-shadow: 0 0 0 .15rem rgba(135,135,135,.3)
-			}
+         box-shadow: 0 0 0 $switch-focus-width var(--#{$sk-variable-prefix}form-switch-shadow-color);
 		}
 		
 		&:checked:focus + .form-check-label {
-			.form-switch-label:before {
-				box-shadow: 0 0 0 .15rem rgba(66,133,244,.5);
-			}
+         box-shadow: 0 0 0 $switch-focus-width var(--#{$sk-variable-prefix}form-switch-checked-shadow-color);
 		}
-	}
- 
-	.form-switch-label:before {
-		content: "OFF";
-	}
 	
-	.form-check-input:checked + .form-check-label .form-switch-label:before {
-		content: "ON";
+      &:checked + .form-check-label::after {
+         content: var(--#{$sk-variable-prefix}form-switch-on);
+      }
 	}
 }
 
-@each $state, $value in $theme-colors {
-	.form-switch-#{$state} {
-		@include switch-button-color($value);
-	}
+@each $color, $value in $theme-colors {
+   $color-rgb: to-rgb(color-contrast($value));
+   $bg-rgb: to-rgb($value);
+   $switch-color: RGBA($color-rgb, 1);
+   $switch-bg: RGBA(#{$bg-rgb}, 1);
+   $switch-shadow: RGBA(#{$bg-rgb}, $switch-focus-color-opacity);
+   
+   .form-switch-#{$color} {
+      --#{$sk-variable-prefix}form-switch-checked-bg: #{$switch-bg};
+      --#{$sk-variable-prefix}form-switch-checked-color: #{$switch-color};
+      --#{$sk-variable-prefix}form-switch-checked-shadow-color: #{$switch-shadow};
+   }
 }

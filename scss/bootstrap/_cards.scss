@@ -58,39 +58,3 @@
 		padding: $card-footer-padding;
 	}
 }
-
-.card-fullwidth {
-	.card-header {
-		margin: 0;
-		padding-left: 1.538rem;
-		padding-right: 1.538rem;
-	}
-	
-	.card-body {
-		padding-top: 1.231rem;
-	}
-}
-
-.card-footer {
-	border: none;
-	
-	small {
-		font-size: $font-size-sm;
-	}
-}
-
-@include media_size("phone-min") {
-	.card-group .card {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		flex-direction: column;
-	}
-}
-
-.card-full-color {
-	.card-header {
-		padding: $card-cap-padding-y $card-cap-padding-x;
-		margin: 0;
-	}
-}

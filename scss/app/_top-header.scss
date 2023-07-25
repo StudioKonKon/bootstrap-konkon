@@ -117,6 +117,7 @@
    font-size: $top-header-nav-icon-size;
    border-radius: 50%;
    color: $top-header-icon-color;
+   aspect-ratio: 1 / 1;
    
    &:hover {
       color: $top-header-icon-hover-color;
@@ -136,6 +137,7 @@
       width: 1em;
       height: 1em;
       text-align: center;
+      aspect-ratio: 1 / 1;
    }
    
    .icon {

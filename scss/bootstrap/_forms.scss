@@ -4,20 +4,19 @@
 
 // Fix text position issue
 .form-floating > .form-select {
-	line-height: 1.45;
+	line-height: $form-floating-line-height + .1;
 }
 
 %form-switch-svg {
-	background-image: escape-svg($form-switch-bg-image);
+   .form-check-input:not(:checked):focus {
+      background-image: escape-svg($form-switch-bg-image);
+   }
 }
 
 @each $state, $value in $theme-colors {
 	.form-switch-#{$state} {
 		@include switch-variant($value);
-		
-		.form-check-input:not(:checked):focus {
-			@extend %form-switch-svg;
-		}
+      @extend %form-switch-svg;
 	}
 }
 

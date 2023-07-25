@@ -8,11 +8,11 @@ $img-logo-contrast-path: "" !default;
 $fonts-path:             "../fonts" !default;
 $lib-path:               "../../lib" !default;
 
-$roboto-font-path:		"#{$fonts-path}/roboto" !default;
-$roboto:				"Roboto", Arial, sans-serif !default;
-$icons-font-path:		"#{$fonts-path}/" !default;
-$icons-font:			"Material-Design-Iconic-Font" !default;
-$icons-class:			"zmdi" !default;
+$roboto-font-path:       "#{$fonts-path}/roboto" !default;
+$roboto:                 "Roboto", Arial, sans-serif !default;
+$icons-font-path:        "#{$fonts-path}/" !default;
+$icons-font:             "Material-Design-Iconic-Font" !default;
+$icons-class:            "zmdi" !default;
 
 // Theme Variable Prefix
 $sk-variable-prefix: sk- !default;
@@ -34,222 +34,228 @@ $enable-btn-social-colors:    false !default;
 $custom-theme-colors: () !default;
 $social-colors: () !default;
 
-$sk-konkon:		       lighten($konkon-color, 6.1%);
-$card-konkon: 		    $sk-konkon;
-$dropdown-konkon:	    $sk-konkon;
-$modal-konkon:		    $sk-konkon;
+$sk-konkon:             lighten($konkon-color, 6.1%);
+$card-konkon:           $sk-konkon;
+$dropdown-konkon:       $sk-konkon;
+$modal-konkon:          $sk-konkon;
 
 // Maps
 $dropdown-colors: map-remove($theme-colors, "light", "secondary", "dark") !default;
 
 
 // Maps to remove from this code
-$sk-colors:		() !default;
-$modal-colors:		() !default;
+$sk-colors:      () !default;
+$modal-colors:   () !default;
 
-$body-bg-light:	#eef0f2;
+$body-bg-light:   #eef0f2;
 
 
 // Theme Caret
-$sk-caret-width: .125em;
-$sk-caret-size: .5em;
+$sk-caret-width:   .125em;
+$sk-caret-size:    .5em;
 $sk-caret-spacing: $sk-caret-size * .85;
 
 
 // Theme Colours
-$sk-primary:		#5f99f5 !default;
-$sk-secondary:	#d9d9d9 !default;
-$sk-success:		#37b358 !default;
-$sk-info:			#6ba4ff !default;
-$sk-warning:		#f6c163 !default;
-$sk-danger:		#eb6357 !default;
-$sk-light:			$light !default;
-$sk-dark:			#3f4850 !default;
+$sk-primary:      #5f99f5 !default;
+$sk-secondary:    #d9d9d9 !default;
+$sk-success:      #37b358 !default;
+$sk-info:         #6ba4ff !default;
+$sk-warning:      #f6c163 !default;
+$sk-danger:       #eb6357 !default;
+$sk-light:        $light !default;
+$sk-dark:         #3f4850 !default;
 
 $sk-colors: map-merge(
-	(
-		"primary":		$sk-primary,
-		"secondary":	$sk-secondary,
-		"success":		$sk-success,
-		"info":			$sk-info,
-		"warning":		$sk-warning,
-		"danger":		$sk-danger,
-		"light":		$sk-light,
-		"dark":			$sk-dark
-	),
-	$sk-colors
+   (
+      "primary":      $sk-primary,
+      "secondary":    $sk-secondary,
+      "success":      $sk-success,
+      "info":         $sk-info,
+      "warning":      $sk-warning,
+      "danger":       $sk-danger,
+      "light":        $sk-light,
+      "dark":         $sk-dark
+   ),
+   $sk-colors
 );
 
 
 // Color Scale
-$alert-icon-scale:			-15%;
-$alert-icon-bg-scale:		-80%;
+$alert-icon-scale:             -15%;
+$alert-icon-bg-scale:          -80%;
 
-$card-bg-scale:				-80%;
-$card-border-scale:			-70%;
-$card-color-scale:			40%;
+$card-bg-scale:                -80%;
+$card-border-scale:            -70%;
+$card-color-scale:              40%;
 
-$toast-bg-scale:			-60%;
-$toast-border-scale:		-50%;
-$toast-color-scale:			40%;
+$toast-bg-scale:               -60%;
+$toast-border-scale:           -50%;
+$toast-color-scale:             40%;
 
-$dropdown-bg-scale:			-20%;
-$dropdown-hover-bg-scale:	-5%;
+$dropdown-bg-scale:            -20%;
+$dropdown-hover-bg-scale:      -5%;
 
-$table-icon-color-scale: 		-70%;
-$table-icon-hover-color-scale:	-80%;
+$table-icon-color-scale:       -70%;
+$table-icon-hover-color-scale: -80%;
 
 
 //Table
-$table-icon-color:				darken($white, 37%);
-$table-hover-icon-color:		darken($white, 50%);
+$table-icon-color:             darken($white, 37%);
+$table-hover-icon-color:       darken($white, 50%);
 
-$table-header-border-width:		map-get($border-widths, 2);
-$table-responsive-white-space:	nowrap;
-$table-actions-font-size: 		$font-size-base + .385;
+$table-header-border-width:    map-get($border-widths, 2);
+$table-responsive-white-space: nowrap;
+$table-actions-font-size:      $font-size-base + .385;
 
 
 //Typography
-$display-heading-size:				3.077rem;
-$display-heading-margin:			map-get($spacers, 4) 0 map-get($spacers, 3);
-$display-description-size:			1.385rem;
-$display-description-line-height:	$display-description-size * $line-height-sm;
-$display-description-margin:		0 0 map-get($spacers, 8);
+$display-heading-size:            3.077rem;
+$display-heading-margin:          map-get($spacers, 4) 0 map-get($spacers, 3);
+$display-description-size:        1.385rem;
+$display-description-line-height: $display-description-size * $line-height-sm;
+$display-description-margin:      0 0 map-get($spacers, 8);
 
 
 // Buttons
 
-$btn-light-color:	$body-color;
-$btn-light-bg:		#fff;
-$btn-light-border:	#dbdbdb;
+$btn-light-color:       $body-color;
+$btn-light-bg:          #fff;
+$btn-light-border:      #dbdbdb;
 
-//$btn-min-width: 2.385rem;
+$btn-icon-size:         1.308em;
+$btn-icon-margin-left:  .308rem;
+$btn-icon-margin-right: .077rem;
 
-$btn-icon-size:			1.308em;
-$btn-icon-margin-left:	.308rem;
-$btn-icon-margin-right:	.077rem;
+$btn-group-padding-x:   .538rem;
 
-$btn-group-padding-x: .538rem;
 
 // Panels & Widget Panels
-$card-body-padding:         		map-get($spacers, 4);
-$card-default-heading-bg:			transparent !default;
+$card-body-padding:               map-get($spacers, 4);
+$card-default-heading-bg:         transparent !default;
 
-$card-heading-font-size:			1.385rem;
-$card-heading-font-weight:			$font-weight-light;
+$card-heading-font-size:          1.385rem;
+$card-heading-font-weight:        $font-weight-light;
 
-$card-heading-icon-color:			$gray-500;
-$card-heading-icon-hover:			$gray-600;
-$card-heading-icon-size:			1.538rem;
-$card-heading-icon-separation:		map-get($spacers, 1) * .5;
-$card-heading-icon-line-height:		map-get($spacers, 5);
+$card-heading-icon-color:         $gray-500;
+$card-heading-icon-hover:         $gray-600;
+$card-heading-icon-size:          1.538rem;
+$card-heading-icon-separation:    map-get($spacers, 1) * .5;
+$card-heading-icon-line-height:   map-get($spacers, 5);
 
-$card-footer-padding-x:	            map-get($spacers, 4);
-$card-footer-padding-top:  		    map-get($spacers, 4);
-$card-footer-padding-bottom:   	    $spacer * 1.308;
-$card-footer-padding:               $card-footer-padding-top $card-footer-padding-x $card-footer-padding-bottom;
+$card-footer-padding-x:           map-get($spacers, 4);
+$card-footer-padding-top:         map-get($spacers, 4);
+$card-footer-padding-bottom:      $spacer * 1.308;
+$card-footer-padding:             $card-footer-padding-top $card-footer-padding-x $card-footer-padding-bottom;
 
-$card-title-margin-top:             map-get($spacers, 4);
-$card-title-margin-bottom:          map-get($spacers, 4) - $spacer;
-$card-notitle-margin-top:           map-get($spacers, 3);
+$card-title-margin-top:           map-get($spacers, 4);
+$card-title-margin-bottom:        map-get($spacers, 4) - $spacer;
+$card-notitle-margin-top:         map-get($spacers, 3);
 
-$card-metadata-font-size:           $font-size-sm;
+$card-metadata-font-size:         $font-size-sm;
 
-$card-margin-bottom:				   map-get($spacers, 5);
+$card-margin-bottom:              map-get($spacers, 5);
 
-$widget-heading-font-size:			$h4-font-size;
-$widget-heading-font-weight:		$font-weight-light;
-$widget-horizontal-padding:			map-get($spacers, 4);
-$widget-horizontal-padding-small:	map-get($spacers, 3);
-$widget-margin-bottom:				$card-margin-bottom;
-$widget-box-shadow:					$card-box-shadow;
+$widget-heading-font-size:        $h4-font-size;
+$widget-heading-font-weight:      $font-weight-light;
+$widget-horizontal-padding:       map-get($spacers, 4);
+$widget-horizontal-padding-small: map-get($spacers, 3);
+$widget-margin-bottom:            $card-margin-bottom;
+$widget-box-shadow:               $card-box-shadow;
 
 
 // Progress bars
-$progress-height-sm:		.308rem;
-$progress-font-size-sm:		0;
-$progress-height-lg:		1.692rem;
-$progress-font-size-lg:		$font-size-sm;
+$progress-height-sm:    .308rem;
+$progress-font-size-sm: 0;
+$progress-height-lg:    1.692rem;
+$progress-font-size-lg: $font-size-sm;
 
 
 // Accordion
-$accordion-margin-y:		map-get($spacers, 1);
-$accordion-icon-white:		url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$white}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-margin-y:   map-get($spacers, 1);
+$accordion-icon-white: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$white}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
 
 
 // Navs
-$nav-sk-bg:                var(--#{$prefix}body-bg);
+$nav-sk-bg:                 var(--#{$prefix}body-bg);
 
-$nav-sk-link-py:			    .846rem;
-$nav-sk-link-px:			    1.538rem;
-$nav-sk-link-color:        var(--#{$prefix}body-color);
+$nav-sk-link-py:            .846rem;
+$nav-sk-link-px:            1.538rem;
+$nav-sk-link-color:         var(--#{$prefix}body-color);
 $nav-link-disabled-opacity: .8;
 
-$nav-sk-active-color:      $nav-sk-link-color;
-$nav-sk-hover-color:       var(--#{$prefix}link-color);
+$nav-sk-active-color:       $nav-sk-link-color;
+$nav-sk-hover-color:        var(--#{$prefix}link-color);
 
-$nav-sk-content-py:		    map-get($spacers, 4);
-$nav-sk-content-px:		    $nav-sk-content-py;
+$nav-sk-content-py:         map-get($spacers, 4);
+$nav-sk-content-px:         $nav-sk-content-py;
 
-$nav-sk-border-color:      $nav-sk-hover-color;
-$nav-sk-border:            $nav-tabs-border-width solid $nav-sk-border-color;
+$nav-sk-border-color:       $nav-sk-hover-color;
+$nav-sk-border:             $nav-tabs-border-width solid $nav-sk-border-color;
 
 
 // Toast
-$toast-icon-margin-x:		map-get($spacers, 2);
+$toast-icon-margin-x: map-get($spacers, 2);
+
 
 // Modal
+$modal-icon-size: $font-size-base * 3.846;
 
-$modal-icon-size:	$font-size-base * 3.846;
 
 // Alert
-$alert-icon-size:		$font-size-base * 1.846;
-$alert-icon-min-width:	2em;
+$alert-icon-size:      $font-size-base * 1.846;
+$alert-icon-min-width: 2em;
 
-$alert-bordered-color:	rgba(0, 0, 0, .1);
-$alert-bordered:		$border-width solid $alert-bordered-color;
+$alert-bordered-color: rgba(0, 0, 0, .1);
+$alert-bordered:       $border-width solid $alert-bordered-color;
+
 
 // Dropdowns
-$dropdown-icon-size:				$dropdown-font-size * 1.231;
-$dropdown-btn-padding-x:			1.538rem;
-$dropdown-hr-opacity:				1;
-$dropdown-theme-divider-opacity:	.15;
-$dropdown-theme-disabled-opacity:	.5;
+$dropdown-icon-size:              $dropdown-font-size * 1.231;
+$dropdown-btn-padding-x:          1.538rem;
+$dropdown-hr-opacity:             1;
+$dropdown-theme-divider-opacity:  .15;
+$dropdown-theme-disabled-opacity: .5;
+
+
+// Forms
+$form-file-input-icon-size: 1.15em;
+
 
 // modal colours
-$modal-primary:		$sk-primary !default;
-$modal-success:		$sk-success !default;
-$modal-info:		$sk-info !default;
-$modal-warning:		$sk-warning !default;
-$modal-danger:		$sk-danger !default;
-$modal-dark:		$sk-dark !default;
+$modal-primary: $sk-primary !default;
+$modal-success: $sk-success !default;
+$modal-info:    $sk-info !default;
+$modal-warning: $sk-warning !default;
+$modal-danger:  $sk-danger !default;
+$modal-dark:    $sk-dark !default;
 
 $modal-colors: map-merge(
-	(
-		"primary":	$modal-primary,
-		"success":	$modal-success,
-		"info":		$modal-info,
-		"warning":	$modal-warning,
-		"danger":	$modal-danger,
-		"dark":		$modal-dark
-	),
-	$modal-colors
+   (
+      "primary": $modal-primary,
+      "success": $modal-success,
+      "info":    $modal-info,
+      "warning": $modal-warning,
+      "danger":  $modal-danger,
+      "dark":    $modal-dark
+   ),
+   $modal-colors
 );
 
 //Social colors
-$facebook:		#5d82d1 !default;
-$twitter:		#50bff5 !default;
-$google-plus:	#eb5e4c !default;
-$dribbble:		#f7659c !default;
-$youtube:		#ef4e41 !default;
-$flickr:		#0063dc !default;
-$linkedin:		#238cc8 !default;
-$pinterest:		#e13138 !default;
-$github:		#24292e !default;
-$tumblr:		#426d9b !default;
-$evernote:		#2DBE60 !default;
-$dropbox:		#007EE5 !default;
-$codepen:		#333333 !default;
+$facebook:      #5d82d1 !default;
+$twitter:       #50bff5 !default;
+$google-plus:   #eb5e4c !default;
+$dribbble:      #f7659c !default;
+$youtube:       #ef4e41 !default;
+$flickr:        #0063dc !default;
+$linkedin:      #238cc8 !default;
+$pinterest:     #e13138 !default;
+$github:        #24292e !default;
+$tumblr:        #426d9b !default;
+$evernote:      #2DBE60 !default;
+$dropbox:       #007EE5 !default;
+$codepen:       #333333 !default;
 $stackoverflow: #f48225 !default;
 
 $social-colors: map-merge(
@@ -277,30 +283,23 @@ $social-colors: map-merge(
 //
 //##
 
-$switch-bg:						$primary;
-$switch-width:					4.385rem;
-$switch-height:					1.846rem;
-$switch-padding:				.308rem;
-$switch-line-height:			$switch-height - $switch-padding;
-$switch-border-radius:			50px;
+$switch-focus-color-opacity: .25;
+$switch-focus-width:         .15rem;
 
-$switch-label-width:			$switch-height - ($switch-padding * 2);
-$switch-label-height:			$switch-label-width;
-$switch-label-border-radius:	50%;
+$switch-bg:                   var(--#{$prefix}secondary-bg);
+$switch-color:                var(--#{$prefix}secondary-color);
+$switch-shadow-color:         RGBA(var(--#{$prefix}secondary-bg-rgb), $switch-focus-color-opacity);
 
-//== Radio Icons
-//
-//##
-$radio-icon-font-size:			$font-size-base * 1.5;
-$radio-icon-width:				$radio-icon-font-size * 2;
-$radio-icon-height:				$radio-icon-width;
-$radio-icon-border:				$border-width solid $border-color;
-$radio-icon-color:				$gray-600;
+$switch-checked-bg:           var(--#{$prefix}primary);
+$switch-checked-color:        var(--#{$prefix}white);
+$switch-checked-shadow-color: RGBA(var(--#{$prefix}primary-rgb), $switch-focus-color-opacity);
 
-$radio-icon-active-color:		$primary;
-$radio-icon-active-bg:			$white;
+$switch-width:                4.385rem;
+$switch-height:               1.846rem;
+$switch-padding:              .308rem;
+$switch-line-height:          1.5;
+$switch-border:               solid 1px var(--#{$prefix}border-color-translucent);
+$switch-border-radius:        $switch-height * .5;
 
-$radio-icon-focus-shadow-color:	0 0 0 .15rem rgba($radio-icon-active-color, .15);
-
-$radio-icon-hover-border-color: shift-color($border-color, 10%);
+$switch-label-width:          $switch-height - ($switch-padding * 2);
 

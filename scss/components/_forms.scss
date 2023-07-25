@@ -3,60 +3,52 @@
 	display: none !important;
 	
 	&-label {
+      --#{$prefix}input-file-icon-width: #{$form-file-input-icon-size};
 		max-width: 100%;
 		text-align: left;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
+      
+      .icon {
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         font-size: var(--#{$prefix}input-file-icon-width);
+         width: auto;
+         height: var(--#{$prefix}input-file-icon-width);
+         line-height: 1;
+         vertical-align: middle;
+      }
 	}
 }
 
-.form-check-icon {
+.form-toggle-btn-icons {
+   --#{$sk-variable-prefix}icon-font-size: 1.75rem;
+   --#{$sk-variable-prefix}icon-width: 3rem;
+}
+
+.form-toggle-btn-icons label {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 	padding: 0;
-	margin: 0;
-	
-	.form-check-label {
-		cursor: pointer;
-		width: $radio-icon-width;
-		height: $radio-icon-height;
-		line-height: $radio-icon-height;
-		font-size: $radio-icon-font-size;
-		border: $radio-icon-border;
-		border-radius: 50%;
-		text-align: center;
-		color: $radio-icon-color;
-		
-		&:hover
-		{
-			border-color: $radio-icon-hover-border-color;
-		}
-	}
-	
-	.form-check-input {
-		width: 1px;
-		height: 1px;
-		margin: 0;
-		padding: 0;
-		position: absolute;
-		z-index: -1;
-		opacity: 0;
-		
-		&:checked
-		{
-			+ .form-check-label
-			{
-				border-color: $radio-icon-active-color;
-				color: $radio-icon-active-color;
-				background-color: $radio-icon-active-bg;
-			}
-		}
-			
-		&:focus
-		{
-			+ .form-check-label
-			{
-				box-shadow: $radio-icon-focus-shadow-color;
-			}
-		}
-	}
+   font-size: var(--#{$sk-variable-prefix}icon-font-size);
+   text-align: center;
+   width: var(--#{$sk-variable-prefix}icon-width);
+   line-height: 1;
+   aspect-ratio: 1 / 1;
+   
+   &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+   }
+   
+   .icon {
+      display: block;
+      width: 1em;
+      height: 1em;
+   }
 }

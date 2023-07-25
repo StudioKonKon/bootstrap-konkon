@@ -132,6 +132,7 @@
   font-size: 1.846rem;
   border-radius: 50%;
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity));
+  aspect-ratio: 1/1;
 }
 .sidebar-toggle:hover,
 .sk-icons-nav > .nav-item > .nav-link:hover {
@@ -153,6 +154,7 @@
   width: 1em;
   height: 1em;
   text-align: center;
+  aspect-ratio: 1/1;
 }
 .sidebar-toggle .icon,
 .sk-icons-nav > .nav-item > .nav-link .icon {

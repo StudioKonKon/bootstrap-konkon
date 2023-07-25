@@ -102,7 +102,7 @@ body_class = "bg-body-secondary"
 	
 	<div class="col-lg-4">
 	  <div class="card card-contrast">
-		<div class="card-header card-header-contrast">
+		<div class="card-header">
 			<h5 class="card-title mb-0">Heading contrast</h5>
 			<h6 class="card-subtitle fw-normal">Card subtitle description</h6>
       </div>
@@ -175,9 +175,9 @@ body_class = "bg-body-secondary"
                <h6 class="card-subtitle text-body-secondary fw-normal">Card subtitle description</h6>
             </div>
             <div class="hstack">
-               <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-               <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-               <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+               <a class="link-secondary link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+               <a class="link-secondary link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+               <a class="link-secondary link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
             </div>
          </div>
          <div class="card-body">
@@ -197,8 +197,8 @@ body_class = "bg-body-secondary"
       </div>
       <div class="hstack">
          <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-         <a class="link-{{ $key_link }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-         <a class="link-{{ $key_link }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+         <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
       </div>
    </div>
 	<div class="card-body">
@@ -210,15 +210,15 @@ body_class = "bg-body-secondary"
   
 <div class="col-lg-4">
   <div class="card bg-{{ $key }}-subtle text-{{ $key }}-emphasis">
-   <div class="card-header card-header-contrast card-header-divider mx-0 px-4 border-{{ $key }} bg-{{ $key }} hstack gap-2" style="--bs-bg-opacity:.1;">
+   <div class="card-header card-header-divider mx-0 px-4 border-{{ $key }} bg-{{ $key }} hstack gap-2" style="--bs-bg-opacity:.1;">
       <div class="flex-fill">
          <h5 class="card-title mb-0">{{ $key }} Contrast Card</h5>
          <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
       </div>
       <div class="hstack">
-         <a class="link-{{ $key_link }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-         <a class="link-{{ $key_link }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-         <a class="link-{{ $key_link }} fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+         <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
       </div>
    </div>
 	<div class="card-body">
@@ -229,4 +229,67 @@ body_class = "bg-body-secondary"
 </div>
 {{ end -}}
 {{< /time.inline >}}
+
+
+<div class="col-lg-4">
+  <div class="card text-bg-primary">
+   <div class="card-header card-header-divider border-light hstack gap-2">
+      <div class="flex-fill">
+         <h5 class="card-title mb-0">Card Full Colour</h5>
+         <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
+      </div>
+      <div class="hstack">
+         <a class="link-light link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-light link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-light link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+      </div>
+   </div>
+	<div class="card-body">
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+  </div>
+</div>
+
+<div class="col-lg-4">
+  <div class="card text-bg-primary">
+   <div class="card-header card-header-divider mx-0 px-4 hstack gap-2 bg-white border-0" style="--bs-bg-opacity:.1;">
+      <div class="flex-fill">
+         <h5 class="card-title mb-0">Card Full Contrast Colour</h5>
+         <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
+      </div>
+      <div class="hstack">
+         <a class="link-light link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-light link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-light link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+      </div>
+   </div>
+	<div class="card-body">
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+  </div>
+</div>
+
+<div class="col-lg-4">
+  <div class="card bg-primary-subtle text-primary-emphasis">
+   <div class="card-header card-header-divider mx-0 px-4 hstack gap-2 border-0">
+      <div class="flex-fill">
+         <h5 class="card-title mb-0">Card Contrast Colour</h5>
+         <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
+      </div>
+      <div class="hstack">
+         <a class="link-primary link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-primary link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-primary link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+      </div>
+   </div>
+	<div class="card-body bg-primary" style="--bs-bg-opacity:.05;">
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	  <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+  </div>
+</div>
+
+</div>
 
