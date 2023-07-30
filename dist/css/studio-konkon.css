@@ -2496,7 +2496,7 @@ textarea.form-control-lg {
   }
 }
 .form-switch .form-check-input:focus {
-  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23afcbfb'/%3e%3c/svg%3e");
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
 }
 .form-switch .form-check-input:checked {
   background-position: right center;
@@ -7911,10 +7911,6 @@ address {
 */
 .form-floating > .form-select {
   line-height: 1.35;
-}
-
-.form-switch-dark .form-check-input:not(:checked):focus, .form-switch-light .form-check-input:not(:checked):focus, .form-switch-danger .form-check-input:not(:checked):focus, .form-switch-warning .form-check-input:not(:checked):focus, .form-switch-info .form-check-input:not(:checked):focus, .form-switch-success .form-check-input:not(:checked):focus, .form-switch-secondary .form-check-input:not(:checked):focus, .form-switch-primary .form-check-input:not(:checked):focus, .form-switch-konkon .form-check-input:not(:checked):focus {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
 }
 
 .form-switch-konkon .form-check-input:checked {
