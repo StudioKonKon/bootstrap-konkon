@@ -7,16 +7,31 @@
 	line-height: $form-floating-line-height + .1;
 }
 
-%form-switch-svg {
-   .form-check-input:not(:checked):focus {
-      background-image: escape-svg($form-switch-bg-image);
+// $form-switch-bg-image
+// $form-switch-focus-bg-image
+// --#{$prefix}form-switch-bg
+
+.form-switch {
+   .form-check-input {
+      //--#{$prefix}form-switch-bg: #{escape-svg($form-switch-bg-image)};
+      
+      &:focus {
+         //--#{$prefix}form-switch-bg: #{escape-svg($form-switch-focus-bg-image)};
+      }
+      
+      &:checked {
+         @if $enable-gradients {
+            //--#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)}, var(--#{$prefix}gradient);
+         } @else {
+            //--#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)};
+         }
+      }
    }
 }
 
 @each $state, $value in $theme-colors {
 	.form-switch-#{$state} {
 		@include switch-variant($value);
-      @extend %form-switch-svg;
 	}
 }
 

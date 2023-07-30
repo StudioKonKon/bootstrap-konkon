@@ -443,43 +443,58 @@ $nav-pills-border-radius:				var(--#{$prefix}border-radius-sm);
 
 // Toasts
 
-$toast-max-width:		360px;
+$toast-max-width:     360px;
 
-$toast-padding-x:		1.077rem;
-$toast-padding-y:		.5rem;
-$toast-font-size:		.923rem;
-$toast-color:			$body-color;
-$toast-border-radius:	$border-radius;
-$toast-box-shadow:		0 .25rem .75rem rgba($black, .1);
+$toast-padding-x:     1.077rem;
+$toast-padding-y:     .5rem;
+$toast-font-size:     .923rem;
+$toast-color:         $body-color;
+$toast-border-radius: $border-radius;
+$toast-box-shadow:    0 .25rem .75rem rgba($black, .1);
 
 // Popovers
 
-$popover-font-size:			$font-size-base;
-$popover-border-radius:		$border-radius-lg;
-$popover-box-shadow:		0 .385rem .769rem rgba($black, .2);
+$popover-font-size:        $font-size-base;
+$popover-border-radius:    $border-radius-lg;
+$popover-box-shadow:       0 .385rem .769rem rgba($black, .2);
 
-$popover-header-padding-y:	.6154rem;
-$popover-header-padding-x:	1.077rem;
+$popover-header-padding-y: .6154rem;
+$popover-header-padding-x: 1.077rem;
 
-$popover-body-padding-y:	.6154rem;
-$popover-body-padding-x:	1.077rem;
+$popover-body-padding-y:   .6154rem;
+$popover-body-padding-x:   1.077rem;
 
 
 // Modals
 
-$modal-inner-padding:				map-get($spacers, 4);
+$modal-inner-padding:       map-get($spacers, 4);
 
-$modal-content-bg:					$white;
+$modal-content-bg:          $white;
 
-$modal-header-border-width:			0;
-$modal-footer-border-width:			$modal-header-border-width;
+$modal-header-border-width: 0;
+$modal-footer-border-width: $modal-header-border-width;
 
-$modal-md:                          600px;
+$modal-md:                  600px;
 
 
 // Forms
 
-$form-check-input-width:	1.4em;
-$form-check-margin-bottom:	map-get($spacers, 2);
+// https://github.com/marella/material-symbols/blob/main/svg/400/outlined/check_circle.svg
+// https://github.com/marella/material-symbols/blob/main/svg/400/outlined/cancel.svg
+// ###
+// https://github.com/marella/material-symbols/blob/main/svg/400/outlined/done.svg
+// https://github.com/marella/material-symbols/blob/main/svg/400/outlined/close.svg
 
-$form-switch-width:			2.4em;
+$form-check-input-width:       1.4em;
+$form-check-margin-bottom:     map-get($spacers, 2);
+
+$form-switch-color:            rgba($black, .25);
+$form-switch-width:            2.4em;
+$form-switch-bg-image:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>") !default;
+
+$form-switch-focus-color:      $form-switch-color;
+$form-switch-focus-bg-image:   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-focus-color}'/></svg>") !default;
+
+$form-switch-checked-color:    $component-active-color !default;
+$form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-checked-color}'/></svg>") !default;
+
