@@ -129,9 +129,6 @@ $body-tertiary-bg:          $gray-100 !default;
 
 $emphasis-color:            $black !default;
 
-$component-active-color:	 $white;
-$component-active-bg:		 shift-color($primary, -15%);
-
 
 // Links
 //
@@ -161,21 +158,32 @@ $border-style:                solid !default;
 $border-color:                $gray-300 !default;
 $border-color-translucent:    rgba($black, .075) !default;
 
-$border-radius:			.375rem !default;
-$border-radius-sm:		.25rem !default;
-$border-radius-lg:		.5rem !default;
-$border-radius-pill:	50rem;
+// scss-docs-start border-radius-variables
+$border-radius:      .375rem !default;
+$border-radius-sm:   .25rem !default;
+$border-radius-lg:   .5rem !default;
+$border-radius-xl:   1rem !default;
+$border-radius-xxl:  2rem !default;
+$border-radius-pill: 50rem;
+// scss-docs-end border-radius-variables
 
-$box-shadow:			0 .5rem 1rem rgba($black, .15);
-$box-shadow-sm:			0 .125rem .25rem rgba($black, .075);
-$box-shadow-lg:			0 1rem 3rem rgba($black, .175);
-$box-shadow-inset:		inset 0 1px 2px rgba($black, .075);
+// scss-docs-start box-shadow-variables
+$box-shadow:       0 .5rem 1rem rgba($black, .15);
+$box-shadow-sm:    0 .125rem .25rem rgba($black, .075);
+$box-shadow-lg:    0 1rem 3rem rgba($black, .175);
+$box-shadow-inset: inset 0 1px 2px rgba($black, .075);
+// scss-docs-end box-shadow-variables
+
+$component-active-color: $white !default;
+$component-active-bg:    shift-color($primary, -15%);
 
 
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
 $font-size-base:	1rem;
 $font-size-sm:		$font-size-base * .8462;
 $font-size-lg:		$font-size-base * 1.15;
@@ -198,24 +206,24 @@ $h3-font-size:			$font-size-base * 1.77;
 $h4-font-size:			$font-size-base * 1.38;
 $h5-font-size:			$font-size-base * 1.15;
 $h6-font-size:			$font-size-base * .94;
+// scss-docs-end font-variables
 
-$font-sizes: (
-   1: $h1-font-size,
-   2: $h2-font-size,
-   3: $h3-font-size,
-   4: $h4-font-size,
-   5: $h5-font-size,
-   6: $h6-font-size
-);
 
+// scss-docs-start headings-variables
 $headings-margin-bottom:   map-get($spacers, 2);
 $headings-font-family:     inherit;
 $headings-font-weight:     500;
 $headings-line-height:     1.1;
 $headings-color:           inherit;
+// scss-docs-end headings-variables
 
+
+// scss-docs-start display-headings
 $display-line-height:		$headings-line-height;
+// scss-docs-end display-headings
 
+
+// scss-docs-start type-variables
 $lead-font-size:           $font-size-base * 1.15;
 $lead-font-weight:			400;
 
@@ -225,11 +233,12 @@ $blockquote-margin-y:			$spacer;
 $blockquote-font-size:			$font-size-base;
 $blockquote-footer-color:		$gray-600;
 $blockquote-footer-font-size:	$small-font-size;
+// scss-docs-end type-variables
+
 
 // Paragraphs
 //
 // Style p element.
-
 $paragraph-margin-bottom: map-get($spacers, 3);
 
 
@@ -237,6 +246,7 @@ $paragraph-margin-bottom: map-get($spacers, 3);
 //
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
+// scss-docs-start table-variables
 $table-cell-padding-y:			.5rem;
 $table-cell-padding-x:			.768rem;
 $table-cell-padding-y-sm:		.25rem;
@@ -254,11 +264,14 @@ $table-caption-color:			$gray-600;
 $table-group-separator-color:	$gray-300;
 
 $table-bg-scale:				-10%;
+// scss-docs-end table-variables
+
 
 //== Buttons
 //
 //##
 
+// scss-docs-start input-btn-variables
 $input-btn-focus-width:			0.15rem;
 
 $input-btn-padding-x:			.769rem;
@@ -271,11 +284,14 @@ $input-btn-padding-x-lg:		.923rem;
 $input-btn-font-size-lg:		$font-size-lg;
 
 $input-btn-border-width:		$border-width;
+// scss-docs-end input-btn-variables
+
 
 // Buttons
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
+// scss-docs-start btn-variables
 $btn-padding-x:				$input-btn-padding-x;
 $btn-font-size:				$input-btn-font-size;
 
@@ -292,6 +308,30 @@ $btn-box-shadow:			0 .077rem 0 rgba(0, 0, 0, .05);
 $btn-focus-width:			$input-btn-focus-width;
 
 $btn-link-disabled-color:	$gray-600;
+// scss-docs-end btn-variables
+
+
+// Forms
+
+// scss-docs-start form-check-variables
+$form-check-input-width:       1.4em;
+$form-check-margin-bottom:     map-get($spacers, 2);
+// scss-docs-end form-check-variables
+
+// scss-docs-start form-switch-variables
+$form-switch-width:            2.4em;
+
+$form-switch-color:            rgba($black, .25);
+$form-switch-focus-color:      $form-switch-color;
+$form-switch-checked-color:    $component-active-color;
+// scss-docs-end form-switch-variables
+
+// scss-docs-start form-range-variables
+$form-range-thumb-bg:          $component-active-bg;
+$form-range-thumb-active-bg:   tint-color($component-active-bg, 20%);
+$form-range-thumb-disabled-bg: var(--#{$prefix}secondary-color);
+// scss-docs-end form-range-variables
+
 
 //== Cards
 //
@@ -405,6 +445,7 @@ $pre-color:						$gray-900;
 
 
 // Accordion
+
 $accordion-padding-y:					$spacer;
 $accordion-padding-x:					map-get($spacers, 1) + $spacer;
 $accordion-color:						   var(--#{$prefix}body-color);
@@ -434,6 +475,7 @@ $accordion-icon-transform:				rotate(180deg);
 
 // Navs
 
+
 $nav-link-font-size:					   var(--#{$prefix}body-font-size);
 $nav-link-disabled-color:				var(--#{$prefix}secondary-bg);
 $nav-tabs-border-width:             2px;
@@ -451,6 +493,7 @@ $toast-font-size:     .923rem;
 $toast-color:         $body-color;
 $toast-border-radius: $border-radius;
 $toast-box-shadow:    0 .25rem .75rem rgba($black, .1);
+
 
 // Popovers
 
@@ -475,26 +518,4 @@ $modal-header-border-width: 0;
 $modal-footer-border-width: $modal-header-border-width;
 
 $modal-md:                  600px;
-
-
-// Forms
-
-// https://github.com/marella/material-symbols/blob/main/svg/400/outlined/check_circle.svg
-// https://github.com/marella/material-symbols/blob/main/svg/400/outlined/cancel.svg
-// ###
-// https://github.com/marella/material-symbols/blob/main/svg/400/outlined/done.svg
-// https://github.com/marella/material-symbols/blob/main/svg/400/outlined/close.svg
-
-$form-check-input-width:       1.4em;
-$form-check-margin-bottom:     map-get($spacers, 2);
-
-$form-switch-color:            rgba($black, .25);
-$form-switch-width:            2.4em;
-$form-switch-bg-image:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>") !default;
-
-$form-switch-focus-color:      $form-switch-color;
-$form-switch-focus-bg-image:   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-focus-color}'/></svg>") !default;
-
-$form-switch-checked-color:    $component-active-color !default;
-$form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-checked-color}'/></svg>") !default;
 
