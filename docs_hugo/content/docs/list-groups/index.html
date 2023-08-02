@@ -124,15 +124,42 @@ body_class = "bg-body-secondary"
 				<p class="card-text">Use contextual classes to style list items with a stateful background and color.</p>
 				<p class="card-text">Contextual classes also work with <code class="highlighter-konkon">.list-group-item-action</code>. Note the addition of the hover styles here not present in the previous example. Also supported is the <code class="highlighter-konkon">.active</code> state; apply it to indicate an active selection on a contextual list group item.</p>
 				<div class="list-group">
-					<a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-					<a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
-					<a href="#" class="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list group item</a>
-					<a href="#" class="list-group-item list-group-item-action list-group-item-success">A simple success list group item</a>
-					<a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple danger list group item</a>
-					<a href="#" class="list-group-item list-group-item-action list-group-item-warning">A simple warning list group item</a>
-					<a href="#" class="list-group-item list-group-item-action list-group-item-info">A simple info list group item</a>
-					<a href="#" class="list-group-item list-group-item-action list-group-item-light">A simple light list group item</a>
-					<a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group item</a>
+					<a href="#" class="list-group-item list-group-item-action icon-link gap-3">
+                  <span class="zmdi zmdi-folder fs-4"></span>
+                  <span>Dapibus ac facilisis in</span>
+               </a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-primary icon-link gap-3">
+                  <span class="zmdi zmdi-folder fs-4"></span>
+                  <span>A simple primary list group item</span>
+               </a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-secondary icon-link gap-3">
+                  <span class="zmdi zmdi-folder fs-4"></span>
+                  <span>A simple secondary list group item</span>
+               </a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-success icon-link gap-3">
+                  <span class="zmdi zmdi-folder fs-4"></span>
+                  <span>A simple success list group item</span>
+               </a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-danger icon-link gap-3">
+                  <span class="zmdi zmdi-folder fs-4"></span>
+                  <span>A simple danger list group item</span>
+               </a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-warning icon-link gap-3">
+                  <span class="zmdi zmdi-folder fs-4"></span>
+                  <span>A simple warning list group item</span>
+               </a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-info icon-link gap-3">
+                  <span class="zmdi zmdi-folder fs-4"></span>
+                  <span>A simple info list group item</span>
+               </a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-light icon-link gap-3">
+                  <span class="zmdi zmdi-folder fs-4"></span>
+                  <span>A simple light list group item</span>
+               </a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-dark icon-link gap-3">
+                  <span class="zmdi zmdi-folder fs-4"></span>
+                  <span>A simple dark list group item</span>
+               </a>
 				</div>
 			</div>
 		</div>
@@ -143,52 +170,51 @@ body_class = "bg-body-secondary"
 		<div class="card">
 			<div class="card-body">
 				<h4 class="card-title mb-1">With Badges and Icons</h4>
-				<p class="card-subtitle">Add badges to any list group item to show unread counts, activity, and more with the help of some utilities.</p>
-				<p class="card-subtitle">Use <code class="highlighter-konkon">.text</code> on text content when placing icons or flex will align items center and <code class="highlighter-konkon">.align-items-center</code> to avoid elements stretching.</p>
+				<p class="card-text">Add badges to any list group item to show unread counts, activity and more with the help of some utilities.</p>
 				<ul class="list-group">
-					<li href="#" class="list-group-item d-flex align-items-center">
-						<span class="zmdi zmdi-disqus icon"></span>
-						<span class="text">Dapibus ac facilisis in</span>
-						<span class="badge text-body rounded-pill">14</span>
+					<li href="#" class="list-group-item list-group-item-action icon-link gap-3">
+						<span class="zmdi zmdi-disqus"></span>
+						<span class="flex-grow-1">Dapibus ac facilisis in</span>
+						<span class="badge bg-body text-body border rounded-pill">14</span>
 					</li>
-					<li href="#" class="list-group-item list-group-item-primary d-flex align-items-center">
-						<span class="text-primary zmdi zmdi-linkedin icon"></span>
-						<span class="text">A simple primary list group item</span>
+					<li href="#" class="list-group-item list-group-item-action list-group-item-primary icon-link gap-3">
+						<span class="text-primary zmdi zmdi-linkedin"></span>
+						<span class="flex-grow-1">A simple primary list group item</span>
 						<span class="badge text-bg-primary rounded-pill">21</span>
 					</li>
-					<li href="#" class="list-group-item list-group-item-secondary d-flex align-items-center">
-						<span class="text-secondary zmdi zmdi-github icon"></span>
-						<span class="text">A simple secondary list group item</span>
+					<li href="#" class="list-group-item list-group-item-action list-group-item-secondary icon-link gap-3">
+						<span class="text-secondary zmdi zmdi-github"></span>
+						<span class="flex-grow-1">A simple secondary list group item</span>
 						<span class="badge text-bg-secondary rounded-pill">28</span>
 					</li>
-					<li href="#" class="list-group-item list-group-item-success d-flex align-items-center">
-						<span class="text-success zmdi zmdi-whatsapp icon"></span>
-						<span class="text">A simple success list group item</span>
+					<li href="#" class="list-group-item list-group-item-action list-group-item-success icon-link gap-3">
+						<span class="text-success zmdi zmdi-whatsapp"></span>
+						<span class="flex-grow-1">A simple success list group item</span>
 						<span class="badge text-bg-success rounded-pill">11</span>
 					</li>
-					<li href="#" class="list-group-item list-group-item-danger d-flex align-items-center">
-						<span class="text-danger zmdi zmdi-youtube-play icon"></span>
-						<span class="text">A simple danger list group item</span>
+					<li href="#" class="list-group-item list-group-item-action list-group-item-danger icon-link gap-3">
+						<span class="text-danger zmdi zmdi-youtube-play"></span>
+						<span class="flex-grow-1">A simple danger list group item</span>
 						<span class="badge text-bg-danger rounded-pill">24</span>
 					</li>
-					<li href="#" class="list-group-item list-group-item-warning d-flex align-items-center">
-						<span class="text-warning zmdi zmdi-soundcloud icon"></span>
-						<span class="text">A simple warning list group item</span>
+					<li href="#" class="list-group-item list-group-item-action list-group-item-warning icon-link gap-3">
+						<span class="text-warning zmdi zmdi-soundcloud"></span>
+						<span class="flex-grow-1">A simple warning list group item</span>
 						<span class="badge text-bg-warning rounded-pill">36</span>
 					</li>
-					<li href="#" class="list-group-item list-group-item-info d-flex align-items-center">
-						<span class="text-info zmdi zmdi-skype icon"></span>
-						<span class="text">A simple info list group item</span>
+					<li href="#" class="list-group-item list-group-item-action list-group-item-info icon-link gap-3">
+						<span class="text-info zmdi zmdi-skype"></span>
+						<span class="flex-grow-1">A simple info list group item</span>
 						<span class="badge text-bg-info rounded-pill">27</span>
 					</li>
-					<li href="#" class="list-group-item list-group-item-light d-flex align-items-center">
-						<span class="text-dark zmdi zmdi-reddit icon"></span>
-						<span class="text">A simple light list group item</span>
+					<li href="#" class="list-group-item list-group-item-action list-group-item-light icon-link gap-3">
+						<span class="text-dark zmdi zmdi-reddit"></span>
+						<span class="flex-grow-1">A simple light list group item</span>
 						<span class="badge text-bg-dark rounded-pill">44</span>
 					</li>
-					<li href="#" class="list-group-item list-group-item-dark d-flex align-items-center">
-						<span class="text-light zmdi zmdi-rss icon"></span>
-						<span class="text">A simple dark list group item</span>
+					<li href="#" class="list-group-item list-group-item-action list-group-item-dark icon-link gap-3">
+						<span class="text-light zmdi zmdi-rss"></span>
+						<span class="flex-grow-1">A simple dark list group item</span>
 						<span class="badge text-bg-light rounded-pill">52</span>
 					</li>
 				</ul>
@@ -202,7 +228,7 @@ body_class = "bg-body-secondary"
 			<div class="card-body">
 				<h4 class="card-title mb-1">Custom content</h4>
 				<p class="card-text">Add nearly any HTML within, even for linked list groups like the one below, with the help of flexbox utilities.</p>
-				<div class="list-group">
+				<div class="list-group lh-sm">
 					<a href="#" class="list-group-item list-group-item-action active">
 						<div class="d-flex w-100 justify-content-between">
 							<h5 class="mb-1 mt-1 list-group-header">List group item heading</h5>
