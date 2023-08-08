@@ -37,7 +37,9 @@ $social-colors: () !default;
 $sk-konkon:             lighten($konkon-color, 6.1%);
 $card-konkon:           $sk-konkon;
 $dropdown-konkon:       $sk-konkon;
-$modal-konkon:          $sk-konkon;
+
+
+$modal-konkon:   tint-color($konkon-color, 15%) !default;
 
 // Maps
 $dropdown-colors: map-remove($theme-colors, "light", "secondary", "dark") !default;
@@ -57,28 +59,7 @@ $sk-caret-spacing: $sk-caret-size * .85;
 
 
 // Theme Colours
-$sk-primary:      #5f99f5 !default;
-$sk-secondary:    #d9d9d9 !default;
-$sk-success:      #37b358 !default;
-$sk-info:         #6ba4ff !default;
-$sk-warning:      #f6c163 !default;
-$sk-danger:       #eb6357 !default;
-$sk-light:        $light !default;
-$sk-dark:         #3f4850 !default;
 
-$sk-colors: map-merge(
-   (
-      "primary":      $sk-primary,
-      "secondary":    $sk-secondary,
-      "success":      $sk-success,
-      "info":         $sk-info,
-      "warning":      $sk-warning,
-      "danger":       $sk-danger,
-      "light":        $sk-light,
-      "dark":         $sk-dark
-   ),
-   $sk-colors
-);
 
 
 // Color Scale
@@ -198,10 +179,6 @@ $nav-sk-border:             $nav-tabs-border-width solid $nav-sk-border-color;
 $toast-icon-margin-x: map-get($spacers, 2);
 
 
-// Modal
-$modal-icon-size: $font-size-base * 3.846;
-
-
 // Alert
 $alert-icon-size:      $font-size-base * 1.846;
 $alert-icon-min-width: 2em;
@@ -223,24 +200,27 @@ $form-file-input-icon-size: 1.15em;
 
 
 // modal colours
-$modal-primary: $sk-primary !default;
-$modal-success: $sk-success !default;
-$modal-info:    $sk-info !default;
-$modal-warning: $sk-warning !default;
-$modal-danger:  $sk-danger !default;
-$modal-dark:    $sk-dark !default;
+$modal-primary:   tint-color($primary, 15%) !default;
+$modal-secondary: tint-color($secondary, 15%) !default;
+$modal-success:   tint-color($success, 15%) !default;
+$modal-info:      tint-color($info, 15%) !default;
+$modal-warning:   tint-color($warning, 15%) !default;
+$modal-danger:    tint-color($danger, 15%) !default;
+$modal-dark:      tint-color($dark, 15%) !default;
 
 $modal-colors: map-merge(
    (
-      "primary": $modal-primary,
-      "success": $modal-success,
-      "info":    $modal-info,
-      "warning": $modal-warning,
-      "danger":  $modal-danger,
-      "dark":    $modal-dark
+      "primary":   $modal-primary,
+      "secondary": $modal-secondary,
+      "success":   $modal-success,
+      "info":      $modal-info,
+      "warning":   $modal-warning,
+      "danger":    $modal-danger,
+      "dark":      $modal-dark
    ),
    $modal-colors
 );
+
 
 //Social colors
 $facebook:      #5d82d1 !default;

@@ -1,4 +1,10 @@
 @if $enable-modal-full-colors {
+	@each $modal-colors, $modal-color in $modal-colors {
+		.modal-#{$modal-colors} {
+			@include modal-full-color($modal-color);
+		}
+	}
+   
 	.modal-full-color {
 		.btn-light {
 			background-color: $white;
@@ -61,12 +67,6 @@
 				background-color: rgba($white, 0.1);
 				border-color: rgba($white, 0.8);
 			}
-		}
-	}
-
-	@each $modal-colors, $modal-color in $modal-colors {
-		.modal-#{$modal-colors} {
-			@include modal-full-color($modal-color);
 		}
 	}
 }

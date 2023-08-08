@@ -1,20 +1,15 @@
-//Colored header modal
-@mixin colored-header($color) {
-	color: color-contrast($color);
-	background-color: $color;
+%modal-btn-close {
+   .btn-close {
+      filter: var(--bs-btn-close-white-filter);
+   }
 }
 
 //Full colored modal
 @mixin modal-full-color($background, $color: color-contrast($background)) {
-	.modal-content,
-	.modal-header,
-	.modal-body,
-	.modal-footer {
-		color: $color;
-		background-color: $background;
-	}
-	
-	.btn-light {
-		color: $background;
-	}
+	--#{$prefix}modal-bg: #{$background};
+   --#{$prefix}modal-color: #{$color};
+   
+   @if $color == #fff {
+      @extend %modal-btn-close;
+   }
 }

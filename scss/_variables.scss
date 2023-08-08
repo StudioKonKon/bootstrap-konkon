@@ -89,12 +89,12 @@ $dark-bg-subtle:          $gray-400 !default;
 // scss-docs-end theme-bg-subtle-variables
 
 // scss-docs-start theme-border-subtle-variables
-$primary-border-subtle:   #c6dafc;
-$secondary-border-subtle: #c2c4c6;
-$success-border-subtle:   #c2e5cb;
-$info-border-subtle:      #d3e4ff;
-$warning-border-subtle:   #ffe2b3;
-$danger-border-subtle:    #f9c7c2;
+$primary-border-subtle:   tint-color($primary, 60%) !default;
+$secondary-border-subtle: tint-color($secondary, 60%) !default;
+$success-border-subtle:   tint-color($success, 60%) !default;
+$info-border-subtle:      tint-color($info, 60%) !default;
+$warning-border-subtle:   tint-color($warning, 60%) !default;
+$danger-border-subtle:    tint-color($danger, 60%) !default;
 $light-border-subtle:     $gray-200 !default;
 $dark-border-subtle:      $gray-500 !default;
 // scss-docs-end theme-border-subtle-variables
@@ -419,20 +419,29 @@ $breadcrumb-border-radius:		$border-radius-sm;
 
 // Badges
 
-$badge-font-size:		$small-font-size;
-$badge-font-weight:		$font-weight-bolder;
-$badge-padding-x:		$spacer - map-get($spacers, 1);
-$badge-padding-y:		$badge-padding-x * .5;
-$badge-border-radius:	$border-radius-sm;
+$badge-font-size:     $small-font-size;
+$badge-font-weight:   $font-weight-bolder;
+$badge-padding-x:     $spacer - map-get($spacers, 1);
+$badge-padding-y:     $badge-padding-x * .5;
+$badge-border-radius: $border-radius-sm;
+
+
+// Modals
+
+$modal-inner-padding:       map-get($spacers, 4);
+$modal-header-border-width: 0;
+$modal-footer-border-width: 0;
+$modal-md:                  600px;
+
 
 // Image thumbnails
 
-$thumbnail-padding:			map-get($spacers, 1);
-$thumbnail-bg:				$body-bg;
-$thumbnail-border-width:	$border-width;
-$thumbnail-border-color:	$gray-300;
-$thumbnail-border-radius:	$border-radius;
-$thumbnail-box-shadow:		$box-shadow-sm;
+$thumbnail-padding:        map-get($spacers, 1);
+$thumbnail-bg:             $body-bg;
+$thumbnail-border-width:   $border-width;
+$thumbnail-border-color:   $gray-300;
+$thumbnail-border-radius:  $border-radius;
+$thumbnail-box-shadow:     $box-shadow-sm;
 
 
 // Figures
@@ -525,16 +534,4 @@ $popover-header-padding-x: 1.077rem;
 
 $popover-body-padding-y:   .6154rem;
 $popover-body-padding-x:   1.077rem;
-
-
-// Modals
-
-$modal-inner-padding:       map-get($spacers, 4);
-
-$modal-content-bg:          $white;
-
-$modal-header-border-width: 0;
-$modal-footer-border-width: $modal-header-border-width;
-
-$modal-md:                  600px;
 
