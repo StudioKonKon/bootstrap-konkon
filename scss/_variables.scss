@@ -501,15 +501,6 @@ $accordion-icon-active-color:			$accordion-button-active-color;
 $accordion-icon-transition:			transform .2s ease-in-out;
 $accordion-icon-transform:				rotate(180deg);
 
-// Navs
-
-
-$nav-link-font-size:					   var(--#{$prefix}body-font-size);
-$nav-link-disabled-color:				var(--#{$prefix}secondary-bg);
-$nav-tabs-border-width:             2px;
-$nav-tabs-border-radius:				var(--#{$prefix}border-radius-sm);
-$nav-pills-border-radius:				var(--#{$prefix}border-radius-sm);
-
 
 // Toasts
 

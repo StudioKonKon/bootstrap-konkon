@@ -8,10 +8,6 @@ body_class = "bg-body-secondary"
 	src = "modals.js"
 	
 [[extra_css]]
-	src = "studio-konkon-modals"
-	type = "scss"
-	
-[[extra_css]]
 	src = "dev-sk-ui"
 	type = "scss"
    
@@ -277,7 +273,7 @@ margin-bottom: 1.154rem;
 {{< /modal_header.inline >}}
 
 
-<!-- Header Models //-->
+<!-- Full Color Models //-->
 {{< modal_header.inline >}}
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
@@ -296,8 +292,8 @@ margin-bottom: 1.154rem;
 			</div>
 			<div class="modal-footer justify-content-center">
             <div class="hstack flex-wrap justify-content-center gap-1">
-               <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
-               <button class="btn btn-{{ .name }}" type="button" data-bs-dismiss="modal">Proceed</button>
+               <button class="btn btn-modal-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+               <button class="btn btn-modal-primary" type="button" data-bs-dismiss="modal">Proceed</button>
             </div>
 			</div>
 		</div>
@@ -307,3 +303,94 @@ margin-bottom: 1.154rem;
 {{- end -}}
 {{< /modal_header.inline >}}
 
+
+<!-- Full Screen Models //-->
+<div class="modal fade" id="md-full-default" role="dialog">
+	<div class="modal-dialog modal-fullscreen">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body d-flex justify-content-center align-items-center">
+				<div class="text-center" style="width:100%;">
+					<div class="text-primary skk-modal-icon"><span class="zmdi zmdi-info-outline"></span></div>
+					<h3>Information!</h3>
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+					<div class="mt-5 hstack flex-wrap justify-content-center gap-1">
+						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+						<button class="btn btn-space btn-primary" type="button" data-bs-dismiss="modal">Proceed</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-full-footer" role="dialog">
+	<div class="modal-dialog modal-fullscreen">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body pt-0">
+				<div class="text-center h-100 d-flex flex-column justify-content-center">
+					<div class="text-primary skk-modal-icon"><span class="zmdi zmdi-info-outline"></span></div>
+					<h1 class="h3">Welcome!</h1>
+					<p class="mb-0">Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+            <div class="hstack flex-wrap justify-content-center gap-1">
+               <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+               <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Proceed</button>
+            </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="md-full-header" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-fullscreen">
+		<div class="modal-content">
+			<div class="modal-header text-bg-primary">
+				<h4 class="modal-title">Primary Header</h4>
+            <div data-bs-theme="dark">
+               <button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+            </div>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<p>Lorem ipsum dolor sit amet, purto meliore molestiae ne per, no sint illud sea, eum quot facilisi cu. Tation alterum est ad. Ex eum exerci explicari mediocritatem, at dicat lobortis est, nullam laoreet nam et. Propriae consetetur efficiantur ne sea.</p>
+					<p>Ipsum diceret eos in, id aliquam phaedrum pro, mel ne legimus impedit incorrupte. Sed an fabellas voluptaria. Wisi quaerendum omittantur sed ad, ius lorem melius in.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+            <div class="hstack flex-wrap justify-content-center gap-1">
+               <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+               <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Proceed</button>
+            </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-primary fade" id="md-full-fullColor" role="dialog">
+	<div class="modal-dialog modal-fullscreen">
+		<div class="modal-content">
+			<div class="modal-header">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+			</div>
+			<div class="modal-body pt-0">
+				<div class="text-center h-100 d-flex flex-column justify-content-center">
+					<div class="skk-modal-icon"><span class="zmdi zmdi-info-outline"></span></div>
+					<h1 class="h3">Information!</h1>
+					<p class="mb-0">Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
+               <div class="pt-4 hstack flex-wrap justify-content-center gap-1">
+                  <button class="btn btn-modal-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+                  <button class="btn btn-modal-primary" type="button" data-bs-dismiss="modal">Proceed</button>
+               </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

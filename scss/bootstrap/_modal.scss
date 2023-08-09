@@ -1,3 +1,45 @@
 /*------------------------------------------------------------------
   [Modals]
 */
+
+@if $enable-modal-full-colors {
+	@each $modal-colors, $modal-color in $modal-colors {
+		.modal-#{$modal-colors} {
+			@include modal-full-color($modal-color);
+		}
+	}
+   
+   .btn-modal-primary {
+      --#{$prefix}btn-color: #{$white};
+      --#{$prefix}btn-bg: transparent;
+      --#{$prefix}btn-border-color: #{rgba($white, .5)};
+      --#{$prefix}btn-hover-color: #{$white};
+      --#{$prefix}btn-hover-bg: #{rgba($white, .1)};
+      --#{$prefix}btn-hover-border-color: #{rgba($white, .75)};
+      --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($white)};
+      --#{$prefix}btn-active-color: #{$white};
+      --#{$prefix}btn-active-bg: #{rgba($white, .2)};
+      --#{$prefix}btn-active-border-color: #{rgba($white, 1)};
+      --#{$prefix}btn-active-shadow: none;
+      --#{$prefix}btn-disabled-color: #{$white};
+      --#{$prefix}btn-disabled-bg: transparent;
+      --#{$prefix}btn-disabled-border-color: #{rgba($white, .5)};
+   }
+   
+   .btn-modal-secondary {
+      --#{$prefix}btn-color: var(--#{$prefix}modal-bg);
+      --#{$prefix}btn-bg: #{rgba($white, .9)};
+      --#{$prefix}btn-border-color: #{rgba($white, .5)};
+      --#{$prefix}btn-hover-color: var(--#{$prefix}modal-bg);
+      --#{$prefix}btn-hover-bg: #{rgba($white, .8)};
+      --#{$prefix}btn-hover-border-color: #{rgba($white, .8)};
+      --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($white)};
+      --#{$prefix}btn-active-color: var(--#{$prefix}modal-bg);
+      --#{$prefix}btn-active-bg: #{$white};
+      --#{$prefix}btn-active-border-color: #{rgba($white, .5)};
+      --#{$prefix}btn-active-shadow: none;
+      --#{$prefix}btn-disabled-color: var(--#{$prefix}modal-bg);
+      --#{$prefix}btn-disabled-bg: #{$white};
+      --#{$prefix}btn-disabled-border-color: #{rgba($white, .5)};
+   }
+}

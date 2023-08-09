@@ -12,80 +12,84 @@ body_class = "bg-body-secondary"
 
 <h2 class="pt-1 mb-3">Custom Tabs</h2>
 <p>For our custom Nav Tabs, wrap your content in a <code>.tab-container</code> container.</p>
-<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
 	<div class="col">
-		<div class="tab-container mb-5">
-			<ul class="nav nav-tabs" id="myTab" role="tablist">
-				<li class="nav-item" role="customnav">
-					<a class="nav-link active" id="sk-home-tab" data-bs-toggle="tab" href="#sk-home" role="tab" aria-controls="sk-home" aria-selected="true">Home</a>
-				</li>
-				<li class="nav-item" role="customnav">
-					<a class="nav-link" id="sk-profile-tab" data-bs-toggle="tab" href="#sk-profile" role="tab" aria-controls="sk-profile" aria-selected="false">Profile</a>
-				</li>
-				<li class="nav-item" role="customnav">
-					<a class="nav-link" id="sk-contact-tab" data-bs-toggle="tab" href="#sk-contact" role="tab" aria-controls="sk-contact" aria-selected="false">Messages</a>
-				</li>
-			</ul>
-			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade show active" id="sk-home" role="tabpanel" aria-labelledby="sk-home-tab">
-					<h4>General Classic Tab 1</h4>
-					<p>Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
-					<p>Ei saepe abhorreant temporibus cum, hinc praesent voluptatum ea has. Vis nihil tacimates senserit ut, quo posse labores honestatis te. Ex duo nullam posidonium deterruisset, altera aeterno duo eu.</p>
-				</div>
-				<div class="tab-pane fade" id="sk-profile" role="tabpanel" aria-labelledby="sk-profile-tab">
-					<h4>General Classic Tab 2</h4>
-					<p>Ei mel vocent latine intellegat. Nam ex sumo dolorum ceteros. Mei ne liber intellegam. Ferri quaeque mea in, mel munere rationibus at.</p>
-					<p>In has homero blandit vituperatoribus, eum latine interpretaris eu, sale commodo has eu.</p>
-				</div>
-				<div class="tab-pane fade" id="sk-contact" role="tabpanel" aria-labelledby="sk-contact-tab">
-					<h4>General Classic Tab 3</h4>
-					<p>Munere consetetur an usu, vis quot maiestatis concludaturque at. Ne etiam indoctum referrentur eum, vix legimus nominati eu. Epicurei quaestio sea ut, munere deserunt adipiscing qui te.</p>
-					<p>Disputando voluptatibus ei sit. Et veri deserunt theophrastus pri, at mutat choro eum.</p>
-					<a href="#">Learn More</a>
-				</div>
-			</div>
-		</div>
+      <div class="card">
+         <div class="tab-container">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+               <li class="nav-item" role="customnav">
+                  <a class="nav-link active" id="sk-home-tab" data-bs-toggle="tab" href="#sk-home" role="tab" aria-controls="sk-home" aria-selected="true">Home</a>
+               </li>
+               <li class="nav-item" role="customnav">
+                  <a class="nav-link" id="sk-profile-tab" data-bs-toggle="tab" href="#sk-profile" role="tab" aria-controls="sk-profile" aria-selected="false">Profile</a>
+               </li>
+               <li class="nav-item" role="customnav">
+                  <a class="nav-link" id="sk-contact-tab" data-bs-toggle="tab" href="#sk-contact" role="tab" aria-controls="sk-contact" aria-selected="false">Messages</a>
+               </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+               <div class="tab-pane fade show active" id="sk-home" role="tabpanel" aria-labelledby="sk-home-tab">
+                  <h4>General Classic Tab 1</h4>
+                  <p>Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
+                  <p>Ei saepe abhorreant temporibus cum, hinc praesent voluptatum ea has. Vis nihil tacimates senserit ut, quo posse labores honestatis te. Ex duo nullam posidonium deterruisset, altera aeterno duo eu.</p>
+               </div>
+               <div class="tab-pane fade" id="sk-profile" role="tabpanel" aria-labelledby="sk-profile-tab">
+                  <h4>General Classic Tab 2</h4>
+                  <p>Ei mel vocent latine intellegat. Nam ex sumo dolorum ceteros. Mei ne liber intellegam. Ferri quaeque mea in, mel munere rationibus at.</p>
+                  <p>In has homero blandit vituperatoribus, eum latine interpretaris eu, sale commodo has eu.</p>
+               </div>
+               <div class="tab-pane fade" id="sk-contact" role="tabpanel" aria-labelledby="sk-contact-tab">
+                  <h4>General Classic Tab 3</h4>
+                  <p>Munere consetetur an usu, vis quot maiestatis concludaturque at. Ne etiam indoctum referrentur eum, vix legimus nominati eu. Epicurei quaestio sea ut, munere deserunt adipiscing qui te.</p>
+                  <p>Disputando voluptatibus ei sit. Et veri deserunt theophrastus pri, at mutat choro eum.</p>
+                  <a href="#">Learn More</a>
+               </div>
+            </div>
+         </div>
+      </div>
 	</div>
 	<div class="col">
-		<div class="tab-container mb-5">
-			<ul class="nav nav-tabs" id="myTab" role="tablist">
-				<li class="nav-item" role="customnav">
-					<a class="nav-link active" id="skk2-home-tab" data-bs-toggle="tab" href="#skk2-home" role="tab" aria-controls="skk2-home" aria-selected="true"><i class="icon zmdi zmdi-home me-1"></i> Home</a>
-				</li>
-				<li class="nav-item" role="customnav">
-					<a class="nav-link" id="skk2-profile-tab" data-bs-toggle="tab" href="#skk2-profile" role="tab" aria-controls="skk2-profile" aria-selected="false"><i class="icon zmdi zmdi-account-circle me-1"></i> Profile</a>
-				</li>
-				<li class="nav-item" role="customnav">
-					<a class="nav-link" id="skk2-contact-tab" data-bs-toggle="tab" href="#skk2-contact" role="tab" aria-controls="skk2-contact" aria-selected="false"><i class="icon zmdi zmdi-notifications me-1"></i> Messages</a>
-				</li>
-			</ul>
-			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade show active" id="skk2-home" role="tabpanel" aria-labelledby="skk2-home-tab">
-					<h4>General Classic Tab 1</h4>
-					<p>Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
-					<p>Ei saepe abhorreant temporibus cum, hinc praesent voluptatum ea has. Vis nihil tacimates senserit ut, quo posse labores honestatis te. Ex duo nullam posidonium deterruisset, altera aeterno duo eu.</p>
-				</div>
-				<div class="tab-pane fade" id="skk2-profile" role="tabpanel" aria-labelledby="skk2-profile-tab">
-					<h4>General Classic Tab 2</h4>
-					<p>Ei mel vocent latine intellegat. Nam ex sumo dolorum ceteros. Mei ne liber intellegam. Ferri quaeque mea in, mel munere rationibus at.</p>
-					<p>In has homero blandit vituperatoribus, eum latine interpretaris eu, sale commodo has eu.</p>
-				</div>
-				<div class="tab-pane fade" id="skk2-contact" role="tabpanel" aria-labelledby="skk2-contact-tab">
-					<h4>General Classic Tab 3</h4>
-					<p>Munere consetetur an usu, vis quot maiestatis concludaturque at. Ne etiam indoctum referrentur eum, vix legimus nominati eu. Epicurei quaestio sea ut, munere deserunt adipiscing qui te.</p>
-					<p>Disputando voluptatibus ei sit. Et veri deserunt theophrastus pri, at mutat choro eum.</p>
-					<a href="#">Learn More</a>
-				</div>
-			</div>
-		</div>
+      <div class="card">
+         <div class="tab-container">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+               <li class="nav-item" role="customnav">
+                  <a class="nav-link active d-flex align-items-center gap-2" id="skk2-home-tab" data-bs-toggle="tab" href="#skk2-home" role="tab" aria-controls="skk2-home" aria-selected="true"><i class="zmdi zmdi-home" style="font-size:1.5em;"></i><span>Home</span></a>
+               </li>
+               <li class="nav-item" role="customnav">
+                  <a class="nav-link d-flex align-items-center gap-2" id="skk2-profile-tab" data-bs-toggle="tab" href="#skk2-profile" role="tab" aria-controls="skk2-profile" aria-selected="false"><i class="icon zmdi zmdi-account-circle" style="font-size:1.5em;"></i><span>Profile</span></a>
+               </li>
+               <li class="nav-item" role="customnav">
+                  <a class="nav-link d-flex align-items-center gap-2" id="skk2-contact-tab" data-bs-toggle="tab" href="#skk2-contact" role="tab" aria-controls="skk2-contact" aria-selected="false"><i class="icon zmdi zmdi-notifications" style="font-size:1.5em;"></i><span>Messages</span></a>
+               </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+               <div class="tab-pane fade show active" id="skk2-home" role="tabpanel" aria-labelledby="skk2-home-tab">
+                  <h4>General Classic Tab 1</h4>
+                  <p>Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
+                  <p>Ei saepe abhorreant temporibus cum, hinc praesent voluptatum ea has. Vis nihil tacimates senserit ut, quo posse labores honestatis te. Ex duo nullam posidonium deterruisset, altera aeterno duo eu.</p>
+               </div>
+               <div class="tab-pane fade" id="skk2-profile" role="tabpanel" aria-labelledby="skk2-profile-tab">
+                  <h4>General Classic Tab 2</h4>
+                  <p>Ei mel vocent latine intellegat. Nam ex sumo dolorum ceteros. Mei ne liber intellegam. Ferri quaeque mea in, mel munere rationibus at.</p>
+                  <p>In has homero blandit vituperatoribus, eum latine interpretaris eu, sale commodo has eu.</p>
+               </div>
+               <div class="tab-pane fade" id="skk2-contact" role="tabpanel" aria-labelledby="skk2-contact-tab">
+                  <h4>General Classic Tab 3</h4>
+                  <p>Munere consetetur an usu, vis quot maiestatis concludaturque at. Ne etiam indoctum referrentur eum, vix legimus nominati eu. Epicurei quaestio sea ut, munere deserunt adipiscing qui te.</p>
+                  <p>Disputando voluptatibus ei sit. Et veri deserunt theophrastus pri, at mutat choro eum.</p>
+                  <a href="#">Learn More</a>
+               </div>
+            </div>
+         </div>
+      </div>
 	</div>
 </div>
 
-<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
 	<div class="col">
 		<p>Vertical align left with <code>.tab-container-left</code></p>
-		<div class="tab-container tab-container-left mb-5">
-			<ul class="nav nav-tabs" id="myTab" role="tablist">
+		<div class="tab-container tab-container-left">
+			<ul class="nav nav-tabs bg-body" id="myTab" role="tablist">
 				<li class="nav-item" role="customnav_left">
 					<a class="nav-link active" id="cleft-home-tab" data-bs-toggle="tab" href="#cleft-home" role="tab" aria-controls="cleft-home" aria-selected="true">Home</a>
 				</li>
@@ -96,7 +100,7 @@ body_class = "bg-body-secondary"
 					<a class="nav-link" id="cleft-contact-tab" data-bs-toggle="tab" href="#cleft-contact" role="tab" aria-controls="cleft-contact" aria-selected="false">Messages</a>
 				</li>
 			</ul>
-			<div class="tab-content" id="myTabContent">
+			<div class="tab-content bg-body" id="myTabContent">
 				<div class="tab-pane fade show active" id="cleft-home" role="tabpanel" aria-labelledby="cleft-home-tab">
 					<h4>General Classic Tab 1</h4>
 					<p>Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
@@ -118,8 +122,19 @@ body_class = "bg-body-secondary"
 	</div>
 	<div class="col">
 		<p>Vertical align right with <code>.tab-container-right</code></p>
-		<div class="tab-container tab-container-right mb-5">
-			<div class="tab-content" id="myTabContent">
+		<div class="tab-container tab-container-right">
+			<ul class="nav nav-tabs bg-body" id="myTab" role="tablist">
+				<li class="nav-item" role="customnav_right">
+					<a class="nav-link active px-3" id="cright-home-tab" data-bs-toggle="tab" href="#cright-home" role="tab" aria-controls="cright-home" aria-selected="true"><i class="zmdi zmdi-home" style="font-size:1.5em;"></i></a>
+				</li>
+				<li class="nav-item" role="customnav_right">
+					<a class="nav-link px-3" id="cright-profile-tab" data-bs-toggle="tab" href="#cright-profile" role="tab" aria-controls="cright-profile" aria-selected="false"><i class="zmdi zmdi-account-circle" style="font-size:1.5em;"></i></a>
+				</li>
+				<li class="nav-item" role="customnav_right">
+					<a class="nav-link px-3" id="cright-contact-tab" data-bs-toggle="tab" href="#cright-contact" role="tab" aria-controls="cright-contact" aria-selected="false"><i class="zmdi zmdi-notifications" style="font-size:1.5em;"></i></a>
+				</li>
+			</ul>
+			<div class="tab-content bg-body" id="myTabContent">
 				<div class="tab-pane fade show active" id="cright-home" role="tabpanel" aria-labelledby="cright-home-tab">
 					<h4>General Classic Tab 1</h4>
 					<p>Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea. Eos aperiri feugiat democritum ne.</p>
@@ -137,17 +152,6 @@ body_class = "bg-body-secondary"
 					<a href="#">Learn More</a>
 				</div>
 			</div>
-			<ul class="nav nav-tabs" id="myTab" role="tablist">
-				<li class="nav-item" role="customnav_right">
-					<a class="nav-link active" id="cright-home-tab" data-bs-toggle="tab" href="#cright-home" role="tab" aria-controls="cright-home" aria-selected="true"><i class="icon zmdi zmdi-home"></i></a>
-				</li>
-				<li class="nav-item" role="customnav_right">
-					<a class="nav-link" id="cright-profile-tab" data-bs-toggle="tab" href="#cright-profile" role="tab" aria-controls="cright-profile" aria-selected="false"><i class="icon zmdi zmdi-account-circle"></i></a>
-				</li>
-				<li class="nav-item" role="customnav_right">
-					<a class="nav-link" id="cright-contact-tab" data-bs-toggle="tab" href="#cright-contact" role="tab" aria-controls="cright-contact" aria-selected="false"><i class="icon zmdi zmdi-notifications"></i></a>
-				</li>
-			</ul>
 		</div>
 	</div>
 </div>

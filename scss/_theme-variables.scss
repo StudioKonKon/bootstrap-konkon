@@ -20,12 +20,8 @@ $sk-variable-prefix: sk- !default;
 
 // Options
 $enable-custom-secondary-btn: true !default;
-
-$enable-modal-header-colors:  true !default;
-
-$enable-card-full-colors:     false !default;
+$enable-modal-full-colors:    true !default;
 $enable-dropdown-colors:      false !default;
-$enable-modal-full-colors:    false !default;
 $enable-toast-colors:         false !default;
 $enable-btn-social-colors:    false !default;
 
