@@ -154,21 +154,16 @@ $accordion-icon-white: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/200
 
 
 // Navs
-$nav-sk-bg:                 var(--#{$prefix}body-bg);
-
-$nav-sk-link-py:            .846rem;
-$nav-sk-link-px:            1.538rem;
-$nav-sk-link-color:         var(--#{$prefix}body-color);
-$nav-link-disabled-opacity: .8;
-
-$nav-sk-active-color:       $nav-sk-link-color;
-$nav-sk-hover-color:        var(--#{$prefix}link-color);
-
-$nav-sk-content-py:         map-get($spacers, 4);
-$nav-sk-content-px:         $nav-sk-content-py;
-
-$nav-sk-border-color:       $nav-sk-hover-color;
-$nav-sk-border:             $nav-tabs-border-width solid $nav-sk-border-color;
+$nav-sk-link-py:                  .846rem;
+$nav-sk-link-px:                  1.538rem;
+$nav-sk-link-color:               var(--#{$prefix}body-color);
+$nav-sk-link-hover-color:         var(--#{$prefix}link-color);
+$nav-sk-link-active-color:        var(--#{$prefix}body-color);
+$nav-sk-link-disabled-color:      var(--#{$prefix}secondary-color);
+$nav-sk-link-disabled-opacity:    .75;
+$nav-sk-tabs-link-active-bg:      none;
+$nav-sk-tabs-active-border-color: var(--#{$prefix}link-color);
+$nav-sk-tabs-active-border-width: map-get($border-widths, 2);
 
 
 // Toast

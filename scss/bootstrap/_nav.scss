@@ -2,64 +2,68 @@
   [Nav]
 */
 
+.tab-container .nav {
+   --#{$prefix}nav-link-padding-x: #{$nav-sk-link-px};
+   --#{$prefix}nav-link-padding-y: #{$nav-sk-link-py};
+   --#{$prefix}nav-link-color: #{$nav-sk-link-color};
+   --#{$prefix}nav-link-hover-color: #{$nav-sk-link-hover-color};
+   --#{$prefix}nav-link-active-color: #{$nav-sk-link-active-color};
+   --#{$prefix}nav-link-disabled-color: #{$nav-sk-link-disabled-color};
+   --#{$prefix}nav-tabs-link-active-bg: #{$nav-sk-tabs-link-active-bg};
+   --#{$prefix}nav-tabs-active-border-color: #{$nav-sk-tabs-active-border-color};
+   --#{$prefix}nav-tabs-active-border-width: #{$nav-sk-tabs-active-border-width};
+}
+   
 .tab-container {
 	.nav-tabs {
 		@include border-top-radius($nav-tabs-border-radius);
 	}
 
 	.nav-link {
-		padding: $nav-sk-link-py $nav-sk-link-px;
-		margin-right: 0;
+      position: relative;
+		padding: var(--#{$prefix}nav-link-padding-y) var(--#{$prefix}nav-link-padding-x);
+		margin: 0;
 		text-align: center;
 		@include border-radius(0);
-		color: $nav-sk-link-color;
+		color: var(--#{$prefix}nav-link-color);
 		border-width: 0;
 
 		&:hover {
-			background: 0 0;
-			color: $nav-sk-hover-color;
+			color: var(--#{$prefix}nav-link-hover-color);
 		}
-
-		&:active {
-			background-color: transparent;
-		}
-
+      
 		&.active {
-			background: 0 0;
-			border-bottom: $nav-sk-border;
-         color: $nav-sk-active-color;
+         color: var(--#{$prefix}nav-link-active-color);
 			
+         &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: var(--#{$prefix}nav-tabs-active-border-width);
+            background-color: var(--#{$prefix}nav-tabs-active-border-color);
+         }
+         
 			&:focus,
 			&:hover {
-				color: $nav-sk-active-color;
+				color: var(--#{$prefix}nav-link-active-color);
 			}
 		}
 		
-		&.disabled {
-			color: $nav-link-disabled-color;
-			opacity: $nav-link-disabled-opacity;
+		&.disabled,
+		&:disabled {
+			color: var(--#{$prefix}nav-link-disabled-color);
+			opacity: $nav-sk-link-disabled-opacity;
 		}
 	}
 }
 
-
 .tab-container .tab-content {
-	padding: $nav-sk-content-py $nav-sk-content-px;
+	padding: $card-spacer-y $card-spacer-x;
 	@include border-bottom-radius($nav-tabs-border-radius);
-	
-	:last-child {
-		margin-bottom: 0;
-	}
-	
-	.card {
-		box-shadow: none;
-		
-		.card-header,
-		.card-body {
-			margin-right: 0;
-			margin-left: 0;
-		}
-	}
 }
 
 .tab-container-left,
@@ -71,40 +75,30 @@
 		flex-direction: column;
 	}
 	
-	.nav-tabs {
-		border-top: 0;
-		border-bottom: 0;
-	
-		> .nav-item {
-			margin-left: -$nav-tabs-border-width;
-			margin-right: -$nav-tabs-border-width;
-		}
-	}
-	
 	.nav-link {
-		border: $nav-tabs-border-width solid transparent;
-		padding: $nav-sk-link-py $nav-sk-link-px;
-		
-		&:hover,
-		&:focus,
-		&.active {
-			border-color: transparent;
-		}
+		border-bottom-width: 0;
 	}
 }
 
 .tab-container-left {
    .tab-content {
       order: 1;
+      @include border-start-radius(0);
+      @include border-end-radius($nav-tabs-border-radius);
    }
    
    .nav-tabs {
       order: 0;
       border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
       @include border-start-radius($nav-tabs-border-radius);
+      @include border-end-radius(0);
       
-      .nav-link.active {
-         border-right: $nav-sk-border;
+      .nav-link.active::after {
+         left: 100%;
+         top: 50%;
+         height: 100%;
+         width: var(--#{$prefix}nav-tabs-active-border-width);
+         //transform: translate(-50%, -50%);
       }
    }
 }
@@ -112,24 +106,28 @@
 .tab-container-right {
    .tab-content {
       order: 0;
+      @include border-start-radius($nav-tabs-border-radius);
+      @include border-end-radius(0);
    }
    
    .nav-tabs {
       order: 1;
       border-left: $nav-tabs-border-width solid $nav-tabs-border-color;
+      @include border-start-radius(0);
       @include border-end-radius($nav-tabs-border-radius);
       
-      .nav-link.active {
-         border-left: $nav-sk-border;
+      .nav-link.active::after {
+         left: 0;
+         top: 50%;
+         height: 100%;
+         width: var(--#{$prefix}nav-tabs-active-border-width);
+         //transform: translate(-50%, -50%);
       }
    }
 }
 
-.card-header.tab-container {
-	padding: 0;
-	margin: 0;
-}
-	
-.tab-container .card-header-tabs {
-	margin: 0;
+.nav-link-icon {
+   display: flex if($enable-important-utilities, !important, null);
+   align-items: center if($enable-important-utilities, !important, null);
+   justify-content: center if($enable-important-utilities, !important, null);
 }
