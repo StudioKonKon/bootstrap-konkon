@@ -4881,10 +4881,10 @@ textarea.form-control-lg {
 }
 
 .pagination {
-  --bs-pagination-padding-x: 2rem;
-  --bs-pagination-padding-y: 0.5rem;
+  --bs-pagination-padding-x: 0.75rem;
+  --bs-pagination-padding-y: 0.375rem;
   --bs-pagination-font-size: 1rem;
-  --bs-pagination-color: var(--bs-link-color);
+  --bs-pagination-color: var(--bs-body-color);
   --bs-pagination-bg: var(--bs-body-bg);
   --bs-pagination-border-width: var(--bs-border-width);
   --bs-pagination-border-color: var(--bs-border-color);
@@ -4948,7 +4948,7 @@ textarea.form-control-lg {
 }
 
 .page-item:not(:first-child) .page-link {
-  margin-left: 0.25rem;
+  margin-left: 0;
 }
 .page-item .page-link {
   border-radius: var(--bs-pagination-border-radius);
@@ -4956,7 +4956,7 @@ textarea.form-control-lg {
 
 .pagination-lg {
   --bs-pagination-padding-x: 1.5rem;
-  --bs-pagination-padding-y: 0.5rem;
+  --bs-pagination-padding-y: 0.75rem;
   --bs-pagination-font-size: 1.15rem;
   --bs-pagination-border-radius: var(--bs-border-radius-lg);
 }
@@ -7492,9 +7492,9 @@ fieldset[disabled] [data-bs-theme=light] .btn-secondary:hover {
 }
 
 .nav-link-icon {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*------------------------------------------------------------------
@@ -7893,33 +7893,28 @@ address {
   [Pagination]
 */
 .pagination {
-  padding-left: 0;
-  border-radius: var(--bs-border-radius);
-  flex-wrap: wrap;
+  --bs-pagination-gap: 0.25rem;
+  gap: var(--bs-pagination-gap);
 }
 
 .page-item.disabled {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
-.page-link {
-  font-size: 1rem;
-  line-height: 1rem;
-  font-weight: 400;
-  color: #404040;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
-.pagination-sm .page-link {
-  line-height: 1.309;
-}
-.pagination-lg .page-link {
-  line-height: 1.927;
-}
-
-.pagination-rounded .page-item .page-link {
-  border-radius: 50%;
+.pagination-square .page-link, .pagination-circle .page-link {
+  --bs-pagination-link-size: calc((var(--bs-pagination-padding-x) * 2) + var(--bs-pagination-font-size));
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  width: var(--bs-pagination-link-size);
+  height: var(--bs-pagination-link-size);
+}
+
+.pagination-circle .page-link {
+  border-radius: 50%;
 }
 
 /*------------------------------------------------------------------

@@ -451,14 +451,9 @@ $figure-caption-color:		$gray-600;
 
 // Pagination
 
-$pagination-padding-y:		map-get($spacers, 2);
-$pagination-padding-x:		map-get($spacers, 5) - $spacer;
-$pagination-padding-y-sm:	map-get($spacers, 1);
-$pagination-padding-x-sm:	map-get($spacers, 2);
-$pagination-padding-y-lg:	map-get($spacers, 2);
-$pagination-padding-x-lg:	map-get($spacers, 4);
+$pagination-margin-start:	0;
+$pagination-color:         var(--#{$prefix}body-color);
 
-$pagination-margin-start:	map-get($spacers, 1);
 
 //== Code
 //

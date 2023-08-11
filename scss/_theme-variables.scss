@@ -166,6 +166,13 @@ $nav-sk-tabs-active-border-color: var(--#{$prefix}link-color);
 $nav-sk-tabs-active-border-width: map-get($border-widths, 2);
 
 
+// Pagination
+$pagination-gap: map-get($spacers, 1);
+
+$pagination-padding-y: .375rem;
+$pagination-padding-x: .75rem;
+
+
 // Toast
 $toast-icon-margin-x: map-get($spacers, 2);
 

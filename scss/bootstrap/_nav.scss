@@ -127,7 +127,7 @@
 }
 
 .nav-link-icon {
-   display: flex if($enable-important-utilities, !important, null);
-   align-items: center if($enable-important-utilities, !important, null);
-   justify-content: center if($enable-important-utilities, !important, null);
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }

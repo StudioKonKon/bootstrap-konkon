@@ -3,35 +3,30 @@
 */
 
 .pagination {
-	padding-left: 0;
-	@include border-radius($pagination-border-radius);
-	flex-wrap: wrap;
+   --#{$prefix}pagination-gap: #{$pagination-gap};
+   gap: var(--#{$prefix}pagination-gap);
 }
 
 .page-item.disabled {
-	opacity: .5;
+	opacity: .8;
 }
 
-.page-link {
-	font-size: $font-size-base;
-	line-height: $font-size-base;
-	font-weight: 400;
-	color: #404040;
-	background-color: $white;
-	border: 1px solid #ddd;
-	
-	.pagination-sm & {
-		line-height: $line-height-sm;
-	}
-	
-	.pagination-lg & {
-		line-height: $line-height-lg;
-	}
+.pagination-square .page-link {
+   --#{$prefix}pagination-link-size: calc((var(--bs-pagination-padding-x) * 2) + var(--bs-pagination-font-size));
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   vertical-align: middle;
+   padding: 0;
+   width: var(--#{$prefix}pagination-link-size);
+   height: var(--#{$prefix}pagination-link-size);
 }
-
-.pagination-rounded {
-	.page-item .page-link {
-		@include border-radius(50%);
-		text-align: center;
-	}
+   
+.pagination-circle {
+   @extend .pagination-square;
+   
+   .page-link {
+      border-radius: 50%;
+   }
 }
