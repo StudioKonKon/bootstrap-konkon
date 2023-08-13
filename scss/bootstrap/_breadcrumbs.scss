@@ -3,11 +3,10 @@
 */
 
 .breadcrumb {
-	margin-bottom: $spacer + map-get($spacers, 1);
-	line-height: $font-size-base * 1.231;
+	line-height: 1.25;
 
 	.icon {
-		font-size: $font-size-base * 1.231;
+		font-size: 1.25em;
 		padding-right: map-get($spacers, 1);
 	}
 }

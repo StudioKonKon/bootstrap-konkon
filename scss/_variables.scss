@@ -108,11 +108,8 @@ $min-contrast-ratio: 1.7;
 
 
 // Spacing
-//
-// Control the default styling of most Bootstrap elements by modifying these
-// variables. Mostly focused on spacing.
-// You can add more entries to the $spacers map, should you need more variation.
 
+// scss-docs-start spacer-variables-maps
 $spacer: 1rem;
 $spacers: ();
 $spacers: map-merge(
@@ -126,10 +123,10 @@ $spacers: map-merge(
 	),
 	$spacers
 );
+// scss-docs-end spacer-variables-maps
+
 
 // Body
-//
-// Settings for the `<body>` element.
 
 $body-color:	             $gray-800;
 $body-bg:		             $white;
@@ -146,19 +143,19 @@ $emphasis-color:            $black !default;
 
 
 // Links
-//
-// Style anchor elements.
 
 $link-color:				$primary;
 $link-decoration:			none;
-$link-shade-percentage:		15%;
-$link-hover-decoration:		none;
+$link-shade-percentage: 15%;
+$link-hover-decoration: none;
 
 
+// Paragraphs
 
-//== Components
-//
-//##
+$paragraph-margin-bottom: map-get($spacers, 3);
+
+
+// Components
 
 $border-width:			1px;
 $border-widths: (
@@ -193,9 +190,7 @@ $component-active-color: $white !default;
 $component-active-bg:    shift-color($primary, -15%);
 
 
-//== Typography
-//
-//## Font, line-height, and color for body text, headings, and more.
+// Typography
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
@@ -249,12 +244,6 @@ $blockquote-font-size:			$font-size-base;
 $blockquote-footer-color:		$gray-600;
 $blockquote-footer-font-size:	$small-font-size;
 // scss-docs-end type-variables
-
-
-// Paragraphs
-//
-// Style p element.
-$paragraph-margin-bottom: map-get($spacers, 3);
 
 
 // Tables
@@ -348,10 +337,30 @@ $form-range-thumb-disabled-bg: var(--#{$prefix}secondary-color);
 // scss-docs-end form-range-variables
 
 
-//== Cards
-//
-//##
+// Dropdowns
 
+// scss-docs-start dropdown-variables
+$dropdown-min-width:			   14.231rem;
+$dropdown-padding-y:			   map-get($spacers, 4) - $spacer;
+$dropdown-divider-margin-y:   map-get($spacers, 1);
+$dropdown-box-shadow:         0px 0px 6px 0px rgba(0, 0, 0, .12);
+$dropdown-item-padding-y:		map-get($spacers, 2);
+$dropdown-item-padding-x:		map-get($spacers, 4);
+$dropdown-header-padding:     $dropdown-padding-y $dropdown-item-padding-x;
+// scss-docs-end dropdown-variables
+
+
+// Pagination
+
+// scss-docs-start pagination-variables
+$pagination-margin-start:	0;
+$pagination-color:         var(--#{$prefix}body-color);
+// scss-docs-end pagination-variables
+
+
+// Cards
+
+// scss-docs-start card-variables
 $card-spacer-y:            map-get($spacers, 4);
 $card-spacer-x:            map-get($spacers, 4);
 $card-border-radius:       .231rem;
@@ -367,19 +376,89 @@ $card-cap-padding-x:       $card-spacer-x;
 
 $card-border-width:        $border-width;
 $card-border-color:        rgba($black, .05);
+// scss-docs-end card-variables
 
 
-// Dropdowns
-//
-// Dropdown menu container and contents.
+// Accordion
 
-$dropdown-min-width:			   14.231rem;
-$dropdown-padding-y:			   map-get($spacers, 4) - $spacer;
-$dropdown-divider-margin-y:   map-get($spacers, 1);
-$dropdown-box-shadow:         0px 0px 6px 0px rgba(0, 0, 0, .12);
-$dropdown-item-padding-y:		map-get($spacers, 2);
-$dropdown-item-padding-x:		map-get($spacers, 4);
-$dropdown-header-padding:     $dropdown-padding-y $dropdown-item-padding-x;
+// scss-docs-start accordion-variables
+$accordion-padding-y:					$spacer;
+$accordion-padding-x:					map-get($spacers, 1) + $spacer;
+$accordion-color:						   var(--#{$prefix}body-color);
+$accordion-bg:							   var(--#{$prefix}body-bg);
+$accordion-border-width:            var(--#{$prefix}border-width) !default;
+$accordion-border-color:            var(--#{$prefix}border-color) !default;
+$accordion-border-radius:           var(--#{$prefix}border-radius) !default;
+
+$accordion-body-padding-y:				map-get($spacers, 4);
+$accordion-body-padding-x:				map-get($spacers, 4);
+
+$accordion-button-padding-y:			$accordion-padding-y;
+$accordion-button-padding-x:			$accordion-padding-x;
+$accordion-button-color:				$accordion-color;
+$accordion-button-bg:					$accordion-bg;
+$accordion-button-active-bg:			$accordion-button-bg;
+$accordion-button-active-color:		$primary;
+
+$accordion-button-focus-border-color:	$accordion-border-color;
+$accordion-button-focus-box-shadow:		none;
+
+$accordion-icon-width:					1.25rem;
+$accordion-icon-color:					$accordion-color;
+$accordion-icon-active-color:			$accordion-button-active-color;
+$accordion-icon-transition:			transform .2s ease-in-out;
+$accordion-icon-transform:				rotate(180deg);
+// scss-docs-end accordion-variables
+
+
+// Popovers
+
+// scss-docs-start popover-variables
+$popover-font-size:        $font-size-base;
+$popover-border-radius:    $border-radius-lg;
+$popover-box-shadow:       0 .385rem .769rem rgba($black, .2);
+
+$popover-header-padding-y: .6154rem;
+$popover-header-padding-x: 1.077rem;
+
+$popover-body-padding-y:   .6154rem;
+$popover-body-padding-x:   1.077rem;
+// scss-docs-end popover-variables
+
+
+// Toasts
+
+// scss-docs-start toast-variables
+$toast-max-width:     360px;
+
+$toast-padding-x:     1.077rem;
+$toast-padding-y:     .5rem;
+$toast-font-size:     .923rem;
+$toast-color:         $body-color;
+$toast-border-radius: $border-radius;
+$toast-box-shadow:    0 .25rem .75rem rgba($black, .1);
+// scss-docs-end toast-variables
+
+
+// Badges
+
+// scss-docs-start badge-variables
+$badge-font-size:     $small-font-size;
+$badge-font-weight:   $font-weight-bolder;
+$badge-padding-x:     $spacer - map-get($spacers, 1);
+$badge-padding-y:     $badge-padding-x * .5;
+$badge-border-radius: $border-radius-sm;
+// scss-docs-end badge-variables
+
+
+// Modals
+
+// scss-docs-start modal-variables
+$modal-inner-padding:       map-get($spacers, 4);
+$modal-header-border-width: 0;
+$modal-footer-border-width: 0;
+$modal-md:                  600px;
+// scss-docs-end modal-variables
 
 
 // Progress bars
@@ -407,117 +486,40 @@ $list-group-disabled-bg:				var(--#{$prefix}tertiary-bg);
 // scss-docs-end list-group-variables
 
 
-// Breadcrumbs
-
-$breadcrumb-padding-y:			map-get($spacers, 1);
-$breadcrumb-padding-x:			map-get($spacers, 1);
-$breadcrumb-item-padding-x:	map-get($spacers, 2);
-$breadcrumb-divider-color:		var(--#{$prefix}tertiary-color);
-$breadcrumb-active-color:		var(--#{$prefix}secondary-color);
-$breadcrumb-border-radius:		$border-radius-sm;
-
-
-// Badges
-
-$badge-font-size:     $small-font-size;
-$badge-font-weight:   $font-weight-bolder;
-$badge-padding-x:     $spacer - map-get($spacers, 1);
-$badge-padding-y:     $badge-padding-x * .5;
-$badge-border-radius: $border-radius-sm;
-
-
-// Modals
-
-$modal-inner-padding:       map-get($spacers, 4);
-$modal-header-border-width: 0;
-$modal-footer-border-width: 0;
-$modal-md:                  600px;
-
-
 // Image thumbnails
 
+// scss-docs-start thumbnail-variables
 $thumbnail-padding:        map-get($spacers, 1);
 $thumbnail-bg:             $body-bg;
 $thumbnail-border-width:   $border-width;
 $thumbnail-border-color:   $gray-300;
 $thumbnail-border-radius:  $border-radius;
 $thumbnail-box-shadow:     $box-shadow-sm;
+// scss-docs-end thumbnail-variables
 
 
 // Figures
 
+// scss-docs-start figure-variables
 $figure-caption-font-size:	$small-font-size;
 $figure-caption-color:		$gray-600;
-
-// Pagination
-
-$pagination-margin-start:	0;
-$pagination-color:         var(--#{$prefix}body-color);
+// scss-docs-end figure-variables
 
 
-//== Code
-//
-//##
+// Breadcrumbs
 
-$code-font-size:				$small-font-size;
+// scss-docs-start breadcrumb-variables
+$breadcrumb-padding-y:			map-get($spacers, 1);
+$breadcrumb-padding-x:			map-get($spacers, 1);
+$breadcrumb-item-padding-x:	map-get($spacers, 2);
+$breadcrumb-margin-bottom:    $spacer + map-get($spacers, 1);
+$breadcrumb-divider-color:		var(--#{$prefix}tertiary-color);
+$breadcrumb-active-color:		var(--#{$prefix}secondary-color);
+$breadcrumb-border-radius:		$border-radius-sm;
+// scss-docs-end breadcrumb-variables
 
-$kbd-color:						$white;
-$kbd-bg:						$dark;
+
+// Code
 
 $pre-color:						$gray-900;
-
-
-// Accordion
-
-$accordion-padding-y:					$spacer;
-$accordion-padding-x:					map-get($spacers, 1) + $spacer;
-$accordion-color:						   var(--#{$prefix}body-color);
-$accordion-bg:							   var(--#{$prefix}body-bg);
-$accordion-border-width:            var(--#{$prefix}border-width) !default;
-$accordion-border-color:            var(--#{$prefix}border-color) !default;
-$accordion-border-radius:           var(--#{$prefix}border-radius) !default;
-
-$accordion-body-padding-y:				map-get($spacers, 4);
-$accordion-body-padding-x:				map-get($spacers, 4);
-
-$accordion-button-padding-y:			$accordion-padding-y;
-$accordion-button-padding-x:			$accordion-padding-x;
-$accordion-button-color:				$accordion-color;
-$accordion-button-bg:					$accordion-bg;
-$accordion-button-active-bg:			$accordion-button-bg;
-$accordion-button-active-color:		$primary;
-
-$accordion-button-focus-border-color:	$accordion-border-color;
-$accordion-button-focus-box-shadow:		none;
-
-$accordion-icon-width:					1.25rem;
-$accordion-icon-color:					$accordion-color;
-$accordion-icon-active-color:			$accordion-button-active-color;
-$accordion-icon-transition:			transform .2s ease-in-out;
-$accordion-icon-transform:				rotate(180deg);
-
-
-// Toasts
-
-$toast-max-width:     360px;
-
-$toast-padding-x:     1.077rem;
-$toast-padding-y:     .5rem;
-$toast-font-size:     .923rem;
-$toast-color:         $body-color;
-$toast-border-radius: $border-radius;
-$toast-box-shadow:    0 .25rem .75rem rgba($black, .1);
-
-
-// Popovers
-
-$popover-font-size:        $font-size-base;
-$popover-border-radius:    $border-radius-lg;
-$popover-box-shadow:       0 .385rem .769rem rgba($black, .2);
-
-$popover-header-padding-y: .6154rem;
-$popover-header-padding-x: 1.077rem;
-
-$popover-body-padding-y:   .6154rem;
-$popover-body-padding-x:   1.077rem;
 
