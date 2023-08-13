@@ -1,14 +1,13 @@
 // Bootstrap maps
 
-$custom-theme-colors: map-merge(( "konkon": $konkon ), $custom-theme-colors);
 $table-variants: map-merge(( "konkon": shift-color($konkon, $table-bg-scale)), $table-variants );
 $dropdown-colors: map-merge(( "konkon": $dropdown-konkon ), $dropdown-colors);
-$modal-colors: map-merge(( "konkon": $modal-konkon ), $modal-colors);
+
 
 // Required
 $theme-colors: map-merge(( "konkon": $konkon ), $theme-colors);
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
-$theme-colors-text: map-merge(( "konkon": $konkon-text ), $theme-colors-text);
+$theme-colors-text: map-merge(( "konkon": $konkon-text-emphasis ), $theme-colors-text);
 $theme-colors-bg-subtle: map-merge(( "konkon": $konkon-bg-subtle ), $theme-colors-bg-subtle);
 $theme-colors-border-subtle: map-merge(( "konkon": $konkon-border-subtle ), $theme-colors-border-subtle);
 
@@ -20,9 +19,40 @@ $theme-colors-border-subtle: map-merge(( "konkon": $konkon-border-subtle ), $the
 }
 
 
+
+// scss-docs-start theme-bg-soft-map
+$theme-colors-bg-soft: (
+  "konkon": $konkon-bg-soft,
+  "primary": $primary-bg-soft,
+  "secondary": $secondary-bg-soft,
+  "success": $success-bg-soft,
+  "info": $info-bg-soft,
+  "warning": $warning-bg-soft,
+  "danger": $danger-bg-soft,
+  "light": $light-bg-soft,
+  "dark": $dark-bg-soft,
+) !default;
+// scss-docs-end theme-bg-soft-map
+
+
+$theme-colors-bg-soft-dark: null !default;
+
+
 // Utilities maps
-//
-// Extends the default `$theme-colors` maps to help create our utilities.
+
+// scss-docs-start utilities-bg-colors
+$utilities-bg-soft: (
+  "konkon-soft": var(--#{$prefix}konkon-bg-soft),
+  "primary-soft": var(--#{$prefix}primary-bg-soft),
+  "secondary-soft": var(--#{$prefix}secondary-bg-soft),
+  "success-soft": var(--#{$prefix}success-bg-soft),
+  "info-soft": var(--#{$prefix}info-bg-soft),
+  "warning-soft": var(--#{$prefix}warning-bg-soft),
+  "danger-soft": var(--#{$prefix}danger-bg-soft),
+  "light-soft": var(--#{$prefix}light-bg-soft),
+  "dark-soft": var(--#{$prefix}dark-bg-soft)
+) !default;
+// scss-docs-end utilities-bg-colors
 
 
 // Come v6, we'll de-dupe these variables. Until then, for backward compatibility, we keep them to reassign.

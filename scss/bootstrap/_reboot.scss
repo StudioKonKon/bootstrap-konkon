@@ -2,14 +2,6 @@
   [Reboot]
 */
 
-bodys.bg-light {
-	background-color: $body-bg-light !important;
-   
-   &[data-bs-theme="dark"] {
-      background-color: $body-bg-dark !important;
-   }
-}
-
 pre {
 	padding: map-get($spacers, 4);
 	border: 0;

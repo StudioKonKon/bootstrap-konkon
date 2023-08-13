@@ -2,44 +2,62 @@
   [Modals]
 */
 
+%modal-contrast-white {
+   --#{$prefix}modal-color: #{$white};
+   --#{$prefix}modal-color-rgb: #{to-rgb($white)};
+         
+   .btn-close {
+      filter: var(--bs-btn-close-white-filter);
+   }
+}
+
+%modal-contrast-black {
+   --#{$prefix}modal-color: #{$black};
+   --#{$prefix}modal-color-rgb: #{to-rgb($black)};
+}
+
 @if $enable-modal-full-colors {
-	@each $modal-colors, $modal-color in $modal-colors {
-		.modal-#{$modal-colors} {
-			@include modal-full-color($modal-color);
+	@each $color, $value in $modal-colors {
+      $modal-contrast-color: color-contrast($value);
+      
+		.modal-#{$color} {
+         --#{$prefix}modal-bg: var(--#{$prefix}#{$color}-bg-soft);
+         
+         @if $modal-contrast-color == #fff {
+            @extend %modal-contrast-white;
+         } @else {
+            @extend %modal-contrast-black;
+         }
 		}
 	}
    
-   .btn-modal-primary {
-      --#{$prefix}btn-color: #{$white};
+   .btn-modal-primary,
+   .btn-modal-secondary {
+      --#{$prefix}btn-color: rgba(var(--#{$prefix}modal-color-rgb), 1);
       --#{$prefix}btn-bg: transparent;
-      --#{$prefix}btn-border-color: #{rgba($white, .5)};
-      --#{$prefix}btn-hover-color: #{$white};
-      --#{$prefix}btn-hover-bg: #{rgba($white, .1)};
-      --#{$prefix}btn-hover-border-color: #{rgba($white, .75)};
-      --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($white)};
-      --#{$prefix}btn-active-color: #{$white};
-      --#{$prefix}btn-active-bg: #{rgba($white, .2)};
-      --#{$prefix}btn-active-border-color: #{rgba($white, 1)};
+      --#{$prefix}btn-border-color: rgba(var(--#{$prefix}modal-color-rgb), .5);
+      --#{$prefix}btn-hover-color: rgba(var(--#{$prefix}modal-color-rgb), 1);
+      --#{$prefix}btn-hover-bg: rgba(var(--#{$prefix}modal-color-rgb), .1);
+      --#{$prefix}btn-hover-border-color: rgba(var(--#{$prefix}modal-color-rgb), .75);
+      --#{$prefix}btn-focus-shadow-rgb: var(--#{$prefix}modal-color-rgb);
+      --#{$prefix}btn-active-color: rgba(var(--#{$prefix}modal-color-rgb), 1);
+      --#{$prefix}btn-active-bg: rgba(var(--#{$prefix}modal-color-rgb), .2);
+      --#{$prefix}btn-active-border-color: rgba(var(--#{$prefix}modal-color-rgb), 1);
       --#{$prefix}btn-active-shadow: none;
-      --#{$prefix}btn-disabled-color: #{$white};
+      --#{$prefix}btn-disabled-color: rgba(var(--#{$prefix}modal-color-rgb), 1);
       --#{$prefix}btn-disabled-bg: transparent;
-      --#{$prefix}btn-disabled-border-color: #{rgba($white, .5)};
+      --#{$prefix}btn-disabled-border-color: rgba(var(--#{$prefix}modal-color-rgb), .5);
    }
    
    .btn-modal-secondary {
       --#{$prefix}btn-color: var(--#{$prefix}modal-bg);
-      --#{$prefix}btn-bg: #{rgba($white, .9)};
-      --#{$prefix}btn-border-color: #{rgba($white, .5)};
+      --#{$prefix}btn-bg: rgba(var(--#{$prefix}modal-color-rgb), .9);
       --#{$prefix}btn-hover-color: var(--#{$prefix}modal-bg);
-      --#{$prefix}btn-hover-bg: #{rgba($white, .8)};
-      --#{$prefix}btn-hover-border-color: #{rgba($white, .8)};
-      --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($white)};
+      --#{$prefix}btn-hover-bg: rgba(var(--#{$prefix}modal-color-rgb), .75);
       --#{$prefix}btn-active-color: var(--#{$prefix}modal-bg);
-      --#{$prefix}btn-active-bg: #{$white};
-      --#{$prefix}btn-active-border-color: #{rgba($white, .5)};
-      --#{$prefix}btn-active-shadow: none;
+      --#{$prefix}btn-active-bg: rgba(var(--#{$prefix}modal-color-rgb), 1);
+      --#{$prefix}btn-active-border-color: rgba(var(--#{$prefix}modal-color-rgb), .5);
       --#{$prefix}btn-disabled-color: var(--#{$prefix}modal-bg);
-      --#{$prefix}btn-disabled-bg: #{$white};
-      --#{$prefix}btn-disabled-border-color: #{rgba($white, .5)};
+      --#{$prefix}btn-disabled-bg: rgba(var(--#{$prefix}modal-color-rgb), 1);
    }
 }

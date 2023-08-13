@@ -1,0 +1,6 @@
+:root,
+[data-bs-theme="light"] {
+   @each $color, $value in $theme-colors-bg-soft {
+      --#{$prefix}#{$color}-bg-soft: #{$value};
+   }
+}

@@ -5,12 +5,13 @@ $prefix: bs- !default;
 $enable-dark-mode:  true !default;
 $enable-shadows:    true !default;
 
-// Theme colours
-$konkon:               #fe669e;
-$konkon-color:         $konkon;
-$konkon-text:          #983d5f;
-$konkon-bg-subtle:     #ffe0ec;
-$konkon-border-subtle: #ffd1e2;
+// scss-docs-start theme-konkon-color
+$konkon:	              #fe669e;
+$konkon-text-emphasis: shade-color($konkon, 40%);
+$konkon-bg-subtle:     tint-color($konkon, 80%);
+$konkon-border-subtle: tint-color($konkon, 60%);
+$konkon-bg-soft:       tint-color($konkon, 15%);
+// scss-docs-end theme-konkon-color
 
 
 // Theme Specific Bootstrap Variable Overrides
@@ -21,8 +22,8 @@ $base-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono"
 $font-family-sans-serif: $base-font-sans-serif;
 $font-family-monospace: $base-font-monospace;
 
-$mark-bg: shift-color($konkon-color, -85%);
-$code-color: $konkon-color;
+$mark-bg: shift-color($konkon, -85%);
+$code-color: $konkon;
 
 
 //

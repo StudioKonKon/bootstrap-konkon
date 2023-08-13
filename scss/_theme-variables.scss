@@ -26,16 +26,27 @@ $enable-toast-colors:         false !default;
 $enable-btn-social-colors:    false !default;
 
 
+
+// scss-docs-start theme-soft-variables
+$primary-bg-soft:   tint-color($primary, 15%) !default;
+$secondary-bg-soft: tint-color($secondary, 15%) !default;
+$success-bg-soft:   tint-color($success, 15%) !default;
+$info-bg-soft:      tint-color($info, 15%) !default;
+$warning-bg-soft:   tint-color($warning, 15%) !default;
+$danger-bg-soft:    tint-color($danger, 15%) !default;
+$light-bg-soft:     tint-color($light, 15%) !default;
+$dark-bg-soft:      tint-color($dark, 15%) !default;
+// scss-docs-end theme-soft-variables
+
+
 // Maps
 $custom-theme-colors: () !default;
 $social-colors: () !default;
 
-$sk-konkon:             lighten($konkon-color, 6.1%);
+$sk-konkon:             lighten($konkon, 6.1%);
 $card-konkon:           $sk-konkon;
 $dropdown-konkon:       $sk-konkon;
 
-
-$modal-konkon:   tint-color($konkon-color, 15%) !default;
 
 // Maps
 $dropdown-colors: map-remove($theme-colors, "light", "secondary", "dark") !default;
@@ -87,6 +98,7 @@ $table-actions-font-size:      $font-size-base + .385;
 
 
 //Typography
+
 $display-heading-size:            3.077rem;
 $display-heading-margin:          map-get($spacers, 4) 0 map-get($spacers, 3);
 $display-description-size:        1.385rem;
@@ -198,23 +210,18 @@ $form-file-input-icon-size: 1.15em;
 
 
 // modal colours
-$modal-primary:   tint-color($primary, 15%) !default;
-$modal-secondary: tint-color($secondary, 15%) !default;
-$modal-success:   tint-color($success, 15%) !default;
-$modal-info:      tint-color($info, 15%) !default;
-$modal-warning:   tint-color($warning, 15%) !default;
-$modal-danger:    tint-color($danger, 15%) !default;
-$modal-dark:      tint-color($dark, 15%) !default;
 
 $modal-colors: map-merge(
    (
-      "primary":   $modal-primary,
-      "secondary": $modal-secondary,
-      "success":   $modal-success,
-      "info":      $modal-info,
-      "warning":   $modal-warning,
-      "danger":    $modal-danger,
-      "dark":      $modal-dark
+      "konkon":    $konkon-bg-soft,
+      "primary":   $primary-bg-soft,
+      "secondary": $secondary-bg-soft,
+      "success":   $success-bg-soft,
+      "info":      $info-bg-soft,
+      "warning":   $warning-bg-soft,
+      "danger":    $danger-bg-soft,
+      "light":     $light-bg-soft,
+      "dark":      $dark-bg-soft
    ),
    $modal-colors
 );
