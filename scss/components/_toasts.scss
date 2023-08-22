@@ -1,16 +1,13 @@
 // Toast colours
+
 @if $enable-toast-colors {
-	@each $state, $value in $theme-colors {
-		$toast-background: shift-color($value, $toast-bg-scale);
-		$toast-border: shift-color($value, $toast-border-scale);
-		$toast-color: shift-color($value, $toast-color-scale);
-		
-		@if(contrast-ratio($toast-background, $toast-color) < $min-contrast-ratio) {
-			$toast-color: mix($value, color-contrast($toast-background), abs($toast-color-scale));
-		}
-  
-		.toast-#{$state} {
-			@include toast-variation($toast-background, $toast-border, $toast-color);
-		}
-	}
+   @each $color, $value in $theme-colors {
+      .toast-#{$color} {
+         --#{$prefix}toast-color: var(--#{$prefix}#{$color}-text-emphasis);
+         --#{$prefix}toast-bg: rgba(var(--#{$prefix}#{$color}-rgb), .25);
+         --#{$prefix}toast-border-color: var(--#{$prefix}#{$color}-border-subtle);
+         --#{$prefix}toast-header-color: var(--#{$prefix}#{$color}-text-emphasis);
+         --#{$prefix}toast-header-bg: rgba(var(--#{$prefix}#{$color}-rgb), .25);
+      }
+   }
 }

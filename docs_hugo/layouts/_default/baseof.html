@@ -37,8 +37,8 @@
    {{ partial "app/top-navbar" . }}
    <div class="d-flex flex-fill align-items-stretch">
       {{ partial "app/sidebar" . }}
-      <div class="d-flex flex-fill flex-column">
-         <div class="sk-content flex-fill">
+      <div class="sk-content d-flex flex-fill flex-column">
+         <div class="flex-fill">
             {{ block "main" . }}{{ end }}
          </div>
          {{ block "footer" . }}{{ end }}

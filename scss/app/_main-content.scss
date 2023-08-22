@@ -94,6 +94,7 @@
 .sk-content {
 	position: relative;
 	left: 0;
+   min-width: 0;
 	
 	.sk-mega-menu & {
 		margin-left: auto;

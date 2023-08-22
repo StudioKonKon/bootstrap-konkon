@@ -20,7 +20,7 @@ $sk-variable-prefix: sk- !default;
 
 // Options
 $enable-custom-secondary-btn: true !default;
-$enable-modal-full-colors:    true !default;
+$enable-modal-full-colors:    false !default;
 $enable-dropdown-colors:      false !default;
 $enable-toast-colors:         false !default;
 $enable-btn-social-colors:    false !default;
@@ -68,6 +68,12 @@ $sk-caret-spacing: $sk-caret-size * .85;
 // Theme Colours
 
 
+// Icon buttons
+$icon-btn-color:    var(--#{$prefix}body-color);
+$icon-btn-size:     1.25rem;
+$icon-btn-padding:  .5rem;
+$icon-btn-hover-bg: currentcolor;
+
 
 // Color Scale
 $alert-icon-scale:             -15%;
@@ -83,18 +89,6 @@ $toast-color-scale:             40%;
 
 $dropdown-bg-scale:            -20%;
 $dropdown-hover-bg-scale:      -5%;
-
-$table-icon-color-scale:       -70%;
-$table-icon-hover-color-scale: -80%;
-
-
-//Table
-$table-icon-color:             darken($white, 37%);
-$table-hover-icon-color:       darken($white, 50%);
-
-$table-header-border-width:    map-get($border-widths, 2);
-$table-responsive-white-space: nowrap;
-$table-actions-font-size:      $font-size-base + .385;
 
 
 //Typography
@@ -185,10 +179,6 @@ $pagination-padding-y: .375rem;
 $pagination-padding-x: .75rem;
 
 
-// Toast
-$toast-icon-margin-x: map-get($spacers, 2);
-
-
 // Alert
 $alert-icon-size:      $font-size-base * 1.846;
 $alert-icon-min-width: 2em;
@@ -219,9 +209,7 @@ $modal-colors: map-merge(
       "success":   $success-bg-soft,
       "info":      $info-bg-soft,
       "warning":   $warning-bg-soft,
-      "danger":    $danger-bg-soft,
-      "light":     $light-bg-soft,
-      "dark":      $dark-bg-soft
+      "danger":    $danger-bg-soft
    ),
    $modal-colors
 );

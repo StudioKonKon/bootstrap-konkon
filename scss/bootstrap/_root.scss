@@ -3,4 +3,10 @@
    @each $color, $value in $theme-colors-bg-soft {
       --#{$prefix}#{$color}-bg-soft: #{$value};
    }
+   
+   // Icon buttons: components/icons
+   --#{$sk-variable-prefix}icon-btn-color: #{$icon-btn-color};
+   --#{$sk-variable-prefix}icon-btn-size: #{$icon-btn-size};
+   --#{$sk-variable-prefix}icon-btn-padding: #{$icon-btn-padding};
+   --#{$sk-variable-prefix}icon-btn-hover-bg: #{$icon-btn-hover-bg};
 }

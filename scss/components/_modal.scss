@@ -1,0 +1,31 @@
+// Modals colors
+
+%modal-contrast-white {
+   --#{$prefix}modal-color: #{$white};
+   --#{$prefix}modal-color-rgb: #{to-rgb($white)};
+         
+   .btn-close {
+      filter: var(--bs-btn-close-white-filter);
+   }
+}
+
+%modal-contrast-black {
+   --#{$prefix}modal-color: #{$black};
+   --#{$prefix}modal-color-rgb: #{to-rgb($black)};
+}
+
+@if $enable-modal-full-colors {
+	@each $color, $value in $modal-colors {
+      $modal-contrast-color: color-contrast($value);
+      
+		.modal-#{$color} {
+         --#{$prefix}modal-bg: var(--#{$prefix}#{$color}-bg-soft);
+         
+         @if $modal-contrast-color == #fff {
+            @extend %modal-contrast-white;
+         } @else {
+            @extend %modal-contrast-black;
+         }
+		}
+	}
+}

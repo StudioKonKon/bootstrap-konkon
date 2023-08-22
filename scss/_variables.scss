@@ -252,23 +252,17 @@ $blockquote-footer-font-size:	$small-font-size;
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:			.5rem;
-$table-cell-padding-x:			.768rem;
-$table-cell-padding-y-sm:		.25rem;
-$table-cell-padding-x-sm:		.385rem;
-
-$table-cell-vertical-align:		middle;
-
-$table-striped-bg-factor:		.04;
-$table-active-bg-factor:		.1;
-$table-hover-bg-factor:			.06;
-
-$table-th-font-weight:        	$font-weight-bold;
-
-$table-caption-color:			$gray-600;
-$table-group-separator-color:	$gray-300;
-
-$table-bg-scale:				-10%;
+$table-cell-padding-y:        .5rem;
+$table-cell-padding-x:        .768rem;
+$table-cell-padding-y-sm:     .25rem;
+$table-cell-padding-x-sm:     .385rem;
+$table-striped-bg-factor:     .05;
+$table-active-bg-factor:      .1;
+$table-hover-bg-factor:       .06;
+$table-th-font-weight:        $font-weight-bold;
+$table-caption-color:         var(--#{$prefix}secondary-color);
+$table-group-separator-color: currentcolor;
+$table-bg-scale:              -20%;
 // scss-docs-end table-variables
 
 
@@ -432,11 +426,10 @@ $popover-body-padding-x:   1.077rem;
 // scss-docs-start toast-variables
 $toast-max-width:     360px;
 
-$toast-padding-x:     1.077rem;
+$toast-padding-x:     1rem;
 $toast-padding-y:     .5rem;
-$toast-font-size:     .923rem;
-$toast-color:         $body-color;
-$toast-border-radius: $border-radius;
+$toast-font-size:     .925rem;
+$toast-color:         var(--#{$prefix}body-color);
 $toast-box-shadow:    0 .25rem .75rem rgba($black, .1);
 // scss-docs-end toast-variables
 

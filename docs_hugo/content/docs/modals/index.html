@@ -11,6 +11,10 @@ body_class = "bg-body-secondary"
 	src = "dev-sk-ui"
 	type = "scss"
    
+[[extra_css]]
+	src = "studio-konkon-modal"
+	type = "scss"
+   
 [[theme_colors]]
    title = "KonKon"
    name = "konkon"
@@ -37,9 +41,16 @@ body_class = "bg-body-secondary"
    icon = "zmdi zmdi-close-circle-o"
    
 [[theme_colors]]
+   title = "Light"
+   name = "light"
+   icon = "zmdi zmdi-favorite"
+   theme = "light"
+   
+[[theme_colors]]
    title = "Dark"
    name = "dark"
    icon = "zmdi zmdi-close-circle-o"
+   theme = "dark"
    
 +++
 
@@ -77,12 +88,12 @@ margin-bottom: 1.154rem;
 				<span class="card-subtitle">Default bootstrap modal component</span>
 			</div>
          <div class="card-body">
-            <p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+            <p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications or completely custom content.</p>
             <div class="mt-5 mb-4 hstack flex-wrap justify-content-center gap-1">
 {{< modal_normal_btn.inline >}}
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
-<button class="btn btn-space btn-{{ .name }}" data-bs-toggle="modal" data-bs-target="#mod-{{ .name }}" type="button">{{ .title }}</button>
+<button class="btn btn-space btn-{{ .name | safeHTMLAttr }}" data-bs-toggle="modal" data-bs-target="#mod-{{ .name | safeHTMLAttr }}" type="button">{{ .title }}</button>
 {{- end -}}
 {{- end -}}
 {{< /modal_normal_btn.inline >}}
@@ -98,12 +109,12 @@ margin-bottom: 1.154rem;
 				<span class="card-subtitle">Default bootstrap modal with a footer content</span>
 			</div>
 			<div class="card-body">
-				<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+				<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications or completely custom content.</p>
             <div class="mt-5 mb-4 hstack flex-wrap justify-content-center gap-1">
 {{< modal_normal_btn.inline >}}
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
-<button class="btn btn-space btn-{{ .name }}" data-bs-toggle="modal" data-bs-target="#md-footer-{{ .name }}" type="button">{{ .title }}</button>
+<button class="btn btn-space btn-{{ .name | safeHTMLAttr }}" data-bs-toggle="modal" data-bs-target="#md-footer-{{ .name | safeHTMLAttr }}" type="button">{{ .title }}</button>
 {{- end -}}
 {{- end -}}
 {{< /modal_normal_btn.inline >}}
@@ -119,12 +130,12 @@ margin-bottom: 1.154rem;
 				<span class="card-subtitle">Default bootstrap modal with header content</span>
 			</div>
 			<div class="card-body">
-				<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+				<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications or completely custom content.</p>
             <div class="mt-5 mb-4 hstack flex-wrap justify-content-center gap-1">
 {{< modal_normal_btn.inline >}}
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
-<button class="btn btn-space btn-{{ .name }}" data-bs-toggle="modal" data-bs-target="#md-header-{{ .name }}" type="button">{{ .title }}</button>
+<button class="btn btn-space btn-{{ .name | safeHTMLAttr }}" data-bs-toggle="modal" data-bs-target="#md-header-{{ .name | safeHTMLAttr }}" type="button">{{ .title }}</button>
 {{- end -}}
 {{- end -}}
 {{< /modal_normal_btn.inline >}}
@@ -140,12 +151,12 @@ margin-bottom: 1.154rem;
 				<span class="card-subtitle">Default bootstrap modal fully coloured</span>
 			</div>
 			<div class="card-body">
-				<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+				<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications or completely custom content.</p>
             <div class="mt-5 mb-4 hstack flex-wrap justify-content-center gap-1">
 {{< modal_normal_btn.inline >}}
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
-<button class="btn btn-space btn-{{ .name }}" data-bs-toggle="modal" data-bs-target="#md-fullColor-{{ .name }}" type="button">{{ .title }}</button>
+<button class="btn btn-space btn-{{ .name | safeHTMLAttr }}" data-bs-toggle="modal" data-bs-target="#md-fullColor-{{ .name | safeHTMLAttr }}" type="button">{{ .title }}</button>
 {{- end -}}
 {{- end -}}
 {{< /modal_normal_btn.inline >}}
@@ -165,7 +176,7 @@ margin-bottom: 1.154rem;
 				<span class="card-subtitle">Forced fullscreen bootstrap modals on large devices.</span>
 			</div>
 			<div class="card-body">
-				<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+				<p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications or completely custom content.</p>
 				<div class="mt-5 mb-4 text-center">
 					<button class="btn btn-space btn-primary" data-bs-toggle="modal" data-bs-target="#md-full-default" type="button"> Default</button>
 					<button class="btn btn-space btn-primary" data-bs-toggle="modal" data-bs-target="#md-full-footer" type="button"> Footer</button>
@@ -183,7 +194,7 @@ margin-bottom: 1.154rem;
 {{< modal_normal.inline >}}
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
-<div class="modal fade" id="mod-{{ .name }}" role="dialog" tabindex="-1">
+<div class="modal fade" id="mod-{{ .name | safeHTMLAttr }}" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-fullscreen-md-down">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -191,12 +202,12 @@ margin-bottom: 1.154rem;
 			</div>
 			<div class="modal-body pt-0">
 				<div class="text-center h-100 d-flex flex-column justify-content-center">
-					<div class="text-{{ .name }} skk-modal-icon"><span class="{{ .icon }}"></span></div>
+					<div class="text-{{ .name | safeHTMLAttr }} skk-modal-icon"><span class="{{ .icon | safeHTMLAttr }}"></span></div>
 					<h1 class="h3">Welcome!</h1>
 					<p class="mb-0">Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
 					<div class="mt-5 hstack flex-wrap justify-content-center gap-1">
 						<button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
-						<button class="btn btn-space btn-{{ .name }}" type="button" data-bs-dismiss="modal">Proceed</button>
+						<button class="btn btn-space btn-{{ .name | safeHTMLAttr }}" type="button" data-bs-dismiss="modal">Proceed</button>
 					</div>
 				</div>
 			</div>
@@ -212,7 +223,7 @@ margin-bottom: 1.154rem;
 {{< modal_footer.inline >}}
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
-<div class="modal fade" id="md-footer-{{ .name }}" role="dialog" tabindex="-1">
+<div class="modal fade" id="md-footer-{{ .name | safeHTMLAttr }}" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-fullscreen-md-down">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -220,7 +231,7 @@ margin-bottom: 1.154rem;
 			</div>
 			<div class="modal-body pt-0">
 				<div class="text-center h-100 d-flex flex-column justify-content-center">
-					<div class="text-{{ .name }} skk-modal-icon"><span class="{{ .icon }}"></span></div>
+					<div class="text-{{ .name | safeHTMLAttr }} skk-modal-icon"><span class="{{ .icon | safeHTMLAttr }}"></span></div>
 					<h1 class="h3">Welcome!</h1>
 					<p class="mb-0">Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
 				</div>
@@ -228,7 +239,7 @@ margin-bottom: 1.154rem;
 			<div class="modal-footer">
             <div class="hstack flex-wrap justify-content-center gap-1">
                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
-               <button class="btn btn-{{ .name }}" type="button" data-bs-dismiss="modal">Proceed</button>
+               <button class="btn btn-{{ .name | safeHTMLAttr }}" type="button" data-bs-dismiss="modal">Proceed</button>
             </div>
 			</div>
 		</div>
@@ -243,10 +254,10 @@ margin-bottom: 1.154rem;
 {{< modal_header.inline >}}
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
-<div class="modal fade" id="md-header-{{ .name }}" role="dialog" tabindex="-1">
+<div class="modal fade" id="md-header-{{ .name | safeHTMLAttr }}" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-fullscreen-md-down">
 		<div class="modal-content">
-			<div class="modal-header text-bg-{{ .name }}">
+			<div class="modal-header text-bg-{{ .name | safeHTMLAttr }}">
 				<h4 class="modal-title">{{ .title }} Header</h4>
             <div data-bs-theme="dark">
                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
@@ -254,7 +265,7 @@ margin-bottom: 1.154rem;
 			</div>
 			<div class="modal-body">
 				<div class="text-center h-100 d-flex flex-column justify-content-center">
-					<div class="text-{{ .name }} skk-modal-icon"><span class="{{ .icon }}"></span></div>
+					<div class="text-{{ .name | safeHTMLAttr }} skk-modal-icon"><span class="{{ .icon | safeHTMLAttr }}"></span></div>
 					<h1 class="h3">Welcome!</h1>
 					<p class="mb-0">Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
 				</div>
@@ -262,7 +273,7 @@ margin-bottom: 1.154rem;
 			<div class="modal-footer">
             <div class="hstack flex-wrap justify-content-center gap-1">
                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
-               <button class="btn btn-{{ .name }}" type="button" data-bs-dismiss="modal">Proceed</button>
+               <button class="btn btn-{{ .name | safeHTMLAttr }}" type="button" data-bs-dismiss="modal">Proceed</button>
             </div>
 			</div>
 		</div>
@@ -277,7 +288,7 @@ margin-bottom: 1.154rem;
 {{< modal_header.inline >}}
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
-<div class="modal modal-{{ .name }} fade" id="md-fullColor-{{ .name }}" role="dialog" tabindex="-1">
+<div class="modal modal-{{ .name | safeHTMLAttr }} fade" id="md-fullColor-{{ .name | safeHTMLAttr }}" role="dialog" tabindex="-1"{{ with .theme }} data-bs-theme="{{ . | safeHTMLAttr }}"{{ end }}>
 	<div class="modal-dialog modal-fullscreen-md-down">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -285,7 +296,7 @@ margin-bottom: 1.154rem;
 			</div>
 			<div class="modal-body pt-0">
 				<div class="text-center h-100 d-flex flex-column justify-content-center">
-					<div class="skk-modal-icon"><span class="{{ .icon }}"></span></div>
+					<div class="skk-modal-icon"><span class="{{ .icon | safeHTMLAttr }}"></span></div>
 					<h1 class="h3">Welcome!</h1>
 					<p class="mb-0">Lorem ipsum dolor sit amet, purto meliore molestiae<br>ne per, no sint illud sea, eum quot facilisi cu.</p>
 				</div>
