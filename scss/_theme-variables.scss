@@ -69,10 +69,14 @@ $sk-caret-spacing: $sk-caret-size * .85;
 
 
 // Icon buttons
-$icon-btn-color:    var(--#{$prefix}body-color);
-$icon-btn-size:     1.25rem;
-$icon-btn-padding:  .5rem;
-$icon-btn-hover-bg: currentcolor;
+$icon-btn-color:           var(--#{$prefix}body-color-rgb);
+$icon-btn-size:            1.5rem;
+$icon-btn-padding:         .5rem;
+$icon-btn-hover-bg:        currentcolor;
+$icon-btn-active-bg:       $icon-btn-hover-bg;
+$icon-btn-hover-bg-scale:  .1;
+$icon-btn-active-bg-scale: .2;
+$icon-btn-outline-scale:   .4;
 
 
 // Color Scale

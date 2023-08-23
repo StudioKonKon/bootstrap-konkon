@@ -901,7 +901,7 @@
   color: var(--sk-sidebar-divider-color);
   font-weight: 500;
   padding: 0.5rem 1.5rem;
-  line-height: 1.618;
+  line-height: 1.6;
   text-transform: uppercase;
   font-size: 0.8462rem;
 }
@@ -1224,6 +1224,7 @@
 .sk-content {
   position: relative;
   left: 0;
+  min-width: 0;
 }
 .sk-mega-menu .sk-content {
   margin-left: auto;
