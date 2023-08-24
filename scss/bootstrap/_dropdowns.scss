@@ -2,20 +2,9 @@
   [Dropdown menu]
 */
 
-
-//Dropdown Menu Style
-.dropdown-menu {
-	box-shadow: $dropdown-box-shadow;
-
-   .btn-group .btn {
-		padding-left: $dropdown-btn-padding-x;
-		padding-right: $dropdown-btn-padding-x;
-	}
-}
-
 .dropdown-item {
-	display: flex;
-	align-items: center;
+	//display: flex;
+	//align-items: center;
 	
 	.icon {
 		font-size: $dropdown-icon-size;

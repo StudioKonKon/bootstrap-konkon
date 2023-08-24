@@ -7,7 +7,7 @@
 }
 
 .icon-btn {
-   color: inherit !important;
+   color: var(--#{$sk-variable-prefix}icon-btn-color);
    display: inline-flex;
    align-items: center;
    justify-content: center;
@@ -29,6 +29,7 @@
    }
    
    &:hover {
+      color: var(--#{$sk-variable-prefix}icon-btn-hover-color);
       background-color: rgba($black, $icon-btn-hover-bg-scale);
       
       // only if `color-mix` is supported
@@ -40,6 +41,7 @@
    }
    
    &:hover:active {
+      color: var(--#{$sk-variable-prefix}icon-btn-active-color);
       background-color: rgba($black, $icon-btn-active-bg-scale);
       outline-color: rgba($black, $icon-btn-outline-scale);
       

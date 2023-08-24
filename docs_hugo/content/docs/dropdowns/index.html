@@ -14,6 +14,49 @@ body_class = "bg-body-secondary"
 
 [[extra_js]]
 	src = "dropdowns.js"
+
+
+[[theme_colors]]
+   title = "Default"
+   name = "default"
+
+[[theme_colors]]
+   title = "KonKon"
+   name = "konkon"
+   
+[[theme_colors]]
+   title = "Primary"
+   name = "primary"
+   
+[[theme_colors]]
+   title = "Info"
+   name = "info"
+   
+[[theme_colors]]
+   title = "Success"
+   name = "success"
+   
+[[theme_colors]]
+   title = "Warning"
+   name = "warning"
+   
+[[theme_colors]]
+   title = "Danger"
+   name = "danger"
+   
+[[theme_colors]]
+   title = "Secondary"
+   name = "secondary"
+   
+[[theme_colors]]
+   title = "Light"
+   name = "light"
+   theme = "light"
+   
+[[theme_colors]]
+   title = "Dark"
+   name = "dark"
+   theme = "dark"
 	
 +++
 
@@ -38,7 +81,7 @@ body_class = "bg-body-secondary"
 }
 {{< /add-style >}}
 
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4 dropdown-examples">
 	<div class="col">
 		<div class="card">
 			<div class="card-body">
@@ -87,7 +130,7 @@ body_class = "bg-body-secondary"
 	</div>
 </div>
 
-<div class="row row-cols-1 row-cols-lg-2 g-4 mb-4">
+<div class="row row-cols-1 row-cols-lg-2 g-4 mb-4 dropdown-examples">
 	<div class="col">
 		<div class="card">
 			<div class="card-body">
@@ -147,41 +190,45 @@ body_class = "bg-body-secondary"
 	</div>
 </div>
 
-<div class="alert border-0 border-start border-5 border-warning bg-body mb-4" role="alert">
+<div class="alert border-0 border-start border-5 border-warning bg-body mb-4 dropdown-examples" role="alert">
 	<div class="message">
 		<p>By default, Custom Dropdowns are disabled. Enable Custom Dropdowns by setting <code class="highlighter-konkon">$enable-dropdown-colors</code> to <code class="highlighter-konkon">true</code> in Scss. When enabled, change colours using <code class="highlighter-konkon">.dropdown-menu-{theme-color}</code>.</p>
 		<p class="mb-0">Set or remove theme maps by using <code class="highlighter-konkon">$dropdown-colors</code> if only certain colours are needed. Remove <code class="highlighter-konkon">light</code> and <code class="highlighter-konkon">dark</code> to avoid duplicate styles as Bootstrap creates these by default. The same goes for <code class="highlighter-konkon">secondary</code> as this is the same as <code class="highlighter-konkon">light</code> unless you are using a custom colour.</p>
 	</div>
 </div>
 
-<div class="row g-4 dropdown-preview">
+<div class="row g-4 dropdown-preview dropdown-examples">
+{{< ex_dropdown.inline >}}
+{{- with $.Page.Params.theme_colors -}}
+{{- range . -}}
 	<div class="col">
-		<div class="dropdown show">
-			<div class="dropdown-menu show">
+		<div class="dropdown show"{{ with .theme }} data-bs-theme="{{ . | safeHTMLAttr }}"{{ end }}>
+			<div class="dropdown-menu dropdown-menu-{{ .name | safeHTMLAttr }} show">
 				<a class="dropdown-item" href="#">
-					Action
-					<span class="badge badge-success float-end">34</span>
+					<span>Action</span>
+					<span class="badge border bg-light text-dark float-end">34</span>
 				</a>
 				<a class="dropdown-item" href="#">
-					Another action
-					<span class="badge rounded-pill badge-info float-end">16</span>
+					<span>Another action</span>
+					<span class="badge border bg-light text-dark rounded-pill float-end">16</span>
 				</a>
 				<a class="dropdown-item disabled" href="#">Something else here</a>
 				<div class="dropdown-divider"></div>
-				<h6 class="dropdown-header">Dropdown header</h6>
+				<h6 class="dropdown-header">{{ .title }} header</h6>
 				<a class="dropdown-item active" href="#">
 					<i class="icon zmdi zmdi-help"></i>
 					<span>With icon</span>
 				</a>
 				<a class="dropdown-item" href="#">
-					<i class="icon zmdi zmdi-settings"></i> Last action
+					<i class="icon zmdi zmdi-settings"></i>
+					<span>Last action</span>
 				</a>
-				<div class="dropdown-tools">
-					<div class="btn-group mt-1 mb-2">
-						<button class="btn btn-secondary" data-toggle="modal" data-target="#mod-warning" type="button">
+				<div class="dropdown-tools pt-3 pb-2">
+					<div class="btn-group">
+						<button class="btn btn-secondary px-4" data-toggle="modal" data-target="#mod-warning" type="button">
 							<span class="zmdi zmdi-power"></span>
 						</button>
-						<button class="btn btn-secondary active" data-toggle="modal" data-target="#mod-warning" type="button">
+						<button class="btn btn-secondary px-4 active" data-toggle="modal" data-target="#mod-warning" type="button">
 							<span class="zmdi zmdi-wrench"></span>
 						</button>
 					</div>
@@ -189,301 +236,23 @@ body_class = "bg-body-secondary"
 			</div>
 		</div>
 	</div>
-	<div class="col">
-		<div class="dropdown show">
-			<div class="dropdown-menu dropdown-menu-konkon show">
-				<a class="dropdown-item" href="#">
-					Action
-					<span class="badge badge-light float-end">34</span>
-				</a>
-				<a class="dropdown-item" href="#">
-					Another action
-					<span class="badge rounded-pill badge-konkon float-end border-white">16</span>
-				</a>
-				<a class="dropdown-item disabled" href="#">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<h6 class="dropdown-header">Dropdown header</h6>
-				<a class="dropdown-item active" href="#">
-					<i class="icon zmdi zmdi-help"></i> With icon
-				</a>
-				<a class="dropdown-item" href="#">
-					<i class="icon zmdi zmdi-settings"></i> Last action
-				</a>
-				<div class="dropdown-tools">
-					<div class="btn-group mt-1 mb-2">
-						<button class="btn btn-secondary" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-power"></span>
-						</button>
-						<button class="btn btn-secondary active" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-wrench"></span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="dropdown show">
-			<div class="dropdown-menu dropdown-menu-primary show">
-				<a class="dropdown-item" href="#">
-					Action
-					<span class="badge badge-light float-end">34</span>
-				</a>
-				<a class="dropdown-item" href="#">
-					Another action
-					<span class="badge rounded-pill badge-primary float-end border-white">16</span>
-				</a>
-				<a class="dropdown-item disabled" href="#">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<h6 class="dropdown-header">Dropdown header</h6>
-				<a class="dropdown-item active" href="#">
-					<i class="icon zmdi zmdi-help"></i> With icon
-				</a>
-				<a class="dropdown-item" href="#">
-					<i class="icon zmdi zmdi-settings"></i> Last action
-				</a>
-				<div class="dropdown-tools">
-					<div class="btn-group mt-1 mb-2">
-						<button class="btn btn-secondary" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-power"></span>
-						</button>
-						<button class="btn btn-secondary active" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-wrench"></span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="dropdown show">
-			<div class="dropdown-menu dropdown-menu-info show">
-				<a class="dropdown-item" href="#">
-					Action
-					<span class="badge badge-light float-end">34</span>
-				</a>
-				<a class="dropdown-item" href="#">
-					Another action
-					<span class="badge rounded-pill badge-info float-end border-white">16</span>
-				</a>
-				<a class="dropdown-item disabled" href="#">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<h6 class="dropdown-header">Dropdown header</h6>
-				<a class="dropdown-item active" href="#">
-					<i class="icon zmdi zmdi-help"></i> With icon
-				</a>
-				<a class="dropdown-item" href="#">
-					<i class="icon zmdi zmdi-settings"></i> Last action
-				</a>
-				<div class="dropdown-tools">
-					<div class="btn-group mt-1 mb-2">
-						<button class="btn btn-secondary" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-power"></span>
-						</button>
-						<button class="btn btn-secondary active" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-wrench"></span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="dropdown show">
-			<div class="dropdown-menu dropdown-menu-success show">
-				<a class="dropdown-item" href="#">
-					Action
-					<span class="badge badge-light float-end">34</span>
-				</a>
-				<a class="dropdown-item" href="#">
-					Another action
-					<span class="badge rounded-pill badge-success border-white float-end">16</span>
-				</a>
-				<a class="dropdown-item disabled" href="#">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<h6 class="dropdown-header">Dropdown header</h6>
-				<a class="dropdown-item active" href="#">
-					<i class="icon zmdi zmdi-help"></i> With icon
-				</a>
-				<a class="dropdown-item" href="#">
-					<i class="icon zmdi zmdi-settings"></i> Last action
-				</a>
-				<div class="dropdown-tools">
-					<div class="btn-group mt-1 mb-2">
-						<button class="btn btn-secondary" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-power"></span>
-						</button>
-						<button class="btn btn-secondary active" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-wrench"></span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="dropdown show">
-			<div class="dropdown-menu dropdown-menu-warning show">
-				<a class="dropdown-item" href="#">
-					Action
-					<span class="badge badge-light float-end">34</span>
-				</a>
-				<a class="dropdown-item" href="#">
-					Another action
-					<span class="badge rounded-pill badge-warning border-white float-end">16</span>
-				</a>
-				<a class="dropdown-item disabled" href="#">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<h6 class="dropdown-header">Dropdown header</h6>
-				<a class="dropdown-item active" href="#">
-					<i class="icon zmdi zmdi-help"></i> With icon
-				</a>
-				<a class="dropdown-item" href="#">
-					<i class="icon zmdi zmdi-settings"></i> Last action
-				</a>
-				<div class="dropdown-tools">
-					<div class="btn-group mt-1 mb-2">
-						<button class="btn btn-secondary" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-power"></span>
-						</button>
-						<button class="btn btn-secondary active" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-wrench"></span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="dropdown show">
-			<div class="dropdown-menu dropdown-menu-danger show">
-				<a class="dropdown-item" href="#">
-					Action
-					<span class="badge badge-light float-end">34</span>
-				</a>
-				<a class="dropdown-item" href="#">
-					Another action
-					<span class="badge rounded-pill badge-danger border-white float-end">16</span>
-				</a>
-				<a class="dropdown-item disabled" href="#">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<h6 class="dropdown-header">Dropdown header</h6>
-				<a class="dropdown-item active" href="#">
-					<i class="icon zmdi zmdi-help"></i> With icon
-				</a>
-				<a class="dropdown-item" href="#">
-					<i class="icon zmdi zmdi-settings"></i> Last action
-				</a>
-				<div class="dropdown-tools">
-					<div class="btn-group mt-1 mb-2">
-						<button class="btn btn-secondary" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-power"></span>
-						</button>
-						<button class="btn btn-secondary active" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-wrench"></span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="dropdown show">
-			<div class="dropdown-menu dropdown-menu-secondary show">
-				<a class="dropdown-item" href="#">
-					Action
-					<span class="badge badge-light float-end">34</span>
-				</a>
-				<a class="dropdown-item" href="#">
-					Another action
-					<span class="badge rounded-pill badge-secondary float-end">16</span>
-				</a>
-				<a class="dropdown-item disabled" href="#">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<h6 class="dropdown-header">Dropdown header</h6>
-				<a class="dropdown-item active" href="#">
-					<i class="icon zmdi zmdi-help"></i> With icon
-				</a>
-				<a class="dropdown-item" href="#">
-					<i class="icon zmdi zmdi-settings"></i> Last action
-				</a>
-				<div class="dropdown-tools">
-					<div class="btn-group mt-1 mb-2">
-						<button class="btn btn-secondary" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-power"></span>
-						</button>
-						<button class="btn btn-secondary active" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-wrench"></span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="dropdown show">
-			<div class="dropdown-menu dropdown-menu-light show">
-				<a class="dropdown-item" href="#">
-					Action
-					<span class="badge badge-light float-end">34</span>
-				</a>
-				<a class="dropdown-item" href="#">
-					Another action
-					<span class="badge rounded-pill badge-light float-end">16</span>
-				</a>
-				<a class="dropdown-item disabled" href="#">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<h6 class="dropdown-header">Dropdown header</h6>
-				<a class="dropdown-item active" href="#">
-					<i class="icon zmdi zmdi-help"></i> With icon
-				</a>
-				<a class="dropdown-item" href="#">
-					<i class="icon zmdi zmdi-settings"></i> Last action
-				</a>
-				<div class="dropdown-tools">
-					<div class="btn-group mt-1 mb-2">
-						<button class="btn btn-secondary" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-power"></span>
-						</button>
-						<button class="btn btn-secondary active" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-wrench"></span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="dropdown show">
-			<div class="dropdown-menu dropdown-menu-dark show">
-				<a class="dropdown-item" href="#">
-					Action
-					<span class="badge badge-light float-end">34</span>
-				</a>
-				<a class="dropdown-item" href="#">
-					Another action
-					<span class="badge rounded-pill badge-dark float-end">16</span>
-				</a>
-				<a class="dropdown-item disabled" href="#">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<h6 class="dropdown-header">Dropdown header</h6>
-				<a class="dropdown-item active" href="#">
-					<i class="icon zmdi zmdi-help"></i> With icon
-				</a>
-				<a class="dropdown-item" href="#">
-					<i class="icon zmdi zmdi-settings"></i> Last action
-				</a>
-				<div class="dropdown-tools">
-					<div class="btn-group mt-1 mb-2">
-						<button class="btn btn-secondary" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-power"></span>
-						</button>
-						<button class="btn btn-secondary active" data-toggle="modal" data-target="#mod-warning" type="button">
-							<span class="zmdi zmdi-wrench"></span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+{{- end -}}
+{{- end -}}
+{{< /ex_dropdown.inline >}}
 </div>
+
+
+{{< add-script >}}
+document.querySelectorAll(".dropdown-examples a[href='#']").forEach(function(links) {
+   links.addEventListener("click", function (event) {
+      event.preventDefault();
+   });
+});
+document.querySelectorAll(".dropdown-examples form, .dropdown-examples button[type='submit']").forEach(function(links) {
+   links.addEventListener("submit", function (event) {
+      event.preventDefault();
+   });
+});
+{{< /add-script >}}
+
+
