@@ -2,25 +2,6 @@
   [Dropdown menu]
 */
 
-.dropdown-item {
-	//display: flex;
-	//align-items: center;
-	
-	.icon {
-		font-size: $dropdown-icon-size;
-		vertical-align: middle;
-		margin-right: map-get($spacers, 2);
-	}
-	
-	&.disabled {
-		color: $dropdown-link-disabled-color;
-	}
-	
-	.badge {
-		margin-left: auto;
-	}
-}
-
 .dropdown-divider {
 	opacity: $dropdown-hr-opacity;
 	

@@ -1,14 +1,12 @@
-/* globals Chart:false, feather:false */
+/* globals Chart:false */
 
-(function () {
+(() => {
   'use strict'
 
-  feather.replace({ 'aria-hidden': 'true' })
-
   // Graphs
-  var ctx = document.getElementById('myChart')
+  const ctx = document.getElementById('myChart')
   // eslint-disable-next-line no-unused-vars
-  var myChart = new Chart(ctx, {
+  const myChart = new Chart(ctx, {
     type: 'line',
     data: {
       labels: [
@@ -38,15 +36,13 @@
       }]
     },
     options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: false
-          }
-        }]
-      },
-      legend: {
-        display: false
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          boxPadding: 3
+        }
       }
     }
   })

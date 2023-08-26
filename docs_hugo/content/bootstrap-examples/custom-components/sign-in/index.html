@@ -4,16 +4,16 @@ author = "Bootstrap"
 description = "Custom form layout and design for a simple sign in form."
 layout = "bs-example"
 image = "sign-in"
-body_class = "text-center"
+body_class = "d-flex align-items-center text-center py-4 bg-body-tertiary"
 	
 [[extra_css]]
-	src = "signin.css"
+	src = "sign-in.css"
    
 +++
 
-<main class="form-signin">
+<main class="form-signin w-100 m-auto">
   <form>
-    <img class="mb-4" src="/images/bootstrap/bootstrap-logo.svg" alt="" width="72" height="57">
+    <img class="mb-4" src="/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
@@ -25,12 +25,13 @@ body_class = "text-center"
       <label for="floatingPassword">Password</label>
     </div>
 
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
+    <div class="form-check text-start my-3 mx-auto">
+      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Remember me
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017–{{< year >}}</p>
+    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–{{< year >}}</p>
   </form>
 </main>

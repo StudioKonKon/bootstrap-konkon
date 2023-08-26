@@ -7072,10 +7072,13 @@ textarea.form-control-lg {
   --bs-danger-bg-soft: #ed5f53;
   --bs-light-bg-soft: #f9fafb;
   --bs-dark-bg-soft: #424649;
-  --sk-icon-btn-color: var(--bs-body-color-rgb);
+  --sk-icon-size: 1em;
+  --sk-icon-btn-color: inherit;
   --sk-icon-btn-size: 1.5rem;
   --sk-icon-btn-padding: 0.5rem;
+  --sk-icon-btn-hover-color: inherit;
   --sk-icon-btn-hover-bg: currentcolor;
+  --sk-icon-btn-active-color: inherit;
   --sk-icon-btn-active-bg: currentcolor;
 }
 
@@ -7286,30 +7289,6 @@ fieldset[disabled] [data-bs-theme=light] .btn-secondary:hover {
 /*------------------------------------------------------------------
   [Dropdown menu]
 */
-.dropdown-menu {
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12);
-}
-.dropdown-menu .btn-group .btn {
-  padding-left: 1.538rem;
-  padding-right: 1.538rem;
-}
-
-.dropdown-item {
-  display: flex;
-  align-items: center;
-}
-.dropdown-item .icon {
-  font-size: 1.231rem;
-  vertical-align: middle;
-  margin-right: 0.5rem;
-}
-.dropdown-item.disabled {
-  color: var(--bs-tertiary-color);
-}
-.dropdown-item .badge {
-  margin-left: auto;
-}
-
 .dropdown-divider {
   opacity: 1;
 }
@@ -7603,13 +7582,6 @@ fieldset[disabled] [data-bs-theme=light] .btn-secondary:hover {
 
 .alert-icon-full > .icon {
   background-color: rgba(255, 255, 255, 0.15);
-}
-
-/*------------------------------------------------------------------
-  [Tables]
-*/
-.table-icon {
-  --sk-icon-btn-color: var(--bs-table-color);
 }
 
 /*------------------------------------------------------------------
@@ -7949,14 +7921,24 @@ address {
   height: 1em;
 }
 
-.svg-icon, .icon-btn svg, .icon-btn img {
-  width: 1em;
-  height: 1em;
+.svg-icon, .icon-btn svg, .icon-btn img, .ski {
+  flex-shrink: 0;
+  width: var(--sk-icon-size);
+  height: var(--sk-icon-size);
   fill: currentcolor;
 }
 
+.ski {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.ski::before {
+  font-size: var(--sk-icon-size);
+}
+
 .icon-btn {
-  color: inherit !important;
+  color: var(--sk-icon-btn-color);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -7974,10 +7956,12 @@ address {
   aspect-ratio: 1/1;
 }
 .icon-btn:hover {
+  color: var(--sk-icon-btn-hover-color);
   background-color: rgba(0, 0, 0, 0.1);
   background-color: color-mix(in srgb, var(--sk-icon-btn-hover-bg) 10%, transparent);
 }
 .icon-btn:hover:active {
+  color: var(--sk-icon-btn-active-color);
   background-color: rgba(0, 0, 0, 0.2);
   outline-color: rgba(0, 0, 0, 0.4);
   background-color: color-mix(in srgb, var(--sk-icon-btn-active-bg) 20%, transparent);

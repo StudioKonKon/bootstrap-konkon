@@ -5,6 +5,7 @@
    }
    
    // Icon buttons: components/icons
+   --#{$sk-variable-prefix}icon-size: #{$icon-link-icon-size};
    --#{$sk-variable-prefix}icon-btn-color: #{$icon-btn-color};
    --#{$sk-variable-prefix}icon-btn-size: #{$icon-btn-size};
    --#{$sk-variable-prefix}icon-btn-padding: #{$icon-btn-padding};

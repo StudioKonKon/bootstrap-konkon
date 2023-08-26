@@ -7,7 +7,6 @@
       { "source": "docs_hugo/static", "target": "static" },
       { "source": "scss", "target": "assets" },
       { "source": "js", "target": "assets/konkon/js" },
-      { "source": "dist", "target": "static/assets" },
       {
          "source": "node_modules/bootstrap/dist/js",
          "target": "static/assets/lib/bootstrap/dist/js"
