@@ -16,7 +16,7 @@
       <div class="col">
          <div class="card h-100 my-0">
             {{ with .Params.image }}
-               <img class="card-img-top" src="/images/bootstrap/{{ . }}.png" alt="featured image" />
+               <img class="card-img-top" src="/assets/img/examples/{{ . }}.png" alt="featured image" />
             {{ else }}
                {{ partial "image-placeholder" ( dict "class" "card-img-top h-auto" "width" "480" "height" "300" "text" .Title "background" "#7952b3" ) }}
             {{ end }}

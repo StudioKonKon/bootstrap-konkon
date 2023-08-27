@@ -1,6 +1,9 @@
 // Icon buttons
 
 .svg-icon {
+   display: inline-flex !important;
+   align-items: center;
+   justify-content: center;
    flex-shrink: 0;
    width: var(--#{$sk-variable-prefix}icon-size);
    height: var(--#{$sk-variable-prefix}icon-size);
@@ -8,9 +11,6 @@
 }
 
 .ski {
-   display: inline-flex !important;
-   align-items: center;
-   justify-content: center;
    @extend .svg-icon !optional;
    
    &::before {

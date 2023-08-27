@@ -1,14 +1,15 @@
 +++
+weight = 5
 title = "Bottom navbar example"
 author = "Bootstrap"
 description = "Single navbar example with a bottom navbar along with some additional content."
 layout = "bs-example"
 image = "navbar-bottom"
-body_class = ""   
+body_class = "bg-body-secondary"   
 +++
 
 <main class="container">
-  <div class="bg-light p-5 rounded mt-3">
+  <div class="bg-body-tertiary p-5 rounded mt-3">
     <h1>Bottom Navbar example</h1>
     <p class="lead">This example is a quick exercise to illustrate how the bottom navbar works.</p>
     <a class="btn btn-lg btn-primary" href="{{< docsref "/components/navbar" >}}" role="button">View navbar docs &raquo;</a>
@@ -29,11 +30,11 @@ body_class = ""
           <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
         <li class="nav-item dropup">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-bs-toggle="dropdown" aria-expanded="false">Dropup</a>
-          <ul class="dropdown-menu" aria-labelledby="dropdown10">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropup</a>
+          <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
