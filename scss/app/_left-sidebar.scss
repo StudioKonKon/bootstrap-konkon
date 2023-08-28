@@ -81,7 +81,6 @@
             padding: 0;
             margin: map-get($spacers, 1) auto;
             border-bottom: 1px solid $sidebar-divider-bg;
-            width: $sidebar-width - ($sidebar-main-level-padding * 2);
             height: auto;
          }
       }

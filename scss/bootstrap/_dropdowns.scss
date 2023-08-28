@@ -2,43 +2,6 @@
   [Dropdown menu]
 */
 
-.dropdown-divider {
-	opacity: $dropdown-hr-opacity;
-	
-	+ .dropdown-header {
-		margin-top: map-get($spacers, 2);
-	}
-}
-
 .dropdown-header {
-	font-weight: $font-weight-normal;
-	color: $gray-600;
 	cursor: default;
-}
-
-.dropdown-tools {
-	text-align: center;
-}
-
-.dropdown-menu-dark {
-	.btn-group .btn {
-		background-color: transparent;
-		color: $dropdown-dark-color;
-		
-		&:hover {
-			border-color: $dropdown-dark-color;
-			background-color: rgba($white, .1);
-
-			& + .btn {
-				border-left-color: transparent; 
-			}
-		}
-		
-		&.active,
-		&:active {
-			background-color: $dropdown-dark-color;
-			color: $dropdown-dark-bg;
-			border-color: transparent;
-		}
-	}
 }

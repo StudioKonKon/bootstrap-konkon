@@ -201,6 +201,7 @@ body_class = "bg-body-secondary"
 {{< ex_dropdown.inline >}}
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
+   {{ $tools := (ne .name "default" "light" "dark") }}
 	<div class="col">
 		<div class="dropdown show"{{ with .theme }} data-bs-theme="{{ . | safeHTMLAttr }}"{{ end }}>
 			<div class="dropdown-menu dropdown-menu-{{ .name | safeHTMLAttr }} show" style="--sk-icon-size:1.25em;">
@@ -223,12 +224,12 @@ body_class = "bg-body-secondary"
 					{{ partial "icon" ( dict "icon" "settings" ) }}
 					<span>Last action</span>
 				</a>
-				<div class="dropdown-tools pt-3 pb-2">
+				<div class="text-center pt-3 pb-2">
 					<div class="btn-group">
-						<button class="btn btn-secondary px-4" data-toggle="modal" data-target="#mod-warning" type="button">
+						<button class="btn {{ if $tools }}btn-dropdown {{ end }}btn-secondary px-4" type="button">
 							<span class="zmdi zmdi-power"></span>
 						</button>
-						<button class="btn btn-secondary px-4 active" data-toggle="modal" data-target="#mod-warning" type="button">
+						<button class="btn {{ if $tools }}btn-dropdown {{ end }}btn-secondary px-4" type="button">
 							<span class="zmdi zmdi-wrench"></span>
 						</button>
 					</div>

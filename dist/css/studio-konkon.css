@@ -7289,38 +7289,8 @@ fieldset[disabled] [data-bs-theme=light] .btn-secondary:hover {
 /*------------------------------------------------------------------
   [Dropdown menu]
 */
-.dropdown-divider {
-  opacity: 1;
-}
-.dropdown-divider + .dropdown-header {
-  margin-top: 0.5rem;
-}
-
 .dropdown-header {
-  font-weight: 400;
-  color: #6c757d;
   cursor: default;
-}
-
-.dropdown-tools {
-  text-align: center;
-}
-
-.dropdown-menu-dark .btn-group .btn {
-  background-color: transparent;
-  color: #dee2e6;
-}
-.dropdown-menu-dark .btn-group .btn:hover {
-  border-color: #dee2e6;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.dropdown-menu-dark .btn-group .btn:hover + .btn {
-  border-left-color: transparent;
-}
-.dropdown-menu-dark .btn-group .btn.active, .dropdown-menu-dark .btn-group .btn:active {
-  background-color: #dee2e6;
-  color: #343a40;
-  border-color: transparent;
 }
 
 /*------------------------------------------------------------------
@@ -7922,17 +7892,15 @@ address {
 }
 
 .svg-icon, .icon-btn svg, .icon-btn img, .ski {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   width: var(--sk-icon-size);
   height: var(--sk-icon-size);
   fill: currentcolor;
 }
 
-.ski {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-}
 .ski::before {
   font-size: var(--sk-icon-size);
 }

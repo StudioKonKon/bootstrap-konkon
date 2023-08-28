@@ -26,7 +26,6 @@ $enable-toast-colors:         false !default;
 $enable-btn-social-colors:    false !default;
 
 
-
 // scss-docs-start theme-soft-variables
 $primary-bg-soft:   tint-color($primary, 15%) !default;
 $secondary-bg-soft: tint-color($secondary, 15%) !default;
@@ -43,18 +42,11 @@ $dark-bg-soft:      tint-color($dark, 15%) !default;
 $custom-theme-colors: () !default;
 $social-colors: () !default;
 
-$sk-konkon:             lighten($konkon, 6.1%);
-$card-konkon:           $sk-konkon;
-$dropdown-konkon:       $sk-konkon;
-
-
-// Maps
-$dropdown-colors: map-remove($theme-colors, "light", "secondary", "dark") !default;
-
 
 // Maps to remove from this code
-$sk-colors:      () !default;
-$modal-colors:   () !default;
+$sk-colors:       () !default;
+$modal-colors:    () !default;
+$dropdown-colors: () !default;
 
 $body-bg-light:   #eef0f2;
 
@@ -63,9 +55,6 @@ $body-bg-light:   #eef0f2;
 $sk-caret-width:   .125em;
 $sk-caret-size:    .5em;
 $sk-caret-spacing: $sk-caret-size * .85;
-
-
-// Theme Colours
 
 
 // Icon buttons
@@ -199,6 +188,19 @@ $dropdown-btn-padding-x:          1.538rem;
 $dropdown-hr-opacity:             1;
 $dropdown-theme-divider-opacity:  .15;
 $dropdown-theme-disabled-opacity: .5;
+
+$dropdown-colors: map-merge(
+   (
+      "konkon":    $konkon-bg-soft,
+      "primary":   $primary-bg-soft,
+      "secondary": $secondary-bg-soft,
+      "success":   $success-bg-soft,
+      "info":      $info-bg-soft,
+      "warning":   $warning-bg-soft,
+      "danger":    $danger-bg-soft
+   ),
+   $dropdown-colors
+);
 
 
 // Forms

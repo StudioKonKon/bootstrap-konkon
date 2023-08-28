@@ -274,18 +274,18 @@ $table-bg-scale:              -20%;
 //##
 
 // scss-docs-start input-btn-variables
-$input-btn-focus-width:			0.15rem;
+$input-btn-focus-width:       0.15rem;
 
-$input-btn-padding-x:			.769rem;
-$input-btn-font-size:			$font-size-base;
+$input-btn-padding-x:         .769rem;
+$input-btn-font-size:         $font-size-base;
 
-$input-btn-padding-x-sm:		.615rem;
-$input-btn-font-size-sm:		$font-size-sm;
+$input-btn-padding-x-sm:      .615rem;
+$input-btn-font-size-sm:      $font-size-sm;
 
-$input-btn-padding-x-lg:		.923rem;
-$input-btn-font-size-lg:		$font-size-lg;
+$input-btn-padding-x-lg:      .923rem;
+$input-btn-font-size-lg:      $font-size-lg;
 
-$input-btn-border-width:		$border-width;
+$input-btn-border-width:      $border-width;
 // scss-docs-end input-btn-variables
 
 
@@ -294,20 +294,20 @@ $input-btn-border-width:		$border-width;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
-$btn-padding-x:				$input-btn-padding-x;
-$btn-font-size:				$input-btn-font-size;
+$btn-padding-x:            $input-btn-padding-x;
+$btn-font-size:            $input-btn-font-size;
 
-$btn-padding-x-sm:			$input-btn-padding-x-sm;
-$btn-font-size-sm:			$input-btn-font-size-sm;
+$btn-padding-x-sm:         $input-btn-padding-x-sm;
+$btn-font-size-sm:         $input-btn-font-size-sm;
 
-$btn-padding-x-lg:			$input-btn-padding-x-lg;
-$btn-font-size-lg:			$input-btn-font-size-lg;
+$btn-padding-x-lg:         $input-btn-padding-x-lg;
+$btn-font-size-lg:         $input-btn-font-size-lg;
 
-$btn-border-width:			$input-btn-border-width;
+$btn-border-width:         $input-btn-border-width;
 
-$btn-font-weight:			500;
-$btn-box-shadow:			0 .077rem 0 rgba($black, .05);
-$btn-focus-width:			$input-btn-focus-width;
+$btn-font-weight:          500;
+$btn-box-shadow:           0 .077rem 0 rgba($black, .05);
+$btn-focus-width:          $input-btn-focus-width;
 
 $btn-link-disabled-color:	$gray-600;
 // scss-docs-end btn-variables
@@ -339,12 +339,16 @@ $form-range-thumb-disabled-bg: var(--#{$prefix}secondary-color);
 
 // scss-docs-start dropdown-variables
 $dropdown-min-width:			   14rem;
+$dropdown-padding-x:          0;
 $dropdown-padding-y:			   map-get($spacers, 4) - $spacer;
 $dropdown-divider-margin-y:   map-get($spacers, 1);
 $dropdown-box-shadow:         0 0 6px 0 rgba($black, .12);
+
 $dropdown-item-padding-y:		map-get($spacers, 2);
 $dropdown-item-padding-x:		map-get($spacers, 4);
-$dropdown-header-padding:     $dropdown-padding-y $dropdown-item-padding-x;
+
+$dropdown-header-padding-x:   $dropdown-item-padding-x;
+$dropdown-header-padding-y:   $dropdown-padding-y;
 // scss-docs-end dropdown-variables
 
 
@@ -380,32 +384,32 @@ $card-border-color:        rgba($black, .05);
 // Accordion
 
 // scss-docs-start accordion-variables
-$accordion-padding-y:					$spacer;
-$accordion-padding-x:					map-get($spacers, 1) + $spacer;
-$accordion-color:						   var(--#{$prefix}body-color);
-$accordion-bg:							   var(--#{$prefix}body-bg);
-$accordion-border-width:            var(--#{$prefix}border-width) !default;
-$accordion-border-color:            var(--#{$prefix}border-color) !default;
-$accordion-border-radius:           var(--#{$prefix}border-radius) !default;
+$accordion-padding-y:                  $spacer;
+$accordion-padding-x:                  map-get($spacers, 1) + $spacer;
+$accordion-color:                      var(--#{$prefix}body-color);
+$accordion-bg:                         var(--#{$prefix}body-bg);
+$accordion-border-width:               var(--#{$prefix}border-width) !default;
+$accordion-border-color:               var(--#{$prefix}border-color) !default;
+$accordion-border-radius:              var(--#{$prefix}border-radius) !default;
 
-$accordion-body-padding-y:				map-get($spacers, 4);
-$accordion-body-padding-x:				map-get($spacers, 4);
+$accordion-body-padding-y:			   	map-get($spacers, 4);
+$accordion-body-padding-x:			   	map-get($spacers, 4);
 
-$accordion-button-padding-y:			$accordion-padding-y;
-$accordion-button-padding-x:			$accordion-padding-x;
-$accordion-button-color:				$accordion-color;
-$accordion-button-bg:					$accordion-bg;
-$accordion-button-active-bg:			$accordion-button-bg;
-$accordion-button-active-color:		$primary;
+$accordion-button-padding-y:           $accordion-padding-y;
+$accordion-button-padding-x:		   	$accordion-padding-x;
+$accordion-button-color:			   	$accordion-color;
+$accordion-button-bg:				   	$accordion-bg;
+$accordion-button-active-bg:			   $accordion-button-bg;
+$accordion-button-active-color:	   	$primary;
 
 $accordion-button-focus-border-color:	$accordion-border-color;
 $accordion-button-focus-box-shadow:		none;
 
-$accordion-icon-width:					1.25rem;
-$accordion-icon-color:					$accordion-color;
-$accordion-icon-active-color:			$accordion-button-active-color;
-$accordion-icon-transition:			transform .2s ease-in-out;
-$accordion-icon-transform:				rotate(180deg);
+$accordion-icon-width:					   1.25rem;
+$accordion-icon-color:					   $accordion-color;
+$accordion-icon-active-color:		   	$accordion-button-active-color;
+$accordion-icon-transition:		   	transform .2s ease-in-out;
+$accordion-icon-transform:			   	rotate(180deg);
 // scss-docs-end accordion-variables
 
 
@@ -438,46 +442,46 @@ $toast-box-shadow:    0 .25rem .75rem rgba($black, .1);
 // Badges
 
 // scss-docs-start badge-variables
-$badge-font-size:     $small-font-size;
-$badge-font-weight:   $font-weight-bolder;
-$badge-padding-x:     $spacer - map-get($spacers, 1);
-$badge-padding-y:     $badge-padding-x * .5;
-$badge-border-radius: $border-radius-sm;
+$badge-font-size:       $small-font-size;
+$badge-font-weight:     $font-weight-bolder;
+$badge-padding-x:       $spacer - map-get($spacers, 1);
+$badge-padding-y:       $badge-padding-x * .5;
+$badge-border-radius:   $border-radius-sm;
 // scss-docs-end badge-variables
 
 
 // Modals
 
 // scss-docs-start modal-variables
-$modal-inner-padding:       map-get($spacers, 4);
-$modal-header-border-width: 0;
-$modal-footer-border-width: 0;
-$modal-md:                  600px;
+$modal-inner-padding:         map-get($spacers, 4);
+$modal-header-border-width:   0;
+$modal-footer-border-width:   0;
+$modal-md:                    600px;
 // scss-docs-end modal-variables
 
 
 // Progress bars
 
 // scss-docs-start progress-variables
-$progress-height:                   1rem;
-$progress-font-size:                $font-size-base * .65;
-$progress-border-radius:            $border-radius-sm;
-$progress-box-shadow:               none;
+$progress-height:          1rem;
+$progress-font-size:       $font-size-base * .65;
+$progress-border-radius:   $border-radius-sm;
+$progress-box-shadow:      none;
 // scss-docs-end progress-variables
 
 
 // List group
 
 // scss-docs-start list-group-variables
-$list-group-border-radius:           var(--#{$prefix}border-radius-sm);
+$list-group-border-radius:    var(--#{$prefix}border-radius-sm);
 
-$list-group-item-padding-y:			$spacer * .75;
-$list-group-item-padding-x:			$spacer;
+$list-group-item-padding-y:   $spacer * .75;
+$list-group-item-padding-x:   $spacer;
 
-$list-group-hover-bg:               var(--#{$prefix}tertiary-bg);
+$list-group-hover-bg:         var(--#{$prefix}tertiary-bg);
 
-$list-group-disabled-color:			var(--#{$prefix}secondary-color);
-$list-group-disabled-bg:				var(--#{$prefix}tertiary-bg);
+$list-group-disabled-color:   var(--#{$prefix}secondary-color);
+$list-group-disabled-bg:      var(--#{$prefix}tertiary-bg);
 // scss-docs-end list-group-variables
 
 

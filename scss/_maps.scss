@@ -1,7 +1,6 @@
 // Bootstrap maps
 
 $table-variants: map-merge(( "konkon": shift-color($konkon, $table-bg-scale)), $table-variants );
-$dropdown-colors: map-merge(( "konkon": $dropdown-konkon ), $dropdown-colors);
 
 
 // Required

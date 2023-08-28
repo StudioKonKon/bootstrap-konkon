@@ -5,4 +5,22 @@
 			@include dropdown-color($value);
 		}
 	}
+   
+   .btn-dropdown,
+   .btn-dropdown.btn-secondary {
+      --#{$prefix}btn-color: rgba(var(--#{$prefix}dropdown-tools-rgb), 1);
+      --#{$prefix}btn-bg: transparent;
+      --#{$prefix}btn-border-color: rgba(var(--#{$prefix}dropdown-tools-rgb), .5);
+      --#{$prefix}btn-hover-color: rgba(var(--#{$prefix}dropdown-tools-rgb), 1);
+      --#{$prefix}btn-hover-bg: rgba(var(--#{$prefix}dropdown-tools-rgb), .1);
+      --#{$prefix}btn-hover-border-color: rgba(var(--#{$prefix}dropdown-tools-rgb), .75);
+      --#{$prefix}btn-focus-shadow-rgb: var(--#{$prefix}dropdown-tools-rgb);
+      --#{$prefix}btn-active-color: rgba(var(--#{$prefix}dropdown-tools-rgb), 1);
+      --#{$prefix}btn-active-bg: rgba(var(--#{$prefix}dropdown-tools-rgb), .2);
+      --#{$prefix}btn-active-border-color: rgba(var(--#{$prefix}dropdown-tools-rgb), 1);
+      --#{$prefix}btn-active-shadow: none;
+      --#{$prefix}btn-disabled-color: rgba(var(--#{$prefix}dropdown-tools-rgb), 1);
+      --#{$prefix}btn-disabled-bg: transparent;
+      --#{$prefix}btn-disabled-border-color: rgba(var(--#{$prefix}dropdown-tools-rgb), .5);
+   }
 }
