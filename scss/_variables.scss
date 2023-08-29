@@ -112,8 +112,9 @@ $min-contrast-ratio: 1.7;
 
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem;
-$spacers: ();
+$spacers: () !default;
 $spacers: map-merge(
+   $spacers,
 	(
       0: 0,
       1: $spacer * .25,
@@ -121,8 +122,7 @@ $spacers: map-merge(
       3: $spacer,
       4: $spacer * 1.5,
       5: $spacer * 3
-	),
-	$spacers
+	)
 );
 // scss-docs-end spacer-variables-maps
 
@@ -160,14 +160,18 @@ $paragraph-margin-bottom: 1rem;
 // Components
 
 // scss-docs-start border-variables
-$border-width:               1px;
-$border-widths: (
-  0: 0,
-  1: 1px,
-  2: 2px,
-  3: 3px,
-  4: 4px,
-  5: 5px
+$border-width:  1px;
+$border-widths: () !default;
+$border-widths: map-merge(
+   $border-widths,
+   (
+      0: 0,
+      1: 1px,
+      2: 2px,
+      3: 3px,
+      4: 4px,
+      5: 5px
+   )
 );
 $border-style:                solid;
 $border-color:                $gray-300;
@@ -485,26 +489,6 @@ $list-group-disabled-bg:      var(--#{$prefix}tertiary-bg);
 // scss-docs-end list-group-variables
 
 
-// Image thumbnails
-
-// scss-docs-start thumbnail-variables
-$thumbnail-padding:        map-get($spacers, 1);
-$thumbnail-bg:             $body-bg;
-$thumbnail-border-width:   $border-width;
-$thumbnail-border-color:   $gray-300;
-$thumbnail-border-radius:  $border-radius;
-$thumbnail-box-shadow:     $box-shadow-sm;
-// scss-docs-end thumbnail-variables
-
-
-// Figures
-
-// scss-docs-start figure-variables
-$figure-caption-font-size:	$small-font-size;
-$figure-caption-color:		$gray-600;
-// scss-docs-end figure-variables
-
-
 // Breadcrumbs
 
 // scss-docs-start breadcrumb-variables
@@ -516,9 +500,4 @@ $breadcrumb-divider-color:		var(--#{$prefix}tertiary-color);
 $breadcrumb-active-color:		var(--#{$prefix}secondary-color);
 $breadcrumb-border-radius:		$border-radius-sm;
 // scss-docs-end breadcrumb-variables
-
-
-// Code
-
-$pre-color:						$gray-900;
 

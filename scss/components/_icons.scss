@@ -1,5 +1,23 @@
 // Icon buttons
 
+%base-icon-btn {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   width: var(--#{$sk-variable-prefix}icon-btn-size);
+   height: var(--#{$sk-variable-prefix}icon-btn-size);
+   font-size: var(--#{$sk-variable-prefix}icon-btn-size);
+   line-height: 1;
+   padding: var(--#{$sk-variable-prefix}icon-btn-padding);
+   box-sizing: content-box;
+   aspect-ratio: 1 / 1;
+   
+   svg, img {
+      @extend .svg-icon !optional;
+   }
+}
+
 .svg-icon {
    display: inline-flex !important;
    align-items: center;
@@ -18,27 +36,17 @@
    }
 }
 
+.icon-btn-base {
+   @extend %base-icon-btn;
+}
+
 .icon-btn {
+   @extend %base-icon-btn;
    color: var(--#{$sk-variable-prefix}icon-btn-color);
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   width: var(--#{$sk-variable-prefix}icon-btn-size);
-   height: var(--#{$sk-variable-prefix}icon-btn-size);
-   font-size: var(--#{$sk-variable-prefix}icon-btn-size);
-   line-height: 1;
    background-color: transparent;
-   padding: var(--#{$sk-variable-prefix}icon-btn-padding);
    border-radius: 50%;
    border: 0;
    outline: solid 1px transparent;
-   box-sizing: content-box;
-   aspect-ratio: 1 / 1;
-   
-   svg, img {
-      @extend .svg-icon !optional;
-   }
    
    &:hover {
       color: var(--#{$sk-variable-prefix}icon-btn-hover-color);

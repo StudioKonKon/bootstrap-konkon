@@ -190,6 +190,7 @@ $dropdown-theme-divider-opacity:  .15;
 $dropdown-theme-disabled-opacity: .5;
 
 $dropdown-colors: map-merge(
+   $dropdown-colors,
    (
       "konkon":    $konkon-bg-soft,
       "primary":   $primary-bg-soft,
@@ -198,8 +199,7 @@ $dropdown-colors: map-merge(
       "info":      $info-bg-soft,
       "warning":   $warning-bg-soft,
       "danger":    $danger-bg-soft
-   ),
-   $dropdown-colors
+   )
 );
 
 
@@ -210,6 +210,7 @@ $form-file-input-icon-size: 1.15em;
 // modal colours
 
 $modal-colors: map-merge(
+   $modal-colors,
    (
       "konkon":    $konkon-bg-soft,
       "primary":   $primary-bg-soft,
@@ -218,8 +219,7 @@ $modal-colors: map-merge(
       "info":      $info-bg-soft,
       "warning":   $warning-bg-soft,
       "danger":    $danger-bg-soft
-   ),
-   $modal-colors
+   )
 );
 
 
@@ -240,23 +240,23 @@ $codepen:       #333333 !default;
 $stackoverflow: #f48225 !default;
 
 $social-colors: map-merge(
-  (
-    "facebook":      $facebook,
-    "twitter":       $twitter,
-    "google-plus":   $google-plus,
-    "dribbble":      $dribbble,
-    "youtube":       $youtube,
-    "flickr":        $flickr,
-    "linkedin":      $linkedin,
-    "pinterest":     $pinterest,
-    "github":        $github,
-    "tumblr":        $tumblr,
-    "evernote":      $evernote,
-    "dropbox":       $dropbox,
-    "codepen":       $codepen,
-    "stackoverflow": $stackoverflow
-  ),
-  $social-colors
+   $social-colors,
+   (
+      "facebook":      $facebook,
+      "twitter":       $twitter,
+      "google-plus":   $google-plus,
+      "dribbble":      $dribbble,
+      "youtube":       $youtube,
+      "flickr":        $flickr,
+      "linkedin":      $linkedin,
+      "pinterest":     $pinterest,
+      "github":        $github,
+      "tumblr":        $tumblr,
+      "evernote":      $evernote,
+      "dropbox":       $dropbox,
+      "codepen":       $codepen,
+      "stackoverflow": $stackoverflow
+   )
 );
 
 

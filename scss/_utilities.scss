@@ -1,12 +1,21 @@
 // Utilities
 
 $utilities: map-merge(
+   $utilities,
    (
       "soft-background-color": (
          property: background-color,
          class: bg,
          values: $utilities-bg-soft
-       )
-   ),
-   $utilities
+      ),
+      "white-space": map-merge(
+         map-get($utilities, "white-space"),
+         (
+            values: map-merge(
+               map-get(map-get($utilities, "white-space"), "values"),
+               ( pre-wrap: pre-wrap )
+            )
+         )
+      )
+   )
 );

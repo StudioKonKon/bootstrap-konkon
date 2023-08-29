@@ -10,6 +10,13 @@ body_class = "bg-body-secondary"
    
 +++
 
+{{< add-style >}}
+.hstack .icon-btn {
+   --sk-icon-btn-size: 1.4em;
+   --sk-icon-btn-padding: 0em;
+}
+{{< /add-style >}}
+
 <div class="row g-4 mb-4">
 	<div class="col-lg-4">
 	  <div class="card card-flat">
@@ -62,7 +69,7 @@ body_class = "bg-body-secondary"
             <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
          </div>
          <div class="hstack gap-1">
-            <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="icon zmdi zmdi-close"></span></a>
+            <a class="icon-btn" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
          </div>
 		</div>
 		<div class="card-body">
@@ -78,11 +85,11 @@ body_class = "bg-body-secondary"
             <h5 class="card-title mb-0">Card with tools</h5>
             <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
          </div>
-         <div class="hstack gap-1">
-            <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="icon zmdi zmdi-edit"></span></a>
-            <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="icon zmdi zmdi-refresh-sync"></span></a>
+         <div class="hstack">
+            <a class="icon-btn" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+            <a class="icon-btn" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
             <div class="dropdown">
-               <a class="link-secondary fs-4 px-2"" href="#" role="button" data-bs-toggle="dropdown"><span class="icon zmdi zmdi-more-vert"></span></a>
+               <a class="icon-btn"" href="#" role="button" data-bs-toggle="dropdown"><span class="zmdi zmdi-more-vert"></span></a>
                <div class="dropdown-menu" role="menu">
                   <a class="dropdown-item" href="#">Action</a>
                   <a class="dropdown-item" href="#">Another action</a>
@@ -121,7 +128,7 @@ body_class = "bg-body-secondary"
             <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
          </div>
          <div class="hstack gap-1">
-            <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="icon zmdi zmdi-close"></span></a>
+            <a class="icon-btn" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
          </div>
 		</div>
 		<div class="card-body bg-body-tertiary text-body">
@@ -139,8 +146,8 @@ body_class = "bg-body-secondary"
             <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
          </div>
          <div class="hstack gap-1">
-            <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-            <a class="link-secondary fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+            <a class="icon-btn" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+            <a class="icon-btn" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
          </div>
 		</div>
 		<div class="card-body">
@@ -175,9 +182,9 @@ body_class = "bg-body-secondary"
                <h6 class="card-subtitle text-body-secondary fw-normal">Card subtitle description</h6>
             </div>
             <div class="hstack">
-               <a class="link-secondary link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-               <a class="link-secondary link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-               <a class="link-secondary link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+               <a class="link-secondary icon-btn" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+               <a class="link-secondary icon-btn" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+               <a class="link-secondary icon-btn" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
             </div>
          </div>
          <div class="card-body">
@@ -196,9 +203,9 @@ body_class = "bg-body-secondary"
          <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
       </div>
       <div class="hstack">
-         <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-         <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-         <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+         <a class="link-{{ $key_link }} icon-btn" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-{{ $key_link }} icon-btn" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-{{ $key_link }} icon-btn" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
       </div>
    </div>
 	<div class="card-body">
@@ -216,9 +223,9 @@ body_class = "bg-body-secondary"
          <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
       </div>
       <div class="hstack">
-         <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-         <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-         <a class="link-{{ $key_link }} link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+         <a class="link-{{ $key_link }} icon-btn" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-{{ $key_link }} icon-btn" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-{{ $key_link }} icon-btn" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
       </div>
    </div>
 	<div class="card-body">
@@ -239,9 +246,9 @@ body_class = "bg-body-secondary"
          <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
       </div>
       <div class="hstack">
-         <a class="link-light link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-         <a class="link-light link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-         <a class="link-light link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+         <a class="link-light icon-btn" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-light icon-btn" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-light icon-btn" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
       </div>
    </div>
 	<div class="card-body">
@@ -259,9 +266,9 @@ body_class = "bg-body-secondary"
          <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
       </div>
       <div class="hstack">
-         <a class="link-light link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-         <a class="link-light link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-         <a class="link-light link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+         <a class="link-light icon-btn" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-light icon-btn" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-light icon-btn" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
       </div>
    </div>
 	<div class="card-body">
@@ -279,9 +286,9 @@ body_class = "bg-body-secondary"
          <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
       </div>
       <div class="hstack">
-         <a class="link-primary link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-         <a class="link-primary link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-         <a class="link-primary link-opacity-75 link-opacity-100-hover fs-4 px-2" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+         <a class="link-primary icon-btn" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+         <a class="link-primary icon-btn" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+         <a class="link-primary icon-btn" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
       </div>
    </div>
 	<div class="card-body bg-primary" style="--bs-bg-opacity:.05;">
