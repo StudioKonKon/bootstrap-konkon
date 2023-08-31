@@ -13,9 +13,9 @@ $konkon-text-dark:           tint-color($konkon, 40%);
 // Global colors
 //
 
-$primary-text-emphasis-dark:  tint-color($primary, 40%) !default;
+$primary-text-emphasis-dark:        tint-color($primary, 40%) !default;
 
-$body-color-dark:                   $gray-500 !default;
+$body-color-dark:                   $gray-400 !default;
 $code-color-dark:                   tint-color($konkon, 40%) !default;
 
 

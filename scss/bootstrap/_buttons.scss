@@ -14,7 +14,7 @@
 
 @if $enable-custom-secondary-btn {
    .btn-secondary,
-   [data-bs-theme=light] .btn-secondary {
+   [data-bs-theme="light"] .btn-secondary {
       @include button-variant(
          $body-bg,
          $border-color,
@@ -61,7 +61,7 @@
    }
 
    @if $enable-dark-mode {
-      [data-bs-theme=dark] .btn-secondary {
+      [data-bs-theme="dark"] .btn-secondary {
          @include button-variant(
             $body-bg-dark,
             $border-color-dark,

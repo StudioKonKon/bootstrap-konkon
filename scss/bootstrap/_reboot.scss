@@ -2,7 +2,22 @@
   [Reboot]
 */
 
+// Word Wrap
 .text-break-keep {
    word-wrap: normal;
    word-break: keep-all;
+}
+
+
+// Lists
+ol, ul {
+	ol, ul {
+		padding-left: 2.5rem;
+	}
+}
+
+
+// Addresses
+address {
+	line-height: 1.5;
 }

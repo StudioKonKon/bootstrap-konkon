@@ -143,10 +143,10 @@ $widget-box-shadow:               $card-box-shadow;
 
 
 // Progress bars
-$progress-height-sm:    .308rem;
-$progress-font-size-sm: 0;
-$progress-height-lg:    1.692rem;
-$progress-font-size-lg: $font-size-sm;
+$progress-height-sm:    .25rem;
+$progress-font-size-sm: 0rem;
+$progress-height-lg:    1.75rem;
+$progress-font-size-lg: 0.85rem;
 
 
 // Accordion
@@ -183,12 +183,6 @@ $alert-bordered:       $border-width solid $alert-bordered-color;
 
 
 // Dropdowns
-$dropdown-icon-size:              $dropdown-font-size * 1.231;
-$dropdown-btn-padding-x:          1.538rem;
-$dropdown-hr-opacity:             1;
-$dropdown-theme-divider-opacity:  .15;
-$dropdown-theme-disabled-opacity: .5;
-
 $dropdown-colors: map-merge(
    $dropdown-colors,
    (

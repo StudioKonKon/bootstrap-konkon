@@ -3,8 +3,6 @@
 */
 
 // Body text
-// -------------------------
-
 h1, .h1,
 h2, .h2,
 h3, .h3 {
@@ -13,90 +11,19 @@ h3, .h3 {
 	}
 }
 
-.text-bold {
-	font-weight: $font-weight-bold !important;
-}
 
-// Contextual colors
-@include text-type-emphasis-variant(".text-success", $success);
-@include text-type-emphasis-variant(".text-warning", $warning);
-@include text-type-emphasis-variant(".text-danger", $danger);
-
-// Lists
-// -------------------------
-
-// Unordered and Ordered lists
-ol,
-ul {
-	ol,
-	ul {
-		padding-left: map-get($spacers, 5);
-	}
-}
-
+//
 // Misc
-// -------------------------
+//
 
 // Blockquotes
-.blockquote {
-	p {
-		margin-bottom: map-get($spacers, 3);
-	}
-
-	ol,
-	p,
-	ul {
-		&:first-child {
-			margin-top: 0;
-		}
-		
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-}
-
 .blockquote-footer {
 	margin-top: 0;
 }
 
 
-//Display Heading
-// -------------------------
-.display-heading {
-	font-size: $display-heading-size;
-	font-weight: $font-weight-lighter;
-	margin: $display-heading-margin;
-
-	@include media-breakpoint-down(sm) {
-		font-size: ceil($display-heading-size - ($display-heading-size * 0.2));
-	}
-}
-
-//Display Description
-// -------------------------
-
-.display-description {
-	font-size: $display-description-size;
-	font-weight: $font-weight-lighter;
-	line-height: $display-description-line-height;
-	margin: $display-description-margin;
-
-	@include media_size("phone") {
-		font-size: ceil($display-description-size - ($display-description-size * 0.2));
-		line-height: ceil($display-description-line-height - ($display-description-line-height * 0.2));
-	}
-}
-
-// Addresses
-
-address {
-	line-height: 1.538rem;
-}
-
 // Code Highlighter
-.highlighter-konkon
-{
+.highlighter-konkon {
    color: var(--#{$prefix}konkon-text-emphasis);
    background-color: var(--#{$prefix}konkon-bg-subtle);
 }

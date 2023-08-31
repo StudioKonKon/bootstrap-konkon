@@ -58,15 +58,6 @@ $info:		#6ba4ff;
 $light:     $gray-100;
 $dark:      $gray-900;
 
-$primary-text:            #285092;
-$secondary-text:          #1f2326;
-$success-text:            #1f6532;
-$info-text:               #406299;
-$warning-text:            #995f00;
-$danger-text:             #8c2820;
-$light-text:              $gray-600 !default;
-$dark-text:               $gray-700 !default;
-
 // scss-docs-start theme-text-variables
 $primary-text-emphasis:   shade-color($primary, 40%) !default;
 $secondary-text-emphasis: shade-color($secondary, 40%) !default;
@@ -129,18 +120,18 @@ $spacers: map-merge(
 
 // Body
 
-$body-color:	             $gray-800;
+$body-color:	             $gray-900;
 $body-bg:		             $white;
 
-$body-emphasis-color:       $black !default;
+$body-emphasis-color:       $black;
 
-$body-secondary-color:      rgba($body-color, .75) !default; // $gray-500
-$body-secondary-bg:         $gray-200 !default; //  #eef0f2
+$body-secondary-color:      rgba($body-color, .75);
+$body-secondary-bg:         $gray-200;
 
-$body-tertiary-color:       rgba($body-color, .5) !default;
-$body-tertiary-bg:          $gray-100 !default;
+$body-tertiary-color:       rgba($body-color, .5);
+$body-tertiary-bg:          $gray-100;
 
-$emphasis-color:            $black !default;
+$emphasis-color:            $black;
 
 
 // Links
@@ -468,7 +459,7 @@ $modal-md:                    600px;
 
 // scss-docs-start progress-variables
 $progress-height:          1rem;
-$progress-font-size:       $font-size-base * .65;
+$progress-font-size:       $font-size-base * .75;
 $progress-border-radius:   $border-radius-sm;
 $progress-box-shadow:      none;
 // scss-docs-end progress-variables
