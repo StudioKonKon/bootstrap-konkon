@@ -6,29 +6,23 @@
 	box-shadow: $box-shadow-sm;
 }
 
-.alert-icon,
-.alert-icon-full {
-	.icon:first-of-type {
-		@include border-start-radius($alert-border-radius);
-	}
-	
-	.alert-link {
-		text-decoration: underline;
-	}
-}
-
-.alert-icon,
-.alert-icon-full {
+.alert-box {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: nowrap;
 	padding: 0;
+   
+   > .btn-close {
+      position: relative;
+      min-width: $btn-close-width;
+      align-self: flex-start;
+   }
 }
 	
-.alert-icon-header {
-   --#{$sk-variable-prefix}icon-size: #{$alert-icon-size};
+.alert-box-icon {
+   --#{$sk-variable-prefix}icon-size: #{$alert-box-icon-size};
    display: flex;
    font-size: var(--#{$sk-variable-prefix}icon-size);
    align-self: stretch;
@@ -37,33 +31,24 @@
    padding: 0 $spacer;
    color: var(--#{$prefix}alert-color);
    background-color: var(--#{$prefix}alert-border-color);
-   min-width: $alert-icon-min-width;
+   min-width: $alert-box-icon-mw;
    text-align: center;
+   @include border-start-radius($alert-border-radius);
+   @include border-end-radius(0);
+   
+   &:last-child {
+      @include border-start-radius(0);
+      @include border-end-radius($alert-border-radius);
+   }
 }
 
-.alert-icon-body {
+.alert-box-body {
    flex-grow: 1;
-   padding: $alert-padding-y 0 $alert-padding-y $alert-padding-x;
+   padding: $alert-padding-y $alert-padding-x;
 }
 
-.alert-icon,
-.alert-icon-full {
-   > .btn-close {
-      position: relative;
-      min-width: $btn-close-width;
-      align-self: flex-start;
-      
-      &:focus {
-         outline: 0;
-         box-shadow: none;
-      }
-   }
-      
-   > .alert-icon-body:last-child {
-      padding: $alert-padding-y $alert-padding-x;
-   }
-}
-
-.alert-icon-full > .alert-icon-header {
+// Use `color-mix` if supported
+.alert-box-contrast > .alert-box-icon {
    background-color: rgba($white, .15);
+   background-color: color-mix(in srgb, currentColor 15%, transparent);
 }

@@ -12,42 +12,50 @@ body_class = "bg-body-secondary"
    title = "KonKon"
    name = "konkon"
    icon = "zmdi zmdi-favorite"
+   icon_svg = "favorite"
    
 [[theme_colors]]
    title = "Primary"
    name = "primary"
    icon = "zmdi zmdi-info-outline"
+   icon_svg = "info"
    
 [[theme_colors]]
    title = "Success"
    name = "success"
    icon = "zmdi zmdi-check"
+   icon_svg = "check"
    
 [[theme_colors]]
    title = "Warning"
    name = "warning"
    icon = "zmdi zmdi-alert-triangle"
+   icon_svg = "warning"
    
 [[theme_colors]]
    title = "Danger"
    name = "danger"
    icon = "zmdi zmdi-close-circle-o"
+   icon_svg = "cancel"
    
 [[theme_colors]]
    title = "Info"
    name = "info"
    icon = "zmdi zmdi-info-outline"
+   icon_svg = "info"
    
 [[theme_colors]]
    title = "Light"
    name = "light"
    icon = "zmdi zmdi-favorite"
+   icon_svg = "favorite"
    theme = "light"
    
 [[theme_colors]]
    title = "Dark"
    name = "dark"
    icon = "zmdi zmdi-close-circle-o"
+   icon_svg = "cancel"
    theme = "dark"
 	
 +++
@@ -132,9 +140,9 @@ body_class = "bg-body-secondary"
 				<h4 class="card-title mb-1">Themed Alerts</h4>
 				<p class="mb-0">Themed alerts require a different structure to allow custom icons to work properly.</p>
 			</div>
-			<figure class="bg-example-dark m-0"><pre class="m-0 p-4"><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-icon alert-konkon alert-dismissible&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert-icon-header&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;ski zmdi zmdi-favorite&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;/span&gt;</span><span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert-icon-body&quot;</span><span class="nt">&gt;</span>
+			<figure class="bg-example-dark m-0"><pre class="m-0 p-4"><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-box alert-konkon alert-dismissible&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert-box-icon&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;ski zmdi zmdi-favorite&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;/span&gt;</span><span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert-box-body&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;alert-heading&quot;</span><span class="nt">&gt;</span>Well done!<span class="nt">&lt;/h4&gt;</span>
     <span class="nt">&lt;p&gt;</span>Content Here...<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -147,16 +155,16 @@ body_class = "bg-body-secondary"
 		<div class="card mb-4">
 			<div class="card-body">
 				<h4 class="card-title mb-1">Alerts with icons</h4>
-				<p class="card-text">Add <code class="highlighter-konkon">.alert-icon</code> for our custom icon alerts. Icon alerts use <code class="highlighter-konkon">flex</code> and require a different html structure. (see example above)</p>
+				<p class="card-text">Add <code class="highlighter-konkon">.alert-box</code> with <code class="highlighter-konkon">.alert-box-icon</code> and <code class="highlighter-konkon">.alert-box-body</code> for our custom icon alerts. Icon alerts use <code class="highlighter-konkon">flex</code> and require a different html structure.</p>
 			</div>
 		</div>
       
 {{< alert_icons.inline >}}
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
-		<div class="alert fade show alert-icon alert-{{ .name | safeHTMLAttr }} alert-dismissible" role="alert">
-			<div class="alert-icon-header"><span class="ski {{ .icon | safeHTMLAttr }}"></span></div>
-			<div class="alert-icon-body">
+		<div class="alert fade show alert-box alert-{{ .name | safeHTMLAttr }} alert-dismissible" role="alert">
+			<div class="alert-box-icon"><span class="ski {{ .icon | safeHTMLAttr }}"></span></div>
+			<div class="alert-box-body pe-0">
 				<h4 class="alert-heading">Well done!</h4>
 				<p><strong>{{ .title }}!</strong> Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea.</p>
 				<hr />
@@ -174,16 +182,16 @@ body_class = "bg-body-secondary"
 		<div class="card mb-4">
 			<div class="card-body">
 				<h4 class="card-title mb-1">Full Colour Alerts</h4>
-				<p class="card-text">Add full colour using <code class="highlighter-konkon">.bg-*</code>. You may add <code class="highlighter-konkon">.text-white</code> when necessary. Use <code class="highlighter-konkon">.alert-icon-full</code> instead of <code class="highlighter-konkon">.alert-icon</code> to compliment the body colour better.</p>
+				<p class="card-text">Add full colour using <code class="highlighter-konkon">.bg-*</code>. You may add <code class="highlighter-konkon">.text-white</code> when necessary. Use <code class="highlighter-konkon">.alert-box-contrast</code> to lighten icon areas (or text color if <code class="highlighter-konkon">color-mix</code> is supported).</p>
 			</div>
 		</div>
       
 {{< alert_icons_full.inline >}}
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
-		<div class="alert fade show alert-icon-full text-bg-{{ .name | safeHTMLAttr }} alert-dismissible" role="alert">
-			<div class="alert-icon-header"><span class="ski {{ .icon | safeHTMLAttr }}"></span></div>
-			<div class="alert-icon-body">
+		<div class="alert fade show alert-box alert-box-contrast text-bg-{{ .name | safeHTMLAttr }} alert-dismissible" role="alert">
+			<div class="alert-box-icon">{{- partial "icon" ( dict "icon" .icon_svg "theme" "outlined" "class" "" "href" "" ) -}}</div>
+			<div class="alert-box-body pe-0">
 				<h4 class="alert-heading">Well done!</h4>
 				<p><strong>{{ .title }}!</strong> Lorem ipsum dolor sit amet, ut qui commodo sensibus, id utinam inermis constituto vim. In nam dolorum interesset, per fierent ponderum ea.</p>
 				<hr />
@@ -209,9 +217,9 @@ body_class = "bg-body-secondary"
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
    {{ $linkColor := (cond (and (ne .name "light") (ne .name "dark")) .name "body" ) }}
-		<div class="alert fade show alert-icon alert-{{ .name | safeHTMLAttr }} border-0 bg-body text-body alert-dismissible" role="alert">
-			<div class="alert-icon-header"><span class="ski {{ .icon | safeHTMLAttr }}"></span></div>
-			<div class="alert-icon-body">
+		<div class="alert fade show alert-box alert-{{ .name | safeHTMLAttr }} border-0 bg-body text-body alert-dismissible" role="alert">
+			<div class="alert-box-icon"><span class="ski {{ .icon | safeHTMLAttr }}"></span></div>
+			<div class="alert-box-body pe-0">
 				<strong class="text-{{ $linkColor | safeHTMLAttr }}">{{ .title }}!</strong> A simple alert — check it out. <a href="#" class="link-{{ $linkColor | safeHTMLAttr }} ps-1">Link Text</a>
 			</div>
 			<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -234,9 +242,9 @@ body_class = "bg-body-secondary"
 {{- with $.Page.Params.theme_colors -}}
 {{- range . -}}
    {{ $linkColor := (cond (and (ne .name "light") (ne .name "dark")) .name "body" ) }}
-		<div class="alert fade show alert-icon alert-{{ .name | safeHTMLAttr }} bg-body text-body border-{{ .name | safeHTMLAttr }} alert-dismissible" role="alert">
-			<div class="alert-icon-header text-bg-{{ .name | safeHTMLAttr }}"><span class="ski {{ .icon | safeHTMLAttr }}"></span></div>
-			<div class="alert-icon-body">
+		<div class="alert fade show alert-box alert-{{ .name | safeHTMLAttr }} bg-body text-body border-{{ .name | safeHTMLAttr }} alert-dismissible" role="alert">
+			<div class="alert-box-icon text-bg-{{ .name | safeHTMLAttr }}"><span class="ski {{ .icon | safeHTMLAttr }}"></span></div>
+			<div class="alert-box-body pe-0">
 				<strong class="text-{{ $linkColor | safeHTMLAttr }}">{{ .title }}!</strong> A simple alert — check it out. <a href="#" class="link-{{ $linkColor | safeHTMLAttr }} ps-1">Link Text</a>
 			</div>
 			<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -253,11 +261,11 @@ body_class = "bg-body-secondary"
 
 <div class="row">
 	<div class="col-lg-6 col-md-12">
-		<div class="alert fade show alert-icon-full text-bg-info alert-dismissible" role="alert">
-			<div class="alert-icon-header">
+		<div class="alert fade show alert-box alert-box-contrast text-bg-info alert-dismissible" role="alert">
+			<div class="alert-box-icon">
 				<span class="zmdi zmdi-info-outline"></span>
 			</div>
-			<div class="alert-icon-body">
+			<div class="alert-box-body pe-0">
 				<h4 class="alert-heading">Well done!</h4>
 				<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
 				<hr>
@@ -268,11 +276,11 @@ body_class = "bg-body-secondary"
 	</div>
 	
 	<div class="col-lg-6 col-md-12">
-		<div class="alert fade show alert-icon bg-body text-body border-info alert-info alert-dismissible" role="alert">
-			<div class="alert-icon-header text-bg-info">
+		<div class="alert fade show alert-box bg-body text-body border-info alert-info alert-dismissible" role="alert">
+			<div class="alert-box-icon text-bg-info">
 				<span class="zmdi zmdi-info-outline"></span>
 			</div>
-			<div class="alert-icon-body">
+			<div class="alert-box-body pe-0">
 				<h4 class="alert-heading text-info">Well done!</h4>
 				<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
 				<hr class="bg-info" />
@@ -283,11 +291,11 @@ body_class = "bg-body-secondary"
 	</div>
 	
 	<div class="col-md-12">
-		<div class="alert fade show fade show alert-icon-full bg-body text-body alert-dismissible" role="alert">
-			<div class="alert-icon-header text-bg-warning">
+		<div class="alert fade show fade show alert-box bg-body text-body alert-dismissible" role="alert">
+			<div class="alert-box-icon text-bg-warning">
 				<span class="zmdi zmdi-alert-triangle"></span>
 			</div>
-			<div class="alert-icon-body">
+			<div class="alert-box-body">
 				<h4 class="alert-heading text-warning">Dismissible element placement</h4>
 				<hr class="bg-warning" />
 				<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content. Whenever you need to, be sure to use margin utilities to keep things nice and tidy. A simple alert using <code class="highlighter-konkon">.alert-full-color</code> and <code class="highlighter-konkon">.bg-white</code> together with <a href="#" class="link-warning ps-1">Link Text</a> and buttons. This example replaces the close button for the custom "Dismiss" button below.</p>

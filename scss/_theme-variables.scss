@@ -101,8 +101,8 @@ $pagination-gap: map-get($spacers, 1);
 
 
 // Alert
-$alert-icon-size:      $font-size-base * 1.846;
-$alert-icon-min-width: 2em;
+$alert-box-icon-size:   $font-size-base * 1.75;
+$alert-box-icon-mw:     2em;
 
 
 // Dropdowns
