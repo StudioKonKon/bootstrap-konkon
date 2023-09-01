@@ -25,41 +25,45 @@
 	align-items: center;
 	flex-wrap: nowrap;
 	padding: 0;
+}
 	
-	> .icon {
-		display: flex;
-		font-size: $alert-icon-size;
-		align-self: stretch;
-		align-items: center;
-		justify-content: center !important;
-		padding: 0 $spacer;
-		color: var(--#{$prefix}alert-color);
-		background-color: var(--#{$prefix}alert-border-color);
-		min-width: $alert-icon-min-width;
-		text-align: center;
-	}
-	
-	> .message {
-		flex-grow: 1;
-		padding: $alert-padding-y 0 $alert-padding-y $alert-padding-x;
-	}
-	
-	> .btn-close {
-		position: relative;
-		min-width: $btn-close-width;
-		align-self: flex-start;
-		
-		&:focus {
-			outline: 0;
-			box-shadow: none;
-		}
-	}
-	
-	> .message:last-child {
-		padding: $alert-padding-y $alert-padding-x;
-	}
+.alert-icon-header {
+   --#{$sk-variable-prefix}icon-size: #{$alert-icon-size};
+   display: flex;
+   font-size: var(--#{$sk-variable-prefix}icon-size);
+   align-self: stretch;
+   align-items: center;
+   justify-content: center !important;
+   padding: 0 $spacer;
+   color: var(--#{$prefix}alert-color);
+   background-color: var(--#{$prefix}alert-border-color);
+   min-width: $alert-icon-min-width;
+   text-align: center;
 }
 
-.alert-icon-full > .icon {
+.alert-icon-body {
+   flex-grow: 1;
+   padding: $alert-padding-y 0 $alert-padding-y $alert-padding-x;
+}
+
+.alert-icon,
+.alert-icon-full {
+   > .btn-close {
+      position: relative;
+      min-width: $btn-close-width;
+      align-self: flex-start;
+      
+      &:focus {
+         outline: 0;
+         box-shadow: none;
+      }
+   }
+      
+   > .alert-icon-body:last-child {
+      padding: $alert-padding-y $alert-padding-x;
+   }
+}
+
+.alert-icon-full > .alert-icon-header {
    background-color: rgba($white, .15);
 }

@@ -9,7 +9,7 @@ body_class = "bg-body-secondary"
 	type = "scss"
 +++
 
-<div class="row g-4 mb-4">
+<div class="row g-4 mb-4" style="--sk-icon-size:1.5em;">
 
 	<div class="col-12 col-lg-6">
 		<h4 class="pt-3">Default Accordion</h4>
@@ -169,7 +169,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs3_collapse1"
 							aria-expanded="true"
 							aria-controls="bs3_collapse1">
-								<i class="icon zmdi zmdi-notifications me-2"></i>
+								<i class="ski zmdi zmdi-notifications me-2"></i>
 								<span>Accordion Item #1</span>
 							</button>
 				</h2>
@@ -188,7 +188,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs3_collapse2"
 							aria-expanded="false"
 							aria-controls="bs3_collapse2">
-								<i class="icon zmdi zmdi-check me-2"></i>
+								<i class="ski zmdi zmdi-check me-2"></i>
 								<span>Accordion Item #2</span>
 							</button>
 				</h2>
@@ -207,7 +207,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs3_collapse3"
 							aria-expanded="false"
 							aria-controls="bs3_collapse3">
-								<i class="icon zmdi zmdi-alert-triangle me-2"></i>
+								<i class="ski zmdi zmdi-alert-triangle me-2"></i>
 								<span>Accordion Item #3</span>
 							</button>
 				</h2>
@@ -226,7 +226,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs3_collapse4"
 							aria-expanded="false"
 							aria-controls="bs3_collapse4">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -245,7 +245,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs3_collapse5"
 							aria-expanded="false"
 							aria-controls="bs3_collapse5">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -264,7 +264,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs3_collapse6"
 							aria-expanded="false"
 							aria-controls="bs3_collapse6">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -283,7 +283,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs3_collapse7"
 							aria-expanded="false"
 							aria-controls="bs3_collapse7">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -302,7 +302,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs3_collapse8"
 							aria-expanded="false"
 							aria-controls="bs3_collapse8">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -321,13 +321,13 @@ body_class = "bg-body-secondary"
 		<div class="accordion accordion-flush mb-4" id="bs4_accordionExample">
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="bs4_heading1">
-					<button class="accordion-button accordion-button-white bg-primary text-white"
+					<button class="accordion-button accordion-button-white text-bg-primary"
 					        type="button"
 							data-bs-toggle="collapse"
 							data-bs-target="#bs4_collapse1"
 							aria-expanded="true"
 							aria-controls="bs4_collapse1">
-								<i class="icon zmdi zmdi-notifications me-2"></i>
+								<span class="me-2">{{< icon "notifications" >}}</span>
 								<span>Accordion Item #1</span>
 							</button>
 				</h2>
@@ -340,13 +340,13 @@ body_class = "bg-body-secondary"
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="bs4_heading2">
-					<button class="accordion-button accordion-button-white bg-info text-white collapsed"
+					<button class="accordion-button accordion-button-white text-bg-info collapsed"
 					        type="button"
 							data-bs-toggle="collapse"
 							data-bs-target="#bs4_collapse2"
 							aria-expanded="false"
 							aria-controls="bs4_collapse2">
-								<i class="icon zmdi zmdi-check me-2"></i>
+								<span class="me-2">{{< icon "check" >}}</span>
 								<span>Accordion Item #2</span>
 							</button>
 				</h2>
@@ -359,13 +359,13 @@ body_class = "bg-body-secondary"
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="bs4_heading3">
-					<button class="accordion-button accordion-button-white bg-success text-white collapsed"
+					<button class="accordion-button accordion-button-white text-bg-success collapsed"
 					        type="button"
 							data-bs-toggle="collapse"
 							data-bs-target="#bs4_collapse3"
 							aria-expanded="false"
 							aria-controls="bs4_collapse3">
-								<i class="icon zmdi zmdi-alert-triangle me-2"></i>
+								<span class="me-2">{{< icon "warning" >}}</span>
 								<span>Accordion Item #3</span>
 							</button>
 				</h2>
@@ -378,13 +378,13 @@ body_class = "bg-body-secondary"
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="bs4_heading4">
-					<button class="accordion-button accordion-button-white bg-warning text-white collapsed"
+					<button class="accordion-button accordion-button-white text-bg-warning collapsed"
 					        type="button"
 							data-bs-toggle="collapse"
 							data-bs-target="#bs4_collapse4"
 							aria-expanded="false"
 							aria-controls="bs4_collapse4">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<span class="me-2">{{< icon "cancel" >}}</span>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -397,13 +397,13 @@ body_class = "bg-body-secondary"
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="bs4_heading5">
-					<button class="accordion-button accordion-button-white bg-danger text-white collapsed"
+					<button class="accordion-button accordion-button-white text-bg-danger collapsed"
 					        type="button"
 							data-bs-toggle="collapse"
 							data-bs-target="#bs4_collapse5"
 							aria-expanded="false"
 							aria-controls="bs4_collapse5">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<span class="me-2">{{< icon "cancel" >}}</span>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -416,13 +416,13 @@ body_class = "bg-body-secondary"
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="bs4_heading6">
-					<button class="accordion-button accordion-button-white bg-secondary text-white collapsed"
+					<button class="accordion-button accordion-button-white text-bg-secondary collapsed"
 					        type="button"
 							data-bs-toggle="collapse"
 							data-bs-target="#bs4_collapse6"
 							aria-expanded="false"
 							aria-controls="bs4_collapse6">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<span class="me-2">{{< icon "cancel" >}}</span>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -435,13 +435,13 @@ body_class = "bg-body-secondary"
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="bs4_heading7">
-					<button class="accordion-button bg-light text-dark collapsed"
+					<button class="accordion-button text-bg-light collapsed"
 					        type="button"
 							data-bs-toggle="collapse"
 							data-bs-target="#bs4_collapse7"
 							aria-expanded="false"
 							aria-controls="bs4_collapse7">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<span class="me-2">{{< icon "cancel" >}}</span>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -454,13 +454,13 @@ body_class = "bg-body-secondary"
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="bs4_heading8">
-					<button class="accordion-button accordion-button-white bg-dark text-white collapsed"
+					<button class="accordion-button accordion-button-white text-bg-dark collapsed"
 					        type="button"
 							data-bs-toggle="collapse"
 							data-bs-target="#bs4_collapse8"
 							aria-expanded="false"
 							aria-controls="bs4_collapse8">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<span class="me-2">{{< icon "cancel" >}}</span>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -485,7 +485,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs5_collapse1"
 							aria-expanded="true"
 							aria-controls="bs5_collapse1">
-								<i class="icon zmdi zmdi-notifications me-2"></i>
+								<i class="ski zmdi zmdi-notifications me-2"></i>
 								<span>Accordion Item #1</span>
 							</button>
 				</h2>
@@ -504,7 +504,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs5_collapse2"
 							aria-expanded="false"
 							aria-controls="bs5_collapse2">
-								<i class="icon zmdi zmdi-check me-2"></i>
+								<i class="ski zmdi zmdi-check me-2"></i>
 								<span>Accordion Item #2</span>
 							</button>
 				</h2>
@@ -523,7 +523,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs5_collapse3"
 							aria-expanded="false"
 							aria-controls="bs5_collapse3">
-								<i class="icon zmdi zmdi-alert-triangle me-2"></i>
+								<i class="ski zmdi zmdi-alert-triangle me-2"></i>
 								<span>Accordion Item #3</span>
 							</button>
 				</h2>
@@ -542,7 +542,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs5_collapse4"
 							aria-expanded="false"
 							aria-controls="bs5_collapse4">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -561,7 +561,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs5_collapse5"
 							aria-expanded="false"
 							aria-controls="bs5_collapse5">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -580,7 +580,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs5_collapse6"
 							aria-expanded="false"
 							aria-controls="bs5_collapse6">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -599,7 +599,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs5_collapse7"
 							aria-expanded="false"
 							aria-controls="bs5_collapse7">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -618,7 +618,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs5_collapse8"
 							aria-expanded="false"
 							aria-controls="bs5_collapse8">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -643,7 +643,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs6_collapse1"
 							aria-expanded="true"
 							aria-controls="bs6_collapse1">
-								<i class="icon zmdi zmdi-notifications me-2"></i>
+								<i class="ski zmdi zmdi-notifications me-2"></i>
 								<span>Accordion Item #1</span>
 							</button>
 				</h2>
@@ -662,7 +662,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs6_collapse2"
 							aria-expanded="false"
 							aria-controls="bs6_collapse2">
-								<i class="icon zmdi zmdi-check me-2"></i>
+								<i class="ski zmdi zmdi-check me-2"></i>
 								<span>Accordion Item #2</span>
 							</button>
 				</h2>
@@ -681,7 +681,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs6_collapse3"
 							aria-expanded="false"
 							aria-controls="bs6_collapse3">
-								<i class="icon zmdi zmdi-alert-triangle me-2"></i>
+								<i class="ski zmdi zmdi-alert-triangle me-2"></i>
 								<span>Accordion Item #3</span>
 							</button>
 				</h2>
@@ -700,7 +700,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs6_collapse4"
 							aria-expanded="false"
 							aria-controls="bs6_collapse4">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -719,7 +719,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs6_collapse5"
 							aria-expanded="false"
 							aria-controls="bs6_collapse5">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -738,7 +738,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs6_collapse6"
 							aria-expanded="false"
 							aria-controls="bs6_collapse6">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -757,7 +757,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs6_collapse7"
 							aria-expanded="false"
 							aria-controls="bs6_collapse7">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>
@@ -776,7 +776,7 @@ body_class = "bg-body-secondary"
 							data-bs-target="#bs6_collapse8"
 							aria-expanded="false"
 							aria-controls="bs6_collapse8">
-								<i class="icon zmdi zmdi-close-circle-o me-2"></i>
+								<i class="ski zmdi zmdi-close-circle-o me-2"></i>
 								<span>Accordion Item #4</span>
 							</button>
 				</h2>

@@ -4,6 +4,8 @@
       --#{$prefix}#{$color}-bg-soft: #{$value};
    }
    
+   --#{$sk-variable-prefix}-accordion-margin-gap: .25rem;
+   
    // Icon buttons: components/icons
    --#{$sk-variable-prefix}icon-size: #{$icon-link-icon-size};
    --#{$sk-variable-prefix}icon-btn-color: #{$icon-btn-color};

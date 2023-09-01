@@ -20,28 +20,5 @@
 }
 
 .accordion-item + .accordion-item {
-   margin-top: $accordion-margin-y;
-}
-
-.accordion-item {
-	.accordion-button {
-		@include border-top-radius($accordion-border-radius);
-	}
-
-	.accordion-button {
-		&.collapsed {
-			@include border-bottom-radius($accordion-border-radius);
-		}
-	}
-
-	.accordion-collapse {
-		@include border-bottom-radius($accordion-border-radius);
-	}
-}
-
-.accordion-flush {
-	.accordion-button,
-	.accordion-item {
-		border-width: 0;
-	}
+   margin-top: $accordion-margin-gap;
 }
