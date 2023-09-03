@@ -848,7 +848,7 @@
   margin-top: var(--sk-sidebar-offset);
   padding-bottom: var(--sk-sidebar-offset);
   box-shadow: 0 0.462rem 1.385rem 0 rgba(0, 0, 0, 0.18);
-  z-index: 1029;
+  z-index: 1045;
 }
 @media print {
   .sidebar {
@@ -1103,11 +1103,6 @@
 .sk-wrapper {
   min-height: 100%;
   padding-top: 3.8125rem;
-}
-@media (max-width: 575.98px) {
-  .sk-wrapper {
-    overflow-x: hidden;
-  }
 }
 
 @media print {

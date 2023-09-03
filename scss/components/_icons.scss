@@ -1,5 +1,15 @@
 // Icon buttons
 
+%base-svg-icon {
+   display: inline-flex !important;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0;
+   width: var(--#{$sk-variable-prefix}icon-size);
+   height: var(--#{$sk-variable-prefix}icon-size);
+   fill: currentcolor;
+}
+
 %base-icon-btn {
    display: inline-flex;
    align-items: center;
@@ -14,22 +24,16 @@
    aspect-ratio: 1 / 1;
    
    svg, img {
-      @extend .svg-icon !optional;
+      @extend %base-svg-icon;
    }
 }
 
 .svg-icon {
-   display: inline-flex !important;
-   align-items: center;
-   justify-content: center;
-   flex-shrink: 0;
-   width: var(--#{$sk-variable-prefix}icon-size);
-   height: var(--#{$sk-variable-prefix}icon-size);
-   fill: currentcolor;
+   @extend %base-svg-icon;
 }
 
 .ski {
-   @extend .svg-icon !optional;
+   @extend %base-svg-icon;
    
    &::before {
       font-size: var(--#{$sk-variable-prefix}icon-size);

@@ -222,7 +222,9 @@ body_class = "bg-body-secondary"
 			<div class="alert-box-body pe-0">
 				<strong class="text-{{ $linkColor | safeHTMLAttr }}">{{ .title }}!</strong> A simple alert — check it out. <a href="#" class="link-{{ $linkColor | safeHTMLAttr }} ps-1">Link Text</a>
 			</div>
-			<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+			<button class="icon-btn me-2" type="button" data-bs-dismiss="alert" aria-label="Close">
+            {{- partial "icon" ( dict "icon" "cancel" "theme" "outlined" "class" "" "href" "" ) -}}
+         </button>
 		</div>
 {{- end -}}
 {{- end -}}
@@ -247,7 +249,9 @@ body_class = "bg-body-secondary"
 			<div class="alert-box-body pe-0">
 				<strong class="text-{{ $linkColor | safeHTMLAttr }}">{{ .title }}!</strong> A simple alert — check it out. <a href="#" class="link-{{ $linkColor | safeHTMLAttr }} ps-1">Link Text</a>
 			</div>
-			<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+			<button class="icon-btn me-2 text-{{ $linkColor | safeHTMLAttr }}" type="button" data-bs-dismiss="alert" aria-label="Close">
+            {{- partial "icon" ( dict "icon" "cancel" "theme" "outlined" "class" "" "href" "" ) -}}
+         </button>
 		</div>
 {{- end -}}
 {{- end -}}
@@ -261,17 +265,22 @@ body_class = "bg-body-secondary"
 
 <div class="row">
 	<div class="col-lg-6 col-md-12">
-		<div class="alert fade show alert-box alert-box-contrast text-bg-info alert-dismissible" role="alert">
-			<div class="alert-box-icon">
-				<span class="zmdi zmdi-info-outline"></span>
+		<div class="alert fade show alert-box alert-konkon alert-dismissible" role="alert">
+			<div class="alert-box-icon text-bg-konkon p-2" style="--sk-icon-size:1.5rem;">
+				<div class="vstack gap-1">
+               <button class="icon-btn" type="button" data-bs-dismiss="alert" aria-label="Close">{{< icon "cancel" >}}</button>
+               <button class="icon-btn" type="button">{{< icon "person" >}}</button>
+               <button class="icon-btn" type="button">{{< icon "database" >}}</button>
+               <button class="icon-btn" type="button">{{< icon "download" >}}</button>
+               <button class="icon-btn" type="button">{{< icon "delete" >}}</button>
+            </div>
 			</div>
-			<div class="alert-box-body pe-0">
+			<div class="alert-box-body">
 				<h4 class="alert-heading">Well done!</h4>
 				<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
 				<hr>
 				<p>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
 			</div>
-			<button class="btn-close btn-close-white" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
 		</div>
 	</div>
 	
@@ -286,7 +295,14 @@ body_class = "bg-body-secondary"
 				<hr class="bg-info" />
 				<p>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
 			</div>
-			<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+			<button class="d-none btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+         <div class="vstack gap-1 my-2 me-2">
+            <button class="icon-btn" type="button" data-bs-dismiss="alert" aria-label="Close">{{< icon "cancel" >}}</button>
+               <button class="icon-btn" type="button">{{< icon "person" >}}</button>
+               <button class="icon-btn" type="button">{{< icon "database" >}}</button>
+               <button class="icon-btn" type="button">{{< icon "download" >}}</button>
+            <button class="icon-btn text-danger" type="button">{{< icon "delete" >}}</button>
+         </div>
 		</div>
 	</div>
 	

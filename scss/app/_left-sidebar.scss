@@ -15,7 +15,7 @@
    padding-bottom: var(--#{$sk-variable-prefix}sidebar-offset);
    -webkit-box-shadow: 0 .462rem 1.385rem 0 rgba(0,0,0,.18);
    box-shadow: 0 .462rem 1.385rem 0 rgba(0,0,0,.18);
-   z-index: $zindex-navbar-fixed - 3;
+   z-index: $zindex-offcanvas;
 	
 	@media print {
 		display: none;
