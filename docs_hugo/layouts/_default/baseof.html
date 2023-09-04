@@ -38,6 +38,7 @@
    <div class="d-flex flex-fill align-items-stretch">
       {{ partial "app/sidebar" . }}
       <div class="sk-content d-flex flex-fill flex-column">
+         {{ block "top_menu" . }}{{ end }}
          <div class="flex-fill">
             {{ block "main" . }}{{ end }}
          </div>

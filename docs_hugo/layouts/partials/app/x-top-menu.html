@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top shadow-sm py-1" style="top:var(--sk-header-height);--bs-bg-opacity:.9;z-index:1029;">
+   <div class="container-fluid">
+      <button class="navbar-toggler w-100"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#skNavbarCollapse"
+              aria-controls="skNavbarCollapse"
+              aria-label="Toggle navigation">Open Top Header Menu</button>
+      <div class="offcanvas offcanvas-end border-0" style="top:var(--sk-header-height);" id="skNavbarCollapse" tabindex="-1" aria-labelledby="skNavbarOffcanvasLabel">
+         <div class="offcanvas-header border-bottom py-3">
+            <h5 class="offcanvas-title" id="skNavbarOffcanvasLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center gap-lg-4 flex-grow-1">
+               <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                     <span>Settings</span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu" style="--bs-dropdown-spacer:.75rem;">
+                     <li><a class="dropdown-item" href="#">Apps</a></li>
+                     <li><a class="dropdown-item" href="#">Notifications</a></li>
+                     <li><a class="dropdown-item" href="#">User</a></li>
+                     <li><a class="dropdown-item" href="#">Account</a></li>
+                     <li><a class="dropdown-item" href="#">Storage</a></li>
+                     <li><a class="dropdown-item" href="#">Profile</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item"><a class="nav-link" href="#">Feed</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</nav>

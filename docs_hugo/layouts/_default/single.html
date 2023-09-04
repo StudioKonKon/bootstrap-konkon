@@ -15,3 +15,11 @@
 </div>
 {{ end }}
 {{ end -}}
+
+{{- define "top_menu" -}}
+   {{ with $.Page.Params }}
+      {{ with .navbar_type }}
+         {{ if eq . "top-menu" }}{{ partial "app/x-top-menu" $.Page }}{{ end }}
+      {{ end }}
+   {{ end }}
+{{- end -}}
