@@ -4,9 +4,9 @@ $bs-prefix: bs- !default;
 $sk-app-theme: $primary;
 
 // Brand Logo
+$top-header-logo-image:    var(--#{$sk-variable-prefix}site-logo);
 $top-header-logo-width:    10.923rem;
-$top-header-logo-height:   27px;
-$top-header-logo-margin:   map-get($spacers, 2) 0;
+$top-header-logo-height:   2.75rem;
 $top-header-logo-position: left center;
 $top-header-logo-size:     contain;
 
@@ -17,8 +17,8 @@ $top-header-nav-icon-lh:      1.946rem;
 $top-header-nav-icon-color:   #5a5a5a;
 $top-header-nav-icon-padding: .45rem;
 
-$top-header-title-size:    1.462rem;
-$top-header-title-padding: 0 map-get($spacers, 4);
+$top-header-title-fs: 1.462rem;
+$top-header-title-px: map-get($spacers, 4);
 
 $top-header-icon-color: rgba(var(--#{$prefix}body-color-rgb), .5);
 $top-header-icon-active-color: rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), 1);
@@ -31,11 +31,9 @@ $content-padding-phone:			map-get($spacers, 3);
 $content-padding-small-phone:	map-get($spacers, 2);
 
 // Top Header
-$top-header-bg:               rgba(var(--#{$sk-variable-prefix}header-bg-rgb), 1);
-$top-header-border:           0;
+$top-header-bg:               rgba(var(--#{$sk-variable-prefix}header-bg-rgb), var(--#{$prefix}bg-opacity));
 $top-header-border-bottom:    1px solid var(--#{$sk-variable-prefix}header-border-rgb) !important;
 $top-header-padding-x:        map-get($spacers, 4);
-$top-header-margin-bottom:    0;
 $top-header-phone-bg:         lighten($black, 10%);
 $top-header-link-color:       darken($white, 55%);
 $top-header-height:           3.75rem;

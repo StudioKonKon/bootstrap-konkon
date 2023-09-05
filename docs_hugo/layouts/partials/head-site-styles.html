@@ -13,7 +13,13 @@
    {{- end -}}
 {{- end }}
 <style type="text/css">
-.sk-top-header .sk-navbar-header .navbar-brand{background-image:url("{{ "/images/logo.png" | absURL }}");}
-[data-bs-theme=dark] .sk-top-header .sk-navbar-header .navbar-brand{background-image:url("{{ "/images/logo-white.png" | absURL }}");}
+:root,[data-bs-theme="light"] {
+   --sk-site-logo: url("{{ "/images/logo.png" | absURL }}");
+   --sk-theme-bg-rgb: 254, 102, 158;
+}
+[data-bs-theme=dark] {
+   --sk-site-logo: url("{{ "/images/logo-white.png" | absURL }}");
+   --sk-theme-bg-rgb: 224, 224, 224;
+}
 </style>
  

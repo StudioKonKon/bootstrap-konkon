@@ -12,11 +12,11 @@
 }
 
 .sk-top-header {
+   --#{$prefix}bg-opacity: 1;
 	background-color: $top-header-bg;
-	border: $top-header-border;
-	margin-bottom: $top-header-margin-bottom;
-	border-bottom: $top-header-border-bottom;
+	border: 0;
 	padding: 0;
+	border-bottom: $top-header-border-bottom;
 	box-shadow: $top-header-box-shadow;
 			
 	@media print {
@@ -34,35 +34,20 @@
 	.page-title {
       display: flex;
       align-items: center;
-		font-size: $top-header-title-size;
+		font-size: $top-header-title-fs;
 		flex: 1 1 auto;
-		padding: $top-header-title-padding;
+		padding: 0 $top-header-title-px;
+      min-width: 0;
 		overflow: hidden;
-		
-		.page-title-content {
-			display: block;
-			overflow: hidden;
-			white-space: nowrap;
-			text-overflow: ellipsis;
-		}
    }
    
 	.navbar-nav {
 		display: flex;
       align-items: center;
+      gap: var(--#{$sk-variable-prefix}icon-navbar-gap);
       
-      > .nav-item {
-         margin: 0 calc(var(--#{$sk-variable-prefix}icon-navbar-gx) * .5);
-
-         &.dropdown {
-            .dropdown-menu {
-               margin-top: var(--#{$sk-variable-prefix}navbar-dropdown-top);
-            }
-         }
-         
-         @include media-breakpoint-down(md) {
-            margin: 0 calc(var(--#{$sk-variable-prefix}icon-navbar-gx-sm) * .5);
-         }
+      > .nav-item > .dropdown-menu {
+         --#{$prefix}dropdown-spacer: var(--#{$sk-variable-prefix}navbar-dropdown-top);
       }
    }
 }
@@ -70,25 +55,23 @@
 // Left Navbar
 .sk-navbar-header {
    display: flex;
+   align-items: center;
    width: 100%;
+   min-width: 0;
    max-width: $sidebar-width;
    
    .sidebar-toggle {
-      align-self: center;
       margin-left: $top-header-padding-x - $top-header-nav-icon-padding;
       margin-right: $top-header-menu-icon-padding - $top-header-nav-icon-padding;
    }
    
    .navbar-brand {
       display: flex;
-      align-self: stretch;
       align-items: center;
 		flex: 1 1 auto;
+      height: $top-header-logo-height;
       max-height: $top-header-height;
-      padding: 0;
-      margin: $top-header-logo-margin;
-      display: block;
-      @if $img-logo-path != "" { background-image: url("#{$img-logo-path}"); }
+      background-image: $top-header-logo-image;
       background-repeat: no-repeat;
       background-position: $top-header-logo-position;
       background-size: $top-header-logo-size;
@@ -130,31 +113,29 @@
       outline: 1px solid $top-header-icon-outline;
    }
    
-   svg, .icon {
-      display: block;
-      font-size: 1em;
-      line-height: 0;
-      width: 1em;
-      height: 1em;
-      text-align: center;
-      aspect-ratio: 1 / 1;
-   }
-   
-   .icon {
+   svg, img, .icon {
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
+      width: 1em;
+      height: 1em;
+      fill: currentcolor;
+      font-size: 1em;
+      line-height: 0;
+      text-align: center;
+      aspect-ratio: 1 / 1;
    }
 }
 
 /* ### BEGIN PHONE ### */
-@include media_size("phone") {
+@include media-breakpoint-down(md) {
    .sk-top-header .page-title {
       display: none;
    }
 }
 
-@include media_size("small-phone") {
+@include media-breakpoint-down(sm) {
    .sk-top-header {
       .navbar-nav > .nav-item.dropdown .dropdown-menu {
          margin: 0;

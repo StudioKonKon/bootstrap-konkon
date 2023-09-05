@@ -1,5 +1,6 @@
 :root,
 [data-bs-theme=light] {
+   --#{$sk-variable-prefix}site-logo:             #{$img-logo-path};
    --#{$sk-variable-prefix}theme-bg-rgb:          var(--#{$prefix}primary-rgb);
    --#{$sk-variable-prefix}header-bg-rgb:         var(--#{$prefix}body-bg-rgb);
    --#{$sk-variable-prefix}header-border-rgb:     var(--#{$prefix}border-color-translucent);
@@ -19,9 +20,8 @@
    --#{$sk-variable-prefix}msg-hover-color:       var(--#{$prefix}body-color);
    --#{$sk-variable-prefix}msg-hover-bg:          var(--#{$prefix}secondary-bg);
    --#{$sk-variable-prefix}user-check-color:      rgba(var(--#{$sk-variable-prefix}theme-bg-rgb), 1);
-   --#{$sk-variable-prefix}icon-navbar-gx:        .5rem;
-   --#{$sk-variable-prefix}icon-navbar-gx-sm:     .15rem;
-   --#{$sk-variable-prefix}navbar-dropdown-top:   .923rem;
+   --#{$sk-variable-prefix}icon-navbar-gap:       .25rem;
+   --#{$sk-variable-prefix}navbar-dropdown-top:   .85rem;
    --#{$sk-variable-prefix}apps-icon-hover-bg:    rgba(var(--#{$prefix}secondary-bg-rgb), .5);
    --#{$sk-variable-prefix}apps-icon-focus-bg:    rgba(var(--#{$prefix}secondary-bg-rgb), 1);
 }
