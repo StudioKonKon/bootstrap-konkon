@@ -128,7 +128,6 @@
    }
 }
 
-/* ### BEGIN PHONE ### */
 @include media-breakpoint-down(md) {
    .sk-top-header .page-title {
       display: none;
@@ -137,17 +136,14 @@
 
 @include media-breakpoint-down(sm) {
    .sk-top-header {
-      .navbar-nav > .nav-item.dropdown .dropdown-menu {
-         margin: 0;
-         border-top: 1px solid darken($body-color, 6%);
+      .navbar-nav > .nav-item.dropdown > .dropdown-menu {
+         --#{$prefix}dropdown-spacer: 0;
+         --#{$prefix}dropdown-border-radius: 0;
          border-right:0;
-         border-bottom: 1px solid darken($body-color, 6%);
          border-left: 0;
-         border-radius: 0;
       }
    }
 }
-/* ### END PHONE ### */
 
 .sk-icons-nav.menu-end,
 .sk-user-nav.menu-end {
@@ -158,24 +154,15 @@
       overflow-y: auto;
       overscroll-behavior: contain;
       top: $top-header-height;
-      max-height: calc(100vh - #{$top-header-height});
+      max-height: calc(100vh - #{$top-header-height} - var(--#{$prefix}dropdown-spacer));
 	
-      @include media_size("phone-min")
-      {
-         max-height: calc(100vh - #{$top-header-height} - #{$content-padding});
+      @include media-breakpoint-up(sm) {
+         max-height: calc(100vh - #{$top-header-height + $top-header-dropdown-bottom} - var(--#{$prefix}dropdown-spacer));
       }
 	
 		@include media_size("small-phone") {
 			left: 0;
 			right: 0;
-		}
-		
-		@include media_size("desktop-min")
-		{
-			.sk-mega-menu & {
-				left: 50%;
-				transform: translateX(-50%);
-			}
 		}
 	}
 }

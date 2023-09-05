@@ -24,6 +24,10 @@ $top-header-icon-color: rgba(var(--#{$prefix}body-color-rgb), .5);
 $top-header-icon-active-color: rgba(var(--#{$sk-variable-prefix}sidebar-color-rgb), 1);
 
 
+// App dropdowns
+$top-header-dropdown-bottom: 3rem;
+
+
 // Content
 $content-padding:				   map-get($spacers, 5);
 $content-padding-tablet:		map-get($spacers, 5);

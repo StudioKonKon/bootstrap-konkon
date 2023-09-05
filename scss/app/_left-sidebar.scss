@@ -12,7 +12,7 @@
    left: -($sidebar-width + 10);
 	border-right: 0 solid $sidebar-border-color;
    margin-top: var(--#{$sk-variable-prefix}sidebar-offset);
-   padding-bottom: var(--#{$sk-variable-prefix}sidebar-offset);
+   padding-bottom: 0;
    -webkit-box-shadow: 0 .462rem 1.385rem 0 rgba(0,0,0,.18);
    box-shadow: 0 .462rem 1.385rem 0 rgba(0,0,0,.18);
    z-index: $zindex-offcanvas;
@@ -276,7 +276,7 @@
 @include media-breakpoint-up(md) {
    .sidebar[data-#{$sk-variable-prefix}type="fixed"] {
       position: sticky;
-      top: var(--#{$sk-variable-prefix}sidebar-offset);
+      top: 3.75rem;
       height: 100vh;
       width: $sidebar-width;
       min-width: $sidebar-width;

@@ -4,8 +4,8 @@
    --#{$sk-variable-prefix}theme-bg-rgb:          var(--#{$prefix}primary-rgb);
    --#{$sk-variable-prefix}header-bg-rgb:         var(--#{$prefix}body-bg-rgb);
    --#{$sk-variable-prefix}header-border-rgb:     var(--#{$prefix}border-color-translucent);
-   --#{$sk-variable-prefix}header-height:         #{$top-header-height + $top-header-offset};
-   --#{$sk-variable-prefix}sidebar-offset:        var(--#{$sk-variable-prefix}header-height);
+   --#{$sk-variable-prefix}header-height:         #{$top-header-height};
+   --#{$sk-variable-prefix}sidebar-offset:        #{$top-header-height + $top-header-offset};
    --#{$sk-variable-prefix}sidebar-color-rgb:     var(--#{$prefix}body-color-rgb);
    --#{$sk-variable-prefix}sidebar-theme-rgb:     var(--#{$sk-variable-prefix}theme-bg-rgb);
    --#{$sk-variable-prefix}sidebar-bg-rgb:        var(--#{$prefix}body-bg-rgb);
