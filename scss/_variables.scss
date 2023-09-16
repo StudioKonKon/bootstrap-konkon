@@ -363,7 +363,7 @@ $card-spacer-x:            map-get($spacers, 4);
 $card-border-radius:       .231rem;
 $card-box-shadow:          0px .077rem .154rem rgba(0, 0, 0, .1);
 $card-inner-border-radius: calc(#{$card-border-radius} - #{$border-width});
-$card-cap-bg:              rgba(var(--#{$prefix}body-color-rgb), .05);
+$card-cap-bg:              rgba(var(--#{$prefix}body-color-rgb), .03);
 $card-bg:                  var(--#{$prefix}body-bg);
 
 $card-group-margin:			$card-spacer-y;
@@ -372,7 +372,6 @@ $card-cap-padding-y:       map-get($spacers, 3);
 $card-cap-padding-x:       $card-spacer-x;
 
 $card-border-width:        $border-width;
-$card-border-color:        rgba($black, .05);
 // scss-docs-end card-variables
 
 

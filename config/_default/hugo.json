@@ -1,4 +1,6 @@
 {
+   "theme": "bootstrap_docs",
+   "themesDir": "docs_hugo/themes",
 	"BaseURL": "/",
 	"uglyurls": false,
 	"relativeURLs": false,

@@ -4522,13 +4522,13 @@ textarea.form-control-lg {
   --bs-card-title-color: ;
   --bs-card-subtitle-color: ;
   --bs-card-border-width: 1px;
-  --bs-card-border-color: rgba(0, 0, 0, 0.05);
+  --bs-card-border-color: var(--bs-border-color-translucent);
   --bs-card-border-radius: 0.231rem;
   --bs-card-box-shadow: 0px 0.077rem 0.154rem rgba(0, 0, 0, 0.1);
   --bs-card-inner-border-radius: calc(0.231rem - 1px);
   --bs-card-cap-padding-y: 1rem;
   --bs-card-cap-padding-x: 1.5rem;
-  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.05);
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
@@ -7274,7 +7274,7 @@ fieldset[disabled] [data-bs-theme=light] .btn-secondary:hover {
 }
 
 .card:not(.card-contrast) {
-  --bs-card-cap-bg: $card-bg;
+  --bs-card-cap-bg: transparent;
 }
 
 .card-contrast .card-header {

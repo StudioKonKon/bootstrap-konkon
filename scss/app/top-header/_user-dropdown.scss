@@ -33,7 +33,6 @@
 
 		.dropdown-menu {
 			padding: 0 !important;
-			width: $user-dropdown-width;
 			min-width: $user-dropdown-width;
 		}
 	}
@@ -294,7 +293,7 @@
 	}
 }
 	
-.sk-user-nav {
+.sk-user-navs {
 	@include media_size("small-phone") {
 		> li.dropdown {
 			&.show > a {

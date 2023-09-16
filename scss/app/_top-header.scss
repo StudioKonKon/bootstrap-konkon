@@ -145,24 +145,24 @@
    }
 }
 
-.sk-icons-nav.menu-end,
-.sk-user-nav.menu-end {
-	> .dropdown > .dropdown-menu {
-      position: fixed;
-		left: auto;
-		right: map-get($spacers, 4);
-      overflow-y: auto;
-      overscroll-behavior: contain;
-      top: $top-header-height;
+.sk-navbar-menus > .dropdown > .dropdown-menu {
+   position: fixed;
+   left: auto;
+   right: map-get($spacers, 4);
+   top: $top-header-height;
+   max-height: calc(100vh - #{$top-header-height + $top-header-dropdown-bottom} - var(--#{$prefix}dropdown-spacer));
+   overflow-y: auto;
+   overscroll-behavior: contain;
+   
+   @include media-breakpoint-down(sm) {
       max-height: calc(100vh - #{$top-header-height} - var(--#{$prefix}dropdown-spacer));
-	
-      @include media-breakpoint-up(sm) {
-         max-height: calc(100vh - #{$top-header-height + $top-header-dropdown-bottom} - var(--#{$prefix}dropdown-spacer));
-      }
-	
-		@include media_size("small-phone") {
-			left: 0;
-			right: 0;
-		}
-	}
+      margin: 1px 0 0 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      box-shadow: none;
+      border-width: 0;
+      border-radius: 0;
+      width: 100%;
+   }
 }

@@ -45,7 +45,7 @@
 
 //Card contrast
 .card:not(.card-contrast) {
-   --#{$prefix}card-cap-bg: $card-bg;
+   --#{$prefix}card-cap-bg: transparent;
 }
    
 .card-contrast {
