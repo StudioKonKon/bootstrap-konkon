@@ -2,6 +2,14 @@
   [Nav]
 */
 
+.card-header.tab-container {
+   padding: 0;
+}
+
+.tab-container .card-header-tabs {
+   margin: 0;
+}
+
 .tab-container .nav {
    --#{$prefix}nav-link-padding-x: #{$nav-sk-link-px};
    --#{$prefix}nav-link-padding-y: #{$nav-sk-link-py};

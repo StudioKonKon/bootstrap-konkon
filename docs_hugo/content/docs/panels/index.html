@@ -109,7 +109,7 @@ body_class = "bg-body-secondary"
 	
 	<div class="col-lg-4">
 	  <div class="card card-contrast">
-		<div class="card-header">
+		<div class="card-header border-0">
 			<h5 class="card-title mb-0">Heading contrast</h5>
 			<h6 class="card-subtitle fw-normal">Card subtitle description</h6>
       </div>
@@ -122,7 +122,7 @@ body_class = "bg-body-secondary"
    
 	<div class="col-lg-4">
 	  <div class="card card-default bg-body text-body">
-		<div class="card-header hstack gap-2">
+		<div class="card-header hstack gap-2 border-0">
 			<div class="flex-fill">
             <h5 class="card-title mb-0">Body contrast</h5>
             <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
@@ -140,7 +140,7 @@ body_class = "bg-body-secondary"
    
 	<div class="col-lg-4">
 	  <div class="card card-border card-contrast">
-		<div class="card-header hstack gap-2">
+		<div class="card-header hstack gap-2 border-0">
 			<div class="flex-fill">
             <h5 class="card-title mb-0">Card with body contrast</h5>
             <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
@@ -175,16 +175,16 @@ body_class = "bg-body-secondary"
 {{- if eq $key "default" }}{{ $key_link =  "body-emphasis" }}{{ end -}}
 <div class="col-lg-4">
    <div class="card">
-      <div class="border-top border-3 border-{{ $key }}" style="border-radius:var(--bs-card-border-radius);">
+      <div class="border-top border-3 border-{{ $key }} text-{{ $key }}-emphasis" style="border-radius:var(--bs-card-border-radius);">
          <div class="card-header card-header-divider border-{{ $key }}-subtle hstack gap-2">
             <div class="flex-fill">
                <h5 class="card-title mb-0">Border {{ $key }}</h5>
-               <h6 class="card-subtitle text-body-secondary fw-normal">Card subtitle description</h6>
+               <h6 class="card-subtitle fw-normal opacity-75">Card subtitle description</h6>
             </div>
             <div class="hstack">
-               <a class="link-secondary icon-btn" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
-               <a class="link-secondary icon-btn" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
-               <a class="link-secondary icon-btn" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
+               <a class="link-{{ $key_link }} icon-btn" href="#" role="button"><span class="zmdi zmdi-edit"></span></a>
+               <a class="link-{{ $key_link }} icon-btn" href="#" role="button"><span class="zmdi zmdi-refresh-sync"></span></a>
+               <a class="link-{{ $key_link }} icon-btn" href="#" role="button"><span class="zmdi zmdi-close"></span></a>
             </div>
          </div>
          <div class="card-body">

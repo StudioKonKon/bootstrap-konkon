@@ -104,7 +104,7 @@
   --bs-link-hover-color: #3871cf;
   --bs-link-hover-color-rgb: 56, 113, 207;
   --bs-link-hover-decoration: none;
-  --bs-code-color: #fe669e;
+  --bs-code-color: #cb527e;
   --bs-highlight-bg: #ffe8f0;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -7252,10 +7252,6 @@ fieldset[disabled] [data-bs-theme=light] .btn-secondary:hover {
   vertical-align: middle;
 }
 
-.card-header {
-  border-bottom-width: 0;
-}
-
 .card-title,
 .card-subtitle {
   display: block;
@@ -7318,6 +7314,14 @@ fieldset[disabled] [data-bs-theme=light] .btn-secondary:hover {
 /*------------------------------------------------------------------
   [Nav]
 */
+.card-header.tab-container {
+  padding: 0;
+}
+
+.tab-container .card-header-tabs {
+  margin: 0;
+}
+
 .tab-container .nav {
   --bs-nav-link-padding-x: 1.538rem;
   --bs-nav-link-padding-y: 0.846rem;
