@@ -47,13 +47,13 @@
   --bs-danger-rgb: 234, 67, 53;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
-  --bs-konkon-text-emphasis: #983d5f;
-  --bs-primary-text-emphasis: #285092;
-  --bs-secondary-text-emphasis: #515151;
-  --bs-success-text-emphasis: #1f6532;
-  --bs-info-text-emphasis: #406299;
-  --bs-warning-text-emphasis: #995f00;
-  --bs-danger-text-emphasis: #8c2820;
+  --bs-konkon-text-emphasis: #cb527e;
+  --bs-primary-text-emphasis: #356ac3;
+  --bs-secondary-text-emphasis: #6c6c6c;
+  --bs-success-text-emphasis: #2a8642;
+  --bs-info-text-emphasis: #5683cc;
+  --bs-warning-text-emphasis: #cc7f00;
+  --bs-danger-text-emphasis: #bb362a;
   --bs-light-text-emphasis: #495057;
   --bs-dark-text-emphasis: #495057;
   --bs-konkon-bg-subtle: #ffe0ec;
@@ -7090,6 +7090,11 @@ textarea.form-control-lg {
   word-break: keep-all;
 }
 
+.link-decoration-underline,
+.link-decoration-underline:hover {
+  text-decoration: underline;
+}
+
 ol ol, ol ul, ul ol, ul ul {
   padding-left: 2.5rem;
 }
@@ -10425,6 +10430,31 @@ h3 .badge, .h3 .badge {
 
 .bg-dark-soft {
   background-color: var(--bs-dark-bg-soft) !important;
+}
+
+.text-decoration-style-solid {
+  -webkit-text-decoration-style: solid !important;
+  text-decoration-style: solid !important;
+}
+
+.text-decoration-style-double {
+  -webkit-text-decoration-style: double !important;
+  text-decoration-style: double !important;
+}
+
+.text-decoration-style-dotted {
+  -webkit-text-decoration-style: dotted !important;
+  text-decoration-style: dotted !important;
+}
+
+.text-decoration-style-dashed {
+  -webkit-text-decoration-style: dashed !important;
+  text-decoration-style: dashed !important;
+}
+
+.text-decoration-style-wavy {
+  -webkit-text-decoration-style: wavy !important;
+  text-decoration-style: wavy !important;
 }
 
 @media (min-width: 576px) {

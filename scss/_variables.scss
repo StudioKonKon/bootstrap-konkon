@@ -7,7 +7,7 @@ $enable-shadows:    true !default;
 
 // scss-docs-start theme-konkon-color
 $konkon:	              #fe669e;
-$konkon-text-emphasis: shade-color($konkon, 40%);
+$konkon-text-emphasis: shade-color($konkon, 20%);
 $konkon-bg-subtle:     tint-color($konkon, 80%);
 $konkon-border-subtle: tint-color($konkon, 60%);
 $konkon-bg-soft:       tint-color($konkon, 15%);
@@ -59,12 +59,12 @@ $light:     $gray-100;
 $dark:      $gray-900;
 
 // scss-docs-start theme-text-variables
-$primary-text-emphasis:   shade-color($primary, 40%) !default;
-$secondary-text-emphasis: shade-color($secondary, 40%) !default;
-$success-text-emphasis:   shade-color($success, 40%) !default;
-$info-text-emphasis:      shade-color($info, 40%) !default;
-$warning-text-emphasis:   shade-color($warning, 40%) !default;
-$danger-text-emphasis:    shade-color($danger, 40%) !default;
+$primary-text-emphasis:   shade-color($primary, 20%) !default;
+$secondary-text-emphasis: shade-color($secondary, 20%) !default;
+$success-text-emphasis:   shade-color($success, 20%) !default;
+$info-text-emphasis:      shade-color($info, 20%) !default;
+$warning-text-emphasis:   shade-color($warning, 20%) !default;
+$danger-text-emphasis:    shade-color($danger, 20%) !default;
 $light-text-emphasis:     $gray-700 !default;
 $dark-text-emphasis:      $gray-700 !default;
 // scss-docs-end theme-text-variables

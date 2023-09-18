@@ -87,3 +87,26 @@ body_class = ""
   {{ end -}}
   {{< /theme-colors.inline >}}
 </div>
+
+<h3 class="pt-4">Text colours</h3>
+
+<div class="row font-monospace pt-4">
+  {{< theme-colors.inline >}}
+  {{- range $color := (index $.Site.Data "theme-colors") }}
+    <div class="col-md-3 mb-3">
+      <div class="card">
+         <div class="card-body">
+            <p class="mb-0 text-{{ $color.name }}">.text-{{ $color.name }}</p>
+            <p class="mb-0 text-{{ $color.name }}-emphasis">.text-{{ $color.name }}-emphasis</p>
+            <p class="mb-0"><a href="#" class="link-{{ $color.name }} link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover link-decoration-underline">.link-{{ $color.name }}</a></p>
+         </div>
+         <div class="card-footer">
+            <p class="mb-0 text-bg-{{ $color.name }}">.text-bg-{{ $color.name }}</p>
+            <p class="mb-0 text-bg-{{ $color.name }}" style="background-color:rgba(var(--bs-{{ $color.name }}-rgb),1)!important;">.border-{{ $color.name }}</p>
+            <p class="mb-0 text-{{ $color.name }}-emphasis" style="background-color:var(--bs-{{ $color.name }}-border-subtle);">.border-{{ $color.name }}-subtle</p>
+         </div>
+      </div>
+    </div>
+  {{ end -}}
+  {{< /theme-colors.inline >}}
+</div>

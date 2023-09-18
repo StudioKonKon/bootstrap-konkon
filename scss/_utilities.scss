@@ -16,6 +16,10 @@ $utilities: map-merge(
                ( pre-wrap: pre-wrap )
             )
          )
+      ),
+      "text-decoration-style": (
+         property: text-decoration-style,
+         values: solid double dotted dashed wavy
       )
    )
 );
