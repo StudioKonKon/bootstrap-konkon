@@ -51,3 +51,6 @@ Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previ
 
 ## Copyright and license
 Code released under the [MIT License](https://github.com/StudioKonKon/bootstrap-konkon/blob/master/LICENSE).
+
+### Disclaimer
+<b>The use of Bootstrap in our content is unofficial and not approved or endorsed by Bootstrap nor is it associated or connected to Bootstrap.</b> "Bootstrap" "Bootstrap logo" are intellectual properties and branding of Bootstrap, Copyright &copy; Bootstrap, MIT. <b>Netlify</b> and their respective logos are trademarks or registered trademarks of Netlify. Copyright &copy; Netlify All Rights Reserved. <b>Studio KonKon</b> and our respective logos are intellectual properties or trademarks of Studio KonKon. Copyright &copy; Studio KonKon, All Rights Reserved.
