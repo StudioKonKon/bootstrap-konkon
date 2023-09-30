@@ -15,8 +15,13 @@ $konkon-text-dark:           tint-color($konkon, 40%);
 
 $primary-text-emphasis-dark:        tint-color($primary, 40%) !default;
 
-$body-color-dark:                   $gray-400 !default;
-$code-color-dark:                   tint-color($konkon, 40%) !default;
+$body-color-dark: $gray-400 !default;
+
+// scss-docs-start type-variables-dark
+$mark-color-dark: $konkon-text-emphasis-dark;
+$mark-bg-dark:    $konkon-bg-subtle-dark;
+$code-color-dark: $konkon-text-emphasis-dark;
+// scss-docs-end type-variables-dark
 
 
 //

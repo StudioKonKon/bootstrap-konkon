@@ -1,5 +1,5 @@
 /*!
-  * Studio KonKon v1.14.0-beta (https://play.studiokonkon.com/)
+  * Studio KonKon v1.14.2-beta (https://play.studiokonkon.com/)
   * Copyright 2011-2023 Studio KonKon
   * Licensed under MIT (https://github.com/StudioKonKon/bootstrap-konkon/blob/master/LICENSE)
   */
@@ -601,7 +601,7 @@
    * Constants
    */
 
-  const VERSION$1 = '5.3.0';
+  const VERSION$1 = '5.3.2';
 
   /**
    * Class definition
@@ -682,9 +682,9 @@
       if (hrefAttribute.includes('#') && !hrefAttribute.startsWith('#')) {
         hrefAttribute = `#${hrefAttribute.split('#')[1]}`;
       }
-      selector = hrefAttribute && hrefAttribute !== '#' ? hrefAttribute.trim() : null;
+      selector = hrefAttribute && hrefAttribute !== '#' ? parseSelector(hrefAttribute.trim()) : null;
     }
-    return parseSelector(selector);
+    return selector;
   };
   const SelectorEngine = {
     find(selector, element = document.documentElement) {
