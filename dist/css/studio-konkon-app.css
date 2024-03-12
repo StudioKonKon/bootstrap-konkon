@@ -1,5 +1,5 @@
 /*!
- * Studio KonKon Theme App v1.14.2-beta (https://studiokonkon.com/)
+ * Studio KonKon Theme App v1.14.3-beta (https://studiokonkon.com/)
  * Copyright 2011-2023 Studio KonKon
  * Licensed under MIT (https://github.com/StudioKonKon/bootstrap-konkon/blob/master/LICENSE)
  */
@@ -1288,8 +1288,8 @@
     padding: 18px 0.5rem 0;
   }
   .page-head > nav,
-.page-head .page-head-nav,
-.page-head ol.breadcrumb {
+  .page-head .page-head-nav,
+  .page-head ol.breadcrumb {
     display: none;
   }
   .page-head-title {

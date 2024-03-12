@@ -1,6 +1,6 @@
 /*!
-  * Studio KonKon v1.14.2-beta (https://play.studiokonkon.com/)
-  * Copyright 2011-2023 Studio KonKon
+  * Studio KonKon v1.14.3-beta (https://play.studiokonkon.com/)
+  * Copyright 2011-2024 Studio KonKon
   * Licensed under MIT (https://github.com/StudioKonKon/bootstrap-konkon/blob/master/LICENSE)
   */
 (function (global, factory) {
@@ -189,7 +189,6 @@
   const reflow = element => {
     element.offsetHeight; // eslint-disable-line no-unused-expressions
   };
-
   const getjQuery = () => {
     if (window.jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
       return window.jQuery;
@@ -771,7 +770,6 @@
     // if false, we use the backdrop helper without adding any element to the dom
     rootElement: 'body' // give the choice to place backdrop under different elements
   };
-
   const DefaultType$2 = {
     className: 'string',
     clickCallback: '(function|null)',
@@ -921,7 +919,6 @@
     autofocus: true,
     trapElement: null // The element to trap focus inside of
   };
-
   const DefaultType$1 = {
     autofocus: 'boolean',
     trapElement: 'element'
