@@ -11,6 +11,12 @@
    }
 }
 
+[data-scroll]:not([data-scroll="0"]) .sk-top-header,
+.sk-top-header.border-bottom {
+   --#{$sk-variable-prefix}header-border-rgb: var(--#{$prefix}border-color-translucent);
+   --#{$sk-variable-prefix}header-shadow:     0px .0625rem .125rem rgba(0, 0, 0, .1);
+}
+
 .sk-top-header {
    --#{$prefix}bg-opacity: 1;
 	background-color: $top-header-bg;
