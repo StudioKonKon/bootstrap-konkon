@@ -401,8 +401,8 @@ $accordion-button-focus-border-color:	$accordion-border-color;
 $accordion-button-focus-box-shadow:		none;
 
 $accordion-icon-width:					   1.25rem;
-$accordion-icon-color:					   $accordion-color;
-$accordion-icon-active-color:		   	$accordion-button-active-color;
+$accordion-icon-color:					   $body-color;
+$accordion-icon-active-color:		   	$primary-text-emphasis;
 $accordion-icon-transition:		   	transform .2s ease-in-out;
 $accordion-icon-transform:			   	rotate(180deg);
 // scss-docs-end accordion-variables

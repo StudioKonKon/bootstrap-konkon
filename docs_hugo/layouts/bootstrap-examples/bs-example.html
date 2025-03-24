@@ -14,7 +14,7 @@
   {{- if eq $type "scss" -}}
     {{- $sass := resources.Get (printf "sass/%s.scss" $src) -}}
 	{{- $options := (dict "targetPath" (printf "assets/css/%s.css" $src) "enableSourceMap" $map "outputStyle" $stype) -}}
-	{{- $style = $sass | resources.ToCSS $options -}}
+	{{- $style = $sass | css.Sass $options -}}
 	{{- $src = $style.RelPermalink -}}
   {{- end -}}
   {{- if $inline -}}

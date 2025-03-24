@@ -4,7 +4,7 @@
 {{- with $.Site.Params.site_styles_header -}}
    {{- range sort . "order" -}}
 {{- with .build }}
-{{- $style_built := resources.Get .resource | resources.ToCSS .options -}}
+{{- $style_built := resources.Get .resource | css.Sass .options -}}
 <link href="{{ $style_built.Permalink }}" rel="stylesheet" />
 {{ else }}
 {{- $cors := .cors | default "anonymous" }}

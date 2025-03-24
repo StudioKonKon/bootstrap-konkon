@@ -23,7 +23,6 @@
 			}
 		}
 	},
-	"paginate": 3,
 	"enableInlineShortcodes": true,
 	"footnoteReturnLinkContents": "^",
 	"taxonomies": {},
