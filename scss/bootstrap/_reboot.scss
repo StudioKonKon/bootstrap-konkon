@@ -28,3 +28,12 @@ ol, ul {
 address {
 	line-height: 1.5;
 }
+
+
+// Mark
+mark, .mark, u.mark {
+   text-decoration: none;
+   padding: $mark-padding;
+   color: var(--#{$prefix}highlight-color);
+   background: linear-gradient(transparent 60%, var(--#{$prefix}highlight-bg) 60%);
+}

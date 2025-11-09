@@ -1,0 +1,564 @@
+> bootstrap-konkon@1.14.3-beta css-compile
+> sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/
+> npm-run-all css-compile css-prefix css-minify
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ?
+1 ¦ @import "mixins/banner";
+  ¦         ^^^^^^^^^^^^^^^
+  ?
+    scss\studio-konkon-app.scss 1:9  root stylesheet
+
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ?
+5 ¦ @import "bootstrap-required";
+  ¦         ^^^^^^^^^^^^^^^^^^^^
+  ?
+    scss\studio-konkon-app.scss 5:9  root stylesheet
+
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ?
+6 ¦ @import "app/variables";
+  ¦         ^^^^^^^^^^^^^^^
+  ?
+    scss\studio-konkon-app.scss 6:9  root stylesheet
+
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ?
+7 ¦ @import "app/root";
+  ¦         ^^^^^^^^^^
+  ?
+    scss\studio-konkon-app.scss 7:9  root stylesheet
+
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ?
+10 ¦ @import "app/top-header";
+   ¦         ^^^^^^^^^^^^^^^^
+   ?
+    scss\studio-konkon-app.scss 10:9  root stylesheet
+
+Deprecation Warning [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.mix instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ?
+212 ¦   @return mix(black, $color, $weight);
+    ¦           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ?
+    node_modules\bootstrap\scss\_functions.scss 212:11  shade-color()
+    scss\_variables.scss 10:24                          @import
+    scss\_bootstrap-required.scss 6:9                   @import
+    scss\studio-konkon-app.scss 5:9                     root stylesheet
+
+Deprecation Warning [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.mix instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ?
+207 ¦   @return mix(white, $color, $weight);
+    ¦           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ?
+    node_modules\bootstrap\scss\_functions.scss 207:11  tint-color()
+    scss\_variables.scss 11:24                          @import
+    scss\_bootstrap-required.scss 6:9                   @import
+    scss\studio-konkon-app.scss 5:9                     root stylesheet
+
+Deprecation Warning [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.mix instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ?
+76 ¦ $light-bg-subtle:         mix($gray-100, $white) !default;
+   ¦                           ^^^^^^^^^^^^^^^^^^^^^^
+   ?
+    scss\_variables.scss 76:27         @import
+    scss\_bootstrap-required.scss 6:9  @import
+    scss\studio-konkon-app.scss 5:9    root stylesheet
+
+Deprecation Warning [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.merge instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ?
+104 ¦   $spacers: map-merge(
+    ¦ +-----------^
+105 ¦ ¦    $spacers,
+106 ¦ ¦     (
+107 ¦ ¦       0: 0,
+108 ¦ ¦       1: $spacer * .25,
+109 ¦ ¦       2: $spacer * .5,
+110 ¦ ¦       3: $spacer,
+111 ¦ ¦       4: $spacer * 1.5,
+112 ¦ ¦       5: $spacer * 3
+113 ¦ ¦     )
+114 ¦ ¦ );
+    ¦ +-^
+    ?
+    scss\_variables.scss 104:11        @import
+    scss\_bootstrap-required.scss 6:9  @import
+    scss\studio-konkon-app.scss 5:9    root stylesheet
+
+Deprecation Warning [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.merge instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ?
+153 ¦   $border-widths: map-merge(
+    ¦ +-----------------^
+154 ¦ ¦    $border-widths,
+155 ¦ ¦    (
+156 ¦ ¦       0: 0,
+157 ¦ ¦       1: 1px,
+158 ¦ ¦       2: 2px,
+159 ¦ ¦       3: 3px,
+160 ¦ ¦       4: 4px,
+161 ¦ ¦       5: 5px
+162 ¦ ¦    )
+163 ¦ ¦ );
+    ¦ +-^
+    ?
+    scss\_variables.scss 153:17        @import
+    scss\_bootstrap-required.scss 6:9  @import
+    scss\studio-konkon-app.scss 5:9    root stylesheet
+
+Deprecation Warning [color-functions]: red() is deprecated. Suggestion:
+
+color.channel($color, "red", $space: rgb)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ?
+185 ¦     "r": red($color),
+    ¦          ^^^^^^^^^^^
+    ?
+    node_modules\bootstrap\scss\_functions.scss 185:10  luminance()
+    node_modules\bootstrap\scss\_functions.scss 174:8   contrast-ratio()
+    node_modules\bootstrap\scss\_functions.scss 159:22  color-contrast()
+    node_modules\bootstrap\scss\_variables.scss 846:42  @import
+    scss\_bootstrap-required.scss 7:9                   @import
+    scss\studio-konkon-app.scss 5:9                     root stylesheet
+
+Deprecation Warning [color-functions]: green() is deprecated. Suggestion:
+
+color.channel($color, "green", $space: rgb)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ?
+186 ¦     "g": green($color),
+    ¦          ^^^^^^^^^^^^^
+    ?
+    node_modules\bootstrap\scss\_functions.scss 186:10  luminance()
+    node_modules\bootstrap\scss\_functions.scss 174:8   contrast-ratio()
+    node_modules\bootstrap\scss\_functions.scss 159:22  color-contrast()
+    node_modules\bootstrap\scss\_variables.scss 846:42  @import
+    scss\_bootstrap-required.scss 7:9                   @import
+    scss\studio-konkon-app.scss 5:9                     root stylesheet
+
+Deprecation Warning [color-functions]: blue() is deprecated. Suggestion:
+
+color.channel($color, "blue", $space: rgb)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ?
+187 ¦     "b": blue($color)
+    ¦          ^^^^^^^^^^^^
+    ?
+    node_modules\bootstrap\scss\_functions.scss 187:10  luminance()
+    node_modules\bootstrap\scss\_functions.scss 174:8   contrast-ratio()
+    node_modules\bootstrap\scss\_functions.scss 159:22  color-contrast()
+    node_modules\bootstrap\scss\_variables.scss 846:42  @import
+    scss\_bootstrap-required.scss 7:9                   @import
+    scss\studio-konkon-app.scss 5:9                     root stylesheet
+
+Deprecation Warning [color-functions]: red() is deprecated. Suggestion:
+
+color.channel($color, "red", $space: rgb)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ?
+37 ¦   @return red($value), green($value), blue($value);
+   ¦           ^^^^^^^^^^^
+   ?
+    node_modules\bootstrap\scss\_functions.scss 37:11   to-rgb()
+    node_modules\bootstrap\scss\_variables.scss 846:31  @import
+    scss\_bootstrap-required.scss 7:9                   @import
+    scss\studio-konkon-app.scss 5:9                     root stylesheet
+
+Deprecation Warning [color-functions]: green() is deprecated. Suggestion:
+
+color.channel($color, "green", $space: rgb)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ?
+37 ¦   @return red($value), green($value), blue($value);
+   ¦                        ^^^^^^^^^^^^^
+   ?
+    node_modules\bootstrap\scss\_functions.scss 37:24   to-rgb()
+    node_modules\bootstrap\scss\_variables.scss 846:31  @import
+    scss\_bootstrap-required.scss 7:9                   @import
+    scss\studio-konkon-app.scss 5:9                     root stylesheet
+
+Warning: 201 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ?
+1 ¦ @import "mixins/banner";
+  ¦         ^^^^^^^^^^^^^^^
+  ?
+    scss\studio-konkon.scss 1:9  root stylesheet
+
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ?
+5 ¦ @import "bootstrap-required";
+  ¦         ^^^^^^^^^^^^^^^^^^^^
+  ?
+    scss\studio-konkon.scss 5:9  root stylesheet
+
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ?
+8 ¦ @import "bootstrap-optional";
+  ¦         ^^^^^^^^^^^^^^^^^^^^
+  ?
+    scss\studio-konkon.scss 8:9  root stylesheet
+
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ?
+14 ¦ @import "konkon-optional";
+   ¦         ^^^^^^^^^^^^^^^^^
+   ?
+    scss\studio-konkon.scss 14:9  root stylesheet
+
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ?
+15 ¦ @import "konkon-components";
+   ¦         ^^^^^^^^^^^^^^^^^^^
+   ?
+    scss\studio-konkon.scss 15:9  root stylesheet
+
+Deprecation Warning [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.mix instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ?
+212 ¦   @return mix(black, $color, $weight);
+    ¦           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ?
+    node_modules\bootstrap\scss\_functions.scss 212:11  shade-color()
+    scss\_variables.scss 10:24                          @import
+    scss\_bootstrap-required.scss 6:9                   @import
+    scss\studio-konkon.scss 5:9                         root stylesheet
+
+Deprecation Warning [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.mix instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ?
+207 ¦   @return mix(white, $color, $weight);
+    ¦           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ?
+    node_modules\bootstrap\scss\_functions.scss 207:11  tint-color()
+    scss\_variables.scss 11:24                          @import
+    scss\_bootstrap-required.scss 6:9                   @import
+    scss\studio-konkon.scss 5:9                         root stylesheet
+
+Deprecation Warning [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.mix instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ?
+76 ¦ $light-bg-subtle:         mix($gray-100, $white) !default;
+   ¦                           ^^^^^^^^^^^^^^^^^^^^^^
+   ?
+    scss\_variables.scss 76:27         @import
+    scss\_bootstrap-required.scss 6:9  @import
+    scss\studio-konkon.scss 5:9        root stylesheet
+
+Deprecation Warning [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.merge instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ?
+104 ¦   $spacers: map-merge(
+    ¦ +-----------^
+105 ¦ ¦    $spacers,
+106 ¦ ¦     (
+107 ¦ ¦       0: 0,
+108 ¦ ¦       1: $spacer * .25,
+109 ¦ ¦       2: $spacer * .5,
+110 ¦ ¦       3: $spacer,
+111 ¦ ¦       4: $spacer * 1.5,
+112 ¦ ¦       5: $spacer * 3
+113 ¦ ¦     )
+114 ¦ ¦ );
+    ¦ +-^
+    ?
+    scss\_variables.scss 104:11        @import
+    scss\_bootstrap-required.scss 6:9  @import
+    scss\studio-konkon.scss 5:9        root stylesheet
+
+Deprecation Warning [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.merge instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ?
+153 ¦   $border-widths: map-merge(
+    ¦ +-----------------^
+154 ¦ ¦    $border-widths,
+155 ¦ ¦    (
+156 ¦ ¦       0: 0,
+157 ¦ ¦       1: 1px,
+158 ¦ ¦       2: 2px,
+159 ¦ ¦       3: 3px,
+160 ¦ ¦       4: 4px,
+161 ¦ ¦       5: 5px
+162 ¦ ¦    )
+163 ¦ ¦ );
+    ¦ +-^
+    ?
+    scss\_variables.scss 153:17        @import
+    scss\_bootstrap-required.scss 6:9  @import
+    scss\studio-konkon.scss 5:9        root stylesheet
+
+Deprecation Warning [color-functions]: red() is deprecated. Suggestion:
+
+color.channel($color, "red", $space: rgb)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ?
+185 ¦     "r": red($color),
+    ¦          ^^^^^^^^^^^
+    ?
+    node_modules\bootstrap\scss\_functions.scss 185:10  luminance()
+    node_modules\bootstrap\scss\_functions.scss 174:8   contrast-ratio()
+    node_modules\bootstrap\scss\_functions.scss 159:22  color-contrast()
+    node_modules\bootstrap\scss\_variables.scss 846:42  @import
+    scss\_bootstrap-required.scss 7:9                   @import
+    scss\studio-konkon.scss 5:9                         root stylesheet
+
+Deprecation Warning [color-functions]: green() is deprecated. Suggestion:
+
+color.channel($color, "green", $space: rgb)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ?
+186 ¦     "g": green($color),
+    ¦          ^^^^^^^^^^^^^
+    ?
+    node_modules\bootstrap\scss\_functions.scss 186:10  luminance()
+    node_modules\bootstrap\scss\_functions.scss 174:8   contrast-ratio()
+    node_modules\bootstrap\scss\_functions.scss 159:22  color-contrast()
+    node_modules\bootstrap\scss\_variables.scss 846:42  @import
+    scss\_bootstrap-required.scss 7:9                   @import
+    scss\studio-konkon.scss 5:9                         root stylesheet
+
+Deprecation Warning [color-functions]: blue() is deprecated. Suggestion:
+
+color.channel($color, "blue", $space: rgb)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ?
+187 ¦     "b": blue($color)
+    ¦          ^^^^^^^^^^^^
+    ?
+    node_modules\bootstrap\scss\_functions.scss 187:10  luminance()
+    node_modules\bootstrap\scss\_functions.scss 174:8   contrast-ratio()
+    node_modules\bootstrap\scss\_functions.scss 159:22  color-contrast()
+    node_modules\bootstrap\scss\_variables.scss 846:42  @import
+    scss\_bootstrap-required.scss 7:9                   @import
+    scss\studio-konkon.scss 5:9                         root stylesheet
+
+Deprecation Warning [color-functions]: red() is deprecated. Suggestion:
+
+color.channel($color, "red", $space: rgb)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ?
+37 ¦   @return red($value), green($value), blue($value);
+   ¦           ^^^^^^^^^^^
+   ?
+    node_modules\bootstrap\scss\_functions.scss 37:11   to-rgb()
+    node_modules\bootstrap\scss\_variables.scss 846:31  @import
+    scss\_bootstrap-required.scss 7:9                   @import
+    scss\studio-konkon.scss 5:9                         root stylesheet
+
+Deprecation Warning [color-functions]: green() is deprecated. Suggestion:
+
+color.channel($color, "green", $space: rgb)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ?
+37 ¦   @return red($value), green($value), blue($value);
+   ¦                        ^^^^^^^^^^^^^
+   ?
+    node_modules\bootstrap\scss\_functions.scss 37:24   to-rgb()
+    node_modules\bootstrap\scss\_variables.scss 846:31  @import
+    scss\_bootstrap-required.scss 7:9                   @import
+    scss\studio-konkon.scss 5:9                         root stylesheet
+
+Deprecation Warning [mixed-decls]: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    +--> node_modules\bootstrap\scss\_reboot.scss
+503 ¦     font-weight: $legend-font-weight;
+    ¦     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ?
+    +--> node_modules\bootstrap\scss\vendor\_rfs.scss
+136 ¦ +     @media (#{$rfs-mq-property-width}: #{$rfs-mq-value}) {
+137 ¦ ¦       @content;
+138 ¦ ¦     }
+    ¦ +--- nested rule
+    ?
+    node_modules\bootstrap\scss\_reboot.scss 503:3  @import
+    scss\_bootstrap-optional.scss 3:9               @import
+    scss\studio-konkon.scss 8:9                     root stylesheet
+
+Deprecation Warning [mixed-decls]: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    +--> node_modules\bootstrap\scss\_reboot.scss
+504 ¦     line-height: inherit;
+    ¦     ^^^^^^^^^^^^^^^^^^^^ declaration
+    ?
+    +--> node_modules\bootstrap\scss\vendor\_rfs.scss
+136 ¦ +     @media (#{$rfs-mq-property-width}: #{$rfs-mq-value}) {
+137 ¦ ¦       @content;
+138 ¦ ¦     }
+    ¦ +--- nested rule
+    ?
+    node_modules\bootstrap\scss\_reboot.scss 504:3  @import
+    scss\_bootstrap-optional.scss 3:9               @import
+    scss\studio-konkon.scss 8:9                     root stylesheet
+
+Deprecation Warning [mixed-decls]: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    +--> node_modules\bootstrap\scss\_type.scss
+38  ¦       font-family: $display-font-family;
+    ¦       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ?
+    +--> node_modules\bootstrap\scss\vendor\_rfs.scss
+136 ¦ +     @media (#{$rfs-mq-property-width}: #{$rfs-mq-value}) {
+137 ¦ ¦       @content;
+138 ¦ ¦     }
+    ¦ +--- nested rule
+    ?
+    node_modules\bootstrap\scss\_type.scss 38:5  @import
+    scss\_bootstrap-optional.scss 4:9            @import
+    scss\studio-konkon.scss 8:9                  root stylesheet
+
+Deprecation Warning [mixed-decls]: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    +--> node_modules\bootstrap\scss\_type.scss
+39  ¦       font-style: $display-font-style;
+    ¦       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ?
+    +--> node_modules\bootstrap\scss\vendor\_rfs.scss
+136 ¦ +     @media (#{$rfs-mq-property-width}: #{$rfs-mq-value}) {
+137 ¦ ¦       @content;
+138 ¦ ¦     }
+    ¦ +--- nested rule
+    ?
+    node_modules\bootstrap\scss\_type.scss 39:5  @import
+    scss\_bootstrap-optional.scss 4:9            @import
+    scss\studio-konkon.scss 8:9                  root stylesheet
+
+Deprecation Warning [mixed-decls]: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    +--> node_modules\bootstrap\scss\_type.scss
+40  ¦       font-weight: $display-font-weight;
+    ¦       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ?
+    +--> node_modules\bootstrap\scss\vendor\_rfs.scss
+136 ¦ +     @media (#{$rfs-mq-property-width}: #{$rfs-mq-value}) {
+137 ¦ ¦       @content;
+138 ¦ ¦     }
+    ¦ +--- nested rule
+    ?
+    node_modules\bootstrap\scss\_type.scss 40:5  @import
+    scss\_bootstrap-optional.scss 4:9            @import
+    scss\studio-konkon.scss 8:9                  root stylesheet
+
+Warning: 368 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+
+
+> bootstrap-konkon@1.14.3-beta css-prefix
+> postcss --config build/postcss.config.js --replace "dist/css/*.css" "!dist/css/*.min.css"
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+> bootstrap-konkon@1.14.3-beta css-minify
+> cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix ".min" "dist/css/*.css" "!dist/css/*.min.css"

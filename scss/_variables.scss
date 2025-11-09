@@ -241,7 +241,7 @@ $blockquote-footer-color:		$gray-600;
 $blockquote-footer-font-size:	$small-font-size;
 
 $mark-color: $body-color;
-$mark-bg:    $konkon-bg-subtle;
+$mark-bg:    rgba(var(--#{$prefix}warning-rgb), .25);
 $code-color: $konkon-text-emphasis;
 // scss-docs-end type-variables
 

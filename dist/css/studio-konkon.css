@@ -106,7 +106,7 @@
   --bs-link-hover-decoration: none;
   --bs-code-color: rgb(203.2, 81.6, 126.4);
   --bs-highlight-color: #212529;
-  --bs-highlight-bg: rgb(254.9, 239.7, 245.3);
+  --bs-highlight-bg: rgba(var(--bs-warning-rgb), 0.25);
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -180,8 +180,8 @@
   --bs-link-color-rgb: 142, 182, 248;
   --bs-link-hover-color-rgb: 159, 193, 249;
   --bs-code-color: rgb(254.4, 163.2, 196.8);
-  --bs-highlight-color: rgb(254.4, 163.2, 196.8);
-  --bs-highlight-bg: rgb(50.8, 20.4, 31.6);
+  --bs-highlight-color: #dee2e6;
+  --bs-highlight-bg: rgb(102, 77.2, 2.8);
   --bs-border-color: #495057;
   --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
   --bs-form-valid-color: rgb(117, 183, 152.4);
@@ -7045,6 +7045,13 @@ ol ol, ol ul, ul ol, ul ul {
 
 address {
   line-height: 1.5;
+}
+
+mark, .mark, u.mark {
+  text-decoration: none;
+  padding: 0.1875em;
+  color: var(--bs-highlight-color);
+  background: linear-gradient(transparent 60%, var(--bs-highlight-bg) 60%);
 }
 
 /*------------------------------------------------------------------
