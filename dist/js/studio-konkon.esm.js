@@ -1,6 +1,6 @@
 /*!
   * Studio KonKon v1.14.3-beta (https://play.studiokonkon.com/)
-  * Copyright 2011-2025 Studio KonKon
+  * Copyright 2011-2026 Studio KonKon
   * Licensed under MIT (https://github.com/StudioKonKon/bootstrap-konkon/blob/master/LICENSE)
   */
 /**
